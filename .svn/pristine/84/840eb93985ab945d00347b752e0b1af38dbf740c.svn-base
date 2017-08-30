@@ -1,0 +1,14 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="StreetTypeListForm" type="ListForm" title="@{StreetTypeListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{StreetTypeListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+						<column text="@{StreetTypeListForm.fullNameColumn.text}" property="fullName" data-type="String" width="200"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

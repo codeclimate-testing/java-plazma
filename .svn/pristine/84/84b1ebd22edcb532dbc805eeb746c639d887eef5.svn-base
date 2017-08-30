@@ -1,0 +1,38 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="TaskEditForm" type="EditForm" title="@{TaskEditForm.title}">
+		<content layout="GridLayout">
+			<children>
+				<tab-panel layout-data="GridData(align=fill)">
+					<tab-items>
+						<tab-item title="@{TaskEditForm.generalTabItem.text}" layout="GridLayout(columnCount=4; horizontalSpacing=10)">
+							<children>
+								<label text="@{TaskEditForm.nameLabel.text}" /><text-field property="name" width="200" layout-data="GridData(columnSpan=3;align=fill)"/>
+								<label text="@{TaskEditForm.taskNoLabel.text}" /><text-field property="taskNo" width="200" />
+								<label text="@{TaskEditForm.taskTypeLabel.text}" /><combo-box property="taskType" data-type="project/TaskType" width="200" />
+								
+								<label text="@{TaskEditForm.startDateTimeLabel.text}" /><date-time-field property="startDateTime" data-type="DateTime" width="200" />
+								<label text="@{TaskEditForm.taskPriorityLabel.text}" /><combo-box property="taskPriority" data-type="task/TaskPriority" width="200" />
+								<label text="@{TaskEditForm.endDateTimeLabel.text}" /><date-time-field property="endDateTime" data-type="DateTime" width="200" />
+								<label text="@{TaskEditForm.actualEndDateTimeLabel.text}" /><date-time-field property="actualEndDateTime" data-type="DateTime" width="200" />
+								
+								<!-- <separator layout-data="GridData(columnSpan=4;align=fill)"/> -->
+								<label text="@{TaskEditForm.reporterLabel.text}" /><lookup-field property="reporter" data-type="contact/ContactTitle" width="200" />
+								<label text="@{TaskEditForm.responsibleLabel.text}" /><lookup-field property="responsible" data-type="contact/ContactTitle" width="200" />
+								<label text="@{TaskEditForm.projectLabel.text}" /><lookup-field property="project" data-type="project/ProjectHeader" width="200" />
+								<label text="@{TaskEditForm.documentLabel.text}" /><lookup-field property="document" data-type="document/DocumentHeader" width="200" />
+
+								<!-- <separator layout-data="GridData(columnSpan=4)"/> -->
+								<label text="@{TaskEditForm.projectStatusLabel.text}" /><lookup-field property="projectStatus" data-type="project/ProjectStatus" width="200" />
+								<label text="@{TaskEditForm.percentCompleteLabel.text}" /><percent-field property="percentComplete" width="200" />
+								<label text="@{TaskEditForm.reminderDateTimeLabel.text}" /><date-time-field property="reminderDateTime" width="200" />
+								<label text="@{TaskEditForm.partnerLabel.text}" /><lookup-field property="partner" data-type="partner/PartnerTitle" width="200" />
+								
+								
+							</children>
+						</tab-item>
+					</tab-items>
+				</tab-panel>
+			</children>
+		</content>
+	</form>
+</ui>

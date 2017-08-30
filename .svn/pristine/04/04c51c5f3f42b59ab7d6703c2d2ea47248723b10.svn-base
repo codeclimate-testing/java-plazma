@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+
+<project name="plazma-framework" default="build">
+
+    <property file="build.properties"/>
+
+    <path id="plazma-classpath">
+	<fileset dir="${lib.dir}">
+		<include name="**/*.jar"/>
+	</fileset>
+    </path>
+
+
+    <target name="clean" description="Clean all output dirs (classes, etc.)">
+        <delete dir="${classes.dir}"/>
+        <delete dir="${javadocs.dir}"/>
+    </target>
+
+    <target name="clean-dist" description="Clean dist dir">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="${module}**.jar"/>
+            	<include name="launcher.jar"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+
+    <target name="convert" description="Convert codepage of property files">
+        <native2ascii src="${src.dir}/org/plazmaforge/framework" dest="${src.dir}/org/plazmaforge/framework" includes="**/*.${codepage}" ext=".properties"/>
+    </target>
+
+
+    <target name="build" description="Compile main source tree java files into class files (no-jarring)">
+
+	    <mkdir dir="${classes.dir}"/>
+
+	    <javac destdir="${classes.dir}"
+		    deprecation="false" optimize="false" failonerror="true">
+		    <src path="${src.dir}"/>
+		    <classpath refid="plazma-classpath"/>
+	     </javac>
+
+	    <copy todir="${classes.dir}" preservelastmodified="true">
+		    <fileset dir="${src.dir}">
+			    <include name="**/*.xml"/>
+			    <include name="**/*.properties"/>
+			    <include name="**/*.jpg"/>
+			    <include name="**/*.gif"/>
+			    <include name="**/*.png"/>
+		   </fileset>
+	    </copy>
+
+    </target>
+
+    <target name="create-jar-all" description="Create all jar files"
+    	depends ="create-jar-launcher, create-jar-common, create-jar-thirdparty, create-jar-ejb"/>
+    	
+    	
+    <target name="create-jar-launcher" description="Create launcher jar file">
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/launcher.jar"  basedir="${classes.dir}">
+          <include name="${framework.path}/launcher/*.class"/>
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+            <attribute name="Plazma-Version" value="${version}"/>          	
+            <attribute name="Main-Class" value="org.plazmaforge.framework.launcher.Startup"/>          	
+          </manifest>
+        </jar>
+    </target>
+
+    <!--
+	<target name="create-jar-core" description="Create core jar file">
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/${module}-core-${version}.jar"
+           basedir="${classes.dir}">
+        
+          <include name="org/plazmaforge/framework/core/**"/>
+          <include name="org/plazmaforge/framework/util/**"/>        	
+        	
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+            <attribute name="Plazma-Version" value="${version}"/>          	          	
+          </manifest>
+        </jar>
+    </target>
+    -->
+
+    <target name="create-jar-common" description="Create common jar file">
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/${framework.jar}"
+           basedir="${classes.dir}"
+           includes="**">
+        
+          <!--
+          <exclude name="org/hibernate/cfg/Configuration*.class"/>
+          <exclude name="org/hibernate/id/SequenceGenerator*.class"/>
+          <exclude name="org/springframework/orm/hibernate3/LocalSessionFactoryBean*.class"/>
+          -->
+
+          <exclude name="org/hibernate/**"/>
+          <exclude name="org/springframework/**"/>
+          <exclude name="org/acegisecurity/**"/>        	
+        	
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+            <attribute name="Plazma-Version" value="${version}"/>          	          	
+          </manifest>
+        </jar>
+    </target>
+
+    <target name="create-jar-thirdparty" description="Create third party jar file">
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/plazma-thirdparty.jar" basedir="${classes.dir}" >
+
+			<include name="org/hibernate/**"/>
+			<include name="org/springframework/**"/>
+
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+            <attribute name="Plazma-Version" value="${version}"/>          	          	
+          </manifest>
+        </jar>
+    </target>
+
+
+    <!--
+       descriptordir="${classes.dir}/${framework.path}/platform/service/impl/ejb/bean/META-INF"
+       descriptordir="${build.dir}/META-INF"
+    -->
+    <target name="create-jar-ejb" description="Create EJB jar file">
+    	<mkdir dir="${dist.dir}"/>
+	  <ejbjar
+	 	basejarname="${module}"
+		genericjarsuffix="-ejb-${version}.jar"
+		destdir="${dist.dir}"
+		srcdir="${classes.dir}"
+        descriptordir="${classes.dir}/${framework.path}/platform/service/impl/ejb/bean/META-INF">
+	  	
+  	    <dtd
+              publicId="-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN"
+              location="${build.dtds.dir}/ejb-jar_2_0.dtd"/>
+        <dtd
+            publicId="-//Sun Microsystems, Inc.//DTD Application Server 8.0 J2EE Application 1.4//EN"
+            location="${build.dtds.dir}/sun-application_1_4-0.dtd"/>
+        <dtd
+            publicId="-//Sun Microsystems, Inc.//DTD Application Server 8.1 EJB 2.1//EN"
+            location="${build.dtds.dir}/sun-ejb-jar_2_1-1.dtd"/>
+
+
+
+        <support dir="${build.dir}">
+             <include name="META-INF/sun-application.xml"/>
+             <include name="META-INF/sun-ejb-jar.xml"/>
+        </support>
+
+        <support dir="${classes.dir}">
+             <include name="${framework.path}/platform/service/**/*.class"/>
+        </support>
+
+      </ejbjar>
+    </target>
+
+	<!--
+    <target name="clean-pack-source" description="Clean source code pack">
+        <delete dir="${source.dir}"/>
+    </target>
+    -->
+		
+	<!--
+	<target name="create-pack-source" description="Create source code pack">
+	        
+	        <mkdir dir="${source.dir}"/>
+	        <mkdir dir="${source.dir}/build"/>
+	        <mkdir dir="${source.dir}/dist"/>
+	        <mkdir dir="${source.dir}/docs"/>
+	        <mkdir dir="${source.dir}/lib"/>
+	        <mkdir dir="${source.dir}/src"/>
+
+
+	        <copy todir="${source.dir}/build">
+	            <fileset dir="${build.dir}">
+	                <include name="**"/>
+	            </fileset>
+	        </copy>
+
+	        <copy todir="${source.dir}/dist">
+	            <fileset dir="${dist.dir}">
+	                <include name="**"/>
+	            </fileset>
+	        </copy>
+
+	        <copy todir="${source.dir}/docs">
+	            <fileset dir="${docs.dir}">
+	                <include name="dtds/**"/>
+	            </fileset>
+	        </copy>
+	    	
+	        <copy todir="${source.dir}/lib">
+	            <fileset dir="${lib.dir}">
+	                <include name="**"/>
+	            </fileset>
+	        </copy>
+
+	        <copy todir="${source.dir}/src">
+	            <fileset dir="${src.dir}">
+	                <include name="**"/>
+	            </fileset>
+	        </copy>
+
+
+	        <copy todir="${source.dir}">
+	            <fileset dir="${basedir}">
+	                <include name="*.*"/>
+	                <exclude name="*.ipr"/>
+	                <exclude name="*.iws"/>            	
+	            </fileset>
+	        </copy>
+
+	</target>
+	-->
+
+	<!--
+    <target name="javadoc" description="Generate Javadocs">
+
+	   <mkdir dir="${javadocs.dir}"/>
+
+       <javadoc
+           sourcepath="src"
+           destdir="${javadocs.dir}"
+           windowtitle="Plazma Framework"
+           defaultexcludes="yes"
+           author="true"
+           version="true"
+           use="true"
+        >
+
+		  <doctitle><![CDATA[<h1>Plazma Framework</h1>]]></doctitle>
+		  <bottom><![CDATA[<i>Copyright (C) 2005-2007 The Plazma Framework Project.</i>]]></bottom>
+		  <classpath refid="plazma-classpath"/>
+
+		  <packageset dir="${src.dir}">
+   	  	    <include name="org/plazmaforge/framework/**"/>
+		  </packageset>
+
+	    </javadoc>
+
+    </target>
+    -->
+
+
+
+</project>

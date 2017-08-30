@@ -1,0 +1,27 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Entity" class="org.plazmaforge.framework.config.object.EntityConfig" table="SYS_ENTITY" >
+    	<aliases>
+    		<alias name="entityTypeName" attribute="entityType.name"/>
+    	</aliases>
+		<attributes>    
+        	<key name="id" column="ID" type="String" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String"  required="true" update="false" insert="true"/>
+        	<attribute name="name" column="NAME" type="String" update="true" insert="true"/>
+        	<reference name="entityType" column="ENTITY_TYPE_ID" class="org.plazmaforge.framework.config.object.EntityTypeConfig" update="false" insert="true"/>
+        	<attribute name="entityPackage" column="ENTITY_PACKAGE" type="String" update="true" insert="true"/>
+        	<attribute name="entityClass" column="ENTITY_CLASS" type="String" update="true" insert="true"/>
+        	<attribute name="enable" column="IS_ENABLE" type="Boolean" update="false" insert="true"/>
+        	<attribute name="master" column="IS_MASTER" type="Boolean" update="false" insert="true"/>
+        	<attribute name="bean" column="IS_BEAN" type="Boolean" update="false" insert="true"/>
+        	<attribute name="form" column="IS_FORM" type="Boolean" update="false" insert="true"/>
+        	<attribute name="secure" column="IS_SECURE" type="Boolean" update="false" insert="true"/>
+        	<attribute name="system" column="IS_SYSTEM" type="Boolean" update="false" insert="true"/>
+        	<attribute name="custom" column="IS_CUSTOM" type="Boolean" update="false" insert="true"/>
+        	<attribute name="customAttribute" column="IS_CUSTOM_ATTRIBUTE" type="Boolean" update="false" insert="true"/>
+        	<attribute name="cache" column="IS_CACHE" type="Boolean"/>
+			<attribute name="cacheExpireTime" column="CACHE_EXPIRE_TIME" type="Long"/>
+		</attributes>
+    </entity>
+    
+

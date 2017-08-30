@@ -1,0 +1,1 @@
+launcher.bat plazma -ui swt -application.initializer  org.plazmaforge.bs.DesktopApplicationInitializer -plazma.platform.dir C:\Dir\Plazma\bs.enterprise.configuration

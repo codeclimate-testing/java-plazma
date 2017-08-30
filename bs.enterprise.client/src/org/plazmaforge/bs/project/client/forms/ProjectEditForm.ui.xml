@@ -1,0 +1,56 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ProjectEditForm" type="EditForm" title="@{ProjectEditForm.title}">
+		<content layout="GridLayout">
+			<children>
+				<tab-panel layout-data="GridData(align=fill)">
+					<tab-items>
+						<tab-item title="@{ProjectEditForm.generalTabItem.text}" layout="GridLayout(columnCount=4; horizontalSpacing=10)">
+							<children>
+								<label text="@{ProjectEditForm.nameLabel.text}" /><text-field property="name" layout-data="GridData(columnSpan=3;align=fill)"/>
+								<label text="@{ProjectEditForm.projectNoLabel.text}" /><text-field property="projectNo" width="200" />
+								<label text="@{ProjectEditForm.projectTypeLabel.text}" /><combo-box property="projectType" data-type="project/ProjectType" width="200" />
+								
+								<label text="@{ProjectEditForm.contractNoLabel.text}" /><lookup-field property="contractDocument" display-property="title" data-type="document/DocumentHeader" width="200" />
+								<label text="@{ProjectEditForm.responsibleLabel.text}" /><lookup-field property="responsible" data-type="contact/ContactTitle" width="200" />
+
+								<label text="@{ProjectEditForm.partnerLabel.text}" /><lookup-field property="partner" data-type="partner/PartnerTitle" width="200" />
+								<label text="@{ProjectEditForm.projectStatusLabel.text}" /><lookup-field property="projectStatus" data-type="project/ProjectStatus" width="200" />
+								
+								<label text="@{ProjectEditForm.startDateLabel.text}" /><date-field property="startDate"/>
+								<label text="@{ProjectEditForm.propabilityLabel.text}" /><percent-field property="propability"/>
+								
+								<label text="@{ProjectEditForm.endDateLabel.text}" /><date-field property="endDate"/>
+								<label text="@{ProjectEditForm.actualEndDateLabel.text}" /><date-field property="actualDate"/>
+								
+							</children>
+						</tab-item>
+						<tab-item title="@{ProjectEditForm.financeTabItem.text}" layout="GridLayout(columnCount=6)">
+							<children>
+								<label text="@{ProjectEditForm.currencyLabel.text}" /><lookup-field property="currency" data-type="base/Currency"/>
+								<label text="@{ProjectEditForm.currencyRateLabel.text}" /><currency-field property="currencyRate"/>
+								<label text="@{ProjectEditForm.currencyRateDateLabel.text}" /><date-field property="currencyRateDate"/>
+								<label layout-data="GridData(columnSpan=4)"/><label text="@{ProjectEditForm.currencyAmountLabel.text}"/><currency-field property="currencyAmount"/>
+								
+								<label layout-data="GridData(columnSpan=6)"/>
+								<label text="@{ProjectEditForm.discountPercentLabel.text}" /><percent-field property="discountPercent"/>
+								<label text="@{ProjectEditForm.discountAmountLabel.text}" /><currency-field property="currencyDiscountAmount"/>
+								<label text="@{ProjectEditForm.currencyTotalLabel.text}" /><currency-field property="currencyTotal"/>
+
+								<label layout-data="GridData(columnSpan=6)"/>
+								<label text="@{ProjectEditForm.taxPercentLabel.text}" /><lookup-field data-type="base/Tax"/> <!-- property="taxId" key-property="id" -->
+								<label text="@{ProjectEditForm.taxAmountLabel.text}" /><currency-field property="currencyTaxTotal"/>
+								<label text="@{ProjectEditForm.currencyTotalWithTaxLabel.text}" /><currency-field property="currencyTotalWithTax"/>
+							</children>
+						</tab-item>
+						<tab-item title="@{ProjectEditForm.descriptionTabItem.text}" layout="GridLayout">
+							<children>
+								<text-area property="description" layout-data="GridData(horizontalAlign=fill; horizontalFlex=true; verticalAlign=fill; verticalFlex=true)"/>
+							</children>
+						</tab-item>						
+												
+					</tab-items>
+				</tab-panel>
+			</children>
+		</content>
+	</form>
+</ui>

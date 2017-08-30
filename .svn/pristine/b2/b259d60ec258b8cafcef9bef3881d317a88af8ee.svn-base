@@ -1,0 +1,114 @@
+
+<html>
+<title>Table form</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE width="100%">
+<TR>
+
+
+<TD width=160>
+</TD>
+
+<TD>
+
+   <h2 align="center">Table form</h2>
+   <hr><br><br>
+
+
+<p>
+   <h3 align="center">General view</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form.png" align="middle"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3 align="center">Column setting</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-setup.png" align="middle"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3 align="center">Sort</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-sort.png" align="middle"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3 align="center">Filter</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-filter-simple.png" align="middle"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   <h3 align="center">Advanced filter</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-filter-advanced.png" align="middle"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3 align="center">Period setting</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-period.png" align="middle"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3 align="center">Context menu</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-context-menu.png" align="middle"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3 align="center">Export</h3> 
+   <table align="center">
+    <tr>
+      <td>
+        <ul>
+<li>XLS
+<li>RTF
+<li>CSV
+<li>XML
+<li>HTML
+<li>SQL
+
+</ul>
+
+      </td>
+    </tr>
+   </table>
+</TD>
+</TR>
+</TABLE>
+
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,391 @@
+
+<html>
+<title>Вопросы и ответы</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE align="center" width="800" cellspacing=0 cellpadding=0>
+
+<TR><TD>
+
+  <table align="center">
+    <tr><td><a href="http://plazma.sourceforge.net"><img border=0 src="images/plazma_logo.jpg"/></a></td></tr>
+  </table>
+ 
+  <br><br>
+  <hr>
+  
+
+   <h2 align="center">Вопросы и ответы</h2>
+   <!-- <hr> -->
+   <br><br>
+
+   <h3 align="center">Вопросы</h3>
+
+   <table width="100%">
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Общие</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#what_licence">Под какой лицензией распространяется продукт ?</a></td></tr>
+     <tr><td><a href="#what_os">Какие операционные системы поддерживает Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><a href="#what_db">Какие базы данных поддерживает Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><a href="#what_technology">Какие технологии используются в проекте ?</a></td></tr>
+     <tr><td><a href="#get_source_code">Могу ли я получить исходный код Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><a href="#error_connection">Во время запуска программы появляется ошибка "Cannot open connection" и программа не стартует. Как решить эту проблему ?</a></td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">База данных</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#how_db_create">Как создать базу данных ?</a></td></tr>
+     <tr><td><a href="#how_db_connect">Как подключится к базе данных ?</a></td></tr>
+
+
+
+    <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Сервер приложение</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#how_set_server">Как настроить серверную часть ?</a></td></tr>
+     <tr><td><a href="#how_set_client">Как настроить клиентскую часть ?</a></td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Разработка</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#how_download_source_code">Как загрузить исходный код ?</a></td></tr>
+     <tr><td><a href="#what_dev_tools">Какие инструменты необходимы для разработки Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><a href="#no_compile">Не могу откомпилировать проект, большое количество ошибок компиляции типа ClassNotFound. Пользуюсь антовской таской build. Как решить эту проблему ?</a></td></tr>
+
+   </table>
+
+   <br><br>
+   <h3 align="center">Ответы</h3>
+
+   <table width="100%">
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Общие</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="what_licence"><b>Вопрос:</b> Под какой лицензией распространяется продукт ?</td></tr>
+     <tr><td><b>Ответ:</b> LGPL (Lesser General Public License)<br><br><br></td></tr>
+
+
+     <tr><td><a name="what_os"><b>Вопрос:</b> Какие операционные системы поддерживает Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Plazma поддерживает следующие операционные системы:<ul><li>Windows <li>Linux <li>MacOS</ul><br></td></tr>
+
+     <tr><td><a name="what_db"><b>Вопрос:</b> Какие базы данных поддерживает Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Plazma поддерживает следующие базы данных <ul><li>Oracle <li>PostgreSQL <li>MySQL <li>Firebird <li>HSQL</ul><br></td></tr>
+
+     <tr><td><a name="what_technology"><b>Вопрос:</b> Какие технологии используются в проекте ?</a></td></tr>
+     <tr><td><b>Ответ:</b> В проекте используются следующие технологии:<br><br>
+
+Язык программирования
+<ul>
+    <li>Java
+</ul>
+
+
+Система управления сервисами и транзакциями
+<ul>
+    <li>Spring
+</ul>
+
+
+Система безопасности
+<ul>
+    <li>Spring Security
+</ul>
+
+
+Мапинг объектов
+<ul>
+    <li>Plazma ERM (ORM)
+</ul>
+
+
+Desktop клиент
+<ul>
+    <li>SWT, Swing
+</ul>
+	
+<!-- 
+Web клиент
+<ul>
+    <li>Spring MVC, JSP, JSTL
+</ul>
+ -->
+
+Система построения отчётов
+<ul>
+    <li>Jasper Reports
+</ul>
+<br><br>
+
+     </td></tr>
+
+
+
+     <tr><td><a name="get_source_code"><b>Вопрос:</b> Могу ли я получить исходный код Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Да, исходный код доступен в разделе загрузки сайта.<br><br><br></td></tr>
+
+     <tr><td><a name="error_connection"><b>Вопрос:</b> Во время запуска программы появляется ошибка "Cannot open connection" и программа не стартует. Как решить эту проблему ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Нет доступа к базе данных. Возможны 3 основные причины:
+     <ul><li>Неверно настроено подключение к базе данных<li>Отсутствует JDBC дравер для базы данных<li>Отсутствует база данных</ul>
+     Для настройки подключения к базе данных смотрите <a href="#how_db_connect">Как подключится к базе данных ?</a><br>
+     Проверте наличие JDBC дравера для базы данных и если это необходимо, то загрузите драйвер из сайта производителя базы данных и измените CLASSPATH <br>
+     Проверте наличие базы данных и если необходимо то создайте её, используя SQL скрипты входящие в инсталляцию.
+     Детальнее смотрите <a href="#how_db_create">Как создать базу данных ?</a>
+     
+     </td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">База данных</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_db_create"><b>Вопрос:</b> Как создать базу данных ?</a></td></tr>
+     <tr><td><b>Ответ:</b> По умолчанию Plazma ERP+CRM использует базу данных HSQL. 
+     Инсталляция Plazma включает физические файлы базы данных только для HSQL.
+     Файлы размещены в каталоге &lt;Plazma&gt;/db/hsql.
+
+
+     Если Вы хотите использовать базу данных других производителей, 
+     то Вам необходимо создать базу данных вручную (CREATE DATABASE...) и 
+     выполнить соответствующие SQL скрипты на создание структуры базы и заполнения инициализирующими данными.
+     Для создания базы данных можно использовать различные инструментальные средства.
+
+ <p>Например:
+
+ <ul>
+   <li>Oracle - SQL* Plus
+   <li>PostgreSQL - pgAdmin
+   <li>MySQL Query Browser
+   <li>Firebird - ISQL, IBExpert
+   <li>HSQL - Database Manager (&lt;HSQL&gt;/demo/runManager.bat)
+  </ul>
+
+
+ <p>SQL скрипты размещены в папке &lt;Plazma&gt;/db/script.<br>
+
+ Вы можете запустить следующие скрипты для создания и заполнения новой базы данных:
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db.sql - рабочая база данных<br>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db_demo.sql - тестовая база данных<br>
+ </code>
+
+ <p>где<br> 
+
+ <code>&lt;database-vendor&gt;</code> - производитель базы данных (oracle, postgresql, mysql, firebird, hsql), <br>
+
+ <code>&lt;language&gt;</code> - язык (en, de, ru, uk)<br>
+
+ <p>Например для базы данных Firebird и русского языка:
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/firebird/ru/create_plazma_db.sql - рабочая база данных<br>
+  &lt;Plazma&gt;/db/script/createdb/firebird/ru/create_plazma_db_demo.sql - тестовая база данных<br>
+ </code>
+     <br><br><br>
+     </td></tr>
+
+
+
+     <tr><td><a name="how_db_connect"><b>Вопрос:</b> Как подключится к базе данных ?</a></td></tr>
+     <tr><td><b>Ответ:</b> По умолчанию Plazma ERP+CRM использует базу данных HSQL. 
+     Для того что бы использовать базу данных другого производителя, необходимо создать новую базу, 
+     используя SQL скрипты входящие в инсталляцию и выполнить соответствующую настройку.<br>
+     Настройка поключения к базе данных производится в файле &lt;Plazma&gt;/conf/jdbc.properties.
+     <br>Демо-режим устанавливается в файле свойств &lt;Plazma&gt;/conf/plazma.properties: plazma.platform.demo = true.
+ <p>Например:
+
+ <p>
+ <code>
+ # Установка свойств подключения к базе данных Firebird <br>
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver<br>
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.fdb<br>
+ jdbc.username=sysdba<br>
+ jdbc.password=masterkey<br>
+
+ </code>
+ 
+
+     <br><br><br>
+     </td></tr>
+
+
+
+
+
+<!-- App Server begin-->
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Сервер приложение</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_set_server"><b>Вопрос:</b> Как настроить серверную часть ?</a></td></tr>
+
+
+     <tr><td><b>Ответ:</b>
+
+ <ul>
+   <li><b>Lite сервер</b>
+
+<br>
+      <p>Для старта Lite сервера необходимо выполнить командный файл:
+<pre>
+
+   Windows
+   -------
+
+   start_server.bat
+
+
+   Linux
+   -----
+
+   start_server.sh
+</pre>
+<b>ВАЖНО!</b>
+<br>
+Для вызова сервисов по умолчанию используется порт <b>2005</b>, для вызова команд - <b>2007</b>
+<br>Если в Вашей системе уже используются данные порты, то необходимо изменить настройку сервера.
+<br>Порт для вызова сервисов устанавливается в файле &lt;PlazmaServer&gt;/conf/application-context-rmi.xml:
+<pre>
+&lt;bean class="org.springframework.remoting.rmi.RmiServiceExporter"&gt;
+    &lt;property name="serviceName">&lt;value>ServiceInvoker&lt;/value>&lt;/property&gt;
+    &lt;property name="service"> <ref bean="rmiServiceInvoker"/&gt;&lt;/property&gt;
+    &lt;property name="serviceInterface"><value>org.plazmaforge.framework.platform.service.ServiceInvoker&lt;/value&gt;&lt;/property&gt;
+    &lt;property name="<b>registryPort</b>"&gt;&lt;value><b>2005</b>&lt;/value&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+</pre>
+<b>При изменении порта для вызова сервисов, измените порт и на клиенте !</b>
+<br>Значения портов на сервисе и на клиенте должны совпадать.
+<br>На клиенте порт для вызова сервисов устанавливается в файле &lt;PlazmaClient&gt;/conf/rmi.properties
+<br>См. настройку клиента.
+
+<p>Порт для вызова команд передаётся как параметер при запуске сервера:
+<pre>
+
+   Windows
+   -------
+
+   start_server.bat <b>-commandport 2007</b>
+
+
+   Linux
+   -----
+
+   start_server.sh <b>-commandport 2007</b>
+</pre>
+ </ul>
+
+
+Подключение к базе данных настраивается в файле &lt;PlazmaServer&gt;/conf/jdbc.properties
+<br>См. <a href="#how_db_connect">Как подключится к базе данных ?</a>
+
+
+<!-- App server end -->
+
+    <br><br><br>
+     </td></tr>
+
+
+<!-- Client begin-->
+
+
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_set_client"><b>Вопрос:</b> Как настроить клиентскую часть ?</a></td></tr>
+
+
+     <tr><td><b>Ответ:</b>
+
+ <ul>
+   <li><b>Lite клиент</b>
+   <p>Необходимо произвести настройку RMI в файле &lt;PlazmaClient&gt;/conf/rmi.properties
+
+<pre>
+rmi.host = localhost
+rmi.port = 2005
+</pre>
+где <b>rmi.host</b> - реальное имя сервера, <b>rmi.port</b> - порт для вызова сервисов (по умолчанию - 2005)
+<p><b>ВАЖНО!</b>
+<br>Порт для вызова сервисов на клиенте должен совпадать с портом для вызова сервисов на сервере.
+См. <a href="#how_set_server">Как настроить серверную часть ?</a>
+ </ul>
+<!-- Client end -->
+
+
+
+
+
+
+     <br><br><br>
+     </td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Разработка</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_download_source_code"><b>Вопрос:</b> Как загрузить исходный код ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Исходный код доступен в разделе загрузки сайта. Можно также загрузить код из CVS. 
+     Код в CVS может отличается от последней версии, он менее стабилен, но отражает состояние разработки на текущий момент. <br><br><br></td></tr>
+
+
+     <tr><td><a name="what_dev_tools"><b>Вопрос:</b> Какие инструменты необходимы для разработки Plazma ERP+CRM ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Для разработки Plazma, как и для любого Ява проекта, необходимо наличие установленой на Вашем компьютере JDK версии 1.5 и выше.<br>
+     Для редактирования Java кода можно воспользоваться любым текстовым редактором, но настоятельно рекомендуеться использовать какую нибудь среду разработки (IDE)<br><br>
+     Например:
+     <ul><li>Eclipse<li>IDEA<li>Net Beans</ul>
+     IDE значительно ускорит и упростит процес разработки.
+     <br><br><br></td></tr>
+     
+
+     <tr><td><a name="no_compile"><b>Вопрос:</b> Не могу откомпилировать проект, большое количество ошибок компиляции типа ClassNotFound. Пользуюсь антовской таской build. Как решить эту проблему ?</a></td></tr>
+     <tr><td><b>Ответ:</b> Возможно к Вашему проекту не подключены необходимые .jar файлы. Для начала убедитесь в наличии данных файлов.
+     Необходимые для проектов .jar файлы размещены в папке lib.
+     <br><br><br></td></tr>
+
+
+   </table>
+
+</TD></TR>
+</TABLE>
+
+</body>
+</html>
+
+

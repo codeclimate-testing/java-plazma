@@ -1,0 +1,28 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="DocumentTypeEditForm" type="EditForm" title="@{DocumentTypeEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<tab-panel layout-data="GridData(align=fill)">
+					<tab-items>
+						<tab-item title="@{DocumentTypeEditForm.generalTabItem.text}" layout="GridLayout(columnCount=2)">
+							<children>
+								<label text="@{DocumentTypeEditForm.entityLabel.text}" /><text-field property="name" />
+								<label text="@{DocumentTypeEditForm.sectionLabel.text}" /><text-field property="documentSection" />
+								<label text="@{DocumentTypeEditForm.categoryLabel.text}" /><text-field property="documentCategory" />
+								<label text="@{DocumentTypeEditForm.useNumeratorLabel.text}" /><check-box property="useNumerator" />
+								<label text="@{DocumentTypeEditForm.documentNoPrefixLabel.text}" /><text-field property="documentNoPrefix" />
+								<label text="@{DocumentTypeEditForm.documentNoSuffixLabel.text}" /><text-field property="documentNoSuffix" />
+								<label text="@{DocumentTypeEditForm.lastDocumentNumberLabel.text}" /><integer-field property="lastDocumentNumber" />
+								<label text="@{DocumentTypeEditForm.documentNoReadOnlyLabel.text}" /><check-box property="documentNoReadOnly" />
+								<label text="@{DocumentTypeEditForm.documentDateReadOnlyLabel.text}" /><check-box property="documentDateReadOnly" />
+							</children>
+						</tab-item>
+						<tab-item title="@{DocumentTypeEditForm.statusTabItem.text}"/>
+						<tab-item title="@{DocumentTypeEditForm.dependencyTabItem.text}"/>
+					</tab-items>
+				</tab-panel>
+
+			</children>
+		</content>
+	</form>
+</ui>

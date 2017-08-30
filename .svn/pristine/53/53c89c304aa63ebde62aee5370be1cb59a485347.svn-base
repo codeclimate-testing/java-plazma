@@ -1,0 +1,16 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Locality" class="org.plazmaforge.bsolution.contact.common.beans.Locality" table="LOCALITY">
+    	<aliases>
+    		<alias name="regionName" attribute="region.name"/>
+    		<alias name="countryName" attribute="country.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String" required="true"/>
+        	<reference name="region" column="REGION_ID" class="org.plazmaforge.bsolution.contact.common.beans.Region"/>
+        	<reference name="country" column="COUNTRY_ID" class="org.plazmaforge.bsolution.base.common.beans.Country" required="true"/>
+        	<reference name="localityType" column="LOCALITY_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.LocalityType" required="true"/>
+        	<reference name="district" column="DISTRICT_ID" class="org.plazmaforge.bsolution.contact.common.beans.District"/>
+    	</attributes>
+    </entity>
+

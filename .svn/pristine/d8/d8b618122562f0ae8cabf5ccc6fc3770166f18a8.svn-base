@@ -1,0 +1,356 @@
+############################################################################
+# HR Enumeration Definition
+############################################################################
+
+#
+enum.gender.men=Male
+enum.gender.women=Female
+
+#
+enum.education-document-type.diploma=Diploma
+enum.education-document-type.certificat=Certificat
+
+#
+enum.military-valid-status.yes=Valid
+enum.military-valid-status.no=Invalid
+enum.military-valid-status.tmp=Temporable valid
+
+############################################################################
+# HR Action Definition
+############################################################################
+
+
+# Person List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonListAction@name = People
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonListAction@tooltip = People
+
+
+
+# Family Status List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.FamilyStatusListAction@name = Family statuses
+org.plazmaforge.bsolution.personality.client.swing.actions.FamilyStatusListAction@tooltip = Family statuses
+
+
+# Military Rank List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.MilitaryRankListAction@name = Military ranks
+org.plazmaforge.bsolution.personality.client.swing.actions.MilitaryRankListAction@tooltip = Military ranks
+
+# Military Speciality List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.MilitarySpecialityListAction@name = Military specialities
+org.plazmaforge.bsolution.personality.client.swing.actions.MilitarySpecialityListAction@tooltip = Military specialities
+
+# Military Status List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.MilitaryStatusListAction@name = Military statuses
+org.plazmaforge.bsolution.personality.client.swing.actions.MilitaryStatusListAction@tooltip = Military statuses
+
+
+# Speciality List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.SpecialityListAction@name = Specialities
+org.plazmaforge.bsolution.personality.client.swing.actions.SpecialityListAction@tooltip = Specialities
+
+# Person Document Type List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonDocumentTypeListAction@name = Person document types
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonDocumentTypeListAction@tooltip = Person document types
+
+
+
+
+# Academic Degree List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.AcademicDegreeListAction@name = Academic degrees
+org.plazmaforge.bsolution.personality.client.swing.actions.AcademicDegreeListAction@tooltip = Academic degrees
+
+# Education Institute List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.EducationInstituteListAction@name = Education institutes
+org.plazmaforge.bsolution.personality.client.swing.actions.EducationInstituteListAction@tooltip = Education institutes
+
+# Education Form List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.EducationFormListAction@name = Education forms
+org.plazmaforge.bsolution.personality.client.swing.actions.EducationFormListAction@tooltip = Education forms
+
+# Education Type List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.EducationTypeListAction@name = Education types
+org.plazmaforge.bsolution.personality.client.swing.actions.EducationTypeListAction@tooltip = Education types
+
+# Familiarity List Action
+org.plazmaforge.bsolution.personality.client.swing.actions.FamiliarityListAction@name = Familiarities
+org.plazmaforge.bsolution.personality.client.swing.actions.FamiliarityListAction@tooltip = Familiarities
+
+
+
+
+#
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonEducationListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonEducationListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonEducationListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonEducationListAction@name=Education
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonEducationListAction@tooltip=Education
+
+#
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonFamilyListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonFamilyListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonFamilyListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonFamilyListAction@name=Person family
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonFamilyListAction@tooltip=Person family
+
+#
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonJobListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonJobListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonJobListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonJobListAction@name=Person jobs
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonJobListAction@tooltip=Person jobs
+
+#
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonLanguageListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonLanguageListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.client.swing.actions.PersonLanguageListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonLanguageListAction@name=Person Languages
+org.plazmaforge.bsolution.personality.client.swing.actions.PersonLanguageListAction@tooltip=Person Languages
+
+############################################################################
+# List Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonList@title=People
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonList@table.column-last-name.name=Last name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonList@table.column-first-name.name=First Name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonList@table.column-middle-name.name=Middle Name
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.FamilyStatusList@title=Family statuses
+org.plazmaforge.bsolution.personality.client.swing.forms.FamilyStatusList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.FamilyStatusList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryRankList@title=Military ranks
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryRankList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryRankList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitarySpecialityList@title=Military specialities
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitarySpecialityList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitarySpecialityList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryStatusList@title=Military status
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryStatusList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryStatusList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.SpecialityList@title=Specialities
+org.plazmaforge.bsolution.personality.client.swing.forms.SpecialityList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.SpecialityList@table.column-name.name=Name
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonDocumentTypeList@title=Person document types
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonDocumentTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonDocumentTypeList@table.column-name.name=Name
+
+
+
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.AcademicDegreeList@title=Academic degrees
+org.plazmaforge.bsolution.personality.client.swing.forms.AcademicDegreeList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationFormList@title=Education forms
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationFormList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationTypeList@title=Education types
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationTypeList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationInstituteList@title=Education institutes
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationInstituteList@table.column-name.name=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.FamiliarityList@title=Familiarities
+org.plazmaforge.bsolution.personality.client.swing.forms.FamiliarityList@table.column-name.name=Name
+
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@title=Education
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@table.column-education-type-name.name=Education type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@table.column-education-form-name.name=Education form
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@table.column-education-institute-name.name=Education institute
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@table.column-end-date.name=End date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@table.column-faculty.name=Faculty
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationList@table.column-academic-degree-name.name=Academic degree
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyList@title=Person family
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyList@table.column-name.name=Name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyList@table.column-familiarity-name.name=Familiariry
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyList@table.column-birth-date.name=Birth date
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobList@title=Person jobs
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobList@table.column-start-date.name=Start date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobList@table.column-end-date.name=End date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobList@table.column-organization.name=Organization
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobList@table.column-position.name=Position
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonLanguageList@title=Person languages
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonLanguageList@table.column-language-name.name=Language
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonLanguageList@table.column-easy.name=Is native
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@title=Person
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.title.document.text=Documents
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.title.identity.text=Identity
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.title.diploma.text=Diploma
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.title.military.text=Military
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-last-name.text=Last name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-first-name.text=First name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-middle-name.text=Middle name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-nationality.text=Nationality
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-birth-date.text=Birth date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-gender.text=Gender
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-family-status.text=Family status
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-country-residence.text=Country residence
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-language.text=Language
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-tax-code.text=Tax code
+
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-document-type.text=Document type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-document-series.text=Series
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-document-number.text=Number
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-document-date.text=Document date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-document-given.text=Document given
+
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-diploma-type.text=Diploma type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-diploma-series.text=Series
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-diploma-number.text=Diploma number
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-diploma-date.text=Diploma date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-diploma-speciality.text=Speciality
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-diploma-qualification.text=Qualification
+
+
+
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-military-status.text=Military status
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-military-rank.text=Military rank
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-military-speciality.text=Military speciality
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-valid-status.text=Valid status
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-military-registration.text=Military registration
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@panel.label-special-record.text=Special record
+
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-address.name=Addresses
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-address.column-address-type.name=Type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-address.column-address-string.name=Address
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-phone.name=Phones
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-phone.column-phone-type.name=Type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-phone.column-phone-string.name=Phone
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-email.name=Emails
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-email.column-email-address.name=Email
+
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-web.name=Web
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEdit@table-web.column-url.name=URL
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.FamilyStatusEdit@title=Family status
+org.plazmaforge.bsolution.personality.client.swing.forms.FamilyStatusEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.FamilyStatusEdit@panel.label-name.text=Name
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryRankEdit@title=Military rank
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryRankEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryRankEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitarySpecialityEdit@title=Military specialilty
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitarySpecialityEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitarySpecialityEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryStatusEdit@title=Military status
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryStatusEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.MilitaryStatusEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.SpecialityEdit@title=Speciality
+org.plazmaforge.bsolution.personality.client.swing.forms.SpecialityEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.SpecialityEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonDocumentTypeEdit@title=Person document type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonDocumentTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonDocumentTypeEdit@panel.label-name.text=Name
+
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.AcademicDegreeEdit@title=Academic degree
+org.plazmaforge.bsolution.personality.client.swing.forms.AcademicDegreeEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationInstituteEdit@title=Education institute
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationInstituteEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationFormEdit@title=Education form
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationFormEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationTypeEdit@title=Education type
+org.plazmaforge.bsolution.personality.client.swing.forms.EducationTypeEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.FamiliarityEdit@title=Familiarity
+org.plazmaforge.bsolution.personality.client.swing.forms.FamiliarityEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.personality.client.swing.forms.FamiliarityEdit@panel.label-child.text=Is child
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@title=Education
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@panel.label-education-type.text=Education type
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@panel.label-education-form.text=Education form
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@panel.label-education-institute.text=Education institute
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@panel.label-end-date.text=End date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@panel.label-faculty.text=Faculty
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonEducationEdit@panel.label-academic-degree.text=Academic degree
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyEdit@title=Person family
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyEdit@panel.label-familiarity.text=Familiarity
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonFamilyEdit@panel.label-birth-date.text=Birth date
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobEdit@title=Person job
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobEdit@panel.label-start-date.text=Start date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobEdit@panel.label-end-date.text=End date
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobEdit@panel.label-organization.text=Organization
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonJobEdit@panel.label-position.text=Position
+
+
+#
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonLanguageEdit@title=Languages
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonLanguageEdit@panel.label-language.text=Language
+org.plazmaforge.bsolution.personality.client.swing.forms.PersonLanguageEdit@panel.label-easy.text=Is native

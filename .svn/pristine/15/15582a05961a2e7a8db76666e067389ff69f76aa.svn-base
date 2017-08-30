@@ -1,0 +1,14 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Permission" class="org.plazmaforge.bsolution.security.common.beans.Permission" table="SYS_PERMISSION">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="role" column="ROLE_ID" class="org.plazmaforge.bsolution.security.common.beans.Role"  required="true" />
+        	<reference name="secureObject" column="SECURE_OBJECT_ID" class="org.plazmaforge.bsolution.security.common.beans.SecureObject"  required="true" />        
+        	<attribute name="read" column="IS_READ" type="Boolean"/>
+        	<attribute name="write" column="IS_WRITE" type="Boolean"/>
+        	<attribute name="exec" column="IS_EXEC" type="Boolean"/>
+        </attributes>
+    </entity>
+
+
+

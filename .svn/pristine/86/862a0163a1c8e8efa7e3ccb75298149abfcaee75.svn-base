@@ -1,0 +1,10 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CashIncome" class="org.plazmaforge.bsolution.cash.common.beans.CashIncome" table="CASH_INCOME"  extends-class="org.plazmaforge.bsolution.cash.common.beans.CashDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/> 
+        	<attribute name="paymentDate" column="PAYMENT_DATE" type="Date" />
+        	<attribute name="paymentMissing" column="PAYMENT_MISSING" type="String" />
+        	<reference name="contractor" column="CONTRACTOR_ID" class="org.plazmaforge.bsolution.finance.common.beans.ContractorHeader"  required="true" />
+        </attributes>
+    </joined-entity>
+

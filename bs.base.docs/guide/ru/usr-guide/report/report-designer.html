@@ -1,0 +1,214 @@
+
+<html>
+<title>Дизайнер отчётов</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+</head>
+
+<body>
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Дизайнер отчётов</h2>
+   <hr>
+   <br><br><br><br>
+
+   <h3  align="center">Хранилище отчётов</h3>
+   Все отчёты системы расположены в каталоге: <b>&lt;Plazma&gt;/reports</b>.
+   Для удобства использования данный каталог разбит ещё на подкаталоги. Например: bank, employee, finance, goods и т.д. 
+   При использовании нескольких локалей в системе 
+   (комбинация страны и языка, например: Россия/руский, Украина/украинский) 
+   в случае если один и тот же отчёт отличается дизайном (разные шаблоны) 
+   возможен вариант использования специальных каталогов для каждой локали в формате <b>&lt;СТРАНА&gt;/&lt;язык&gt;</b>.
+   <br><br>Например:<br>
+   <br>RU/ru - Россия/руский
+   <br>UA/uk - Украина/украинский
+
+   <br><br>При использовании нескольких шаблонов одного и того же отчёта для разных локалей в режиме конфигурирования отчёта 
+   необходимо указывать путь к файлу <b>без каталогов локали</b>.
+
+   <br><br>Например:<br>
+   <br><code>&lt;Plazma&gt;/reports/goods/Invoice.jasper</code>
+   <br><br>
+   Хотя физически для каждой локали размещение файлов следующее:<br>   
+   <br><code>&lt;Plazma&gt;/reports/goods/RU/ru/Invoice.jasper</code> - Россия/руский
+   <br><code>&lt;Plazma&gt;/reports/goods/UA/uk/Invoice.jasper</code> - Украина/украинский
+   
+   
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">iReport</h3>
+   Для создания шаблонов отчётов можно использовать дизайнер (построитель) отчётов iReport. <br>
+   Загрузить данное программное обеспечение можно по адресу <a href="http://sourceforge.net/projects/ireport">http://sourceforge.net/projects/ireport</a>. 
+   Детальную информацию по работе с IReport смотрите на сайте производителя.
+   <br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-mini.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br>
+   
+   Рассмотрим важные моменты настройки дизайнера.
+
+   <br><br><br><br> 
+   <h3  align="center">Настройка опций</h3>
+   
+   Для выполнения настройки необходимо вызвать пункт меню: Options -&gt; Опции. 
+   Далее нужно выбрать закладку <b>Compiler</b> и устанавить режим <b>Использовать каталог отчётов для компиляции</b>
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-settings-compiler-mark.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br> 
+   <h3  align="center">Classpath</h3>
+   Если вы используете дополнительные JAR файлы (JDBC драйверы, дополнительные библиотеки и т.д.), 
+   то вам нужно соответствующим образом установить переменную Classpath.
+   Для установки Classpath необходимо вызвать пункт меню: Options -&gt; Classpath. 
+   
+   
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-classpath.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   
+   Для добавления нового JAR файла необходимо нажать кнопку <b>Добавить JAR</b> и выбрать соответствующий файл в системе.
+   Далее необходимо нажать кнопку <b>Save Classpath</b> для сохранения переменной Classpath.
+   
+  
+   
+   <br><br><br><br> 
+   <h3  align="center">Источники данных</h3>
+   
+   Для создания нового источника данных необходимо вызвать пункт меню: Data -&gt; Соединения/Источники данных и 
+   нажать кнопку <b>Новый</b>
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-connections.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>   
+   Далее необходимо выбрать тип источника <b>JDBC содинение с базой данных</b> и нажать кнопку <b>Next</b>
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-select-datasource-type.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>   
+   В следующем диалоговом окне  необходимо указать свойства JDBC соединения и нажать кнопку <b>Сохранить</b><br>
+  
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-connections-edit.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>  
+   <b>ВАЖНО!</b> Для нормальной работы JDBC соединения необходимо добавить соответствующий JDBC драйвер (JAR файл или файлы) в Classpath.
+   Если все настройки выполнены правильно, то при нажатии на кнопку  <b>Тестировать</b> будет отображёно следующее окно:
+   <br><br><br><br>  
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-connection-successful.png"/></td>
+    </tr>
+   </table>
+   
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">Указания по импорту</h3>
+   
+   Если вы используете в отчёте сторонние Java классы, вам необходимо импортировать соответствующие пакеты, классы 
+   воспользовавшись пунктом меню: Редактировать -&gt; Указания по импорту отчёта. 
+   <br><br><b>ВАЖНО!</b> Данное меню доступно только если уже создан/открыт отчёт, так как мы добавляем импорт в конкретный отчёт.
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-imports.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   
+   Для добавления импорта, необходимо нажать кнопку <b>New Import</b> и ввести соответcвующий пакет или класс.
+   
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-imports-plazma-edit.png"/></td>
+    </tr>
+   </table>
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">Пользовательские атрибуты</h3>
+   
+   В системе Plazma ERP+CRM предоставлена возможность использовать пользовательские атрибуты. 
+   Данные атрибуты можно добавлять в соответствующих формах редактирования: справочники, документы, проекты, задачи и т.д. (закладка <b>Атрибуты</b>)
+   
+   <br>Пользовательские атрибуты можно выводить и в отчётах. Для этого нужно выполниь следующие действия:
+   <ul>
+    <li>Добавить в Classpath файл <b>&lt;Plazma&gt;/lib/plazma-framework-&lt;version&gt;-.jar</b><br><br>
+    <li>Добавить в отчёт импорт <b>org.plazmaforge.framework.report.data.*</b>.
+   </ul>
+   <br>Форматы выражения для пользовательских атрибутов следующие:<br><br>
+   <ul>
+   <code>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Сущность&gt;, &lt;Атрибут&gt;, &lt;Идентификатор&gt;)<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Сущность&gt;, &lt;Атрибут&gt;)<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Атрибут&gt;, &lt;Идентификатор&gt;)<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Атрибут&gt;)<br>
+   </code>
+   </ul>
+   
+   
+   <br>Примеры выражений:<br><br>
+   <ul>
+   <code>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT", "attribute1", $F{ID})<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT", "attribute1")<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT.attribute1", $F{ID})<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT.attribute1")<br>
+   </code>
+   </ul>
+   
+   <br> Если в выражении не указан идентификатор, то автоматически используется параметр $P{ID}.
+   Тоесть подразумевается что этот параметр передан отчёту из вне.
+   <br> Если в выражении не указана сущность то необходимо применять составное имя атрибута в формате "&lt;Сущность&gt;.&lt;Атрибут&gt;"
+   <br>Например: "CONTRACT.attribute1"
+</TD>
+</TR>
+
+</TABLE>
+
+</body>
+</html>
+
+

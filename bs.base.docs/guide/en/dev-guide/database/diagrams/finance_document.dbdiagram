@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="e2521d32" name="FINANCE_DOCUMENT">
+      <drawing is-expanded="true" location="340,0" dimensions="309,447" />
+      <columns>
+        <column id="32860f42" name="ID" is-primary-key="true" is-foreign-key="true" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="4fea9a0a" name="TAX_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="dc7867ab" name="CURRENCY_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3a1980db" name="AMOUNT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="a4e8cda2" name="AMOUNT_WITH_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="c598b4b6" name="TAX_AMOUNT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="7d136d48" name="TOTAL" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="d6ea4114" name="TOTAL_WITH_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="82dc8f30" name="TAX_TOTAL" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="5aa9c736" name="CURRENCY_AMOUNT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="1a5a2a77" name="CURRENCY_AMOUNT_WITH_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="4b0e9f18" name="CURRENCY_TAX_AMOUNT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="c391a7e2" name="CURRENCY_TOTAL" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="be00ef3d" name="CURRENCY_TOTAL_WITH_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="e2e81bab" name="CURRENCY_TAX_TOTAL" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="88fa53d6" name="CURRENCY_RATE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="10,4" />
+        </column>
+        <column id="3c817ef" name="CURRENCY_RATE_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="6fddf50f" name="IS_OPERATION" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="20990fd3" name="IS_ACCOUNT_ITEMS" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="af84a583" name="IS_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="4532a3d9" name="TAX_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="6,2" />
+        </column>
+      </columns>
+    </table>
+    <table id="37e00ff9" name="DOCUMENT">
+      <drawing is-expanded="true" location="0,0" dimensions="247,438" />
+      <columns>
+        <column id="66a4e8ae" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="b1c3e165" name="PARTNER_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="1caed952" name="ORGANIZATION_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b08b94f0" name="DEPARTMENT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="5057f089" name="DOCUMENT_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="7d40c4d1" name="DOCUMENT_STATUS_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="c276eb05" name="PERIOD_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="d44af50f" name="RESPONSIBLE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3a450b5f" name="USER_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="469bb77e" name="REASON_DOCUMENT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="84d11aec" name="CONTRACT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="fa61dac3" name="PROJECT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="6c4eeff7" name="CREATE_TIMESTAMP" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="TIMESTAMP" size="6" />
+        </column>
+        <column id="1f49bd08" name="CREATE_USER_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="d16fc60c" name="UPDATE_TIMESTAMP" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="TIMESTAMP" size="6" />
+        </column>
+        <column id="32e655f0" name="UPDATE_USER_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="cced693a" name="DOCUMENT_NO" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="d7d5ca91" name="DOCUMENT_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="5b8ba37e" name="REASON" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="64" />
+        </column>
+        <column id="7515cf76" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="739013ac" name="IS_COMPLETE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="9084ad7c" name="CURRENCY">
+      <drawing is-expanded="true" location="640,520" dimensions="201,129" />
+      <columns>
+        <column id="f430ef3a" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="332c204c" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="3" />
+        </column>
+        <column id="680f7546" name="NUMERIC_CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="3" />
+        </column>
+        <column id="47688516" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="f1d7c935" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+      </columns>
+    </table>
+    <table id="2f31ed9a" name="TAX">
+      <drawing is-expanded="true" location="380,520" dimensions="199,129" />
+      <columns>
+        <column id="b25bc29e" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="7072cb4f" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="ef384e6a" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="6ccbe5c7" name="TAX_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="NUMERIC" size="5,2" />
+        </column>
+        <column id="6ec076a4" name="AMOUNT" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="NUMERIC" size="10,2" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="e943cb5c" name="FK_DOCUMENT_FIN_DOCUMENT">
+      <details pk-table-id="37e00ff9" fk-table-id="e2521d32">
+        <pk-columns>
+          <key-column id="66a4e8ae" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="32860f42" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="3370143" name="FK_FINANCE__FINDOC_TA_TAX">
+      <details pk-table-id="2f31ed9a" fk-table-id="e2521d32">
+        <pk-columns>
+          <key-column id="b25bc29e" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="4fea9a0a" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="cb2ddefa" name="FK_FINANCE__FINDOC_CU_CURRENCY">
+      <details pk-table-id="9084ad7c" fk-table-id="e2521d32">
+        <pk-columns>
+          <key-column id="f430ef3a" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="dc7867ab" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

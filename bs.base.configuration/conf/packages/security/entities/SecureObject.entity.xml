@@ -1,0 +1,13 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SecureObject" class="org.plazmaforge.bsolution.security.common.beans.SecureObject" table="SYS_SECURE_OBJECT" >
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="objectId" column="OBJECT_ID" type="String" />
+        	<attribute name="objectType" column="OBJECT_TYPE" type="String" />
+        </attributes>         
+    </entity>
+
+
+

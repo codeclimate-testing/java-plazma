@@ -1,0 +1,15 @@
+
+
+<!ELEMENT toolbar-config (toolbar*)>
+
+<!ELEMENT toolbar (button*)>
+
+<!ELEMENT toolitem EMPTY>
+
+<!ATTLIST toolitem
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        text CDATA #IMPLIED
+        action NMTOKEN #IMPLIED
+>
+

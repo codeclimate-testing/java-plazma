@@ -1,0 +1,29 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductHeader" class="org.plazmaforge.bsolution.product.common.beans.ProductHeader" table="PRODUCT" readonly="true">
+    	<aliases>
+    	   	<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="responsibleId" attribute="responsible.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="unitName" attribute="unit.name"/>
+    		<alias name="currencyName" attribute="currency.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />        
+        	<attribute name="barCode" column="BAR_CODE" type="String" />
+        	<attribute name="costPrice" column="PRICE" type="Double" /> <!--  COST_PRICE = PRICE -->
+        	<attribute name="listPrice" column="LIST_PRICE" type="Double" />
+	        <attribute name="currencyCostPrice" column="CURRENCY_PRICE" type="Double" />
+    	    <attribute name="currencyListPrice" column="CURRENCY_LIST_PRICE" type="Double" />
+	        <attribute name="taxPercent" column="TAX_PERCENT" type="Float" />
+    	    <attribute name="addPricePercent" column="ADDPRICE_PERCENT" type="Float" />
+	        <attribute name="currencyRate" column="CURRENCY_RATE" type="Double" />
+	        <reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+    	    <reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency" />
+        	<reference name="supplier" column="SUPPLIER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactHeader" />
+    	</attributes>
+    </entity>
+

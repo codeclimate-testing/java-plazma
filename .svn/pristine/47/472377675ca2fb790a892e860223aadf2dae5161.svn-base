@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <joined-subclass name="CarServOrder" table="CAR_SERV_ORDER" extends="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+
+       	<key column="ID"/>
+
+
+        <property name="discountPercent" column="DISCOUNT_PERCENT" type="java.lang.Float" />
+        <property name="markupPercent" column="MARKUP_PERCENT" type="java.lang.Float" />
+
+        <many-to-one name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Responsible" />
+
+        <many-to-one name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>
+
+        <many-to-one name="priceType" column="PRICE_TYPE_ID" class="org.plazmaforge.bsolution.product.common.beans.PriceType"  />        
+
+        <many-to-one name="car" column="CAR_ID" class="Car"/>                                
+        
+
+        <many-to-one name="incomeRepresentative" column="INCOME_REPRESENTATIVE_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerRepresentative"/>
+        
+        <many-to-one name="outcomeRepresentative" column="OUTCOME_REPRESENTATIVE_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerRepresentative"/>
+        
+                
+        <property name="carIncomeDate" column="CAR_INCOME_DATE" type="java.util.Date" />        
+        
+        <property name="carOutcomeDate" column="CAR_OUTCOME_DATE" type="java.util.Date" />                
+
+        <property name="additionalRepairId" column="ADDITIONAL_REPAIR_ID" type="java.lang.Integer" />
+        
+
+        <bag name="damageList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_SERV_ORDER_ID"/>
+            <one-to-many class="CarServOrderDamage"/>
+        </bag>
+        
+        <bag name="productItems" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_SERV_ORDER_ID"/>
+            <one-to-many class="CarServOrderItem"/>
+        </bag>
+
+        <bag name="paintTypeList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_SERV_ORDER_ID"/>
+            <one-to-many class="CarServOrderPaintType"/>
+        </bag>
+
+        <bag name="imageList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_SERV_ORDER_ID"/>
+            <one-to-many class="CarServOrderImage"/>
+        </bag>
+
+    </joined-subclass>
+
+</hibernate-mapping>

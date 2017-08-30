@@ -1,0 +1,5 @@
+#Eclipse messages class
+#Tue Jun 26 15:30:35 EEST 2007
+XTaxCombo.null.nullTextValue=No Tax
+XOperationTypeCombo.operation.type.debit=Debit
+XOperationTypeCombo.operation.type.credit=Credit

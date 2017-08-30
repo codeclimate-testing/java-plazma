@@ -1,0 +1,47 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PaymentOutcomeTemplate" class="org.plazmaforge.bsolution.bank.common.beans.PaymentOutcomeTemplate" table="PAYMENT_OUTCOME_TEMPLATE">
+    	<aliases>
+    		<alias name="partnerName" attribute="partner.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="documentNo" column="DOCUMENT_NO" type="String" />
+        	<attribute name="documentDate" column="DOCUMENT_DATE" type="Date" />
+        	<attribute name="reason" column="REASON" type="String" />
+        	<attribute name="note" column="NOTE" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<attribute name="amountWithTax" column="AMOUNT_WITH_TAX" type="Double" />        
+        	<attribute name="taxAmount" column="TAX_AMOUNT" type="Double" />
+        
+        	<attribute name="total" column="TOTAL" type="Double" />
+        	<attribute name="totalWithTax" column="TOTAL_WITH_TAX" type="Double" />
+        	<attribute name="taxTotal" column="TAX_TOTAL" type="Double" />        
+        
+        	<attribute name="currencyAmount" column="CURRENCY_AMOUNT" type="Double" />
+        	<attribute name="currencyAmountWithTax" column="CURRENCY_AMOUNT_WITH_TAX" type="Double" />        
+        	<attribute name="currencyTaxAmount" column="CURRENCY_TAX_AMOUNT" type="Double" />
+        
+        	<attribute name="currencyTotal" column="CURRENCY_TOTAL" type="Double" />
+        	<attribute name="currencyTotalWithTax" column="CURRENCY_TOTAL_WITH_TAX" type="Double" />        
+        	<attribute name="currencyTaxTotal" column="CURRENCY_TAX_TOTAL" type="Double" />
+        
+        	<attribute name="currencyRate" column="CURRENCY_RATE" type="Double" />
+        	<attribute name="currencyRateDate" column="CURRENCY_RATE_DATE" type="Date" />
+ 
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency"/>
+        	<attribute name="tax" column="IS_TAX" type="Boolean"/>
+        	<attribute name="taxId" column="TAX_ID" type="Integer" />
+        	<attribute name="taxPercent" column="TAX_PERCENT" type="Float" />
+                       
+        	<attribute name="paymentDate" column="PAYMENT_DATE" type="Date" />
+        	<attribute name="paymentMissing" column="PAYMENT_MISSING" type="String" />
+        	<reference name="organizationBankAccount" column="ORGANIZATION_BANK_ACCOUNT_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount"  required="true" />        
+        	<reference name="partnerBankAccount" column="PARTNER_BANK_ACCOUNT_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount"  required="true" /> <!-- ERROR: Must change column to PARTNER_BANK_ACCOUNT_ID -->
+        	<reference name="paymentType" column="PAYMENT_TYPE_ID" class="org.plazmaforge.bsolution.bank.common.beans.PaymentType"  required="true" />
+        	<reference name="taxPrintType" column="TAXPRINT_TYPE_ID" class="org.plazmaforge.bsolution.bank.common.beans.TaxPrintType"  required="true" />
+        </attributes>
+    </entity>
+

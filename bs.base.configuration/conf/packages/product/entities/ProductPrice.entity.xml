@@ -1,0 +1,13 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductPrice" class="org.plazmaforge.bsolution.product.common.beans.ProductPrice" table="PRODUCT_PRICE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="pricePercent" column="PRICE_PERCENT" type="Float" />
+        	<attribute name="price" column="PRICE" type="Double" />
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency"  required="true" />
+        	<reference name="priceType" column="PRICE_TYPE_ID" class="org.plazmaforge.bsolution.product.common.beans.PriceType"  required="true" />
+        	<reference name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.Product"  required="true" />
+        	<reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+    	</attributes>
+    </entity>
+

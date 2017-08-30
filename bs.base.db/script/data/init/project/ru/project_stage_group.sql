@@ -1,0 +1,3 @@
+
+INSERT INTO PROJECT_STAGE_GROUP (ID, CODE, NAME, DESCRIPTION) VALUES (1,'1','Продажа','Продажа');
+INSERT INTO PROJECT_STAGE_GROUP (ID, CODE, NAME, DESCRIPTION) VALUES (2,'2','Работа с клиентом','Работа с клиентом');

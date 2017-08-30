@@ -1,0 +1,38 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Warehouse" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse" table="V_WAREHOUSE_UNION" readonly="true">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.organization.common.services.GenericWarehouseService</property>
+    	</config>
+    	<aliases>
+    		<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="fullName" attribute="name"/>
+    	</aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+        	<attribute name="entityId" column="ENTITY_ID" type="String" />
+        	<attribute name="entityCode" column="ENTITY_CODE" type="String" />
+        	<attribute name="entityName" column="ENTITY_NAME" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<attribute name="parentId" column="PARENT_ID" type="Integer" />
+        	<attribute name="name" column="NAME" type="String" />
+        </attributes>
+    	<triggers>
+   		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    	</triggers>	
+    </entity>
+

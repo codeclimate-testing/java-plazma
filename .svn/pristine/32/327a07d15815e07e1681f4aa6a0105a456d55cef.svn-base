@@ -1,0 +1,31 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PartnerHeader" class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader" table="PARTNER" readonly="true">
+    	<aliases>
+    		<alias name="partnerTypeName" attribute="partnerType.name"/>
+    		<alias name="partnerGroupId" attribute="partnerGroup.id"/>
+    		<alias name="partnerGroupName" attribute="partnerGroup.name"/>
+    		<alias name="responsibleId" attribute="responsible.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="phoneString" attribute="defPhone.phoneString" filter-attribute="defPhone.phoneCompile"/>
+    		<alias name="cityName" attribute="defAddress.cityName"/>
+    		<alias name="localityAddressString" attribute="defAddress.localityAddressString"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer"/>
+	        <attribute name="code" column="CODE" type="String" />
+    	    <attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="fullName" column="FULL_NAME" type="String" />
+        	<attribute name="nec" column="NEC" type="String" />
+        	<attribute name="idn" column="IDN" type="String" />
+        	<attribute name="taxDocNo" column="TAX_DOC_NO" type="String" />
+        	<attribute name="descriminator" column="DESCRIMINATOR" type="String" />
+        	<attribute name="bankAccountId" column="BANK_ACCOUNT_ID" type="Integer" />
+         	<reference name="partnerType" column="PARTNER_TYPE_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerType"/>
+        	<reference name="partnerGroup" column="PARTNER_GROUP_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerGroup"/>
+        	<reference name="ledgerAccount" column="LEDGER_ACCOUNT_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+        	<entry name="defPhone" class="org.plazmaforge.bsolution.partner.common.beans.DefPartnerPhone" join-attribute="partner" />
+        	<entry name="defAddress" class="org.plazmaforge.bsolution.partner.common.beans.DefPartnerAddress" join-attribute="partner" />
+    	</attributes>
+    </entity>
+

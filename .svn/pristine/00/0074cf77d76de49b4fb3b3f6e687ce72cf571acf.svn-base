@@ -1,0 +1,15 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="UnitListForm" type="ListForm" title="@{UnitListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{UnitListForm.codeColumn.text}" property="code" data-type="String" width="200"/>
+						<column text="@{UnitListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+						<column text="@{UnitListForm.fullNameColumn.text}" property="fullName" data-type="String" width="300"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

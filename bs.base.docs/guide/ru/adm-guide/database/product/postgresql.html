@@ -1,0 +1,107 @@
+
+<html>
+<title>PostgreSQL</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">PostgreSQL</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Общая информация</h3>
+
+Web сайт:  <a target="_blank" href="http://www.postgresql.org">http://www.postgresql.org</a>
+
+   <h3 align="center">Создание базы данных</h3>
+
+ <p>
+ Создание базы данных:
+ <code>
+ <pre>
+ &lt;PostgreSQL&gt;/bin/psql -U postgres
+
+ postgres=# create database plazma;
+ postgres=# \q
+ </pre>
+ </code>
+
+
+ <p>
+ Создание структуры базы и заполненние инициализирующими данными:
+ <code>
+ <pre>
+ &lt;PostgreSQL&gt;/bin/psql -d plazma -U postgres -f с:\Plazma\db\script\createdb\postgresql\ru\create_plazma_db.sql 
+ </pre>
+ </code>
+
+
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC драйвер</h3>
+ 
+ <p>
+ Необходимо проверить наличие драйвера: 
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/jdbc/postgresql/postgresql-8.0.309.jdbc3.jar
+ </pre>
+ </code>
+
+
+ <br>
+ <p>
+ Необходимо проверить правильность установки CLASSPATH для данного драйвера в файле:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # PostgreSQL 
+ lib/jdbc/postgresql/postgresql-8.0.309.jdbc3.jar 
+
+ </pre>
+ </code>
+
+ <br><br>
+
+
+   <h3 align="center">Подключение к базе данных </h3>
+
+ <p>Для настройки подключения необходимо изменить соответствующие свойства
+ в файле &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>Например:
+
+ <p>
+ <code>
+ <pre>
+
+
+ # Установка свойств подключения к базе данных
+ jdbc.driverClassName=org.postgresql.Driver
+ jdbc.url=jdbc:postgresql://localhost:5432/plazma
+ jdbc.username=postgres
+ jdbc.password=tiger
+ </pre>
+ </code>
+
+
+
+
+</body>
+</html>
+
+

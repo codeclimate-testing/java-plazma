@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarServOrderItem" table="CAR_SERV_ORDER_ITEM">
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+        <property name="itemType" column="ITEM_TYPE" type="java.lang.String" not-null="true"/>        
+        <property name="carServOrderInventoryId" column="CAR_SERV_ORDER_INVENTORY_ID" type="java.lang.Integer" />
+        <many-to-one name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>
+
+        <!-- ONLY FOR SERVICE ITEM -->
+        <many-to-one name="worker" column="WORKER_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader"/>        
+        <many-to-one name="carServComplexity" column="CAR_SERV_COMPLEXITY_ID" class="CarServComplexity"/>
+        <property name="workHour" column="WORK_HOUR" type="java.lang.Float" />
+
+
+        <property name="price" column="PRICE" type="java.lang.Double" />
+        <property name="taxPrice" column="TAX_PRICE" type="java.lang.Double" />
+        <property name="quantity" column="QUANTITY" type="java.lang.Double" />
+        <property name="amount" column="AMOUNT" type="java.lang.Double" />
+        <property name="taxAmount" column="TAX_AMOUNT" type="java.lang.Double" />
+        <property name="tax" type="org.hibernate.usertype.CustomBooleanType" >
+            <column name="IS_TAX" sql-type="CHAR(1)"/>
+        </property>
+        <property name="currencyPrice" column="CURRENCY_PRICE" type="java.lang.Double" />
+        <property name="currencyTaxPrice" column="CURRENCY_TAX_PRICE" type="java.lang.Double" />
+        <property name="currencyAmount" column="CURRENCY_AMOUNT" type="java.lang.Double" />
+        <property name="currencyTaxAmount" column="CURRENCY_TAX_AMOUNT" type="java.lang.Double" />
+        <property name="unitRate" column="UNIT_RATE" type="java.lang.Double" />
+        <property name="priceWithTax" column="PRICE_WITH_TAX" type="java.lang.Double" />
+        <property name="amountWithTax" column="AMOUNT_WITH_TAX" type="java.lang.Double" />
+        <property name="currencyAmountWithTax" column="CURRENCY_AMOUNT_WITH_TAX" type="java.lang.Double" />
+        <property name="currencyPriceWithTax" column="CURRENCY_PRICE_WITH_TAX" type="java.lang.Double" />
+
+
+        <property name="discountPercent" column="DISCOUNT_PERCENT" type="java.lang.Float" />
+        <property name="markupPercent" column="MARKUP_PERCENT" type="java.lang.Float" />
+        
+        <property name="basePrice" column="BASE_PRICE" type="java.lang.Double" />
+        <property name="taxBasePrice" column="TAX_BASE_PRICE" type="java.lang.Double" />
+        <property name="basePriceWithTax" column="BASE_PRICE_WITH_TAX" type="java.lang.Double" />        
+
+        <property name="currencyBasePrice" column="CURRENCY_BASE_PRICE" type="java.lang.Double" />
+        <property name="currencyTaxBasePrice" column="CURRENCY_TAX_BASE_PRICE" type="java.lang.Double" />
+        <property name="currencyBasePriceWithTax" column="CURRENCY_BASE_PRICE_WITH_TAX" type="java.lang.Double" />        
+        
+
+        <many-to-one name="carServOrder" column="CAR_SERV_ORDER_ID" class="CarServOrder"  not-null="true" />
+        <many-to-one name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductHeader"  not-null="true" />
+        <many-to-one name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  not-null="true" />
+        
+        <property name="productFeatureName" column="PRODUCT_FEATURE_NAME" type="java.lang.String" />        
+
+        <property name="taxId" column="TAX_ID" type="java.lang.Integer" />
+        <property name="taxPercent" column="TAX_PERCENT" type="java.lang.Float" />
+
+        <property name="accountQuantity" column="ACCOUNT_QUANTITY" type="java.lang.Double" />
+        <property name="accountPrice" column="ACCOUNT_PRICE" type="java.lang.Double" />
+        <property name="accountTaxPrice" column="ACCOUNT_TAX_PRICE" type="java.lang.Double" />
+        <property name="accountPriceWithTax" column="ACCOUNT_PRICE_WITH_TAX" type="java.lang.Double" />
+        
+        <many-to-one name="carDamageLevel" column="CAR_DAMAGE_LEVEL_ID" class="CarDamageLevel"/>
+        
+        <property name="pnt" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_PNT"  sql-type="CHAR(1)"/>
+        </property>
+        <property name="mat" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_MAT"  sql-type="CHAR(1)"/>
+        </property>
+        <property name="pol" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_POL"  sql-type="CHAR(1)"/>
+        </property>
+        
+        <property name="note" column="NOTE" type="java.lang.String" />
+                
+    </class>
+
+</hibernate-mapping>

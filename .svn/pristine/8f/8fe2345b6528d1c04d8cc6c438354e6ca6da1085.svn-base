@@ -1,0 +1,59 @@
+############################################################################
+# CASH Action Definition
+############################################################################
+
+# CashIncome List Action
+org.plazmaforge.bsolution.cash.richclient.swing.actions.CashIncomeListAction@name=Приходный кассовый ордер
+org.plazmaforge.bsolution.cash.richclient.swing.actions.CashIncomeListAction@tooltip=Приходный кассовый ордер
+
+# CashOutcome List Action
+org.plazmaforge.bsolution.cash.richclient.swing.actions.CashOutcomeListAction@name=Расходный кассовый ордер
+org.plazmaforge.bsolution.cash.richclient.swing.actions.CashOutcomeListAction@tooltip=Расходный кассовый ордер
+
+############################################################################
+# List Form Definition
+############################################################################
+
+# Cash Income List
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeList@title=Приходный кассовый ордер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeList@table.column-code.name=Номер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeList@table.column-amount.name=Сумма
+
+# Cash Outcome List
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeList@title=Расходный кассовый ордер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeList@table.column-code.name=Номер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeList@table.column-amount.name=Сумма
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+# Cash Income Edit
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@title=Приходный кассовый ордер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-contractor.text=Контрагент
+
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-amount.text=Сумма
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-tax-percent.text=Ставка НДС %
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-tax.text=НДС
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-payment-missing.text=Назначение платежа
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashIncomeEdit@panel.label-payment-date.text=Срок платежа
+
+
+
+# Cash Outcome Edit
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@title=Расходный кассовый ордер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-contractor.text=Контрагент
+
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-amount.text=Сумма
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-tax-percent.text=Ставка НДС %
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-tax.text=НДС
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-payment-missing.text=Назначение платежа
+org.plazmaforge.bsolution.cash.richclient.swing.forms.CashOutcomeEdit@panel.label-payment-date.text=Срок платежа

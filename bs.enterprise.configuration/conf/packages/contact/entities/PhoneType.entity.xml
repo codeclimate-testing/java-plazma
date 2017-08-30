@@ -1,0 +1,11 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PhoneType" class="org.plazmaforge.bs.contact.shared.entities.PhoneType" table="PHONE_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String"/>
+        	<attribute name="name" column="NAME" type="String"/>
+    	</attributes>
+    </entity>
+    
+

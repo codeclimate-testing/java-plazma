@@ -1,0 +1,16 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Phone" class="org.plazmaforge.bsolution.contact.common.beans.Phone" table="PHONE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="phoneCode" column="PHONE_CODE" type="String"/>
+        	<attribute name="phoneNumber" column="PHONE_NUMBER" type="String"/>
+        	<attribute name="phoneString" column="PHONE_STRING" type="String"/>        
+        	<attribute name="phoneCompile" column="PHONE_COMPILE" type="String"/>
+        	<attribute name="note" column="NOTE" type="String"/>
+        	<reference name="phoneType" column="PHONE_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.PhoneType" required="true"/> 
+        	<reference name="contactableElement" column="CONTACTABLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactableElement" required="true"/>
+    	</attributes>
+    </entity>
+    
+

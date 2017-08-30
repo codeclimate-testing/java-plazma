@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="34c2efa7" name="PRODUCT">
+      <drawing is-expanded="true" location="279,145" dimensions="344,878" />
+      <columns>
+        <column id="80989f53" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="5312761d" name="WARRANTY_PERIOD_UNIT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="85dd4c64" name="LEDGER_ACCOUNT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3bc74f64" name="SUPPLIER_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="597e318b" name="PRODUCT_GROUP_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3a09daba" name="CURRENCY_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="947253a9" name="WEIGHT_UNIT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="8cd171cd" name="ORGANIZATION_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="bc78f8ae" name="UNIT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b7db58d7" name="RESPONSIBLE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="97541aef" name="MANUFACTURER_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="c7a2fb18" name="DIMENSION_UNIT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="27ff2ec2" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="d99b9304" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="cbfa2ebf" name="NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="3653be5a" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="9f083d52" name="START_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="27a26bc6" name="END_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="3a8bae8b" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="bf085ebe" name="TAX_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="5,2" />
+        </column>
+        <column id="57e40b4b" name="ADDPRICE_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="5,2" />
+        </column>
+        <column id="d6207ad" name="CURRENCY_RATE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="10,4" />
+        </column>
+        <column id="5ab92737" name="MIN_QUANTITY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="b8b6f1bb" name="AVAILABLE_QUANTITY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="9d9ec526" name="RESERVED_QUANTITY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="2fe35ca6" name="EXPECTED_QUANTITY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="c8fb11db" name="PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="11571089" name="LIST_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="f116834b" name="WHOLESALE_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="13abe28d" name="SMALL_WHOLESALE_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="6672fac7" name="RETAIL_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="997d0cd0" name="CURRENCY_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="595a72b4" name="CURRENCY_LIST_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="82f53906" name="CURRENCY_SMALL_WHOLESALE_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="950994c7" name="CURRENCY_WHOLESALE_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="5d273ca2" name="CURRENCY_RETAIL_PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,4" />
+        </column>
+        <column id="424163d1" name="WARRANTY_PERIOD" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="a58d68d" name="BAR_CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="4a443ca7" name="DIM_LENGTH" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="12,3" />
+        </column>
+        <column id="327f91ab" name="DIM_WIDTH" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="12,3" />
+        </column>
+        <column id="ae9fe3ab" name="DIM_HEIGHT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="12,3" />
+        </column>
+        <column id="599f14ca" name="WEIGHT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="12,3" />
+        </column>
+        <column id="81f0b0f9" name="IMAGE_FILE_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+      </columns>
+    </table>
+    <table id="6b45fe60" name="GOODS">
+      <drawing is-expanded="true" location="-20,160" dimensions="189,107" />
+      <columns>
+        <column id="466e0215" name="ID" is-primary-key="true" is-foreign-key="true" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="8ea2f613" name="COUNTRY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="7461315c" name="GOODS_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="eb2b00aa" name="IS_INVENTORY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="db5f2103" name="PRODUCT_PRICE">
+      <drawing is-expanded="true" location="820,760" dimensions="261,165" />
+      <columns>
+        <column id="eff10e3d" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="b1da55cd" name="PRICE_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="e02ae1b" name="UNIT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="7d461629" name="PRODUCT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f3606a9b" name="CURRENCY_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="60c7e9c" name="PRICE_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="6,2" />
+        </column>
+        <column id="59e5a0a6" name="PRICE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+      </columns>
+    </table>
+    <table id="cf81bbbd" name="PRODUCT_INSTANCE">
+      <drawing is-expanded="true" location="820,940" dimensions="261,108" />
+      <columns>
+        <column id="48f7d835" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="fab3ea4a" name="PRODUCT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="d335452b" name="SERIAL_NUMBER" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="80d8d43f" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+      </columns>
+    </table>
+    <table id="fb5ea40a" name="UNIT">
+      <drawing is-expanded="true" location="820,140" dimensions="261,129" />
+      <columns>
+        <column id="83e0ba0" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="3fe4e853" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="7a4511e4" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="52048797" name="NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="8ae6f94" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="25" />
+        </column>
+      </columns>
+    </table>
+    <table id="c55c1505" name="PARTNER">
+      <drawing is-expanded="false" location="20,700" dimensions="237,501" />
+      <columns>
+        <column id="f44fe044" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="68c2519" name="CONTACT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="90f919ec" name="LEDGER_ACCOUNT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="49a30af5" name="FORM_PROPERTY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="58a34877" name="RESPONSIBLE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b98207de" name="PARTNER_GROUP_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="af88fbea" name="BANK_ACCOUNT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="258e96ca" name="INDUSTRY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="e59e1e6b" name="PARTNER_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="4ad6a126" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="7a3966e2" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="78fa9ca" name="NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="d9a9de8" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="9f88b0ab" name="IDN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="12" />
+        </column>
+        <column id="431a2644" name="YEAR_CREATE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="ec1bb06" name="WORK_TIME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="11490f91" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="c04037dd" name="IS_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="bdfef0bd" name="NEC" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="f7d53efd" name="TAX_DOC_NO" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="a29db17c" name="DESCRIMINATOR" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="b7ff78e5" name="PARENT_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="66a994ef" name="IMAGE_FILE_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="cf1e6842" name="IS_PERSON" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="a0cd19ab" name="PRODUCT_GROUP">
+      <drawing is-expanded="true" location="820,440" dimensions="261,148" />
+      <columns>
+        <column id="953cce5b" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="1c9a05df" name="PRODUCT_SECTION_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="2c8ae885" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="aad87fbf" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="105c1eec" name="NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="a7a14e6b" name="PARENT_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+    <table id="cf7bcfdc" name="CURRENCY">
+      <drawing is-expanded="true" location="820,280" dimensions="261,129" />
+      <columns>
+        <column id="df38ed4c" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="edb5e189" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="3" />
+        </column>
+        <column id="b8ec0a39" name="NUMERIC_CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="3" />
+        </column>
+        <column id="a1b17317" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="d3d3903b" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+      </columns>
+    </table>
+    <table id="79d46feb" name="PRODUCT_UNIT">
+      <drawing is-expanded="true" location="820,620" dimensions="261,127" />
+      <columns>
+        <column id="16aa6817" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="20395c71" name="PRODUCT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="13b38619" name="UNIT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="c79d5cf9" name="RATE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="10" />
+        </column>
+        <column id="e8a8aa3f" name="BAR_CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+      </columns>
+    </table>
+    <table id="1f53b714" name="CONTACT">
+      <drawing is-expanded="false" location="20,780" dimensions="258,543" />
+      <columns>
+        <column id="19ee951c" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="bee066fe" name="CONTACT_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="8a58eb" name="ORGANIZATION_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="26179e4f" name="POSITION_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="5eed243e" name="RESPONSIBLE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="55c7b5c2" name="PARTNER_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="529269f2" name="DEPARTMENT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="6fcc744c" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="2ca61e3a" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="e6cd8213" name="NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="b8020d72" name="TITLE_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="233328be" name="FIRST_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="a6a6e1a1" name="MIDDLE_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="2cc8ae18" name="LAST_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="87a23b9d" name="SUFFIX_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="93f97d4b" name="GENDER" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f956a029" name="BIRTH_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="d0ffad79" name="FULL_POSITION_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="320ae697" name="FULL_POSITION_NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="6316f886" name="WORK_ON_BASIS" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="29bca59e" name="WORK_ON_BASIS_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="743f346" name="IMAGE_FILE_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="643b9c90" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="1dd7e073" name="IS_EMPLOYEE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="13ef9a16" name="IS_EMPLOYEE_LINK" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="f8bbda18" name="IS_HARD_LINK" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="1d24a4fe" name="ORGANIZATION">
+      <drawing is-expanded="true" location="400,20" dimensions="117,49" />
+      <columns>
+        <column id="d2d3eb00" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="597d69d1" name="FK_PRODUCT_PROD_UNIT_UNIT">
+      <details pk-table-id="fb5ea40a" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="83e0ba0" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="bc78f8ae" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="5c79eab6" name="FK_PRODUCT_PROD_SUPP_PARTNER">
+      <details pk-table-id="c55c1505" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="f44fe044" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="3bc74f64" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="915bbeed" name="FK_PRODUCT_PROD_ORG_ORGANIZA">
+      <details pk-table-id="1d24a4fe" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="d2d3eb00" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="8cd171cd" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="e09d7734" name="FK_PRODUCT_PROD_PGRO_PRODUCT_">
+      <details pk-table-id="a0cd19ab" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="953cce5b" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="597e318b" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="740,520" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="f10553e6" name="FK_PRODUCT_WG_UNT_UNIT">
+      <details pk-table-id="fb5ea40a" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="83e0ba0" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="947253a9" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="abed4d1a" name="FK_PRODUCT_WAR_PRD_U_UNIT">
+      <details pk-table-id="fb5ea40a" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="83e0ba0" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="5312761d" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="1260303d" name="FK_PRODUCT_DIM_UNT_UNIT">
+      <details pk-table-id="fb5ea40a" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="83e0ba0" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="c7a2fb18" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="5b5fed37" name="FK_PRODUCT_PROD_MANU_PARTNER">
+      <details pk-table-id="c55c1505" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="f44fe044" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="97541aef" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="2eb7b12b" name="FK_PRODUCT_PROD_RES_CONTACT">
+      <details pk-table-id="1f53b714" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="19ee951c" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="b7db58d7" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="667c00d" name="FK_PRODUCT_PROD_CUR_CURRENCY">
+      <details pk-table-id="cf7bcfdc" fk-table-id="34c2efa7">
+        <pk-columns>
+          <key-column id="df38ed4c" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="3a09daba" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="720,340" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="9afb9e92" name="FK_GOODS_PRODUCT">
+      <details pk-table-id="34c2efa7" fk-table-id="6b45fe60">
+        <pk-columns>
+          <key-column id="80989f53" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="466e0215" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="2f9e202" name="FK_PRODUCT__PPRICE_PR_PRODUCT">
+      <details pk-table-id="34c2efa7" fk-table-id="db5f2103">
+        <pk-columns>
+          <key-column id="80989f53" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="7d461629" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="845c8c89" name="FK_PRODUCT__PRD_INS_PRODUCT">
+      <details pk-table-id="34c2efa7" fk-table-id="cf81bbbd">
+        <pk-columns>
+          <key-column id="80989f53" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="fab3ea4a" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="760cea39" name="FK_PRODUCT__PUNIT_PRO_PRODUCT">
+      <details pk-table-id="34c2efa7" fk-table-id="79d46feb">
+        <pk-columns>
+          <key-column id="80989f53" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="20395c71" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

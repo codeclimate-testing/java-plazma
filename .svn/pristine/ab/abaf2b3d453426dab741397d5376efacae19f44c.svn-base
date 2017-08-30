@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<project name="plazma-bs-base-update" >
+
+    <property file="build.properties" />
+
+    <!-- UPDATE FROM old.version TO new.version -->
+
+    <target name="script-update-db" description="Generate SQL script for update database" >
+
+        <concat destfile="${db.update.dir}/${new.version}/${db.vendor}/${lang}/update_${old.version}-${new.version}.sql" >
+
+            <filelist
+                dir="${db.dir}"
+                files="header.${db.vendor}.txt" />
+
+            <!-- 1. Drop old version objects -->
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common"
+                files="drop_constraints.sql, drop_constraints_user.sql" />
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/${db.vendor}"
+                files="drop_views.sql" />
+
+            <!-- 2. Update structure -->
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common"
+                files="update_structure.sql" />
+
+            <!-- 3. Update system -->
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common"
+                files="update_system.sql" />
+
+            <!-- 
+            <filelist
+                dir="${db.update.dir}/${new.version}/common/${lang}"
+                files="update_system_entity.sql" />
+            -->   
+
+            <!-- 4. Update data -->
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common"
+                files="update_data_pre.sql" />
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common/${lang}"
+                files="update_data.sql" />
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common"
+                files="update_data_post.sql" />
+
+            <!-- 5. Create new version objects -->
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/common"
+                files="create_constraints.sql, create_constraints_user.sql" />
+
+            <filelist
+                dir="${db.update.dir}/${new.version}/${db.vendor}"
+                files="create_views.sql" />
+        </concat>
+    </target>
+
+    
+    
+    <target name="clean-db-update" description="Clean db update">
+		<delete dir="${plazma.db.update.target.dir}"/>
+    </target>
+    
+    <target name="create-db-update" description="Create db update" depends="clean-db-update">
+        
+		<mkdir dir="${plazma.db.update.target.dir}" />
+		<mkdir dir="${plazma.db.update.target.dir}/firebird" />
+		<mkdir dir="${plazma.db.update.target.dir}/mysql" />
+		<mkdir dir="${plazma.db.update.target.dir}/oracle" />
+		<mkdir dir="${plazma.db.update.target.dir}/postgresql" />
+		
+		
+		<copy todir="${plazma.db.update.target.dir}/firebird">
+			<fileset dir="${db.update.version.dir}/firebird">
+				<include name="**/update_${old.version}-${new.version}.sql" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${plazma.db.update.target.dir}/hsql">
+			<fileset dir="${db.update.version.dir}/hsql">
+				<include name="**/update_${old.version}-${new.version}.sql" />
+			</fileset>
+		</copy>
+
+		<copy todir="${plazma.db.update.target.dir}/mysql">
+			<fileset dir="${db.update.version.dir}/mysql">
+				<include name="**/update_${old.version}-${new.version}.sql" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${plazma.db.update.target.dir}/oracle">
+			<fileset dir="${db.update.version.dir}/oracle">
+				<include name="**/update_${old.version}-${new.version}.sql" />
+			</fileset>
+		</copy>
+
+		<copy todir="${plazma.db.update.target.dir}/postgresql">
+			<fileset dir="${db.update.version.dir}/postgresql">
+				<include name="**/update_${old.version}-${new.version}.sql" />
+			</fileset>
+		</copy>
+						
+	</target>
+	
+    
+    <target name="create-db-update-zip" description="Create db update ZIP file" depends="create-db-update">
+       	<zip destfile="${plazma.target.dir}/plazma-db-update-${old.version}-${new.version}.zip"  basedir="${plazma.db.update.target.dir}"/>
+    </target>
+    
+    
+</project>

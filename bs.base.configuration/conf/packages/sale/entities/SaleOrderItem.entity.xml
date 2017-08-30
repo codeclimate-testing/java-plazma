@@ -1,0 +1,40 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SaleOrderItem" class="org.plazmaforge.bsolution.sale.common.beans.SaleOrderItem" table="SALE_ORDER_ITEM">
+        <attributes>
+	        <key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="price" column="PRICE" type="Double" />
+        	<attribute name="taxPrice" column="TAX_PRICE" type="Double" />
+        	<attribute name="quantity" column="QUANTITY" type="Double" />
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<attribute name="taxAmount" column="TAX_AMOUNT" type="Double" />
+        	<attribute name="tax" column="IS_TAX" type="Boolean" />
+        	<attribute name="currencyPrice" column="CURRENCY_PRICE" type="Double" />
+        	<attribute name="currencyTaxPrice" column="CURRENCY_TAX_PRICE" type="Double" />
+        	<attribute name="currencyAmount" column="CURRENCY_AMOUNT" type="Double" />
+        	<attribute name="currencyTaxAmount" column="CURRENCY_TAX_AMOUNT" type="Double" />
+        	<attribute name="unitRate" column="UNIT_RATE" type="Double" />
+        	<attribute name="priceWithTax" column="PRICE_WITH_TAX" type="Double" />
+        	<attribute name="amountWithTax" column="AMOUNT_WITH_TAX" type="Double" />
+        	<attribute name="currencyAmountWithTax" column="CURRENCY_AMOUNT_WITH_TAX" type="Double" />
+        	<attribute name="currencyPriceWithTax" column="CURRENCY_PRICE_WITH_TAX" type="Double" />
+        	<attribute name="discountPercent" column="DISCOUNT_PERCENT" type="Float" />
+        	<attribute name="markupPercent" column="MARKUP_PERCENT" type="Float" />
+        	<attribute name="basePrice" column="BASE_PRICE" type="Double" />
+        	<attribute name="taxBasePrice" column="TAX_BASE_PRICE" type="Double" />
+        	<attribute name="basePriceWithTax" column="BASE_PRICE_WITH_TAX" type="Double" />        
+        	<attribute name="currencyBasePrice" column="CURRENCY_BASE_PRICE" type="Double" />
+        	<attribute name="currencyTaxBasePrice" column="CURRENCY_TAX_BASE_PRICE" type="Double" />
+        	<attribute name="currencyBasePriceWithTax" column="CURRENCY_BASE_PRICE_WITH_TAX" type="Double" />        
+        	<reference name="saleOrder" column="SALE_ORDER_ID" class="org.plazmaforge.bsolution.sale.common.beans.SaleOrder"  required="true" />
+        	<reference name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductHeader"  required="true" />
+        	<reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+        	<attribute name="productFeatureName" column="PRODUCT_FEATURE_NAME" type="String" />        
+        	<attribute name="taxId" column="TAX_ID" type="Integer" />
+        	<attribute name="taxPercent" column="TAX_PERCENT" type="Float" />
+        	<attribute name="accountQuantity" column="ACCOUNT_QUANTITY" type="Double" />
+        	<attribute name="accountPrice" column="ACCOUNT_PRICE" type="Double" />
+        	<attribute name="accountTaxPrice" column="ACCOUNT_TAX_PRICE" type="Double" />
+        	<attribute name="accountPriceWithTax" column="ACCOUNT_PRICE_WITH_TAX" type="Double" />
+        </attributes>
+    </entity>
+

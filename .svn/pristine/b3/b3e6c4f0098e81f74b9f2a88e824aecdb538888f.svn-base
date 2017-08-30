@@ -1,0 +1,21 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PIMEvent" class="org.plazmaforge.bsolution.pim.common.beans.PIMEvent" table="PIM_EVENT">
+		<aliases>
+			<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    	</aliases>      	    
+    	<attributes>
+       		<key name="id" column="ID" type="Integer">
+   	    		<generator type="sequence">
+	   				<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+    			</generator>
+	   	 	</key>
+    	    <attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />
+        	<attribute name="eventDateTime" column="EVENT_DATE_TIME" type="DateTime" />
+        	<attribute name="reminderDateTime" column="REMINDER_DATE_TIME" type="DateTime" />
+        </attributes> 
+     </entity>
+

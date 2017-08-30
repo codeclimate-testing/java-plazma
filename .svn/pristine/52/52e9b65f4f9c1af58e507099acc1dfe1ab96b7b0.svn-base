@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <joined-subclass name="CarServ" table="CAR_SERV" extends="org.plazmaforge.bsolution.goods.common.beans.Goods" dynamic-insert="true" dynamic-update="true">
+        <key column="ID"/>
+        
+        <many-to-one name="carServType" column="CAR_SERV_TYPE_ID" class="CarServType"/>
+        
+        <bag name="carServLinks" inverse="true" cascade="all-delete-orphan" lazy="true">
+			<key column="CAR_SERV_ID"/>
+			<one-to-many class="CarServLink"/>
+		</bag>
+		        
+    </joined-subclass>
+    
+</hibernate-mapping>

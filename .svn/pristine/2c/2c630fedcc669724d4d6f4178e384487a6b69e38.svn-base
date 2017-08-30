@@ -1,0 +1,10 @@
+
+    <subclass-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CashDocument" class="org.plazmaforge.bsolution.cash.common.beans.CashDocument" extends-class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+ 		<aliases>
+    		<alias name="contractorName" attribute="contractor.name"/>
+    	</aliases>  
+    </subclass-entity>
+

@@ -1,0 +1,32 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="JournalDocument" class="org.plazmaforge.bsolution.document.common.beans.JournalDocument" table="DOCUMENT" readonly="true">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+    	<aliases>
+    	   	<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="responsibleId" attribute="responsible.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    	   	<alias name="documentTypeName" attribute="documentType.entity.name"/>
+    	   	<alias name="documentStatusName" attribute="documentStatus.name"/>
+    	   	<alias name="partnerId" attribute="partner.id"/>
+    		<alias name="partnerName" attribute="partner.name"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="organizationName" attribute="organization.name"/>
+    	</aliases>    	
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="documentNo" column="DOCUMENT_NO" type="String"/>
+        	<attribute name="documentDate" column="DOCUMENT_DATE" type="Date"/>
+        	<attribute name="reason" column="REASON" type="String"/>
+        	<attribute name="note" column="NOTE" type="String"/>
+        	<reference name="documentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType"  required="true"/>
+        	<reference name="documentStatus" column="DOCUMENT_STATUS_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentStatus"/> 
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer"  required="true"/>        
+        	<reference name="user" column="USER_ID" class="org.plazmaforge.bsolution.security.common.beans.UserHeader"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+        </attributes>
+    </entity>
+

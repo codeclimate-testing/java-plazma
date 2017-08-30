@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="Car" table="CAR">
+        <id name="id" column="ID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+
+
+        <many-to-one name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+                
+        <property name="regNumber" column="REG_NUMBER" type="java.lang.String"/>
+        <property name="chassisNumber" column="CHASSIS_NUMBER" type="java.lang.String" />
+        <property name="engineVolume" column="ENGINE_VOLUME" type="java.lang.Float"/>        
+        <property name="manufactureYear" column="MANUFACTURE_YEAR" type="java.lang.Integer"/>                
+
+        <many-to-one name="carMark" column="CAR_MARK_ID" class="CarMark"/>        
+        <many-to-one name="carModel" column="CAR_MODEL_ID" class="CarModel"/>        
+        <many-to-one name="carClass" column="CAR_CLASS_ID" class="CarClass"/>                        
+        
+        
+    </class>
+    
+</hibernate-mapping>

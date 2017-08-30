@@ -1,0 +1,226 @@
+
+ANT задачи дл€ сборки проекта
+==================================================================================================
+
+
+build                                          омпил€ци€ проекта (без создани€ jar файлов) 
+
+
+
+clean                                         ќчистка результирующих папок (classes и т.д.) 
+
+clean-dist                                    ќчистка папки dist
+
+clean-pack-client                             ќчистка пакета клиент 
+
+clean-pack-install-standalone                 ќчистка пакета инсталл€ци€ standalone
+
+clean-pack-install-standalone-demo            ќчистка пакета demo standalone  инсталл€ци€ 
+
+
+
+convert                                        онвертаци€ файлов свойств (.properties) из текущей кодовой страницы (например cp1251) в юникод 
+
+
+
+create-jar-all                                —оздание всех jar файлов 
+
+create-jar-client                             —оздание jar файла дл€ клиента 
+
+
+
+create-pack-client-common                     —оздание общего пакета клиент
+
+create-pack-client-ejb                        —оздание пакета EJB клиент
+
+create-pack-client-lite                       —оздание пакета Lite клиент
+
+
+
+Installation tasks
+==================
+
+create-pack-install-client-ejb                —оздание пакета инсталл€ци€ EJB клиента
+
+create-pack-install-client-ejb-linux-gtk      —оздание пакета инсталл€ци€ EJB клиента (Linux GTK)
+
+create-pack-install-client-ejb-win32          —оздание пакета инсталл€ци€ EJB клиента (Win32)
+
+
+
+create-pack-install-client-lite               —оздание пакета инсталл€ци€ Lite клиента
+
+create-pack-install-client-lite-linux-gtk     —оздание пакета инсталл€ци€ Lite клиента (Linux GTK)
+
+create-pack-install-client-lite-win32         —оздание пакета инсталл€ци€ Lite клиента (Win32)
+
+
+
+create-pack-install-standalone                —оздание пакета standalone инсталл€ци€ 
+
+create-pack-install-standalone-demo           —оздание пакета demo standalone инсталл€ци€
+
+
+
+create-pack-install-standalone-linux-gtk      —оздание пакета standalone инсталл€ци€ (Linux GTK)
+
+create-pack-install-standalone-linux-gtk-demo —оздание пакета demo standalone инсталл€ци€ (Linux GTK)
+
+
+
+create-pack-install-standalone-win32          —оздание пакета standalone инсталл€ци€ (Win32)
+
+create-pack-install-standalone-win32-demo     —оздание пакета demo standalone инсталл€ци€ (Win32)
+
+
+
+ƒополнительные продукты используемые в проекте
+==================================================================================================
+
+
+* acegi-security-fix.jar
+- Spring Acegi security 0.51 (http://acegisecurity.org)
+- required for building the project
+- required at runtime
+
+* aopalliance.jar
+- AOP Alliance 1.0 (http://aopalliance.sourceforge.net)
+- required for building the project
+- required at runtime when using AOP functionality
+
+* bsh-1.2b6.jar
+- BeanShell Java Scripting 1.2 beta 6 (http://www.beanshell.org)
+- required at runtime when using JasperReports
+
+* asm.jar
+- ASM 1.4 (http://www.objectweb.org)
+- required at runtime when using Spring
+
+* cglib-2.2_beta1.jar
+- CGLIB 2.2 (http://cglib.sourceforge.net)
+- required for building the project
+- required at runtime when proxying full target classes via Spring AOP
+
+* commons-collections-2.1.jar
+- Commons Collections 2.1 (http://jakarta.apache.org/commons/collections)
+- required at runtime when using Hibernate
+
+* commons-dbcp_1.0.jar
+- Commons DBCP 1.0 (http://jakarta.apache.org/commons/dbcp)
+- required for building the project
+- required at runtime when using Spring's CommonsDbcpNativeJdbcExtractor
+
+* commons-logging.jar
+- Commons Logging 1.0.3 (http://jakarta.apache.org/commons/logging)
+- required for building the project
+- required at runtime, as Spring uses it for all logging
+
+* commons-pool.jar
+- Commons Pool 1.1 (http://jakarta.apache.org/commons/pool)
+- required for running
+
+* dom4j-1.4.jar
+- DOM4J 1.4 XML parser (http://dom4j.sourceforge.net)
+- required at runtime when using Hibernate
+
+* ehcache-0.6.jar
+- EHCache 0.6 (http://ehcache.sourceforge.net)
+- required at runtime when using Hibernate
+
+* gnujaxp.jar
+- GNU JAXP (http://www.gnu.org/software/classpathx/jaxp)
+- DOM and SAX parser
+- required at runtime
+
+* hibernate2-fix.jar
+- Hibernate (ORM) 2.1.3 (http://www.hibernate.org)
+- required for building the project
+- required at runtime when using ORM
+
+* hsqldb.jar
+- HSQLDB 1.7.1 (http://hsqldb.sourceforge.net)
+- required at runtime when running demo
+
+* itext-1.3.1.jar
+- iText PDF 1.3.1 (http://www.lowagie.com/itext)
+- required for building the project
+- required at runtime when using JasperReports (export to PDF format)
+
+* jasperreports-1.2.0.jar
+- JasperReports 1.2.0 (http://sourceforge.net/projects/jasperreports)
+- required for building the project
+- required at runtime
+
+* jcommon-1.0.0.jar
+- JCommon 1.0.0 (http://www.jfree.org/jcommon)
+- required at runtime when using JFreeReport
+
+* jdbc2_0-stdext.jar
+- Standard JDBC API 2.0 (http://java.sun.com)
+- required at runtime for standalone operation (outside application server)
+
+* jdom-b8.jar
+- JDOM 1.0 beta 8 (http://www.jdom.org)
+- required at runtime
+
+* jfreechart-1.0.0.jar
+- JFreeChart 1.0.0 (http://www.jfree.org/jfreechart)
+- required at runtime when using JFreeReport
+
+* jfreereport-0.8.4-all.jar
+- JFreeReport 0.8.4 (http://www.jfree.org/jfreereport)
+- required for building the project
+- required at runtime
+
+* jta.jar
+- Java Transaction API 1.0.1b (http://java.sun.com/products/jta)
+- required for building the project
+- required at runtime when using Spring's JtaTransactionManager
+
+* kunststoff.jar
+- Kunststoff Look&Feel (http://www.incors.com)
+- required at runtime
+
+* log4j-1.2.8.jar
+- Log4J 1.2.8 (http://logging.apache.org/log4j)
+- required for building the project
+- required at runtime when using Spring's Log4jConfigurer
+
+* looks-1.1.3.jar
+- JGoodies Look&Feel (http://www.jgoodies.com)
+- required at runtime
+
+* odmg-3.0.jar
+- ODMG (Object Data Management Group) API 3.0 (http://www.odmg.org)
+- required when using Hibernate
+
+* oscache-2.0.jar
+- OpenSymphony OSCache 2.0 (http://www.opensymphony.com/oscache)
+- required at runtime when using Hibernate (optional)
+
+* pixie-0.8.0.jar
+- Pixie 0.8.0 (http://www.jfree.org/jfreereport/pixie)
+- required at runtime when using JFreeReport (loading WMF files) 
+
+* poi-2.0-final-20040126.jar
+- Apache POI 2.0 (http://jakarta.apache.org/poi)
+- required for building the project
+- required at runtime when using JasperReports (export to Microsoft format)
+
+* servlet.jar
+- Servlet API 2.3, including JSP 1.2 (http://java.sun.com/products/servlet)
+- required for building the project
+
+* spring.jar
+- Spring Framework 1.0.2 (http://www.springframework.org)
+- required for building the project
+- required at runtime
+
+* xercesImpl.jar
+- SAX parser (http://xerces.apache.org)
+- required at runtime, some SAX parser is required
+
+
+
+
+

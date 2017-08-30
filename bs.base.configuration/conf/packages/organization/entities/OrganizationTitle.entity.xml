@@ -1,0 +1,4 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="OrganizationTitle" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" extends-class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" table="ORGANIZATION">
+    </joined-entity>
+

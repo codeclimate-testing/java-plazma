@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jasperreports/jasperreports-3.7.6-fix.jar" sourcepath="/JASPER_REPORTS_SRC"/>
+	<classpathentry kind="var" path="PLAZMA_SWT/swt.jar" sourcepath="/SWT_SRC"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_cdatetime_0.9.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_grid_ALPHA.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_pgroup_ALPHA.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_pshelf_ALPHA.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/org.eclipse.nebula.widgets.ganttchart_1.0.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.jface_3.4.1.M20080827-2000.jar" sourcepath="/JFACE_SRC"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/log4j-1.2.8.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.core.commands_3.4.0.I20080509-2000.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.core.runtime_3.4.0.v20080512.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/commons-logging.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/plazma/plazma-reportviewer-1.0.6.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.client"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.erm"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.ext"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

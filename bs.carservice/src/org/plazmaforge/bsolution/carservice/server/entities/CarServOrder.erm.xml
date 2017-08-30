@@ -1,0 +1,22 @@
+<entity-mapping>
+    <joined-entity class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrder" table="CAR_SERV_ORDER" extends-class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>
+        	<attribute name="discountPercent" column="DISCOUNT_PERCENT" type="Float" />
+        	<attribute name="markupPercent" column="MARKUP_PERCENT" type="Float" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Responsible" />
+        	<reference name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>
+        	<reference name="priceType" column="PRICE_TYPE_ID" class="org.plazmaforge.bsolution.product.common.beans.PriceType"  />        
+        	<reference name="car" column="CAR_ID" class="org.plazmaforge.bsolution.carservice.common.beans.Car"/>                                
+        	<reference name="incomeRepresentative" column="INCOME_REPRESENTATIVE_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerRepresentative"/>
+        	<reference name="outcomeRepresentative" column="OUTCOME_REPRESENTATIVE_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerRepresentative"/>
+        	<attribute name="carIncomeDate" column="CAR_INCOME_DATE" type="Date" />        
+        	<attribute name="carOutcomeDate" column="CAR_OUTCOME_DATE" type="Date" />                
+        	<attribute name="additionalRepairId" column="ADDITIONAL_REPAIR_ID" type="Integer" />
+        	<collection name="damageList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderDamage" join-attribute="carServOrder" cascade="all"/>
+        	<collection name="productItems" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderItem"  join-attribute="carServOrder" cascade="all"/>
+        	<collection name="paintTypeList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderPaintType" join-attribute="carServOrder" cascade="all"/>
+        	<collection name="imageList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderImage" join-attribute="carServOrder" cascade="all"/>
+        </attributes>
+    </joined-entity>
+</entity-mapping>

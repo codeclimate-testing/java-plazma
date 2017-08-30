@@ -1,0 +1,12 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContractorMove" class="org.plazmaforge.bsolution.finance.common.beans.ContractorMove" table="CONTRACTOR_MOVE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="owner" column="OWNER_ID" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument" required="true"/>        
+        	<attribute name="contractorId" column="CONTRACTOR_ID" type="Integer" required="true"/>
+        	<attribute name="amount" column="AMOUNT" type="Double"/>
+        	<attribute name="amountWithTax" column="AMOUNT_WITH_TAX" type="Double"/>
+        	<attribute name="taxAmount" column="TAX_AMOUNT" type="Double"/>        
+    	</attributes>
+    </entity>
+

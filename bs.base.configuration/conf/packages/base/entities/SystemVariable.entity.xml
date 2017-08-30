@@ -1,0 +1,17 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Variable" class="org.plazmaforge.framework.core.data.Variable" table="SYS_VARIABLE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="dataType" column="DATA_TYPE_ID" class="org.plazmaforge.framework.core.data.DataType" required="true"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="stringValue" column="STRING_VALUE" type="String" />
+        	<attribute name="integerValue" column="INTEGER_VALUE" type="Integer" />
+        	<attribute name="floatValue" column="FLOAT_VALUE" type="Float" />
+        	<attribute name="dateValue" column="DATE_VALUE" type="Date" />
+        	<reference name="valueEntity" column="VALUE_ENTITY_ID" class="org.plazmaforge.framework.config.object.EntityConfig"/>
+        	<attribute name="enable" column="IS_ENABLE"  type="Boolean"/>
+        	<attribute name="system" column="IS_SYSTEM" type="Boolean"/>
+        </attributes>
+    </entity>
+

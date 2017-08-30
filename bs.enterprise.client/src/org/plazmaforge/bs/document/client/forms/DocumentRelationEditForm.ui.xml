@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="DocumentRelationEditForm" type="EditForm"	title="@{DocumentRelationEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{DocumentRelationEditForm.parentTypeLabel.text}" /><lookup-field property="parentType" data-type="document/DocumentType" width="200"/>
+				<label text="@{DocumentRelationEditForm.childTypeLabel.text}" /><lookup-field property="childType" data-type="document/DocumentType" width="200"/>
+				<label text="@{DocumentRelationEditForm.creatorClassLabel.text}" /><text-field property="creatorClass" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

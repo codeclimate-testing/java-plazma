@@ -1,0 +1,42 @@
+
+<html>
+<title>Database</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Database</h2>
+   <hr>
+   <br><br>
+
+
+ 
+
+   <p>The <b>Plazma</b> suppots following databases:
+   <b>
+   <ul>
+    <li>Oracle
+    <li>PostgreSQL
+    <li>MySQL
+    <li>Firebird
+    <li>HSQL
+   </ul>
+   </b>
+
+   More <a href="../../adm-guide/database/index.html">Database</a>
+
+
+
+
+</body>
+</html>
+
+

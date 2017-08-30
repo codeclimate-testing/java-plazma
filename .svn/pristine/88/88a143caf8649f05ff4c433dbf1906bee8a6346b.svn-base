@@ -1,0 +1,13 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeVacationAverange" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeVacationAverange" table="EMPLOYEE_VACATION_AVERANGE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="month" column="VACATION_MONTH" type="Integer" />
+        	<attribute name="workDay" column="WORK_DAY" type="Integer" />
+        	<attribute name="vacationDay" column="VACATION_DAY" type="Integer" />
+        	<attribute name="addVacationDay" column="ADD_VACATION_DAY" type="Integer" />
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<reference name="employeeVacation" column="OWNER_ID" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeVacation"  required="true" />
+        </attributes>
+    </entity>
+

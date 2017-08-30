@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarInsurerPrepareHour" table="CAR_INSURER_PREPARE_HOUR">
+        <id name="id" column="ID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        
+        <many-to-one name="carPrepareType" column="CAR_PREPARE_TYPE_ID" class="CarPrepareType"/>
+        <many-to-one name="carDamageLevel" column="CAR_DAMAGE_LEVEL_ID" class="CarDamageLevel"/>
+        <property name="hour" column="PREPARE_HOUR" type="java.lang.Float" />
+        
+        <many-to-one name="contractVariant" column="CONTRACT_VARIANT_ID" class="CarInsurerContractVariant"  not-null="true" />
+        
+        
+    </class>
+    
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeSicklist" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeSicklist" table="EMPLOYEE_SICKLIST" extends-class="org.plazmaforge.bsolution.document.common.beans.Document">
+       	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+    	<aliases>
+    		<alias name="employeeName" attribute="employee.person.name"/>
+    	</aliases>
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>    
+        	<attribute name="startDate" column="START_DATE" type="Date" />
+        	<attribute name="endDate" column="END_DATE" type="Date" />
+        	<attribute name="sicklistPercent" column="SICKLIST_PERCENT" type="Float" />
+        	<attribute name="averangeAmount" column="AVERANGE_AMOUNT" type="Double" />
+        	<attribute name="series" column="SERIES" type="String" />
+        	<attribute name="quarterPremium" column="QUARTER_PREMIUM" type="Double" />
+        	<attribute name="yearPremium" column="YEAR_PREMIUM" type="Double" />
+        	<attribute name="singlePremium" column="SINGLE_PREMIUM" type="Double" />
+        	<reference name="employee" column="EMPLOYEE_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader"  required="true" />
+        	<reference name="sicklistAverangeType" column="SICKLIST_AVERANGE_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.SicklistAverangeType" />
+        	<reference name="sicklistType" column="SICKLIST_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.SicklistType" />
+        	<reference name="sickType" column="SICK_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.SickType" />
+        	<collection name="averangeItems" join-class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeSicklistAverange" join-attribute="employeeSicklist" cascade="all"/>
+        </attributes>
+    </joined-entity>
+

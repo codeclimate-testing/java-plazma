@@ -1,0 +1,43 @@
+
+version = 1.0.2
+
+old.version = 1.0.1
+new.version = 1.0.2
+
+#
+# Language setting
+#
+# lang = en
+# lang = ru
+# lang = uk                
+
+lang = en
+
+	
+#
+# Codepage setting
+#
+# codepage = cp1251
+# codepage = koi-8r
+
+codepage = cp1251
+
+
+#
+# Database vendor setting
+#
+# db.vendor = oracle
+# db.vendor = postgresql
+# db.vendor = mysql
+# db.vendor = firebird
+# db.vendor = hsql
+
+db.vendor = hsql
+   	
+db.dir = ../bs.base.db/script
+db.update.dir = ${basedir}
+db.update.version.dir = ${db.update.dir}/${new.version}
+
+plazma.target.dir = ../plazma.target
+plazma.db.update.target.dir = ${plazma.target.dir}/plazma-db-update-${old.version}-${new.version}
+

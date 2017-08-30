@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TaskType" class="org.plazmaforge.bsolution.project.common.beans.TaskType" table="TASK_TYPE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<attribute name="system" column="IS_SYSTEM" type="Boolean" />
+        </attributes>
+     </entity>
+

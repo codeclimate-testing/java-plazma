@@ -1,0 +1,10 @@
+<entity-mapping>
+    <joined-entity class="org.plazmaforge.bsolution.carservice.common.beans.CarMtrlFindReport" table="CAR_MTRL_FIND_REPORT" extends-class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>
+       		<reference name="carMtrlFindRequest" column="CAR_MTRL_FIND_REQUEST_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentHeader" /> 
+       		<!-- <reference name="employee" column="EMPLOYEE_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader" /> -->
+        	<collection name="productItems" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarMtrlFindReportItem" join-attribute="carMtrlFindReport" cascade="all"/>
+        </attributes>
+    </joined-entity>
+</entity-mapping>

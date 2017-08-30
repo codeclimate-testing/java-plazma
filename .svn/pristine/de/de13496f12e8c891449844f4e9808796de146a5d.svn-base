@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT package-config (package*)>
+
+<!ELEMENT package EMPTY>
+
+<!ATTLIST package
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        name CDATA #IMPLIED
+        class NMTOKEN #IMPLIED
+        compression-period-executor NMTOKEN #IMPLIED
+>

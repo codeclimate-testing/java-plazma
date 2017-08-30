@@ -1,0 +1,12 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Email" class="org.plazmaforge.bsolution.contact.common.beans.Email" table="EMAIL">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="emailAddress" column="EMAIL_ADDRESS" type="String"/>
+        	<attribute name="note" column="NOTE" type="String"/>
+        	<reference name="contactableElement" column="CONTACTABLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactableElement" required="true"/>
+    	</attributes>
+    </entity>
+    
+

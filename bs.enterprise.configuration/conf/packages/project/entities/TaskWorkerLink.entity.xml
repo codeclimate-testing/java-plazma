@@ -1,0 +1,18 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TaskWorkerLink" class="org.plazmaforge.bs.project.shared.entities.TaskWorkerLink" table="TASK_WORKER_LINK">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="task" column="TASK_ID" class="org.plazmaforge.bs.project.shared.entities.Task"  required="true" />
+        	<reference name="worker" column="WORKER_ID" class="org.plazmaforge.bs.contact.shared.entities.ContactHeader"  required="true" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<attribute name="workDays" column="WORK_DAYS" type="Integer" />
+        	<attribute name="workHours" column="WORK_HOURS" type="Integer" />
+        	<attribute name="workMinutes" column="WORK_MINUTES" type="Integer" />
+        	<attribute name="actualDays" column="ACTUAL_DAYS" type="Integer" />
+        	<attribute name="actualHours" column="ACTUAL_HOURS" type="Integer" />
+        	<attribute name="actualMinutes" column="ACTUAL_MINUTES" type="Integer" />
+        	<attribute name="workCost" column="WORK_COST" type="Double" />
+        </attributes>
+    </entity>
+
+

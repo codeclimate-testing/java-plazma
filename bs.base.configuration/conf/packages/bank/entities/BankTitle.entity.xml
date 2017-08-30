@@ -1,0 +1,9 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BankTitle" class="org.plazmaforge.bsolution.bank.common.beans.BankTitle" table="BANK" extends-class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>   
+        	<attribute name="bic" column="BIC" type="String" />
+        	<attribute name="correspondentAccount" column="CORRESPONDENT_ACCOUNT" type="String" />
+        </attributes>
+    </joined-entity>
+

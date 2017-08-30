@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarInsurerPaintTypeVolume" table="CAR_INSURER_PAINT_TYPE_VOLUME">
+        <id name="id" column="ID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        
+        
+        <many-to-one name="carClass" column="CAR_CLASS_ID" class="CarClass"/>
+        <many-to-one name="carPaintDetailType" column="CAR_PAINT_DETAIL_TYPE_ID" class="CarPaintDetailType"/>
+        
+        <property name="volume" column="VOLUME" type="java.lang.Float" />        
+        <property name="volumeTo" column="VOLUME_TO" type="java.lang.Float" />        
+        <property name="valueType" column="VALUE_TYPE" type="java.lang.Integer" />    
+        <property name="percentOfBasic" column="PERCENT_OF_BASIC" type="java.lang.Float" />
+        
+        <property name="range" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_RANGE"  sql-type="CHAR(1)"/>
+        </property>
+            
+        <many-to-one name="contractVariant" column="CONTRACT_VARIANT_ID" class="CarInsurerContractVariant"  not-null="true" />
+        
+        
+    </class>
+    
+</hibernate-mapping>

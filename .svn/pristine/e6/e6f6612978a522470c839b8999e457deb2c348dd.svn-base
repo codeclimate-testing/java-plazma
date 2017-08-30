@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductUnit" class="org.plazmaforge.bsolution.product.common.beans.ProductUnit" table="PRODUCT_UNIT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="rate" column="RATE" type="Double" />
+        	<attribute name="barCode" column="BAR_CODE" type="String" />
+        	<reference name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.Product"  required="true" />
+        	<reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+    	</attributes>
+    </entity>
+

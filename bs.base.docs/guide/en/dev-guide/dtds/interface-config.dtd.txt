@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT interface-config (ui*)>
+
+
+<!ATTLIST interface
+        id ID #IMPLIED
+        is-enable (true | false) "true"
+>
+

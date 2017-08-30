@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+  <iso3language>$ISO3_LANG</iso3language>
+  <application-name>Plazma ERP+CRM</application-name>
+  <application-manager>org.plazmaforge.bsolution.base.client.SWTClientApplicationManager</application-manager>
+  <is-external-config>true</is-external-config>
+</properties>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<installation version="1.0">
+<!-- Install -->
+    <info>
+        <appname>Plazma ERP+CRM</appname>
+        <appversion>{version}</appversion>
+        <appsubpath>PlazmaForge/Plazma ERP+CRM {version} build {build}</appsubpath>
+        <authors>
+            <author name="Oleh Hapon" email="ohapon@users.sourceforge.net"/>
+        </authors>
+        <url>http://plazma.sourceforge.net/</url>
+        <javaversion>1.5</javaversion>
+    </info>
+    
+    <guiprefs width="640" height="480" resizable="no"/>
+    
+    <locale>
+        <langpack iso3="eng"/>
+        <langpack iso3="rus"/>
+    </locale>
+    
+    <resources>
+        <res id="LicencePanel.licence" src="license.txt"/>
+        <res id="InfoPanel.info" src="readme.txt"/>
+
+        <res src="default_shortcut_specification.xml" id="shortcutSpec.xml"/>
+        <res src="unix_shortcut_specification.xml" id="Unix_shortcutSpec.xml"/>
+    </resources>
+    
+    <native type="izpack" name="ShellLink.dll"/>
+
+
+    <panels>
+        <panel classname="HelloPanel"/>
+        <panel classname="InfoPanel"/>
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel"/> 
+        <panel classname="PacksPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="ShortcutPanel"/> 
+        <panel classname="FinishPanel"/>
+
+    </panels>
+    
+    <packs>
+        <pack name="Base" required="yes">
+            <description>The base files</description>
+
+            <file src="license.txt" targetdir="$INSTALL_PATH"/>
+            <file src="license_ru.txt" targetdir="$INSTALL_PATH"/>
+            
+            <file src="readme.txt" targetdir="$INSTALL_PATH"/>            
+            <file src="readme_ru.txt" targetdir="$INSTALL_PATH"/>                        
+                        
+            <file src="config.bat" targetdir="$INSTALL_PATH"/>
+            <file src="config.sh" targetdir="$INSTALL_PATH"/>
+            <file src="config.conf" targetdir="$INSTALL_PATH"/>
+            <file src="config.classpath" targetdir="$INSTALL_PATH"/>
+                        
+            <file src="plazma.bat" targetdir="$INSTALL_PATH"/>
+            <file src="plazma.sh" targetdir="$INSTALL_PATH"/>
+            <file src="plazma.conf" targetdir="$INSTALL_PATH"/>
+            <file src="plazma.classpath" targetdir="$INSTALL_PATH"/>
+            <file src="plazma.properties" targetdir="$INSTALL_PATH"/>
+            <file src="plazma.ico" targetdir="$INSTALL_PATH"/>
+            <file src="plazma.png" targetdir="$INSTALL_PATH"/>
+            
+            <file src="launcher.jar" targetdir="$INSTALL_PATH"/>
+            <file src="launcher.bat" targetdir="$INSTALL_PATH"/>
+            <file src="launcher.sh" targetdir="$INSTALL_PATH"/>
+            
+            <file src="install.inf" targetdir="$INSTALL_PATH"/>
+            <file src="install.txt" targetdir="$INSTALL_PATH"/>
+            <file src="install_ru.txt" targetdir="$INSTALL_PATH"/>            
+            
+            <file src="uninstall.bat" targetdir="$INSTALL_PATH"/>
+            <file src="uninstall.sh" targetdir="$INSTALL_PATH"/>
+
+            <file src="conf" targetdir="$INSTALL_PATH"/>
+            <file src="fonts" targetdir="$INSTALL_PATH"/>
+            <file src="dist" targetdir="$INSTALL_PATH"/>
+            <file src="lib" targetdir="$INSTALL_PATH"/>
+            <file src="db" targetdir="$INSTALL_PATH"/>
+            <file src="logs" targetdir="$INSTALL_PATH"/>
+            <file src="reports" targetdir="$INSTALL_PATH"/>
+
+            <parsable targetfile="$INSTALL_PATH/install.inf"/>
+            <parsable targetfile="$INSTALL_PATH/conf/application.xml"/>
+            <parsable targetfile="$INSTALL_PATH/conf/jdbc.properties"/>
+            <parsable targetfile="$INSTALL_PATH/conf/jdbc-demo.properties"/>
+        </pack>
+        <pack name="Docs" required="no">
+            <description>The documentation</description>
+            <file src="docs" targetdir="$INSTALL_PATH"/>
+        </pack>
+      
+    </packs>
+    
+</installation>

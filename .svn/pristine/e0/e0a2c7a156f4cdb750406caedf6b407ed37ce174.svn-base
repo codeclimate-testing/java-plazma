@@ -1,0 +1,64 @@
+AbstractDocumentListForm.doAddByObjectAction = Add new document from other
+AbstractDocumentListForm.doAddOtherObjectsAction = Add new documents by current
+
+AbstractDocumentListForm.document.type.empty = Document type is empty
+AbstractDocumentListForm.reason.document.notfound = Reason document not found
+AbstractDocumentListForm.document.association.notfound = Association of the document not found
+AbstractDocumentListForm.document.listform.notfound = Table form of the document not found
+AbstractDocumentListForm.documnet.notselected = Document is not selected
+AbstractDocumentListForm.documnet.id.empty = Document ID is empty
+AbstractDocumentListForm.dependent.documnet.notfound = Dependent documents not found
+
+DocumentListForm.documentNoColumn.text = No
+DocumentListForm.documentDateColumn.text = Date
+DocumentListForm.documentTypeColumn.text = Document
+DocumentListForm.documentStatusColumn.text = Status
+DocumentListForm.partnerColumn.text = Partner
+DocumentListForm.title = Documents
+DocumentListForm.responsibleColumn.text = Responsible
+DocumentTypeEditForm.categoryLabel.text = Category
+DocumentTypeEditForm.entityLabel.text = Entity
+DocumentTypeEditForm.sectionLabel.text = Section
+DocumentTypeEditForm.title = Document type
+DocumentTypeListForm.codeColumn.text = Code
+DocumentTypeListForm.documentCategoryColumn.text = Category
+DocumentTypeListForm.documentSectionColumn.text = Section
+DocumentTypeListForm.nameColumn.text = Name
+DocumentTypeListForm.title = Document types
+
+DocumentTypeEditForm.useNumeratorLabel.text = Auto numeration
+DocumentTypeEditForm.documentNoPrefixLabel.text = Document \# prefix
+DocumentTypeEditForm.documentNoSuffixLabel.text = Document \# suffix
+DocumentTypeEditForm.lastDocumentNumberLabel.text = Last Document \#
+DocumentTypeEditForm.documentNoReadOnlyLabel.text = Document \# read only
+DocumentTypeEditForm.documentDateReadOnlyLabel.text = Document Date read only
+DocumentTypeEditForm.generalTabItem.text = General
+DocumentTypeEditForm.statusTabItem.text = Statuses
+DocumentTypeEditForm.dependencyTabItem.text = Dependences
+DocumentTypeEditForm.documentTypeCodeColumn.text = Code
+DocumentTypeEditForm.documentTypeNameColumn.text = Name
+DocumentTypeEditForm.statusCodeColumn.text = Code
+DocumentTypeEditForm.statusNameColumn.text = Name
+
+
+DocumentStatusListForm.title = Document Statuses
+DocumentStatusListForm.documentColumn.text = Document
+DocumentStatusListForm.codeColumn.text = Code
+DocumentStatusListForm.nameColumn.text = Name
+
+DocumentStatusEditForm.title = Document Status
+DocumentStatusEditForm.documentLabel.text = Document
+DocumentStatusEditForm.codeLabel.text = Code
+DocumentStatusEditForm.nameLabel.text = Name
+
+DocumentRelationListForm.title = Document Relations
+DocumentRelationListForm.parentTypeCodeColumn.text = Document Code
+DocumentRelationListForm.parentTypeNameColumn.text = Document Name
+DocumentRelationListForm.childTypeCodeColumn.text = Dependency Document Code
+DocumentRelationListForm.childTypeNameColumn.text = Dependency Document Name
+
+DocumentRelationEditForm.title = Dependency document
+DocumentRelationEditForm.parentTypeLabel.text = Document
+DocumentRelationEditForm.childTypeLabel.text = Dependency document
+DocumentRelationEditForm.creatorClassLabel.text = Creator class
+

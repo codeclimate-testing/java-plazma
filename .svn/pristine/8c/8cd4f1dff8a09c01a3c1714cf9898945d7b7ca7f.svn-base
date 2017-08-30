@@ -1,0 +1,24 @@
+
+    <subclass-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PaymentDocument" class="org.plazmaforge.bsolution.bank.common.beans.PaymentDocument" extends-class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+    	<triggers>
+     		<trigger type="AfterLoad">
+    			<script>
+    				CALL paymentLinkManager->loadLinks(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL paymentLinkManager->updateLinks(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="BeforeDelete">
+    			<script>
+    				CALL paymentLinkManager->deleteLinks(:data);
+    			</script>
+    		</trigger>
+    	</triggers>        
+    </subclass-entity>
+

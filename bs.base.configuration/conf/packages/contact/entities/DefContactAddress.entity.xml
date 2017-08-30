@@ -1,0 +1,7 @@
+
+    <subclass-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefContactAddress" class="org.plazmaforge.bsolution.contact.common.beans.DefContactAddress" extends-class="org.plazmaforge.bsolution.contact.common.beans.DefAddress" discriminator-value="CONTACT">
+    	<attributes>
+    		<reference name="contact" class="org.plazmaforge.bsolution.contact.common.beans.Contact" column="CONTACTABLE_ID"/>
+    	</attributes>
+    </subclass-entity>
+

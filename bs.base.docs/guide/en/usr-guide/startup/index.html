@@ -1,0 +1,113 @@
+
+<html>
+<title>Getting Started</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Getting Started</h2>
+   <hr><br><br>
+
+
+
+
+   To run <b>Standalone</b> or <b>Client</b> application  you have to do follow actions:<br><br><br>
+   <b>Windows</b><br><br>
+   Menu: Start -&gt; Programs -&gt; Plazma ERP+CRM &lt;version&gt; -&gt; Plazma ERP+CRM<br><br><br>
+
+   or run the command file<br><br>
+
+   <code>plazma.bat</code><br><br><br>
+
+   or run the command<br><br>
+   <code>javaw -Djava.library.path="lib\swt\win32" -jar launcher.jar plazma</code><br><br><br>
+
+
+
+   <b>Linux</b><br><br>
+   run the command file<br><br>
+
+   <code>plazma.sh</code><br><br><br>
+   or run the command<br><br>
+   <code>java -Djava.library.path="lib/swt/linux-gtk" -jar launcher.jar plazma</code><br><br><br>
+
+
+   <b>Demo mode</b><br><br>
+   To run the program in the demo mode you have to send <code>-demo</code> flag in the command line of launch, for example<br><br>
+   <code>java -Djava.library.path="lib\swt\win32" -jar launcher.jar plazma -demo</code>
+   <br><br>
+   or set a property <code>plazma.platform.demo</code> in the file <code>plazma.properties</code>, for example:<br><br>
+   <code>plazma.platform.demo = true</code><br><br>
+
+   When you run the application in the demo mode will be connection to the demo database.
+
+   Priority of the flag <code>-demo</code> is higher than property <code>plazma.platform.demo</code>. 
+
+   You can set autologin mode in property <code>plazma.platform.autologin</code>, for example: <br><br>
+
+   <code>plazma.platform.autologin = true</code>
+
+   <br><br>
+
+   After run the application you will see starting window. <br><br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/logo-start.png"/></td>
+    </tr>
+   </table>
+   <br><br><br><br>
+
+
+   <center>Then you will see login dialog</center><br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/login.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br>
+
+
+   <center>and input parameters dialog.</center><br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/input-dialog.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br>
+
+   <center>After successful login you will see main application window.</center>
+
+   <br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/system-menu.png"/></td>
+    </tr>
+   </table>
+
+   
+</TD>
+</TR>
+
+</TABLE>
+
+
+</body>
+</html>
+
+

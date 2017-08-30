@@ -1,0 +1,20 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ContactListForm" type="ListForm" title="@{ContactListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{ContactListForm.codeColumn.text}" property="code" data-type="String" width="50"/>
+						<column text="@{ContactListForm.nameColumn.text}" property="name" data-type="String" width="300"/>
+						<column text="@{ContactListForm.contactTypeColumn.text}" property="contactTypeName" data-type="String" width="200"/>
+						<column text="@{ContactListForm.partnerColumn.text}" property="partnerName" data-type="String" width="100"/>
+						<column text="@{ContactListForm.phoneColumn.text}" property="phoneString" data-type="String" width="100"/>
+						<column text="@{ContactListForm.cityColumn.text}" property="cityName" data-type="String" width="100"/>
+						<column text="@{ContactListForm.addressColumn.text}" property="localityAddressString" data-type="String" width="100"/>
+						<column text="@{ContactListForm.responsibleColumn.text}" property="responsibleName" data-type="String" width="100"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

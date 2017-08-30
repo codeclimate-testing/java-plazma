@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+	<!-- FINANCE -->
+	<bean id="LedgerAccountServiceImpl" class="org.plazmaforge.bsolution.finance.server.services.LedgerAccountServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="EntryCalculateServiceImpl" class="org.plazmaforge.bsolution.finance.server.services.EntryCalculateServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+    <bean id="FinanceDocumentTypeServiceImpl" class="org.plazmaforge.bsolution.finance.server.services.FinanceDocumentTypeServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="FinanceDocumentServiceImpl" class="org.plazmaforge.bsolution.finance.server.services.FinanceDocumentServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+   	<bean id="ContractorServiceImpl" class="org.plazmaforge.bsolution.finance.server.services.ContractorServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+        
+        
+</beans>

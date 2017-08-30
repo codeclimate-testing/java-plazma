@@ -1,0 +1,98 @@
+
+<html>
+<title>Lite Server</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Lite Server</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Common</h3>
+   <b>Plazma Lite Server</b> is a lite server application using <b>RMI</b> and <b>Spring</b> framework.
+
+   <h3 align="center">Server</h3>
+
+
+
+
+<br>
+
+By default the server uses <b>2005</b> and <b>2007</b> ports. 
+<br><b>2005</b> is the service port (call services) 
+<br><b>2007</b> is the command port (call commands) 
+
+<br>If your system already uses data ports, 
+it is necessary to change the server configuration. 
+<br>You can set the service port in file &lt;PlazmaServer&gt;/conf/application-context-rmi.xml:
+
+<pre>
+&lt;bean class="org.springframework.remoting.rmi.RmiServiceExporter"&gt;
+    &lt;property name="serviceName">&lt;value>ServiceInvoker&lt;/value>&lt;/property&gt;
+    &lt;property name="service"> <ref bean="rmiServiceInvoker"/&gt;&lt;/property&gt;
+    &lt;property name="serviceInterface"><value>org.plazmaforge.framework.platform.service.ServiceInvoker&lt;/value&gt;&lt;/property&gt;
+    &lt;property name="<b>registryPort</b>"&gt;&lt;value><b>2005</b>&lt;/value&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+</pre>
+<b>IMPORTANT!</b> <b>If you change the service port on the server then you have to change the service port on the client! 
+<br>The ports on the server and the client must be equal.</b>
+
+<p>On client you can set the service port in file &lt;PlazmaClient&gt;/conf/rmi.properties
+<br>See configuring client.
+
+<p>To start the Lite server you have to run the follow command file:
+<pre>
+
+   Windows
+   -------
+
+   start_server.bat
+
+
+   Linux
+   -----
+
+   start_server.sh
+</pre>
+
+<p>You can send the command port as a parameter when you start the server: 
+<pre>
+   start_server <b>-commandport 2007</b>
+</pre>
+
+Connecting to the database is configured in  &lt;PlazmaServer&gt;/conf/jdbc.properties
+<br>See <a href="../../database/index.html">Database</a>
+
+   <h3 align="center">Client</h3>
+
+
+
+
+  <p>You have to configure RMI in file &lt;PlazmaClient&gt;/conf/rmi.properties
+
+<pre>
+
+rmi.host = localhost
+rmi.port = 2005
+
+</pre>
+<b>rmi.host</b> - your server name (by defalut localhost), <b>rmi.port</b> - your service prot (by default 2005)
+<p><b>IMPORTANT! The ports on the server and the client must be equal.</b>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form-config>
+
+    <form id="SaleOrderList">
+        <reports>
+            <report id="SaleOrder"/>
+        </reports>
+    </form>
+    <form id="PurchaseOrderList">
+        <reports>
+            <report id="PurchaseOrder"/>
+        </reports>
+    </form>
+
+    <form id="GoodsOutcomeList">
+        <reports>
+            <report id="GoodsOutcome"/>
+        </reports>
+    </form>
+    <form id="GoodsIncomeList">
+        <actions>
+        </actions>
+        <reports>
+            <report id="GoodsIncome"/>
+        </reports>
+    </form>
+    <form id="GoodsMoveList">
+        <reports>
+            <report id="GoodsMove"/>
+        </reports>
+    </form>
+    <form id="GoodsWriteoffList">
+        <reports>
+            <report id="GoodsWriteoff"/>
+        </reports>
+    </form>
+    <form id="InvoiceList">
+        <reports>
+            <report id="Invoice"/>
+        </reports>
+    </form>
+    <form id="TaxWaybillList">
+        <reports>
+            <report id="GoodsTaxWaybill"/>
+        </reports>
+    </form>
+    <form id="SalePlanList">
+	<!--
+        <reports>
+            <report id="SalePlanReport"/>
+        </reports>
+	-->
+    </form>
+    
+    <form id="PaymentIncomeList">
+        <reports>
+            <report id="Payment"/>
+        </reports>
+    </form>
+
+    <form id="PaymentOutcomeList">
+        <reports>
+            <report id="Payment"/>
+        </reports>
+    </form>
+
+    <form id="PersonEdit">
+        <actions>
+            <action id="PersonEducationList"/>
+            <action id="PersonFamilyList"/>
+            <action id="PersonJobList"/>
+            <action id="PersonLanguageList"/>
+        </actions>
+    </form>
+    
+    <form id="EmployeeList">
+        <reports>
+            <report id="PersonCardReport"/>
+        </reports>
+    </form>
+    
+
+    <form id="PartnerEdit">
+        <actions>
+            <action id="PartnerBankAccountList"/>
+        </actions>
+    </form>
+    
+    <form id="PartnerList">
+        <reports>
+            <report id="PartnerInfo"/>
+        </reports>
+    </form>
+    
+
+</form-config>

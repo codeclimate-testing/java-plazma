@@ -1,0 +1,179 @@
+############################################################################
+# EMPLOYEE Action Definition
+############################################################################
+
+# Position List Action
+org.plazmaforge.bsolution.employee.richclient.swing.actions.PositionListAction@name = Должности
+org.plazmaforge.bsolution.employee.richclient.swing.actions.PositionListAction@tooltip = Должности
+
+
+# EmployeeList Action
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeListAction@name = Служащие
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeListAction@tooltip = Служащие
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeListAction@image = olmari/ext/contacts.gif
+
+# Employee Category List Action
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeCategoryListAction@name = Категории служащих
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeCategoryListAction@tooltip = Категории служащих
+
+# Employee Rank List Action
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeRankListAction@name = Разряды
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeRankListAction@tooltip = Разряды
+
+# Employee Reception List Action
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeReceptionListAction@name = Приказ о приёме на работу
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeReceptionListAction@tooltip = Приказ о приёме на работу
+
+# Employee Discharge List Action
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeDischargeListAction@name = Приказ об увольнении
+org.plazmaforge.bsolution.employee.richclient.swing.actions.EmployeeDischargeListAction@tooltip = Приказ об увольнении
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.PositionList@title=Список должностей
+org.plazmaforge.bsolution.employee.richclient.swing.forms.PositionList@table.column-name.name=Должность
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@title=Список служащих
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@table.column-code.name=ТН
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@table.column-last-name.name=Фамилия
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@table.column-first-name.name=Имя
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@table.column-middle-name.name=Отчество
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@table.column-department.name=Подразделение
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeList@table.column-position.name=Должность
+
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeCategoryList@title=Категории служащих
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeCategoryList@table.column-name.name=Категории служащих
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeRankList@title=Разряды рабочих
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeRankList@table.column-name.name=Разряд
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeRankList@table.column-tariff.name=Тариф
+
+
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionList@title=Приказ о приёме на работу
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionList@table.column-code.name=№
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionList@table.column-date.name=Дата
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionList@table.column-person-name.name=Ф.И.О.
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeList@title=Приказ об увольнении
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeList@table.column-code.name=№
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeList@table.column-employee-name.name=Ф.И.О.
+
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.PositionEdit@title=Должность
+org.plazmaforge.bsolution.employee.richclient.swing.forms.PositionEdit@panel.label-name.text=Должность
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@title=Служащий
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.title.account.text=Для расчётов
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.title.additional.text=Дополнительно
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.title.seniority.text=Стаж
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-person.text=Физ. лицо
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-code.text=Табельный номер
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-department.text=Подразделение
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-position.text=Должность
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-employee-category.text=Категория
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-start-date.text=Дата приёма
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-end-date.text=Дата уволнения
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-tax.text=Плательщик налога
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-payroll-form.text=Форма оплаты труда
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-employee-rank.text=Разряд
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-salary.text=Оклад
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-tariff.text=Тариф
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-advance.text=Аванс
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-premium-percent.text=% премии
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-sick-percent.text=% больничных
+
+##
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-stock.text=Акции
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-employee-account.text=Расчётный счёт
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-total-seniority.text=Полный стаж
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-unbroken-seniority.text=Непрерывный стаж
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-seniority-year.text=лет
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-seniority-month.text=месяцев
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@panel.label-seniority-day.text=дней
+##
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@table-phone.name=Телефоны
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@table-phone.column-phone-type.name=Тип
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@table-phone.column-phone-string.name=Телефон
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@table-email.name=Email
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeEdit@table-email.column-email-address.name=Email
+#
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeCategoryEdit@title=Категории служащих
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeCategoryEdit@panel.label-name.text=Наименование
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeRankEdit@title=Разряд
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeRankEdit@panel.label-name.text=Наименование
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeRankEdit@panel.label-tariff.text=Тариф
+
+
+
+
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@title=Приказ о приёме на работу
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.title.account.text=Для расчётов
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-person.text=Физ. лицо
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-code.text=№ приказа
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-employee-code.text=Таб. ном.
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-department.text=Подразделение
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-reception-date.text=Дата приёма
+
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-employee-category.text=Категория
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-employee-rank.text=Разряд
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-payroll-form.text=Форма оплаты
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-salary.text=Оклад
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-tariff.text=Тариф
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-premium-percent.text=% премии
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeReceptionEdit@panel.label-sick-percent.text=% больничных
+
+
+
+
+#
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@title=Приказ о увольнении
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.title.account.text=Для расчётов
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-employee.text=Служащий
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-code.text=№ приказа
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-discharge-date.text=Дата увольнения
+
+
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-discharge-type.text=Основание
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-compensation-day.text=Компенсация отпуска
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-output-day.text=Выходное пособие
+org.plazmaforge.bsolution.employee.richclient.swing.forms.EmployeeDischargeEdit@panel.label-pension-amount.text=Пособие при увол. на пенсию

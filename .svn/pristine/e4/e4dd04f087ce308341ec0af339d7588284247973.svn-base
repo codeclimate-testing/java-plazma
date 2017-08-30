@@ -1,0 +1,39 @@
+
+
+<!ELEMENT properties (
+         locale?,
+         iso3language?,
+         application-name?,
+         application-manager?,
+         look-and-feel-name?,
+         look-and-feel-class?,
+         windows-look-and-feel-class?,
+         linux-look-and-feel-class?,
+         os2-look-and-feel-class?,
+         mac-look-and-feel-class?,
+         cross-look-and-feel-class?,
+         is-external-config?)>
+
+<!ELEMENT locale (#PCDATA)>
+
+<!ELEMENT iso3language (#PCDATA)>
+
+<!ELEMENT application-name (#PCDATA)>
+
+<!ELEMENT application-manager (#PCDATA)>
+
+<!ELEMENT look-and-feel-name (#PCDATA)>
+
+<!ELEMENT look-and-feel-class (#PCDATA)>
+
+<!ELEMENT windows-look-and-feel-class (#PCDATA)>
+
+<!ELEMENT linux-look-and-feel-class (#PCDATA)>
+	
+<!ELEMENT os2-look-and-feel-class (#PCDATA)>
+	
+<!ELEMENT mac-look-and-feel-class (#PCDATA)>
+
+<!ELEMENT cross-look-and-feel-class (#PCDATA)>
+
+<!ELEMENT is-external-config (#PCDATA)>

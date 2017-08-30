@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PIMAppointmentContact" class="org.plazmaforge.bsolution.pim.common.beans.PIMAppointmentContact" table="PIM_APPOINTMENT_CONTACT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="appointment" column="APPOINTMENT_ID" class="org.plazmaforge.bsolution.pim.common.beans.PIMAppointment"  required="true" />
+        	<reference name="contact" column="CONTACT_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactHeader"  required="true" />
+        </attributes>	
+     </entity>
+

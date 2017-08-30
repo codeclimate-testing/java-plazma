@@ -1,0 +1,10 @@
+<entity-mapping>
+    <joined-entity class="org.plazmaforge.bsolution.carservice.common.beans.CarDetail" table="CAR_DETAIL" extends-class="org.plazmaforge.bsolution.goods.common.beans.Goods">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer"/>
+        	<reference name="carMark" column="CAR_MARK_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarMark"/>        
+        	<reference name="carModel" column="CAR_MODEL_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarModel"/>
+        	<collection name="variantList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariant" join-attribute="carDetail" cascade="all"/>
+        </attributes>
+    </joined-entity>
+</entity-mapping>

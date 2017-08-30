@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="SPDPensionLabelByYear"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="IDN" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="REPORT_TYPE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["індані"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ORGANIZATION_ID" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="ORGANIZATION_NAME" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="CATEGORY_CODE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["2"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="STORAGE_TYPE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["папір"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FILE_NAME" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="FILE_SIZE" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="PACKAGE_RECORD_COUNT" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="PACKAGE_PAGE_COUNT" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="LAST_NAME" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT 
+ID
+FROM ORGANIZATION WHERE ID = $P{ORGANIZATION_ID}]]></queryString>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="740"  isSplitAllowed="true" >
+				<frame>					<reportElement
+						x="0"
+						y="37"
+						width="249"
+						height="656"
+						key="frame-1"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+				<staticText>
+					<reportElement
+						x="71"
+						y="7"
+						width="98"
+						height="13"
+						key="staticText-1"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[ЯРЛИК-РОЗПИСКА]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="22"
+						width="238"
+						height="27"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[ПРИМІРНИК ОДЕРЖУВАЧА
+Пачки документів]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="49"
+						width="236"
+						height="12"
+						key="textField-1"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{REPORT_TYPE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="65"
+						width="119"
+						height="29"
+						key="staticText-3"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Реєстраційний номер пачки
+у відправника документів :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="123"
+						y="79"
+						width="119"
+						height="15"
+						key="textField-2"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="94"
+						width="106"
+						height="15"
+						key="staticText-5"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Реквізити відправника :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="108"
+						width="29"
+						height="15"
+						key="staticText-6"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Назва]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="136"
+						width="142"
+						height="15"
+						key="staticText-7"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Код категорії платника збору]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="150"
+						width="63"
+						height="15"
+						key="staticText-8"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Назва файла :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="164"
+						width="50"
+						height="15"
+						key="staticText-9"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Тип носія]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="178"
+						width="66"
+						height="15"
+						key="staticText-10"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Розмір файла :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="203"
+						width="161"
+						height="15"
+						key="staticText-11"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Кількість записів в пачці на ГМД     :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="225"
+						width="160"
+						height="15"
+						key="staticText-12"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Кількість листів документів у пачці :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="2"
+						y="247"
+						width="161"
+						height="26"
+						key="staticText-13"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Код відповідального за формування
+пачки документів у відправника       :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="2"
+						y="287"
+						width="119"
+						height="15"
+						key="staticText-14"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Прізвище відповідального :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="2"
+						y="312"
+						width="162"
+						height="15"
+						key="staticText-15"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Підпис відповідального відправника :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="108"
+						y="94"
+						width="111"
+						height="15"
+						key="textField-3"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{IDN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="32"
+						y="108"
+						width="208"
+						height="15"
+						key="textField-4"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="145"
+						y="136"
+						width="95"
+						height="15"
+						key="textField-6"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{CATEGORY_CODE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="52"
+						y="164"
+						width="189"
+						height="15"
+						key="textField-8"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{STORAGE_TYPE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="69"
+						y="178"
+						width="85"
+						height="15"
+						key="textField-9"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{FILE_SIZE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="154"
+						y="178"
+						width="29"
+						height="15"
+						key="staticText-17"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(байт)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="164"
+						y="203"
+						width="55"
+						height="15"
+						key="textField-10"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{PACKAGE_RECORD_COUNT}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="163"
+						y="225"
+						width="55"
+						height="15"
+						key="textField-11"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{PACKAGE_PAGE_COUNT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="2"
+						y="272"
+						width="160"
+						height="12"
+						key="staticText-18"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(за реєстром фізичних осіб ДПА)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="162"
+						y="258"
+						width="79"
+						height="15"
+						key="textField-12"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{IDN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="121"
+						y="287"
+						width="119"
+						height="15"
+						key="textField-13"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{LAST_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="164"
+						y="312"
+						width="75"
+						height="15"
+						key="textField-14"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="218"
+						y="93"
+						width="24"
+						height="15"
+						key="staticText-19"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(код)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="2"
+						y="122"
+						width="238"
+						height="15"
+						key="textField-15"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{ORGANIZATION_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="65"
+						y="150"
+						width="175"
+						height="15"
+						key="textField-16"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{FILE_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="164"
+						y="326"
+						width="74"
+						height="24"
+						key="staticText-20"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Місце печатки
+відправника]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="4"
+						y="349"
+						width="104"
+						height="15"
+						key="staticText-21"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Дата формування пачки]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="4"
+						y="364"
+						width="73"
+						height="15"
+						key="staticText-22"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[у відправника   : ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="88"
+						y="364"
+						width="17"
+						height="15"
+						key="textField-17"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="83"
+						y="364"
+						width="5"
+						height="15"
+						key="staticText-23"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="105"
+						y="364"
+						width="5"
+						height="15"
+						key="staticText-24"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="111"
+						y="364"
+						width="67"
+						height="15"
+						key="textField-18"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="181"
+						y="364"
+						width="33"
+						height="15"
+						key="textField-19"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="215"
+						y="364"
+						width="9"
+						height="15"
+						key="staticText-25"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[p]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="61"
+						y="388"
+						width="127"
+						height="15"
+						key="staticText-26"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Результати приймання пачки]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="70"
+						y="402"
+						width="108"
+						height="15"
+						key="staticText-27"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[документів одержувачем]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="4"
+						y="431"
+						width="119"
+						height="29"
+						key="staticText-28"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Обліковий номер пачки
+в одержувача документів :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="124"
+						y="445"
+						width="119"
+						height="15"
+						key="textField-20"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="4"
+						y="471"
+						width="106"
+						height="15"
+						key="staticText-29"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Реквізити одержувача :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="109"
+						y="471"
+						width="111"
+						height="15"
+						key="textField-21"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="220"
+						y="470"
+						width="24"
+						height="15"
+						key="staticText-30"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(код)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="33"
+						y="485"
+						width="208"
+						height="15"
+						key="textField-22"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="4"
+						y="485"
+						width="29"
+						height="15"
+						key="staticText-31"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Назва]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="3"
+						y="499"
+						width="238"
+						height="15"
+						key="textField-23"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="4"
+						y="526"
+						width="161"
+						height="26"
+						key="staticText-32"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Код відповідального за прийом
+пачки документів в одержувача       :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="164"
+						y="537"
+						width="79"
+						height="15"
+						key="textField-24"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="565"
+						width="119"
+						height="15"
+						key="staticText-33"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Прізвище відповідального :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="122"
+						y="565"
+						width="119"
+						height="15"
+						key="textField-25"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="591"
+						width="162"
+						height="15"
+						key="staticText-34"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Підпис відповідального в одержувача :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="165"
+						y="591"
+						width="75"
+						height="15"
+						key="textField-26"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="164"
+						y="625"
+						width="74"
+						height="24"
+						key="staticText-35"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Місце печатки
+одержувача]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="2"
+						y="606"
+						width="81"
+						height="15"
+						key="staticText-37"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Дата приймання  : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="81"
+						y="606"
+						width="5"
+						height="15"
+						key="staticText-38"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="86"
+						y="606"
+						width="17"
+						height="15"
+						key="textField-27"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="103"
+						y="606"
+						width="5"
+						height="15"
+						key="staticText-39"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="109"
+						y="606"
+						width="67"
+						height="15"
+						key="textField-28"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="179"
+						y="606"
+						width="33"
+						height="15"
+						key="textField-29"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="213"
+						y="606"
+						width="9"
+						height="15"
+						key="staticText-40"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[p]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="624"
+						width="98"
+						height="24"
+						key="staticText-41"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Відмітки вихідного
+контролю відправника]]></text>
+				</staticText>
+				</frame>				<frame>					<reportElement
+						x="269"
+						y="37"
+						width="249"
+						height="656"
+						key="frame-2"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+				<staticText>
+					<reportElement
+						x="71"
+						y="6"
+						width="98"
+						height="13"
+						key="staticText-42"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" isBold="true" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[ЯРЛИК-РОЗПИСКА]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="21"
+						width="238"
+						height="27"
+						key="staticText-43"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[ПРИМІРНИК ВІДПРАВНИКА
+Пачки документів]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="48"
+						width="236"
+						height="12"
+						key="textField-30"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{REPORT_TYPE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="64"
+						width="119"
+						height="29"
+						key="staticText-44"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Реєстраційний номер пачки
+у відправника документів :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="123"
+						y="78"
+						width="119"
+						height="15"
+						key="textField-31"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="93"
+						width="106"
+						height="15"
+						key="staticText-45"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Реквізити відправника :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="108"
+						y="93"
+						width="111"
+						height="15"
+						key="textField-32"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{IDN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="218"
+						y="92"
+						width="24"
+						height="15"
+						key="staticText-46"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(код)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="32"
+						y="107"
+						width="208"
+						height="15"
+						key="textField-33"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="107"
+						width="29"
+						height="15"
+						key="staticText-47"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Назва]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="2"
+						y="121"
+						width="238"
+						height="15"
+						key="textField-34"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{ORGANIZATION_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="135"
+						width="142"
+						height="15"
+						key="staticText-48"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Код категорії платника збору]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="145"
+						y="135"
+						width="95"
+						height="15"
+						key="textField-35"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{CATEGORY_CODE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="65"
+						y="149"
+						width="175"
+						height="15"
+						key="textField-36"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{FILE_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="149"
+						width="63"
+						height="15"
+						key="staticText-49"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Назва файла :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="163"
+						width="50"
+						height="15"
+						key="staticText-50"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Тип носія]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="52"
+						y="163"
+						width="189"
+						height="15"
+						key="textField-37"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{STORAGE_TYPE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="69"
+						y="177"
+						width="85"
+						height="15"
+						key="textField-38"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{FILE_SIZE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="177"
+						width="66"
+						height="15"
+						key="staticText-51"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Розмір файла :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="154"
+						y="177"
+						width="29"
+						height="15"
+						key="staticText-52"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(байт)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="3"
+						y="202"
+						width="161"
+						height="15"
+						key="staticText-53"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Кількість записів в пачці на ГМД     :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="164"
+						y="202"
+						width="55"
+						height="15"
+						key="textField-39"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{PACKAGE_RECORD_COUNT}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="163"
+						y="224"
+						width="55"
+						height="15"
+						key="textField-40"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{PACKAGE_PAGE_COUNT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="224"
+						width="160"
+						height="15"
+						key="staticText-54"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Кількість листів документів у пачці :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="2"
+						y="246"
+						width="161"
+						height="26"
+						key="staticText-55"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Код відповідального за формування
+пачки документів у відправника       :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="162"
+						y="257"
+						width="79"
+						height="15"
+						key="textField-41"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{IDN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="2"
+						y="271"
+						width="160"
+						height="12"
+						key="staticText-56"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(за реєстром фізичних осіб ДПА)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="2"
+						y="286"
+						width="119"
+						height="15"
+						key="staticText-57"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Прізвище відповідального :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="121"
+						y="286"
+						width="119"
+						height="15"
+						key="textField-42"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{LAST_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="2"
+						y="311"
+						width="162"
+						height="15"
+						key="staticText-58"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Підпис відповідального відправника :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="164"
+						y="311"
+						width="75"
+						height="15"
+						key="textField-43"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="164"
+						y="325"
+						width="74"
+						height="24"
+						key="staticText-59"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Місце печатки
+відправника]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="4"
+						y="348"
+						width="104"
+						height="15"
+						key="staticText-60"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Дата формування пачки]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="4"
+						y="363"
+						width="73"
+						height="15"
+						key="staticText-61"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[у відправника   : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="83"
+						y="363"
+						width="5"
+						height="15"
+						key="staticText-62"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="88"
+						y="363"
+						width="17"
+						height="15"
+						key="textField-44"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="105"
+						y="363"
+						width="5"
+						height="15"
+						key="staticText-63"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="111"
+						y="363"
+						width="67"
+						height="15"
+						key="textField-45"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="181"
+						y="363"
+						width="33"
+						height="15"
+						key="textField-46"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="215"
+						y="363"
+						width="9"
+						height="15"
+						key="staticText-64"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[p]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="63"
+						y="386"
+						width="127"
+						height="15"
+						key="staticText-65"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Результати приймання пачки]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="72"
+						y="400"
+						width="108"
+						height="15"
+						key="staticText-66"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[документів одержувачем]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="6"
+						y="429"
+						width="119"
+						height="29"
+						key="staticText-67"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Обліковий номер пачки
+в одержувача документів :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="126"
+						y="443"
+						width="119"
+						height="15"
+						key="textField-47"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="111"
+						y="469"
+						width="111"
+						height="15"
+						key="textField-48"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="6"
+						y="469"
+						width="106"
+						height="15"
+						key="staticText-68"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Реквізити одержувача :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="6"
+						y="483"
+						width="29"
+						height="15"
+						key="staticText-69"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Назва]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="35"
+						y="483"
+						width="208"
+						height="15"
+						key="textField-49"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="497"
+						width="238"
+						height="15"
+						key="textField-50"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="222"
+						y="468"
+						width="24"
+						height="15"
+						key="staticText-70"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(код)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="6"
+						y="524"
+						width="161"
+						height="26"
+						key="staticText-71"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Код відповідального за прийом
+пачки документів в одержувача       :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="166"
+						y="535"
+						width="79"
+						height="15"
+						key="textField-51"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="124"
+						y="563"
+						width="119"
+						height="15"
+						key="textField-52"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="5"
+						y="563"
+						width="119"
+						height="15"
+						key="staticText-72"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Прізвище відповідального :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="5"
+						y="589"
+						width="162"
+						height="15"
+						key="staticText-73"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Підпис відповідального в одержувача :]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="167"
+						y="589"
+						width="75"
+						height="15"
+						key="textField-53"/>
+					<box>					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="182"
+						y="604"
+						width="33"
+						height="15"
+						key="textField-54"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="112"
+						y="604"
+						width="67"
+						height="15"
+						key="textField-55"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="106"
+						y="604"
+						width="5"
+						height="15"
+						key="staticText-74"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="89"
+						y="604"
+						width="17"
+						height="15"
+						key="textField-56"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement verticalAlignment="Bottom">
+						<font isUnderline="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="84"
+						y="604"
+						width="5"
+						height="15"
+						key="staticText-75"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA["]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="5"
+						y="604"
+						width="81"
+						height="15"
+						key="staticText-76"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Дата приймання  : ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="5"
+						y="622"
+						width="98"
+						height="24"
+						key="staticText-77"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Відмітки вихідного
+контролю відправника]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="166"
+						y="623"
+						width="74"
+						height="24"
+						key="staticText-78"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Місце печатки
+одержувача]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="216"
+						y="604"
+						width="9"
+						height="15"
+						key="staticText-81"/>
+					<box></box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[p]]></text>
+				</staticText>
+				</frame>				<line direction="TopDown">
+					<reportElement
+						x="258"
+						y="36"
+						width="0"
+						height="660"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+</graphicElement>
+				</line>
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="535"
+						height="26"
+						key="staticText-79"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Пенсійний фонд України
+Система персоніфікованого обліку]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="708"
+						width="518"
+						height="31"
+						key="staticText-80"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[Варіанти коду категорії платника: 1 - юридичні суб'єкти з найманими працівниками; 2 - фізичні особи без найманих працівників; 3 - фізичні особи з найманими працівниками; 4 - юридичні  суб'єкти де понад 50% працюючих - інваліди.]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="6"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="4"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="6"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="5"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="5"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="3"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="5"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

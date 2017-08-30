@@ -1,0 +1,365 @@
+
+<html>
+<title>FAQ</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE align="center" width="800" cellspacing=0 cellpadding=0>
+<TR><TD>
+
+  <table align="center">
+    <tr><td><a href="http://plazma.sourceforge.net"><img border=0 src="images/plazma_logo.jpg"/></a></td></tr>
+  </table>
+ 
+  <br><br>
+  <hr>
+  
+
+   <h2 align="center">FAQ</h2>
+   <!-- <hr> -->
+   <br><br>
+
+   <h3 align="center">Questions</h3>
+
+   <table width="100%">
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Common</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#what_license">What is license of the software?</a></td></tr>
+     <tr><td><a href="#what_os">What operating systems are supported Plazma ERP+CRM?</a></td></tr>
+     <tr><td><a href="#what_db">What databases are supported Plazma ERP+CRM?</a></td></tr>
+     <tr><td><a href="#what_technology">What technology is used in the project?</a></td></tr>
+     <tr><td><a href="#get_source_code">Can I get the source code?</a></td></tr>
+     <tr><td><a href="#error_connection">During the launch of error "Cannot open connection" and the application does not start. How do I solve this problem?</a></td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Database</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#how_db_create">How to create a database?</a></td></tr>
+     <tr><td><a href="#how_db_connect">How to connect to a database?</a></td></tr>
+
+
+
+    <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Application Server</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#how_set_server">How do I configure the server part?</a></td></tr>
+     <tr><td><a href="#how_set_client">How do I configure the client part?</a></td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Development</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a href="#how_download_source_code">How do I download the source code?</a></td></tr>
+     <tr><td><a href="#what_dev_tools">What tools needed to develop Plazma ERP+CRM?</a></td></tr>
+     <tr><td><a href="#no_compile">I can not compile the project, I have many ClassNotFound exceptions. I use the ant task. How do I solve this problem? </a></td></tr>
+
+   </table>
+
+   <br><br>
+   <h3 align="center">Answers</h3>
+
+   <table width="100%">
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Common</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="what_license"><b>Q:</b> What is license of the software?</td></tr>
+     <tr><td><b>A:</b> The Plazma ERP+CRM is licensed under the Lesser GNU Public License (LGPL).<br><br><br></td></tr>
+
+
+     <tr><td><a name="what_os"><b>Q:</b> What operating systems are supported Plazma ERP+CRM?</a></td></tr>
+     <tr><td><b>A:</b> The Plazma supports the following operating systems:<ul><li>Windows <li>Linux <li>MacOS</ul><br></td></tr>
+
+     <tr><td><a name="what_db"><b>Q:</b> What databases are supported Plazma ERP+CRM?</a></td></tr>
+     <tr><td><b>A:</b> The Plazma supports the following databases<ul><li>Oracle <li>PostgreSQL <li>MySQL <li>Firebird <li>HSQL</ul><br></td></tr>
+
+     <tr><td><a name="what_technology"><b>Q:</b> What technology is used in the project?</a></td></tr>
+     <tr><td><b>A:</b> The project uses the following technologies:<br><br>
+
+Programming language
+<ul>
+    <li>Java
+</ul>
+
+Service and Transaction Management
+<ul>
+    <li>Spring
+</ul>
+
+Security System
+<ul>
+    <li>Spring Security
+</ul>
+
+
+ORM
+<ul>
+    <li>Plazma ERM
+</ul>
+
+
+Desktop client
+<ul>
+    <li>SWT, Swing
+</ul>
+	
+
+Reporting system
+<ul>
+    <li>Jasper Reports
+</ul>
+<br><br>
+
+     </td></tr>
+
+
+
+     <tr><td><a name="get_source_code"><b>Q:</b> Can I get the source code?</a></td></tr>
+     <tr><td><b>A:</b> Yes, the source code available to download section.<br><br><br></td></tr>
+
+     <tr><td><a name="error_connection"><b>Q:</b> During the launch of error "Cannot open connection" and the application does not start. How do I solve this problem?</a></td></tr>
+     <tr><td><b>A:</b> No access to the database. There are three main reasons:
+     <ul><li>Wrong configured database<li>Missing JDBC driver for database <li>No database</ul>
+     To connect to the database, see  <a href="#how_db_connect">How to connect to a database?</a><br>
+     Check a availability JDBC driver for database and if necessary, download a driver from the site of the database and change the CLASSPATH  <br>
+     Check a database and if you want to create it using SQL scripts included in the installation. 
+     For more information see <a href="#how_db_create">How to create a database?</a>
+     
+     </td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Database</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_db_create"><b>Q:</b> How to create a database?</a></td></tr>
+     <tr><td><b>A:</b> By default Plazma ERP+CRM uses HSQL database. 
+     A installation of the Plazma includes physical database files only to HSQL.
+     The files available in a folder &lt;Plazma&gt;/db/hsql.
+     If you want to use a database of other vendors, 
+     you have to create database and run SQL scripts.
+     To create a database, you can use various tools. 
+
+ <p>For example:
+
+ <ul>
+   <li>Oracle - SQL* Plus
+   <li>PostgreSQL - pgAdmin
+   <li>MySQL Query Browser
+   <li>Firebird - ISQL, IBExpert
+   <li>HSQL - Database Manager (&lt;HSQL&gt;/demo/runManager.bat)
+  </ul>
+
+
+ <p>SQL scripts available in &lt;Plazma&gt;/db/result folder.<br>
+
+ You can run the following script to create structure and fill a new database:
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db.sql - live database<br>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db_demo.sql - demo database<br>
+ </code>
+
+ <p><br> 
+
+ <code>&lt;database-vendor&gt;</code> - vendor of the database (oracle, postgresql, mysql, firebird, hsql), <br>
+
+ <code>&lt;language&gt;</code> - language (en, de, ru, uk)<br>
+
+ <p>For the Firebird database and the English language:
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/firebird/en/create_plazma_db.sql - live database<br>
+  &lt;Plazma&gt;/db/script/createdb/firebird/en/create_plazma_db_demo.sql - demo database<br>
+ </code>
+     <br><br><br>
+     </td></tr>
+
+
+
+     <tr><td><a name="how_db_connect"><b>Q:</b> How to connect to a database?</a></td></tr>
+     <tr><td><b>A:</b> By default Plazma ERP+CRM uses HSQL database. 
+     In order to use that database with another vendor, 
+     you can create a new database using SQL scripts included in the installation.<br>
+     Setting connect to the database is in &lt;Plazma&gt;/conf/jdbc.properties.    
+     <br>Demo mode set in &lt;Plazma&gt;/conf/plazma.properties file:<p> plazma.platform.demo = true.
+ <br><p>jdbc.properties example:
+
+ <p>
+ <code>
+ # Setting connection for  Firebird <br>
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver<br>
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.fdb<br>
+ jdbc.username=sysdba<br>
+ jdbc.password=masterkey<br>
+ </code>
+ 
+
+     <br><br><br>
+     </td></tr>
+
+
+
+
+
+<!-- App Server begin-->
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Application Server</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_set_server"><b>Q:</b> How do I configure the server part?</a></td></tr>
+
+
+     <tr><td><b>A:</b>
+
+ <ul>
+   <li><b>Lite server</b>
+
+<br>
+      <p>To start the Lite server you have to run the follow command file:
+<pre>
+   Windows
+   -------
+
+   start_server.bat
+
+
+   Linux
+   -----
+
+   start_server.sh
+</pre>
+<b>IMPORTANT!</b>
+<br>
+By default the server uses <b>2005</b> and <b>2007</b> ports.
+<br>2005 is the service port (call services) 
+<br>2007 is the command port (call commands) 
+<br>If your system already uses data ports, it is necessary to change the server configuration. 
+<br>You can set the service port in &lt;PlazmaServer&gt;/conf/application-context-rmi.xml file:
+<pre>
+&lt;bean class="org.springframework.remoting.rmi.RmiServiceExporter"&gt;
+    &lt;property name="serviceName">&lt;value>ServiceInvoker&lt;/value>&lt;/property&gt;
+    &lt;property name="service"> <ref bean="rmiServiceInvoker"/&gt;&lt;/property&gt;
+    &lt;property name="serviceInterface"><value>org.plazmaforge.framework.platform.service.ServiceInvoker&lt;/value&gt;&lt;/property&gt;
+    &lt;property name="<b>registryPort</b>"&gt;&lt;value><b>2005</b>&lt;/value&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+</pre>
+<b>If you change the service port on the server then you have to change the service port on the client!</b>
+<br>The ports on the server and the client must be equal.
+<br>The client port set to &lt;PlazmaClient&gt;/conf/rmi.properties file.
+<br>See the client configuration.
+
+<p>You can send the command port as a parameter when you start the server:
+<pre>
+
+   Windows
+   -------
+
+   start_server.bat <b>-commandport 2007</b>
+
+
+   Linux
+   -----
+
+   start_server.sh <b>-commandport 2007</b>
+</pre>
+ </ul>
+
+
+Connecting to the database is configured in &lt;PlazmaServer&gt;/conf/jdbc.properties file.
+<br>For more information on connection, see <a href="#how_db_connect">How to connect to a database?</a>
+
+
+<!-- App server end -->
+
+    <br><br><br>
+     </td></tr>
+
+
+<!-- Client begin-->
+
+
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_set_client"><b>Q:</b> How do I configure the client part?</a></td></tr>
+
+
+     <tr><td><b>A:</b>
+
+ <ul>
+   <li><b>Lite client</b>
+   <p>You have to set RMI in &lt;PlazmaClient&gt;/conf/rmi.properties file.
+
+<pre>
+rmi.host = localhost
+rmi.port = 2005
+</pre>
+<b>rmi.host</b> - server host, <b>rmi.port</b> - service port (by default 2005)
+<p><b>IMPORTANT!</b>
+<br>The service port on the client must be the same as the service port on the server.
+See <a href="#how_set_server">How I do configure the server part?</a>
+ </ul>
+<!-- Client end -->
+
+
+     <br><br><br>
+     </td></tr>
+
+
+     <tr height="40"><td></td></tr>
+     <tr>
+      <td bgcolor="#050179" class="th"><font color="white">Develop</font></td>
+     </tr>
+     <tr height="10"><td></td></tr>
+     <tr><td><a name="how_download_source_code"><b>Q:</b> How do I download the source code?</a></td></tr>
+     <tr><td><b>A: </b>The source code is available in the downloads section of the site. You can also download the code from CVS. 
+     The source code in the CVS may differ from the last version, it is less stable, but reflects the state of development to date. 
+     <br><br><br></td></tr>
+
+
+     <tr><td><a name="what_dev_tools"><b>Q: </b> What tools needed to develop Plazma ERP+CRM?</a></td></tr>
+     <tr><td><b>A: </b> To develop the Plazma like any Java project, you must have defined your computer JDK 1.5 and above. <br>
+     For editing Java code, you can use any text editor, but better solution is using a development environment (IDE)
+     <br><br>
+     For example:
+     <ul><li>Eclipse<li>IDEA<li>Net Beans</ul>
+     <br><br><br></td></tr>
+     
+
+     <tr><td><a name="no_compile"><b>Q: </b> I can not compile the project, I have many ClassNotFound exceptions. I use the ant task. How do I solve this problem? </a></td></tr>
+     <tr><td><b>A: </b> Perhaps your project has not necessary JAR files. To begin, you have to check the JAR files. 
+     The project has two subprojects: framework and bsolution. 
+
+     The necessary JAR files available in lib  folder. 
+     <br><br><br></td></tr>
+
+
+   </table>
+
+</TD></TR>
+</TABLE>
+
+</body>
+</html>
+
+

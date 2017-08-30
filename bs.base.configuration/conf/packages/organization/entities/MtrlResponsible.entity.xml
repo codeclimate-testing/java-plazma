@@ -1,0 +1,39 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="MtrlResponsible" class="org.plazmaforge.bsolution.organization.common.beans.MtrlResponsible" table="MTRL_RESPONSIBLE">
+       	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.organization.common.services.GenericStructurableService</property>
+    	</config>
+    	<aliases>
+    		<alias name="contactName" attribute="contact.name"/>
+    		<alias name="warehouseName" attribute="warehouse.name"/>
+    	</aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer">
+            	<generator type="sequence">
+                	<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+            	</generator>
+        	</key>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse" />
+        	<reference name="contact" column="CONTACT_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"  required="true" />
+        </attributes>
+    	<triggers>
+    		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    	</triggers>	
+        
+    </entity>
+

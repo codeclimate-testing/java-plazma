@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PriceType" class="org.plazmaforge.bsolution.product.common.beans.PriceType" table="PRICE_TYPE">
+        <attributes>
+          <key name="id" column="ID" type="Integer" generator-type="increment"/>
+          <attribute name="name" column="NAME" type="String" />
+          <attribute name="pricePercent" column="PRICE_PERCENT" type="Float" />
+          <attribute name="note" column="NOTE" type="String" />
+        </attributes>
+    </entity>
+

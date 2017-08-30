@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeSicklistAverange" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeSicklistAverange" table="EMPLOYEE_SICKLIST_AVERANGE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="month" column="SICKLIST_MONTH" type="Integer" />
+        	<attribute name="workDay" column="WORK_DAY" type="Integer" />
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<reference name="employeeSicklist" column="OWNER_ID" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeSicklist"  required="true" />
+        </attributes>
+    </entity>
+

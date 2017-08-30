@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EntityType" class="org.plazmaforge.framework.config.object.EntityTypeConfig" table="SYS_ENTITY_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="String" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String"  required="true"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="custom" column="IS_CUSTOM" type="Boolean"/>
+        	<attribute name="customAttribute" column="IS_CUSTOM_ATTRIBUTE" type="Boolean"/>
+    	</attributes>
+    </entity>
+

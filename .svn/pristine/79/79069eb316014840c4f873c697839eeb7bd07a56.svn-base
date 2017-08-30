@@ -1,0 +1,63 @@
+
+#
+# Language setting
+#
+# lang = en
+# lang = ru
+# lang = uk                
+
+lang = en
+
+	
+#
+# Codepage setting
+#
+# codepage = cp1251
+# codepage = koi-8r
+
+codepage = cp1251
+
+
+#
+# Database vendor setting
+#
+# db.vendor = oracle
+# db.vendor = postgresql
+# db.vendor = mysql
+# db.vendor = firebird
+# db.vendor = hsql
+
+db.vendor = hsql
+   	
+	
+db.dir = ${basedir}/script
+db.views.dir = ${db.dir}/views
+db.data.init.dir = ${db.dir}/data/init
+db.data.populate.dir = ${db.dir}/data/populate
+db.data.demo.dir = ${db.dir}/data/demo
+db.createdb.dir = ${db.dir}/createdb
+
+base.views.dir = ${db.views.dir}/base
+organization.views.dir = ${db.views.dir}/organization
+employee.views.dir = ${db.views.dir}/employee
+payroll.views.dir = ${db.views.dir}/payroll
+
+product.views.dir = ${db.views.dir}/product
+goods.views.dir = ${db.views.dir}/goods
+asset.views.dir = ${db.views.dir}/asset
+intangible.views.dir = ${db.views.dir}/intangible
+
+document.views.dir = ${db.views.dir}/document
+finance.views.dir = ${db.views.dir}/finance
+contact.views.dir = ${db.views.dir}/contact
+partner.views.dir = ${db.views.dir}/partner
+bank.views.dir = ${db.views.dir}/bank
+cash.views.dir = ${db.views.dir}/cash
+register.views.dir = ${db.views.dir}/register
+project.views.dir = ${db.views.dir}/project
+	
+	
+
+jdbc.location.root = <value>conf/jdbc.properties</value>
+jdbc.location.server = <value>${server.dir}/conf/jdbc.properties</value>
+jdbc.location.install = <value>$INSTALL_PATH/conf/jdbc.properties</value>

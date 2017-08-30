@@ -1,0 +1,176 @@
+operation.type.debit=Дебит
+operation.type.credit=Кредит
+
+############################################################################
+# FINANCE Action Definition
+############################################################################
+
+# Contractor List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.ContractorListAction@name=Контрагенты
+org.plazmaforge.bsolution.finance.richclient.swing.actions.ContractorListAction@tooltip=Контрагенты
+
+
+# Contract List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.ContractListAction@name=Договора
+org.plazmaforge.bsolution.finance.richclient.swing.actions.ContractListAction@tooltip=Договора
+org.plazmaforge.bsolution.finance.richclient.swing.actions.ContractListAction@image=olmari/ext/contracts.gif
+
+# PartnerRest List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.PartnerRestListAction@name=Остатки по клиентам
+org.plazmaforge.bsolution.finance.richclient.swing.actions.PartnerRestListAction@tooltip=Остатки по клиентам
+
+# LedgerAccountType List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.LedgerAccountTypeListAction@name=Типы бухгалтерских счетов
+org.plazmaforge.bsolution.finance.richclient.swing.actions.LedgerAccountTypeListAction@tooltip=Типы бухгалтерских счетов
+
+# LedgerAccount List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.LedgerAccountListAction@name=Бухгалтерские счета
+org.plazmaforge.bsolution.finance.richclient.swing.actions.LedgerAccountListAction@tooltip=Бухгалтерские счета
+
+# FinanceDocumentType List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.FinanceDocumentTypeListAction@name=Типы финансовых документов
+org.plazmaforge.bsolution.finance.richclient.swing.actions.FinanceDocumentTypeListAction@tooltip=Типы финансовых документов
+
+# TemplateEntry List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.TemplateEntryListAction@name=Шаблоны бухгалтерских проводок
+org.plazmaforge.bsolution.finance.richclient.swing.actions.TemplateEntryListAction@tooltip=Шаблоны бухгалтерских проводок
+
+# Entry Calculate Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.EntryCalculateAction@name=Расчёт бухгалтерских проводок
+org.plazmaforge.bsolution.finance.richclient.swing.actions.EntryCalculateAction@tooltip=Расчёт  бухгалтерских проводок
+
+# LedgerAccount Rest List Action
+org.plazmaforge.bsolution.finance.richclient.swing.actions.LedgerAccountRestListAction@name=Остатки по счетам
+org.plazmaforge.bsolution.finance.richclient.swing.actions.LedgerAccountRestListAction@tooltip=Остатки по счетам
+
+############################################################################
+# List Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractorList@title=Контрагенты
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractorList@table.column-name.name=Название
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractorList@table.column-entity-name.name=Тип
+
+
+# Contract List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@title=Договора
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@table.column-code.name=Номер
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@table.column-date.name=Дата
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@table.column-amount.name=Сумма
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractList@table.column-user-name.name=Автор
+
+# Partner Rest List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestList@title=Остатки по клиентам
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestList@table.column-client.name=Клиент
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestList@table.column-debit-amount.name=Дебит
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestList@table.column-credit-amount.name=Кредит
+
+# LedgerAccountType List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountTypeList@title=Тип бухгалтерского счёта
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountTypeList@table.column-name.name=Название
+
+# LedgerAccount List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountList@title=Бухгалтерский счёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountList@table.column-account.name=Счёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountList@table.column-sub-account.name=Субсчёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountList@table.column-name.name=Название
+
+# FinanceDocumentType List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeList@title=Тип финансового документа
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeList@table.column-move-type.name=Тип движения
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeList@table.column-include-tax-in-amount.name=Включать налог
+
+# TemplateEntry List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryList@title=Шаблон бухгалтерской проводки
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryList@table.column-code.name=Код
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryList@table.column-document-type.name=Тип документа
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryList@table.column-name.name=Название
+
+# LedgerAccount Rest List
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestList@title=Остатки по счетам
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestList@table.column-ledger-account.name=Счёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestList@table.column-debit-amount.name=Дебит
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestList@table.column-credit-amount.name=Кредит
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+# Contract Edit
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@title=Договор
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-currency-rate-date.text=дата курса
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.finance.richclient.swing.forms.ContractEdit@panel.label-currency-tax-amount.text=НДС
+
+
+# PartnerRest Edit
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestEdit@title=Остатки по партнёру
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestEdit@panel.label-client.text=Клиент
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestEdit@panel.label-operation-type.text=Тип операции
+org.plazmaforge.bsolution.finance.richclient.swing.forms.PartnerRestEdit@panel.label-amount.text=Сумма
+
+# LedgerAccountType Edit
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountTypeEdit@title=Тип бухгалтерского счёта
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountTypeEdit@panel.label-name.text=Название
+
+# LedgerAccount Edit
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountEdit@title=Бухгалтерский счёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountEdit@panel.label-code.text=Счёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountEdit@panel.label-ledger-account-type.text=Тип
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountEdit@panel.label-parent.text=Собственник
+
+# FinanceDocumentType Edit
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeEdit@title=Тип финансового документа
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeEdit@panel.label-document-type.text=Тип документа
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeEdit@panel.label-move-type.text=Тип движения
+org.plazmaforge.bsolution.finance.richclient.swing.forms.FinanceDocumentTypeEdit@panel.label-include-tax-in-amount.text=Влючать налог в сумму
+
+# TemplateEntry Edit
+
+
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@title=Шаблон бухгалтерской проводки
+
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@panel.title.note.text=Примечанние
+
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@panel.label-document-type.text=Тип документа
+
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@table-entry-item.name=Проводки
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@table-entry-item.column-debit-account-exp.name=Дт Сч
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@table-entry-item.column-debit-object-exp.name=Дт Объект
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@table-entry-item.column-credit-account-exp.name=Кт Сч
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@table-entry-item.column-credit-object-exp.name=Кт Объект
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryEdit@table-entry-item.column-amount-exp.name=Сумма
+
+# TemplateEntryItem Edit 
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryItemEdit@title=Проводки
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryItemEdit@panel.label-debit-account-exp.text=Дт Сч
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryItemEdit@panel.label-debit-object-exp.text=Дт Объект
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryItemEdit@panel.label-credit-account-exp.text=Кт Сч
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryItemEdit@panel.label-credit-object-exp.text=Кт Объект
+org.plazmaforge.bsolution.finance.richclient.swing.forms.TemplateEntryItemEdit@panel.label-amount-exp.text=Сумма
+
+
+# LedgerAccountRest Edit
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestEdit@title=Остатки по счёту
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestEdit@panel.label-ledger-account.text=Счёт
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestEdit@panel.label-operation-type.text=Тип операции
+org.plazmaforge.bsolution.finance.richclient.swing.forms.LedgerAccountRestEdit@panel.label-amount.text=Сумма

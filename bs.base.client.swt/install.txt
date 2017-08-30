@@ -1,0 +1,136 @@
+
+==========================================================================================================
+
+ Plazma ERP+CRM {version}
+
+==========================================================================================================
+
+
+1. System requirements
+
+1.1 Hardware
+
+1.1.1 Client
+
+      
+      Free Disk Space: 50 MB
+      Processor: Pentium 633 MHz or higher
+      RAM: 128 MB (256 MB recommended)
+      LAN adapter 10 Mb (100 Mb recommended)
+
+
+
+1.1.2 Server
+
+
+     Free Disk Space: 200 MB
+     Processor: Pentium 1700 MHz or higher
+     RAM: 256 MB (512 MB recommended)
+     LAN adapter 10 Mb (100 Mb recommended)
+
+
+1.1.3 Standalone
+
+
+     Free Disk Space: 100 MB
+     Processor: Pentium 1700 MHz or higher
+     RAM: 256 MB (512 MB recommended)
+     LAN adapter 10 Mb (100 Mb recommended)
+
+
+
+1.2 Software
+
+
+    Operating system: Windows, Linux, MacOS
+    Database server: Oracle 10g, PostgreSQL 8.x, MySQL 5.x, Firebird 1.5.3 (or higher), HSQL 1.7.2 (or higher)
+    JRE (Java Runtime Environment) 1.5 or higher
+
+
+
+
+2. Download
+
+
+   You can download Plazma ERP+CRM from site http://plazma.sourceforge.net 
+
+   You can choose different installations: 
+
+   # File							Type		OS	 	JRE 
+   -------------------------------------------------------------------------------------------------------
+   1  plazma-<version>-win32-installer.exe			Standalone	Windows 	Require
+   2  plazma-<version>-win32-jre-installer.exe			Standalone	Windows 	No require (include)
+   3  plazma-<version>-linux-gtk-installer.jar			Standalone	Linux 		Require
+
+   4  plazma-<version>-win32-installer-demo.exe			Standalone DEMO	Windows 	Require
+   5  plazma-<version>-win32-jre-installer-demo.exe		Standalone DEMO	Windows 	No require (include)
+   6  plazma-<version>-linux-gtk-installer-demo.jar		Standalone DEMO	Linux 		Require
+
+   7  plazma-client-lite-<version>-win32-installer.exe		Lite Client	Windows		Require
+   8  plazma-client-lite-<version>-linux-gtk-installer.jar	Lite Client	Linux		Require
+      
+   9  plazma-server-lite-<version>-installer.jar		Lite Server	Independent	Require
+
+
+
+
+3.  Installation
+
+    Installation can be started by executing the following commands:
+    
+    java -jar <installation jar file name>
+    
+    or you can run .exe installation file in Windows.
+
+
+
+4. Start up
+
+
+
+4.1  Client/Standalone
+
+     Application can be started by executing the following commands:
+
+     Windows 
+     -------
+ 
+     plazma.bat
+ 
+     or
+ 
+     java -Djava.library.path="lib\swt\win32" -jar launcher.jar plazma
+     
+     or you can click Start -> Programs -> Plazma ERP+CRM <version> -> Plazma ERP+CRM menu
+ 
+ 
+ 
+     Linux
+     -----
+ 
+     plazma.sh
+ 
+     or
+ 
+     java -Djava.library.path="lib/swt/linux-gtk" -jar launcher.jar plazma
+
+
+
+ 
+4.2 Lite Server
+					
+      Lite server can be started by executing the following commands:
+
+
+      Windows
+      -------
+
+      start_server.bat
+
+
+      Linux
+      -----
+
+      start_server.sh
+
+

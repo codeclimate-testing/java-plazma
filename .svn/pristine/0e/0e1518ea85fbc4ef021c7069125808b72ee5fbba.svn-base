@@ -1,0 +1,33 @@
+
+
+<!ELEMENT system-config (configurator*, system-properties?, platform-properties?, property-stores?)>
+
+<!ELEMENT configurator EMPTY>
+
+<!ATTLIST configurator
+        name CDATA #IMPLIED
+        type NMTOKEN #IMPLIED
+        class NMTOKEN #IMPLIED
+        file NMTOKEN #IMPLIED
+>
+
+
+
+<!ELEMENT system-properties (property*)>
+
+<!ELEMENT platform-properties (property*)>
+
+<!ELEMENT property-stores (store*)>
+
+<!ELEMENT store (property*)>
+
+
+
+<!ELEMENT property (#PCDATA)>
+
+<!ATTLIST property  name CDATA #IMPLIED>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT value (#PCDATA)>
+

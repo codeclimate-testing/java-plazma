@@ -1,0 +1,39 @@
+# New Document Action
+org.plazmaforge.bsolution.document.client.swing.actions.NewDocumentAction@name=New...
+org.plazmaforge.bsolution.document.client.swing.actions.NewDocumentAction@tooltip=New document
+
+# Choose Document Action
+org.plazmaforge.bsolution.document.client.swing.actions.ChooseDocumentAction@name=Choose...
+org.plazmaforge.bsolution.document.client.swing.actions.ChooseDocumentAction@tooltip=Choose document
+
+
+# Documnet List Action
+org.plazmaforge.bsolution.document.client.swing.actions.DocumentListAction@name=Document list
+org.plazmaforge.bsolution.document.client.swing.actions.DocumentListAction@tooltip=Document list
+org.plazmaforge.bsolution.document.client.swing.actions.DocumentListAction@image=olmari/ext/documents.gif
+
+
+# DocumentType List Action
+org.plazmaforge.bsolution.document.client.swing.actions.DocumentTypeListAction@name=Document types
+org.plazmaforge.bsolution.document.client.swing.actions.DocumentTypeListAction@tooltip=Document types
+
+
+
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentList@title=Document list
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentList@table.column-code.name=Code
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentList@table.column-date.name=Date
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentList@table.column-document-type-name.name=Document
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentList@table.column-reason.name=Reason
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentList@table.column-user-name.name=Author
+
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeList@title=Document types
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeList@table.column-name.name=Document types
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeList@table.column-document-section.name=Section
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeList@table.column-document-category.name=Category
+
+
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeEdit@title=Document type
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeEdit@panel.label-entity.text=Entity
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeEdit@panel.label-document-section.text=Section
+org.plazmaforge.bsolution.document.client.swing.forms.DocumentTypeEdit@panel.label-document-category.text=Category

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+
+
+	
+	<!-- =================== SECURITY SYSTEM DEFINITIONS ================== -->
+	
+	<!-- RunAsManager -->
+	<bean id="runAsManager" class="org.springframework.security.access.intercept.RunAsManagerImpl">
+     	<property name="key"><value>my_run_as_password</value></property>
+ 	</bean>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~ AUTHENTICATION DEFINITIONS ~~~~~~~~~~~~~~~~~~ -->
+
+	<bean id="runAsAuthenticationProvider" class="org.springframework.security.access.intercept.RunAsImplAuthenticationProvider">
+     	<property name="key"><value>my_run_as_password</value></property>
+ 	</bean>
+
+
+     <!-- JDBC DAO provider -->
+    <bean id="jdbcDaoImpl" class="org.plazmaforge.framework.ext.security.support.spring.PlatformJdbcDaoImpl">
+       <property name="dataSource"><ref bean="dataSource"/></property>
+       <property name="rolePrefix"><value>ROLE_</value></property>
+       <property name="usersByUsernameQuery"><value>SELECT USER_NAME, USER_PASSWORD, 'true' AS ENABLED FROM SYS_USER WHERE UPPER(USER_NAME) = UPPER(?)</value></property>       
+       <property name="authoritiesByUsernameQuery"><value>SELECT U.USER_NAME, R.NAME FROM SYS_USER_ROLE UR,  SYS_USER U, SYS_ROLE R WHERE UR.USER_ID = U.ID AND UR.ROLE_ID = R.ID AND UPPER(U.USER_NAME) = UPPER(?)</value></property>
+    </bean>
+    
+	<bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+	     	<property name="userDetailsService"><ref bean="jdbcDaoImpl"/></property>
+	     	<property name="userCache"><ref bean="userCache"/></property>
+	</bean>
+	
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>classpath:/ehcache-failsafe.xml</value>
+		</property>
+	</bean>
+
+	<bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager"/>
+		</property>
+		<property name="cacheName">
+			<value>userCache</value>
+		</property>
+	</bean>
+
+	<bean id="userCache" class="org.springframework.security.core.userdetails.cache.EhCacheBasedUserCache">
+		<property name="cache"><ref local="userCacheBackend"/></property>
+	</bean>
+
+	<bean id="loggerListener" class="org.springframework.security.authentication.event.LoggerListener"/>
+
+	<bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
+		<property name="providers">
+		  <list>
+		    <ref bean="runAsAuthenticationProvider"/>
+ 		    <ref bean="daoAuthenticationProvider"/>
+		    
+		  </list>
+		</property>
+	</bean>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~ AUTHORIZATION DEFINITIONS ~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- An access decision voter that reads ROLE_* configuration settings -->
+	<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter"/>
+
+	<!-- A unanimous access decision manager -->
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+   		<property name="allowIfAllAbstainDecisions"><value>false</value></property>
+		<property name="decisionVoters">
+		  <list>
+		    <ref bean="roleVoter"/>
+		  </list>
+		</property>
+	</bean>
+
+	
+	<!-- ===================== SECURITY DEFINITIONS ======================= -->
+
+
+   
+    <bean id="securityMetadataSource" class="org.plazmaforge.framework.ext.security.support.spring.PlatformMethodSecurityMetadataSource"/>
+
+	<bean id="securityInterceptor" class="org.plazmaforge.framework.ext.security.support.spring.PlatformMethodSecurityInterceptor">
+
+    	<property name="validateConfigAttributes"><value>true</value></property>
+    	<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+    	<property name="accessDecisionManager"><ref bean="accessDecisionManager"/></property>
+    	<property name="runAsManager"><ref bean="runAsManager"/></property>
+    	
+        <property name="securityMetadataSource"><ref bean="securityMetadataSource"/></property>
+        
+        
+
+
+    	<!--<property name="securityMetadataSource">
+          <value>
+            org.plazmaforge.bsolution.security.common.services.UserService.store*=ROLE_SUPERVISOR
+            org.plazmaforge.bsolution.security.common.services.UserService.create*=ROLE_SUPERVISOR
+            org.plazmaforge.bsolution.security.common.services.UserService.remove*=ROLE_SUPERVISOR
+            org.plazmaforge.bsolution.security.common.services.UserService.findAll=ROLE_SUPERVISOR
+          </value>
+        </property>
+        
+        --><!-- You can set permission of ReportService -->
+        <!-- org.plazmaforge.framework.report.ReportService.fill*=ROLE_SUPERVISOR -->        
+        <!--  org.plazmaforge.bsolution.security.common.service.UserService.login*=ROLE_SUPERVISOR -->    	
+        
+	</bean>
+
+</beans>	

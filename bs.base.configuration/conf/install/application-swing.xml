@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+  <iso3language>$ISO3_LANG</iso3language>
+  <application-name>Plazma ERP+CRM</application-name>
+  <application-manager>net.sf.plazma.bsolution.base.richclient.SwingClientApplicationManager</application-manager>
+  <!--<look-and-feel-class>com.jgoodies.plaf.windows.ExtWindowsLookAndFeel</look-and-feel-class>-->
+  <windows-look-and-feel-class>com.jgoodies.plaf.windows.ExtWindowsLookAndFeel</windows-look-and-feel-class>
+  <default-look-and-feel-class>com.jgoodies.plaf.plastic.PlasticLookAndFeel</default-look-and-feel-class>
+  <is-external-config>true</is-external-config>
+
+</properties>
+

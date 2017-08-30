@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report-config provider="Plazma Forge" version="1.0">
+  <report name="SaleOrder" path="goods" file="SaleOrder.jasper" single="true" />
+  <report name="PurchaseOrder" path="goods" file="PurchaseOrder.jasper" single="true" />
+  <report name="GoodsIncome" path="goods" file="GoodsIncome.jasper" single="true" />
+  <report name="GoodsOutcome" path="goods" file="GoodsOutcome.jasper" single="true" />
+  <report name="GoodsTaxWaybill" path="goods" file="GoodsTaxWaybill.jasper" country="UA" language="uk" single="true" />
+  <report name="InventoryMove" path="inventory" file="InventoryMove.jasper" single="true" />
+  <report name="InventoryWriteoff" path="inventory" file="InventoryWriteoff.jasper" single="true" />
+  <report name="Invoice" path="goods" file="Invoice.jasper" single="true" />
+  <report name="WarrantyDocument" path="goods" file="WarrantyDocument.jasper" region="xUSSR" single="true" />
+  <report name="PurchasePlanReport" path="goods" file="PurchasePlanReport.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="SalePlanReport" path="goods" file="SalePlanReport.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="GoodsIncomeByDocument" path="goods" file="GoodsIncomeByDocument.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="GoodsOutcomeByDocument" path="goods" file="GoodsOutcomeByDocument.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="GoodsRestStart" path="goods" file="GoodsRestStart.jasper" acceptor="OrganizationPeriodAcceptor" />
+  <report name="GoodsRotate" path="goods" file="GoodsRotate.jasper" acceptor="OrganizationPeriodAcceptor" />
+  <report name="GoodsSaleMonthProduct" path="goods" file="GoodsSaleMonthProduct.jasper" acceptor="OrganizationYearDialogAcceptor" />
+  <report name="GoodsSale" path="goods" file="GoodsSale.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="ExecWorkByPartner" path="goods" file="ExecWorkByPartner.jasper" />
+  <report name="ExecWorkList" path="goods" file="ExecWorkList.jasper" />
+  <report name="WarehouseGoodsRestStart" path="goods" file="WarehouseGoodsRestStart.jasper" acceptor="OrganizationPeriodAcceptor" />
+  <report name="GoodsSaleMonthDiagram" path="goods" file="GoodsSaleMonthDiagram.jasper" acceptor="OrganizationYearDialogAcceptor" />
+  <report name="CrosstabGoodsSale" path="goods" file="CrosstabGoodsSale.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="CrosstabGoodsPurchase" path="goods" file="CrosstabGoodsPurchase.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="PriceListReport" path="goods" file="PriceList.jasper" acceptor="OrganizationAcceptor" />
+  <report name="Payment" path="bank" file="Payment.jasper" region="xUSSR" single="true" />
+  <report name="PaymentTwo" path="bank" file="PaymentTwo.jasper" country="UA" language="uk" single="true" />
+  <report name="PaymentDetails" path="bank" file="PaymentDetails.jasper" country="UA" language="uk" single="true" />
+  <report name="PaymentDetailsTwo" path="bank" file="PaymentDetailsTwo.jasper" country="UA" language="uk" single="true" />
+  <report name="JournalPaymentByBankAccount" path="bank" file="JournalPaymentByBankAccount.jasper" acceptor="OrganizationBankAccountDialogAcceptor" />
+  <report name="JournalPaymentByPartner" path="bank" file="JournalPaymentByPartner.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="PaymentIncomeByPartner" path="bank" file="PaymentIncomeByPartner.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="PaymentOutcomeByPartner" path="bank" file="PaymentOutcomeByPartner.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="TransportContractInt" path="finance" file="TransportContractInt.jasper" region="xUSSR" single="true" />
+  <report name="PartnerRestStart" path="finance" file="PartnerRestStart.jasper" acceptor="OrganizationPeriodAcceptor" />
+  <report name="CrosstabLedgerAccountRotate" path="finance" file="CrosstabLedgerAccountRotate.jasper" acceptor="OrganizationPeriodAcceptor" />
+  <report name="EmployeeListReport" path="employee" file="EmployeeList.jasper" acceptor="OrganizationAcceptor" />
+  <report name="PersonCardReport" path="employee" file="PersonCard.jasper" region="xUSSR" single="true" />
+  <report name="PersonPayReport" path="payroll" file="PersonPay.jasper" acceptor="OrganizationAcceptor" />
+  <report name="PayrollListReport" path="payroll" file="PayrollList.jasper" region="xUSSR" acceptor="OrganizationPeriodAcceptor" />
+  <report name="CrosstabPayrollTotal" path="payroll" file="CrosstabPayrollTotal.jasper" acceptor="OrganizationPeriodAcceptor" />
+  <report name="PartnerContactBook" path="partner" file="PartnerContactBook.jasper" />
+  <report name="PartnerInfo" path="partner" file="PartnerInfo.jasper" single="true" />
+  <report name="ProjectStatus" path="project" file="ProjectStatus.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="ProjectStatusByPartner" path="project" file="ProjectStatusByPartner.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="ProjectStatusByManager" path="project" file="ProjectStatusByManager.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="CrosstabProject" path="project" file="CrosstabProject.jasper" acceptor="OrganizationPeriodDialogAcceptor" />
+  <report name="SPDTaxReportByQuarter" path="finance" file="SPDTaxReportByQuarter.jasper" acceptor="TaxReportByQuarterDialogAcceptor" />
+  <report name="SPDPensionReportByYear" path="finance" file="SPDPensionReportByYear.jasper" acceptor="PensionReportByYearDialogAcceptor" />
+  <report name="SPDPensionReport26ByYear" path="finance" file="SPDPensionReport26ByYear.jasper" acceptor="PensionReport26ByYearDialogAcceptor" />
+  <report name="SPDPensionLabelByYear" path="finance" file="SPDPensionLabelByYear.jasper" acceptor="PensionLabelByYearDialogAcceptor" />
+</report-config>
+

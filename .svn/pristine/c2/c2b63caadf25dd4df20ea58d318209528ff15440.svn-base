@@ -1,0 +1,119 @@
+
+<html>
+<title>HSQL</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">HSQL</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Общая информация</h3>
+
+Web сайт: <a target="_blank" href="http://hsqldb.org">http://hsqldb.org</a>
+
+   <h3 align="center">Создание базы данных</h3>
+
+ <p>
+ Создание физического файла базы данных:
+ <br><br>База данных создаётся автоматически (если таковой нет) при запуске сервера
+ <code>
+ <pre>
+ &lt;HSQL&gt;/demo/runServer -database plazma
+ </pre>
+ </code>
+ После выполнения данной команды, в папке &lt;HSQL&gt;/data будет создана база данных plazma
+
+ <p>
+ Создание структуры базы и заполненние инициализирующими данными:
+ <br><br>
+ После запуска сервера необходимо запустить менеджер
+ <code>
+ <pre>
+ &lt;HSQL&gt;/demo/runManager
+ </pre>
+ </code>
+
+ Далее необходимо подключиться к базе данных, выбрав при этом тип соединения HSQL Database Engine Server
+
+ <br><br>Теперь необходимо загрузить (File -&gt; Open Script...) и выполнить (Execute) инициализирующий SQL скрипт.
+
+ <code>
+ <pre>
+ &lt;Plazma&gt;/db/script/createdb/hsql/ru/create_plazma_db.sql
+ </pre>
+ </code>
+
+ 
+
+ 
+ 
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC драйвер</h3>
+ 
+ <p>
+ Необходимо проверить наличие драйвера:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/hsqldb.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ Необходимо проверить правильность установки CLASSPATH для данного драйвера в файле:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # HSQL 
+ lib/hsqldb.jar 
+
+ </pre>
+ </code>
+
+ <br><br>
+
+
+   <h3 align="center">Подключение к базе данных </h3>
+
+ <p>Для настройки подключения необходимо изменить соответствующие свойства
+ в файле &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>Например:
+
+ <p>
+ <code>
+ <pre>
+ # Установка свойств подключения к базе данных
+
+ jdbc.driverClassName=org.hsqldb.jdbcDriver
+ jdbc.url=jdbc:hsqldb:hsql://localhost
+ #jdbc.url=jdbc:hsqldb:file:${user.dir}/db/hsql/plazma
+ jdbc.username=sa
+ jdbc.password=
+ </pre>
+ </code>
+ 
+
+
+
+</body>
+</html>
+
+

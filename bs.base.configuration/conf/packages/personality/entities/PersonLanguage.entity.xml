@@ -1,0 +1,13 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PersonLanguage" class="org.plazmaforge.bsolution.personality.common.beans.PersonLanguage" table="PERSON_LANGUAGE">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.personality.common.services.GenericPersonItemService</property>
+    	</config>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="personId" column="PERSON_ID" type="Integer" required="true"/>   
+        	<attribute name="easy" column="IS_NATIVE" type="Boolean"/>
+        	<reference name="language" column="LANGUAGE_ID" class="org.plazmaforge.bsolution.base.common.beans.Language"  required="true" />
+        </attributes>
+    </entity>
+

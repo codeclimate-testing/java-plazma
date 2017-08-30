@@ -1,0 +1,15 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="PeriodListForm" type="ListForm" title="@{PeriodListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{PeriodListForm.startDateColumn.text}" property="startDate" data-type="Date" width="100"/>
+						<column text="@{PeriodListForm.endDateColumn.text}" property="endDate" data-type="Date" width="100"/>
+						<column text="@{PeriodListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

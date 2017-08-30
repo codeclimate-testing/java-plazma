@@ -1,0 +1,157 @@
+############################################################################
+# PARTNER Action Definition
+############################################################################
+
+# Partner List Action
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerListAction@name = Партнёры
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerListAction@tooltip = Партнёры
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerListAction@image = olmari/ext/accounts.gif
+
+
+# Partner Bank Account List Action
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerBankAccountListAction@image=olmari/Money.gif
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerBankAccountListAction@disabledimage=olmari/Money.gif
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerBankAccountListAction@rolloverimage=olmari/Money.gif
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerBankAccountListAction@name=Setup
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerBankAccountListAction@tooltip=Банковские счета
+
+# Partner Group List Action
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerGroupListAction@name = Группы партнёров
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerGroupListAction@tooltip = Группы партнёров
+
+# Partner Category List Action
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerCategoryListAction@name = Категории партнёров
+org.plazmaforge.bsolution.partner.richclient.swing.actions.PartnerCategoryListAction@tooltip = Категории партнёров
+
+# Industry List Action
+org.plazmaforge.bsolution.partner.richclient.swing.actions.IndustryListAction@name = Отрасли
+org.plazmaforge.bsolution.partner.richclient.swing.actions.IndustryListAction@tooltip = Отрасли
+
+# ActivityType List Action
+org.plazmaforge.bsolution.partner.richclient.swing.actions.ActivityTypeListAction@name = Виды деятельности
+org.plazmaforge.bsolution.partner.richclient.swing.actions.ActivityTypeListAction@tooltip = Виды деятельности
+
+############################################################################
+# PARTNER List Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@title=Партнёры
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@table.column-code.name=Код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@table.column-name.name=Название
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@table.column-full-name.name=Полное название
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@table.column-partner-group-name.name=Группа
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@table.column-phone-string.name=Телефон
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerList@table.column-address-string.name=Адрес
+
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountList@title=Банковские счета
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountList@table.column-name.name=Название счета
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountList@table.column-bank-name.name=Банк
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountList@table.column-account-no.name=Счёт
+
+
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerGroupList@title=Группы партнёров
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerGroupList@table.column-name.name=Группы партнёров
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerCategoryList@title=Категории партнёров
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerCategoryList@table.column-name.name=Категории партнёров
+
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.IndustryList@title=Отрасли
+org.plazmaforge.bsolution.partner.richclient.swing.forms.IndustryList@table.column-code.name=Код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.IndustryList@table.column-name.name=Название
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.ActivityTypeList@title=Виды деятельности
+org.plazmaforge.bsolution.partner.richclient.swing.forms.ActivityTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.ActivityTypeList@table.column-name.name=Название
+
+############################################################################
+# PARTNER Edit Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@title=Клиент
+
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.title.other.text=Дополнительно
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-full-name.text=Полное название
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-form-property.text=Форма собственности
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-swift-code.text=ОКПО
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-tax-code.text=Налоговый код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-tax-doc-no.text=Номер св. плат. налога
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-tax.text=Плательщик налога
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-partner-group.text=Группа
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-industry.text=Отрасль
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-year-create.text=Год создания
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-work-time.text=Время работы
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@panel.label-ledger-account.text=Счёт
+
+
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-address.name=Адреса
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-address.column-address-type.name=Тип
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-address.column-address-string.name=Адрес
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-phone.name=Телефоны
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-phone.column-phone-type.name=Тип
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-phone.column-phone-string.name=Телефон
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-email.name=Email
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-email.column-email-address.name=Email
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-web.name=Web
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-web.column-url.name=URL
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-category.name=Категории
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-category.column-partner-category.name=Наименование
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-activity-type.name=Виды деятельности
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerEdit@table-activity-type.column-activity-type.name=Наименование
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerCategoryLinkEdit@title=Категория
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerCategoryLinkEdit@panel.label-partner-category.text=Наименование
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerActivityTypeLinkEdit@title=Вид деятельности
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerActivityTypeLinkEdit@panel.label-activity-type.text=Наименование
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountEdit@title=Банковский счёт
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountEdit@panel.label-bank.text=Банк
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountEdit@panel.label-name.text=Наименование счёт
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountEdit@panel.label-account-no.text=Счёт
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerBankAccountEdit@panel.label-default.text=По умолчанию
+
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerGroupEdit@title=Группы клиентов
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerGroupEdit@panel.label-name.text=Наименование
+
+
+#
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerCategoryEdit@title=Категории клиентов
+org.plazmaforge.bsolution.partner.richclient.swing.forms.PartnerCategoryEdit@panel.label-name.text=Наименование
+
+
+
+
+
+
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.IndustryEdit@title=Отрасль
+org.plazmaforge.bsolution.partner.richclient.swing.forms.IndustryEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.IndustryEdit@panel.label-name.text=Название
+
+org.plazmaforge.bsolution.partner.richclient.swing.forms.ActivityTypeEdit@title=Виды деятельности
+org.plazmaforge.bsolution.partner.richclient.swing.forms.ActivityTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.partner.richclient.swing.forms.ActivityTypeEdit@panel.label-name.text=Название

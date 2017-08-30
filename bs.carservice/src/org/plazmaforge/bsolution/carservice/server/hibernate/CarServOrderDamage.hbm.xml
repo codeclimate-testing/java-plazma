@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarServOrderDamage" table="CAR_SERV_ORDER_DAMAGE">
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+        <many-to-one name="carServOrder" column="CAR_SERV_ORDER_ID" class="CarServOrder"  not-null="true" />
+        <many-to-one name="insurer" column="INSURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        <many-to-one name="broker" column="BROKER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>                                        
+        <many-to-one name="carClass" column="CAR_CLASS_ID" class="CarClass"/>
+        
+        <property name="damageCode" column="DAMAGE_CODE" type="java.lang.String"/>
+        <property name="damageDate" column="DAMAGE_DATE" type="java.util.Date"/>
+        
+        <property name="totalInventoryId" column="TOTAL_INVENTORY_ID" type="java.lang.Integer" />        
+        
+        <property name="totalAmount" column="TOTAL_AMOUNT" type="java.lang.Double" />        
+        <property name="currencyTotalAmount" column="CURRENCY_TOTAL_AMOUNT" type="java.lang.Double" />                
+                
+        <bag name="inventoryList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_SERV_ORDER_DAMAGE_ID"/>
+            <one-to-many class="CarServOrderInventory"/>
+        </bag>
+                
+    </class>
+
+</hibernate-mapping>

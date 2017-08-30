@@ -1,0 +1,10 @@
+All.caption = <All interfaces>
+BankAndCash.caption = Bank and Cash
+Sale.caption = Sale Management
+Purchase.caption = Purchase Management
+Inventory.caption = Inventory
+Accounting.caption = Accounting  
+HR.caption = HR Management
+Payroll.caption = Payroll
+Project.caption = Project Management
+Admin.caption = Administration

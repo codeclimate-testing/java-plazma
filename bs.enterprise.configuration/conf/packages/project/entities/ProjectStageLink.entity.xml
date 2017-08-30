@@ -1,0 +1,14 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProjectStageLink" class="org.plazmaforge.bs.project.shared.entities.ProjectStageLink" table="PROJECT_STAGE_LINK">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="project" column="PROJECT_ID" class="org.plazmaforge.bs.project.shared.entities.Project"  required="true" />
+        	<reference name="projectStage" column="PROJECT_STAGE_ID" class="org.plazmaforge.bs.project.shared.entities.ProjectStage"  required="true" />
+        	<attribute name="name" column="PROJECT_STAGE_NAME" type="String" />
+        	<attribute name="startDate" column="START_DATE" type="Date" />
+        	<attribute name="endDate" column="END_DATE" type="Date" />
+        	<attribute name="actualStartDate" column="ACTUAL_START_DATE" type="Date" />
+        	<attribute name="actualEndDate" column="ACTUAL_END_DATE" type="Date" />
+        </attributes>
+    </entity>
+

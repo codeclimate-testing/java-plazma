@@ -1,0 +1,17 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderDamage" table="CAR_SERV_ORDER_DAMAGE">
+    	<attributes>
+        <key name="id" column="ID" type="Integer" generator-type="increment"/> 
+        	<reference name="carServOrder" column="CAR_SERV_ORDER_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrder"  required="true" />
+        	<reference name="insurer" column="INSURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        	<reference name="broker" column="BROKER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>                                        
+        	<reference name="carClass" column="CAR_CLASS_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarClass"/>
+        	<attribute name="damageCode" column="DAMAGE_CODE" type="String"/>
+        	<attribute name="damageDate" column="DAMAGE_DATE" type="Date"/>
+        	<attribute name="totalInventoryId" column="TOTAL_INVENTORY_ID" type="Integer" />        
+        	<attribute name="totalAmount" column="TOTAL_AMOUNT" type="Double" />        
+        	<attribute name="currencyTotalAmount" column="CURRENCY_TOTAL_AMOUNT" type="Double" />                
+        	<collection name="inventoryList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderInventory" join-attribute="damage" cascade="all"/>
+        </attributes>
+    </entity>
+</entity-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package-config provider="Plazma Forge" version="1.0">
+  <package name="Base" class="org.plazmaforge.bsolution.base.BasePackage" />
+  <package name="Security" />
+  <package name="Contact" class="org.plazmaforge.bsolution.contact.ContactPackage" />
+  <package name="Personality" class="org.plazmaforge.bsolution.personality.PersonalityPackage" />
+  <package name="Organization" class="org.plazmaforge.bsolution.organization.OrganizationPackage" />
+  <package name="Document" class="org.plazmaforge.bsolution.document.DocumentPackage" />
+  <package name="Employee" class="org.plazmaforge.bsolution.employee.EmployeePackage" />
+  <package name="Partner" class="org.plazmaforge.bsolution.partner.PartnerPackage" />
+  <package name="Bank" class="org.plazmaforge.bsolution.bank.BankPackage" />
+  <package name="Cash" class="org.plazmaforge.bsolution.cash.CashPackage" />
+  <package name="Product" class="org.plazmaforge.bsolution.product.ProductPackage" />
+  <package name="Payroll" class="org.plazmaforge.bsolution.payroll.PayrollPackage" />
+  <package name="Goods" class="org.plazmaforge.bsolution.goods.GoodsPackage" />
+  <package name="Inventory" />
+  <package name="Sale" />
+  <package name="Purchase" />
+  <package name="Project" class="org.plazmaforge.bsolution.project.ProjectPackage"/>
+  <package name="Finance" class="org.plazmaforge.bsolution.finance.FinancePackage" />
+  <package name="Pim" class="org.plazmaforge.bsolution.pim.PIMPackage" />
+</package-config>
+

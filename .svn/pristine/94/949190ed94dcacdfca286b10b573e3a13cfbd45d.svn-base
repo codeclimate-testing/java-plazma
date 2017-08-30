@@ -1,0 +1,33 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContactableElement" class="org.plazmaforge.bsolution.contact.common.beans.ContactableElement" table="CONTACTABLE">
+    	<attributes>
+	        <key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="entityId" column="ENTITY_ID" type="String" />
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+        	<attribute name="addressId" column="ADDRESS_ID" type="Integer" />
+        	<attribute name="phoneId" column="PHONE_ID" type="Integer" />
+        	<attribute name="emailId" column="EMAIL_ID" type="Integer" />
+        	<attribute name="webId" column="WEB_ID" type="Integer" />
+			<collection name="addressList" join-class="org.plazmaforge.bsolution.contact.common.beans.Address" join-attribute="contactableElement" cascade="all"/>
+			<collection name="phoneList" join-class="org.plazmaforge.bsolution.contact.common.beans.Phone" join-attribute="contactableElement" cascade="all"/>
+			<collection name="emailList" join-class="org.plazmaforge.bsolution.contact.common.beans.Email" join-attribute="contactableElement" cascade="all"/>
+			<collection name="webList" join-class="org.plazmaforge.bsolution.contact.common.beans.Web" join-attribute="contactableElement" cascade="all"/>
+    	</attributes>
+    	<triggers>
+    		<trigger type="BeforeSave">
+    			<script>SET addressId = null, emailId = null, phoneId = null, webId = null</script>
+    		</trigger>
+    		<trigger type="BeforeInsert">
+    			<script>SET id = :ownerId</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>UPDATE CONTACTABLE SET ADDRESS_ID = :defaultAddressId, EMAIL_ID = :defaultEmailId, PHONE_ID = :defaultPhoneId, WEB_ID = :defaultWebId WHERE ID = :id</script>
+    		</trigger>
+     		<trigger type="AfterLoad">
+    			<script>SET address = findById(:addressList| :addressId), email = findById(:emailList| :emailId), phone = findById(:phoneList| :phoneId), web = findById(:webList| :webId)</script>
+    		</trigger>
+    	</triggers>
+    </entity>
+    
+

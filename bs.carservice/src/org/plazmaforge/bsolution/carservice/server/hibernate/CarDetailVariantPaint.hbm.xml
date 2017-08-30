@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarDetailVariantPaint" table="CAR_DETAIL_VARIANT_PAINT">
+    
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+        <many-to-one name="carDetailVariant" column="CAR_DETAIL_VARIANT_ID" class="CarDetailVariant"  not-null="true" />
+        <many-to-one name="carPaint" column="CAR_PAINT_ID" class="CarPaint"  not-null="true" />
+        <many-to-one name="carPaintDetailType" column="CAR_PAINT_DETAIL_TYPE_ID" class="CarPaintDetailType"  not-null="true" />
+                
+    </class>
+
+</hibernate-mapping>

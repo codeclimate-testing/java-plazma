@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+
+
+        <!-- 
+         Property configurer. Example location attribute: 
+          1. jdbc.properties - classpath location
+          2. C:\Plazma\conf\jdbc.properties - absolute location
+          3. conf/jdbc.properties - relative location (standalone applicaton)
+          4. ../server/default/conf/jdbc.properties - relative location (JBoss)
+          5. ../bsolution.configuration/conf/jdbc-demo.properties - relative location (bsolution.configuration)
+
+         Relative location set dependent user.dir
+         -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location"><value>../bs.base.configuration/conf/jdbc.properties</value></property>
+	</bean>
+
+
+	<!-- Spring DataSource Non Pooling -->
+	<!--
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"><value>${jdbc.driverClassName}</value></property>
+		<property name="url"><value>${jdbc.url}</value></property>
+		<property name="username"><value>${jdbc.username}</value></property>
+		<property name="password"><value>${jdbc.password}</value></property>
+	</bean>
+	-->
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"><value>${jdbc.driverClassName}</value></property>
+		<property name="url"><value>${jdbc.url}</value></property>
+		<property name="username"><value>${jdbc.username}</value></property>
+		<property name="password"><value>${jdbc.password}</value></property>
+	</bean>
+
+
+</beans>

@@ -1,0 +1,211 @@
+
+<html>
+<title>Report Designer</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+</head>
+
+<body>
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Report Designer</h2>
+   <hr>
+   <br><br><br><br>
+
+   <h3  align="center">Report Storage</h3>
+   All reports of the system are available in the folder: <b>&lt;Plazma&gt;/reports</b>.
+   The folder has subfolders. For example: bank, employee, finance, goods and etc.
+   
+   If you use multiple locales (USA/English, Germany/German and etc.) in the system and 
+   same report has different design (different template) for each locale
+    possible options for the use of special folders for each locale in the format <b>&lt;COUNTRY&gt;/&lt;language&gt;</b>.
+    
+   <br><br>For example:<br>
+   <br>US/en - USA/English
+   <br>DE/de - Germany/German
+
+   <br><br>When using multiple templates of the same report to different locales in the mode configuration report 
+    must specify the path to the file directories <b>without locale</b>.
+
+   <br><br>For example:<br>
+   <br><code>&lt;Plazma&gt;/reports/goods/Invoice.jasper</code>
+   <br><br>
+   But physically for each locale files as follows:<br>   
+   <br><code>&lt;Plazma&gt;/reports/goods/US/en/Invoice.jasper</code> - USA/English
+   <br><code>&lt;Plazma&gt;/reports/goods/DE/de/Invoice.jasper</code> - Germany/German
+   
+   
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">iReport</h3>
+   To create report templates can be used report designer iReport.<br>
+   You can download it from url <a href="http://sourceforge.net/projects/ireport">http://sourceforge.net/projects/ireport</a>. 
+   Detailed information on work with IReport look at the product website.
+   <br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-mini.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br>
+   
+   Consider the important points, designer preferences.
+
+   <br><br><br><br> 
+   <h3  align="center">Settings</h3>
+   
+   To set options you have to choose menu item: Options -&gt; Settings... 
+   Then you have to select panel <b>Compiler</b> and set mode <b>Use Reports Directory to Compile</b>
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-settings-compiler-mark.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br> 
+   <h3  align="center">Classpath</h3>
+   
+   If you use additional JAR files (JDBC drivers, additional libraries, etc.), 
+   you have to set the Classpath. 
+   To set Classpath you have to choose menu item: Options -&gt; Classpath.
+   
+   
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-classpath.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   
+   To add a new JAR file, click <b>Add</b> and select the appropriate JAR file in the system. 
+   Then click <b>Save Classpath</b> to preserve variable Classpath.
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">Connections/Data Sources</h3>
+   
+   To create a new data source choose the menu item: Data -&gt; Connections/Data Sources and press <b>New</b>
+   
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-connections.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>   
+   Then you have to select <b>Database JDBC connection</b> and press <b>Next</b>
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-select-datasource-type.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>   
+   In the next dialog box, you need to specify properties JDBC connections and click <b>Save</b><br>
+  
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-connections-edit.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>  
+   
+   <b> IMPORTANT! </b> For normal JDBC connections need to add the appropriate JDBC driver (JAR file or files) to Classpath. 
+    If all the settings are made correctly, then when you press the button <b> Test</b>, you should see a box:
+   <br><br><br><br>  
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-connection-successful.png"/></td>
+    </tr>
+   </table>
+   
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">Report Import Directives</h3>
+   
+   If you use own Java classes in reports, you need to import the relevant packages, classes using menu: Edit -&gt; Report Import Directives. 
+   <br><br><b>IMPORTANT!</b> This menu is only available if a report is opened.
+    
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-imports.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   
+   To add imports you have to click <b>New Import</b> and enter package or class.
+   
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/ireport-imports-plazma-edit.png"/></td>
+    </tr>
+   </table>
+   
+   
+   <br><br><br><br> 
+   <h3  align="center">Custom Attributes</h3>
+   You can use custom attributes in the Plazma ERP+CRM.
+   You can add the attributes in edit forms: references, documents, projects, task, etc (section <b>Attributes</b>).
+   
+   <br>To do this, you need to perform the following steps:
+   <ul>
+    <li>Add file <b>&lt;Plazma&gt;/lib/plazma-framework-&lt;version&gt;-.jar to the Classpath</b><br><br>
+    <li>Add import <b>org.plazmaforge.framework.report.data.*</b> to the report.
+   </ul>
+   <br>Formats expressions for custom attributes are:<br><br>
+   <ul>
+   <code>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Entity&gt;, &lt;Attribute&gt;, &lt;Identifier&gt;)<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Entity&gt;, &lt;Attribute&gt;)<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Entity&gt;, &lt;Identifier&gt;)<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, &lt;Attribute&gt;)<br>
+   </code>
+   </ul>
+   
+   
+   <br>For example:<br><br>
+   <ul>
+   <code>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT", "attribute1", $F{ID})<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT", "attribute1")<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT.attribute1", $F{ID})<br><br>
+    <li>DataService.getValue($P{REPORT_PARAMETERS_MAP}, "CONTRACT.attribute1")<br>
+   </code>
+   </ul>
+  
+</TD>
+</TR>
+
+</TABLE>
+
+</body>
+</html>
+
+

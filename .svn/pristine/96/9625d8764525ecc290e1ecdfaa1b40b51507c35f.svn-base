@@ -1,0 +1,64 @@
+
+<html>
+<title>Reports</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Reports</h2>
+   <hr>
+   <br><br><br><br>
+
+   <h3  align="center">Menu <i>Reports</i></h3>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/reports-menu.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3  align="center">You can run reports from the Report list form by press button <i>Print</i></b> <img border=0 src="images/buttons/print.gif"</img></h3>
+ 
+
+   <br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/print-in-form.png"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   
+     <br><br><br><br>
+   
+   <h3  align="center">Report examples</h3>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/reports/report-example.png"/></td>
+    </tr>
+   </table>
+   
+
+</TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>
+
+

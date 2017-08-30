@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TaskPriority" class="org.plazmaforge.bsolution.project.common.beans.TaskPriority" table="TASK_PRIORITY">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="orderNumber" column="ORDER_NUMBER" type="Integer" />
+        	<attribute name="system" column="IS_SYSTEM" type="Boolean" />
+        </attributes>
+     </entity>
+

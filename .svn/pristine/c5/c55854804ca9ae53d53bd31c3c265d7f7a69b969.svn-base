@@ -1,0 +1,28 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="JournalPayment" class="org.plazmaforge.bsolution.bank.common.beans.JournalPayment" table="V_PAYMENT_ROTATE" readonly="true">
+		<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>    
+    	<aliases>
+    		<alias name="organizationId" attribute="organization.id"/>
+    	    <alias name="documentTypeName" attribute="documentType.entity.name"/>
+    	    <alias name="bankAccountNo" attribute="partnerBankAccountNo"/>
+    	    <alias name="responsibleName" attribute="responsible.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="documentNo" column="DOCUMENT_NO" type="String" />
+        	<attribute name="documentDate" column="DOCUMENT_DATE" type="Date" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer"  required="true" />        
+        	<reference name="documentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType" required="true" />
+        	<attribute name="debitAmount" column="DEBIT_AMOUNT" type="Double"/>
+        	<attribute name="creditAmount" column="CREDIT_AMOUNT" type="Double"/>        
+        	<attribute name="partnerName" column="PARTNER_NAME" type="String" />        
+        	<attribute name="partnerBankAccountNo" column="PARTNER_BANK_ACCOUNT_NO" type="String" />        
+        	<attribute name="organizationBankAccountNo" column="ORGANIZATION_BANK_ACCOUNT_NO" type="String" />                
+        	<attribute name="paymentMissing" column="PAYMENT_MISSING" type="String" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+        </attributes>                        
+    </entity>
+

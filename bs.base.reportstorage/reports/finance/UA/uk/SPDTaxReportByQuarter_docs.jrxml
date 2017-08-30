@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="SPDTaxReportByQuarter_docs"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="595"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="DOCUMENT_NO" class="java.lang.String"/>
+	<field name="DOCUMENT_TYPE" class="java.lang.String"/>
+	<field name="DOCUMENT_DATE" class="java.util.Date"/>
+	<field name="DOCUMENT_LINE" class="java.lang.String"/>
+
+	<variable name="DOCUMENT_LINE" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[("PAYMENT_OUTCOME".equals($F{DOCUMENT_TYPE}) ? "Платіжне доручення № " : ( "CASH_OUTCOME".equals($F{DOCUMENT_TYPE}) ? "Квитанція № " : "")) + ($F{DOCUMENT_NO} == null ? "" : $F{DOCUMENT_NO}) + " від " + ($F{DOCUMENT_DATE} == null ? "" : (new SimpleDateFormat("dd.MM.yyyy")).format($F{DOCUMENT_DATE}))]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="17"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="440"
+						height="15"
+						key="textField-1"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DOCUMENT_LINE} != null ? $F{DOCUMENT_LINE} : $V{DOCUMENT_LINE}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="16"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="440"
+						height="15"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+				<text><![CDATA[(назва, дата та номер платіжних документів)]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>

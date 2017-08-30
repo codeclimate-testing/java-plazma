@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProjectHeader" class="org.plazmaforge.bs.project.shared.entities.ProjectHeader" table="PROJECT" readonly="true">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="projectNo" column="PROJECT_NO" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bs.contact.shared.entities.ContactTitle"/>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bs.organization.shared.entities.OrganizationTitle" required="true"/>
+        </attributes>
+     </entity>
+

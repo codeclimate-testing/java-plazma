@@ -1,0 +1,16 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PersonJob" class="org.plazmaforge.bsolution.personality.common.beans.PersonJob" table="PERSON_JOB">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.personality.common.services.GenericPersonItemService</property>
+    	</config>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="personId" column="PERSON_ID" type="Integer" required="true"/>  
+        	<attribute name="index" column="JOB_INDEX" type="Integer" />
+        	<attribute name="startDate" column="START_DATE" type="Date" />
+        	<attribute name="endDate" column="END_DATE" type="Date" />
+        	<attribute name="organization" column="ORGANIZATION" type="String" />
+        	<attribute name="position" column="JOB_POSITION" type="String" />
+        </attributes>
+    </entity>
+

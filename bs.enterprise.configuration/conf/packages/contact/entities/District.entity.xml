@@ -1,0 +1,11 @@
+<entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="District" class="org.plazmaforge.bs.contact.shared.entities.District"
+	table="DISTRICT">
+	<attributes>
+		<key name="id" column="ID" type="Integer" />
+		<attribute name="name" column="NAME" type="String" required="true" />
+		<reference name="region" column="REGION_ID"	class="org.plazmaforge.bs.contact.shared.entities.Region" required="true" />
+	</attributes>
+</entity>
+    
+

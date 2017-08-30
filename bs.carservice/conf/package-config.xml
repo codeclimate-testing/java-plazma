@@ -1,0 +1,5 @@
+<package-config>
+
+	<package id="CarService" is-enable="true" class="org.plazmaforge.bsolution.carservice.CarServicePackage"/>
+	
+</package-config>

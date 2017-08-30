@@ -1,0 +1,51 @@
+
+version = 1.0.3
+
+#
+# Language setting
+#
+# lang = en
+# lang = ru
+# lang = uk                
+
+lang = en
+
+	
+#
+# Codepage setting
+#
+# codepage = cp1251
+# codepage = koi-8r
+
+codepage = cp1251
+
+workspace.lib.dir = ../lib
+workspace.dist.dir = ../dist
+workspace.configuration.dir = ../bsolution.configuration
+workspace.database.dir = ../bsolution.database
+workspace.reportstorage.dir = ../bsolution.reportstorage
+workspace.target.dir = ../plazma.target
+
+classes.dir = ${basedir}/classes
+src.dir = ${basedir}/src
+docs.dir=${basedir}/docs
+javadocs.dir=${docs.dir}/api
+build.dir = ${basedir}/build
+build.dtds.dir = ${build.dir}/dtds
+	
+	
+lib.dir = ${workspace.lib.dir}
+dist.dir = ${workspace.dist.dir}
+conf.dir = ${workspace.configuration.dir}/conf
+target.dir = ${workspace.target.dir}
+
+	
+plazma.path = org/plazmaforge
+framework.path = ${plazma.path}/framework
+	
+module = plazma-framework
+
+framework.jar = ${module}-${version}.jar
+
+source.dir = ${target.dir}/plazma-framework-source-${version}
+

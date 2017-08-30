@@ -1,0 +1,32 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Payroll" class="org.plazmaforge.bsolution.payroll.common.beans.Payroll" table="PAYROLL">
+    	<aliases>
+    		<alias name="payrollTypeName" attribute="payrollType.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="note" column="NOTE" type="String" />
+        	<attribute name="priority" column="PRIORITY" type="Integer" />
+        	<attribute name="payrollPercent" column="PAYROLL_PERCENT" type="Float" />
+        	<attribute name="time" column="IS_TIME" type="Boolean"/>
+        	<attribute name="pension" column="IS_PENSION" type="Boolean"/>
+        	<attribute name="tax" column="IS_TAX" type="Boolean"/>
+        	<attribute name="vacation" column="IS_VACATION" type="Boolean"/>
+        	<attribute name="sick" column="IS_SICK" type="Boolean"/>
+        	<attribute name="fundSalary" column="IS_FUND_SALARY" type="Boolean"/>
+        	<attribute name="fundHelp" column="IS_FUND_HELP" type="Boolean"/>
+        	<attribute name="fundInsurance" column="IS_FUND_INSURANCE" type="Boolean"/>
+        	<attribute name="fundWork" column="IS_FUND_WORK" type="Boolean"/>
+        	<attribute name="salary13" column="IS_SALARY13" type="Boolean"/>
+        	<attribute name="salary12" column="IS_SALARY12" type="Boolean"/>
+        	<attribute name="addPay" column="IS_ADD_PAY" type="Boolean"/>
+        	<reference name="payrollAlgoritm" column="PAYROLL_ALGORITM_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollAlgoritm" />
+        	<reference name="payrollAlgoritmType" column="PAYROLL_ALGORITM_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollAlgoritmType"  required="true" />
+        	<reference name="payrollGroup" column="PAYROLL_GROUP_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollGroup" />
+        	<reference name="payrollMode" column="PAYROLL_MODE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollMode"  required="true" />
+        	<reference name="payrollType" column="PAYROLL_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollType"  required="true" />
+        </attributes>
+    </entity>
+

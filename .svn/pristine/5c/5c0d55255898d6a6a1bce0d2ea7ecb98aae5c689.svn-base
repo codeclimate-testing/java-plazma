@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <joined-subclass name="CarMtrlPurchaseRequest" table="CAR_MTRL_PURCHASE_REQUEST" extends="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+
+       	<key column="ID"/>
+       	<many-to-one name="carMtrlFindReport" column="CAR_MTRL_FIND_REPORT_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentHeader" />
+		
+        <bag name="productItems" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_MTRL_PURCHASE_REQUEST_ID"/>
+            <one-to-many class="CarMtrlPurchaseRequestItem"/>
+        </bag>
+        
+
+    </joined-subclass>
+
+</hibernate-mapping>

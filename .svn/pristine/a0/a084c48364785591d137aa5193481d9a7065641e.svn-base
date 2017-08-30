@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarInsurerContractVariant" table="CAR_INSURER_CONTRACT_VARIANT">
+        <id name="id" column="ID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle"/>
+        
+        <property name="contractCode" column="CONTRACT_CODE" type="java.lang.String" />
+        <property name="contractDate" column="CONTRACT_DATE" type="java.util.Date" />
+
+        <property name="variantCode" column="VARIANT_CODE" type="java.lang.String" />
+        <property name="variantDate" column="VARIANT_DATE" type="java.util.Date" />
+
+        <many-to-one name="insurer" column="INSURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader"/>
+        
+        
+        
+        <bag name="servPriceList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerServPrice" />
+		</bag>
+        
+        <bag name="paintTypePriceList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerPaintTypePrice" />
+		</bag>
+        
+        <bag name="paintTypeVolumeList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerPaintTypeVolume" />
+		</bag>
+    
+        <bag name="consumablesPriceList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerConsumablesPrice" />
+		</bag>
+
+        <bag name="paintBoxPriceList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerPaintBoxPrice" />
+		</bag>
+    
+        <bag name="partPriceList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerPartPrice" />
+		</bag>
+
+        <bag name="prepareHourList" inverse="true" cascade="all-delete-orphan"  lazy="true">
+			<key column="CONTRACT_VARIANT_ID"/>
+			<one-to-many class="CarInsurerPrepareHour" />
+		</bag>
+
+    </class>
+    
+</hibernate-mapping>

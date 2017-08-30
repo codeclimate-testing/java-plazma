@@ -1,0 +1,15 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PIMReminder" class="org.plazmaforge.bsolution.pim.common.beans.PIMReminder" table="PIM_REMINDER">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer">
+   	    		<generator type="sequence">
+	   				<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+    			</generator>
+	   	 	</key>
+    	    <attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<reference name="user" column="USER_ID" class="org.plazmaforge.bsolution.security.common.beans.UserHeader" />
+        	<attribute name="eventDateTime" column="EVENT_DATE_TIME" type="DateTime" />
+        </attributes>
+     </entity>
+

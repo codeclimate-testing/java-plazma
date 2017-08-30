@@ -1,0 +1,51 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FinanceDocument" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument" table="FINANCE_DOCUMENT" extends-class="org.plazmaforge.bsolution.document.common.beans.Document">
+ 		<aliases>
+    		<alias name="currencyName" attribute="currency.name"/>
+    	</aliases>  
+ 		<attributes>
+ 		
+ 			<key name="id" column="ID" type="Integer"/>
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<attribute name="amountWithTax" column="AMOUNT_WITH_TAX" type="Double" />        
+        	<attribute name="taxAmount" column="TAX_AMOUNT" type="Double" />
+        
+        	<attribute name="total" column="TOTAL" type="Double" />
+        	<attribute name="totalWithTax" column="TOTAL_WITH_TAX" type="Double" />
+        	<attribute name="taxTotal" column="TAX_TOTAL" type="Double" />        
+        
+        	<attribute name="currencyAmount" column="CURRENCY_AMOUNT" type="Double" />
+        	<attribute name="currencyAmountWithTax" column="CURRENCY_AMOUNT_WITH_TAX" type="Double" />        
+        	<attribute name="currencyTaxAmount" column="CURRENCY_TAX_AMOUNT" type="Double" />
+        
+        	<attribute name="currencyTotal" column="CURRENCY_TOTAL" type="Double" />
+        	<attribute name="currencyTotalWithTax" column="CURRENCY_TOTAL_WITH_TAX" type="Double" />        
+        	<attribute name="currencyTaxTotal" column="CURRENCY_TAX_TOTAL" type="Double" />
+        
+        	<attribute name="currencyRate" column="CURRENCY_RATE" type="Double"/>
+        	<attribute name="currencyRateDate" column="CURRENCY_RATE_DATE" type="Date"/>
+ 
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency"/>
+        
+        	<attribute name="tax" column="IS_TAX" type="Boolean"/>
+        	<attribute name="taxId" column="TAX_ID" type="Integer" />
+        	<attribute name="taxPercent" column="TAX_PERCENT" type="Float" />               
+        
+        
+	     	<collection name="entryItems" join-class="org.plazmaforge.bsolution.finance.common.beans.EntryItem" join-attribute="owner" cascade="all"/>
+        	<collection name="partnerMoves" join-class="org.plazmaforge.bsolution.finance.common.beans.PartnerMove" join-attribute="owner" cascade="all"/>
+        	<collection name="productMoves" join-class="org.plazmaforge.bsolution.finance.common.beans.ProductMove" join-attribute="owner" cascade="all"/>
+        	<collection name="warehouseMoves" join-class="org.plazmaforge.bsolution.finance.common.beans.WarehouseMove" join-attribute="owner" cascade="all"/>
+        	<collection name="contractorMoves" join-class="org.plazmaforge.bsolution.finance.common.beans.ContractorMove" join-attribute="owner" cascade="all"/>
+        	<collection name="employeeMoves" join-class="org.plazmaforge.bsolution.finance.common.beans.EmployeeMove" join-attribute="owner" cascade="all"/>
+        	
+        </attributes>
+		<triggers>
+     		<trigger name="preSave" type="BeforeSave">
+    			<script>
+    				CALL financeManager->preSave(:data);
+    			</script>
+    		</trigger>
+    	</triggers>                
+    </joined-entity>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!--  PARTNER -->
+	<bean id="PartnerServiceImpl" class="org.plazmaforge.bsolution.partner.server.services.PartnerServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+    <bean id="PartnerTypeServiceImpl" class="org.plazmaforge.bsolution.partner.server.services.PartnerTypeServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+    <bean id="PartnerRepresentativeServiceImpl" class="org.plazmaforge.bsolution.partner.server.services.PartnerRepresentativeServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+		
+	<bean id="GenericPartnerableServiceImpl" class="org.plazmaforge.bsolution.partner.server.services.GenericPartnerableServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+		
+	
+</beans>    
+    
+    

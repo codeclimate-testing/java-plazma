@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PartnerCategoryLink" class="org.plazmaforge.bsolution.partner.common.beans.PartnerCategoryLink" table="PARTNER_CATEGORY_LINK">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.Partner"  required="true" />
+        	<reference name="partnerCategory" column="PARTNER_CATEGORY_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerCategory"  required="true" />
+        </attributes>
+    </entity>
+

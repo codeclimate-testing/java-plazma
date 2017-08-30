@@ -1,0 +1,7 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="OrganizationHeader" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationHeader" table="ORGANIZATION" extends-class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader">
+        <attributes>
+       		<key name="id" column="ID" type="Integer"/>
+       	</attributes>    
+    </joined-entity>
+

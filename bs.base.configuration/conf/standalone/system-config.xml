@@ -1,0 +1,38 @@
+<system-config description="Standalone system configuration">
+    <properties>
+        <property name="javax.xml.transform.TransformerFactory" system="true">org.apache.xalan.processor.TransformerFactoryImpl</property>
+        <property name="plazma.platform.report.engine.class" system="true">org.plazmaforge.framework.report.engine.jasperreports.JasperReportsEngine</property>
+        <property name="plazma.platform.service.locator.class">org.plazmaforge.framework.ext.service.support.spring.SpringServiceLocator</property>
+        <property name="plazma.platform.config.loader.class">org.plazmaforge.bsolution.base.EnterpriseConfigLoader</property>
+        <property name="plazma.platform.period.creator.class">org.plazmaforge.bsolution.base.EnterprisePeriodCreator</property>
+        <property name="plazma.platform.permission.service.class">org.plazmaforge.bsolution.security.common.services.PermissionService</property>
+        <property name="plazma.platform.transfer.service.class">org.plazmaforge.bsolution.base.common.services.TransferService</property>        
+        <property name="plazma.platform.custom.transfer.service.class">org.plazmaforge.bsolution.base.common.services.CustomTransferService</property>
+        <property name="plazma.platform.association.creator.class">org.plazmaforge.bsolution.base.BSolutionAssociationCreator</property>        
+        <property name="plazma.platform.system.entity.service.class">org.plazmaforge.bsolution.base.common.services.SystemEntityService</property>
+
+        <!-- 
+            Report and Data storage path
+            Change for client/server
+            You can use follow prefix: 
+             ../
+             ${parent.root.dir}/
+             ${root.dir}/
+            
+        -->
+        <property name="plazma.platform.report.storage.path">../bs.base.reportstorage/reports</property>
+        <property name="plazma.platform.data.storage.path">../bs.base.db/datastorage</property>
+        <property name="plazma.platform.encrypt.password">true</property>
+    </properties>
+    <configurers>
+    	<configurer name="PackageConfigurer" type="XMLPackageConfigurer"></configurer>            
+    	<configurer name="InterfaceConfigurer" type="XMLInterfaceConfigurer"></configurer>
+    	<configurer name="ActionConfigurer" type="XMLActionConfigurer"></configurer>
+    	<configurer name="MenuBarConfigurer" type="XMLMenuBarConfigurer"></configurer>    
+    	<configurer name="ToolBarConfigurer" type="XMLToolBarConfigurer"></configurer>
+    	<configurer name="FormConfigurer" type="XMLFormConfigurer"></configurer>        
+    	<configurer name="AssociationConfigurer" type="XMLAssociationConfigurer"></configurer>
+    	<configurer name="ReportConfigurer" type="XMLReportConfigurer"></configurer>    
+    	<configurer name="AcceptorConfigurer" type="XMLAcceptorConfigurer"></configurer>
+    </configurers> 
+</system-config>

@@ -1,0 +1,202 @@
+############################################################################
+# CONTACT Action Definition
+############################################################################
+
+
+# Address Type List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.AddressTypeListAction@name=Address types
+org.plazmaforge.bsolution.contact.client.swing.actions.AddressTypeListAction@tooltip=Address types
+
+# Area List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.RegionListAction@name=Regions
+org.plazmaforge.bsolution.contact.client.swing.actions.RegionListAction@tooltip=Regions
+
+# City List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.CityListAction@name=Cities
+org.plazmaforge.bsolution.contact.client.swing.actions.CityListAction@tooltip=Cities
+
+# Locality List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.LocalityListAction@name=Localities
+org.plazmaforge.bsolution.contact.client.swing.actions.LocalityListAction@tooltip=Localities
+
+
+# Locality Type List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.LocalityTypeListAction@name=Locality types
+org.plazmaforge.bsolution.contact.client.swing.actions.LocalityTypeListAction@tooltip=Locality types
+
+
+# Phone Type List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.PhoneTypeListAction@name=Phone types
+org.plazmaforge.bsolution.contact.client.swing.actions.PhoneTypeListAction@tooltip=Phone types
+
+
+# Street Type List Action
+org.plazmaforge.bsolution.contact.client.swing.actions.StreetTypeListAction@name=Street types
+org.plazmaforge.bsolution.contact.client.swing.actions.StreetTypeListAction@tooltip=Street types
+
+
+
+
+
+
+
+
+############################################################################
+# List Form Definition
+############################################################################
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressTypeList@title=Addres types
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressTypeList@table.column-name.name=Type
+
+org.plazmaforge.bsolution.contact.client.swing.forms.RegionList@title=Regions
+org.plazmaforge.bsolution.contact.client.swing.forms.RegionList@table.column-name.name=Region
+org.plazmaforge.bsolution.contact.client.swing.forms.RegionList@table.column-country.name=Country
+
+org.plazmaforge.bsolution.contact.client.swing.forms.CityList@title=Cities
+org.plazmaforge.bsolution.contact.client.swing.forms.CityList@table.column-name.name=City
+org.plazmaforge.bsolution.contact.client.swing.forms.CityList@table.column-country.name=Country
+org.plazmaforge.bsolution.contact.client.swing.forms.CityList@table.column-region.name=Region
+
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityList@title=Localities
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityList@table.column-locality-type-full-name.name=Type
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityList@table.column-name.name=Locality
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityList@table.column-country.name=Country
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityList@table.column-region.name=Region
+
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityTypeList@title=Locality types
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityTypeList@table.column-name.name=Name
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityTypeList@table.column-full-name.name=Full Name
+
+
+
+
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneTypeList@title=Phone types
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneTypeList@table.column-name.name=Type
+
+org.plazmaforge.bsolution.contact.client.swing.forms.StreetTypeList@title=Street types
+org.plazmaforge.bsolution.contact.client.swing.forms.StreetTypeList@table.column-name.name=Name
+org.plazmaforge.bsolution.contact.client.swing.forms.StreetTypeList@table.column-full-name.name=Full Name
+
+org.plazmaforge.bsolution.contact.client.swing.forms.AppartmentTypeList@title=Appartment types
+org.plazmaforge.bsolution.contact.client.swing.forms.AppartmentTypeList@table.column-name.name=Name
+org.plazmaforge.bsolution.contact.client.swing.forms.AppartmentTypeList@table.column-full-name.name=Full Name
+
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressTypeEdit@title=Address type
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressTypeEdit@panel.label-name.text=Name
+
+
+#
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@title=Address
+
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-address-type.text=Type
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-city.text=City
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-locality.text=Locality
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-default.text=Default
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-full-address.text=Full address
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-address.text=Address
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-zip-code.text=ZIP
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-street.text=Street
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-house-num.text=House
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-case-num.text=Case
+org.plazmaforge.bsolution.contact.client.swing.forms.AddressEdit@panel.label-appart-num.text=Appart.
+#
+
+org.plazmaforge.bsolution.contact.client.swing.forms.RegionEdit@title=Region
+org.plazmaforge.bsolution.contact.client.swing.forms.RegionEdit@panel.label-country.text=Country
+org.plazmaforge.bsolution.contact.client.swing.forms.RegionEdit@panel.label-name.text=Region
+
+org.plazmaforge.bsolution.contact.client.swing.forms.CityEdit@title=City
+org.plazmaforge.bsolution.contact.client.swing.forms.CityEdit@panel.label-country.text=Country
+org.plazmaforge.bsolution.contact.client.swing.forms.CityEdit@panel.label-region.text=Region
+org.plazmaforge.bsolution.contact.client.swing.forms.CityEdit@panel.label-name.text=City
+
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityEdit@title=Locality
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityEdit@panel.label-country.text=Country
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityEdit@panel.label-region.text=Region
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityEdit@panel.label-name.text=Locality
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+org.plazmaforge.bsolution.contact.client.swing.forms.EmailEdit@title=E-Mail
+org.plazmaforge.bsolution.contact.client.swing.forms.EmailEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.contact.client.swing.forms.EmailEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.contact.client.swing.forms.EmailEdit@panel.label-default.text=Default
+org.plazmaforge.bsolution.contact.client.swing.forms.EmailEdit@panel.label-email.text=E-mail
+#
+
+
+
+
+#
+org.plazmaforge.bsolution.contact.client.swing.forms.WebEdit@title=URL
+org.plazmaforge.bsolution.contact.client.swing.forms.WebEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.contact.client.swing.forms.WebEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.contact.client.swing.forms.WebEdit@panel.label-default.text=Default
+org.plazmaforge.bsolution.contact.client.swing.forms.WebEdit@panel.label-url.text=URL
+#
+
+
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityTypeEdit@title=Locality type
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityTypeEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.contact.client.swing.forms.LocalityTypeEdit@panel.label-full-name.text=Full Name
+
+
+
+#
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@title=Phone
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.label-phone-type.text=Type
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.label-default.text=Default
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.label-phone-code.text=Code
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.label-phone-number.text=Number
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneEdit@panel.label-phone-string.text=Phone
+#
+
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneTypeEdit@title=Phone type
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.contact.client.swing.forms.PhoneTypeEdit@panel.label-name.text=Name
+
+org.plazmaforge.bsolution.contact.client.swing.forms.StreetTypeEdit@title=Street type
+org.plazmaforge.bsolution.contact.client.swing.forms.StreetTypeEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.contact.client.swing.forms.StreetTypeEdit@panel.label-full-name.text=Full Name
+
+
+org.plazmaforge.bsolution.contact.client.swing.forms.AppartmentTypeEdit@title=Appartment type
+org.plazmaforge.bsolution.contact.client.swing.forms.AppartmentTypeEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.contact.client.swing.forms.AppartmentTypeEdit@panel.label-full-name.text=Full name
+
+
+
+

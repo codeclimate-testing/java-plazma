@@ -1,0 +1,18 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TemplateEntryItem" class="org.plazmaforge.bsolution.finance.common.beans.TemplateEntryItem" table="TEMPLATE_ENTRY_ITEM">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="templateEntry" column="TEMPLATE_ENTRY_ID" class="org.plazmaforge.bsolution.finance.common.beans.TemplateEntry"  required="true" />                
+        	<attribute name="debitLedgerAccountExpression" column="DEBIT_LEDACC_EXP" type="String"/>        
+        	<attribute name="creditLedgerAccountExpression" column="CREDIT_LEDACC_EXP" type="String"/>      
+        	<reference name="debitLedgerAccount" column="DEBIT_LEDACC_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"/>
+        	<reference name="creditLedgerAccount" column="CREDIT_LEDACC_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"/>
+        	<attribute name="debitObjectExpression" column="DEBIT_OBJECT_EXP" type="String"/>                  
+        	<attribute name="creditObjectExpression" column="CREDIT_OBJECT_EXP" type="String"/>                          
+        	<attribute name="amountExpression" column="AMOUNT_EXP" type="String"/>        
+        	<attribute name="content" column="CONTENT" type="String"/>
+        	<attribute name="entryItemClass" column="ENTRY_ITEM_CLASS" type="String"/>
+        </attributes>
+    </entity>
+
+

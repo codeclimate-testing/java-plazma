@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TaskContactLink" class="org.plazmaforge.bsolution.project.common.beans.TaskContactLink" table="TASK_CONTACT_LINK">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="task" column="TASK_ID" class="org.plazmaforge.bsolution.project.common.beans.Task" required="true" />
+        	<reference name="taskRole" column="TASK_ROLE_ID" class="org.plazmaforge.bsolution.project.common.beans.TaskRole"  required="true" />       
+        	<reference name="contact" column="CONTACT_ID" class="org.plazmaforge.bsolution.contact.common.beans.Contact"  required="true" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+    	</attributes>
+    </entity>
+

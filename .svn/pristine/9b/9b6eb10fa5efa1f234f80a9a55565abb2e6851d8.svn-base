@@ -1,0 +1,49 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeResult" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeResult" table="V_EMPLOYEE_RESULT" readonly="true">
+    	<aliases>
+    		<alias name="employeeCode" attribute="employee.code"/>
+    		<alias name="employeeName" attribute="employee.person.name"/>
+    		<alias name="departmentName" attribute="employee.department.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="employeeTotalId" column="EMPLOYEE_TOTAL_ID" type="Integer"/>
+        	<attribute name="organizationId" column="ORGANIZATION_ID" type="Integer"  required="true" />
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer"/>
+        	<reference name="employee" column="EMPLOYEE_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader"  required="true" />
+        	<attribute name="workDay" column="WORK_DAY" type="Integer" />
+        	<attribute name="workHour" column="WORK_HOUR" type="Float" />
+        	<attribute name="totalDay" column="TOTAL_DAY" type="Integer" />
+        	<attribute name="totalHour" column="TOTAL_HOUR" type="Float" />
+        	<attribute name="startBalance" column="START_BALANCE" type="Double" />
+        	<attribute name="endBalance" column="END_BALANCE" type="Double" />
+        	<attribute name="incrementAmount" column="INCREMENT_AMOUNT" type="Double" />
+        	<attribute name="decrementAmount" column="DECREMENT_AMOUNT" type="Double" />
+        	<attribute name="payrollAmount" column="PAYROLL_AMOUNT" type="Double" />
+       
+<!--        
+        <attribute name="acuPension" column="ACU_PENSION" type="Double" />
+        <attribute name="acuTax" column="ACU_TAX" type="Double" />
+        <attribute name="acuLeave" column="ACU_LEAVE" type="Double" />
+        <attribute name="acuSick" column="ACU_SICK" type="Double" />
+        <attribute name="acuFundSalary" column="ACU_FUND_SALARY" type="Double" />
+        <attribute name="acuFundHelp" column="ACU_FUND_HELP" type="Double" />
+        <attribute name="acuFundInsurance" column="ACU_FUND_INSURANCE" type="Double" />
+        <attribute name="acuFundWork" column="ACU_FUND_WORK" type="Double" />
+        <attribute name="acuSalary13" column="ACU_SALARY13" type="Double" />
+        <attribute name="acuSalary12" column="ACU_SALARY12" type="Double" />
+        <attribute name="acuAddPay" column="ACU_ADD_PAY" type="Double" />
+        <attribute name="overtimeDay" column="OVERTIME_DAY" type="Integer" />
+        <attribute name="overtimeHour" column="OVERTIME_HOUR" type="Float" />
+        <attribute name="nightDay" column="NIGHT_DAY" type="Integer" />
+        <attribute name="nightHour" column="NIGHT_HOUR" type="Float" />
+        <attribute name="holidayDay" column="HOLIDAY_DAY" type="Integer" />
+        <attribute name="holidayHour" column="HOLIDAY_HOUR" type="Float" />
+        <attribute name="prevLeaveAmount" column="PREV_LEAVE_AMOUNT" type="Double" />
+        <attribute name="prevSickAmount" column="PREV_SICK_AMOUNT" type="Double" />
+ 
+-->
+		</attributes> 
+    </entity>
+    
+

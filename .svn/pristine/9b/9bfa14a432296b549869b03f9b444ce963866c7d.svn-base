@@ -1,0 +1,779 @@
+############################################################################
+# PRODUCT Action Definition
+############################################################################
+
+
+
+# Goods List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsListAction@name=Номенклатура
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsListAction@tooltip=Номенклатура
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsListAction@image=olmari/ext/offerings.gif
+
+
+# GoodsRest List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsRestListAction@name=Остатки по товару
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsRestListAction@tooltip=Остатки по товару
+
+# GoodsIncome List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsIncomeListAction@name=Приходная накладная
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsIncomeListAction@tooltip=Приходная накладная
+
+# GoodsOutcome List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsOutcomeListAction@name=Расходная накладная
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsOutcomeListAction@tooltip=Расходная накладная
+
+# GoodsMove List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsMoveListAction@name=Накладная на внутреннее перемещение
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsMoveListAction@tooltip=Накладная на внутреннее перемещение
+
+# GoodsWriteOffWaybill List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsWriteoffListAction@name=Акт на списание
+org.plazmaforge.bsolution.goods.richclient.swing.actions.GoodsWriteoffListAction@tooltip=Акт на списание
+
+
+
+# Invoice List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.InvoiceListAction@name=Счёт фактура
+org.plazmaforge.bsolution.goods.richclient.swing.actions.InvoiceListAction@tooltip=Счёт фактура
+
+
+
+# SaleOrder List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.SaleOrderListAction@name=Заказ на продажу
+org.plazmaforge.bsolution.goods.richclient.swing.actions.SaleOrderListAction@tooltip=Заказ на продажу
+
+# PurchaseOrder List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.PurchaseOrderListAction@name=Заказ на закупку
+org.plazmaforge.bsolution.goods.richclient.swing.actions.PurchaseOrderListAction@tooltip=Заказ на закупку
+
+# TaxWaybill List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.TaxWaybillListAction@name=Налоговая накладная
+org.plazmaforge.bsolution.goods.richclient.swing.actions.TaxWaybillListAction@tooltip=Налоговая накладная
+
+
+# SalePlan List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.SalePlanListAction@name=Планы продаж
+org.plazmaforge.bsolution.goods.richclient.swing.actions.SalePlanListAction@tooltip=Планы продаж
+
+# PurchasePlan List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.PurchasePlanListAction@name=Планы закупок
+org.plazmaforge.bsolution.goods.richclient.swing.actions.PurchasePlanListAction@tooltip=Планы закупок
+
+
+# ExecWork List Action
+org.plazmaforge.bsolution.goods.richclient.swing.actions.ExecWorkListAction@name=Акты выполненых работ
+org.plazmaforge.bsolution.goods.richclient.swing.actions.ExecWorkListAction@tooltip=Акты выполненых работ
+
+############################################################################
+# List Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsList@title=Номенклатура
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsList@table.column-code.name=Код
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsList@table.column-product-class-name.name=Название
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsList@table.column-goods-type-name.name=Тип
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsList@table.column-unit-name.name=Ед. изм.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsList@table.column-price.name=Цена
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestList@title=Остатки по товару
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestList@table.column-code.name=Код
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestList@table.column-storable.name=Место хранения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestList@table.column-currency-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@title=Приходная накладная
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-storable.name=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeList@table.column-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@title=Расходная накладная
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-storable.name=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeList@table.column-amount.name=Сумма
+
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@title=Накладная на внутренне перемещение
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-outcome-storable.name=Склад оправитель
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-outcome-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-income-storable.name=Склад получатель
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-income-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveList@table.column-currency-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffList@title=Акт на списание товара
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffList@table.column-storable.name=Место хранения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffList@table.column-currency-amount.name=Сумма
+
+
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceList@title=Счёт фактура
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceList@table.column-amount.name=Сумма
+
+
+
+######
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@title=Заказ на продажу
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-storable.name=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderList@table.column-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@title=Заказ на закупку
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-storable.name=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderList@table.column-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillList@title=Налоговая накладная
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillList@table.column-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@title=План продаж
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-department.name=Подразделение
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-price-type.name=Тип цен
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanList@table.column-amount.name=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@title=План закупок
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-department.name=Подразделение
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-price-type.name=Тип цен
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-responsible.name=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanList@table.column-amount.name=Сумма
+
+######
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@title=Номенклатура
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.title.additional.text=Дополнительно
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-product-class.text=Номенклатура
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-product-card-group.text=Группа
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-goods-type.text=Тип
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-currency.text=Валюта учёта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-unit.text=Базовая ед. измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-price.text=Учётная цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-taxpercent.text=%НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-add-pricepercent.text=%Торговая наценка
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-manufacturer.text=Производитель
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-supplier.text=Поставщик
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-min-quantity.text=Минимальный остаток
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-availability-quantity.text=Доступно
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-reserve-quantity.text=Зарезервиировано
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-await-quantity.text=Ожидается
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@panel.label-ledger-account.text=Счёт
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-unit.name=Единицы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-unit.column-unit-name.name=Ед. измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-unit.column-rate.name=Коэфициент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-unit.column-bar-code.name=Штрих код
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-price.name=Цены
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-price.column-price-type-name.name=Наименование
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-price.column-currency-name.name=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-price.column-unit-name.name=Ед. измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsEdit@table-product-price.column-price.name=Цена
+
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@title=Остатки по товару
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.label-storable.text=Место хранения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@panel.label-currency-amount.text=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestEdit@table-product-item.column-currency-amount.name=Сумма
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsRestItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+####
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@title=Приходная накладная
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-storable.text=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-amount.text=Сумма по позициям
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+
+##
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@title=Расходная накладная
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-storable.text=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-currency-tax-amount.name=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeEdit@table-product-item.column-currency-amount.name=Сумма
+
+
+##
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsOutcomeItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+
+
+
+
+
+
+
+
+
+
+####
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@title=Счёт фактура
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsIncomeItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.InvoiceItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+####
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@title=Накладная на внутренне перемещение
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-outcome-storable.text=Склад отправитель
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-outcome-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-income-storable.text=Склад получатель
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-income-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@panel.label-currency-amount.text=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveEdit@table-product-item.column-currency-amount.name=Сумма
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsMoveItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+
+####
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@title=Акт на списание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.label-storable.text=Место хранения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@panel.label-currency-amount.text=Сумма
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffEdit@table-product-item.column-currency-amount.name=Сумма
+
+#
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.GoodsWriteoffItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+
+
+##################
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@title=Заказ на продажу
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-storable.text=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-amount.text=Сумма по позициям
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SaleOrderItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+##################
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@title=Заказ на закупку
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-storable.text=Склад
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-amount.text=Сумма по позициям
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrder@panel.label-currency-total-with-tax.text=Всего с НДС
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchaseOrderItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+##################
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@title=Налоговая накладная
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-amount.text=Сумма по позициям
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.TaxWaybillItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+##################
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@title=План продаж
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-date.text=от
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-department.text=Подразделение
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-price-type.text=Тип цен
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-responsible.text=Ответственный
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-amount.text=Сумма по позициям
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.SalePlanItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+##################
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@title=План закупок
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-date.text=от
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-department.text=Подразделение
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-price-type.text=Тип цен
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-responsible.text=Ответственный
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-amount.text=Сумма по позициям
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-delivery.text=Транспортные расходы
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-tax-delivery.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-product-name.name=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanEdit@table-product-item.column-currency-tax-amount.name=НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@title=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-goods.text=Товар
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.PurchasePlanItemEdit@panel.label-currency-tax-amount.text=НДС
+
+
+##################
+
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkList@title=Акты выполненых работ
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkList@table.column-code.name=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkList@table.column-date.name=Дата
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkList@table.column-currency-amount.name=Сумма в валюте
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkList@table.column-amount.name=Сумма
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@title=Акт выполненых работ
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-date.text=от
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-rate.text=курс
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-rate-date.text=дата курса
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-contract.text=Договор
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-reason-documnet.text=Документ-основание
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-reason.text=Основание
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-total.text=Всего
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-tax-total.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@panel.label-currency-total-with-tax.text=Всего с НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.name=Работа/Услуга
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-product-name.name=Наименование
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-unit.name=Ед.
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-quantity.name=К-во
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-currency-price.name=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-currency-amount.name=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-currency-tax-amount.name=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkEdit@table-product-item.column-currency-amount-with-tax.name=НДС
+
+
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@title=Работа/Услуга
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-goods.text=Наименование
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-unit-rate.text=К
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-quantity.text=Количество
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-currency-price.text=Цена
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-currency-amount.text=Сумма
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-currency-tax-amount.text=НДС
+org.plazmaforge.bsolution.goods.richclient.swing.forms.ExecWorkItemEdit@panel.label-currency-amount.text=Сумма

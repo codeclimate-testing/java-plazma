@@ -1,0 +1,24 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarMtrlPurchaseRequestItem" table="CAR_MTRL_PURCHASE_REQUEST_ITEM">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/> 		
+        	<attribute name="price" column="PRICE" type="Double" />
+        	<attribute name="quantity" column="QUANTITY" type="Double" />
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<attribute name="currencyPrice" column="CURRENCY_PRICE" type="Double" />
+        	<attribute name="currencyAmount" column="CURRENCY_AMOUNT" type="Double" />
+        	<attribute name="unitRate" column="UNIT_RATE" type="Double" />
+        	<reference name="carMtrlPurchaseRequest" column="CAR_MTRL_PURCHASE_REQUEST_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarMtrlPurchaseRequest"  required="true" />
+        	<reference name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductHeader"  required="true" />
+        	<reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+        	<reference name="supplier" column="SUPPLIER_ID" class="org.plazmaforge.bsolution.partner.common.beans.Partner"  required="true" />
+        	<attribute name="deliveryDate" column="DELIVERY_DATE" type="Date" />
+        	<!--
+        	<attribute name="accountQuantity" column="ACCOUNT_QUANTITY" type="Double" />
+        	<attribute name="accountPrice" column="ACCOUNT_PRICE" type="Double" />
+        	<attribute name="accountTaxPrice" column="ACCOUNT_TAX_PRICE" type="Double" />
+        	<attribute name="accountPriceWithTax" column="ACCOUNT_PRICE_WITH_TAX" type="Double" />
+        	-->
+        </attributes>
+    </entity>
+</entity-mapping>

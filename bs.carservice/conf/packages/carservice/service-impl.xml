@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!--
+	<bean id="CarClassServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarClassServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+	<bean id="CarMarkServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarMarkServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+	<bean id="CarModelServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarModelServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+	<bean id="CarManufacturerServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarManufacturerServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	<bean id="CarServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+
+
+
+	<bean id="CarPartServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarPartServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+		<property name="attributeValueService"><ref bean="AttributeValueService"/></property>
+        <property name="fileService"><ref bean="FileService"/></property>		                
+	</bean>
+	<bean id="CarServServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarServServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+		<property name="attributeValueService"><ref bean="AttributeValueService"/></property>
+        <property name="fileService"><ref bean="FileService"/></property>		                
+	</bean>
+	<bean id="CarPaintServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarPaintServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+		<property name="attributeValueService"><ref bean="AttributeValueService"/></property>
+        <property name="fileService"><ref bean="FileService"/></property>		                
+	</bean>
+	<bean id="CarDetailServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarDetailServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+		<property name="attributeValueService"><ref bean="AttributeValueService"/></property>
+        <property name="fileService"><ref bean="FileService"/></property>		                
+	</bean>
+
+
+
+
+	<bean id="CarAgeServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarAgeServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	
+	
+	
+	
+	<bean id="CarPaintDetailTypeServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarPaintDetailTypeServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+	<bean id="CarDamageLevelServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarDamageLevelServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	<bean id="CarPrepareTypeServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarPrepareTypeServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+	<bean id="CarPaintMarkServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarPaintMarkServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	<bean id="CarInsurerContractVariantServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarInsurerContractVariantServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	
+
+
+	<bean id="CarPaintTypeServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarPaintTypeServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	<bean id="CarServComplexityServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarServComplexityServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	
+	<bean id="CarServOrderServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarServOrderServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	
+	<bean id="CarMtrlFindRequestServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarMtrlFindRequestServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	<bean id="CarMtrlFindReportServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarMtrlFindReportServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+
+
+
+
+	<bean id="CarMtrlPurchaseRequestServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarMtrlPurchaseRequestServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	<bean id="CarMtrlPurchaseReportServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarMtrlPurchaseReportServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	
+	
+	<bean id="CarServTypeServiceImpl" class="org.plazmaforge.bsolution.carservice.server.services.CarServTypeServiceImpl" lazy-init="true">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	-->
+	
+</beans>

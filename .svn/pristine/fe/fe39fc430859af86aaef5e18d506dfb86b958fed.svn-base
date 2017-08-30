@@ -1,0 +1,5 @@
+#Eclipse messages class
+#Mon Jul 09 11:19:25 EEST 2007
+XTaxCombo.null.nullTextValue = \u0411\u0435\u0437 \u041D\u0414\u0421
+XOperationTypeCombo.operation.type.debit = \u0414\u0435\u0431\u0435\u0442
+XOperationTypeCombo.operation.type.credit = \u041A\u0440\u0435\u0434\u0438\u0442

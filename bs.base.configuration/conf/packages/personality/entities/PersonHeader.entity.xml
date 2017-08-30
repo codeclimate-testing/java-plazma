@@ -1,0 +1,8 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PersonHeader" class="org.plazmaforge.bsolution.personality.common.beans.PersonHeader" table="PERSON" extends-class="org.plazmaforge.bsolution.contact.common.beans.ContactHeader">
+        <attributes>
+        	<key name="id" column="ID" type="Integer"/>
+        	<attribute name="personCode" column="CODE" type="String"/>
+        </attributes>
+    </joined-entity>
+

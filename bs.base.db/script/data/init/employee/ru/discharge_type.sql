@@ -1,0 +1,21 @@
+
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (1, NULL, 'Перевод, ст. 29 КЗОТ, п.5');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (2, NULL, 'По собственному желанию, ст. 31 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (3, NULL, 'По сокращению штатов, ст. 33 КЗОТ, п.1');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (4, NULL, 'Уход на пенсию, ст. 31 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (5, NULL, 'Учеба на дневном отделении, ст. 31 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (6, NULL, 'Уход на службу в армию, ст. 29 КЗОТ, п.3');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (7, NULL, 'Уход на инвалидность, ст. 32 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (8, NULL, 'По уходу за детьми до 14 лет, ст. 32 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (9, NULL, 'По уходу за инвалидом, ст. 32 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (10, NULL, 'Несоответствие работника занимаемой должности, ст. 33 КЗОТ, п.2');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (11, NULL, 'Систематическое неисполнение работником служебных обязанностей, ст.33 КЗОТ, п.3');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (12, NULL, 'За прогулы, ст. 33 КЗОТ, п.4');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (13, NULL, 'Появление на работе в нетрезвом состоянии, ст. 33 КЗОТ, п.7');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (14, NULL, 'Совершение по месту работы хищения, ст. 33 КЗОТ, п.8');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (15, NULL, 'По требованию профсоюзного органа, ст. 37 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (16, NULL, 'Окончание срока работ, ст. 29 КЗОТ, п.2');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (17, NULL, 'В связи со смертью');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (18, NULL, 'Неудовлетворительный результат по истечении испытательного срока, ст. 23 КЗОТ');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (19, NULL, 'Прекращение трудового договора (контракта) по соглашению сторон, ст. 29 КЗОТ, п.1');
+INSERT INTO DISCHARGE_TYPE (ID, CODE, NAME) VALUES (20, NULL, 'Для исчисляемых стажей');

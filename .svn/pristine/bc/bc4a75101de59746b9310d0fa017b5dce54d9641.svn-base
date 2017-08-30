@@ -1,0 +1,12 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TransferSource" class="org.plazmaforge.framework.core.data.TransferSource" table="SYS_TRANSFER_SOURCE">
+    	<attributes>
+        	<key name="id" column="ID" type="String" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String"  required="true"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="importerClassName" column="IMPORTER_CLASS" type="String" />
+        	<attribute name="exporterClassName" column="EXPORTER_CLASS" type="String" />
+        	<collection name="attributes" join-class="org.plazmaforge.framework.core.data.TransferSourceAttribute" join-attribute="source" cascade="all"/>
+        </attributes>
+    </entity>
+

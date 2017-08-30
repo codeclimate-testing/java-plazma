@@ -1,0 +1,97 @@
+
+version = 1.0.2
+
+##################################################################################
+#
+# Modules
+# 
+##################################################################################
+plazma.build.module = plazma.build
+
+lib.module = lib
+dist.module = dist
+
+framework.module = framework
+
+framework.erm.module = framework.erm
+framework.client.module = framework.client
+framework.client.swing.module = framework.client.swing
+framework.client.swt.module = framework.client.swt
+
+
+bsolution.configuration.module = bs.base.configuration
+bsolution.db.module = bs.base.db
+bsolution.update.module = bs.base.update
+bsolution.docs.module = bs.base.docs
+bsolution.reportstorage.module = bs.base.reportstorage
+
+bsolution.module = bs.base
+bsolution.client.swing.module = bs.base.client.swing
+bsolution.client.swt.module = bs.base.client.swt
+
+bsolution.training.module = bs.training
+
+plazma.build.module = plazma.build
+
+##################################################################################
+#
+# Input folders
+# 
+##################################################################################
+plazma.build.dir = ../${plazma.build.module}
+
+lib.dir = ../${lib.module}
+dist.dir = ../${dist.module}
+
+framework.dir = ../${framework.module}
+framework.erm.dir = ../${framework.erm.module}
+framework.client.dir = ../${framework.client.module}
+framework.client.swing.dir = ../${framework.client.swing.module}
+framework.client.swt.dir = ../${framework.client.swt.module}
+
+bsolution.configuration.dir = ../${bsolution.configuration.module}
+bsolution.db.dir = ../${bsolution.db.module}
+bsolution.update.dir = ../${bsolution.update.module}
+bsolution.docs.dir = ../${bsolution.docs.module}
+bsolution.reportstorage.dir = ../${bsolution.reportstorage.module}
+
+bsolution.dir = ../${bsolution.module}
+bsolution.client.swing.dir = ../${bsolution.client.swing.module}
+bsolution.client.swt.dir = ../${bsolution.client.swt.module}
+
+bsolution.training.dir = ../${bsolution.training.module}
+
+
+##################################################################################
+#
+# Output folders
+# 
+##################################################################################
+
+plazma.target.dir = ../plazma.target
+
+plazma.source.dir = ${plazma.target.dir}/plazma-projects-${version}
+
+
+plazma.build.target.dir = ${plazma.source.dir}/${plazma.build.module}
+
+lib.target.dir = ${plazma.source.dir}/${lib.module}
+dist.target.dir = ${plazma.source.dir}/${dist.module}
+
+framework.target.dir = ${plazma.source.dir}/${framework.module}
+framework.erm.target.dir = ${plazma.source.dir}/${framework.erm.module}
+framework.client.target.dir = ${plazma.source.dir}/${framework.client.module}
+framework.client.swing.target.dir = ${plazma.source.dir}/${framework.client.swing.module}
+framework.client.swt.target.dir = ${plazma.source.dir}/${framework.client.swt.module}
+
+bsolution.configuration.target.dir = ${plazma.source.dir}/${bsolution.configuration.module}
+bsolution.db.target.dir = ${plazma.source.dir}/${bsolution.db.module}
+bsolution.update.target.dir = ${plazma.source.dir}/${bsolution.update.module}
+bsolution.docs.target.dir = ${plazma.source.dir}/${bsolution.docs.module}
+bsolution.reportstorage.target.dir = ${plazma.source.dir}/${bsolution.reportstorage.module}
+
+bsolution.target.dir = ${plazma.source.dir}/${bsolution.module}
+bsolution.client.swing.target.dir = ${plazma.source.dir}/${bsolution.client.swing.module}
+bsolution.client.swt.target.dir = ${plazma.source.dir}/${bsolution.client.swt.module}
+
+bsolution.training.target.dir = ${plazma.source.dir}/${bsolution.training.module}

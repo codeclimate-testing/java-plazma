@@ -1,0 +1,50 @@
+<html>
+<title>bs.base</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">bs.base</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Content</h3>
+
+
+   <table border="0" cellpadding="5">
+
+     <tr>
+       <td>+</td><td>classes</td><td></td><td>...</td><td>Java class files</td>  
+     </tr>
+
+     <tr>
+       <td>-</td><td>docs</td><td></td><td></td><td>Documentation</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>dtds</td><td>DTD files</td>  
+     </tr>
+
+     <tr>
+       <td>+</td><td>fonts</td><td></td><td></td><td>Fonts to export to PDF (Unicode)</td>  
+     </tr>
+
+     <tr>
+       <td>+</td><td>logs</td><td></td><td></td><td>Log files</td>  
+     </tr>
+
+     <tr>
+       <td>+</td><td>src</td><td></td><td>...</td><td>Source code</td>  
+     </tr>
+  
+    </table>
+</body>
+</html>

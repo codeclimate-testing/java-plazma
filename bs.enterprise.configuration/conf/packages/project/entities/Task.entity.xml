@@ -1,0 +1,78 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Task" class="org.plazmaforge.bs.project.shared.entities.Task" table="TASK">
+		<aliases>
+			<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="organizationName" attribute="organization.name"/>
+    		<alias name="partnerName" attribute="partner.name"/>
+    		<alias name="reporterName" attribute="reporter.name"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="taskStatusName" attribute="taskStatus.name"/>
+    		<alias name="taskTypeName" attribute="taskType.name"/>
+    		<alias name="taskResultName" attribute="taskResult.name"/>
+    		<alias name="taskPriorityName" attribute="taskPriority.name"/>
+    		<alias name="projectId" attribute="project.id"/>    		    		
+    	</aliases>      	    
+        <attributes>
+       		<key name="id" column="ID" type="Integer">
+	   	    	<generator type="sequence">
+   					<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+    			</generator>
+   	 		</key>
+        	<attribute name="taskNo" column="TASK_NO" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bs.organization.shared.entities.OrganizationTitle" required="true"/>
+        	<reference name="project" column="PROJECT_ID" class="org.plazmaforge.bs.project.shared.entities.ProjectHeader" />
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bs.partner.shared.entities.PartnerTitle" />
+        	<reference name="document" column="DOCUMENT_ID" class="org.plazmaforge.bs.document.shared.entities.DocumentHeader" />    
+        	<reference name="reporter" column="REPORTER_ID" class="org.plazmaforge.bs.contact.shared.entities.ContactTitle" />    
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bs.contact.shared.entities.ContactTitle" />
+        	<reference name="taskPriority" column="TASK_PRIORITY_ID" class="org.plazmaforge.bs.project.shared.entities.TaskPriority" />                
+        	<reference name="taskStatus" column="TASK_STATUS_ID" class="org.plazmaforge.bs.project.shared.entities.TaskStatus" />
+        	<reference name="taskType" column="TASK_TYPE_ID" class="org.plazmaforge.bs.project.shared.entities.TaskType" />                         
+        	<reference name="taskResult" column="TASK_RESULT_ID" class="org.plazmaforge.bs.project.shared.entities.TaskResult" />
+        	<attribute name="startDateTime" column="START_DATE_TIME" type="DateTime" />
+        	<attribute name="endDateTime" column="END_DATE_TIME" type="DateTime" />
+        	<attribute name="actualEndDateTime" column="ACTUAL_END_DATE_TIME" type="DateTime" />        
+        	<attribute name="reminderDateTime" column="REMINDER_DATE_TIME" type="DateTime" />        
+        	<attribute name="percentComplete" column="PERCENT_COMPLETE" type="Double" />        
+        	<attribute name="apointment" column="IS_APOINTMENT" type="Boolean"/>
+        	<attribute name="resultDetails" column="RESULT_DETAILS" type="String" />
+        	<attribute name="workDays" column="WORK_DAYS" type="Integer" />
+        	<attribute name="workHours" column="WORK_HOURS" type="Integer" />
+        	<attribute name="workMinutes" column="WORK_MINUTES" type="Integer" />
+        	<attribute name="actualDays" column="ACTUAL_DAYS" type="Integer" />
+        	<attribute name="actualHours" column="ACTUAL_HOURS" type="Integer" />
+        	<attribute name="actualMinutes" column="ACTUAL_MINUTES" type="Integer" />
+        	<attribute name="workCost" column="WORK_COST" type="Double" />
+        	
+        	<!--
+        	<collection name="taskWorkerLinks" join-class="org.plazmaforge.bs.project.shared.entities.TaskWorkerLink" join-attribute="task" cascade="all"/>
+        	<collection name="taskContactLinks" join-class="org.plazmaforge.bs.project.shared.entities.TaskContactLink" join-attribute="task" cascade="all"/>
+        	-->
+        	
+        </attributes>
+        <!-- 
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    	</triggers>
+    	 -->        
+     </entity>
+

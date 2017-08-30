@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="b05350e1" name="PARTNER">
+      <drawing is-expanded="true" location="357,167" dimensions="237,501" />
+      <columns>
+        <column id="aad96288" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="571f07b6" name="CONTACT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="2b9b63f2" name="LEDGER_ACCOUNT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="d754d47b" name="FORM_PROPERTY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="285153fd" name="RESPONSIBLE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f6eb1062" name="PARTNER_GROUP_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f008e993" name="BANK_ACCOUNT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="6fd3e8c" name="INDUSTRY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="33c9d1d1" name="PARTNER_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="add24f2" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="431d14fa" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="3489dd25" name="NAME_EN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="6e8321de" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="5f794930" name="IDN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="12" />
+        </column>
+        <column id="29ac879e" name="YEAR_CREATE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="1f5ba5b" name="WORK_TIME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="64bbabeb" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="451700db" name="IS_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="36731c30" name="NEC" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="172c6b9" name="TAX_DOC_NO" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="e0dc8251" name="DESCRIMINATOR" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="2bcad576" name="PARENT_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f22e59dc" name="IMAGE_FILE_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="6ec0530" name="IS_PERSON" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="6b32674c" name="FORM_PROPERTY">
+      <drawing is-expanded="true" location="519,768" dimensions="178,89" />
+      <columns>
+        <column id="9a72e008" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="4ad8b846" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="92e2c286" name="FULL_NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+      </columns>
+    </table>
+    <table id="4699ff26" name="PARTNER_ACTIVITY_TYPE_LINK">
+      <drawing is-expanded="true" location="200,-20" dimensions="223,87" />
+      <columns>
+        <column id="30851694" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="baf7f139" name="ACTIVITY_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="fd34cb83" name="PARTNER_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+    <table id="1b899657" name="PARTNER_TYPE">
+      <drawing is-expanded="true" location="797,778" dimensions="152,69" />
+      <columns>
+        <column id="c018ce8" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="f6f0b59f" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+      </columns>
+    </table>
+    <table id="66fd9089" name="PARTNER_CATEGORY_LINK">
+      <drawing is-expanded="true" location="540,-20" dimensions="233,87" />
+      <columns>
+        <column id="318843fe" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="5eba8a65" name="PARTNER_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b97831ef" name="PARTNER_CATEGORY_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+    <table id="73211812" name="PARTNER_GROUP">
+      <drawing is-expanded="true" location="270,778" dimensions="149,69" />
+      <columns>
+        <column id="aff19b1b" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="bc19a026" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+      </columns>
+    </table>
+    <table id="f8c6d771" name="INDUSTRY">
+      <drawing is-expanded="true" location="20,768" dimensions="149,89" />
+      <columns>
+        <column id="5e0d22d2" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="f321550c" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="74f6e89d" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="a016957b" name="FK_PARTNER_PRT_INDS_INDUSTRY">
+      <details pk-table-id="f8c6d771" fk-table-id="b05350e1">
+        <pk-columns>
+          <key-column id="5e0d22d2" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="6fd3e8c" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="80,620" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="a6d9575b" name="FK_PARTNER_PRT_PRTG_PARTNER_">
+      <details pk-table-id="73211812" fk-table-id="b05350e1">
+        <pk-columns>
+          <key-column id="aff19b1b" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="f6eb1062" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="380,720" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="15efa93a" name="FK_PARTNER_PRT_FP_FORM_PRO">
+      <details pk-table-id="6b32674c" fk-table-id="b05350e1">
+        <pk-columns>
+          <key-column id="9a72e008" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="d754d47b" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="560,720" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="cc1ff1dc" name="FK_PARTNER_PARTNER_TYPE">
+      <details pk-table-id="1b899657" fk-table-id="b05350e1">
+        <pk-columns>
+          <key-column id="c018ce8" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="33c9d1d1" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="c5ef84e5" name="FK_PARTNER__PRT_ATL_P_PARTNER">
+      <details pk-table-id="b05350e1" fk-table-id="4699ff26">
+        <pk-columns>
+          <key-column id="aad96288" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="fd34cb83" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="400,120" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="107db005" name="FK_PARTNER__PCL_PRT_PARTNER">
+      <details pk-table-id="b05350e1" fk-table-id="66fd9089">
+        <pk-columns>
+          <key-column id="aad96288" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="5eba8a65" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="560,120" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

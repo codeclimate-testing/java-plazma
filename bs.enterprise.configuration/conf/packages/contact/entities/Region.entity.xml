@@ -1,0 +1,16 @@
+
+
+<entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	name="Region" class="org.plazmaforge.bs.contact.shared.entities.Region"
+	table="REGION">
+	<aliases>
+		<alias name="countryName" attribute="country.name" />
+	</aliases>
+	<attributes>
+		<key name="id" column="ID" type="Integer" generator-type="increment" />
+		<attribute name="name" column="NAME" type="String" required="true" />
+		<reference name="country" column="COUNTRY_ID" class="org.plazmaforge.bs.base.shared.entities.Country" required="true" />
+	</attributes>
+</entity>
+    
+

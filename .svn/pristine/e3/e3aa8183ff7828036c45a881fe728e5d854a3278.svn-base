@@ -1,0 +1,179 @@
+############################################################################
+# EMPLOYEE Action Definition
+############################################################################
+
+# Position List Action
+org.plazmaforge.bsolution.employee.client.swing.actions.PositionListAction@name = Positions
+org.plazmaforge.bsolution.employee.client.swing.actions.PositionListAction@tooltip = Positions
+
+
+# EmployeeList Action
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeListAction@name = Employees
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeListAction@tooltip = Employees
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeListAction@image = olmari/ext/contacts.gif
+
+# Employee Category List Action
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeCategoryListAction@name = Employee categories
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeCategoryListAction@tooltip = Employee categories
+
+# Employee Rank List Action
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeRankListAction@name = Ranks
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeRankListAction@tooltip = Ranks
+
+# Employee Reception List Action
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeReceptionListAction@name = Employee receptions
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeReceptionListAction@tooltip = Employee receptions
+
+# Employee Discharge List Action
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeDischargeListAction@name = Employee discharges
+org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeDischargeListAction@tooltip = Employee discharges
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.PositionList@title=Positions
+org.plazmaforge.bsolution.employee.client.swing.forms.PositionList@table.column-name.name=Position
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@title=Employees
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@table.column-code.name=Code
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@table.column-last-name.name=Last Name
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@table.column-first-name.name=First Name
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@table.column-middle-name.name=Middle Name
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@table.column-department.name=Department
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeList@table.column-position.name=Position
+
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeCategoryList@title=Employee categories
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeCategoryList@table.column-name.name=Employee category
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeRankList@title=Ranks
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeRankList@table.column-name.name=Rank
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeRankList@table.column-tariff.name=Tariff
+
+
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionList@title=Employee receptions
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionList@table.column-code.name=Document number
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionList@table.column-date.name=Date
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionList@table.column-person-name.name=Person
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeList@title=Employee discharges
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeList@table.column-code.name=Document number
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeList@table.column-date.name=Date
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeList@table.column-employee-name.name=Employee
+
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.PositionEdit@title=Position
+org.plazmaforge.bsolution.employee.client.swing.forms.PositionEdit@panel.label-name.text=Position
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@title=Employee
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.title.account.text=Account
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.title.additional.text=Additional
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.title.seniority.text=Seniority
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-person.text=Person
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-department.text=Department
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-position.text=Position
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-employee-category.text=Category
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-start-date.text=Start date 
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-end-date.text=End date
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-tax.text=Is tax
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-payroll-form.text=Payroll type
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-employee-rank.text=Rank
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-salary.text=Salary
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-tariff.text=Tariff
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-advance.text=Advance
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-premium-percent.text=Premium %
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-sick-percent.text=Sick %
+
+##
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-stock.text=Stock
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-employee-account.text=Account #
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-total-seniority.text=Total seniority
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-unbroken-seniority.text=Unbroken seniority
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-seniority-year.text=years
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-seniority-month.text=monthes
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@panel.label-seniority-day.text=days
+##
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@table-phone.name=Phones
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@table-phone.column-phone-type.name=Type
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@table-phone.column-phone-string.name=Phone
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@table-email.name=Emails
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeEdit@table-email.column-email-address.name=Email
+#
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeCategoryEdit@title=Employee categories
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeCategoryEdit@panel.label-name.text=Name
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeRankEdit@title=Rank
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeRankEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeRankEdit@panel.label-tariff.text=Tariff
+
+
+
+
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@title=Employee reception
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.title.account.text=Account
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-person.text=Person
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-code.text=Document #
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-date.text=Date
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-employee-code.text=Code
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-department.text=Department
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-reception-date.text=Reception date
+
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-employee-category.text=Category
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-employee-rank.text=Rank
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-payroll-form.text=Payroll type
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-salary.text=Salary
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-tariff.text=Tariff
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-premium-percent.text=Premium %
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeReceptionEdit@panel.label-sick-percent.text=Sick %
+
+
+
+
+#
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@title=Employee discharge
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.title.account.text=Account
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-employee.text=Employee
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-code.text=Document #
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-date.text=Date
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-discharge-date.text=Discharge date
+
+
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-discharge-type.text=Discharge type
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-compensation-day.text=Compensation amount
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-output-day.text=Output amount
+org.plazmaforge.bsolution.employee.client.swing.forms.EmployeeDischargeEdit@panel.label-pension-amount.text=Pension amount

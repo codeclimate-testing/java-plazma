@@ -1,0 +1,15 @@
+CalculateProductRestAction.confirm = Do you want to calculate inventory rest ?
+CalculateProductRestAction.result = Inventory rest was calculated
+
+Name = Name
+Quantity = Quantity
+Amount = Amount
+
+Available=Available
+Reserve=Reserve
+Await=Await
+
+Start = Start
+Income = Income
+Outcome = Outcome 
+End = End

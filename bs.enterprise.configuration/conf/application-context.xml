@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+    <!-- 
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory"><ref bean="sessionFactory"/></property>
+	</bean>
+	-->
+  
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~ BUSUNESS IMPLEMETS DEFINITIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<!-- 
+	<bean id="MyBean" class="org.plazmaforge.bsolution.base.MyBean">
+		<property name="name"><value>Test information for you</value></property>
+	</bean>
+	
+	<bean id="FinanceCompressionExecutor" class="org.plazmaforge.bsolution.finance.server.services.FinanceCompressionExecutorImpl"/>
+	<bean id="PartnerCompressionExecutor" class="org.plazmaforge.bsolution.partner.server.services.PartnerCompressionExecutorImpl"/>
+	<bean id="BankCompressionExecutor" class="org.plazmaforge.bsolution.bank.server.services.BankCompressionExecutorImpl"/>
+	<bean id="CashCompressionExecutor" class="org.plazmaforge.bsolution.cash.server.services.CashCompressionExecutorImpl"/>
+	<bean id="ProductCompressionExecutor" class="org.plazmaforge.bsolution.product.server.services.ProductCompressionExecutorImpl"/>
+	<bean id="GoodsCompressionExecutor" class="org.plazmaforge.bsolution.goods.server.services.GoodsCompressionExecutorImpl"/>
+	 -->
+	
+
+    <!-- DISABLED -->
+    <!--	
+	<bean id="autoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+
+	        <property name="interceptorNames">
+        	    <list>
+                	<value>securityInterceptor</value>
+	            </list>
+        	</property>
+
+
+	        <property name="beanNames">
+        	    <list>
+                	<value>MyBean</value>
+                	<value>TaskService</value>
+                	<value>SystemInfoService</value>
+	            </list>
+	        </property>
+	        <property name="proxyTargetClass"><value>true</value></property>
+	        
+    </bean>	
+    -->
+
+</beans>

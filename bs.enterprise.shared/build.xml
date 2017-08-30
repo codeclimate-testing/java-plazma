@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-enterprise-shared" default="create-jar">
+
+	<property file="build.properties"/>
+
+	<target name="create-jar" description="Create BSEnterprise Shared jar file">
+		<mkdir dir="${dist.dir}"/>
+		<jar destfile="${dist.dir}/${module.jar}" basedir="${classes.dir}" includes="**">
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0" />
+				<attribute name="Plazma-Version" value="${version}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="create-jar-all" description="Create BSEnterprise Shared jar files" depends="create-jar"/>
+
+</project>
+
+

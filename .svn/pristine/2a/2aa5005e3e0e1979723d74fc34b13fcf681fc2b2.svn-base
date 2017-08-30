@@ -1,0 +1,22 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ProjectListForm" type="ListForm" title="@{ProjectListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{ProjectListForm.projectNoColumn.text}" property="projectNo" data-type="String" width="100"/>
+						<column text="@{ProjectListForm.nameColumn.text}" property="name" data-type="String" width="300"/>
+						<column text="@{ProjectListForm.partnerColumn.text}" property="partnerName" data-type="String" width="200"/>
+						<column text="@{ProjectListForm.projectStatusColumn.text}" property="projectStatusName" data-type="String" width="100"/>
+						<column text="@{ProjectListForm.startDateColumn.text}" property="startDate" data-type="String" width="100"/>
+						<column text="@{ProjectListForm.endDateColumn.text}" property="endDate" data-type="String" width="100"/>
+						<column text="@{ProjectListForm.currencyTotalWithTaxColumn.text}" property="currencyTotalWithTax" data-type="Float" width="120" align="right"/>
+						<column text="@{ProjectListForm.currencyColumn.text}" property="currencyName" data-type="String" width="70"/>
+						<column text="@{ProjectListForm.totalWithTaxColumn.text}" property="totalWithTax" data-type="Float" width="120" align="right"/>
+						<column text="@{ProjectListForm.responsibleColumn.text}" property="responsibleName" data-type="String" width="200"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

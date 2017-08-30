@@ -1,0 +1,173 @@
+operation.type.debit=Debit
+operation.type.credit=Credit
+
+#############################################################################
+# FINANCE Action Definition
+############################################################################
+
+# Contractor List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.ContractorListAction@name=Contractors
+org.plazmaforge.bsolution.finance.client.swing.actions.ContractorListAction@tooltip=Contractors
+
+# Contract List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.ContractListAction@name=Contracts
+org.plazmaforge.bsolution.finance.client.swing.actions.ContractListAction@tooltip=Contracts
+org.plazmaforge.bsolution.finance.client.swing.actions.ContractListAction@image=olmari/ext/contracts.gif
+
+# PartnerRest List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.PartnerRestListAction@name=Partner balances
+org.plazmaforge.bsolution.finance.client.swing.actions.PartnerRestListAction@tooltip=Partner balances
+
+# LedgerAccountType List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountTypeListAction@name=Ledger account type
+org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountTypeListAction@tooltip=Ledger account type
+
+# LedgerAccount List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountListAction@name=Ledger account
+org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountListAction@tooltip=Ledger account
+
+# FinanceDocumentType List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.FinanceDocumentTypeListAction@name=Finance document types
+org.plazmaforge.bsolution.finance.client.swing.actions.FinanceDocumentTypeListAction@tooltip=Finance document types
+
+# TemplateEntry List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.TemplateEntryListAction@name=Template entries
+org.plazmaforge.bsolution.finance.client.swing.actions.TemplateEntryListAction@tooltip=Template entries
+
+# Entry Calculate Action
+org.plazmaforge.bsolution.finance.client.swing.actions.EntryCalculateAction@name=Calculate entries
+org.plazmaforge.bsolution.finance.client.swing.actions.EntryCalculateAction@tooltip=Calculate entries
+
+# LedgerAccount Rest List Action
+org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountRestListAction@name=Ledger account balances
+org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountRestListAction@tooltip=Ledger account balances
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractorList@title=Contractors
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractorList@table.column-name.name=Name
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractorList@table.column-entity-name.name=Type
+
+
+# Contract List
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@title=Contracts
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@table.column-code.name=Number
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@table.column-date.name=Date
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@table.column-amount.name=Amount
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractList@table.column-user-name.name=Author
+
+# Partner Rest List
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestList@title=Partner balance
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestList@table.column-client.name=Partner
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestList@table.column-debit-amount.name=Debit
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestList@table.column-credit-amount.name=Credit
+
+# LedgerAccountType List
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountTypeList@title=Ledger account type
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountTypeList@table.column-name.name=Name
+
+# LedgerAccount List
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountList@title=Ledger account
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountList@table.column-account.name=Account
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountList@table.column-sub-account.name=Sub account
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountList@table.column-name.name=Name
+
+# FinanceDocumentType List
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeList@title=Finance document type
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeList@table.column-name.name=Name
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeList@table.column-move-type.name=Move type
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeList@table.column-include-tax-in-amount.name=Is include tax
+
+# TemplateEntry List
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryList@title=Template entry
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryList@table.column-code.name=Code
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryList@table.column-document-type.name=Document type
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryList@table.column-name.name=Name
+
+# LedgerAccount Rest List
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestList@title=Ledger account balances
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestList@table.column-ledger-account.name=Account
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestList@table.column-debit-amount.name=Debit
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestList@table.column-credit-amount.name=Credit
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+# Contract Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@title=Contract
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-currency-rate.text=Rate
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-currency-rate-date.text=Date rate
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-tax-percent.text=% Tax
+org.plazmaforge.bsolution.finance.client.swing.forms.ContractEdit@panel.label-currency-tax-amount.text=Tax
+
+# PartnerRest Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestEdit@title=Partner balance
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestEdit@panel.label-client.text=Partner
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestEdit@panel.label-operation-type.text=Operation
+org.plazmaforge.bsolution.finance.client.swing.forms.PartnerRestEdit@panel.label-amount.text=Amount
+
+
+# LedgerAccountType Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountTypeEdit@title=Ledger account type
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountTypeEdit@panel.label-name.text=Name
+
+# LedgerAccount Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountEdit@title=Ledger account
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountEdit@panel.label-ledger-account-type.text=Type
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountEdit@panel.label-parent.text=Owner account
+
+# FinanceDocumentType Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeEdit@title=Finance document type
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeEdit@panel.label-document-type.text=Document type
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeEdit@panel.label-move-type.text=Move type
+org.plazmaforge.bsolution.finance.client.swing.forms.FinanceDocumentTypeEdit@panel.label-include-tax-in-amount.text=Is include tax in amount
+
+# TemplateEntry Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@title=Template entry
+
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@panel.title.common.text=Common
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@panel.label-document-type.text=Document type
+
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@table-entry-item.name=Entry items
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@table-entry-item.column-debit-account-exp.name=Dbt Acc
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@table-entry-item.column-debit-object-exp.name=Dbt Object
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@table-entry-item.column-credit-account-exp.name=Cdt Acc
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@table-entry-item.column-credit-object-exp.name=Cdt Object
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryEdit@table-entry-item.column-amount-exp.name=Amount
+
+# TemplateEntryItem Edit 
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryItemEdit@title=Entry items
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryItemEdit@panel.label-debit-account-exp.text=Dbt Acc
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryItemEdit@panel.label-debit-object-exp.text=Dbt Object
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryItemEdit@panel.label-credit-account-exp.text=Cdt Acc
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryItemEdit@panel.label-credit-object-exp.text=Cdt Object
+org.plazmaforge.bsolution.finance.client.swing.forms.TemplateEntryItemEdit@panel.label-amount-exp.text=Amount
+
+# LedgerAccountRest Edit
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestEdit@title=Ledger account balance
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestEdit@panel.label-ledger-account.text=Account
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestEdit@panel.label-operation-type.text=Operation
+org.plazmaforge.bsolution.finance.client.swing.forms.LedgerAccountRestEdit@panel.label-amount.text=Amount

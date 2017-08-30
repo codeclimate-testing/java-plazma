@@ -1,0 +1,71 @@
+
+<html>
+<title>Форма для редактирования</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+ <meta>
+   <link href="../../style.css" type=text/css rel=styleSheet>
+ </meta>
+
+</head>
+
+<body>
+
+<TABLE width="100%">
+<TR>
+
+
+<TD>
+
+   <h2 align="center">Форма для редактирования</h2>
+   <hr><br><br>
+  
+
+
+
+<!--
+   <p>   
+   Данная форма используется для редактирования информации. Форма может быть как простой
+   так и с подчинёнными табличными компонентами. 
+   <p><br>   
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/edit-form.jpg" align="middle"/></td>
+    </tr>
+   </table>
+
+   <p>   
+   Для редактирования подчинённых элементов также используется данный тип форм.
+   <p><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/edit-form-item.jpg" align="middle"/></td>
+    </tr>
+   </table>
+   
+-->
+
+
+
+   <p>
+   <h3 align="center">Общий вид</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/edit-form.png" align="middle"/></td>
+    </tr>
+   </table>
+   
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FormProperty" class="org.plazmaforge.bs.partner.shared.entities.FormProperty" table="FORM_PROPERTY">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="fullName" column="FULL_NAME" type="String" />
+        </attributes>
+    </entity>
+

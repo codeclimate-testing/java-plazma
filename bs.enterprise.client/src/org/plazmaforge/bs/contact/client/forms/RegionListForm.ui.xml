@@ -1,0 +1,14 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="RegionListForm" type="ListForm" title="@{RegionListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{RegionListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+						<column text="@{RegionListForm.countryColumn.text}" property="countryName" data-type="String" width="200"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

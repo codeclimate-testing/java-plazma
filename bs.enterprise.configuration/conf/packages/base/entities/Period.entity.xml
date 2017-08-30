@@ -1,0 +1,12 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Period" class="org.plazmaforge.bs.base.shared.entities.Period" table="PERIOD">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="startDate" column="START_DATE" type="Date"  required="true" />
+        	<attribute name="endDate" column="END_DATE" type="Date"  required="true" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="prevPeriodId" column="PREV_PERIOD_ID" type="Integer" />
+        	<reference name="periodType" column="PERIOD_TYPE_ID" class="org.plazmaforge.bs.base.shared.entities.PeriodType"  required="true" />
+        </attributes>
+    </entity>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report-acceptor-config>
+
+ 
+    <acceptor id="OrganizationAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationAcceptor"/>
+    
+    <acceptor id="OrganizationPeriodDialogAcceptor" class="net.sf.plazma.bsolution.base.client.gui.acceptor.OrganizationPeriodDialogAcceptor"/>
+    
+    <acceptor id="OrganizationYearDialogAcceptor" class="net.sf.plazma.bsolution.base.client.gui.acceptor.OrganizationYearDialogAcceptor"/>    
+    
+    <acceptor id="OrganizationPeriodAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationPeriodAcceptor"/>
+
+    
+</report-acceptor-config>

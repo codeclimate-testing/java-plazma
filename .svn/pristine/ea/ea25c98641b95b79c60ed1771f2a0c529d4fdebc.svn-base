@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="VacationAverangeType" class="org.plazmaforge.bsolution.payroll.common.beans.VacationAverangeType" table="VACATION_AVERANGE_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="month" column="VACATION_MONTH" type="Integer" />
+        </attributes>
+    </entity>
+

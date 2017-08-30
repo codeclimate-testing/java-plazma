@@ -1,0 +1,71 @@
+
+<html>
+<title>Eclipse IDE</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Настройка окружения</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Добавление переменных</h3>
+
+После создания/импорта проектов Вам необходимо добавить переменныe <b>PLAZMA_LIB</b> и <b>PLAZMA_SWT</b> (для клиентских SWT приложений) в Eclipse.<br>
+<b>PLAZMA_LIB</b> - директория где размещены общие для всех проектов <b>.jar</b> файлы (модуль <b>lib</b>). Например: &lt;Plazma&gt;/lib <br> 
+<b>PLAZMA_SWT</b> - директория где размещается <b>swt.jar</b> файл. Например:  &lt;Plazma&gt;/lib/swt/win32 (Windows) или &lt;Plazma&gt;/lib/swt/linux-gtk (Linux)
+
+<p><b>ВАЖНО!</b> Если не установлена переменная <b>PLAZMA_LIB</b> 
+ или в директории, куда указывает данная переменная,
+ физически отсутствуют необходимые <b>.jar</b> файлы и 
+ не произведено подключение необходимых <b>.jar</b> файлов другим способом
+  (например, посредством установки переменной <b>CLASSPATH</b>), 
+  то проекты могут не компилироватся (ошибка <b>ClassNotFound</b>).
+
+<p>Для создания переменных выберите пункт системного меню <b>Window -> Preferences...</b>
+
+<p> Далее в окне <b>Preferences</b> выберите раздел <b>Java -> Build Path -> Classpath Variables</b>
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/classpath-variables.png"/></td>
+ </tr>
+</table>
+
+<p>Добавте новую переменную нажав на кнопку <b>New...</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/new-plazma-lib-variable.png"/></td>
+ </tr>
+</table>
+<p>Значение <b>Path</b> указывает на необходимую директорию
+
+<p>Завершите процес создания переменной кнопкой <b>OK</b>
+
+<p>Созданая переменная будет отображена в списке.
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-classpath-variables.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

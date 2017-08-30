@@ -1,0 +1,14 @@
+
+version = 1.0.3
+framework.version = 1.0.3
+
+lib.dir = ../lib
+dist.dir = ../dist
+
+workspace.target.dir = ../plazma.target
+
+target.dir = ${workspace.target.dir}
+
+install.bs.enterprise.web = plazma-bs-enterprise-web
+install.bs.enterprise.web.dir = ${target.dir}/${install.bs.enterprise.web}-${version}
+

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Currency" class="org.plazmaforge.bsolution.base.common.beans.Currency" table="CURRENCY">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String"/>
+        	<attribute name="numericCode" column="NUMERIC_CODE" type="String"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="fullName" column="FULL_NAME" type="String"/>
+        </attributes>
+    </entity>
+

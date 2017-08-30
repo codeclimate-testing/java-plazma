@@ -1,0 +1,19 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeHeader" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader" table="EMPLOYEE" readonly="true">
+        <aliases>
+        	<alias name="organizationId" attribute="organization.id"/>
+            <alias name="firstName" attribute="person.firstName"/>
+            <alias name="middleName" attribute="person.middleName"/>
+            <alias name="lastName" attribute="person.lastName"/>
+            <alias name="departmentName" attribute="department.name"/>
+        </aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="person" column="PERSON_ID" class="org.plazmaforge.bsolution.personality.common.beans.PersonHeader"  required="true" />
+        	<reference name="department" column="DEPARTMENT_ID" class="org.plazmaforge.bsolution.organization.common.beans.Department" />
+        	<reference name="position" column="POSITION_ID" class="org.plazmaforge.bsolution.employee.common.beans.JobPosition" />
+        </attributes>
+    </entity>
+

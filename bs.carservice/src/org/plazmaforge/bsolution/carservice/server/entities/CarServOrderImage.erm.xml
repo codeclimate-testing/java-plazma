@@ -1,0 +1,11 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderImage" table="CAR_SERV_ORDER_IMAGE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>         
+        	<reference name="carServOrder" column="CAR_SERV_ORDER_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrder"  required="true" />
+        	<attribute name="imageName" column="NAME" type="String" />
+        	<attribute name="imageSize" column="IMAGE_SIZE" type="Integer" />
+        	<attribute name="recordType" column="RECORD_TYPE" type="String" />
+        </attributes>
+    </entity>
+</entity-mapping>

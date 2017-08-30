@@ -1,0 +1,38 @@
+# New Document Action
+org.plazmaforge.bsolution.document.richclient.swing.actions.NewDocumentAction@name=Новый...
+org.plazmaforge.bsolution.document.richclient.swing.actions.NewDocumentAction@tooltip=Новый документ
+
+# Choose Document Action
+org.plazmaforge.bsolution.document.richclient.swing.actions.ChooseDocumentAction@name=Перейти...
+org.plazmaforge.bsolution.document.richclient.swing.actions.ChooseDocumentAction@tooltip=Перейти к документу
+
+# Documnet List Action
+org.plazmaforge.bsolution.document.richclient.swing.actions.DocumentListAction@name=Журнал документов
+org.plazmaforge.bsolution.document.richclient.swing.actions.DocumentListAction@tooltip=Журнал документов
+org.plazmaforge.bsolution.document.richclient.swing.actions.DocumentListAction@image=olmari/ext/documents.gif
+
+
+# DocumentType List Action
+org.plazmaforge.bsolution.document.richclient.swing.actions.DocumentTypeListAction@name=Типы документов
+org.plazmaforge.bsolution.document.richclient.swing.actions.DocumentTypeListAction@tooltip=Типы документов
+
+
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentList@title=Журнал документов
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentList@table.column-code.name=Номер
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentList@table.column-date.name=Дата
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentList@table.column-document-type-name.name=Документ
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentList@table.column-reason.name=Основание
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentList@table.column-user-name.name=Автор
+
+
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeList@title=Типы документов
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeList@table.column-document-section.name=Секция
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeList@table.column-document-category.name=Категория
+
+
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeEdit@title=Тип документа
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeEdit@panel.label-entity.text=Сущность
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeEdit@panel.label-document-section.text=Секция
+org.plazmaforge.bsolution.document.richclient.swing.forms.DocumentTypeEdit@panel.label-document-category.text=Категория

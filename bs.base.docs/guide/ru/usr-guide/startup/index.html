@@ -1,0 +1,120 @@
+
+<html>
+<title>Начало работы</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Начало работы</h2>
+   <hr><br><br>
+
+
+
+
+
+
+
+Для запуска <b>Standalone</b> или <b>Client</b> приложения  необходимо произвести следующие действия:<br><br><br>
+   <b>Windows</b><br><br>
+   Меню    Пуск -&gt; Программы -&gt; Plazma ERP+CRM &lt;версия&gt; -&gt; Plazma ERP+CRM<br><br><br>
+
+   или находясь в корневой папке программы запустить на выполнение файл<br><br>
+
+   <code>plazma.bat</code><br><br><br>
+
+   или выполнить команду<br><br>
+   <code>javaw -Djava.library.path="lib\swt\win32" -jar launcher.jar plazma</code><br><br><br>
+
+
+
+   <b>Linux</b><br><br>
+   находясь в корневой папке программы запустить на выполнение файл<br><br>
+
+   <code>plazma.sh</code><br><br><br>
+   или выполнить команду<br><br>
+   <code>java -Djava.library.path="lib/swt/linux-gtk" -jar launcher.jar plazma</code><br><br><br>
+
+   <!--
+<b>ВАЖНО!</b> Если выбран вариант инсталляции с использованием сервера приложений (EJB Server или Lite Server), 
+ то вначале необходимо запустить сервер, а потом клиент.
+  -->
+
+   <b>Демо режим</b><br><br>
+   Для запуска программы в демо режиме необходимо указать флаг <code>-demo</code> в строчке запуска, например:<br><br>
+   <code>java -Djava.library.path="lib\swt\win32" -jar launcher.jar plazma -demo</code>
+   <br><br>
+   или установить в файле <code>plazma.properties</code> свойство <code>plazma.platform.demo</code>, например:<br><br>
+   <code>plazma.platform.demo = true</code><br><br>
+   При запуске программы в демо режиме будет произведено подключение к демострационной базе данных. 
+   Приоритет флага <code>-demo</code> выше чем свойства <code>plazma.platform.demo</code>. Включить/выключить режим автоматической установки логина и пароля по умолчанию, можно путём редактирования
+
+   свойства <code>plazma.platform.autologin</code>, например:<br><br>
+
+   <code>plazma.platform.autologin = true</code>
+
+   <br><br>
+
+   После выполнения запуска на экране будет отображено стартовое окно системы.<br><br><br>
+
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/logo-start.png"/></td>
+    </tr>
+   </table>
+   <br><br><br><br>
+
+
+   <center>После загрузки необходимых данных на экране будет отображено окно для ввода
+   логина и пароля.</center><br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/login.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br>
+
+
+   <center>Далее отображается диалоговое окно для выбора организации и интерфейса пользователя.</center><br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/input-dialog.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br>
+
+   <center>После успешного входа в систему, отображается главное окно программы.</center>
+
+   <br><br>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/system-menu.png"/></td>
+    </tr>
+   </table>
+
+   
+</TD>
+</TR>
+
+</TABLE>
+
+
+</body>
+</html>
+
+

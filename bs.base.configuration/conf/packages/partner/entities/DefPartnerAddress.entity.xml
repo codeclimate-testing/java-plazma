@@ -1,0 +1,7 @@
+
+    <subclass-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefPartnerAddress" class="org.plazmaforge.bsolution.partner.common.beans.DefPartnerAddress" extends-class="org.plazmaforge.bsolution.contact.common.beans.DefAddress" discriminator-value="PARTNER">
+        <attributes>
+           <reference name="partner" class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader" column="CONTACTABLE_ID"/>
+        </attributes>   
+    </subclass-entity>
+

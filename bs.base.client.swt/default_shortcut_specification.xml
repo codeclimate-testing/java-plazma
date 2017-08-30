@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shortcuts>
+
+ <skipIfNotSupported/>
+
+ <programGroup defaultName="Plazma ERP+CRM {version}" location="applications"/>
+
+ <shortcut
+  name="Plazma ERP+CRM {version}"
+  target="$JAVA_HOME\bin\javaw"
+  commandLine=" -Djava.library.path=lib\swt\win32 -jar launcher.jar plazma"
+  workingDirectory="$INSTALL_PATH"
+  description="Plazma Application"
+  iconFile="$INSTALL_PATH\plazma.ico"
+  iconIndex="0"
+  initialState="normal"
+  programGroup="yes"
+  desktop="yes"
+  applications="no"
+  startMenu="no"
+  startup="no">
+  <createForPack name="Base"/>
+ </shortcut>
+
+<shortcut
+  name="Documentation"
+  target="$INSTALL_PATH\docs\guide\$ISO3_LANG\usr-guide\index.html"
+  workingDirectory="$INSTALL_PATH\docs\guide\$ISO3_LANG\usr-guide"
+  description="Documentation"
+  initialState="normal"
+  programGroup="yes"
+  desktop="yes"
+  applications="no"
+  startMenu="no"
+  startup="no">
+  <createForPack name="Docs"/>
+ </shortcut>
+ 
+<shortcut
+  name="Config Manager"
+  target="$JAVA_HOME\bin\javaw"
+  commandLine=" -Djava.library.path=lib\swt\win32 -jar launcher.jar config"
+  workingDirectory="$INSTALL_PATH"
+  description="Config Manager"
+  initialState="normal"
+  programGroup="yes"
+  desktop="yes"
+  applications="no"
+  startMenu="no"
+  startup="no">
+  <createForPack name="Base"/>
+ </shortcut>
+ 
+ <shortcut
+  name="Uninstall"
+  target="$JAVA_HOME\bin\javaw"
+  commandLine=" -jar Uninstaller\uninstaller.jar"
+  workingDirectory="$INSTALL_PATH"
+  initialState="normal"
+  programGroup="yes"
+  desktop="no"
+  applications="no"
+  startMenu="no"
+  startup="no">
+  <createForPack name="Base"/>
+ </shortcut>
+
+</shortcuts>

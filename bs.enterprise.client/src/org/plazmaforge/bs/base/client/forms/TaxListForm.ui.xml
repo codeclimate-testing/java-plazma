@@ -1,0 +1,16 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="TaxListForm" type="ListForm" title="@{TaxListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{TaxListForm.codeColumn.text}" property="code" data-type="String" width="200"/>
+						<column text="@{TaxListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+						<column text="@{TaxListForm.taxPercentColumn.text}" property="taxPercent" data-type="Float" align="right" format="#0.00"/>
+						<column text="@{TaxListForm.amountColumn.text}" property="amount" data-type="Float" align="right"  format="#0.00"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

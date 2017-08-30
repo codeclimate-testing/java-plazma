@@ -1,0 +1,12 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DocumentHeader" class="org.plazmaforge.bsolution.document.common.beans.DocumentHeader" table="DOCUMENT" readonly="true">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="documentNo" column="DOCUMENT_NO" type="String" />
+        	<attribute name="documentDate" column="DOCUMENT_DATE" type="Date" />
+        	<reference name="documentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType"  required="true" />
+        	<reference name="documentStatus" column="DOCUMENT_STATUS_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentStatus"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />
+        </attributes>        
+    </entity>
+

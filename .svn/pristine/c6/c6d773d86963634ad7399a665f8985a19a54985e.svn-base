@@ -1,0 +1,158 @@
+<html>
+<title>Система безопасности</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Система безопасности</h2>
+   <hr>
+   <br><br>
+
+
+<p>В качестве системы безопасности используется <b>Spring Security</b>. 
+Права доступа устанавливаются на методы сервисов. Настройка <b>Spring Security</b> производится в файле <b>application-context-security.xml</b>.<br><br>
+
+
+<p><b>Конфигурирование системы безопасности для сервиса</b>.<br>
+
+<pre>
+&lt;bean id="<b>UserService</b>" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"&gt;
+	&lt;property name="transactionManager"&gt;&lt;ref local="transactionManager"/&gt;&lt;/property&gt;
+	&lt;property name="target"&gt;&lt;ref bean="UserServiceImpl"/&gt;&lt;/property&gt;
+	&lt;property name="transactionAttributes"&gt;
+		&lt;props&gt;
+			&lt;prop key="*"&gt;PROPAGATION_REQUIRED&lt;/prop&gt;
+		&lt;/props&gt;
+	&lt;/property&gt;
+	<b>&lt;property name="preInterceptors"&gt;
+		&lt;list&gt;
+			&lt;ref local="securityInterceptor"/&gt;
+		&lt;/list&gt;
+	&lt;/property&gt;</b>
+&lt;/bean&gt;
+</pre><br><br>
+
+
+<p><b>Стандартные настройки</b>.<br>
+
+<pre>
+&lt;!-- =================== SECURITY SYSTEM DEFINITIONS ================== --&gt;
+	
+&lt;bean id="<b>runAsManager</b>" class="org.springframework.security.access.intercept.RunAsManagerImpl"&gt;
+	&lt;property name="key"&gt;&lt;value&gt;my_run_as_password&lt;/value&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;!-- =================== AUTHENTICATION DEFINITIONS ================== --&gt;
+
+&lt;bean id="<b>runAsAuthenticationProvider</b>" class="org.springframework.security.access.intercept.RunAsImplAuthenticationProvider"&gt;
+	&lt;property name="key"&gt;&lt;value&gt;my_run_as_password&lt;/value&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</pre><br><br>
+
+
+<p><b>Провайдер доступа JdbcDaoImpl</b><br>
+
+<pre>
+
+&lt;bean id="<b>jdbcDaoImpl</b>" class="org.plazmaforge.framework.platform.security.PlatformJdbcDaoImpl"&gt;
+ 	&lt;property name="dataSource"&gt;&lt;ref bean="dataSource"/&gt;&lt;/property&gt;
+	&lt;property name="rolePrefix"&gt;&lt;value&gt;<b>ROLE_</b>&lt;/value&gt;&lt;/property&gt;
+	&lt;property name="usersByUsernameQuery"&gt;
+		&lt;value&gt;
+			<b>SELECT USER_NAME, USER_PASSWORD, 'true' AS ENABLED FROM SYS_USER WHERE UPPER(USER_NAME) = UPPER(?)</b>
+		&lt;/value&gt;
+	&lt;/property&gt;       
+	&lt;property name="authoritiesByUsernameQuery"&gt;
+		&lt;value&gt;
+			<b>SELECT U.USER_NAME, R.NAME FROM SYS_USER_ROLE UR,  SYS_USER U, SYS_ROLE R WHERE UR.USER_ID = U.ID AND UR.ROLE_ID = R.ID AND UPPER(U.USER_NAME) = UPPER(?)</b>
+		&lt;/value&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+</pre><br><br>
+
+<p><b>Настройка подключения провайдеров</b><br>
+
+<pre>
+&lt;bean id="<b>daoAuthenticationProvider</b>" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"&gt;
+	 &lt;property name="userDetailsService"&gt;&lt;ref bean="<b>jdbcDaoImpl</b>"/&gt;&lt;/property&gt;
+	 &lt;property name="userCache"&gt;&lt;ref bean="<b>userCache</b>"/&gt;&lt;/property&gt;
+&lt;/bean&gt;
+	
+	
+&lt;bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"&gt;
+	&lt;property name="configLocation"&gt;
+		&lt;value&gt;classpath:/ehcache-failsafe.xml&lt;/value&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean"&gt;
+	&lt;property name="cacheManager"&gt;
+		&lt;ref local="cacheManager"/&gt;
+	&lt;/property&gt;
+	&lt;property name="cacheName"&gt;
+		&lt;value&gt;userCache&lt;/value&gt;
+	&lt;/property>
+&lt;/bean>
+
+&lt;bean id="<b>userCache</b>" class="org.springframework.security.core.userdetails.cache.EhCacheBasedUserCache"&gt;
+	&lt;property name="cache"&gt;&lt;ref local="userCacheBackend"/&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="<b>loggerListener</b>" class="org.springframework.security.authentication.event.LoggerListener"/&gt;
+
+&lt;bean id="<b>authenticationManager</b>" class="org.springframework.security.authentication.ProviderManager"&gt;
+	&lt;property name="providers"&gt;
+		 &lt;list&gt;
+			&lt;ref bean="<b>runAsAuthenticationProvider</b>"/&gt;
+			&lt;ref bean="<b>daoAuthenticationProvider</b>"/&gt;
+		&lt;/list&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+</pre><br><br>
+
+
+<p><b>Настройка авторизации</b><br>
+
+<pre>
+&lt;!-- ===================== AUTHORIZATION DEFINITIONS ==================== --&gt;
+
+&lt;bean id="<b>roleVoter</b>" class="org.springframework.security.access.vote.RoleVoter"/&gt;
+
+&lt;bean id="<b>accessDecisionManager</b>" class="org.springframework.security.access.vote.AffirmativeBased"&gt;
+	&lt;property name="allowIfAllAbstainDecisions"&gt;&lt;value&gt;false&lt;/value&gt;&lt;/property&gt;
+	&lt;property name="decisionVoters"&gt;
+		&lt;list&gt;
+			&lt;ref bean="<b>roleVoter</b>"/&gt;
+		&lt;/list&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+
+	
+&lt;!-- ===================== SECURITY DEFINITIONS ======================= --&gt;
+
+&lt;bean id="<b>securityMetadataSource</b>" class="org.plazmaforge.framework.platform.security.PlatformMethodSecurityMetadataSource"/&gt;
+
+&lt;bean id="<b>securityInterceptor</b>" class="org.plazmaforge.framework.platform.security.PlatformMethodSecurityInterceptor"&gt;
+
+	&lt;property name="<b>validateConfigAttributes</b>"&gt;&lt;value&gt;true&lt;/value&gt;&lt;/property&gt;
+	&lt;property name="<b>authenticationManager</b>"&gt;&lt;ref bean="authenticationManager"/&gt;&lt;/property&gt;
+	&lt;property name="<b>accessDecisionManager</b>"&gt;&lt;ref bean="accessDecisionManager"/&gt;&lt;/property&gt;
+	&lt;property name="<b>runAsManager</b>"&gt;&lt;ref bean="runAsManager"/&gt;&lt;/property&gt;
+    	
+    &lt;property name="<b>securityMetadataSource</b>"&gt;&lt;ref bean="securityMetadataSource"/&gt;&lt;/property&gt;	
+&lt;/bean&gt;
+</pre>
+
+
+
+
+</body>
+</html>

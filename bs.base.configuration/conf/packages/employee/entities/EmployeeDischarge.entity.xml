@@ -1,0 +1,19 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeDischarge" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeDischarge" table="EMPLOYEE_DISCHARGE" extends-class="org.plazmaforge.bsolution.document.common.beans.Document">
+       	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+        <aliases>
+            <alias name="employeeName" attribute="employee.person.name"/>
+        </aliases>
+        <attributes>
+       		<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="dischargeDate" column="DISCHARGE_DATE" type="Date"  required="true" />
+        	<attribute name="compensationDay" column="COMPENSATION_DAY" type="Integer" />
+        	<attribute name="outputDay" column="OUTPUT_DAY" type="Integer" />
+        	<attribute name="pensionAmount" column="PENSION_AMOUNT" type="Double" />
+        	<reference name="dischargeType" column="DISCHARGE_TYPE_ID" class="org.plazmaforge.bsolution.employee.common.beans.DischargeType"  required="true" />
+        	<reference name="employee" column="EMPLOYEE_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader"  required="true" />
+        </attributes>
+    </joined-entity>
+

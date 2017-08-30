@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="LocalityEditForm" type="EditForm" title="@{LocalityEditForm.title}">
+		<content layout="GridLayout(columnCount=3)">
+			<children>
+				<label text="@{LocalityEditForm.countryLabel.text}"/><combo-box property="country" data-type="base/Country" layout-data="GridData(columnSpan=2; align=fill)"/>
+				<label text="@{LocalityEditForm.regionLabel.text}"/><combo-box property="region" data-type="contact/Region" layout-data="GridData(columnSpan=2; align=fill)"/>
+				<label text="@{LocalityEditForm.nameLabel.text}"/><combo-box property="localityType" data-type="contact/LocalityType" width="50"/><text-field property="name" layout-data="GridData(align=fill)"/>
+			</children>
+		</content>
+	</form>
+</ui>

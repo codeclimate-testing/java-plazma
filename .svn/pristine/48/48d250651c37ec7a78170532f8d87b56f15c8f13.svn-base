@@ -1,0 +1,9 @@
+<entity-mapping>
+    <joined-entity class="org.plazmaforge.bsolution.carservice.common.beans.CarServ" table="CAR_SERV" extends-class="org.plazmaforge.bsolution.goods.common.beans.Goods">
+		<attributes>    
+        	<key name="id" column="ID" type="Integer"/>
+        	<reference name="carServType" column="CAR_SERV_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServType"/>
+        	<collection name="carServLinks" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarServLink" join-attribute="carServ" cascade="all"/>
+        </attributes>
+    </joined-entity>
+</entity-mapping>

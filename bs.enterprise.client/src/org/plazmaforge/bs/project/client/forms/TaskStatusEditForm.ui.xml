@@ -1,0 +1,13 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="TaskStatusEditForm" type="EditForm" title="@{TaskStatusEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{TaskStatusEditForm.codeLabel.text}"/><text-field property="code" width="100"/>
+				<label text="@{TaskStatusEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{TaskStatusEditForm.descriptionLabel.text}"/><text-area property="description" width="200"/>
+				<label text="@{TaskStatusEditForm.startStatusLabel.text}"/><check-box property="start"/>
+				<label text="@{TaskStatusEditForm.finishStatusLabel.text}"/><check-box property="finish"/>
+			</children>
+		</content>
+	</form>
+</ui>

@@ -1,0 +1,255 @@
+<html>
+<title>Table list</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+
+   <h2 align="center">Table list</h2>
+   <hr>
+   <br><br>
+
+
+<table  cellpadding="5">
+
+<tr><td><b>#</b></td><td><b>Code</b></td><td><b>Name</b></td><td width="150"><b>Type</b></td><td width="150"><b>Package</b></td></tr>
+
+<tr><td>1</td><td>ACADEMIC_DEGREE</td><td>Academic degree</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>2</td><td>ACTIVITY_TYPE</td><td>Activity type</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>3</td><td>ADDRESS</td><td>Address</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>4</td><td>ADDRESS_TYPE</td><td>Address type</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>5</td><td>APARTMENT_TYPE</td><td>Apartment type</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>6</td><td>ASSET</td><td>Fixed Assets</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>7</td><td>BANK</td><td>Bank</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>8</td><td>BANK_ACCOUNT</td><td>Bank account</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>9</td><td>BANK_CONTEXT</td><td>Bank context</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>10</td><td>BUSINESSABLE</td><td>Businessable</td><td>ENTITY</td><td>BASE</td></tr>
+<tr><td>11</td><td>BUSINESSABLE_ENTITY</td><td>Businessable entity</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>12</td><td>BUSINESSABLE_REGISTER</td><td>Businessable register</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>13</td><td>CASH_INCOME</td><td>Cash income</td><td>DOCUMENT</td><td>CASH</td></tr>
+<tr><td>14</td><td>CASH_OUTCOME</td><td>Cash outcome</td><td>DOCUMENT</td><td>CASH</td></tr>
+<tr><td>15</td><td>CITY</td><td>City</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>16</td><td>CONTACT</td><td>Contact</td><td>ENTITY</td><td>ORGANIZATION</td></tr>
+<tr><td>17</td><td>CONTACTABLE</td><td>Contactable</td><td>ENTITY</td><td>CONTACT</td></tr>
+<tr><td>18</td><td>CONTACTABLE_ENTITY</td><td>Contactable entity</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>19</td><td>CONTACT_CONTEXT</td><td>Contact context</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>20</td><td>CONTACT_TYPE</td><td>Contact type</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>21</td><td>CONTRACT</td><td>Contract</td><td>DOCUMENT</td><td>DOCUMENT</td></tr>
+<tr><td>22</td><td>CONTRACTOR</td><td>Contractor</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>23</td><td>CONTRACTOR_MOVE</td><td>Contractor move</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>24</td><td>COUNTRY</td><td>Country</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>25</td><td>CURRENCY</td><td>Currency</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>26</td><td>DEPARTMENT</td><td>Department</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>27</td><td>DISCHARGE_TYPE</td><td>Discharge type</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>28</td><td>DISTRICT</td><td>District</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>29</td><td>DOCUMENT</td><td>Document</td><td>DOCUMENT</td><td>DOCUMENT</td></tr>
+<tr><td>30</td><td>DOCUMENT_STATUS</td><td>Document status</td><td>DICTIONARY</td><td>DOCUMENT</td></tr>
+<tr><td>31</td><td>DOCUMENT_TYPE</td><td>Document type</td><td>DICTIONARY</td><td>DOCUMENT</td></tr>
+<tr><td>32</td><td>EDUCATION_FORM</td><td>Education form</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>33</td><td>EDUCATION_INSTITUTE</td><td>Education institute</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>34</td><td>EDUCATION_TYPE</td><td>Education type</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>35</td><td>EMAIL</td><td>Email</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>36</td><td>EMPLOYEE</td><td>Employee</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>37</td><td>EMPLOYEE_CATEGORY</td><td>Employee category</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>38</td><td>EMPLOYEE_DISCHARGE</td><td>Employee discharge</td><td>DOCUMENT</td><td>EMPLOYEE</td></tr>
+<tr><td>39</td><td>EMPLOYEE_MOVE</td><td>Employee move</td><td>ENTITY</td><td>EMPLOYEE</td></tr>
+<tr><td>40</td><td>EMPLOYEE_PAYROLL</td><td>Employee payroll</td><td>ENTITY</td><td>PAYROLL</td></tr>
+<tr><td>41</td><td>EMPLOYEE_RANK</td><td>Employee rank</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>42</td><td>EMPLOYEE_RECEPTION</td><td>Employee reception</td><td>DOCUMENT</td><td>EMPLOYEE</td></tr>
+<tr><td>43</td><td>EMPLOYEE_SICKLIST</td><td>Employee sicklist</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>44</td><td>EMPLOYEE_SICKLIST_AVERANGE</td><td>Employee sicklist averange</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>45</td><td>EMPLOYEE_TOTAL</td><td>Employee total</td><td>ENTITY</td><td>PAYROLL</td></tr>
+<tr><td>46</td><td>EMPLOYEE_VACATION</td><td>Employee vacation</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>47</td><td>EMPLOYEE_VACATION_AVERANGE</td><td>Employee vacation averange</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>48</td><td>ENTRY_ITEM</td><td>Entry item</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>49</td><td>FAMILIARITY</td><td>Familiarity</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>50</td><td>FAMILY_STATUS</td><td>Family status</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>51</td><td>FINANCE_DOCUMENT</td><td>Finance document</td><td>DOCUMENT</td><td>FINANCE</td></tr>
+<tr><td>52</td><td>FINANCE_DOCUMENT_TYPE</td><td>Finance document type</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>53</td><td>FORM_PROPERTY</td><td>Form property</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>54</td><td>GOODS</td><td>Goods</td><td>DICTIONARY</td><td>GOODS</td></tr>
+<tr><td>55</td><td>GOODS_INCOME</td><td>Goods income</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>56</td><td>GOODS_INCOME_ITEM</td><td>Goods income item</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>57</td><td>GOODS_OUTCOME</td><td>Goods outcome</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>58</td><td>GOODS_OUTCOME_ITEM</td><td>Goods outcome item</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>59</td><td>GOODS_TYPE</td><td>Goods type</td><td>DICTIONARY</td><td>GOODS</td></tr>
+<tr><td>60</td><td>INDUSTRY</td><td>Industry</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>61</td><td>INTANGIBLE</td><td>Intangible</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>62</td><td>INVENTORY_INCOME</td><td>Inventory income</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>63</td><td>INVENTORY_INCOME_ITEM</td><td>Inventory income item</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>64</td><td>INVENTORY_MOVE</td><td>Inventory move</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>65</td><td>INVENTORY_MOVE_ITEM</td><td>Inventory move item</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>66</td><td>INVENTORY_OUTCOME</td><td>Inventory outcome</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>67</td><td>INVENTORY_OUTCOME_ITEM</td><td>Inventory outcome item</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>68</td><td>INVENTORY_REST</td><td>Inventory rest</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>69</td><td>INVENTORY_REST_ITEM</td><td>Inventory rest item</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>70</td><td>INVENTORY_WRITEOFF</td><td>Inventory writeoff</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>71</td><td>INVENTORY_WRITEOFF_ITEM</td><td>Inventory writeoff item</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>72</td><td>JOB_POSITION</td><td>Positions</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>73</td><td>LANGUAGE</td><td>Language</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>74</td><td>LEDGER_ACCOUNT</td><td>Ledger account</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>75</td><td>LEDGER_ACCOUNT_REGISTER</td><td>Ledger account register</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>76</td><td>LEDGER_ACCOUNT_REST</td><td>Ledger account rest</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>77</td><td>LEDGER_ACCOUNT_TYPE</td><td>Ledger account type</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>78</td><td>LOCALITY</td><td>Locality</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>79</td><td>LOCALITY_TYPE</td><td>Locality type</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>80</td><td>MILITARY_RANK</td><td>Military rank</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>81</td><td>MILITARY_SPECIALITY</td><td>Military speciality</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>82</td><td>MILITARY_STATUS</td><td>Military status</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>83</td><td>MTRL_RESPONSIBLE</td><td>Material Responsible</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>84</td><td>M_LEDGER_ACCOUNT_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>85</td><td>M_LEDGER_ACCOUNT_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>86</td><td>M_LEDGER_ACCOUNT_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>87</td><td>M_PARTNER_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>88</td><td>M_PARTNER_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>89</td><td>M_PARTNER_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>90</td><td>M_PRODUCT_DETAIL_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>91</td><td>M_PRODUCT_DETAIL_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>92</td><td>M_PRODUCT_DETAIL_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>93</td><td>M_PRODUCT_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>94</td><td>M_PRODUCT_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>95</td><td>M_PRODUCT_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>96</td><td>ORGANIZATION</td><td>Organization</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>97</td><td>PARTNER</td><td>Partner</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>98</td><td>PARTNER_ACTIVITY_TYPE_LINK</td><td>Partner activity type link</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>99</td><td>PARTNER_CATEGORY</td><td>Partner category</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>100</td><td>PARTNER_CATEGORY_LINK</td><td>Partner category link</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>101</td><td>PARTNER_GROUP</td><td>Partner group</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>102</td><td>PARTNER_MOVE</td><td>Partner move</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>103</td><td>PARTNER_REGISTER</td><td>Partner register</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>104</td><td>PARTNER_REST</td><td>Partner rest</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>105</td><td>PAYMENT_DOCUMENT_LINK</td><td>Paymnet document link</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>106</td><td>PAYMENT_INCOME</td><td>Payment income</td><td>DOCUMENT</td><td>BANK</td></tr>
+<tr><td>107</td><td>PAYMENT_MISSING</td><td>Payment missing</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>108</td><td>PAYMENT_OUTCOME</td><td>Payment outcome</td><td>DOCUMENT</td><td>BANK</td></tr>
+<tr><td>109</td><td>PAYMENT_OUTCOME_TEMPLATE</td><td>Payment outcome template</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>110</td><td>PAYMENT_TYPE</td><td>Payment type</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>111</td><td>PAYROLL</td><td>Payroll</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>112</td><td>PAYROLL_ALGORITM</td><td>Payroll algoritm</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>113</td><td>PAYROLL_ALGORITM_TYPE</td><td>Payroll algoritm type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>114</td><td>PAYROLL_FORM</td><td>Payroll form</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>115</td><td>PAYROLL_GROUP</td><td>Payroll group</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>116</td><td>PAYROLL_ITEM</td><td>Payroll item</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>117</td><td>PAYROLL_MODE</td><td>Payroll mode</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>118</td><td>PAYROLL_TYPE</td><td>Payroll type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>119</td><td>PERIOD</td><td>Period</td><td>ENTITY</td><td>BASE</td></tr>
+<tr><td>120</td><td>PERIOD_TYPE</td><td>Period type</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>121</td><td>PERSON</td><td>Person</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>122</td><td>PERSON_DOCUMENT</td><td>Person document</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>123</td><td>PERSON_DOCUMENT_TYPE</td><td>Person document type</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>124</td><td>PERSON_EDUCATION</td><td>Person education</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>125</td><td>PERSON_FAMILY</td><td>Person family</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>126</td><td>PERSON_JOB</td><td>Person job</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>127</td><td>PERSON_LANGUAGE</td><td>Person language</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>128</td><td>PERSON_MILITARY</td><td>Person military</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>129</td><td>PHONE</td><td>Phone</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>130</td><td>PHONE_TYPE</td><td>Phone type</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>131</td><td>PIM_APPOINTMENT</td><td>Appointment</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>132</td><td>PIM_APPOINTMENT_CONTACT</td><td>Appointment contact</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>133</td><td>PIM_APPOINTMENT_PRIORITY</td><td>Appointment priority</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>134</td><td>PIM_APPOINTMENT_TYPE</td><td>Appointment type</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>135</td><td>PIM_EVENT</td><td>Event</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>136</td><td>PIM_NOTE</td><td>Note</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>137</td><td>PIM_REMINDER</td><td>Reminder</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>138</td><td>PRICE_TYPE</td><td>Price type</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>139</td><td>PRODUCT</td><td>Product</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>140</td><td>PRODUCT_DETAIL_REGISTER</td><td>Product detail register</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>141</td><td>PRODUCT_GROUP</td><td>Product group</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>142</td><td>PRODUCT_INSTANCE</td><td>Product instance</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>143</td><td>PRODUCT_MOVE</td><td>Product move</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>144</td><td>PRODUCT_PRICE</td><td>Product price</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>145</td><td>PRODUCT_REGISTER</td><td>Product register</td><td>ENTITY</td><td>PRODUCT</td></tr>
+<tr><td>146</td><td>PRODUCT_SECTION</td><td>Product section</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>147</td><td>PRODUCT_UNIT</td><td>Product unit</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>148</td><td>PROJECT</td><td>Project</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>149</td><td>PROJECT_CONTACT_LINK</td><td>Project contact link</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>150</td><td>PROJECT_CONTEXT</td><td>Project context</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>151</td><td>PROJECT_EMPLOYEE_LINK</td><td>Project employee link</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>152</td><td>PROJECT_ROLE</td><td>Project role</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>153</td><td>PROJECT_STAGE</td><td>Project stage</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>154</td><td>PROJECT_STAGE_GROUP</td><td>Project stage group</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>155</td><td>PROJECT_STAGE_LINK</td><td>Project stage link</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>156</td><td>PROJECT_STATUS</td><td>Project status</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>157</td><td>PROJECT_TYPE</td><td>Project type</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>158</td><td>PURCHASE_INVOICE</td><td>Purchase Invoice</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>159</td><td>PURCHASE_INVOICE_ITEM</td><td>Purchase Invoice item</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>160</td><td>PURCHASE_ORDER</td><td>Purchase order</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>161</td><td>PURCHASE_ORDER_ITEM</td><td>Purchase order item</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>162</td><td>PURCHASE_PLAN</td><td>Purchase plan</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>163</td><td>PURCHASE_PLAN_ITEM</td><td>Purchase plan item</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>164</td><td>PURCHASE_SERV</td><td>Purchase service</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>165</td><td>PURCHASE_SERV_ITEM</td><td>Purchase service item</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>166</td><td>PURCHASE_TAX_WAYBILL</td><td>Purchase Tax waybill</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>167</td><td>PURCHASE_TAX_WAYBILL_ITEM</td><td>Purchase Tax waybill item</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>168</td><td>REGION</td><td>Region</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>169</td><td>SALE_INVOICE</td><td>Sale Invoice</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>170</td><td>SALE_INVOICE_ITEM</td><td>Sale Invoice item</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>171</td><td>SALE_ORDER</td><td>Sale order</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>172</td><td>SALE_ORDER_ITEM</td><td>Sale order item</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>173</td><td>SALE_PLAN</td><td>Sale plan</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>174</td><td>SALE_PLAN_ITEM</td><td>Sale plan item</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>175</td><td>SALE_SERV</td><td>Sale service</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>176</td><td>SALE_SERV_ITEM</td><td>Sale service item</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>177</td><td>SALE_TAX_WAYBILL</td><td>Sale Tax waybill</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>178</td><td>SALE_TAX_WAYBILL_ITEM</td><td>Sale Tax waybill item</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>179</td><td>SECURE_OBJECT</td><td>Secure object</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>180</td><td>SICKLIST_AVERANGE_TYPE</td><td>Sicklist averange type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>181</td><td>SICKLIST_TYPE</td><td>Sicklist type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>182</td><td>SICK_TYPE</td><td>Sick type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>183</td><td>SPECIALITY</td><td>Speciality</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>184</td><td>STORE</td><td>Store</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>185</td><td>STREET_TYPE</td><td>Street type</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>186</td><td>SYS_DATA_TYPE</td><td>Data type</td><td>ENTITY</td><td>BASE</td></tr>
+<tr><td>187</td><td>SYS_DAY</td><td>System day</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>188</td><td>SYS_ENTITY</td><td>System entity</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>189</td><td>SYS_ENTITY_ATTR</td><td>Attribute (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>190</td><td>SYS_ENTITY_ATTR_GROUP</td><td>Attribute group (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>191</td><td>SYS_ENTITY_ATTR_VALUE</td><td>Attribute value (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>192</td><td>SYS_ENTITY_TYPE</td><td>System entity type</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>193</td><td>SYS_ENUMERATION</td><td>Enumeration (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>194</td><td>SYS_INFO</td><td>System info</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>195</td><td>SYS_LOOKUP</td><td>Lookup (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>196</td><td>SYS_MONTH</td><td>System month</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>197</td><td>SYS_PERMISSION</td><td>System permission</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>198</td><td>SYS_PREFERENCE</td><td>System preference</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>199</td><td>SYS_QUARTER</td><td>System quarter</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>200</td><td>SYS_ROLE</td><td>System role</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>201</td><td>SYS_USER</td><td>System user</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>202</td><td>SYS_USER_ROLE</td><td>System user role</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>203</td><td>SYS_VARIABLE</td><td>System variable</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>204</td><td>TASK</td><td>Task</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>205</td><td>TASK_CONTACT_LINK</td><td>Task contact link</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>206</td><td>TASK_CONTEXT</td><td>Task context</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>207</td><td>TASK_EMPLOYEE_LINK</td><td>Task employee link</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>208</td><td>TASK_PRIORITY</td><td>Task priority</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>209</td><td>TASK_RESULT</td><td>Task result</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>210</td><td>TASK_ROLE</td><td>Task role</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>211</td><td>TASK_STATUS</td><td>Task status</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>212</td><td>TASK_TYPE</td><td>Task type</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>213</td><td>TAX</td><td>Tax</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>214</td><td>TAXPRINT_TYPE</td><td>Taxprint type</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>215</td><td>TEMPLATE_ENTRY</td><td>Template entry</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>216</td><td>TEMPLATE_ENTRY_ITEM</td><td>Template entry item</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>217</td><td>UNIT</td><td>Unit</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>218</td><td>VACATION_AVERANGE_TYPE</td><td>Vacation averange type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>219</td><td>VACATION_CALCULATE</td><td>Vacation calculate</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>220</td><td>VACATION_TYPE</td><td>Vacation type</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>221</td><td>WAREHOUSE</td><td>Warehouse</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>222</td><td>WAREHOUSE_ENTITY</td><td>Warehouse entity</td><td>ENTITY</td><td>ORGANIZATION</td></tr>
+<tr><td>223</td><td>WAREHOUSE_MOVE</td><td>Warehouse move</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>224</td><td>WEB</td><td>Web</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+
+
+</table>
+
+
+</body>
+</html>

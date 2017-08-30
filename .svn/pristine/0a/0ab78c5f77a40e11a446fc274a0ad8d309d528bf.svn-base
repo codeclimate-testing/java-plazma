@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Unit" class="org.plazmaforge.bs.base.shared.entities.Unit" table="UNIT">
+      <attributes>
+        <key name="id" column="ID" type="Integer" generator-type="increment"/>
+        <attribute name="code" column="CODE" type="String" />
+        <attribute name="name" column="NAME" type="String"  required="true" />
+        <attribute name="fullName" column="FULL_NAME" type="String" />
+      </attributes>
+    </entity>
+

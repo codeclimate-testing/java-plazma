@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/log4j-1.2.8.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.ext"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

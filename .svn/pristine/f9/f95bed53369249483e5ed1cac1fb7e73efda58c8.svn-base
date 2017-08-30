@@ -1,0 +1,13 @@
+<entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AttributeValue" class="org.plazmaforge.framework.ext.model.AttributeValue" table="SYS_ENTITY_ATTR_VALUE">
+	<attributes>
+		<key name="id" column="ID" type="Integer" generator-type="increment" />
+		<reference name="entity" column="ENTITY_ID"	class="org.plazmaforge.framework.config.object.EntityConfig" required="true" />
+		<reference name="attribute" column="ATTR_ID" class="org.plazmaforge.framework.ext.model.Attribute" required="true" />
+		<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+		<attribute name="stringValue" column="STRING_VALUE" type="String" />
+		<attribute name="integerValue" column="INTEGER_VALUE" type="Integer" />
+		<attribute name="floatValue" column="FLOAT_VALUE" type="Float" />
+		<attribute name="dateValue" column="DATE_VALUE" type="Date" />
+	</attributes>
+</entity>
+

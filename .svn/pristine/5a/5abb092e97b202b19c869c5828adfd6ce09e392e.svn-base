@@ -1,0 +1,278 @@
+############################################################################
+# PROJECT Action Definition
+############################################################################
+
+# ProjectType List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectTypeListAction@name=\u0422\u0438\u043f\u044b \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectTypeListAction@tooltip=\u0422\u0438\u043f\u044b \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+
+# ProjectState List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStateListAction@name=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStateListAction@tooltip=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+
+# ProjectStageGroup List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageGroupListAction@name=\u0413\u0440\u0443\u043f\u043f\u044b \u0441\u0442\u0430\u0434\u0438\u0439 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageGroupListAction@tooltip=\u0413\u0440\u0443\u043f\u043f\u044b \u0441\u0442\u0430\u0434\u0438\u0439 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+
+# ProjectStage List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageListAction@name=\u0421\u0442\u0430\u0434\u0438\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageListAction@tooltip=\u0421\u0442\u0430\u0434\u0438\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+
+# Project List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction@name=\u0421\u043f\u0438\u0441\u043e\u043a \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction@tooltip=\u0421\u043f\u0438\u0441\u043e\u043a \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction@image=olmari/ext/planing.gif
+
+
+############################################################################
+# TASK Action Definition
+############################################################################
+
+# TaskType List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskTypeListAction@name=\u0422\u0438\u043f\u044b \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.actions.TaskTypeListAction@tooltip=\u0422\u0438\u043f\u044b \u0437\u0430\u0434\u0430\u0447
+
+# TaskState List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskStateListAction@name=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.actions.TaskStateListAction@tooltip=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0437\u0430\u0434\u0430\u0447
+
+# TaskRole List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskRoleListAction@name=\u0420\u043e\u043b\u0438 \u0432 \u0437\u0430\u0434\u0430\u0447\u0430\u0445
+org.plazmaforge.bsolution.project.client.swing.actions.TaskRoleListAction@tooltip=\u0420\u043e\u043b\u0438 \u0432 \u0437\u0430\u0434\u0430\u0447\u0430\u0445
+
+# TaskResult List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskResultListAction@name=\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.actions.TaskResultListAction@tooltip=\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u0437\u0430\u0434\u0430\u0447
+
+# TaskPriority List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskPriorityListAction@name=\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442\u044b \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.actions.TaskPriorityListAction@tooltip=\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442\u044b \u0437\u0430\u0434\u0430\u0447
+
+# Task List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction@name=\u0421\u043f\u0438\u0441\u043e\u043a \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction@tooltip=\u0421\u043f\u0438\u0441\u043e\u043a \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction@image=olmari/ext/tasks.gif
+
+############################################################################
+# PROJECT List Form Definition
+############################################################################
+
+# ProjectType List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@title=\u0422\u0438\u043f\u044b \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+
+
+# ProjectState List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@title=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-start.name=\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-finish.name=\u041a\u043e\u043d\u0435\u0447\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+
+
+# ProjectStageGroup List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@title=\u0413\u0440\u0443\u043f\u043f\u044b \u0441\u0442\u0430\u0434\u0438\u0439 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+# ProjectStage List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@title=\u0421\u0442\u0430\u0434\u0438\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-order-number.name=\u041f\u043e\u0440\u044f\u0434\u043a\u043e\u0432\u044b\u0439 \u043d\u043e\u043c\u0435\u0440
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-averange-duration.name=\u0421\u043f\u0435\u0434\u043d\u044f\u044f \u043f\u0440\u043e\u0434\u043e\u043b\u0436.
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-from-begin.name=\u0414\u043d\u0435\u0439 \u043e\u0442 \u043d\u0430\u0447.
+
+
+# Project List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@title=\u041f\u0440\u043e\u0435\u043a\u0442\u044b
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-partner.name=\u041f\u0430\u0440\u0442\u043d\u0451\u0440
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-project-state.name=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-start-date.name=\u0414\u0430\u0442\u0430 \u043d\u0430\u0447\u0430\u043b\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-close-date.name=\u0414\u0430\u0442\u0430 \u043e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u044f
+
+
+############################################################################
+# TASK List Form Definition
+############################################################################
+
+# TaskType List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@title=\u0422\u0438\u043f\u044b \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+# TaskState List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@title=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-start.name=\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-finish.name=\u041a\u043e\u043d\u0435\u0447\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+
+
+# TaskRole List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@title=\u0420\u043e\u043b\u0438 \u0432 \u0437\u0430\u0434\u0430\u0447\u0430\u0445
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@table.column-note.name=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+# TaskResult List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultList@title=\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+
+# TaskPriority List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@title=\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442\u044b \u0437\u0430\u0434\u0430\u0447
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@table.column-order.name=\u041f\u043e\u0440\u044f\u0434\u043a\u043e\u0432\u044b\u0439 \u043d\u043e\u043c\u0435\u0440
+
+# Task List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@title=\u0417\u0430\u0434\u0430\u0447\u0438
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-code.name=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-name.name=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-task-priority.name=\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-partner.name=\u041f\u0430\u0440\u0442\u043d\u0451\u0440
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-start-date.name=\u0414\u0430\u0442\u0430 \u043d\u0430\u0447\u0430\u043b\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-close-date.name=\u0414\u0430\u0442\u0430 \u043e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u044f
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-done-percent.name=% \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u0438\u044f
+
+
+############################################################################
+# PROJECT Edit Form Definition
+############################################################################
+
+# ProjectType Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@title=\u0422\u0438\u043f \u043f\u0440\u043e\u0435\u043a\u0442\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+# ProjectState Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@title=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-start.text=\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-finish.text=\u041a\u043e\u043d\u0435\u0447\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+
+
+# ProjectStageGroup Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@title=\u0413\u0440\u0443\u043f\u043f\u0430 \u0441\u0442\u0430\u0434\u0438\u0439 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+
+# ProjectStage Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@title=\u0421\u0442\u0430\u0434\u0438\u044f \u043f\u0440\u043e\u0435\u043a\u0442\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-project-stage-group.text=\u0413\u0440\u0443\u043f\u043f\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-project-type.text=\u0422\u0438\u043f
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-order-number.text=\u041f\u043e\u0440\u044f\u0434\u043e\u043a
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-from-begin.text=\u041a-\u0432\u043e \u0434\u043d\u0435\u0439 \u043e\u0442 \u043d\u0430\u0447\u0430\u043b\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-averange-duration.text=\u0421\u0440\u0435\u0434\u043d\u044f\u044f \u043f\u0440\u043e\u0434\u043e\u043b\u0436. (\u0434\u043d\u0438)
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+
+# Project Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@title=\u041f\u0440\u043e\u0435\u043a\u0442
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.title.common.text=\u041e\u0431\u0449\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.title.finance.text=\u0424\u0438\u043d\u0430\u043d\u0441\u044b
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.title.note.text=\u041f\u0440\u0438\u043c\u0435\u0447\u0430\u043d\u0438\u0435
+
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-contract.text=\u0414\u043e\u0433\u043e\u0432\u043e\u0440 \u2116
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-start-date.text=\u0414\u0430\u0442\u0430 \u043d\u0430\u0447\u0430\u043b\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-close-date.text=\u0414\u0430\u0442\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u044f
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-actual-close-date.text=\u0424\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0430\u0442\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u044f
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-propability.text=\u0412\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-partner.text=\u041f\u0430\u0440\u0442\u043d\u0451\u0440
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-project-stage.text=\u0421\u0442\u0430\u0434\u0438\u044f \u043f\u0440\u043e\u0435\u043a\u0442\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-project-state.text=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-project-type.text=\u0422\u0438\u043f
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-responsible.text=\u041e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-currency.text=\u0412\u0430\u043b\u044e\u0442\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-currency-rate.text=\u041a\u0443\u0440\u0441
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-currency-amount.text=\u0421\u0443\u043c\u043c\u0430 \u0432 \u0432\u0430\u043b\u044e\u0442\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-discount-percent.text=% \u0441\u043a\u0438\u0434\u043a\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-discount-amount.text=\u0421\u043a\u0438\u0434\u043a\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-amount.text=\u0421\u0443\u043c\u043c\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-tax-percent.text=% \u041d\u0414\u0421
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-tax-amount.text=\u0421\u0443\u043c\u043c\u0430 \u043d\u0430\u043b\u043e\u0433\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-amount-with-tax.text=\u0421\u0443\u043c\u043c\u0430 \u0441 \u043d\u0430\u043b\u043e\u0433\u043e\u043c
+
+
+
+############################################################################
+# TASK Edit Form Definition
+############################################################################
+
+# TaskType Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@title=\u0422\u0438\u043f \u0437\u0430\u0434\u0430\u0447\u0438
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+# TaskState Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@title=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-start.text=\u041d\u0430\u0447\u0430\u043b\u044c\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-finish.text=\u041a\u043e\u043d\u0435\u0447\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+
+# TaskRole Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@title=\u0420\u043e\u043b\u044c \u0432 \u0437\u0430\u0434\u0430\u0447\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@panel.label-note.text=\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435
+
+# TaskResult Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@title=\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u0437\u0430\u0434\u0430\u0447\u0438
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@panel.label-task-type.text=\u0422\u0438\u043f
+
+# TaskPriority Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@title=\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442 \u0437\u0430\u0434\u0430\u0447\u0438
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@panel.label-order.text=\u041f\u043e\u0440\u044f\u0434\u043e\u043a
+
+# Task Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@title=\u0417\u0430\u0434\u0430\u0447\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.title.common.text=\u041e\u0431\u0449\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.title.note.text=\u041f\u0440\u0438\u043c\u0435\u0447\u0430\u043d\u0438\u0435
+
+
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-code.text=\u041a\u043e\u0434
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-name.text=\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-task-type.text=\u0422\u0438\u043f
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-start-date-time.text=\u0414\u0430\u0442\u0430 \u043d\u0430\u0447\u0430\u043b\u0430
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-end-date-time.text=\u0414\u0430\u0442\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u044f
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-task-priority.text=\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-alarm-date-time.text=\u041d\u0430\u043f\u043e\u043c\u043d\u0438\u0442\u044c
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-responsible.text=\u041e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-project.text=\u041f\u0440\u043e\u0435\u043a\u0442
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-partner.text=\u041f\u0430\u0440\u0442\u043d\u0435\u0440
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-document.text=\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-task-state.text=\u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-done-percent.text=% \u0412\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-completed-date-time.text=\u0424\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0430\u0442\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u044f
+
+
+
+
+
+

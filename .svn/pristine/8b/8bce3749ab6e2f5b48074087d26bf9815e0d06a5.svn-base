@@ -1,0 +1,33 @@
+
+version = 1.0.3
+
+framework.version = 1.0.3
+
+
+
+workspace.lib.dir = ../lib
+workspace.dist.dir = ../dist
+workspace.target.dir = ../plazma.target
+
+
+classes.dir = ${basedir}/classes
+src.dir = ${basedir}/src
+docs.dir=${basedir}/docs
+javadocs.dir=${docs.dir}/api
+build.dir = ${basedir}/build
+build.dtds.dir = ${build.dir}/dtds
+	
+lib.dir = ${workspace.lib.dir}
+dist.dir = ${workspace.dist.dir}
+target.dir = ${workspace.target.dir}
+
+plazma.path = org/plazmaforge
+client.path = ${plazma.path}/client/swing
+
+framework.module = plazma-framework
+framework.jar = ${framework.module}-${framework.version}.jar
+	
+module = plazma-framework-client-swing
+module.jar = ${module}-${version}.jar
+
+source.dir = ${target.dir}/${module}-source-${version}

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarDetailVariant" table="CAR_DETAIL_VARIANT">
+    
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+        <many-to-one name="carDetail" column="CAR_DETAIL_ID" class="CarDetail"  not-null="true" />
+        
+        <many-to-one name="carDamageLevel" column="CAR_DAMAGE_LEVEL_ID" class="CarDamageLevel"/>
+        
+        <property name="pnt" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_PNT"  sql-type="CHAR(1)"/>
+        </property>
+        <property name="mat" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_MAT"  sql-type="CHAR(1)"/>
+        </property>
+        <property name="pol" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_POL"  sql-type="CHAR(1)"/>
+        </property>
+        
+        
+        <bag name="partList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_DETAIL_VARIANT_ID"/>
+            <one-to-many class="CarDetailVariantPart"/>
+        </bag>
+        
+        <bag name="servList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_DETAIL_VARIANT_ID"/>
+            <one-to-many class="CarDetailVariantServ"/>
+        </bag>
+        
+        <bag name="paintList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="CAR_DETAIL_VARIANT_ID"/>
+            <one-to-many class="CarDetailVariantPaint"/>
+        </bag>
+                
+    </class>
+
+</hibernate-mapping>

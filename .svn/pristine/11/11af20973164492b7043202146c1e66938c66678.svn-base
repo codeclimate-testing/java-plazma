@@ -1,0 +1,24 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="TaskListForm" type="ListForm" title="@{TaskListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{TaskListForm.taskPriorityColumn.text}" property="description" data-type="String" width="100"/>
+						<column text="@{TaskListForm.taskNoColumn.text}" property="description" data-type="String" width="100"/>
+						<column text="@{TaskListForm.nameColumn.text}" property="name" data-type="String" width="300"/>
+						<column text="@{TaskListForm.startDateTimeColumn.text}" property="startDateTime" data-type="Date" width="100"/>
+						<column text="@{TaskListForm.endDateTimeColumn.text}" property="endDateTime" data-type="Date" width="100"/>
+						<column text="@{TaskListForm.percentCompleteColumn.text}" property="percentComplete" data-type="Float" width="100"/>
+						
+						<column text="@{TaskListForm.reporterColumn.text}" property="reporterName" data-type="String" width="200"/>
+						<column text="@{TaskListForm.responsibleColumn.text}" property="responsibleName" data-type="String" width="200"/>
+						<column text="@{TaskListForm.partnerColumn.text}" property="partnerName" data-type="String" width="200"/>
+						
+						
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

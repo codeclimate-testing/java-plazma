@@ -1,0 +1,159 @@
+
+<html>
+<title>Табличная форма</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE width="100%">
+<TR>
+
+
+<TD width=160>
+</TD>
+
+<TD>
+
+   <h2 align="center">Табличная форма</h2>
+   <hr><br><br>
+
+     
+
+      
+   
+ 
+
+<!--  
+<p> 
+Форма используется для представления информации в табличном виде.
+   Данный режим позволяет выполнять различные действия:
+   <p><br>
+
+   <table align="center" cellspacing=0 cellpadding=5>
+    <tr>
+      <td><img border=0 src="images/buttons/Refresh.gif"/></td><td>Обновление данных</td>
+      <td rowspan=10><a href="images/list-form.jpg"><img border=0 src="images/list-form.jpg" align="middle"/></a></td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Choose.gif"/></td><td>Выбор записи</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Add.gif"/></td><td>Добавление записи</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Del.gif"/></td><td>Удаление записи</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Edit.gif"/></td><td>Редактирование записи</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Print.gif"/></td><td>Печать</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Sort.gif"/></td><td>Сортировка</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Find.gif"/></td><td>Поиск</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Filter.gif"/></td><td>Фильтр</td>
+    </tr>
+    <tr>
+      <td><img border=0 src="images/buttons/Setup.gif"/></td><td>Настройка</td>
+    </tr>
+   </table>
+-->
+<p>
+   <h3 align="center">Общий вид</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form.png" align="middle"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3 align="center">Настройка колонок</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-setup.png" align="middle"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3 align="center">Сортировка по нескольким колонкам</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-sort.png" align="middle"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3 align="center">Фильтр</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-filter-simple.png" align="middle"/></td>
+    </tr>
+   </table>
+   
+   <br><br><br><br>
+   <h3 align="center">Расширенный (динамический) фильтр</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-filter-advanced.png" align="middle"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3 align="center">Выбор периода</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-period.png" align="middle"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3 align="center">Контекстное меню</h3> 
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/list-form-context-menu.png" align="middle"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3 align="center">Экспорт</h3> 
+   <table align="center">
+    <tr>
+      <td>
+        <ul>
+<li>XLS
+<li>RTF
+<li>CSV
+<li>XML
+<li>HTML
+<li>SQL
+
+</ul>
+
+      </td>
+    </tr>
+   </table>
+</TD>
+</TR>
+</TABLE>
+
+
+
+</body>
+
+</html>
+
+

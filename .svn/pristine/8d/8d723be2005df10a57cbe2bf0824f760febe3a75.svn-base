@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool-bar-config provider="Plazma Forge" version="1.0">
+  <interface name="All">
+    <tool-bar name="All.Base">
+      <tool-item action="ContactListForm" />        
+      <tool-item action="PartnerListForm" />
+      <tool-item action="BankListForm" />
+      <tool-item action="GoodsListForm" />
+    </tool-bar>
+    <tool-bar name="All.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+      <tool-item action="PaymentIncomeListForm" />
+      <tool-item action="PaymentOutcomeListForm" />
+      <tool-item action="ProjectListForm" />
+      <tool-item action="TaskListForm" />
+    </tool-bar>
+    <tool-bar name="All.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="All.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="BankAndCash">
+    <tool-bar name="BankAndCash.Base">
+      <tool-item action="ContactListForm" />        
+      <tool-item action="PartnerListForm" />
+      <tool-item action="BankListForm" />
+    </tool-bar>
+    <tool-bar name="BankAndCash.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+      <tool-item action="PaymentIncomeListForm" />
+      <tool-item action="PaymentOutcomeListForm" />
+    </tool-bar>
+    <tool-bar name="BankAndCash.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="BankAndCash.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Sale">
+    <tool-bar name="Sale.Base">
+      <tool-item action="ContactListForm" />        
+      <tool-item action="PartnerListForm" />
+      <tool-item action="BankListForm" />
+    </tool-bar>
+    <tool-bar name="Sale.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+      <tool-item action="PaymentIncomeListForm" />      
+    </tool-bar>
+    <tool-bar name="Sale.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="Sale.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Purchase">
+    <tool-bar name="Purchase.Base">
+      <tool-item action="ContactListForm" />        
+      <tool-item action="PartnerListForm" />
+      <tool-item action="BankListForm" />
+    </tool-bar>
+    <tool-bar name="Purchase.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+      <tool-item action="PaymentOutcomeListForm" />
+    </tool-bar>
+    <tool-bar name="Purchase.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="Purchase.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="HR">
+    <tool-bar name="HR.Base">
+      <tool-item action="ContactListForm" />
+    </tool-bar>
+    <tool-bar name="HR.Ext">
+      <tool-item action="DocumentListForm" />
+    </tool-bar>
+    <tool-bar name="HR.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="HR.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Project">
+    <tool-bar name="Project.Base">
+      <tool-item action="ContactListForm" />        
+      <tool-item action="PartnerListForm" />
+    </tool-bar>
+    <tool-bar name="Project.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+    </tool-bar>
+    <tool-bar name="Project.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="Project.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Inventory">
+    <tool-bar name="Inventory.Base">
+      <tool-item action="ContactListForm" />         
+      <tool-item action="PartnerListForm" />
+    </tool-bar>
+    <tool-bar name="Inventory.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+    </tool-bar>
+    <tool-bar name="Inventory.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="Inventory.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Accounting">
+    <tool-bar name="Accounting.Base">
+      <tool-item action="ContactListForm" />         
+      <tool-item action="PartnerListForm" />
+    </tool-bar>
+    <tool-bar name="Accounting.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+    </tool-bar>
+    <tool-bar name="Accounting.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="Accounting.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Payroll">
+    <tool-bar name="Payroll.Base">
+      <tool-item action="ContactListForm" />
+    </tool-bar>
+    <tool-bar name="Payroll.Ext">
+      <tool-item action="DocumentListForm" />
+      <tool-item action="ContractListForm" />
+    </tool-bar>
+    <tool-bar name="Payroll.Reports">
+      <tool-item action="ReportListForm" />
+    </tool-bar>
+    <tool-bar name="Payroll.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+  <interface name="Admin">
+    <tool-bar name="Admin.Base">
+      <tool-item action="UserListForm" />
+      <tool-item action="RoleListForm" />
+      <tool-item action="PermissionListForm" />
+    </tool-bar>
+    <tool-bar name="Admin.Window">
+      <tool-item action="CloseWindowsAction" />
+    </tool-bar>
+  </interface>
+</tool-bar-config>
+

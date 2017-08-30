@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EducationInstitute" class="org.plazmaforge.bsolution.personality.common.beans.EducationInstitute" table="EDUCATION_INSTITUTE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="fullName" column="FULL_NAME" type="String" />
+        	<attribute name="address" column="ADDRESS" type="String" />
+        </attributes>
+    </entity>
+

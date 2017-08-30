@@ -1,0 +1,139 @@
+############################################################################
+# ORGANIZATION Action Definition
+############################################################################
+
+# Organizaton Edit Action
+org.plazmaforge.bsolution.organization.client.swing.actions.OrganizationEditAction@name=Organization
+org.plazmaforge.bsolution.organization.client.swing.actions.OrganizationEditAction@tooltip=Organization
+
+# Organizaton List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.OrganizationListAction@name=Organizations
+org.plazmaforge.bsolution.organization.client.swing.actions.OrganizationListAction@tooltip=Organizations
+
+
+# Storable List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.StorableListAction@name=Storages
+org.plazmaforge.bsolution.organization.client.swing.actions.StorableListAction@tooltip=Storages
+
+# Department List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.DepartmentListAction@name = Departments
+org.plazmaforge.bsolution.organization.client.swing.actions.DepartmentListAction@tooltip = Departments
+
+# Store List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.StoreListAction@name=Stores
+org.plazmaforge.bsolution.organization.client.swing.actions.StoreListAction@tooltip=Stores
+
+# Responsible List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.ResponsibleListAction@name=Responsibles
+org.plazmaforge.bsolution.organization.client.swing.actions.ResponsibleListAction@tooltip=Responsibles
+
+# Contact List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.ContactListAction@name=Contact list
+org.plazmaforge.bsolution.organization.client.swing.actions.ContactListAction@tooltip=Contact list
+
+# ContactType List Action
+org.plazmaforge.bsolution.organization.client.swing.actions.ContactTypeListAction@name=Contact Types
+org.plazmaforge.bsolution.organization.client.swing.actions.ContactTypeListAction@tooltip=Contact Types
+
+
+############################################################################
+
+org.plazmaforge.bsolution.organization.client.swing.forms.OrganizationList@title=Organization
+org.plazmaforge.bsolution.organization.client.swing.forms.OrganizationList@table.column-code.name=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.OrganizationList@table.column-name.name=Name
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.DepartmentList@title=Departments
+org.plazmaforge.bsolution.organization.client.swing.forms.DepartmentList@table.column-code.name=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.DepartmentList@table.column-name.name=Department
+
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.StorableList@title=Storages
+#org.plazmaforge.bsolution.organization.client.swing.forms.StorableList@table.column-code.name=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.StorableList@table.column-name.name=Name
+org.plazmaforge.bsolution.organization.client.swing.forms.StorableList@table.column-entity-name.name=Type
+
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.StoreList@title=Stores
+org.plazmaforge.bsolution.organization.client.swing.forms.StoreList@table.column-code.name=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.StoreList@table.column-name.name=Name
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ResponsibleList@title=Responsibles
+org.plazmaforge.bsolution.organization.client.swing.forms.ResponsibleList@table.column-employee-name.name=Responsible
+org.plazmaforge.bsolution.organization.client.swing.forms.ResponsibleList@table.column-storable-name.name=Storage
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactList@title=Contacts
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactList@table.column-code.name=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactList@table.column-name.name=Name
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactList@table.column-contact-type-name.name=Type
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactTypeList@title=Contact Types
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactTypeList@table.column-name.name=Name
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.DepartmentEdit@title=Department
+org.plazmaforge.bsolution.organization.client.swing.forms.DepartmentEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.DepartmentEdit@panel.label-name.text=Name
+
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.StoreEdit@title=Store
+org.plazmaforge.bsolution.organization.client.swing.forms.StoreEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.StoreEdit@panel.label-name.text=Name
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ResponsibleEdit@title=Responsible
+org.plazmaforge.bsolution.organization.client.swing.forms.ResponsibleEdit@panel.label-employee-name.text=Responsible
+org.plazmaforge.bsolution.organization.client.swing.forms.ResponsibleEdit@panel.label-storable-name.text=Storage
+
+
+
+#############################################################################
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@title=Contact
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.title.general.text=General
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-name.text=Name
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-dear.text=Dear
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-gender.text=Gender
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-department.text=Department
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-position.text=Position
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-position-full-name.text=Position full title	
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@panel.label-contact-type.text=Type
+
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-address.name=Addresses
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-address.column-address-type.name=Type
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-address.column-address-string.name=Address
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-phone.name=Phones
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-phone.column-phone-type.name=Type
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-phone.column-phone-string.name=Phone
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-email.name=Emails
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-email.column-email-address.name=Email
+
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-web.name=Web
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactEdit@table-web.column-url.name=URL
+
+
+#############################################################################
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactTypeEdit@title=Contact Type
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.organization.client.swing.forms.ContactTypeEdit@panel.label-name.text=Name
+

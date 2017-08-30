@@ -1,0 +1,12 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContactType" class="org.plazmaforge.bsolution.contact.common.beans.ContactType" table="CONTACT_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" required="true" />
+        	<attribute name="note" column="NOTE" type="String" />
+    	</attributes>
+    </entity>
+    
+

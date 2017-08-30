@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LedgerAccountType" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccountType" table="LEDGER_ACCOUNT_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="java.lang.String" required="true"/>
+        	<attribute name="name" column="NAME" type="java.lang.String" required="true"/>
+        </attributes>
+    </entity>
+
+

@@ -1,0 +1,164 @@
+
+==============================================================================
+
+ Plazma ERP+CRM {version} 
+
+==============================================================================
+
+
+1. Системные требования
+
+1.1 Требования к аппаратному обеспечению
+
+1.1.1  Client инсталляция
+
+
+       Процессор: Типа Pentium 633 MHz или выше
+       Дисковое пространство: 50 MB
+       Оперативная память: 128 MB (256 MB рекомендуется)
+       Сетевой адаптер 10 Mb (100 Mb рекомендуется)
+
+
+
+1.1.2  Server исталляция
+
+
+       Процессор: Типа Pentium 1700 MHz или выше
+       Дисковое пространство: 200 MB
+       Оперативная память: 256 MB (512 MB рекомендуется)
+       Сетевой адаптер 10 Mb (100 Mb рекомендуется)
+
+
+
+1.1.3  Standalone инсталляция
+
+
+       Это тип инсталляции без сервера приложения - "толстый" клиент напрямую 
+       взаимодействует с базой данных. Данный вариант используется для 
+       однопользовательского, малопользовательского (до 3 рабочих станций) 
+       или демо режима. 
+       
+       
+       Процессор: Типа Pentium 1700 MHz или выше
+       Дисковое пространство: 100 MB
+       Оперативная память: 256 MB (512 MB рекомендуется)
+       Сетевой адаптер 10 Mb (100 Mb рекомендуется)
+
+
+
+
+1.2 Требования к программному обеспечению 
+
+    Операционная система: Windows, Linux, MacOS
+
+    Сервер баз данных: Oracle 10g, PostgreSQL 8.x, MySQL 5.x, Firebird 1.5.3 (или выше), HSQL 1.7.2 (или выше)
+
+    Для запуска программы инсталляции необходимо наличие установленной 
+    JRE (Java Runtime Environment) версии 1.5 или выше на Вашем компьютере, 
+    если только сама инстялляция не включает JRE (это зависит от типа 
+    инсталляции). Загрузить последнюю версию JRE можно из сайта http://www.java.com  
+
+    Примечание: База данных HSQL входит в комплект инсталляции Plazma ERP+CRM 
+
+
+
+
+
+
+2. Загрузка инсталляции
+
+
+   Инсталляцию Plazma ERP+CRM можно загрузить из сайта http://plazma.sourceforge.net 
+
+   № Файл					Тип		ОС 		JRE 
+   --------------------------------------------------------------------------------------------
+   1  plazma-<version>-win32-installer.exe			Standalone	Windows 	Требует
+   2  plazma-<version>-win32-jre-installer.exe			Standalone	Windows 	Не требует (в комплекте) 
+   3  plazma-<version>-linux-gtk-installer.jar			Standalone	Linux 		Требует
+
+   4  plazma-<version>-win32-installer-demo.exe			Standalone DEMO	Windows 	Требует
+   5  plazma-<version>-win32-jre-installer-demo.exe		Standalone DEMO	Windows 	Не требует (в комплекте)
+   6  plazma-<version>-linux-gtk-installer-demo.jar		Standalone DEMO	Linux 		Требует
+
+   7  plazma-client-lite-<version>-win32-installer.exe		Lite Client	Windows		Требует
+   8  plazma-client-lite-<version>-linux-gtk-installer.jar	Lite Client	Linux		Требует
+      
+   9  plazma-server-lite-<version>-installer.jar		Lite Server	Independent	Require
+   
+   где <версия> - версия программы, например, {version} 
+
+
+
+
+3.  Инсталляция
+
+
+    Windows 
+    -------
+
+    Для jar файлов инсталяции в командной строке необходимо выполнить команду: java -jar <имя jar файла>
+    Для exe файлов инсталяции необходимо просто запустить данный фал на выполнение.
+
+
+    Linux 
+    -----
+
+    В командной строке выполнить команду: java -jar <имя jar файла> 
+
+    Если выбран вариант инсталляции с JRE, то вначале будет запущена установка JRE, а потом уже сама установка Plazma ERP+CRM
+    В процессе установки Plazma ERP+CRM необходимо вначале выбрать язык и каталог установки, далее необходимые компоненты установки. 
+
+
+
+4. Запуск
+
+
+
+4.1  Client/Standalone
+
+
+     Для запуска приложения необходимо выполнить следующие команды:
+
+
+     Windows
+     -------
+     
+     plazma.bat
+     
+     или
+     
+     java -Djava.library.path="lib\swt\win32" -jar launcher.jar plazma
+     
+     или выбрать пункт меню  Пуск -> Программы -> Plazma ERP+CRM <версия> -> Plazma ERP+CRM
+
+
+     Linux
+     -----
+     
+     plazma.sh
+     
+     или
+     
+     java -Djava.library.path="lib/swt/linux-gtk" -jar launcher.jar plazma
+
+
+
+
+ 
+4.2 Lite Server
+					
+      Для старта Lite сервера необходимо выполнить командный файл:
+
+
+      Windows
+      -------
+
+      start_server.bat
+
+
+      Linux
+      -----
+
+      start_server.sh
+
+

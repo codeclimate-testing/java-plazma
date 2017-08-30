@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menubar-config>
+
+
+<interface id="CarService">
+    <menubar id="CarService.SystemMenu">
+    
+    <menu id="Dictionaries" text="" type="Dictionaries">
+    
+               <menuitem action="NewDictionary"/>            
+           <menuitem action="ChooseDictionary"/>            
+        
+            <!--  MyOrganization submenu -->
+            <menu id="Dictionaries.MyOrganization" text="" type="Dictionaries.MyOrganization">
+                <menuitem action="OrganizationEditForm"/>
+                <menuitem text="-"/>
+                <menuitem action="BranchListForm"/>
+                <menuitem text="-"/>
+                <menuitem action="EmployeeListForm"/>
+                <menuitem text="-"/>
+                <menuitem action="DepartmentListForm"/>
+                <menuitem action="StoreListForm"/>
+                <menuitem action="ResponsibleListForm"/>
+                <menuitem text="-"/>
+                <menuitem action="DrugstoreListForm"/>
+                <menuitem text="-"/>                
+                <menuitem action="ShopListForm"/>                                
+                <menuitem text="-"/>                
+                <menuitem action="WarehouseListForm"/>
+            </menu>
+            
+            <menuitem text="-"/>
+            <menuitem action="PersonListForm"/>
+            <menuitem text="-"/>
+            <menuitem action="PartnerListForm"/>
+            <menuitem text="-"/>
+            <menuitem action="BankListForm"/>
+            <menuitem text="-"/>
+            <menuitem action="UnitListForm"/>
+            <menuitem action="CurrencyListForm"/>
+            <menuitem text="-"/>
+            <menuitem action="GoodsListForm"/>
+			<menuitem text="-"/>            
+            <menuitem action="CarPartListForm"/>            
+            <menuitem action="CarServListForm"/>
+            <menuitem action="CarPaintListForm"/>
+			<menuitem text="-"/>            
+            <menuitem action="CarDetailListForm"/>            
+            <menuitem text="-"/>
+    
+    	<menu id="Dictionaries.CarService" text="">
+			<menuitem action="CarListForm"/>
+			<menuitem text="-"/>            				
+			<menuitem action="CarClassListForm"/>
+			<menuitem action="CarMarkListForm"/>
+			<menuitem action="CarModelListForm"/>
+			<menuitem text="-"/>       
+			<menuitem action="CarPaintDetailTypeListForm"/>
+			<menuitem action="CarPaintTypeListForm"/>
+			<menuitem action="CarPaintMarkListForm"/>
+			<menuitem text="-"/> 				
+			<menuitem action="CarPrepareTypeListForm"/>			
+			<menuitem action="CarDamageLevelListForm"/>
+			<menuitem text="-"/> 										
+			<menuitem action="CarAgeListForm"/>													
+			<menuitem text="-"/> 				
+			<menuitem action="CarServTypeListForm"/>			
+			<menuitem action="CarServComplexityListForm"/>
+		</menu>
+	</menu>
+    
+    
+    <menu id="Documents" text=""  type="Documents">
+    
+    	<menu id="Documents.CarService" text="">
+			<menuitem action="CarServOrderListForm"/>		
+			<menuitem text="-"/>            																		
+			<menuitem action="CarMtrlFindRequestListForm"/>
+			<menuitem action="CarMtrlFindReportListForm"/>	
+			<menuitem text="-"/>		
+			<menuitem action="CarMtrlPurchaseRequestListForm"/>
+			<menuitem action="CarMtrlPurchaseReportListForm"/>			
+			<menuitem text="-"/>            							
+			<menuitem action="CarInsurerContractVariantListForm"/>		
+		</menu>
+	</menu>
+	</menubar>    
+</interface>
+
+
+</menubar-config>

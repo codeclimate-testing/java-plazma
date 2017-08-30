@@ -1,0 +1,33 @@
+
+ v_document.<vendor>.sql
+ ===================================================================
+ 
+ Databases have different syntax for manipulate YEAR, MONTH, DAY.
+
+
+ MySQL, HSQL
+ ===================================================================
+ YEAR(document_date)
+ MONTH(document_date)
+
+
+ Firebird
+ ===================================================================
+ EXTRACT (YEAR FROM document_date)
+ EXTRACT (MONTH FROM document_date)
+ 
+ PostgreSQL 
+ ===================================================================
+ TO_NUMBER(TO_CHAR(DOCUMENT_DATE, 'YYYY'), '9999')
+ TO_NUMBER(TO_CHAR(DOCUMENT_DATE, 'MM'), '99' )
+ 
+ Oracle 
+ ===================================================================
+ TO_NUMBER(TO_CHAR(DOCUMENT_DATE, 'YYYY'))
+ TO_NUMBER(TO_CHAR(DOCUMENT_DATE, 'MM'))
+
+
+
+
+
+

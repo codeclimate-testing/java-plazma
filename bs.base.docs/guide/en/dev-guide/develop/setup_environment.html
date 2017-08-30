@@ -1,0 +1,67 @@
+
+<html>
+<title>Eclipse IDE</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Configure environment</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Add variables</h3>
+
+After create/import the projects you have to add variables <b>PLAZMA_LIB</b> and <b>PLAZMA_SWT</b> (only for SWT client) to Eclipse environment.<br>
+<b>PLAZMA_LIB</b> is folder where locate common <b>.jar</b> files (module <b>lib</b>). For example: &lt;Plazma&gt;/lib <br>
+<b>PLAZMA_SWT</b> is folder where locate <b>swt.jar</b> file. For example: &lt;Plazma&gt;/lib/swt/win32 (Windows) or &lt;Plazma&gt;/lib/swt/linux-gtk (Linux)<br>
+
+<p><b>IMPORTANT!</b> If you don't set variable <b>PLAZMA_LIB</b>
+ or <b>.jar</b> files are not available you can have compilation error (<b>ClassNotFound</b>)
+
+<p>To create an variable you have to select menu <b>Window -> Preferences...</b>
+
+<p>Then select <b>Java -> Build Path -> Classpath Variables</b> in dialog <b>Preferences</b>
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/classpath-variables.png"/></td>
+ </tr>
+</table>
+
+<p>Next add new variable by press <b>New...</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/new-plazma-lib-variable.png"/></td>
+ </tr>
+</table>
+<p>Value <b>Path</b> is folder where locate files.
+
+<p>Next press <b>OK</b>
+
+<p>New variable is ready.
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-classpath-variables.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

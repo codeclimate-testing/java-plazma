@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbar-config>
+
+<interface id="All">
+
+    <toolbar>
+        <toolitem action="PartnerList"/>
+        <toolitem action="EmployeeList"/>
+        <toolitem action="BankList"/>
+        <toolitem action="-"/>
+        <toolitem action="GoodsList"/>        
+        <!--
+        <toolitem action="CurrencyList"/>
+        -->
+        
+        <toolitem action="-"/>
+        <toolitem action="DocumentList"/>
+        <toolitem action="ContractList"/>                
+        <toolitem action="-"/>    
+        <toolitem action="ProjectList"/>
+        <toolitem action="TaskList"/>
+        <toolitem action="-"/>    
+        <toolitem action="ReportList"/>
+        <toolitem action="-"/>            
+            
+        <!-- DISABLE
+        <toolitem action="PeriodList"/>
+        <toolitem action="-"/>
+        -->   
+        
+        <!--
+        <toolitem action="TitleWindowsAction"/>
+        <toolitem action="TitleVerticalWindowsAction"/>
+        <toolitem action="TitleHorizontalWindowsAction"/>
+        <toolitem action="CascadeWindowsAction"/>
+        <toolitem action="MaximizeWindowsAction"/>
+        -->
+        
+        <toolitem action="CloseWindowsAction"/>
+    </toolbar>
+    
+</interface>    
+</toolbar-config>

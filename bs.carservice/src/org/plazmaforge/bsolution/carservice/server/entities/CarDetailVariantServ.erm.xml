@@ -1,0 +1,11 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariantServ" table="CAR_DETAIL_VARIANT_SERV">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="carDetailVariant" column="CAR_DETAIL_VARIANT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariant"  required="true" />
+        	<reference name="carClass" column="CAR_CLASS_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarClass"/>
+        	<reference name="carServ" column="CAR_SERV_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServ"  required="true" />
+        	<attribute name="workHour" column="WORK_HOUR" type="Float" />
+        </attributes>
+    </entity>
+</entity-mapping>

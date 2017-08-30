@@ -1,0 +1,356 @@
+############################################################################
+# HR Enumeration Definition
+############################################################################
+
+#
+enum.gender.men=М
+enum.gender.women=Ж
+
+#
+enum.education-document-type.diploma=Диплом
+enum.education-document-type.certificat=Свидетельство
+
+#
+enum.military-valid-status.yes=Годен
+enum.military-valid-status.no=Не годен
+enum.military-valid-status.tmp=Временно годен
+
+############################################################################
+# HR Action Definition
+############################################################################
+
+
+# Person List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonListAction@name = Физические лица
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonListAction@tooltip = Физические лица
+
+
+
+# Family Status List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.FamilyStatusListAction@name = Семейное положение
+org.plazmaforge.bsolution.personality.richclient.swing.actions.FamilyStatusListAction@tooltip = Семейное положение
+
+
+# Military Rank List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.MilitaryRankListAction@name = Звания
+org.plazmaforge.bsolution.personality.richclient.swing.actions.MilitaryRankListAction@tooltip = Звания
+
+# Military Speciality List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.MilitarySpecialityListAction@name = Воинские специальности
+org.plazmaforge.bsolution.personality.richclient.swing.actions.MilitarySpecialityListAction@tooltip = Воинские специальности
+
+# Military Status List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.MilitaryStatusListAction@name = Воинский статус
+org.plazmaforge.bsolution.personality.richclient.swing.actions.MilitaryStatusListAction@tooltip = Воинский статус
+
+
+# Speciality List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.SpecialityListAction@name = Специальности
+org.plazmaforge.bsolution.personality.richclient.swing.actions.SpecialityListAction@tooltip = Специальности
+
+# Person Document Type List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonDocumentTypeListAction@name = Типы документов физ. лиц.
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonDocumentTypeListAction@tooltip = Типы документов физ. лиц.
+
+
+
+
+# Academic Degree List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.AcademicDegreeListAction@name = Учёные степени
+org.plazmaforge.bsolution.personality.richclient.swing.actions.AcademicDegreeListAction@tooltip = Учёные степени
+
+# Education Institute List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.EducationInstituteListAction@name = Учебные заведениея
+org.plazmaforge.bsolution.personality.richclient.swing.actions.EducationInstituteListAction@tooltip = Учебные заведениея
+
+# Education Form List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.EducationFormListAction@name = Формы обучениея
+org.plazmaforge.bsolution.personality.richclient.swing.actions.EducationFormListAction@tooltip = Формы обучениея
+
+# Education Type List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.EducationTypeListAction@name = Виды обучения
+org.plazmaforge.bsolution.personality.richclient.swing.actions.EducationTypeListAction@tooltip = Виды обучения
+
+# Familiarity List Action
+org.plazmaforge.bsolution.personality.richclient.swing.actions.FamiliarityListAction@name = Степени родства
+org.plazmaforge.bsolution.personality.richclient.swing.actions.FamiliarityListAction@tooltip = Степени родства
+
+
+
+
+#
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonEducationListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonEducationListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonEducationListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonEducationListAction@name=Образование
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonEducationListAction@tooltip=Образование
+
+#
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonFamilyListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonFamilyListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonFamilyListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonFamilyListAction@name=Состав семьи
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonFamilyListAction@tooltip=Состав семьи
+
+#
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonJobListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonJobListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonJobListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonJobListAction@name=Трудовая деятельность
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonJobListAction@tooltip=Трудовая деятельность
+
+#
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonLanguageListAction@image=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonLanguageListAction@disabledimage=olmari/Setup.gif
+#org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonLanguageListAction@rolloverimage=olmari/Setup.gif
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonLanguageListAction@name=Языки
+org.plazmaforge.bsolution.personality.richclient.swing.actions.PersonLanguageListAction@tooltip=Языки
+
+############################################################################
+# List Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonList@title=Список физических лиц
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonList@table.column-last-name.name=Фамилия
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonList@table.column-first-name.name=Имя
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonList@table.column-middle-name.name=Отчество
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamilyStatusList@title=Семейное положение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamilyStatusList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamilyStatusList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryRankList@title=Воинские звания
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryRankList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryRankList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitarySpecialityList@title=Воинские специальности
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitarySpecialityList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitarySpecialityList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryStatusList@title=Воинский статус
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryStatusList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryStatusList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.SpecialityList@title=Специальность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.SpecialityList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.SpecialityList@table.column-name.name=Название
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonDocumentTypeList@title=Типы документов физ. лиц.
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonDocumentTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonDocumentTypeList@table.column-name.name=Название
+
+
+
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.AcademicDegreeList@title=Учёные сепени
+org.plazmaforge.bsolution.personality.richclient.swing.forms.AcademicDegreeList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationFormList@title=Формы образования
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationFormList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationTypeList@title=Виды образования
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationTypeList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationInstituteList@title=Учебные заведения
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationInstituteList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamiliarityList@title=Степени родства
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamiliarityList@table.column-name.name=Название
+
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@title=Образование
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@table.column-education-type-name.name=Вид образования
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@table.column-education-form-name.name=Форма обучения
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@table.column-education-institute-name.name=Учебное заведение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@table.column-end-date.name=Дата окончания
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@table.column-faculty.name=Факультет
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationList@table.column-academic-degree-name.name=Учёная степень
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyList@title=Состав семьи
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyList@table.column-name.name=ФИО
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyList@table.column-familiarity-name.name=Родство
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyList@table.column-birth-date.name=Дата рождения
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobList@title=Трудовая деятельность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobList@table.column-start-date.name=Поступление
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobList@table.column-end-date.name=Уход
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobList@table.column-organization.name=Организация
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobList@table.column-position.name=Профессия/Должность
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonLanguageList@title=Языки
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonLanguageList@table.column-language-name.name=Язык
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonLanguageList@table.column-easy.name=Свободно
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@title=Физ. лицо
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.title.common.text=Основные
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.title.document.text=Документы
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.title.identity.text=Удостоверение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.title.diploma.text=Диплом
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.title.military.text=Воинский учёт
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-last-name.text=Фамилия
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-first-name.text=Имя
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-middle-name.text=Отчество
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-nationality.text=Гражданство
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-birth-date.text=Дата рождения
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-gender.text=Пол
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-family-status.text=Семейное положение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-country-residence.text=Страна ПМЖ
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-language.text=Язык
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-tax-code.text=ИНН
+
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-document-type.text=Вид
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-document-series.text=Серия
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-document-number.text=№
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-document-date.text=Дата выдачи
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-document-given.text=Кем выдан
+
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-diploma-type.text=Вид
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-diploma-series.text=Серия
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-diploma-number.text=№
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-diploma-date.text=Дата выдачи
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-diploma-speciality.text=Специальность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-diploma-qualification.text=Квалификация
+
+
+
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-military-status.text=Статус
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-military-rank.text=Звание
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-military-speciality.text=ВУС
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-valid-status.text=Годность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-military-registration.text=Военкомат
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@panel.label-special-record.text=Спецучёт
+
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-address.name=Адреса
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-address.column-address-type.name=Тип
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-address.column-address-string.name=Адрес
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-phone.name=Телефоны
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-phone.column-phone-type.name=Тип
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-phone.column-phone-string.name=Телефон
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-email.name=Email
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-email.column-email-address.name=Email
+
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-web.name=Web
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEdit@table-web.column-url.name=URL
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamilyStatusEdit@title=Семейное положение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamilyStatusEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamilyStatusEdit@panel.label-name.text=Название
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryRankEdit@title=Воинские звания
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryRankEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryRankEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitarySpecialityEdit@title=Воиская специальность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitarySpecialityEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitarySpecialityEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryStatusEdit@title=Воинский статус
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryStatusEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.MilitaryStatusEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.SpecialityEdit@title=Специальность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.SpecialityEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.SpecialityEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonDocumentTypeEdit@title=Типы документов физ. лиц.
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonDocumentTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonDocumentTypeEdit@panel.label-name.text=Название
+
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.AcademicDegreeEdit@title=Учёная степень
+org.plazmaforge.bsolution.personality.richclient.swing.forms.AcademicDegreeEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationInstituteEdit@title=Учебное заведение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationInstituteEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationFormEdit@title=Форма образования
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationFormEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationTypeEdit@title=Вид образования
+org.plazmaforge.bsolution.personality.richclient.swing.forms.EducationTypeEdit@panel.label-name.text=Название
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamiliarityEdit@title=Степень родства
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamiliarityEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.personality.richclient.swing.forms.FamiliarityEdit@panel.label-child.text=Дети
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@title=Образование
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@panel.label-education-type.text=Вид образования
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@panel.label-education-form.text=Форма обучения
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@panel.label-education-institute.text=Учебное заведение
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@panel.label-end-date.text=Дата окончания
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@panel.label-faculty.text=Факультет
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonEducationEdit@panel.label-academic-degree.text=Учёная степень
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyEdit@title=Образование
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyEdit@panel.label-name.text=ФИО
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyEdit@panel.label-familiarity.text=Родство
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonFamilyEdit@panel.label-birth-date.text=Дата рождения
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobEdit@title=Трудовая деятельность
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobEdit@panel.label-start-date.text=Поступление
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobEdit@panel.label-end-date.text=Уход
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobEdit@panel.label-organization.text=Организация
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonJobEdit@panel.label-position.text=Профессия/Должность
+
+
+#
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonLanguageEdit@title=Язык
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonLanguageEdit@panel.label-language.text=Язык
+org.plazmaforge.bsolution.personality.richclient.swing.forms.PersonLanguageEdit@panel.label-easy.text=Свободно

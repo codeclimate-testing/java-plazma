@@ -1,0 +1,99 @@
+
+<html>
+<title>Overview</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE>
+<TR>
+<TD>
+
+   <h2 align="center">Overview</h2>
+   <hr>
+   <br><br><br><br>
+   Welcome to the <b>Plazma ERP+CRM</b><br><br>
+   Plazma ERP+CRM software provides the following benefits: 
+
+   <p>
+
+   <!-- <a target="main" href="../partner/index.html">Accounts Management</a> -->
+   <b>Accounts Management</b> <br>
+   Accumulate all your accounts and opportunities in a single database. 
+   Maximize team selling effectiveness by combining all account data in one place.
+   This includes orders, contacts, tasks, emails, files, comment. 
+   Segment all your accounts by groups and categories. 
+
+   <p>
+   <!-- <a target="main" href="../contact/index.html">Contacts Management</a> -->
+   <b>Contacts Management</b> <br> 
+   Enables management of your contacts effectively with the history of all 
+   negotiations, phone calls, tasks, meetings, emails and documents. 
+   The Plazma ERP+CRM powerful search engine helps you to track down key 
+   information quickly using various characteristics. 
+
+   <p>
+   <tr><td>
+   <!-- <a target="main" href="../product/index.html">Products Management</a> -->
+   <b>Products Management</b> <br>
+   Accumulate all your product information providing and maximizing all 
+   product sales opportunities. 
+   Maximize team selling effectiveness by combining all contacts to products.
+
+   <p>
+   <!-- <a target="main" href="../sale/index.html">Sales Management</a>  -->
+   <b>Sales Management</b> <br>
+   Capture and reference key information relating to sales opportunities. 
+   Forecast revenue and measure sales process effectiveness. 
+   Track opportunity status and dates. 
+   Analyze sales by manager, product, customer segment. 
+   View all actions, mails and documents related to sale.
+
+   <!-- <p> -->
+   <!-- <a target="main" href="../purchase/index.html">Purchases</a> -->
+   <!-- <b>Purchases</b> <br> -->
+
+   <!-- <p> -->
+   <!-- <a target="main" href="../hr/index.html">HR</a> -->
+   <!-- <b>HR</b> Human Resources -->
+
+   <!-- <p> -->
+   <!-- <a target="main" href="../payroll/index.html">Payroll</a> -->
+   <!-- <b>Payroll</b> -->
+
+   <!-- <p> -->
+   <!-- <a target="main" href="../accounting/index.html">Accounting</a> -->
+   <!-- <b>Accounting</b> --> 
+
+   <p>
+   <!-- <a target="main" href="../project/index.html">project Management</a> -->
+   <b>Tasks Management</b> <br>
+   Manage schedules and keep track of activities and events for multiple users. 
+   Track phone calls, meetings, to-dos, events, and literature requests. Monitor the work schedule of your employees. View all tasks per sales opportunity, account or contact.
+
+   <p>
+   <b>Campaigns Management</b> <br>
+   Plan and track your marketing campaigns. Analyze campaign results. 
+   Compare campaigns effectiveness. Optimize your marketing expences.
+
+   <p>
+   <b>Analytical Reports</b> <br>
+   Analyze the effectiveness of your sales team. Generate activity reports. 
+   Analyze sales forecast and results. Export data from any grid to PDF, HTML, XLS
+   
+</TD>
+</TR>
+</TABLE>
+   
+   
+
+</body>
+</html>
+
+

@@ -1,0 +1,19 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PermissionView" class="org.plazmaforge.bsolution.security.common.beans.PermissionView" table="V_SYS_PERMISSION" >
+        <attributes>
+        	<key name="id" column="ID" type="Integer"  generator-type="increment"/>
+			<attribute name="secureObjectId" column="SECURE_OBJECT_ID" type="Integer" />        
+			<attribute name="permissionId" column="PERMISSION_ID" type="Integer" />             
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="objectId" column="OBJECT_ID" type="String" />
+        	<attribute name="roleId" column="ROLE_ID" type="Integer" />   
+        	<attribute name="objectType" column="OBJECT_TYPE" type="String" />             
+        	<attribute name="read" column="IS_READ" type="Boolean"/>
+        	<attribute name="write" column="IS_WRITE" type="Boolean"/>
+        	<attribute name="exec" column="IS_EXEC" type="Boolean"/>
+        </attributes>
+    </entity>
+
+
+

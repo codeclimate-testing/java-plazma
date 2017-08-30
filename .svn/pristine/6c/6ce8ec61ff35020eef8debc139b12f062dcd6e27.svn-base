@@ -1,0 +1,15 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPaintTypeVolume" table="CAR_INSURER_PAINT_TYPE_VOLUME">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="carClass" column="CAR_CLASS_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarClass"/>
+        	<reference name="carPaintDetailType" column="CAR_PAINT_DETAIL_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintDetailType"/>
+        	<attribute name="volume" column="VOLUME" type="Float" />        
+        	<attribute name="volumeTo" column="VOLUME_TO" type="Float" />        
+        	<attribute name="valueType" column="VALUE_TYPE" type="Integer" />    
+        	<attribute name="percentOfBasic" column="PERCENT_OF_BASIC" type="Float" />
+        	<attribute name="range" column="IS_RANGE" type="Boolean"/>
+        	<reference name="contractVariant" column="CONTRACT_VARIANT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerContractVariant"  required="true" />
+        </attributes>
+    </entity>
+</entity-mapping>

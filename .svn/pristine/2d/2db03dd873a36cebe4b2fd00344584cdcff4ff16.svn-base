@@ -1,0 +1,19 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="User" class="org.plazmaforge.bs.security.shared.entities.User" table="SYS_USER">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="login" column="USER_NAME" type="String"  required="true" update="false"/>
+        	<attribute name="password" column="USER_PASSWORD" type="String"  required="true" />
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="contactId" column="CONTACT_ID" type="Integer" />
+        	<attribute name="regDate" column="REG_DATE" type="Date"  required="true" />        
+        	<attribute name="entityId" column="ENTITY_ID" type="String" />
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+
+<!--
+        	<collection name="userRoleList" join-class="org.plazmaforge.bsolution.security.common.beans.UserRole" join-attribute="user" cascade="all"/>
+        	<collection name="userOrganizationList" join-class="org.plazmaforge.bsolution.security.common.beans.UserOrganization" join-attribute="user" cascade="all"/>
+-->
+        </attributes>
+    </entity>
+

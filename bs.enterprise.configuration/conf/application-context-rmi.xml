@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+    <!-- Only for RMI Service Locator -->
+    <bean id="rmiServiceInvoker" class="org.plazmaforge.framework.platform.service.impl.rmi.RMIServiceInvoker" />
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName"><value>ServiceInvoker</value></property>
+        <property name="service"> <ref bean="rmiServiceInvoker"/>  </property>
+        <property name="serviceInterface"><value>org.plazmaforge.framework.platform.service.ServiceInvoker</value></property>
+        <property name="registryPort"><value>2005</value></property>
+    </bean>
+    
+</beans>

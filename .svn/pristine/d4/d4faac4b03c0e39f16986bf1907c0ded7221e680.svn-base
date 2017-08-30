@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form-config xmlns="http://plazmaforge.org/config/form-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" provider="Plazma Forge" version="1.0">
+  <form name="SaleOrderListForm">
+    <reports>
+      <report ref="SaleOrder" />
+    </reports>
+  </form>
+  <form name="PurchaseOrderListForm">
+    <reports>
+      <report ref="PurchaseOrder" />
+    </reports>
+  </form>
+  <form name="GoodsOutcomeListForm">
+    <reports>
+      <report ref="GoodsOutcome" />
+      <report ref="WarrantyDocument" />
+    </reports>
+  </form>
+  <form name="GoodsIncomeListForm">
+    <reports>
+      <report ref="GoodsIncome" />
+    </reports>
+  </form>
+  <form name="InventoryMoveListForm">
+    <reports>
+      <report ref="InventoryMove" />
+    </reports>
+  </form>
+  <form name="InventoryWriteoffListForm">
+    <reports>
+      <report ref="InventoryWriteoff" />
+    </reports>
+  </form>
+  <form name="SaleInvoiceListForm">
+    <reports>
+      <report ref="Invoice" />
+    </reports>
+  </form>
+  <form name="SaleTaxWaybillListForm">
+    <reports>
+      <report ref="GoodsTaxWaybill" />
+    </reports>
+  </form>
+  <form name="SalePlanListForm" />
+  <form name="PaymentIncomeListForm">
+    <reports>
+      <report ref="Payment" />
+      <report ref="PaymentTwo" />
+      <report ref="PaymentDetails" />
+      <report ref="PaymentDetailsTwo" />
+    </reports>
+  </form>
+  <form name="PaymentOutcomeListForm">
+    <reports>
+      <report ref="Payment" />
+      <report ref="PaymentTwo" />
+      <report ref="PaymentDetails" />
+      <report ref="PaymentDetailsTwo" />
+    </reports>
+  </form>
+  <form name="PersonListForm">
+    <actions>
+      <action ref="PersonEducationListForm" />
+      <action ref="PersonFamilyListForm" />
+      <action ref="PersonJobListForm" />
+      <action ref="PersonLanguageListForm" />
+    </actions>
+  </form>
+  <form name="PersonEditForm">
+    <actions>
+      <action ref="PersonEducationListForm" />
+      <action ref="PersonFamilyListForm" />
+      <action ref="PersonJobListForm" />
+      <action ref="PersonLanguageListForm" />
+    </actions>
+  </form>
+  <form name="EmployeeListForm">
+    <reports>
+      <report ref="PersonCardReport" />
+    </reports>
+  </form>
+  <form name="PartnerListForm">
+    <actions>
+      <action ref="PartnerBankAccountListForm" />
+      <action ref="PartnerContactListForm" />
+      <action ref="PartnerContractListForm" />
+      <action ref="PartnerDocumentListForm" />
+      <action ref="PartnerSaleOrderListForm" />
+      <action ref="PartnerInvoiceListForm" />
+      <action ref="PartnerProjectListForm" />
+    </actions>
+    <reports>
+      <report ref="PartnerInfo" />
+    </reports>
+  </form>
+  <form name="PartnerEditForm">
+    <actions>
+      <action ref="PartnerBankAccountListForm" />
+      <action ref="PartnerContactListForm" />
+      <action ref="PartnerContractListForm" />
+      <action ref="PartnerDocumentListForm" />
+      <action ref="PartnerSaleOrderListForm" />
+      <action ref="PartnerInvoiceListForm" />
+      <action ref="PartnerProjectListForm" />
+    </actions>
+  </form>
+  <form name="GoodsListForm">
+    <actions>
+      <action ref="ProductStateInfoAction" />
+      <action ref="ProductMoveInfoAction" />
+    </actions>
+  </form>
+  <form name="ContractListForm">
+    <reports>
+      <report ref="TransportContractInt" />
+    </reports>
+  </form>
+  <form name="PermissionListForm">
+    <actions>
+      <action ref="SyncSecureAction" />
+    </actions>
+  </form>
+</form-config>
+

@@ -1,0 +1,1 @@
+java -Djava.library.path="../lib/swt/linux-gtk" -jar launcher.jar "$@"

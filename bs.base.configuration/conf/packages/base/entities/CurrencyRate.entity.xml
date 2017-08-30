@@ -1,0 +1,15 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CurrencyRate" class="org.plazmaforge.bsolution.base.common.beans.CurrencyRate" table="CURRENCY_RATE">
+    	<aliases>
+    		<alias name="baseCurrencyCode" attribute="baseCurrency.code"/>
+    		<alias name="currencyCode" attribute="currency.code"/>
+    	</aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+         	<attribute name="date" column="CURRENCY_RATE_DATE" type="Date" />
+         	<attribute name="rate" column="CURRENCY_RATE" type="Double" />
+         	<reference name="baseCurrency" column="BASE_CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency"  required="true" />
+         	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency"  required="true" />         
+        </attributes>
+    </entity>
+

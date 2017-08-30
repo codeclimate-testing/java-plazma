@@ -1,0 +1,3293 @@
+
+Configuration environment:
+------------------------------------------------------------------------------
+ROOT_DIR = [E:\Dir\Plazma\bs.carservice]
+CONF_NAME = [conf]
+CONF_PREFIX = []
+LOGS_DIR = [E:\Dir\Plazma\bs.carservice\logs]
+APPLICATION_CONFIG_FILE = [E:\Dir\Plazma\bs.base.configuration\conf\standalone\application-swt.xml]
+SYSTEM_CONFIG_FILE = [E:\Dir\Plazma\bs.base.configuration\conf\standalone\system-config.xml]
+SERVICE_LOCATOR_CLASS = [org.plazmaforge.framework.platform.service.impl.spring.SpringServiceLocator]
+APPLICATION_CONTEXT_FILES:
+001: E:\Dir\Plazma\bs.base.configuration\conf\application-context-ds.xml
+002: E:\Dir\Plazma\bs.base.configuration\conf\application-context-security.xml
+003: E:\Dir\Plazma\bs.base.configuration\conf\application-context-rmi.xml
+004: E:\Dir\Plazma\bs.base.configuration\conf\application-context.xml
+005: E:\Dir\Plazma\bs.base.configuration\conf\packages/base/service-impl.xml
+006: E:\Dir\Plazma\bs.base.configuration\conf\packages/security/service-impl.xml
+007: E:\Dir\Plazma\bs.base.configuration\conf\packages/contact/service-impl.xml
+008: E:\Dir\Plazma\bs.base.configuration\conf\packages/personality/service-impl.xml
+009: E:\Dir\Plazma\bs.base.configuration\conf\packages/organization/service-impl.xml
+010: E:\Dir\Plazma\bs.base.configuration\conf\packages/document/service-impl.xml
+011: E:\Dir\Plazma\bs.base.configuration\conf\packages/employee/service-impl.xml
+012: E:\Dir\Plazma\bs.base.configuration\conf\packages/partner/service-impl.xml
+013: E:\Dir\Plazma\bs.base.configuration\conf\packages/bank/service-impl.xml
+014: E:\Dir\Plazma\bs.base.configuration\conf\packages/cash/service-impl.xml
+015: E:\Dir\Plazma\bs.base.configuration\conf\packages/product/service-impl.xml
+016: E:\Dir\Plazma\bs.base.configuration\conf\packages/payroll/service-impl.xml
+017: E:\Dir\Plazma\bs.base.configuration\conf\packages/goods/service-impl.xml
+018: E:\Dir\Plazma\bs.base.configuration\conf\packages/inventory/service-impl.xml
+019: E:\Dir\Plazma\bs.base.configuration\conf\packages/sale/service-impl.xml
+020: E:\Dir\Plazma\bs.base.configuration\conf\packages/purchase/service-impl.xml
+021: E:\Dir\Plazma\bs.base.configuration\conf\packages/project/service-impl.xml
+022: E:\Dir\Plazma\bs.base.configuration\conf\packages/finance/service-impl.xml
+023: E:\Dir\Plazma\bs.base.configuration\conf\packages/pim/service-impl.xml
+024: E:\Dir\Plazma\bs.carservice\conf\packages/carservice/service-impl.xml
+025: E:\Dir\Plazma\bs.base.configuration\conf\packages/base/service.xml
+026: E:\Dir\Plazma\bs.base.configuration\conf\packages/security/service.xml
+027: E:\Dir\Plazma\bs.base.configuration\conf\packages/contact/service.xml
+028: E:\Dir\Plazma\bs.base.configuration\conf\packages/personality/service.xml
+029: E:\Dir\Plazma\bs.base.configuration\conf\packages/organization/service.xml
+030: E:\Dir\Plazma\bs.base.configuration\conf\packages/document/service.xml
+031: E:\Dir\Plazma\bs.base.configuration\conf\packages/employee/service.xml
+032: E:\Dir\Plazma\bs.base.configuration\conf\packages/partner/service.xml
+033: E:\Dir\Plazma\bs.base.configuration\conf\packages/bank/service.xml
+034: E:\Dir\Plazma\bs.base.configuration\conf\packages/cash/service.xml
+035: E:\Dir\Plazma\bs.base.configuration\conf\packages/product/service.xml
+036: E:\Dir\Plazma\bs.base.configuration\conf\packages/payroll/service.xml
+037: E:\Dir\Plazma\bs.base.configuration\conf\packages/goods/service.xml
+038: E:\Dir\Plazma\bs.base.configuration\conf\packages/inventory/service.xml
+039: E:\Dir\Plazma\bs.base.configuration\conf\packages/sale/service.xml
+040: E:\Dir\Plazma\bs.base.configuration\conf\packages/purchase/service.xml
+041: E:\Dir\Plazma\bs.base.configuration\conf\packages/project/service.xml
+042: E:\Dir\Plazma\bs.base.configuration\conf\packages/finance/service.xml
+043: E:\Dir\Plazma\bs.base.configuration\conf\packages/pim/service.xml
+044: E:\Dir\Plazma\bs.carservice\conf\packages/carservice/service.xml
+SPRING CLASS LOADER: sun.misc.Launcher$AppClassLoader@d9f9c3
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ORGANIZATION_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c2.BANK_ACCOUNT_ID as c2_9,
+  c2.PARTNER_TYPE_ID as c2_10,
+  c4.ID as c4_1,
+  c4.NAME as c4_2,
+  c2.PARTNER_GROUP_ID as c2_11,
+  c5.ID as c5_1,
+  c5.NAME as c5_2,
+  c2.LEDGER_ACCOUNT_ID as c2_12,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.PARENT_ID as c6_4,
+  c2.RESPONSIBLE_ID as c2_13,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.TITLE_NAME as c7_4,
+  c7.FIRST_NAME as c7_5,
+  c7.MIDDLE_NAME as c7_6,
+  c7.LAST_NAME as c7_7,
+  c8.CONTACTABLE_ID as c8_1,
+  c8.OWNER_ID as c8_2,
+  c8.PHONE_STRING as c8_3,
+  c8.PHONE_COMPILE as c8_4,
+  c9.CONTACTABLE_ID as c9_1,
+  c9.OWNER_ID as c9_2,
+  c9.CITY_NAME as c9_3,
+  c9.LOCALITY_TYPE_NAME as c9_4,
+  c9.LOCALITY_NAME as c9_5,
+  c9.ADDRESS_STRING as c9_6,
+  c9.LOCALITY_ADDRESS_STRING as c9_7,
+  c9.FULL_ADDRESS_STRING as c9_8,
+  c3.ID as c3_1,
+  c1.IS_INIT as c1_3,
+  c1.APP_VERSION as c1_4,
+  c1.DB_VERSION as c1_5
+FROM
+  SYS_INFO c1
+LEFT JOIN PARTNER c2 ON c1.ORGANIZATION_ID = c2.ID
+LEFT JOIN ORGANIZATION c3 ON c2.ID = c3.ID
+LEFT JOIN PARTNER_TYPE c4 ON c2.PARTNER_TYPE_ID = c4.ID
+LEFT JOIN PARTNER_GROUP c5 ON c2.PARTNER_GROUP_ID = c5.ID
+LEFT JOIN LEDGER_ACCOUNT c6 ON c2.LEDGER_ACCOUNT_ID = c6.ID
+LEFT JOIN CONTACT c7 ON c2.RESPONSIBLE_ID = c7.ID
+LEFT JOIN V_DEF_CONTACTABLE_PHONE c8 ON c2.ID = c8.CONTACTABLE_ID AND c8.ENTITY_ID = 'PARTNER'
+LEFT JOIN V_DEF_CONTACTABLE_ADDRESS c9 ON c2.ID = c9.CONTACTABLE_ID AND c9.ENTITY_ID = 'PARTNER'
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PERIOD_ID as c1_2,
+  c2.ID as c2_1,
+  c2.START_DATE as c2_2,
+  c2.END_DATE as c2_3,
+  c2.NAME as c2_4,
+  c2.PREV_PERIOD_ID as c2_5,
+  c2.PERIOD_TYPE_ID as c2_6,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c1.CURRENCY_ID as c1_3,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NUMERIC_CODE as c4_3,
+  c4.NAME as c4_4,
+  c4.FULL_NAME as c4_5,
+  c1.UNIT_ID as c1_4,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.FULL_NAME as c5_4,
+  c1.TAX_ID as c1_5,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.TAX_PERCENT as c6_4,
+  c6.AMOUNT as c6_5,
+  c1.IS_CALCULATE_ACCOUNTING as c1_6,
+  c1.IS_INTERNATIONAL_ATTRIBUTES as c1_7,
+  c1.IS_MULTI_CURRENCIES as c1_8,
+  c1.IS_AUTO_SET_CURRENCY_RATE as c1_9,
+  c1.IS_PROJECT_IN_DOCUMENT as c1_10,
+  c1.IS_AUTO_CALCULATE_PROD_REST as c1_11,
+  c1.PARTNER_ID as c1_12,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.FULL_NAME as c7_4,
+  c7.NEC as c7_5,
+  c7.IDN as c7_6,
+  c7.TAX_DOC_NO as c7_7,
+  c7.DESCRIMINATOR as c7_8,
+  c1.SUPPLIER_ID as c1_13,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.FULL_NAME as c8_4,
+  c8.NEC as c8_5,
+  c8.IDN as c8_6,
+  c8.TAX_DOC_NO as c8_7,
+  c8.DESCRIMINATOR as c8_8,
+  c1.CUSTOMER_ID as c1_14,
+  c9.ID as c9_1,
+  c9.CODE as c9_2,
+  c9.NAME as c9_3,
+  c9.FULL_NAME as c9_4,
+  c9.NEC as c9_5,
+  c9.IDN as c9_6,
+  c9.TAX_DOC_NO as c9_7,
+  c9.DESCRIMINATOR as c9_8,
+  c1.RESPONSIBLE_ID as c1_15,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c10.TITLE_NAME as c10_4,
+  c10.FIRST_NAME as c10_5,
+  c10.MIDDLE_NAME as c10_6,
+  c10.LAST_NAME as c10_7,
+  c1.MTRL_RESPONSIBLE_ID as c1_16,
+  c11.ID as c11_1,
+  c11.ORGANIZATION_ID as c11_2,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3,
+  c12.FULL_NAME as c12_4,
+  c12.NEC as c12_5,
+  c12.IDN as c12_6,
+  c12.TAX_DOC_NO as c12_7,
+  c12.DESCRIMINATOR as c12_8,
+  c11.WAREHOUSE_ID as c11_3,
+  c14.ID as c14_1,
+  c14.OWNER_ID as c14_2,
+  c14.ENTITY_ID as c14_3,
+  c14.ENTITY_CODE as c14_4,
+  c14.ENTITY_NAME as c14_5,
+  c14.PARENT_ID as c14_6,
+  c14.NAME as c14_7,
+  c11.CONTACT_ID as c11_4,
+  c15.ID as c15_1,
+  c15.CODE as c15_2,
+  c15.NAME as c15_3,
+  c15.TITLE_NAME as c15_4,
+  c15.FIRST_NAME as c15_5,
+  c15.MIDDLE_NAME as c15_6,
+  c15.LAST_NAME as c15_7,
+  c1.WAREHOUSE_ID as c1_17,
+  c16.ID as c16_1,
+  c16.OWNER_ID as c16_2,
+  c16.ENTITY_ID as c16_3,
+  c16.ENTITY_CODE as c16_4,
+  c16.ENTITY_NAME as c16_5,
+  c16.ORGANIZATION_ID as c16_6,
+  c17.ID as c17_1,
+  c17.CODE as c17_2,
+  c17.NAME as c17_3,
+  c17.FULL_NAME as c17_4,
+  c17.NEC as c17_5,
+  c17.IDN as c17_6,
+  c17.TAX_DOC_NO as c17_7,
+  c17.DESCRIMINATOR as c17_8,
+  c16.PARENT_ID as c16_7,
+  c16.NAME as c16_8,
+  c1.INCOME_WAREHOUSE_ID as c1_18,
+  c19.ID as c19_1,
+  c19.OWNER_ID as c19_2,
+  c19.ENTITY_ID as c19_3,
+  c19.ENTITY_CODE as c19_4,
+  c19.ENTITY_NAME as c19_5,
+  c19.ORGANIZATION_ID as c19_6,
+  c20.ID as c20_1,
+  c20.CODE as c20_2,
+  c20.NAME as c20_3,
+  c20.FULL_NAME as c20_4,
+  c20.NEC as c20_5,
+  c20.IDN as c20_6,
+  c20.TAX_DOC_NO as c20_7,
+  c20.DESCRIMINATOR as c20_8,
+  c19.PARENT_ID as c19_7,
+  c19.NAME as c19_8,
+  c1.OUTCOME_WAREHOUSE_ID as c1_19,
+  c22.ID as c22_1,
+  c22.OWNER_ID as c22_2,
+  c22.ENTITY_ID as c22_3,
+  c22.ENTITY_CODE as c22_4,
+  c22.ENTITY_NAME as c22_5,
+  c22.ORGANIZATION_ID as c22_6,
+  c23.ID as c23_1,
+  c23.CODE as c23_2,
+  c23.NAME as c23_3,
+  c23.FULL_NAME as c23_4,
+  c23.NEC as c23_5,
+  c23.IDN as c23_6,
+  c23.TAX_DOC_NO as c23_7,
+  c23.DESCRIMINATOR as c23_8,
+  c22.PARENT_ID as c22_7,
+  c22.NAME as c22_8
+FROM
+  ENTERPRISE_CONTEXT c1
+LEFT JOIN PERIOD c2 ON c1.PERIOD_ID = c2.ID
+LEFT JOIN PERIOD_TYPE c3 ON c2.PERIOD_TYPE_ID = c3.ID
+LEFT JOIN CURRENCY c4 ON c1.CURRENCY_ID = c4.ID
+LEFT JOIN UNIT c5 ON c1.UNIT_ID = c5.ID
+LEFT JOIN TAX c6 ON c1.TAX_ID = c6.ID
+LEFT JOIN PARTNER c7 ON c1.PARTNER_ID = c7.ID
+LEFT JOIN PARTNER c8 ON c1.SUPPLIER_ID = c8.ID
+LEFT JOIN PARTNER c9 ON c1.CUSTOMER_ID = c9.ID
+LEFT JOIN CONTACT c10 ON c1.RESPONSIBLE_ID = c10.ID
+LEFT JOIN MTRL_RESPONSIBLE c11 ON c1.MTRL_RESPONSIBLE_ID = c11.ID
+LEFT JOIN PARTNER c12 ON c11.ORGANIZATION_ID = c12.ID
+LEFT JOIN ORGANIZATION c13 ON c12.ID = c13.ID
+LEFT JOIN V_WAREHOUSE_UNION c14 ON c11.WAREHOUSE_ID = c14.ID
+LEFT JOIN CONTACT c15 ON c11.CONTACT_ID = c15.ID
+LEFT JOIN V_WAREHOUSE_UNION c16 ON c1.WAREHOUSE_ID = c16.ID
+LEFT JOIN PARTNER c17 ON c16.ORGANIZATION_ID = c17.ID
+LEFT JOIN ORGANIZATION c18 ON c17.ID = c18.ID
+LEFT JOIN V_WAREHOUSE_UNION c19 ON c1.INCOME_WAREHOUSE_ID = c19.ID
+LEFT JOIN PARTNER c20 ON c19.ORGANIZATION_ID = c20.ID
+LEFT JOIN ORGANIZATION c21 ON c20.ID = c21.ID
+LEFT JOIN V_WAREHOUSE_UNION c22 ON c1.OUTCOME_WAREHOUSE_ID = c22.ID
+LEFT JOIN PARTNER c23 ON c22.ORGANIZATION_ID = c23.ID
+LEFT JOIN ORGANIZATION c24 ON c23.ID = c24.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ENTITY_ID as c1_2,
+  c1.OWNER_ID as c1_3,
+  c1.NAME as c1_4
+FROM
+  BUSINESSABLE c1
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.DATE_FORMAT as c1_2,
+  c1.TIME_FORMAT as c1_3,
+  c1.NUMBER_FORMAT as c1_4,
+  c1.INTEGER_FORMAT as c1_5,
+  c1.CURRENCY_FORMAT as c1_6,
+  c1.PERCENT_FORMAT as c1_7,
+  c1.QUANTITY_FORMAT as c1_8,
+  c1.COEFFICIENT_FORMAT as c1_9
+FROM
+  SYS_PREFERENCE c1
+WHERE 
+  c1.ID = ?
+Start checking secure system
+Start initialize secure object [ENTITY]
+Stop initialize secure object [ENTITY]
+Start initialize secure object [ACTION]
+Stop initialize secure object [ACTION]
+Start initialize secure object [REPORT]
+Stop initialize secure object [REPORT]
+Stop checking secure system
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.NAME as c1_2
+FROM
+  PARTNER_TYPE c1
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.RESPONSIBLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.TITLE_NAME as c2_4,
+  c2.FIRST_NAME as c2_5,
+  c2.MIDDLE_NAME as c2_6,
+  c2.LAST_NAME as c2_7,
+  c2.GENDER as c2_8,
+  c2.ORGANIZATION_ID as c2_9,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.FULL_NAME as c3_4,
+  c3.NEC as c3_5,
+  c3.IDN as c3_6,
+  c3.TAX_DOC_NO as c3_7,
+  c3.DESCRIMINATOR as c3_8,
+  c2.RESPONSIBLE_ID as c2_10,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.TITLE_NAME as c5_4,
+  c5.FIRST_NAME as c5_5,
+  c5.MIDDLE_NAME as c5_6,
+  c5.LAST_NAME as c5_7,
+  c2.CONTACT_TYPE_ID as c2_11,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.NOTE as c6_4,
+  c2.PARTNER_ID as c2_12,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.FULL_NAME as c7_4,
+  c7.NEC as c7_5,
+  c7.IDN as c7_6,
+  c7.TAX_DOC_NO as c7_7,
+  c7.DESCRIMINATOR as c7_8,
+  c8.CONTACTABLE_ID as c8_1,
+  c8.OWNER_ID as c8_2,
+  c8.PHONE_STRING as c8_3,
+  c8.PHONE_COMPILE as c8_4,
+  c9.CONTACTABLE_ID as c9_1,
+  c9.OWNER_ID as c9_2,
+  c9.CITY_NAME as c9_3,
+  c9.LOCALITY_TYPE_NAME as c9_4,
+  c9.LOCALITY_NAME as c9_5,
+  c9.ADDRESS_STRING as c9_6,
+  c9.LOCALITY_ADDRESS_STRING as c9_7,
+  c9.FULL_ADDRESS_STRING as c9_8,
+  c1.CONTACT_TYPE_ID as c1_3,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c10.NOTE as c10_4,
+  c1.ADDRESS_TYPE_ID as c1_4,
+  c11.ID as c11_1,
+  c11.CODE as c11_2,
+  c11.NAME as c11_3,
+  c1.PHONE_TYPE_ID as c1_5,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3
+FROM
+  CONTACT_CONTEXT c1
+LEFT JOIN CONTACT c2 ON c1.RESPONSIBLE_ID = c2.ID
+LEFT JOIN PARTNER c3 ON c2.ORGANIZATION_ID = c3.ID
+LEFT JOIN ORGANIZATION c4 ON c3.ID = c4.ID
+LEFT JOIN CONTACT c5 ON c2.RESPONSIBLE_ID = c5.ID
+LEFT JOIN CONTACT_TYPE c6 ON c2.CONTACT_TYPE_ID = c6.ID
+LEFT JOIN PARTNER c7 ON c2.PARTNER_ID = c7.ID
+LEFT JOIN V_DEF_CONTACTABLE_PHONE c8 ON c2.ID = c8.CONTACTABLE_ID AND c8.ENTITY_ID = 'CONTACT'
+LEFT JOIN V_DEF_CONTACTABLE_ADDRESS c9 ON c2.ID = c9.CONTACTABLE_ID AND c9.ENTITY_ID = 'CONTACT'
+LEFT JOIN CONTACT_TYPE c10 ON c1.CONTACT_TYPE_ID = c10.ID
+LEFT JOIN ADDRESS_TYPE c11 ON c1.ADDRESS_TYPE_ID = c11.ID
+LEFT JOIN PHONE_TYPE c12 ON c1.PHONE_TYPE_ID = c12.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.RESPONSIBLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.TITLE_NAME as c2_4,
+  c2.FIRST_NAME as c2_5,
+  c2.MIDDLE_NAME as c2_6,
+  c2.LAST_NAME as c2_7,
+  c2.GENDER as c2_8,
+  c2.ORGANIZATION_ID as c2_9,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.FULL_NAME as c3_4,
+  c3.NEC as c3_5,
+  c3.IDN as c3_6,
+  c3.TAX_DOC_NO as c3_7,
+  c3.DESCRIMINATOR as c3_8,
+  c2.RESPONSIBLE_ID as c2_10,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.TITLE_NAME as c5_4,
+  c5.FIRST_NAME as c5_5,
+  c5.MIDDLE_NAME as c5_6,
+  c5.LAST_NAME as c5_7,
+  c2.CONTACT_TYPE_ID as c2_11,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.NOTE as c6_4,
+  c2.PARTNER_ID as c2_12,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.FULL_NAME as c7_4,
+  c7.NEC as c7_5,
+  c7.IDN as c7_6,
+  c7.TAX_DOC_NO as c7_7,
+  c7.DESCRIMINATOR as c7_8,
+  c8.CONTACTABLE_ID as c8_1,
+  c8.OWNER_ID as c8_2,
+  c8.PHONE_STRING as c8_3,
+  c8.PHONE_COMPILE as c8_4,
+  c9.CONTACTABLE_ID as c9_1,
+  c9.OWNER_ID as c9_2,
+  c9.CITY_NAME as c9_3,
+  c9.LOCALITY_TYPE_NAME as c9_4,
+  c9.LOCALITY_NAME as c9_5,
+  c9.ADDRESS_STRING as c9_6,
+  c9.LOCALITY_ADDRESS_STRING as c9_7,
+  c9.FULL_ADDRESS_STRING as c9_8,
+  c1.CONTACT_TYPE_ID as c1_3,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c10.NOTE as c10_4,
+  c1.ADDRESS_TYPE_ID as c1_4,
+  c11.ID as c11_1,
+  c11.CODE as c11_2,
+  c11.NAME as c11_3,
+  c1.PHONE_TYPE_ID as c1_5,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3
+FROM
+  CONTACT_CONTEXT c1
+LEFT JOIN CONTACT c2 ON c1.RESPONSIBLE_ID = c2.ID
+LEFT JOIN PARTNER c3 ON c2.ORGANIZATION_ID = c3.ID
+LEFT JOIN ORGANIZATION c4 ON c3.ID = c4.ID
+LEFT JOIN CONTACT c5 ON c2.RESPONSIBLE_ID = c5.ID
+LEFT JOIN CONTACT_TYPE c6 ON c2.CONTACT_TYPE_ID = c6.ID
+LEFT JOIN PARTNER c7 ON c2.PARTNER_ID = c7.ID
+LEFT JOIN V_DEF_CONTACTABLE_PHONE c8 ON c2.ID = c8.CONTACTABLE_ID AND c8.ENTITY_ID = 'CONTACT'
+LEFT JOIN V_DEF_CONTACTABLE_ADDRESS c9 ON c2.ID = c9.CONTACTABLE_ID AND c9.ENTITY_ID = 'CONTACT'
+LEFT JOIN CONTACT_TYPE c10 ON c1.CONTACT_TYPE_ID = c10.ID
+LEFT JOIN ADDRESS_TYPE c11 ON c1.ADDRESS_TYPE_ID = c11.ID
+LEFT JOIN PHONE_TYPE c12 ON c1.PHONE_TYPE_ID = c12.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PARTNER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.INCOME_PARTNER_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.FULL_NAME as c3_4,
+  c3.NEC as c3_5,
+  c3.IDN as c3_6,
+  c3.TAX_DOC_NO as c3_7,
+  c3.DESCRIMINATOR as c3_8,
+  c1.OUTCOME_PARTNER_ID as c1_4,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.FULL_NAME as c4_4,
+  c4.NEC as c4_5,
+  c4.IDN as c4_6,
+  c4.TAX_DOC_NO as c4_7,
+  c4.DESCRIMINATOR as c4_8,
+  c1.PAYMENT_TYPE_ID as c1_5,
+  c5.ID as c5_1,
+  c5.NAME as c5_2,
+  c1.TAXPRINT_TYPE_ID as c1_6,
+  c6.ID as c6_1,
+  c6.NAME as c6_2
+FROM
+  BANK_CONTEXT c1
+LEFT JOIN PARTNER c2 ON c1.PARTNER_ID = c2.ID
+LEFT JOIN PARTNER c3 ON c1.INCOME_PARTNER_ID = c3.ID
+LEFT JOIN PARTNER c4 ON c1.OUTCOME_PARTNER_ID = c4.ID
+LEFT JOIN PAYMENT_TYPE c5 ON c1.PAYMENT_TYPE_ID = c5.ID
+LEFT JOIN TAXPRINT_TYPE c6 ON c1.TAXPRINT_TYPE_ID = c6.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PARTNER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.INCOME_PARTNER_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.FULL_NAME as c3_4,
+  c3.NEC as c3_5,
+  c3.IDN as c3_6,
+  c3.TAX_DOC_NO as c3_7,
+  c3.DESCRIMINATOR as c3_8,
+  c1.OUTCOME_PARTNER_ID as c1_4,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.FULL_NAME as c4_4,
+  c4.NEC as c4_5,
+  c4.IDN as c4_6,
+  c4.TAX_DOC_NO as c4_7,
+  c4.DESCRIMINATOR as c4_8,
+  c1.PAYMENT_TYPE_ID as c1_5,
+  c5.ID as c5_1,
+  c5.NAME as c5_2,
+  c1.TAXPRINT_TYPE_ID as c1_6,
+  c6.ID as c6_1,
+  c6.NAME as c6_2
+FROM
+  BANK_CONTEXT c1
+LEFT JOIN PARTNER c2 ON c1.PARTNER_ID = c2.ID
+LEFT JOIN PARTNER c3 ON c1.INCOME_PARTNER_ID = c3.ID
+LEFT JOIN PARTNER c4 ON c1.OUTCOME_PARTNER_ID = c4.ID
+LEFT JOIN PAYMENT_TYPE c5 ON c1.PAYMENT_TYPE_ID = c5.ID
+LEFT JOIN TAXPRINT_TYPE c6 ON c1.TAXPRINT_TYPE_ID = c6.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PARTNER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.PROJECT_STAGE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.DESCRIPTION as c3_4,
+  c3.ORDER_NUMBER as c3_5,
+  c3.AVERANGE_DURATION as c3_6,
+  c3.FROM_BEGIN as c3_7,
+  c3.PROJECT_TYPE_ID as c3_8,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.DESCRIPTION as c4_4,
+  c4.IS_SYSTEM as c4_5,
+  c3.PROJECT_STAGE_GROUP_ID as c3_9,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.DESCRIPTION as c5_4,
+  c1.CURRENCY_ID as c1_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NUMERIC_CODE as c6_3,
+  c6.NAME as c6_4,
+  c6.FULL_NAME as c6_5,
+  c1.PROJECT_STATUS_ID as c1_5,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.DESCRIPTION as c7_4,
+  c7.IS_START as c7_5,
+  c7.IS_FINISH as c7_6,
+  c7.COLOR as c7_7,
+  c7.IS_SYSTEM as c7_8,
+  c1.RESPONSIBLE_ID as c1_6,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.TITLE_NAME as c8_4,
+  c8.FIRST_NAME as c8_5,
+  c8.MIDDLE_NAME as c8_6,
+  c8.LAST_NAME as c8_7,
+  c1.PROJECT_TYPE_ID as c1_7,
+  c9.ID as c9_1,
+  c9.CODE as c9_2,
+  c9.NAME as c9_3,
+  c9.DESCRIPTION as c9_4,
+  c9.IS_SYSTEM as c9_5
+FROM
+  PROJECT_CONTEXT c1
+LEFT JOIN PARTNER c2 ON c1.PARTNER_ID = c2.ID
+LEFT JOIN PROJECT_STAGE c3 ON c1.PROJECT_STAGE_ID = c3.ID
+LEFT JOIN PROJECT_TYPE c4 ON c3.PROJECT_TYPE_ID = c4.ID
+LEFT JOIN PROJECT_STAGE_GROUP c5 ON c3.PROJECT_STAGE_GROUP_ID = c5.ID
+LEFT JOIN CURRENCY c6 ON c1.CURRENCY_ID = c6.ID
+LEFT JOIN PROJECT_STATUS c7 ON c1.PROJECT_STATUS_ID = c7.ID
+LEFT JOIN CONTACT c8 ON c1.RESPONSIBLE_ID = c8.ID
+LEFT JOIN PROJECT_TYPE c9 ON c1.PROJECT_TYPE_ID = c9.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_SYSTEM as c1_5
+FROM
+  PROJECT_TYPE c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_START as c1_5,
+  c1.IS_FINISH as c1_6,
+  c1.COLOR as c1_7,
+  c1.IS_SYSTEM as c1_8
+FROM
+  PROJECT_STATUS c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PARTNER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.PROJECT_STAGE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.DESCRIPTION as c3_4,
+  c3.ORDER_NUMBER as c3_5,
+  c3.AVERANGE_DURATION as c3_6,
+  c3.FROM_BEGIN as c3_7,
+  c3.PROJECT_TYPE_ID as c3_8,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.DESCRIPTION as c4_4,
+  c4.IS_SYSTEM as c4_5,
+  c3.PROJECT_STAGE_GROUP_ID as c3_9,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.DESCRIPTION as c5_4,
+  c1.CURRENCY_ID as c1_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NUMERIC_CODE as c6_3,
+  c6.NAME as c6_4,
+  c6.FULL_NAME as c6_5,
+  c1.PROJECT_STATUS_ID as c1_5,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.DESCRIPTION as c7_4,
+  c7.IS_START as c7_5,
+  c7.IS_FINISH as c7_6,
+  c7.COLOR as c7_7,
+  c7.IS_SYSTEM as c7_8,
+  c1.RESPONSIBLE_ID as c1_6,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.TITLE_NAME as c8_4,
+  c8.FIRST_NAME as c8_5,
+  c8.MIDDLE_NAME as c8_6,
+  c8.LAST_NAME as c8_7,
+  c1.PROJECT_TYPE_ID as c1_7,
+  c9.ID as c9_1,
+  c9.CODE as c9_2,
+  c9.NAME as c9_3,
+  c9.DESCRIPTION as c9_4,
+  c9.IS_SYSTEM as c9_5
+FROM
+  PROJECT_CONTEXT c1
+LEFT JOIN PARTNER c2 ON c1.PARTNER_ID = c2.ID
+LEFT JOIN PROJECT_STAGE c3 ON c1.PROJECT_STAGE_ID = c3.ID
+LEFT JOIN PROJECT_TYPE c4 ON c3.PROJECT_TYPE_ID = c4.ID
+LEFT JOIN PROJECT_STAGE_GROUP c5 ON c3.PROJECT_STAGE_GROUP_ID = c5.ID
+LEFT JOIN CURRENCY c6 ON c1.CURRENCY_ID = c6.ID
+LEFT JOIN PROJECT_STATUS c7 ON c1.PROJECT_STATUS_ID = c7.ID
+LEFT JOIN CONTACT c8 ON c1.RESPONSIBLE_ID = c8.ID
+LEFT JOIN PROJECT_TYPE c9 ON c1.PROJECT_TYPE_ID = c9.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_SYSTEM as c1_5
+FROM
+  PROJECT_TYPE c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_START as c1_5,
+  c1.IS_FINISH as c1_6,
+  c1.COLOR as c1_7,
+  c1.IS_SYSTEM as c1_8
+FROM
+  PROJECT_STATUS c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PROJECT_ID as c1_2,
+  c2.ID as c2_1,
+  c2.PROJECT_NO as c2_2,
+  c2.NAME as c2_3,
+  c2.RESPONSIBLE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.TITLE_NAME as c3_4,
+  c3.FIRST_NAME as c3_5,
+  c3.MIDDLE_NAME as c3_6,
+  c3.LAST_NAME as c3_7,
+  c2.ORGANIZATION_ID as c2_5,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.FULL_NAME as c4_4,
+  c4.NEC as c4_5,
+  c4.IDN as c4_6,
+  c4.TAX_DOC_NO as c4_7,
+  c4.DESCRIMINATOR as c4_8,
+  c1.PARTNER_ID as c1_3,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.FULL_NAME as c6_4,
+  c6.NEC as c6_5,
+  c6.IDN as c6_6,
+  c6.TAX_DOC_NO as c6_7,
+  c6.DESCRIMINATOR as c6_8,
+  c1.RESPONSIBLE_ID as c1_4,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.TITLE_NAME as c7_4,
+  c7.FIRST_NAME as c7_5,
+  c7.MIDDLE_NAME as c7_6,
+  c7.LAST_NAME as c7_7,
+  c1.TASK_PRIORITY_ID as c1_5,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.ORDER_NUMBER as c8_4,
+  c8.IS_SYSTEM as c8_5,
+  c1.TASK_STATUS_ID as c1_6,
+  c9.ID as c9_1,
+  c9.CODE as c9_2,
+  c9.NAME as c9_3,
+  c9.DESCRIPTION as c9_4,
+  c9.IS_START as c9_5,
+  c9.IS_FINISH as c9_6,
+  c9.COLOR as c9_7,
+  c9.IS_SYSTEM as c9_8,
+  c1.TASK_TYPE_ID as c1_7,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c10.DESCRIPTION as c10_4,
+  c10.IS_SYSTEM as c10_5,
+  c1.TASK_RESULT_ID as c1_8,
+  c11.ID as c11_1,
+  c11.CODE as c11_2,
+  c11.NAME as c11_3,
+  c11.DESCRIPTION as c11_4,
+  c11.TASK_TYPE_ID as c11_5,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3,
+  c12.DESCRIPTION as c12_4,
+  c12.IS_SYSTEM as c12_5
+FROM
+  TASK_CONTEXT c1
+LEFT JOIN PROJECT c2 ON c1.PROJECT_ID = c2.ID
+LEFT JOIN CONTACT c3 ON c2.RESPONSIBLE_ID = c3.ID
+LEFT JOIN PARTNER c4 ON c2.ORGANIZATION_ID = c4.ID
+LEFT JOIN ORGANIZATION c5 ON c4.ID = c5.ID
+LEFT JOIN PARTNER c6 ON c1.PARTNER_ID = c6.ID
+LEFT JOIN CONTACT c7 ON c1.RESPONSIBLE_ID = c7.ID
+LEFT JOIN TASK_PRIORITY c8 ON c1.TASK_PRIORITY_ID = c8.ID
+LEFT JOIN TASK_STATUS c9 ON c1.TASK_STATUS_ID = c9.ID
+LEFT JOIN TASK_TYPE c10 ON c1.TASK_TYPE_ID = c10.ID
+LEFT JOIN TASK_RESULT c11 ON c1.TASK_RESULT_ID = c11.ID
+LEFT JOIN TASK_TYPE c12 ON c11.TASK_TYPE_ID = c12.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_SYSTEM as c1_5
+FROM
+  TASK_TYPE c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_START as c1_5,
+  c1.IS_FINISH as c1_6,
+  c1.COLOR as c1_7,
+  c1.IS_SYSTEM as c1_8
+FROM
+  TASK_STATUS c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.ORDER_NUMBER as c1_4,
+  c1.IS_SYSTEM as c1_5
+FROM
+  TASK_PRIORITY c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PROJECT_ID as c1_2,
+  c2.ID as c2_1,
+  c2.PROJECT_NO as c2_2,
+  c2.NAME as c2_3,
+  c2.RESPONSIBLE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.TITLE_NAME as c3_4,
+  c3.FIRST_NAME as c3_5,
+  c3.MIDDLE_NAME as c3_6,
+  c3.LAST_NAME as c3_7,
+  c2.ORGANIZATION_ID as c2_5,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.FULL_NAME as c4_4,
+  c4.NEC as c4_5,
+  c4.IDN as c4_6,
+  c4.TAX_DOC_NO as c4_7,
+  c4.DESCRIMINATOR as c4_8,
+  c1.PARTNER_ID as c1_3,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.FULL_NAME as c6_4,
+  c6.NEC as c6_5,
+  c6.IDN as c6_6,
+  c6.TAX_DOC_NO as c6_7,
+  c6.DESCRIMINATOR as c6_8,
+  c1.RESPONSIBLE_ID as c1_4,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.TITLE_NAME as c7_4,
+  c7.FIRST_NAME as c7_5,
+  c7.MIDDLE_NAME as c7_6,
+  c7.LAST_NAME as c7_7,
+  c1.TASK_PRIORITY_ID as c1_5,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.ORDER_NUMBER as c8_4,
+  c8.IS_SYSTEM as c8_5,
+  c1.TASK_STATUS_ID as c1_6,
+  c9.ID as c9_1,
+  c9.CODE as c9_2,
+  c9.NAME as c9_3,
+  c9.DESCRIPTION as c9_4,
+  c9.IS_START as c9_5,
+  c9.IS_FINISH as c9_6,
+  c9.COLOR as c9_7,
+  c9.IS_SYSTEM as c9_8,
+  c1.TASK_TYPE_ID as c1_7,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c10.DESCRIPTION as c10_4,
+  c10.IS_SYSTEM as c10_5,
+  c1.TASK_RESULT_ID as c1_8,
+  c11.ID as c11_1,
+  c11.CODE as c11_2,
+  c11.NAME as c11_3,
+  c11.DESCRIPTION as c11_4,
+  c11.TASK_TYPE_ID as c11_5,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3,
+  c12.DESCRIPTION as c12_4,
+  c12.IS_SYSTEM as c12_5
+FROM
+  TASK_CONTEXT c1
+LEFT JOIN PROJECT c2 ON c1.PROJECT_ID = c2.ID
+LEFT JOIN CONTACT c3 ON c2.RESPONSIBLE_ID = c3.ID
+LEFT JOIN PARTNER c4 ON c2.ORGANIZATION_ID = c4.ID
+LEFT JOIN ORGANIZATION c5 ON c4.ID = c5.ID
+LEFT JOIN PARTNER c6 ON c1.PARTNER_ID = c6.ID
+LEFT JOIN CONTACT c7 ON c1.RESPONSIBLE_ID = c7.ID
+LEFT JOIN TASK_PRIORITY c8 ON c1.TASK_PRIORITY_ID = c8.ID
+LEFT JOIN TASK_STATUS c9 ON c1.TASK_STATUS_ID = c9.ID
+LEFT JOIN TASK_TYPE c10 ON c1.TASK_TYPE_ID = c10.ID
+LEFT JOIN TASK_RESULT c11 ON c1.TASK_RESULT_ID = c11.ID
+LEFT JOIN TASK_TYPE c12 ON c11.TASK_TYPE_ID = c12.ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_SYSTEM as c1_5
+FROM
+  TASK_TYPE c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.DESCRIPTION as c1_4,
+  c1.IS_START as c1_5,
+  c1.IS_FINISH as c1_6,
+  c1.COLOR as c1_7,
+  c1.IS_SYSTEM as c1_8
+FROM
+  TASK_STATUS c1
+WHERE 
+  c1.CODE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.ORDER_NUMBER as c1_4,
+  c1.IS_SYSTEM as c1_5
+FROM
+  TASK_PRIORITY c1
+WHERE 
+  c1.CODE = ?
+
+Loading EntityContext...
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.ENTITY_TYPE_ID as c1_4,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.IS_CUSTOM as c2_4,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_5,
+  c1.ENTITY_PACKAGE as c1_5,
+  c1.ENTITY_CLASS as c1_6,
+  c1.IS_ENABLE as c1_7,
+  c1.IS_MASTER as c1_8,
+  c1.IS_BEAN as c1_9,
+  c1.IS_FORM as c1_10,
+  c1.IS_SECURE as c1_11,
+  c1.IS_SYSTEM as c1_12,
+  c1.IS_CUSTOM as c1_13,
+  c1.IS_CUSTOM_ATTRIBUTE as c1_14,
+  c1.IS_CACHE as c1_15,
+  c1.CACHE_EXPIRE_TIME as c1_16
+FROM
+  SYS_ENTITY c1
+LEFT JOIN SYS_ENTITY_TYPE c2 ON c1.ENTITY_TYPE_ID = c2.ID
+WHERE 
+  c1.ID <> ?
+EntityContext loaded. Entity count = [229]
+
+
+Initialize secure EntityService...
+EntityService was loaded
+
+
+Loading SecureContext...
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_TYPE = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+SecureContext was loaded. Permission count = [171]
+******************************************************************************
+Loading DocumentContext...
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.DOCUMENT_SECTION as c1_2,
+  c1.DOCUMENT_CATEGORY as c1_3,
+  c1.ENTITY_ID as c1_4,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.IS_USE_NUMERATOR as c1_5,
+  c1.DOCUMENT_NO_PREFIX as c1_6,
+  c1.DOCUMENT_NO_SUFFIX as c1_7,
+  c1.LAST_DOCUMENT_NUMBER as c1_8,
+  c1.IS_DOCUMENT_NO_READ_ONLY as c1_9,
+  c1.IS_DOCUMENT_DATE_READ_ONLY as c1_10
+FROM
+  DOCUMENT_TYPE c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+WHERE 
+  c2.ID <> ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PARENT_TYPE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.DOCUMENT_SECTION as c2_2,
+  c2.DOCUMENT_CATEGORY as c2_3,
+  c2.ENTITY_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.ENTITY_PACKAGE as c3_4,
+  c3.ENTITY_CLASS as c3_5,
+  c3.IS_ENABLE as c3_6,
+  c3.IS_MASTER as c3_7,
+  c3.IS_BEAN as c3_8,
+  c3.IS_FORM as c3_9,
+  c3.IS_SECURE as c3_10,
+  c3.IS_SYSTEM as c3_11,
+  c3.IS_CUSTOM as c3_12,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_13,
+  c3.IS_CACHE as c3_14,
+  c3.CACHE_EXPIRE_TIME as c3_15,
+  c2.IS_USE_NUMERATOR as c2_5,
+  c2.DOCUMENT_NO_PREFIX as c2_6,
+  c2.DOCUMENT_NO_SUFFIX as c2_7,
+  c2.LAST_DOCUMENT_NUMBER as c2_8,
+  c2.IS_DOCUMENT_NO_READ_ONLY as c2_9,
+  c2.IS_DOCUMENT_DATE_READ_ONLY as c2_10,
+  c1.CHILD_TYPE_ID as c1_3,
+  c4.ID as c4_1,
+  c4.DOCUMENT_SECTION as c4_2,
+  c4.DOCUMENT_CATEGORY as c4_3,
+  c4.ENTITY_ID as c4_4,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.ENTITY_PACKAGE as c5_4,
+  c5.ENTITY_CLASS as c5_5,
+  c5.IS_ENABLE as c5_6,
+  c5.IS_MASTER as c5_7,
+  c5.IS_BEAN as c5_8,
+  c5.IS_FORM as c5_9,
+  c5.IS_SECURE as c5_10,
+  c5.IS_SYSTEM as c5_11,
+  c5.IS_CUSTOM as c5_12,
+  c5.IS_CUSTOM_ATTRIBUTE as c5_13,
+  c5.IS_CACHE as c5_14,
+  c5.CACHE_EXPIRE_TIME as c5_15,
+  c4.IS_USE_NUMERATOR as c4_5,
+  c4.DOCUMENT_NO_PREFIX as c4_6,
+  c4.DOCUMENT_NO_SUFFIX as c4_7,
+  c4.LAST_DOCUMENT_NUMBER as c4_8,
+  c4.IS_DOCUMENT_NO_READ_ONLY as c4_9,
+  c4.IS_DOCUMENT_DATE_READ_ONLY as c4_10,
+  c1.CREATOR_CLASS as c1_4
+FROM
+  DOCUMENT_RELATION c1
+LEFT JOIN DOCUMENT_TYPE c2 ON c1.PARENT_TYPE_ID = c2.ID
+LEFT JOIN SYS_ENTITY c3 ON c2.ENTITY_ID = c3.ID
+LEFT JOIN DOCUMENT_TYPE c4 ON c1.CHILD_TYPE_ID = c4.ID
+LEFT JOIN SYS_ENTITY c5 ON c4.ENTITY_ID = c5.ID
+DocumentContext was loaded. Type count = [26]
+******************************************************************************
+Loading FinanceContext...
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.DOCUMENT_TYPE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.DOCUMENT_SECTION as c2_2,
+  c2.DOCUMENT_CATEGORY as c2_3,
+  c2.ENTITY_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.ENTITY_PACKAGE as c3_4,
+  c3.ENTITY_CLASS as c3_5,
+  c3.IS_ENABLE as c3_6,
+  c3.IS_MASTER as c3_7,
+  c3.IS_BEAN as c3_8,
+  c3.IS_FORM as c3_9,
+  c3.IS_SECURE as c3_10,
+  c3.IS_SYSTEM as c3_11,
+  c3.IS_CUSTOM as c3_12,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_13,
+  c3.IS_CACHE as c3_14,
+  c3.CACHE_EXPIRE_TIME as c3_15,
+  c2.IS_USE_NUMERATOR as c2_5,
+  c2.DOCUMENT_NO_PREFIX as c2_6,
+  c2.DOCUMENT_NO_SUFFIX as c2_7,
+  c2.LAST_DOCUMENT_NUMBER as c2_8,
+  c2.IS_DOCUMENT_NO_READ_ONLY as c2_9,
+  c2.IS_DOCUMENT_DATE_READ_ONLY as c2_10,
+  c1.MOVE_TYPE as c1_3,
+  c1.IS_BOTH_TAX_AMOUNT as c1_4,
+  c1.IS_INCLUDE_TAX_IN_AMOUNT as c1_5
+FROM
+  FINANCE_DOCUMENT_TYPE c1
+LEFT JOIN DOCUMENT_TYPE c2 ON c1.DOCUMENT_TYPE_ID = c2.ID
+LEFT JOIN SYS_ENTITY c3 ON c2.ENTITY_ID = c3.ID
+FinanceContext was loaded. Finance document type count = [22]
+
+Application info
+===========================================================
+AppName: Plazma ERP+CRM
+AppVersion: 1.0.2 build 20110827
+AppType: standalone
+Security: true
+===========================================================
+
+Start time = [3]
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_NAME as c1_2,
+  c1.USER_PASSWORD as c1_3,
+  c1.NAME as c1_4,
+  c1.CONTACT_ID as c1_5,
+  c1.REG_DATE as c1_6,
+  c1.ENTITY_ID as c1_7,
+  c1.OWNER_ID as c1_8
+FROM
+  SYS_USER c1
+WHERE 
+  c1.USER_NAME = ? AND
+  c1.USER_PASSWORD = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+WHERE 
+  c1.USER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ORGANIZATION_ID as c1_2
+FROM
+  SYS_USER_ORG c1
+WHERE 
+  c1.USER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.FULL_NAME as c1_4,
+  c1.NEC as c1_5,
+  c1.IDN as c1_6,
+  c1.TAX_DOC_NO as c1_7,
+  c1.DESCRIMINATOR as c1_8,
+  c1.BANK_ACCOUNT_ID as c1_9,
+  c1.PARTNER_TYPE_ID as c1_10,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c1.PARTNER_GROUP_ID as c1_11,
+  c4.ID as c4_1,
+  c4.NAME as c4_2,
+  c1.LEDGER_ACCOUNT_ID as c1_12,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.LEDGER_ACCOUNT_TYPE_ID as c5_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c5.PARENT_ID as c5_5,
+  c1.RESPONSIBLE_ID as c1_13,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.TITLE_NAME as c7_4,
+  c7.FIRST_NAME as c7_5,
+  c7.MIDDLE_NAME as c7_6,
+  c7.LAST_NAME as c7_7,
+  c8.CONTACTABLE_ID as c8_1,
+  c8.OWNER_ID as c8_2,
+  c8.PHONE_STRING as c8_3,
+  c8.PHONE_COMPILE as c8_4,
+  c9.CONTACTABLE_ID as c9_1,
+  c9.OWNER_ID as c9_2,
+  c9.CITY_NAME as c9_3,
+  c9.LOCALITY_TYPE_NAME as c9_4,
+  c9.LOCALITY_NAME as c9_5,
+  c9.ADDRESS_STRING as c9_6,
+  c9.LOCALITY_ADDRESS_STRING as c9_7,
+  c9.FULL_ADDRESS_STRING as c9_8,
+  c2.ID as c2_1
+FROM
+  PARTNER c1
+INNER JOIN ORGANIZATION c2 ON c1.ID = c2.ID
+LEFT JOIN PARTNER_TYPE c3 ON c1.PARTNER_TYPE_ID = c3.ID
+LEFT JOIN PARTNER_GROUP c4 ON c1.PARTNER_GROUP_ID = c4.ID
+LEFT JOIN LEDGER_ACCOUNT c5 ON c1.LEDGER_ACCOUNT_ID = c5.ID
+LEFT JOIN LEDGER_ACCOUNT_TYPE c6 ON c5.LEDGER_ACCOUNT_TYPE_ID = c6.ID
+LEFT JOIN CONTACT c7 ON c1.RESPONSIBLE_ID = c7.ID
+LEFT JOIN V_DEF_CONTACTABLE_PHONE c8 ON c1.ID = c8.CONTACTABLE_ID AND c8.ENTITY_ID = 'PARTNER'
+LEFT JOIN V_DEF_CONTACTABLE_ADDRESS c9 ON c1.ID = c9.CONTACTABLE_ID AND c9.ENTITY_ID = 'PARTNER'
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.TITLE_NAME as c1_4,
+  c1.FIRST_NAME as c1_5,
+  c1.MIDDLE_NAME as c1_6,
+  c1.LAST_NAME as c1_7,
+  c1.GENDER as c1_8,
+  c1.BIRTH_DATE as c1_9,
+  c1.IMAGE_FILE_NAME as c1_10,
+  c1.NOTE as c1_11,
+  c1.ORGANIZATION_ID as c1_12,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.RESPONSIBLE_ID as c1_13,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.TITLE_NAME as c4_4,
+  c4.FIRST_NAME as c4_5,
+  c4.MIDDLE_NAME as c4_6,
+  c4.LAST_NAME as c4_7,
+  c1.CONTACT_TYPE_ID as c1_14,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.NOTE as c5_4,
+  c1.PARTNER_ID as c1_15,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.FULL_NAME as c6_4,
+  c6.NEC as c6_5,
+  c6.IDN as c6_6,
+  c6.TAX_DOC_NO as c6_7,
+  c6.DESCRIMINATOR as c6_8,
+  c1.DEPARTMENT_ID as c1_16,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.PARENT_ID as c7_4,
+  c7.ORGANIZATION_ID as c7_5,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.FULL_NAME as c8_4,
+  c8.NEC as c8_5,
+  c8.IDN as c8_6,
+  c8.TAX_DOC_NO as c8_7,
+  c8.DESCRIMINATOR as c8_8,
+  c1.POSITION_ID as c1_17,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c11.ID as c11_1,
+  c11.ENTITY_ID as c11_2,
+  c11.OWNER_ID as c11_3,
+  c11.ADDRESS_ID as c11_4,
+  c11.PHONE_ID as c11_5,
+  c11.EMAIL_ID as c11_6,
+  c11.WEB_ID as c11_7
+FROM
+  CONTACT c1
+LEFT JOIN PARTNER c2 ON c1.ORGANIZATION_ID = c2.ID
+LEFT JOIN ORGANIZATION c3 ON c2.ID = c3.ID
+LEFT JOIN CONTACT c4 ON c1.RESPONSIBLE_ID = c4.ID
+LEFT JOIN CONTACT_TYPE c5 ON c1.CONTACT_TYPE_ID = c5.ID
+LEFT JOIN PARTNER c6 ON c1.PARTNER_ID = c6.ID
+LEFT JOIN DEPARTMENT c7 ON c1.DEPARTMENT_ID = c7.ID
+LEFT JOIN PARTNER c8 ON c7.ORGANIZATION_ID = c8.ID
+LEFT JOIN ORGANIZATION c9 ON c8.ID = c9.ID
+LEFT JOIN JOB_POSITION c10 ON c1.POSITION_ID = c10.ID
+LEFT JOIN CONTACTABLE c11 ON c1.ID = c11.OWNER_ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ADDRESS_STRING as c1_2,
+  c1.LOCALITY_ADDRESS_STRING as c1_3,
+  c1.FULL_ADDRESS_STRING as c1_4,
+  c1.ZIP_CODE as c1_5,
+  c1.STREET as c1_6,
+  c1.HOUSE_NUM as c1_7,
+  c1.CASE_NUM as c1_8,
+  c1.APART_NUM as c1_9,
+  c1.NOTE as c1_10,
+  c1.ADDRESS_TYPE_ID as c1_11,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c1.CITY_ID as c1_12,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.REGION_ID as c3_3,
+  c5.ID as c5_1,
+  c5.NAME as c5_2,
+  c3.COUNTRY_ID as c3_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.CODE3 as c6_3,
+  c6.NAME as c6_4,
+  c6.NUMERIC_CODE as c6_5,
+  c3.LOCALITY_TYPE_ID as c3_5,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.FULL_NAME as c7_4,
+  c3.DISTRICT_ID as c3_6,
+  c8.ID as c8_1,
+  c8.NAME as c8_2,
+  c4.ID as c4_1,
+  c4.PHONE_CODE as c4_2,
+  c1.LOCALITY_ID as c1_13,
+  c9.ID as c9_1,
+  c9.NAME as c9_2,
+  c9.REGION_ID as c9_3,
+  c10.ID as c10_1,
+  c10.NAME as c10_2,
+  c9.COUNTRY_ID as c9_4,
+  c11.ID as c11_1,
+  c11.CODE as c11_2,
+  c11.CODE3 as c11_3,
+  c11.NAME as c11_4,
+  c11.NUMERIC_CODE as c11_5,
+  c9.LOCALITY_TYPE_ID as c9_5,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3,
+  c12.FULL_NAME as c12_4,
+  c9.DISTRICT_ID as c9_6,
+  c13.ID as c13_1,
+  c13.NAME as c13_2,
+  c1.STREET_TYPE_ID as c1_14,
+  c14.ID as c14_1,
+  c14.CODE as c14_2,
+  c14.NAME as c14_3,
+  c14.FULL_NAME as c14_4,
+  c1.APARTMENT_TYPE_ID as c1_15,
+  c15.ID as c15_1,
+  c15.CODE as c15_2,
+  c15.NAME as c15_3,
+  c15.FULL_NAME as c15_4
+FROM
+  ADDRESS c1
+LEFT JOIN ADDRESS_TYPE c2 ON c1.ADDRESS_TYPE_ID = c2.ID
+LEFT JOIN LOCALITY c3 ON c1.CITY_ID = c3.ID
+LEFT JOIN CITY c4 ON c3.ID = c4.ID
+LEFT JOIN REGION c5 ON c3.REGION_ID = c5.ID
+LEFT JOIN COUNTRY c6 ON c3.COUNTRY_ID = c6.ID
+LEFT JOIN LOCALITY_TYPE c7 ON c3.LOCALITY_TYPE_ID = c7.ID
+LEFT JOIN DISTRICT c8 ON c3.DISTRICT_ID = c8.ID
+LEFT JOIN LOCALITY c9 ON c1.LOCALITY_ID = c9.ID
+LEFT JOIN REGION c10 ON c9.REGION_ID = c10.ID
+LEFT JOIN COUNTRY c11 ON c9.COUNTRY_ID = c11.ID
+LEFT JOIN LOCALITY_TYPE c12 ON c9.LOCALITY_TYPE_ID = c12.ID
+LEFT JOIN DISTRICT c13 ON c9.DISTRICT_ID = c13.ID
+LEFT JOIN STREET_TYPE c14 ON c1.STREET_TYPE_ID = c14.ID
+LEFT JOIN APARTMENT_TYPE c15 ON c1.APARTMENT_TYPE_ID = c15.ID
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PHONE_CODE as c1_2,
+  c1.PHONE_NUMBER as c1_3,
+  c1.PHONE_STRING as c1_4,
+  c1.PHONE_COMPILE as c1_5,
+  c1.NOTE as c1_6,
+  c1.PHONE_TYPE_ID as c1_7,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3
+FROM
+  PHONE c1
+LEFT JOIN PHONE_TYPE c2 ON c1.PHONE_TYPE_ID = c2.ID
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.EMAIL_ADDRESS as c1_2,
+  c1.NOTE as c1_3
+FROM
+  EMAIL c1
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.URL as c1_2,
+  c1.NOTE as c1_3
+FROM
+  WEB c1
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.ENTITY_ID as c1_4,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.DATA_TYPE_ID as c1_5,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.IS_ENABLE as c4_4,
+  c1.VALUE_ENTITY_ID as c1_6,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.ENTITY_TYPE_ID as c5_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.IS_CUSTOM as c6_4,
+  c6.IS_CUSTOM_ATTRIBUTE as c6_5,
+  c5.ENTITY_PACKAGE as c5_5,
+  c5.ENTITY_CLASS as c5_6,
+  c5.IS_ENABLE as c5_7,
+  c5.IS_MASTER as c5_8,
+  c5.IS_BEAN as c5_9,
+  c5.IS_FORM as c5_10,
+  c5.IS_SECURE as c5_11,
+  c5.IS_SYSTEM as c5_12,
+  c5.IS_CUSTOM as c5_13,
+  c5.IS_CUSTOM_ATTRIBUTE as c5_14,
+  c5.IS_CACHE as c5_15,
+  c5.CACHE_EXPIRE_TIME as c5_16
+FROM
+  SYS_ENTITY_ATTR c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+LEFT JOIN SYS_DATA_TYPE c4 ON c1.DATA_TYPE_ID = c4.ID
+LEFT JOIN SYS_ENTITY c5 ON c1.VALUE_ENTITY_ID = c5.ID
+LEFT JOIN SYS_ENTITY_TYPE c6 ON c5.ENTITY_TYPE_ID = c6.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ENTITY_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.ATTR_ID as c1_3,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.ENTITY_ID as c4_4,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.ENTITY_PACKAGE as c5_4,
+  c5.ENTITY_CLASS as c5_5,
+  c5.IS_ENABLE as c5_6,
+  c5.IS_MASTER as c5_7,
+  c5.IS_BEAN as c5_8,
+  c5.IS_FORM as c5_9,
+  c5.IS_SECURE as c5_10,
+  c5.IS_SYSTEM as c5_11,
+  c5.IS_CUSTOM as c5_12,
+  c5.IS_CUSTOM_ATTRIBUTE as c5_13,
+  c5.IS_CACHE as c5_14,
+  c5.CACHE_EXPIRE_TIME as c5_15,
+  c4.DATA_TYPE_ID as c4_5,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.IS_ENABLE as c6_4,
+  c4.VALUE_ENTITY_ID as c4_6,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.ENTITY_PACKAGE as c7_4,
+  c7.ENTITY_CLASS as c7_5,
+  c7.IS_ENABLE as c7_6,
+  c7.IS_MASTER as c7_7,
+  c7.IS_BEAN as c7_8,
+  c7.IS_FORM as c7_9,
+  c7.IS_SECURE as c7_10,
+  c7.IS_SYSTEM as c7_11,
+  c7.IS_CUSTOM as c7_12,
+  c7.IS_CUSTOM_ATTRIBUTE as c7_13,
+  c7.IS_CACHE as c7_14,
+  c7.CACHE_EXPIRE_TIME as c7_15,
+  c1.OWNER_ID as c1_4,
+  c1.STRING_VALUE as c1_5,
+  c1.INTEGER_VALUE as c1_6,
+  c1.FLOAT_VALUE as c1_7,
+  c1.DATE_VALUE as c1_8
+FROM
+  SYS_ENTITY_ATTR_VALUE c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+LEFT JOIN SYS_ENTITY_ATTR c4 ON c1.ATTR_ID = c4.ID
+LEFT JOIN SYS_ENTITY c5 ON c4.ENTITY_ID = c5.ID
+LEFT JOIN SYS_DATA_TYPE c6 ON c4.DATA_TYPE_ID = c6.ID
+LEFT JOIN SYS_ENTITY c7 ON c4.VALUE_ENTITY_ID = c7.ID
+WHERE 
+  c2.ID = ? AND
+  c1.OWNER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ENTITY_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.OWNER_ID as c1_3,
+  c1.FILE_NAME as c1_4,
+  c1.NAME as c1_5,
+  c1.DESCRIPTION as c1_6
+FROM
+  SYS_FILE c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+WHERE 
+  c2.ID = ? AND
+  c1.OWNER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.FULL_NAME as c1_4,
+  c1.NEC as c1_5,
+  c1.IDN as c1_6,
+  c1.TAX_DOC_NO as c1_7,
+  c1.DESCRIMINATOR as c1_8,
+  c1.BANK_ACCOUNT_ID as c1_9,
+  c1.PARTNER_TYPE_ID as c1_10,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c1.PARTNER_GROUP_ID as c1_11,
+  c4.ID as c4_1,
+  c4.NAME as c4_2,
+  c1.LEDGER_ACCOUNT_ID as c1_12,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.LEDGER_ACCOUNT_TYPE_ID as c5_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c5.PARENT_ID as c5_5,
+  c1.RESPONSIBLE_ID as c1_13,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.TITLE_NAME as c7_4,
+  c7.FIRST_NAME as c7_5,
+  c7.MIDDLE_NAME as c7_6,
+  c7.LAST_NAME as c7_7,
+  c8.CONTACTABLE_ID as c8_1,
+  c8.OWNER_ID as c8_2,
+  c8.PHONE_STRING as c8_3,
+  c8.PHONE_COMPILE as c8_4,
+  c9.CONTACTABLE_ID as c9_1,
+  c9.OWNER_ID as c9_2,
+  c9.CITY_NAME as c9_3,
+  c9.LOCALITY_TYPE_NAME as c9_4,
+  c9.LOCALITY_NAME as c9_5,
+  c9.ADDRESS_STRING as c9_6,
+  c9.LOCALITY_ADDRESS_STRING as c9_7,
+  c9.FULL_ADDRESS_STRING as c9_8,
+  c2.ID as c2_1
+FROM
+  PARTNER c1
+INNER JOIN ORGANIZATION c2 ON c1.ID = c2.ID
+LEFT JOIN PARTNER_TYPE c3 ON c1.PARTNER_TYPE_ID = c3.ID
+LEFT JOIN PARTNER_GROUP c4 ON c1.PARTNER_GROUP_ID = c4.ID
+LEFT JOIN LEDGER_ACCOUNT c5 ON c1.LEDGER_ACCOUNT_ID = c5.ID
+LEFT JOIN LEDGER_ACCOUNT_TYPE c6 ON c5.LEDGER_ACCOUNT_TYPE_ID = c6.ID
+LEFT JOIN CONTACT c7 ON c1.RESPONSIBLE_ID = c7.ID
+LEFT JOIN V_DEF_CONTACTABLE_PHONE c8 ON c1.ID = c8.CONTACTABLE_ID AND c8.ENTITY_ID = 'PARTNER'
+LEFT JOIN V_DEF_CONTACTABLE_ADDRESS c9 ON c1.ID = c9.CONTACTABLE_ID AND c9.ENTITY_ID = 'PARTNER'
+WHERE 
+  c2.ID = ?
+Welcome [admin] !
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.OBJECT_ID as c1_4,
+  c1.OBJECT_TYPE as c1_5
+FROM
+  SYS_SECURE_OBJECT c1
+WHERE 
+  c1.OBJECT_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.OBJECT_ID as c1_4,
+  c1.OBJECT_TYPE as c1_5
+FROM
+  SYS_SECURE_OBJECT c1
+WHERE 
+  c1.OBJECT_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.OBJECT_ID as c1_4,
+  c1.OBJECT_TYPE as c1_5
+FROM
+  SYS_SECURE_OBJECT c1
+WHERE 
+  c1.OBJECT_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.OBJECT_ID as c1_4,
+  c1.OBJECT_TYPE as c1_5
+FROM
+  SYS_SECURE_OBJECT c1
+WHERE 
+  c1.OBJECT_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.OBJECT_ID as c1_4,
+  c1.OBJECT_TYPE as c1_5
+FROM
+  SYS_SECURE_OBJECT c1
+WHERE 
+  c1.OBJECT_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.OBJECT_ID as c1_4,
+  c1.OBJECT_TYPE as c1_5
+FROM
+  SYS_SECURE_OBJECT c1
+WHERE 
+  c1.OBJECT_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.OWNER_ID as c1_2,
+  c1.ENTITY_ID as c1_3,
+  c1.ENTITY_CODE as c1_4,
+  c1.ENTITY_NAME as c1_5,
+  c1.ORGANIZATION_ID as c1_6,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.PARENT_ID as c1_7,
+  c1.NAME as c1_8
+FROM
+  V_WAREHOUSE_UNION c1
+LEFT JOIN PARTNER c2 ON c1.ORGANIZATION_ID = c2.ID
+LEFT JOIN ORGANIZATION c3 ON c2.ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.ORGANIZATION_ID as c1_4,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.PARENT_ID as c1_5
+FROM
+  STORE c1
+LEFT JOIN PARTNER c2 ON c1.ORGANIZATION_ID = c2.ID
+LEFT JOIN ORGANIZATION c3 ON c2.ID = c3.ID
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.PARENT_ID as c1_4,
+  c1.ORGANIZATION_ID as c1_5,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8
+FROM
+  DEPARTMENT c1
+LEFT JOIN PARTNER c2 ON c1.ORGANIZATION_ID = c2.ID
+LEFT JOIN ORGANIZATION c3 ON c2.ID = c3.ID
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.ORGANIZATION_ID as c1_3,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.FULL_NAME as c2_4,
+  c2.NEC as c2_5,
+  c2.IDN as c2_6,
+  c2.TAX_DOC_NO as c2_7,
+  c2.DESCRIMINATOR as c2_8,
+  c1.PERSON_ID as c1_4,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.TITLE_NAME as c4_4,
+  c4.FIRST_NAME as c4_5,
+  c4.MIDDLE_NAME as c4_6,
+  c4.LAST_NAME as c4_7,
+  c4.GENDER as c4_8,
+  c4.ORGANIZATION_ID as c4_9,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.FULL_NAME as c6_4,
+  c6.NEC as c6_5,
+  c6.IDN as c6_6,
+  c6.TAX_DOC_NO as c6_7,
+  c6.DESCRIMINATOR as c6_8,
+  c4.RESPONSIBLE_ID as c4_10,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.TITLE_NAME as c8_4,
+  c8.FIRST_NAME as c8_5,
+  c8.MIDDLE_NAME as c8_6,
+  c8.LAST_NAME as c8_7,
+  c4.CONTACT_TYPE_ID as c4_11,
+  c9.ID as c9_1,
+  c9.CODE as c9_2,
+  c9.NAME as c9_3,
+  c9.NOTE as c9_4,
+  c4.PARTNER_ID as c4_12,
+  c10.ID as c10_1,
+  c10.CODE as c10_2,
+  c10.NAME as c10_3,
+  c10.FULL_NAME as c10_4,
+  c10.NEC as c10_5,
+  c10.IDN as c10_6,
+  c10.TAX_DOC_NO as c10_7,
+  c10.DESCRIMINATOR as c10_8,
+  c11.CONTACTABLE_ID as c11_1,
+  c11.OWNER_ID as c11_2,
+  c11.PHONE_STRING as c11_3,
+  c11.PHONE_COMPILE as c11_4,
+  c12.CONTACTABLE_ID as c12_1,
+  c12.OWNER_ID as c12_2,
+  c12.CITY_NAME as c12_3,
+  c12.LOCALITY_TYPE_NAME as c12_4,
+  c12.LOCALITY_NAME as c12_5,
+  c12.ADDRESS_STRING as c12_6,
+  c12.LOCALITY_ADDRESS_STRING as c12_7,
+  c12.FULL_ADDRESS_STRING as c12_8,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c1.DEPARTMENT_ID as c1_5,
+  c13.ID as c13_1,
+  c13.CODE as c13_2,
+  c13.NAME as c13_3,
+  c13.PARENT_ID as c13_4,
+  c13.ORGANIZATION_ID as c13_5,
+  c14.ID as c14_1,
+  c14.CODE as c14_2,
+  c14.NAME as c14_3,
+  c14.FULL_NAME as c14_4,
+  c14.NEC as c14_5,
+  c14.IDN as c14_6,
+  c14.TAX_DOC_NO as c14_7,
+  c14.DESCRIMINATOR as c14_8,
+  c1.POSITION_ID as c1_6,
+  c16.ID as c16_1,
+  c16.CODE as c16_2,
+  c16.NAME as c16_3
+FROM
+  EMPLOYEE c1
+LEFT JOIN PARTNER c2 ON c1.ORGANIZATION_ID = c2.ID
+LEFT JOIN ORGANIZATION c3 ON c2.ID = c3.ID
+LEFT JOIN CONTACT c4 ON c1.PERSON_ID = c4.ID
+LEFT JOIN PERSON c5 ON c4.ID = c5.ID
+LEFT JOIN PARTNER c6 ON c4.ORGANIZATION_ID = c6.ID
+LEFT JOIN ORGANIZATION c7 ON c6.ID = c7.ID
+LEFT JOIN CONTACT c8 ON c4.RESPONSIBLE_ID = c8.ID
+LEFT JOIN CONTACT_TYPE c9 ON c4.CONTACT_TYPE_ID = c9.ID
+LEFT JOIN PARTNER c10 ON c4.PARTNER_ID = c10.ID
+LEFT JOIN V_DEF_CONTACTABLE_PHONE c11 ON c4.ID = c11.CONTACTABLE_ID AND c11.ENTITY_ID = 'CONTACT'
+LEFT JOIN V_DEF_CONTACTABLE_ADDRESS c12 ON c4.ID = c12.CONTACTABLE_ID AND c12.ENTITY_ID = 'CONTACT'
+LEFT JOIN DEPARTMENT c13 ON c1.DEPARTMENT_ID = c13.ID
+LEFT JOIN PARTNER c14 ON c13.ORGANIZATION_ID = c14.ID
+LEFT JOIN ORGANIZATION c15 ON c14.ID = c15.ID
+LEFT JOIN JOB_POSITION c16 ON c1.POSITION_ID = c16.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.USER_ID as c1_2,
+  c2.ID as c2_1,
+  c2.USER_NAME as c2_2,
+  c2.USER_PASSWORD as c2_3,
+  c2.NAME as c2_4,
+  c2.CONTACT_ID as c2_5,
+  c2.REG_DATE as c2_6,
+  c2.ENTITY_ID as c2_7,
+  c2.OWNER_ID as c2_8,
+  c1.ROLE_ID as c1_3,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.NOTE as c3_3
+FROM
+  SYS_USER_ROLE c1
+LEFT JOIN SYS_USER c2 ON c1.USER_ID = c2.ID
+LEFT JOIN SYS_ROLE c3 ON c1.ROLE_ID = c3.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ROLE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c2.NOTE as c2_3,
+  c1.SECURE_OBJECT_ID as c1_3,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.OBJECT_ID as c3_4,
+  c3.OBJECT_TYPE as c3_5,
+  c1.IS_READ as c1_4,
+  c1.IS_WRITE as c1_5,
+  c1.IS_EXEC as c1_6
+FROM
+  SYS_PERMISSION c1
+LEFT JOIN SYS_ROLE c2 ON c1.ROLE_ID = c2.ID
+LEFT JOIN SYS_SECURE_OBJECT c3 ON c1.SECURE_OBJECT_ID = c3.ID
+WHERE 
+  c3.OBJECT_ID = ? AND
+  c3.OBJECT_TYPE = ? AND
+  c2.ID IN (1, 2, 4)
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.INTERFACE_ID as c1_2
+FROM
+  SYS_ROLE_INTERFACE c1
+WHERE 
+  c1.ROLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.NAME as c1_2
+FROM
+  PARTNER_TYPE c1
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.NAME as c1_2,
+  c1.FULL_NAME as c1_3
+FROM
+  FORM_PROPERTY c1
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.NAME as c1_2
+FROM
+  PARTNER_GROUP c1
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3
+FROM
+  INDUSTRY c1
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.NAME_EN as c1_4,
+  c1.FULL_NAME as c1_5,
+  c1.YEAR_CREATE as c1_6,
+  c1.WORK_TIME as c1_7,
+  c1.NOTE as c1_8,
+  c1.IS_TAX as c1_9,
+  c1.NEC as c1_10,
+  c1.IDN as c1_11,
+  c1.TAX_DOC_NO as c1_12,
+  c1.DESCRIMINATOR as c1_13,
+  c1.PARTNER_TYPE_ID as c1_14,
+  c2.ID as c2_1,
+  c2.NAME as c2_2,
+  c1.FORM_PROPERTY_ID as c1_15,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.FULL_NAME as c3_3,
+  c1.PARTNER_GROUP_ID as c1_16,
+  c4.ID as c4_1,
+  c4.NAME as c4_2,
+  c1.INDUSTRY_ID as c1_17,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c1.LEDGER_ACCOUNT_ID as c1_18,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.LEDGER_ACCOUNT_TYPE_ID as c6_4,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c6.PARENT_ID as c6_5,
+  c1.BANK_ACCOUNT_ID as c1_19,
+  c1.IMAGE_FILE_NAME as c1_20,
+  c1.RESPONSIBLE_ID as c1_21,
+  c8.ID as c8_1,
+  c8.CODE as c8_2,
+  c8.NAME as c8_3,
+  c8.TITLE_NAME as c8_4,
+  c8.FIRST_NAME as c8_5,
+  c8.MIDDLE_NAME as c8_6,
+  c8.LAST_NAME as c8_7,
+  c1.IS_PERSON as c1_22,
+  c9.ID as c9_1,
+  c9.ENTITY_ID as c9_2,
+  c9.OWNER_ID as c9_3,
+  c9.ADDRESS_ID as c9_4,
+  c9.PHONE_ID as c9_5,
+  c9.EMAIL_ID as c9_6,
+  c9.WEB_ID as c9_7
+FROM
+  PARTNER c1
+LEFT JOIN PARTNER_TYPE c2 ON c1.PARTNER_TYPE_ID = c2.ID
+LEFT JOIN FORM_PROPERTY c3 ON c1.FORM_PROPERTY_ID = c3.ID
+LEFT JOIN PARTNER_GROUP c4 ON c1.PARTNER_GROUP_ID = c4.ID
+LEFT JOIN INDUSTRY c5 ON c1.INDUSTRY_ID = c5.ID
+LEFT JOIN LEDGER_ACCOUNT c6 ON c1.LEDGER_ACCOUNT_ID = c6.ID
+LEFT JOIN LEDGER_ACCOUNT_TYPE c7 ON c6.LEDGER_ACCOUNT_TYPE_ID = c7.ID
+LEFT JOIN CONTACT c8 ON c1.RESPONSIBLE_ID = c8.ID
+LEFT JOIN CONTACTABLE c9 ON c1.ID = c9.OWNER_ID
+WHERE 
+  c1.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PARTNER_CATEGORY_ID as c1_2,
+  c2.ID as c2_1,
+  c2.NAME as c2_2
+FROM
+  PARTNER_CATEGORY_LINK c1
+LEFT JOIN PARTNER_CATEGORY c2 ON c1.PARTNER_CATEGORY_ID = c2.ID
+WHERE 
+  c1.PARTNER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ACTIVITY_TYPE_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3
+FROM
+  PARTNER_ACTIVITY_TYPE_LINK c1
+LEFT JOIN ACTIVITY_TYPE c2 ON c1.ACTIVITY_TYPE_ID = c2.ID
+WHERE 
+  c1.PARTNER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ADDRESS_STRING as c1_2,
+  c1.LOCALITY_ADDRESS_STRING as c1_3,
+  c1.FULL_ADDRESS_STRING as c1_4,
+  c1.ZIP_CODE as c1_5,
+  c1.STREET as c1_6,
+  c1.HOUSE_NUM as c1_7,
+  c1.CASE_NUM as c1_8,
+  c1.APART_NUM as c1_9,
+  c1.NOTE as c1_10,
+  c1.ADDRESS_TYPE_ID as c1_11,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c1.CITY_ID as c1_12,
+  c3.ID as c3_1,
+  c3.NAME as c3_2,
+  c3.REGION_ID as c3_3,
+  c5.ID as c5_1,
+  c5.NAME as c5_2,
+  c3.COUNTRY_ID as c3_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.CODE3 as c6_3,
+  c6.NAME as c6_4,
+  c6.NUMERIC_CODE as c6_5,
+  c3.LOCALITY_TYPE_ID as c3_5,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.FULL_NAME as c7_4,
+  c3.DISTRICT_ID as c3_6,
+  c8.ID as c8_1,
+  c8.NAME as c8_2,
+  c4.ID as c4_1,
+  c4.PHONE_CODE as c4_2,
+  c1.LOCALITY_ID as c1_13,
+  c9.ID as c9_1,
+  c9.NAME as c9_2,
+  c9.REGION_ID as c9_3,
+  c10.ID as c10_1,
+  c10.NAME as c10_2,
+  c9.COUNTRY_ID as c9_4,
+  c11.ID as c11_1,
+  c11.CODE as c11_2,
+  c11.CODE3 as c11_3,
+  c11.NAME as c11_4,
+  c11.NUMERIC_CODE as c11_5,
+  c9.LOCALITY_TYPE_ID as c9_5,
+  c12.ID as c12_1,
+  c12.CODE as c12_2,
+  c12.NAME as c12_3,
+  c12.FULL_NAME as c12_4,
+  c9.DISTRICT_ID as c9_6,
+  c13.ID as c13_1,
+  c13.NAME as c13_2,
+  c1.STREET_TYPE_ID as c1_14,
+  c14.ID as c14_1,
+  c14.CODE as c14_2,
+  c14.NAME as c14_3,
+  c14.FULL_NAME as c14_4,
+  c1.APARTMENT_TYPE_ID as c1_15,
+  c15.ID as c15_1,
+  c15.CODE as c15_2,
+  c15.NAME as c15_3,
+  c15.FULL_NAME as c15_4
+FROM
+  ADDRESS c1
+LEFT JOIN ADDRESS_TYPE c2 ON c1.ADDRESS_TYPE_ID = c2.ID
+LEFT JOIN LOCALITY c3 ON c1.CITY_ID = c3.ID
+LEFT JOIN CITY c4 ON c3.ID = c4.ID
+LEFT JOIN REGION c5 ON c3.REGION_ID = c5.ID
+LEFT JOIN COUNTRY c6 ON c3.COUNTRY_ID = c6.ID
+LEFT JOIN LOCALITY_TYPE c7 ON c3.LOCALITY_TYPE_ID = c7.ID
+LEFT JOIN DISTRICT c8 ON c3.DISTRICT_ID = c8.ID
+LEFT JOIN LOCALITY c9 ON c1.LOCALITY_ID = c9.ID
+LEFT JOIN REGION c10 ON c9.REGION_ID = c10.ID
+LEFT JOIN COUNTRY c11 ON c9.COUNTRY_ID = c11.ID
+LEFT JOIN LOCALITY_TYPE c12 ON c9.LOCALITY_TYPE_ID = c12.ID
+LEFT JOIN DISTRICT c13 ON c9.DISTRICT_ID = c13.ID
+LEFT JOIN STREET_TYPE c14 ON c1.STREET_TYPE_ID = c14.ID
+LEFT JOIN APARTMENT_TYPE c15 ON c1.APARTMENT_TYPE_ID = c15.ID
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.PHONE_CODE as c1_2,
+  c1.PHONE_NUMBER as c1_3,
+  c1.PHONE_STRING as c1_4,
+  c1.PHONE_COMPILE as c1_5,
+  c1.NOTE as c1_6,
+  c1.PHONE_TYPE_ID as c1_7,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3
+FROM
+  PHONE c1
+LEFT JOIN PHONE_TYPE c2 ON c1.PHONE_TYPE_ID = c2.ID
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.EMAIL_ADDRESS as c1_2,
+  c1.NOTE as c1_3
+FROM
+  EMAIL c1
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.URL as c1_2,
+  c1.NOTE as c1_3
+FROM
+  WEB c1
+WHERE 
+  c1.CONTACTABLE_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.CODE as c1_2,
+  c1.NAME as c1_3,
+  c1.ENTITY_ID as c1_4,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.DATA_TYPE_ID as c1_5,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.IS_ENABLE as c4_4,
+  c1.VALUE_ENTITY_ID as c1_6,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.ENTITY_TYPE_ID as c5_4,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.IS_CUSTOM as c6_4,
+  c6.IS_CUSTOM_ATTRIBUTE as c6_5,
+  c5.ENTITY_PACKAGE as c5_5,
+  c5.ENTITY_CLASS as c5_6,
+  c5.IS_ENABLE as c5_7,
+  c5.IS_MASTER as c5_8,
+  c5.IS_BEAN as c5_9,
+  c5.IS_FORM as c5_10,
+  c5.IS_SECURE as c5_11,
+  c5.IS_SYSTEM as c5_12,
+  c5.IS_CUSTOM as c5_13,
+  c5.IS_CUSTOM_ATTRIBUTE as c5_14,
+  c5.IS_CACHE as c5_15,
+  c5.CACHE_EXPIRE_TIME as c5_16
+FROM
+  SYS_ENTITY_ATTR c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+LEFT JOIN SYS_DATA_TYPE c4 ON c1.DATA_TYPE_ID = c4.ID
+LEFT JOIN SYS_ENTITY c5 ON c1.VALUE_ENTITY_ID = c5.ID
+LEFT JOIN SYS_ENTITY_TYPE c6 ON c5.ENTITY_TYPE_ID = c6.ID
+WHERE 
+  c2.ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ENTITY_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.ATTR_ID as c1_3,
+  c4.ID as c4_1,
+  c4.CODE as c4_2,
+  c4.NAME as c4_3,
+  c4.ENTITY_ID as c4_4,
+  c5.ID as c5_1,
+  c5.CODE as c5_2,
+  c5.NAME as c5_3,
+  c5.ENTITY_PACKAGE as c5_4,
+  c5.ENTITY_CLASS as c5_5,
+  c5.IS_ENABLE as c5_6,
+  c5.IS_MASTER as c5_7,
+  c5.IS_BEAN as c5_8,
+  c5.IS_FORM as c5_9,
+  c5.IS_SECURE as c5_10,
+  c5.IS_SYSTEM as c5_11,
+  c5.IS_CUSTOM as c5_12,
+  c5.IS_CUSTOM_ATTRIBUTE as c5_13,
+  c5.IS_CACHE as c5_14,
+  c5.CACHE_EXPIRE_TIME as c5_15,
+  c4.DATA_TYPE_ID as c4_5,
+  c6.ID as c6_1,
+  c6.CODE as c6_2,
+  c6.NAME as c6_3,
+  c6.IS_ENABLE as c6_4,
+  c4.VALUE_ENTITY_ID as c4_6,
+  c7.ID as c7_1,
+  c7.CODE as c7_2,
+  c7.NAME as c7_3,
+  c7.ENTITY_PACKAGE as c7_4,
+  c7.ENTITY_CLASS as c7_5,
+  c7.IS_ENABLE as c7_6,
+  c7.IS_MASTER as c7_7,
+  c7.IS_BEAN as c7_8,
+  c7.IS_FORM as c7_9,
+  c7.IS_SECURE as c7_10,
+  c7.IS_SYSTEM as c7_11,
+  c7.IS_CUSTOM as c7_12,
+  c7.IS_CUSTOM_ATTRIBUTE as c7_13,
+  c7.IS_CACHE as c7_14,
+  c7.CACHE_EXPIRE_TIME as c7_15,
+  c1.OWNER_ID as c1_4,
+  c1.STRING_VALUE as c1_5,
+  c1.INTEGER_VALUE as c1_6,
+  c1.FLOAT_VALUE as c1_7,
+  c1.DATE_VALUE as c1_8
+FROM
+  SYS_ENTITY_ATTR_VALUE c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+LEFT JOIN SYS_ENTITY_ATTR c4 ON c1.ATTR_ID = c4.ID
+LEFT JOIN SYS_ENTITY c5 ON c4.ENTITY_ID = c5.ID
+LEFT JOIN SYS_DATA_TYPE c6 ON c4.DATA_TYPE_ID = c6.ID
+LEFT JOIN SYS_ENTITY c7 ON c4.VALUE_ENTITY_ID = c7.ID
+WHERE 
+  c2.ID = ? AND
+  c1.OWNER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ENTITY_ID as c1_2,
+  c2.ID as c2_1,
+  c2.CODE as c2_2,
+  c2.NAME as c2_3,
+  c2.ENTITY_TYPE_ID as c2_4,
+  c3.ID as c3_1,
+  c3.CODE as c3_2,
+  c3.NAME as c3_3,
+  c3.IS_CUSTOM as c3_4,
+  c3.IS_CUSTOM_ATTRIBUTE as c3_5,
+  c2.ENTITY_PACKAGE as c2_5,
+  c2.ENTITY_CLASS as c2_6,
+  c2.IS_ENABLE as c2_7,
+  c2.IS_MASTER as c2_8,
+  c2.IS_BEAN as c2_9,
+  c2.IS_FORM as c2_10,
+  c2.IS_SECURE as c2_11,
+  c2.IS_SYSTEM as c2_12,
+  c2.IS_CUSTOM as c2_13,
+  c2.IS_CUSTOM_ATTRIBUTE as c2_14,
+  c2.IS_CACHE as c2_15,
+  c2.CACHE_EXPIRE_TIME as c2_16,
+  c1.OWNER_ID as c1_3,
+  c1.FILE_NAME as c1_4,
+  c1.NAME as c1_5,
+  c1.DESCRIPTION as c1_6
+FROM
+  SYS_FILE c1
+LEFT JOIN SYS_ENTITY c2 ON c1.ENTITY_ID = c2.ID
+LEFT JOIN SYS_ENTITY_TYPE c3 ON c2.ENTITY_TYPE_ID = c3.ID
+WHERE 
+  c2.ID = ? AND
+  c1.OWNER_ID = ?
+Prepared statement: SELECT
+  c1.ID as c1_1,
+  c1.ENTITY_ID as c1_2,
+  c1.OWNER_ID as c1_3,
+  c1.NAME as c1_4
+FROM
+  BUSINESSABLE c1
+WHERE 
+  c1.ID = ?

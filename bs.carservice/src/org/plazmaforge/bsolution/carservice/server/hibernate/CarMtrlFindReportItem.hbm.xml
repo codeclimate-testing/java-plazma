@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarMtrlFindReportItem" table="CAR_MTRL_FIND_REPORT_ITEM">
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+
+        <property name="price" column="PRICE" type="java.lang.Double" />
+        <property name="quantity" column="QUANTITY" type="java.lang.Double" />
+        <property name="amount" column="AMOUNT" type="java.lang.Double" />
+        
+        <property name="currencyPrice" column="CURRENCY_PRICE" type="java.lang.Double" />
+        <property name="currencyAmount" column="CURRENCY_AMOUNT" type="java.lang.Double" />
+        
+        <property name="unitRate" column="UNIT_RATE" type="java.lang.Double" />
+        
+        <many-to-one name="carMtrlFindReport" column="CAR_MTRL_FIND_REPORT_ID" class="CarMtrlFindReport"  not-null="true" />
+        
+        <many-to-one name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductHeader"  not-null="true" />
+        <many-to-one name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  not-null="true" />
+        
+        <!--
+        <property name="accountQuantity" column="ACCOUNT_QUANTITY" type="java.lang.Double" />
+        <property name="accountPrice" column="ACCOUNT_PRICE" type="java.lang.Double" />
+        <property name="accountTaxPrice" column="ACCOUNT_TAX_PRICE" type="java.lang.Double" />
+        <property name="accountPriceWithTax" column="ACCOUNT_PRICE_WITH_TAX" type="java.lang.Double" />
+        -->
+         
+        <bag name="priceList" inverse="true"  cascade="all-delete-orphan"  lazy="true">
+            <key column="ITEM_ID"/>
+            <one-to-many class="CarMtrlFindReportPrice"/>
+        </bag>
+         
+    </class>
+
+</hibernate-mapping>

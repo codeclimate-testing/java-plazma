@@ -1,0 +1,7 @@
+<module>
+
+    <source path="bs">
+    	<exclude name="DesktopApplicationInitializer.java" />
+    </source>
+
+</module>

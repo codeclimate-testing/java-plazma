@@ -1,0 +1,10 @@
+<entity-mapping>
+    <joined-entity class="org.plazmaforge.bsolution.carservice.common.beans.CarPaint" table="CAR_PAINT" extends-class="org.plazmaforge.bsolution.goods.common.beans.Goods">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer"/>
+        	<reference name="carPaintType" column="CAR_PAINT_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintType"/>        
+        	<reference name="carPaintMark" column="CAR_PAINT_MARK_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintMark"/>
+        	<attribute name="consumable" column="IS_CONSUMABLES" type="Boolean"/>
+        </attributes>
+    </joined-entity>
+</entity-mapping>

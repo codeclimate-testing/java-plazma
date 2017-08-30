@@ -1,0 +1,15 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SystemPreference" class="org.plazmaforge.bsolution.base.common.beans.SystemPreference" table="SYS_PREFERENCE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="dateFormat" column="DATE_FORMAT" type="String" />
+        	<attribute name="timeFormat" column="TIME_FORMAT" type="String" />
+        	<attribute name="numberFormat" column="NUMBER_FORMAT" type="String" />
+        	<attribute name="integerFormat" column="INTEGER_FORMAT" type="String" />
+        	<attribute name="currencyFormat" column="CURRENCY_FORMAT" type="String" />
+        	<attribute name="percentFormat" column="PERCENT_FORMAT" type="String" />
+        	<attribute name="quantityFormat" column="QUANTITY_FORMAT" type="String" />
+        	<attribute name="coefficientFormat" column="COEFFICIENT_FORMAT" type="String" />
+        </attributes>
+    </entity>
+

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TaskResult" class="org.plazmaforge.bs.project.shared.entities.TaskResult" table="TASK_RESULT">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<reference name="taskType" column="TASK_TYPE_ID" class="org.plazmaforge.bs.project.shared.entities.TaskType" />
+        </attributes>        
+     </entity>
+

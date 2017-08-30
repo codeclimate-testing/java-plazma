@@ -1,0 +1,203 @@
+############################################################################
+# CONTACT Action Definition
+############################################################################
+
+
+# Address Type List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.AddressTypeListAction@name =Тип адресов
+org.plazmaforge.bsolution.contact.richclient.swing.actions.AddressTypeListAction@tooltip =Тип адресов
+
+# Area List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.RegionListAction@name = Области
+org.plazmaforge.bsolution.contact.richclient.swing.actions.RegionListAction@tooltip = Области
+
+# City List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.CityListAction@name = Города
+org.plazmaforge.bsolution.contact.richclient.swing.actions.CityListAction@tooltip = Города
+
+# Locality List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.LocalityListAction@name = Населённые пункты
+org.plazmaforge.bsolution.contact.richclient.swing.actions.LocalityListAction@tooltip = Населённые пункты
+
+
+# Locality Type List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.LocalityTypeListAction@name = Тип населённого пункта
+org.plazmaforge.bsolution.contact.richclient.swing.actions.LocalityTypeListAction@tooltip = Тип населённого пункта
+
+
+# Phone Type List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.PhoneTypeListAction@name = Тип телефона
+org.plazmaforge.bsolution.contact.richclient.swing.actions.PhoneTypeListAction@tooltip = Тип телефона
+
+
+# Street Type List Action
+org.plazmaforge.bsolution.contact.richclient.swing.actions.StreetTypeListAction@name = Тип улиц
+org.plazmaforge.bsolution.contact.richclient.swing.actions.StreetTypeListAction@tooltip = Тип улиц
+
+
+
+
+
+
+
+
+############################################################################
+# List Form Definition
+############################################################################
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressTypeList@title=Типы адресов
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressTypeList@table.column-name.name=Тип
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.RegionList@title=Список областей
+org.plazmaforge.bsolution.contact.richclient.swing.forms.RegionList@table.column-name.name=Область
+org.plazmaforge.bsolution.contact.richclient.swing.forms.RegionList@table.column-country.name=Страна
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityList@title=Список городов
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityList@table.column-name.name=Город
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityList@table.column-country.name=Страна
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityList@table.column-region.name=Регион/Область
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityList@title=Список населённых пунктов
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityList@table.column-locality-type-full-name.name=Тип
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityList@table.column-name.name=Населённый пункт
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityList@table.column-country.name=Страна
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityList@table.column-region.name=Регион/Область
+
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityTypeList@title=Тип населённого рункта
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityTypeList@table.column-full-name.name=Полное название
+
+
+
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneTypeList@title=Тип телефона
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneTypeList@table.column-name.name=Тип
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.StreetTypeList@title=Тип улиц
+org.plazmaforge.bsolution.contact.richclient.swing.forms.StreetTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.contact.richclient.swing.forms.StreetTypeList@table.column-full-name.name=Полное название
+
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AppartmentTypeList@title=Тип апартаментов
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AppartmentTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AppartmentTypeList@table.column-full-name.name=Полное название
+
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressTypeEdit@title=Тип адреса
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressTypeEdit@panel.label-name.text=Название
+
+
+#
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@title=Адрес
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-address-type.text=Тип
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-city.text=Город
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-locality.text=Насел. пункт
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-default.text=По умолчанию
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-full-address.text=Полный адрес
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-address.text=Адрес
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-zip-code.text=Индекс
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-street.text=Улица
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-house-num.text=Дом
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-case-num.text=Копус
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AddressEdit@panel.label-appart-num.text=Кв/Офис
+#
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.RegionEdit@title=Область
+org.plazmaforge.bsolution.contact.richclient.swing.forms.RegionEdit@panel.label-country.text=Страна
+org.plazmaforge.bsolution.contact.richclient.swing.forms.RegionEdit@panel.label-name.text=Область
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityEdit@title=Город
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityEdit@panel.label-country.text=Страна
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityEdit@panel.label-region.text=Область
+org.plazmaforge.bsolution.contact.richclient.swing.forms.CityEdit@panel.label-name.text=Город
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityEdit@title=Населённый пункт
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityEdit@panel.label-country.text=Страна
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityEdit@panel.label-region.text=Область
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityEdit@panel.label-name.text=Населённый пункт
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+org.plazmaforge.bsolution.contact.richclient.swing.forms.EmailEdit@title=E-Mail
+org.plazmaforge.bsolution.contact.richclient.swing.forms.EmailEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.contact.richclient.swing.forms.EmailEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.EmailEdit@panel.label-default.text=По умолчанию
+org.plazmaforge.bsolution.contact.richclient.swing.forms.EmailEdit@panel.label-email.text=E-mail
+#
+
+
+
+
+#
+org.plazmaforge.bsolution.contact.richclient.swing.forms.WebEdit@title=URL
+org.plazmaforge.bsolution.contact.richclient.swing.forms.WebEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.contact.richclient.swing.forms.WebEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.WebEdit@panel.label-default.text=По умолчанию
+org.plazmaforge.bsolution.contact.richclient.swing.forms.WebEdit@panel.label-url.text=URL
+#
+
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityTypeEdit@title=Тип населённого пункта
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityTypeEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.contact.richclient.swing.forms.LocalityTypeEdit@panel.label-full-name.text=Полное название
+
+
+
+#
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@title=Телефон
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.label-phone-type.text=Тип
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.label-default.text=По умолчанию
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.label-phone-code.text=Код
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.label-phone-number.text=Номер
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneEdit@panel.label-phone-string.text=Телефон
+#
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneTypeEdit@title=Тип телефона
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.contact.richclient.swing.forms.PhoneTypeEdit@panel.label-name.text=Название
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.StreetTypeEdit@title=Тип улицы
+org.plazmaforge.bsolution.contact.richclient.swing.forms.StreetTypeEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.contact.richclient.swing.forms.StreetTypeEdit@panel.label-full-name.text=Полное название
+
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AppartmentTypeEdit@title=Тип апартаментов
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AppartmentTypeEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.contact.richclient.swing.forms.AppartmentTypeEdit@panel.label-full-name.text=Полное название
+
+
+
+
+

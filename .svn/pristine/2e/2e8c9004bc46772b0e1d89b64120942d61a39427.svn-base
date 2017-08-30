@@ -1,0 +1,13 @@
+#Eclipse messages class
+PensionReportDialog.title = Input parameters
+PensionReportDialog.startWorkDate = Start work date
+PensionReportDialog.endWorkDate = End work date
+PensionReportDialog.reportDate = Report date
+PensionReportDialog.formType = Form type
+PensionReportDialog.formType1 = begin
+PensionReportDialog.formType2 = change
+PensionReportDialog.formType3 = cancel
+PensionReportDialog.formType4 = pension
+PensionReportDialog.reportType = Report type
+PensionReportDialog.workBook = Work book
+PensionReportDialog.year = Year

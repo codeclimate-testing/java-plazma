@@ -1,0 +1,16 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="DocumentRelationListForm" type="ListForm" title="@{DocumentRelationListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{DocumentRelationListForm.parentTypeCodeColumn.text}" property="parentTypeCode" data-type="String" width="200"/>
+						<column text="@{DocumentRelationListForm.parentTypeNameColumn.text}" property="parentTypeName" data-type="String" width="300"/>
+						<column text="@{DocumentRelationListForm.childTypeCodeColumn.text}" property="childTypeCode" data-type="String" width="200"/>
+						<column text="@{DocumentRelationListForm.childTypeNameColumn.text}" property="childTypeName" data-type="String" width="300"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

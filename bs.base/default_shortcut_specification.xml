@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shortcuts>
+
+ <skipIfNotSupported/>
+
+ <programGroup defaultName="Plazma ERP+CRM {version}" location="applications"/>
+
+ <shortcut
+  name="Plazma ERP+CRM {version}"
+  target="$JAVA_HOME\bin\javaw"
+  commandLine=" -jar launcher.jar plazma"
+  workingDirectory="$INSTALL_PATH"
+  description="Plazma Application"
+  iconFile="$INSTALL_PATH\plazma.ico"
+  iconIndex="0"
+  initialState="normal"
+  programGroup="yes"
+  desktop="yes"
+  applications="no"
+  startMenu="no"
+  startup="no">
+ </shortcut>
+
+ <shortcut
+  name="Uninstall"
+  target="$JAVA_HOME\bin\javaw"
+  commandLine=" -jar Uninstaller\uninstaller.jar"
+  workingDirectory="$INSTALL_PATH"
+  initialState="normal"
+  programGroup="yes"
+  desktop="no"
+  applications="no"
+  startMenu="no"
+  startup="no">
+ </shortcut>
+
+</shortcuts>

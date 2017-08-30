@@ -1,0 +1,12 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BankContext" class="org.plazmaforge.bsolution.bank.BankContext" table="BANK_CONTEXT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        	<reference name="incomePartner" column="INCOME_PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>        
+        	<reference name="outcomePartner" column="OUTCOME_PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>                
+        	<reference name="paymentType" column="PAYMENT_TYPE_ID" class="org.plazmaforge.bsolution.bank.common.beans.PaymentType"/>
+        	<reference name="taxPrintType" column="TAXPRINT_TYPE_ID" class="org.plazmaforge.bsolution.bank.common.beans.TaxPrintType"/>
+        </attributes>
+    </entity>
+

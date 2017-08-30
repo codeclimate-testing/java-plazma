@@ -1,0 +1,5 @@
+EntryCalculateAction.confirm = Do you want to calculate accounting entries ?
+EntryCalculateAction.result = Accounting entries were calculated
+
+EntryRemoveAction.confirm = Do you want to remove all accounting entries ?
+EntryRemoveAction.result = Accounting entries were removed

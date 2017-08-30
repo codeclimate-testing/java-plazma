@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarServOrderImage" table="CAR_SERV_ORDER_IMAGE">
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+        <many-to-one name="carServOrder" column="CAR_SERV_ORDER_ID" class="CarServOrder"  not-null="true" />
+        
+        <property name="imageName" column="NAME" type="java.lang.String" />
+        <property name="imageSize" column="IMAGE_SIZE" type="java.lang.Integer" />
+        <property name="recordType" column="RECORD_TYPE" type="java.lang.String" />
+        
+    </class>
+
+</hibernate-mapping>

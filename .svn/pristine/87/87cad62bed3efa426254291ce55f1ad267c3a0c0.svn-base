@@ -1,0 +1,12 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPaintBoxPrice" table="CAR_INSURER_PAINT_BOX_PRICE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/> 
+        	<reference name="carPaintDetailType" column="CAR_PAINT_DETAIL_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintDetailType"/>
+        	<attribute name="ageFrom" column="AGE_FROM" type="Integer" />
+        	<attribute name="ageTo" column="AGE_TO" type="Integer" />
+        	<attribute name="price" column="PRICE" type="Float" />        
+        	<reference name="contractVariant" column="CONTRACT_VARIANT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerContractVariant"  required="true" />
+        </attributes>
+    </entity>
+</entity-mapping>

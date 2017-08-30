@@ -1,0 +1,10 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrderPaintType" table="CAR_SERV_ORDER_PAINT_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>         
+        	<reference name="carServOrder" column="CAR_SERV_ORDER_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServOrder"  required="true" />        
+        	<reference name="carPaintType" column="CAR_PAINT_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintType"  required="true" />
+        	<attribute name="carServOrderInventoryId" column="CAR_SERV_ORDER_INVENTORY_ID" type="Integer"/>
+        </attributes>
+    </entity>
+</entity-mapping>

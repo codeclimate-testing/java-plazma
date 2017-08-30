@@ -1,0 +1,21 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BusinessableRegister" class="org.plazmaforge.bsolution.finance.common.beans.BusinessableRegister" table="BUSINESSABLE_REGISTER">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+    	<aliases>
+    		<alias name="organization.id" attribute="organizationId"/>
+    		<alias name="documentDate" attribute="registerDate"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="registerDate" column="REST_DATE" type="Date" />
+        	<attribute name="quantity" column="QUANTITY" type="Double" />        
+        	<attribute name="debitAmount" column="DEBIT_AMOUNT" type="Double" />
+        	<attribute name="creditAmount" column="CREDIT_AMOUNT" type="Double" />
+        	<attribute name="organizationId" column="ORGANIZATION_ID" type="Integer"  required="true" />
+        	<attribute name="businessableId" column="BUSINESSABLE_ID" type="Integer"  required="true" />
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer"  required="true" />
+        </attributes>                
+    </entity>
+

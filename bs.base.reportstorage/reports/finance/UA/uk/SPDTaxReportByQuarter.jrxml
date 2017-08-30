@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="SPDTaxReportByQuarter"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="ORGANIZATION_ID" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="ORGANIZATION_NAME" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="PERSON_NAME" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DATA_SOURCE" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="QUARTER_NAME" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="YEAR" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="TAX_AMOUNT" isForPrompting="false" class="java.math.BigDecimal"/>
+	<parameter name="SALE_AMOUNT" isForPrompting="false" class="java.math.BigDecimal"/>
+	<parameter name="EMPLOYEE_COUNT_1" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="EMPLOYEE_COUNT_2" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="EMPLOYEE_COUNT_3" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="IDN" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="ORGANIZATION_ACTIVITY_1" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="ORGANIZATION_ACTIVITY_2" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="GOV_TAX_ORGANIZATION_NAME" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="QUARTER" isForPrompting="false" class="java.lang.Integer"/>
+	<parameter name="PERSON_NAME_1" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="PERSON_NAME_2" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT 
+ID
+FROM ORGANIZATION WHERE ID = $P{ORGANIZATION_ID}]]></queryString>
+
+	<field name="ID" class="java.lang.Integer"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="506"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="272"
+						y="0"
+						width="254"
+						height="117"
+						key="staticText-23"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[Додаток 3
+до Порядку видачі Свідоцтва про сплату
+єдиного податку, затвердженого наказом
+Державної податкової адміністрації України 
+від 29 жовтня 1999 р. N 599 
+(у редакції наказу Державної податкової
+адміністрації України 
+від 28 грудня 2001 р. N 521)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="272"
+						y="132"
+						width="213"
+						height="16"
+						key="staticText-24"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[До державної податкової інспекції
+
+
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="272"
+						y="162"
+						width="254"
+						height="12"
+						key="staticText-25"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(назва органу державної податкової служби)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="272"
+						y="179"
+						width="19"
+						height="15"
+						key="staticText-26"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[від
+________________________]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="384"
+						y="194"
+						width="147"
+						height="12"
+						key="staticText-27"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(ідентифікаційний номер)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="272"
+						y="221"
+						width="254"
+						height="12"
+						key="staticText-28"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(прізвище, ім'я та по батькові платника єдиного податку)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="85"
+						y="252"
+						width="358"
+						height="60"
+						key="staticText-29"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ЗВІТ
+суб'єкта малого підприємництва - фізичної особи – 
+платника єдиного податку
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="164"
+						y="312"
+						width="16"
+						height="15"
+						key="staticText-30"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[за]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="180"
+						y="327"
+						width="63"
+						height="14"
+						key="staticText-31"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+				<text><![CDATA[  (літерами)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="351"
+						width="535"
+						height="15"
+						key="staticText-32"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[      1. Види підприємницької діяльності, які здійснювалися мною у звітному кварталі:
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="399"
+						width="535"
+						height="14"
+						key="staticText-33"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+				<text><![CDATA[(зазначаються згідно з порядковими номерами (кодами), передбаченими в рішеннях відповідних місцевих рад)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="422"
+						width="535"
+						height="15"
+						key="staticText-34"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[      2. Фактична чисельність працівників у звітному кварталі:
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="444"
+						width="105"
+						height="15"
+						key="staticText-35"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[1-й місяць кварталу
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="466"
+						width="535"
+						height="15"
+						key="staticText-36"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[      3. Сума фактично сплаченого єдиного податку у звітному кварталі:
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="484"
+						width="74"
+						height="15"
+						key="staticText-37"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[відповідно до
+]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="292"
+						y="179"
+						width="92"
+						height="15"
+						key="textField-2"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{PERSON_NAME_1}]]></textFieldExpression>
+				</textField>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="84"
+						y="484"
+						width="450"
+						height="17"
+						key="subreport-2"/>
+					<subreportParameter  name="REPORT_DATA_SOURCE">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DATA_SOURCE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$P{SUBREPORT_DATA_SOURCE}]]></dataSourceExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "SPDTaxReportByQuarter_docs.jasper"]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="271"
+						y="147"
+						width="255"
+						height="15"
+						key="textField-3"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{GOV_TAX_ORGANIZATION_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="384"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-4"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},1)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="399"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-5"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},2)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="413"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-6"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},3)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="428"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-7"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},4)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="443"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-8"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},5)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="458"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-9"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},6)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="472"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-10"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},7)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="487"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-11"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},8)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="501"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-12"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},9)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="516"
+						y="179"
+						width="15"
+						height="15"
+						key="textField-13"/>
+					<box>					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[JRStr.charAt($P{IDN},10)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="180"
+						y="312"
+						width="63"
+						height="15"
+						key="textField-14"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{QUARTER} == null ? null : ($P{QUARTER}.intValue() == 1 ? "перший" : ($P{QUARTER}.intValue() == 2 ? "другий" : ($P{QUARTER}.intValue() == 3 ? "третій" : ($P{QUARTER}.intValue() == 4 ? "четвертий" : null))))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="243"
+						y="312"
+						width="44"
+						height="15"
+						key="staticText-53"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[квартал]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="320"
+						y="312"
+						width="28"
+						height="15"
+						key="staticText-55"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[року]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="287"
+						y="312"
+						width="33"
+						height="15"
+						key="textField-15"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{YEAR}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="105"
+						y="444"
+						width="40"
+						height="15"
+						key="textField-18"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{EMPLOYEE_COUNT_1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="277"
+						y="444"
+						width="40"
+						height="15"
+						key="textField-19"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{EMPLOYEE_COUNT_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="451"
+						y="444"
+						width="40"
+						height="15"
+						key="textField-20"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$P{EMPLOYEE_COUNT_3}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="145"
+						y="444"
+						width="27"
+						height="15"
+						key="staticText-58"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[чол.;
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="172"
+						y="444"
+						width="105"
+						height="15"
+						key="staticText-59"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[2-й місяць кварталу
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="317"
+						y="444"
+						width="29"
+						height="15"
+						key="staticText-60"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[чол.;
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="346"
+						y="444"
+						width="105"
+						height="15"
+						key="staticText-61"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[2-й місяць кварталу
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="491"
+						y="444"
+						width="29"
+						height="15"
+						key="staticText-62"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[чол.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="369"
+						width="535"
+						height="15"
+						key="textField-21"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{ORGANIZATION_ACTIVITY_1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="384"
+						width="535"
+						height="15"
+						key="textField-22"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{ORGANIZATION_ACTIVITY_2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="272"
+						y="206"
+						width="259"
+						height="15"
+						key="textField-23"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{PERSON_NAME_2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="190"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="31"
+						width="238"
+						height="80"
+						key="staticText-46"/>
+					<box></box>
+					<textElement textAlignment="Justified">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[      4. Обсяг виручки від реалізації
+товарів (робіт, послуг) за звітний квартал
+наростаючим підсумком з початку терміну
+дії Свідоцтва про сплату єдиного податку в
+календарному році 
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="10"
+						y="148"
+						width="210"
+						height="15"
+						key="staticText-47"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Суб'єкт малого підприємництва
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="220"
+						y="163"
+						width="105"
+						height="15"
+						key="staticText-48"/>
+					<box>					<topPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+				<text><![CDATA[(підпис, дата)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="402"
+						y="148"
+						width="43"
+						height="20"
+						key="staticText-49"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[М. П.
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="453"
+						y="6"
+						width="54"
+						height="15"
+						key="staticText-50"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[ грн.
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="6"
+						width="238"
+						height="15"
+						key="staticText-51"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[у звітному кварталі сплачено      
+]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="259"
+						y="6"
+						width="191"
+						height="15"
+						key="textField-16"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$P{TAX_AMOUNT}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="259"
+						y="31"
+						width="191"
+						height="15"
+						key="textField-17"/>
+					<box>					<bottomPen lineWidth="1.0"/>
+</box>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Oblique" size="12" isItalic="true"/>
+					</textElement>
+				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$P{SALE_AMOUNT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="453"
+						y="31"
+						width="54"
+						height="15"
+						key="staticText-56"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[ грн.
+]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>

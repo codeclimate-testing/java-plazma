@@ -1,0 +1,8 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PaymentType" class="org.plazmaforge.bsolution.bank.common.beans.PaymentType" table="PAYMENT_TYPE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        </attributes>
+    </entity>
+

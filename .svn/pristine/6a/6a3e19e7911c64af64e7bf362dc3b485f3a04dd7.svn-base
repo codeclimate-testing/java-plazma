@@ -1,0 +1,52 @@
+
+<html>
+<title>Eclipse IDE</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Eclipse IDE</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Download</h3>
+
+<p>You have to download <b>Eclipse IDE</b> from site <a target="_blank" href="http://www.eclipse.org/downloads">http://www.eclipse.org/downloads</a> 
+
+   <h3 align="center">Installation</h3>
+
+To installation you have to unzip the installation archive to a folder (for example, eclipse or eclipse-&lt;version&gt;.
+
+<p>To run you have to execute file eclipse.exe (Windows) or eclipse (Linux)
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/eclipse-logo.png"/></td>
+ </tr>
+</table>
+<p>After start the Eclipse you have to choose workspace.
+<p>The workspace is a folder in the file system, where will be locate your projects. 
+<p>You can work with more workspace, choosing  current workspace.
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/select-workspace.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

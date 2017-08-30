@@ -1,0 +1,139 @@
+############################################################################
+# BANK Action Definition
+############################################################################
+
+# Bank List Action
+org.plazmaforge.bsolution.bank.richclient.swing.actions.BankListAction@name = Банки
+org.plazmaforge.bsolution.bank.richclient.swing.actions.BankListAction@tooltip = Банки
+org.plazmaforge.bsolution.bank.richclient.swing.actions.BankListAction@image = olmari/ext/money.gif
+
+# PaymentOutcome List Action
+org.plazmaforge.bsolution.bank.richclient.swing.actions.PaymentOutcomeListAction@name=Платёжное поручение
+org.plazmaforge.bsolution.bank.richclient.swing.actions.PaymentOutcomeListAction@tooltip=Платёжное поручение
+
+# PaymentIncome List Action
+org.plazmaforge.bsolution.bank.richclient.swing.actions.PaymentIncomeListAction@name=Платёжное требование
+org.plazmaforge.bsolution.bank.richclient.swing.actions.PaymentIncomeListAction@tooltip=Платёжное требование
+
+# Payment List Action
+org.plazmaforge.bsolution.bank.richclient.swing.actions.PaymentListAction@name=Платёжные документы
+org.plazmaforge.bsolution.bank.richclient.swing.actions.PaymentListAction@tooltip=Платёжные документы
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+# Bank List
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankList@title=Список банков
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankList@table.column-code.name=Код
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankList@table.column-name.name=Название
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankList@table.column-full-name.name=Полное название
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankList@table.column-bank-swift-code.name=МФО
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankList@table.column-correspondent-account.name=Корр.счёт
+
+# PaymentOutcome List
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeList@title=Платёжное поручение
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeList@table.column-code.name=Номер
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeList@table.column-payment-missing.name=Назначение платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeList@table.column-amount.name=Сумма
+
+# PaymentIncome List
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeList@title=Платёжное требование
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeList@table.column-code.name=Номер
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeList@table.column-date.name=Дата
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeList@table.column-payment-missing.name=Назначение платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeList@table.column-amount.name=Сумма
+
+
+# Payment List
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@title=Платёжные документы
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-code.name=Номер
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-date.name=Дата
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-account-no.name=Счёт
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-partner.name=Контрагент
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-payment-missing.name=Назначение платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-debit-amount.name=Дебет
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-credit-amount.name=Кредит
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-amount.name=Сумма
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentList@table.column-document-type-name.name=Тип
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+# Bank
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@title=Банк
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.title.other.text=Дополнительно
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-full-name.text=Полное название
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-tax-code.text=Налоговый код
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-swift-code.text=ОКРО
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-tax.text=Плательщик налога
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-bank-swift-code.text=МФО
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-correspondent-account.text=Корреспондирующий счёт
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-year-create.text=Год создания
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@panel.label-work-time.text=Время работы
+
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-address.name=Адреса
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-address.column-address-type.name=Тип
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-address.column-address-string.name=Адрес
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-phone.name=Телефоны
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-phone.column-phone-type.name=Тип
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-phone.column-phone-string.name=Телефон
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-email.name=Email
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-email.column-email-address.name=Email
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-web.name=Web
+org.plazmaforge.bsolution.bank.richclient.swing.forms.BankEdit@table-web.column-url.name=URL
+
+
+# Payment Edit
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@title=Платёжное поручение
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-organization-bank-account.text=Счёт
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-partner-bank-account.text=Счёт контрагента
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-amount.text=Сумма
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-tax-percent.text=Ставка НДС %
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-tax.text=НДС
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-payment-missing.text=Назначение платежа
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-payment-type.text=Вид платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-payment-date.text=Срок платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentOutcomeEdit@panel.label-tax-print-type.text=Автоподстановка в текст
+
+
+# PaymentIncome Edit
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@title=Платёжное требование
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-code.text=Номер
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-organization-bank-account.text=Счёт
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-partner.text=Контрагент
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-partner-bank-account.text=Счёт контрагента
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-amount.text=Сумма
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-tax-percent.text=Ставка НДС %
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-tax.text=НДС
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-payment-missing.text=Назначение платежа
+
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-payment-type.text=Вид платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-payment-date.text=Срок платежа
+org.plazmaforge.bsolution.bank.richclient.swing.forms.PaymentIncomeEdit@panel.label-tax-print-type.text=Автоподстановка в текст
+
+

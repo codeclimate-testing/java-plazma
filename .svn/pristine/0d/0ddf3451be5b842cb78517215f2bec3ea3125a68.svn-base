@@ -1,0 +1,117 @@
+
+<html>
+<title>HSQL</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">HSQL</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Common</h3>
+
+Web site: <a target="_blank" href="http://hsqldb.org">http://hsqldb.org</a>
+
+   <h3 align="center">Create a database</h3>
+
+ <p>
+ Creating the physical database file:
+ <br><br>
+ The database is automatically generated (if not exist) when running server 
+ <code>
+ <pre>
+ &lt;HSQL&gt;/demo/runServer -database plazma
+ </pre>
+ </code>
+ After run this command will be created the database <code>plazma</code> in folder <code>&lt;HSQL&gt;/data</code>
+
+ <p>
+ Creating a structure of database and populate init data:
+ <br><br>
+ After starting the server, you have to run the manager 
+ <code>
+ <pre>
+ &lt;HSQL&gt;/demo/runManager
+ </pre>
+ </code>
+
+ Next you have to connect to the database by selecting the type of connection with <b>HSQL Database Engine Server</b>
+ <br><br>Now you have to download (File -&gt; Open Script ...) and perform (Execute) initialize SQL script. 
+ <code>
+ <pre>
+ &lt;Plazma&gt;/db/script/createdb/hsql/en/create_plazma_db.sql
+ </pre>
+ </code>
+
+ 
+
+ 
+ 
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC driver</h3>
+ 
+ <p>
+ You have to check the JDBC driver: 
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/hsqldb.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ You have to verify CLASSPATH for the JDBC driver in the file:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # HSQL 
+ lib/hsqldb.jar 
+
+ </pre>
+ </code>
+
+ <br><br>
+
+
+   <h3 align="center">Connect to a database</h3>
+
+ <p>To connect you have to change properties in file &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>For example:
+
+ <p>
+ <code>
+ <pre>
+ # Set connection properties
+
+ jdbc.driverClassName=org.hsqldb.jdbcDriver
+ jdbc.url=jdbc:hsqldb:hsql://localhost
+ #jdbc.url=jdbc:hsqldb:file:${user.dir}/db/hsql/plazma
+ jdbc.username=sa
+ jdbc.password=
+ </pre>
+ </code>
+ 
+
+
+
+</body>
+</html>
+
+

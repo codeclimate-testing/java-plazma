@@ -1,0 +1,159 @@
+
+<html>
+<title>Eclipse IDE</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Создание проекта</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Создание нового проекта</h3>
+
+Для создания нового проекта Вам необходимо выбрать пункт системного меню:
+<br>File -> New -> Project...
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/new-project-select-wizard.png"/></td>
+ </tr>
+</table>
+
+<p>В появивишимся диалоговом окне выбрать <b>Java Project</b> и нажать <b>Next</b>.
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/new-project-wizard.png"/></td>
+ </tr>
+</table>
+
+<p>Далее необходимо указать имя проекта и завершить процес кнопкой <b>Finish</b>
+
+
+<br><br><br>
+   <h3 align="center">Создание проекта с помощью импорта</h3>
+
+Если исходный код загружен в виде архива, 
+то вначале архив необходимо распаковать,
+а потом импортировать каждый проект в Eclipse IDE.
+
+<p>Для выполнения импорта необходимо выбрать пункт меню File -> Import...
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/import-wizard.png"/></td>
+ </tr>
+</table>
+
+<p>Далее необходимо выбрать вариант импорта <b>Existing Projects into Workspace</b>
+и перейти на следующую страницу нажав <b>Next</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/import-project.png"/></td>
+ </tr>
+</table>
+<p>Теперь необходимо указать директорию из которой будет импортирован проект
+и завершить процес нажав на <b>Finish</b>.
+При выборе варианта <b>Copy projects into workspace</b> проект будет скопирован в 
+<b>Workspace</b>
+
+
+<br><br><br>
+   <h3 align="center">Создание проекта из SVN</h3>
+
+Для начала необходимо создать подключение к SVN.
+
+Выберите в системном меню пункт <b>Windows -> Open Perspective</b> и откройте перспективу <b>SVN Repository Exploring</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/open-perspective.png"/></td>
+ </tr>
+</table>
+
+<p>В данной перспективе необходимо выбрать представление <b>SVN Repositories</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/svn-repositories.png"/></td>
+ </tr>
+</table>
+
+
+<p>Теперь можно создать новый репозиторий нажав на кнопку <b>Add SVN Reporsitory</b> в панеле инструментов данного представления.
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/add-svn-repository.png"/></td>
+ </tr>
+</table>
+
+
+<p>Укажите параметры доступа к SVN и завершите процес кнопкой <b>Finish</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-svn-repository.png"/></td>
+ </tr>
+</table>
+
+
+Репозиторий готов к работе. Список всех проектов можно просмотреть в разделе <b>trunk</b>.
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-check-out.png"/></td>
+ </tr>
+</table>
+
+<p>Далее необходимо выполнить команду <b>Check Out</b>
+для каждого проекта.
+
+<p>Команда <b>Check Out</b> загружает проект в Workspace.
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-bsolution-check-out-as.png"/></td>
+ </tr>
+</table>
+
+<p>Для продолжения работы над проектами перейдите в переспективу <b>Java</b>
+<p>Для навигации по проектам можно использовать представление 
+ <b>Navigator</b> или <b>Package Explorer</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-navigator.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

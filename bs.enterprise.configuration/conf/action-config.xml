@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-config xmlns="http://plazmaforge.org/config/action-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" provider="Plazma Forge" version="1.0">
+  <action name="AboutAction" class="org.plazmaforge.bsolution.base.client.swt.actions.AboutAction" />
+  <action name="HelpAction" class="org.plazmaforge.bsolution.base.client.swt.actions.HelpAction" icon="/org/plazmaforge/framework/client/images/eclipse/form/help_contents.gif"/>
+  <action name="PreferencesAction" class="org.plazmaforge.bsolution.base.client.swt.actions.PreferencesAction" />
+  <action name="CloseWindowsAction" ui-type="not rcp" command="#close-all-forms" icon="/org/plazmaforge/framework/client/images/eclipse/windows/close_all.gif" />
+  <action name="DatabaseImportAction" class="org.plazmaforge.bsolution.base.client.swt.actions.DatabaseImportAction" icon="/org/plazmaforge/framework/resources/images/eclipse/import_wiz.gif" />
+  <action name="DatabaseExportAction" class="org.plazmaforge.bsolution.base.client.swt.actions.DatabaseExportAction" icon="/org/plazmaforge/framework/resources/images/eclipse/export_wiz.gif" />
+  <action name="SetInputParametersAction" class="org.plazmaforge.bsolution.base.client.swt.actions.SetInputParametersAction" />
+  <action name="ReinitSytemAction" class="org.plazmaforge.bsolution.base.client.swt.actions.ReinitSytemAction" />
+  <action name="SyncSecureAction" class="org.plazmaforge.bsolution.security.client.swt.actions.SyncSecureAction" />
+  <action name="RoleListForm" command="#open-list-form security/RoleListForm" icon="/org/plazmaforge/framework/client/images/fw/users.png"/>
+  <action name="UserListForm" command="#open-list-form security/UserListForm" icon="/org/plazmaforge/framework/client/images/fw/user.png" />
+  <action name="PermissionListForm" class="org.plazmaforge.bsolution.security.client.swt.actions.PermissionListAction" icon="/org/plazmaforge/framework/client/images/fw/globe-share.png" />
+  <action name="NewDictionary" command="#new-form DICTIONARY" />
+  <action name="ChooseDictionary" command="#choose-form DICTIONARY" />
+  <action name="ChooseEnumeration" command="#choose-form ENUMERATION" />
+  <action name="ChooseLookup" command="#choose-form LOOKUP" />
+  <action name="CountryListForm" command="#open-list-form base/CountryListForm" />
+  <action name="LanguageListForm" command="#open-list-form base/LanguageListForm" />
+  <action name="UnitListForm" command="#open-list-form base/UnitListForm" />
+  <action name="CurrencyListForm" command="#open-list-form base/CurrencyListForm" />
+  <action name="AddressTypeListForm" command="#open-list-form contact/AddressTypeListForm" />
+  <action name="LocalityTypeListForm" command="#open-list-form contact/LocalityTypeListForm" />
+  <action name="PersonListForm" command="#open-list-form personality/PersonListForm" />
+  <action name="PhoneTypeListForm" command="#open-list-form contact/PhoneTypeListForm" />
+  <action name="StreetTypeListForm" command="#open-list-form contact/StreetTypeListForm" />
+  <action name="RegionListForm" command="#open-list-form contact/RegionListForm" />
+  <action name="CityListForm" command="#open-list-form contact/CityListForm" />
+  <action name="LocalityListForm" command="#open-list-form contact/LocalityListForm" />
+  <action name="PartnerListForm" command="#open-list-form partner/PartnerListForm" icon="/org/plazmaforge/framework/client/images/fw/entity.png" />
+  <action name="BankListForm" command="#open-list-form bank/BankListForm" icon="/org/plazmaforge/framework/client/images/fw/money.png" />
+  <action name="BankAccountListForm" command="#open-list-form bank/BankAccountListForm" />
+  <action name="EmployeeListForm" command="#open-list-form employee/EmployeeListForm" />
+  <action name="JobPositionListForm" command="#open-list-form employee/JobPositionListForm" />
+  <action name="PartnerGroupListForm" command="#open-list-form partner/PartnerGroupListForm" />
+  <action name="PartnerCategoryListForm" command="#open-list-form partner/PartnerCategoryListForm" />
+  <action name="PartnerBankAccountListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerBankAccountListAction" icon="/org/plazmaforge/framework/client/images/fw/coins.png" />
+  <action name="PartnerContactListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerContactListAction" icon="/org/plazmaforge/framework/client/images/fw/contacts.png"/>
+  <action name="PartnerContractListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerContractListAction" icon="/org/plazmaforge/framework/client/images/fw/document_signature.png"/>
+  <action name="PartnerDocumentListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerDocumentListAction" icon="/org/plazmaforge/framework/client/images/fw/document_copies.png"/>
+  <action name="PartnerSaleOrderListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerSaleOrderListAction" />
+  <action name="PartnerInvoiceListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerInvoiceListAction" />
+  <action name="PartnerProjectListForm" class="org.plazmaforge.bsolution.partner.client.swt.actions.PartnerProjectListAction" icon="/org/plazmaforge/framework/client/images/fw/participation_rate.png"/>
+  <action name="IndustryListForm" command="#open-list-form partner/IndustryListForm" />
+  <action name="ActivityTypeListForm" command="#open-list-form partner/ActivityTypeListForm" />
+  <action name="OrganizationEditForm" class="org.plazmaforge.bsolution.organization.client.swt.actions.OrganizationEditAction" />
+  <action name="OrganizationListForm" command="#open-list-form organization/OrganizationListForm" />
+  <action name="DepartmentListForm" command="#open-list-form organization/DepartmentListForm" />
+  <action name="MtrlResponsibleListForm" command="#open-list-form organization/MtrlResponsibleListForm" />
+  <action name="WarehouseListForm" command="#open-list-form organization/WarehouseListForm" />
+  <action name="StoreListForm" command="#open-list-form organization/StoreListForm" />
+  <action name="ContactListForm" command="#open-list-form contact/ContactListForm" icon="/org/plazmaforge/framework/client/images/fw/contacts.png"/>
+  <action name="MyContactListForm" command="#open-list-form contact/ContactListForm, MY_FORM" icon="/org/plazmaforge/framework/client/images/fw/contacts.png"/>  
+  <action name="ContactTypeListForm" command="#open-list-form contact/ContactTypeListForm" />
+  <action name="FamilyStatusListForm" command="#open-list-form personality/FamilyStatusListForm" />
+  <action name="SpecialityListForm" command="#open-list-form personality/SpecialityListForm" />
+  <action name="MilitaryRankListForm" command="#open-list-form personality/MilitaryRankListForm" />
+  <action name="MilitaryStatusListForm" command="#open-list-form personality/MilitaryStatusListForm" />
+  <action name="MilitarySpecialityListForm" command="#open-list-form personality/MilitarySpecialityListForm" />
+  <action name="PersonDocumentTypeListForm" command="#open-list-form personality/PersonDocumentTypeListForm" />
+  <action name="AcademicDegreeListForm" command="#open-list-form personality/AcademicDegreeListForm" />
+  <action name="EducationInstituteListForm" command="#open-list-form personality/EducationInstituteListForm" />
+  <action name="EducationTypeListForm" command="#open-list-form personality/EducationTypeListForm" />
+  <action name="EducationFormListForm" command="#open-list-form personality/EducationFormListForm" />
+  <action name="FamiliarityListForm" command="#open-list-form personality/FamiliarityListForm" />
+  <action name="EmployeeCategoryListForm" command="#open-list-form employee/EmployeeCategoryListForm" />
+  <action name="EmployeeRankListForm" command="#open-list-form employee/EmployeeRankListForm" />
+  <action name="PayrollFormListForm" command="#open-list-form payroll/PayrollFormListForm" />
+  <action name="EmployeeDischargeListForm" command="#open-list-form employee/EmployeeDischargeListForm" />
+  <action name="EmployeeReceptionListForm" command="#open-list-form employee/EmployeeReceptionListForm" />
+  <action name="PersonEducationListForm" class="org.plazmaforge.bsolution.personality.client.swt.actions.PersonEducationListAction" />
+  <action name="PersonFamilyListForm" class="org.plazmaforge.bsolution.personality.client.swt.actions.PersonFamilyListAction" />
+  <action name="PersonJobListForm" class="org.plazmaforge.bsolution.personality.client.swt.actions.PersonJobListAction" />
+  <action name="PersonLanguageListForm" class="org.plazmaforge.bsolution.personality.client.swt.actions.PersonLanguageListAction" />
+  <action name="ProductGroupListForm" command="#open-list-form product/ProductGroupListForm" />
+  <action name="ProductStateInfoAction" class="org.plazmaforge.bsolution.product.client.swt.actions.ProductStateInfoAction" />
+  <action name="ProductMoveInfoAction" class="org.plazmaforge.bsolution.product.client.swt.actions.ProductMoveInfoAction" />
+  <action name="GoodsListForm" command="#open-list-form goods/GoodsListForm" icon="/org/plazmaforge/framework/client/images/fw/box_down.png" />
+  <action name="PeriodListForm" command="#open-list-form base/PeriodListForm" icon="/org/plazmaforge/framework/client/images/fw/date.png" />
+  <action name="PartnerRestListForm" command="#open-list-form finance/PartnerRestListForm" />
+  <action name="InventoryRestListForm" command="#open-list-form inventory/InventoryRestListForm" />
+  <action name="TaxListForm" command="#open-list-form base/TaxListForm" />
+  <action name="ReportListForm" command="#open-list-form base/ReportListForm" icon="/org/plazmaforge/framework/client/images/fw/report.png" />
+  <action name="PartnerRestStartReport" command="#open-report PartnerRestStart" />
+  <action name="GoodsRestStartReport" command="#open-report GoodsRestStart" />
+  <action name="WarehouseGoodsRestStartReport" command="#open-report WarehouseGoodsRestStart" />
+  <action name="GoodsOutcomeByDocumentReport" command="#open-report GoodsOutcomeByDocument" />
+  <action name="GoodsIncomeByDocumentReport" command="#open-report GoodsIncomeByDocument" />
+  <action name="SalePlanReport" command="#open-report SalePlanReport" />
+  <action name="GoodsSaleReport" command="#open-report GoodsSale" />
+  <action name="GoodsSaleMonthProductReport" command="#open-report GoodsSaleMonthProduct" />
+  <action name="GoodsSaleMonthDiagramReport" command="#open-report GoodsSaleMonthDiagram" />
+  <action name="CrosstabGoodsSale" command="#open-report CrosstabGoodsSale" />
+  <action name="GoodsRotateReport" command="#open-report GoodsRotate" />
+  <action name="PurchasePlanReport" command="#open-report PurchasePlanReport" />
+  <action name="CrosstabGoodsPurchase" command="#open-report CrosstabGoodsPurchase" />
+  <action name="PriceListReport" command="#open-report PriceListReport" />
+  <action name="ExecWorkByPartner" command="#open-report ExecWorkByPartner" />
+  <action name="ExecWorkListReport" command="#open-report ExecWorkList" />
+  <action name="NewDocument" command="#new-form DOCUMENT" />
+  <action name="ChooseDocument" command="#choose-form DOCUMENT" />
+  <action name="DocumentTypeListForm" command="#open-list-form document/DocumentTypeListForm" />
+  <action name="DocumentStatusListForm" command="#open-list-form document/DocumentStatusListForm" />
+  <action name="DocumentRelationListForm" command="#open-list-form document/DocumentRelationListForm" />
+  <action name="DocumentListForm" command="#open-list-form document/DocumentListForm" icon="/org/plazmaforge/framework/client/images/fw/document_copies.png" />
+  <action name="ContractorListForm" command="#open-list-form finance/ContractorListForm" />
+  <action name="ContractListForm" command="#open-list-form finance/ContractListForm" icon="/org/plazmaforge/framework/client/images/fw/document_signature.png" />
+  <action name="InventoryOutcomeListForm" command="#open-list-form inventory/InventoryOutcomeListForm" />
+  <action name="InventoryIncomeListForm" command="#open-list-form inventory/InventoryIncomeListForm" />
+  <action name="InventoryMoveListForm" command="#open-list-form inventory/InventoryMoveListForm" />
+  <action name="InventoryWriteoffListForm" command="#open-list-form inventory/InventoryWriteoffListForm" />
+  <action name="GoodsOutcomeListForm" command="#open-list-form goods/GoodsOutcomeListForm" />
+  <action name="GoodsIncomeListForm" command="#open-list-form goods/GoodsIncomeListForm" />
+  <action name="SaleInvoiceListForm" command="#open-list-form sale/SaleInvoiceListForm" />
+  <action name="SaleOrderListForm" command="#open-list-form sale/SaleOrderListForm" />
+  <action name="SalePlanListForm" command="#open-list-form sale/SalePlanListForm" />
+  <action name="SaleServListForm" command="#open-list-form sale/SaleServListForm" />
+  <action name="SaleTaxWaybillListForm" command="#open-list-form sale/SaleTaxWaybillListForm" />
+  <action name="PurchaseInvoiceListForm" command="#open-list-form purchase/PurchaseInvoiceListForm" />
+  <action name="PurchaseOrderListForm" command="#open-list-form purchase/PurchaseOrderListForm" />
+  <action name="PurchasePlanListForm" command="#open-list-form purchase/PurchasePlanListForm" />
+  <action name="PurchaseServListForm" command="#open-list-form purchase/PurchaseServListForm" />
+  <action name="PurchaseTaxWaybillListForm" command="#open-list-form purchase/PurchaseTaxWaybillListForm" />
+  <action name="PaymentIncomeListForm" command="#open-list-form bank/PaymentIncomeListForm" icon="/org/plazmaforge/framework/client/images/fw/coins_add.png" />
+  <action name="PaymentOutcomeListForm" command="#open-list-form bank/PaymentOutcomeListForm" icon="/org/plazmaforge/framework/client/images/fw/coins_delete.png" />
+  <action name="PaymentListForm" command="#open-list-form bank/PaymentListForm" />
+  <action name="PaymentOutcomeTemplateListForm" command="#open-list-form bank/PaymentOutcomeTemplateListForm" />
+  <action name="PaymentMissingListForm" command="#open-list-form bank/PaymentMissingListForm" />
+  <action name="CashIncomeListForm" command="#open-list-form cash/CashIncomeListForm" />
+  <action name="CashOutcomeListForm" command="#open-list-form cash/CashOutcomeListForm" />
+  <action name="PayrollListForm" command="#open-list-form payroll/PayrollListForm" />
+  <action name="InputWorktimeListForm" command="#open-list-form payroll/InputWorktimeListForm" />
+  <action name="InputPayrollListForm" command="#open-list-form payroll/InputPayrollListForm" />
+  <action name="EmployeeVacationListForm" command="#open-list-form payroll/EmployeeVacationListForm" />
+  <action name="EmployeeSicklistListForm" command="#open-list-form payroll/EmployeeSicklistListForm" />
+  <action name="ProjectTypeListForm" command="#open-list-form project/ProjectTypeListForm" />
+  <action name="ProjectStatusListForm" command="#open-list-form project/ProjectStatusListForm" />
+  <action name="ProjectRoleListForm" command="#open-list-form project/ProjectRoleListForm" />
+  <action name="ProjectStageGroupListForm" command="#open-list-form project/ProjectStageGroupListForm" />
+  <action name="ProjectStageListForm" command="#open-list-form project/ProjectStageListForm" />
+  <action name="ProjectListForm" command="#open-list-form project/ProjectListForm" icon="/org/plazmaforge/framework/client/images/fw/participation_rate.png" />
+  <action name="MyProjectListForm" command="#open-list-form project/ProjectListForm, MY_FORM" icon="/org/plazmaforge/framework/client/images/fw/participation_rate.png" />  
+  <action name="TaskTypeListForm" command="#open-list-form project/TaskTypeListForm" />
+  <action name="TaskStatusListForm" command="#open-list-form project/TaskStatusListForm" />
+  <action name="TaskRoleListForm" command="#open-list-form project/TaskRoleListForm" />
+  <action name="TaskResultListForm" command="#open-list-form project/TaskResultListForm" />
+  <action name="TaskPriorityListForm" command="#open-list-form project/TaskPriorityListForm" />
+  <action name="TaskListForm" command="#open-list-form project/TaskListForm" icon="/org/plazmaforge/framework/client/images/fw/clipboard-task.png" />
+  <action name="MyTaskListForm" command="#open-list-form project/TaskListForm, MY_FORM" icon="/org/plazmaforge/framework/client/images/fw/clipboard-task.png" />  
+  <action name="LedgerAccountTypeListForm" command="#open-list-form finance/LedgerAccountTypeListForm" />
+  <action name="LedgerAccountListForm" command="#open-list-form finance/LedgerAccountListForm" />
+  <action name="FinanceDocumentTypeListForm" command="#open-list-form finance/FinanceDocumentTypeListForm" />
+  <action name="TemplateEntryListForm" command="#open-list-form finance/TemplateEntryListForm" />
+  <action name="EntryCalculateAction" class="org.plazmaforge.bsolution.finance.client.swt.actions.EntryCalculateAction" />
+  <action name="EntryRemoveAction" class="org.plazmaforge.bsolution.finance.client.swt.actions.EntryRemoveAction" />
+  <action name="LedgerAccountRestListForm" command="#open-list-form finance/LedgerAccountRestListForm" />
+  <action name="CrosstabLedgerAccountRotate" command="#open-report CrosstabLedgerAccountRotate" />
+  <action name="SystemInfoEditForm" class="org.plazmaforge.bsolution.base.client.swt.actions.SystemInfoEditAction" icon="/org/plazmaforge/framework/client/images/fw/setting_tools.png"/>
+  <action name="SystemVariableListForm" command="#open-list-form base/SystemVariableListForm" />
+  <action name="SystemEntityListForm" command="#open-list-form base/SystemEntityListForm" />
+  <action name="CustomEntityListForm" command="#open-list-form base/CustomEntityListForm" />
+  <action name="EmployeeListReport" command="#open-report EmployeeListReport" />
+  <action name="PersonCardReport" command="#open-report PersonCardReport" />
+  <action name="PersonPayReport" command="#open-report PersonPayReport" />
+  <action name="PayrollListReport" command="#open-report PayrollListReport" />
+  <action name="CrosstabPayrollTotal" command="#open-report CrosstabPayrollTotal" />
+  <action name="PayrollCalculateAction" class="org.plazmaforge.bsolution.payroll.client.swt.actions.PayrollCalculateAction" />
+  <action name="PartnerContactBookReport" command="#open-report PartnerContactBook" />
+  <action name="JournalPaymentByBankAccount" command="#open-report JournalPaymentByBankAccount" />
+  <action name="JournalPaymentByPartner" command="#open-report JournalPaymentByPartner" />
+  <action name="PaymentIncomeByPartner" command="#open-report PaymentIncomeByPartner" />
+  <action name="PaymentOutcomeByPartner" command="#open-report PaymentOutcomeByPartner" />
+  <action name="ProjectStatusReport" command="#open-report ProjectStatus" />
+  <action name="ProjectStatusByPartnerReport" command="#open-report ProjectStatusByPartner" />
+  <action name="ProjectStatusByManagerReport" command="#open-report ProjectStatusByManager" />
+  <action name="CrosstabProject" command="#open-report CrosstabProject" />
+  <action name="RegisterPeriodAction" class="org.plazmaforge.bsolution.base.client.swt.actions.RegisterPeriodAction" />
+  <action name="FormPropertyListForm" command="#open-list-form partner/FormPropertyListForm" />
+  <action name="CurrencyRateListForm" command="#open-list-form base/CurrencyRateListForm" />
+  <action name="CalculateProductRestAction" class="org.plazmaforge.bsolution.product.client.swt.actions.CalculateProductRestAction" />
+  
+  <action name="PIMAppointmentListForm" command="#open-list-form pim/PIMAppointmentListForm" />
+  <action name="MyPIMAppointmentListForm" command="#open-list-form pim/PIMAppointmentListForm, MY_FORM" />
+  <action name="PIMEventListForm" command="#open-list-form pim/PIMEventListForm" />
+  <action name="MyPIMEventListForm" command="#open-list-form pim/PIMEventListForm, MY_FORM" />
+  <action name="MyPIMReminderListForm" command="#open-list-form pim/PIMReminderListForm, MY_FORM" icon="/org/plazmaforge/framework/client/images/fw/bell.png"/>
+  <action name="MyPIMNoteListForm" command="#open-list-form pim/PIMNoteListForm, MY_FORM" />
+  <action name="MyPIMCalendarForm" command="#open-form pim/PIMCalendarForm, MY_FORM" icon="/org/plazmaforge/framework/client/images/fw/calendar.png"/>
+
+  <!-- <action name="DashboardForm" command="#open-form base/DashboardForm, MY_FORM"/>-->
+    
+</action-config>
+

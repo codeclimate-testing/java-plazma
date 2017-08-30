@@ -1,0 +1,317 @@
+############################################################################
+# BASE Action Definition
+############################################################################
+tax.yes=НДС
+tax.no=без НДС
+
+# Exit Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.ExitAction@name=Выход
+org.plazmaforge.bsolution.base.richclient.swing.actions.ExitAction@tooltip=Выход
+
+# About Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.AboutAction@name=О программе...
+org.plazmaforge.bsolution.base.richclient.swing.actions.AboutAction@tooltip=О программе...
+
+# Preferences Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.PreferencesAction@name=Параметры
+org.plazmaforge.bsolution.base.richclient.swing.actions.PreferencesAction@tooltip=Параметры
+org.plazmaforge.bsolution.base.richclient.swing.actions.PreferencesAction@image=olmari/Setup.gif
+
+
+# Cascade Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.CascadeWindowsAction@name=Каскад
+org.plazmaforge.bsolution.base.richclient.swing.actions.CascadeWindowsAction@tooltip=Каскад
+org.plazmaforge.bsolution.base.richclient.swing.actions.CascadeWindowsAction@image=olmari/Wnd_restore.gif
+
+# Close Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.CloseWindowsAction@name=Закрыть все
+org.plazmaforge.bsolution.base.richclient.swing.actions.CloseWindowsAction@tooltip=Закрыть все
+org.plazmaforge.bsolution.base.richclient.swing.actions.CloseWindowsAction@image=olmari/Wnd_close_all.gif
+
+# Choose Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.ChooseWindowsAction@name=Перейти...
+org.plazmaforge.bsolution.base.richclient.swing.actions.ChooseWindowsAction@tooltip=Перейти...
+
+
+# Maximize Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.MaximizeWindowsAction@name=Максимум
+org.plazmaforge.bsolution.base.richclient.swing.actions.MaximizeWindowsAction@tooltip=Максимум
+org.plazmaforge.bsolution.base.richclient.swing.actions.MaximizeWindowsAction@image=olmari/Wnd_maximize.gif
+
+# Title Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleWindowsAction@name=Мозаика
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleWindowsAction@tooltip=Мозаика
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleWindowsAction@image=olmari/Wnd_title.gif
+
+# Title Vertical Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleVerticalWindowsAction@name=Мозаика вертикально
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleVerticalWindowsAction@tooltip=Мозаика вертикально
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleVerticalWindowsAction@image=olmari/Wnd_title_vertical.gif
+
+# Title Horizontal Windows Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleHorizontalWindowsAction@name=Мозаика горизонтально
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleHorizontalWindowsAction@tooltip=Мозаика горизонтально
+org.plazmaforge.bsolution.base.richclient.swing.actions.TitleHorizontalWindowsAction@image=olmari/Wnd_title_horizontal.gif
+
+
+# New Dictionary Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.NewDictionaryAction@name=Новый...
+org.plazmaforge.bsolution.base.richclient.swing.actions.NewDictionaryAction@tooltip=Новый справочник
+
+# Choose Dictionary Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.ChooseDictionaryAction@name=Перейти...
+org.plazmaforge.bsolution.base.richclient.swing.actions.ChooseDictionaryAction@tooltip=Перейти к справочнику
+
+
+
+# Currency List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.CurrencyListAction@name=Валюты
+org.plazmaforge.bsolution.base.richclient.swing.actions.CurrencyListAction@tooltip=Валюты
+
+# Period List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.PeriodListAction@name=Расчётные периоды
+org.plazmaforge.bsolution.base.richclient.swing.actions.PeriodListAction@tooltip=Расчётные периоды
+org.plazmaforge.bsolution.base.richclient.swing.actions.PeriodListAction@image=olmari/Calendar.jpg
+
+# Unit List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.UnitListAction@name=Единицы измерения
+org.plazmaforge.bsolution.base.richclient.swing.actions.UnitListAction@tooltip=Единицы измерения
+
+# Country List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.CountryListAction@name = Страны
+org.plazmaforge.bsolution.base.richclient.swing.actions.CountryListAction@tooltip = Страны
+
+# Language List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.LanguageListAction@name=Языки
+org.plazmaforge.bsolution.base.richclient.swing.actions.LanguageListAction@tooltip=Языки
+
+# Register Period Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.RegisterPeriodAction@name=Создание нового расчётного периода
+org.plazmaforge.bsolution.base.richclient.swing.actions.RegisterPeriodAction@tooltip=Создание нового расчётного периода
+
+# Choose Period Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.ChoosePeriodAction@name=Установка расчётного периода
+org.plazmaforge.bsolution.base.richclient.swing.actions.ChoosePeriodAction@tooltip=Установка расчётного периода
+
+# Tax List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.TaxListAction@name=Налоги
+org.plazmaforge.bsolution.base.richclient.swing.actions.TaxListAction@tooltip=Налоги
+
+# SystemInfo Edit Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.SystemInfoEditAction@name=Системные информация
+org.plazmaforge.bsolution.base.richclient.swing.actions.SystemInfoEditAction@tooltip=Системные информация
+
+# SystemVariable List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.SystemVariableListAction@name=Системные переменные
+org.plazmaforge.bsolution.base.richclient.swing.actions.SystemVariableListAction@tooltip=Системные переменные
+
+# SystemEntity List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.SystemEntityListAction@name=Сущности
+org.plazmaforge.bsolution.base.richclient.swing.actions.SystemEntityListAction@tooltip=Сущности
+
+# User List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.UserListAction@name=Пользователи
+org.plazmaforge.bsolution.base.richclient.swing.actions.UserListAction@tooltip=Пользователи
+
+# Role List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.RoleListAction@name=Роли
+org.plazmaforge.bsolution.base.richclient.swing.actions.RoleListAction@tooltip=Роли
+
+
+# Permission List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.PermissionListAction@name=Права доступа
+org.plazmaforge.bsolution.base.richclient.swing.actions.PermissionListAction@tooltip=Права доступа
+
+# Report List Action
+org.plazmaforge.bsolution.base.richclient.swing.actions.ReportListAction@name=Список отчётов
+org.plazmaforge.bsolution.base.richclient.swing.actions.ReportListAction@tooltip=Список отчётов
+org.plazmaforge.bsolution.base.richclient.swing.actions.ReportListAction@image=olmari/ext/reports.gif
+
+
+############################################################################
+# List Form Definition
+############################################################################
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyList@title=Валюта
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyList@table.column-char-code.name=Симв.код
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyList@table.column-full-name.name=Полное название
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodList@title=Период
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodList@table.column-start-date.name=Дата начала
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodList@table.column-end-date.name=Дата окончания
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodList@table.column-period-type.name=Тип
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitList@title=Список единиц измерения
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitList@table.column-full-name.name=Полное название
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.CountryList@title=Список стран
+org.plazmaforge.bsolution.base.richclient.swing.forms.CountryList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.CountryList@table.column-name.name=Страна
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.LanguageList@title=Языки
+org.plazmaforge.bsolution.base.richclient.swing.forms.LanguageList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.LanguageList@table.column-name.name=Название
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxList@title=Налоги
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxList@table.column-percent.name=%
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxList@table.column-amount.name=Сумма
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableList@title=Системные переменные
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableList@table.column-value.name=Значение
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityList@title=Сущность
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityList@table.column-entity-package.name=Пакет
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserList@title=Пользователи
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserList@table.column-login.name=Логин
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserList@table.column-name.name=Имя
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserList@table.column-registration-date.name=Дата регистрации
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.RoleList@title=Роли
+org.plazmaforge.bsolution.base.richclient.swing.forms.RoleList@table.column-name.name=Имя
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionList@title=Права доступа
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionList@table.column-object-type.name=Тип
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionList@table.column-read.name=Чтение
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionList@table.column-write.name=Запись
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionList@table.column-exec.name=Выполнение
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@title=Системная информация
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.title.common.text=Основное
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.title.adding.text=Дополнтельно
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.title.bank.text=Банк
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.title.project.text=Проекты
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.title.task.text=Задачи
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-period.text=Период
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-payroll-period.text=Период по зарплате
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-unit.text=Единица измерения
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-tax.text=Налог
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-partner.text=Партнёр
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-supplier.text=Поставщик/Продавец
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-customer.text=Получатель/Покупатель
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-material-responsible.text=Материально ответственный
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-storable.text=Место хранения
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-income-storable.text=Место хранения (приход)
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-outcome-storable.text=Место хранения (расход)
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-bank-partner.text=Партнёр
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-bank-income-partner.text=Партнёр (приход)
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-bank-outcome-partner.text=Партнёр (расход)
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-payment-type.text=Вид платежа
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-tax-print-type.text=Автоподстановка в текст
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project-partner.text=Партнёр
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project-responsible.text=Ответственный
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project-stage.text=Стадия проекта
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project-state.text=Состояние проекта
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project-type.text=Тип проекта
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project-currency.text=Валюта проекта
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-task-partner.text=Партнёр
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-task-responsible.text=Ответственный
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-project.text=Проект
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-task-priority.text=Приоритет задачи
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-task-state.text=Состояние задачи
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-task-type.text=Тип задачи
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemInfoEdit@panel.label-task-result.text=Результат задачи
+
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyEdit@title=Валюта
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyEdit@panel.label-char-code.text=Символьный код
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.CurrencyEdit@panel.label-full-name.text=Полное название
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodEdit@title=Период
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodEdit@panel.label-start-date.text=Дата начала
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodEdit@panel.label-end-date.text=Дата окончания
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.PeriodEdit@panel.label-period-type.text=Тип
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitEdit@title=Ед. измерения
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.UnitEdit@panel.label-full-name.text=Полное название
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.CountryEdit@title=Страна
+org.plazmaforge.bsolution.base.richclient.swing.forms.CountryEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.CountryEdit@panel.label-name.text=Название
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.LanguageEdit@title=Язык
+org.plazmaforge.bsolution.base.richclient.swing.forms.LanguageEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.LanguageEdit@panel.label-name.text=Название
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxEdit@title=Налоги
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxEdit@panel.label-percent.text=%
+org.plazmaforge.bsolution.base.richclient.swing.forms.TaxEdit@panel.label-amount.text=Сумма
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableEdit@title=Системная переменная
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableEdit@panel.label-data-type.text=Тип
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableEdit@panel.label-dictionary.text=Справочник
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemVariableEdit@panel.label-expression.text=Значение
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityEdit@title=Сущность
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.SystemEntityEdit@panel.label-name.text=Название
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@title=Пользователь
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@panel.label-login.text=Логин
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@panel.label-name.text=Имя
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@panel.label-password.text=Пароль
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@panel.label-reenter-password.text=Пароль повторно
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@table-user-role.name=Роли
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserEdit@table-user-role.role.name=Название
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserRoleEdit@title=Роль
+org.plazmaforge.bsolution.base.richclient.swing.forms.UserRoleEdit@panel.label-role.text=Роль
+
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.RoleEdit@title=Роль
+org.plazmaforge.bsolution.base.richclient.swing.forms.RoleEdit@panel.label-name.text=Имя
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionEdit@title=Сущность
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionEdit@panel.label-name.text=Имя
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionEdit@panel.label-read.text=Чтение
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionEdit@panel.label-write.text=Запись
+org.plazmaforge.bsolution.base.richclient.swing.forms.PermissionEdit@panel.label-exec.text=Выполнение
+
+
+
+
+
+org.plazmaforge.bsolution.base.richclient.swing.forms.ReportList@title=Отчёты
+org.plazmaforge.bsolution.base.richclient.swing.forms.ReportList@table.column-code.name=Код
+org.plazmaforge.bsolution.base.richclient.swing.forms.ReportList@table.column-name.name=Название
+org.plazmaforge.bsolution.base.richclient.swing.forms.ReportList@table.column-entity-folder.name=Папка

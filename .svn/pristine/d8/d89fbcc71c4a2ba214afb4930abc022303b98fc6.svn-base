@@ -1,0 +1,76 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Project" class="org.plazmaforge.bsolution.project.common.beans.Project" table="PROJECT">
+		<aliases>
+			<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="organizationName" attribute="organization.name"/>
+    		<alias name="partnerName" attribute="partner.name"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="projectStatusName" attribute="projectStatus.name"/>
+    		<alias name="currencyName" attribute="currency.name"/>    		
+    	</aliases>      	    
+    	<attributes>
+        	<key name="id" column="ID" type="Integer">
+    	    	<generator type="sequence">
+     				<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+	    		</generator>
+    	 	</key>
+        	<attribute name="projectNo" column="PROJECT_NO" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<attribute name="startDate" column="START_DATE" type="Date" />
+        	<attribute name="endDate" column="END_DATE" type="Date" />
+        	<attribute name="actualEndDate" column="ACTUAL_END_DATE" type="Date" />
+        	<reference name="contractDocument" column="CONTRACT_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentHeader" />
+        	<attribute name="propability" column="PROPABILITY" type="Double" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" />
+        	<reference name="projectStage" column="PROJECT_STAGE_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectStage" />
+        	<reference name="projectStatus" column="PROJECT_STATUS_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectStatus" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />
+        	<reference name="projectType" column="PROJECT_TYPE_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectType" />                                                
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency" />
+        	<attribute name="currencyRate" column="CURRENCY_RATE" type="Double" />                        
+        	<attribute name="currencyRateDate" column="CURRENCY_RATE_DATE" type="Date" />                        
+        	<attribute name="discountPercent" column="DISCOUNT_PERCENT" type="Double" />        
+        	<attribute name="discountAmount" column="DISCOUNT_AMOUNT" type="Double" />
+        	<attribute name="currencyDiscountAmount" column="CURRENCY_DISCOUNT_AMOUNT" type="Double" />                                        
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<attribute name="taxAmount" column="TAX_AMOUNT" type="Double" />
+        	<attribute name="amountWithTax" column="AMOUNT_WITH_TAX" type="Double" />
+        	<attribute name="currencyAmount" column="CURRENCY_AMOUNT" type="Double" />                        
+        	<attribute name="currencyTaxAmount" column="CURRENCY_TAX_AMOUNT" type="Double" />                                
+        	<attribute name="currencyAmountWithTax" column="CURRENCY_AMOUNT_WITH_TAX" type="Double" />                                        
+        	<attribute name="total" column="TOTAL" type="Double" />
+        	<attribute name="taxTotal" column="TAX_TOTAL" type="Double" />
+        	<attribute name="totalWithTax" column="TOTAL_WITH_TAX" type="Double" />
+        	<attribute name="currencyTotal" column="CURRENCY_TOTAL" type="Double" />                        
+        	<attribute name="currencyTaxTotal" column="CURRENCY_TAX_TOTAL" type="Double" />                                
+        	<attribute name="currencyTotalWithTax" column="CURRENCY_TOTAL_WITH_TAX" type="Double" />                                        
+        	<attribute name="tax" column="IS_TAX" type="Boolean" />
+        	<attribute name="taxId" column="TAX_ID" type="Integer" />
+        	<attribute name="taxPercent" column="TAX_PERCENT" type="Float" />  
+        	<collection name="projectContactLinks" join-class="org.plazmaforge.bsolution.project.common.beans.ProjectContactLink" join-attribute="project" cascade="all"/>
+        	<collection name="projectStageLinks" join-class="org.plazmaforge.bsolution.project.common.beans.ProjectStageLink" join-attribute="project" cascade="all"/>
+        </attributes>
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    	</triggers>        
+     </entity>
+

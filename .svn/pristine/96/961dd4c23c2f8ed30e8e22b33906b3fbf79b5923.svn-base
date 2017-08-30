@@ -1,0 +1,14 @@
+<application-context-list>
+
+	<!-- First context is demo sensitive -->
+	<context>application-context-ds.xml</context>
+ 	<context>application-context-security.xml</context>
+ 	<!-- <context>application-context-rmi.xml</context> -->
+ 	<context>application-context.xml</context>
+
+  	<!-- Package files -->
+
+  	<context>packages/${package}/service-impl.xml</context>
+ 	<context>packages/${package}/service.xml</context>
+  
+ </application-context-list>

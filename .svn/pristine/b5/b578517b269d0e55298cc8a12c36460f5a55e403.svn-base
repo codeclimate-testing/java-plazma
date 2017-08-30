@@ -1,0 +1,140 @@
+
+<html>
+<title>Projects</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Projects</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Common info</h3>
+
+
+<p><b>Plazma System</b> has two part: 
+
+<ul>
+ <li><b>Plazma Framework</b>
+ <li><b>Plazma Business Solution</b>
+</ul>
+
+Each part has own projects.
+
+<p><b>Plazma Framework</b>: 
+<ul>
+ <li><b>framework</b>
+ <li><b>framework.client</b>
+ <li><b>framework.client.swt</b>
+ <li><b>framework.client.swing</b> (low priority)
+</ul>
+
+<p><b>Plazma Business Solution</b>: 
+<ul>
+ <li><b>bs.base</b>
+ <li><b>bs.base.configuration</b>
+ <li><b>bs.base.docs</b>
+ <li><b>bs.base.db</b>
+ <li><b>bs.base.reportstorage</b>
+ <li><b>bs.base.client.swt</b>
+ <li><b>bs.base.client.swing</b> (low priority) 
+</ul>
+
+
+<p>Each project is a module in SVN. The module <b>lib</b> is common for all projects.
+
+<p>Project/Folder list of <b>Plazma Workspace</b>:
+<p>
+<table border="1" width="100%">
+ <tr height="30">
+  <td align="center"><b>Name</b></td><td align="center"><b>Description</b></td><td align="center"><b>SVN</b></td><td align="center"><b>Java code</b></td>
+ </tr>
+
+ <tr>
+  <td><a href="bs.base.html"><b>bs.base</b></a><td>Common and server part (beans/persistence objects, services)</td></td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+
+ <tr>
+  <td><a href="bs.base.configuration.html"><b>bs.base.configuration</b></a></td><td>System configuration (.xml, .properties and etc.)</td><td align="center">Yes</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.docs.html"><b>bs.base.docs</b></a></td><td>Documentation</td><td align="center">Yes</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.db.html"><b>bs.base.db</b></a></td><td>Databases, SQL scrips, init/test data</td><td align="center">Yes</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.reportstorage.html"><b>bs.base.reportstorage</b></a></td><td>Report Storage</td><td align="center">Yes</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.client.swt.html"><b>bs.base.client.swt</b></a></td><td>SWT Client</td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.client.swing.html"><b>bs.base.client.swing</b></a></td><td>Swing Client</td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+
+ <tr>
+  <td><b>dist</b></td><td>Distribution folder</td><td align="center">-</td><td align="center">-</td>
+ </tr>
+
+
+ <tr>
+  <td><a href="framework.html"><b>framework</b></a></td><td>Framework common</td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+ <tr>
+  <td><a href="lib.html"><b>lib</b></a></td><td>Common .jar files</td><td align="center">Yes</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="framework.client.html"><b>framework.client</b></a></td><td>Framework for creating the Client</td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+ <tr>
+  <td><a href="framework.client.swt.html"><b>framework.client.swt</b></a></td><td>Framework for creating the SWT Client</td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+ <tr>
+  <td><a href="framework.client.swing.html"><b>framework.client.swing</b></a></td><td>Framework for creating the Swing Client</td><td align="center">Yes</td><td align="center">Yes</td>
+ </tr>
+
+</table>
+
+<p>Projects: <b>framework</b>, <b>framework.client</b>, <b>framework.client.swt</b>, <b>framework.client.swing</b>, <b>bs.base</b>, <b>bs.base.client.swt</b>, <b>bs.base.client.swing</b>
+
+include Java code. This projects has specific folder:
+
+<ul>
+ <li>classes - class files (no SVN)
+ <li>src - source code
+</ul>
+
+The source code <b>(src)</b> of projects 
+<b>bs.base</b>, <b>bs.base.client.swt</b>, <b>bs.base.client.swing</b> includes 
+business packages of root level (locate in <b>org/plazmaforge</b>):
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/business-package.png"/></td>
+ </tr>
+</table>
+
+
+<p>The each business package has specific structute.
+<p> For example, project <b>bs.base</b> and package <b>contact</b>:
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/bsolution-structure.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

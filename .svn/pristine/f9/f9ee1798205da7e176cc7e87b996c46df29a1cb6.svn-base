@@ -1,0 +1,173 @@
+
+<html>
+<title>MySQL</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">MySQL</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Общая информация</h3>
+
+Web сайт: <a target="_blank" href="http://www.mysql.org">http://www.mysql.org</a>
+
+   <h3 align="center">Создание базы данных</h3>
+
+
+
+ <p>Для создания базы данных используется утилита mysql, которая входит в поставку MySQL:
+ 
+ <code>
+ <pre>
+ &lt;MySQL&gt;/bin/mysql -u root -p
+ </pre>
+ </code>
+ 
+<p><b>ВАЖНО!</b> Для корректной работы с кодировкой символов, необходимо установить соответствующие переменные.
+<p>Например для кодировки cp1251:
+
+<code>
+ <pre>
+ mysql> set character_set_client = 'cp1251';
+ mysql> set character_set_connection = 'cp1251';
+ mysql> set character_set_database = 'cp1251';
+ mysql> set character_set_results = 'cp1251';
+ mysql> set character_set_server = 'cp1251';
+
+</pre>
+ </code>
+
+<p>Для создания базы данных <b>plazma</b> необходимо выполнить следующую команду:
+<code>
+ <pre>
+ mysql> create database plazma;
+ </pre>
+</code>
+
+ 
+<p><b>ВАЖНО!</b> Для корректной работы с кодировкой символов также необходимо установить кодировку при создании базы данных.
+<p>Например для кодировки cp1251:
+<code>
+ <pre>
+  mysql> create database plazma character set 'cp1251';
+  </pre>
+ </code>
+
+<p>Далее, необходимо выбрать созданную базу данных, выполнив команду:
+<code>
+ <pre>
+  mysql> use plazma;
+  </pre>
+ </code>
+  
+ <p>
+ Создание структуры базы и заполненние инициализирующими данными:
+ 
+  <code>
+ <pre>
+ mysql> source с:\Plazma\db\script\createdb\mysql\ru\create_plazma_db.sql
+ </pre>
+ </code>
+ 
+ или
+ 
+ <code>
+ <pre>
+ &lt;MySQL&gt;/bin/mysql --database plazma -u root -p &lt; с:\Plazma\db\script\createdb\mysql\ru\create_plazma_db.sql &gt; out.txt
+ </pre>
+ </code>
+ 
+<p><b>ВАЖНО!</b> По умолчанию в операционной системе Linux устанавливается чувствительность к регистру в названии таблиц (но не полей). 
+<br>Для отмены данной опци необходимо установить соответствующую переменную в конфигурационном файле my.cnf в разделе [mysqld] (SERVER SECTION).
+<code>
+ <pre>
+  lower_case_table_names = 1
+  </pre>
+ </code>
+
+<p><b>ВАЖНО!</b> Для корректной работы базы данных необходима поддержка внешних ключей (foreign keys), для этого
+необходимо установить соответствующую переменную в конфигурационном файле my.ini (Windows) или my.cnf (Linux) в разделе [mysqld] (SERVER SECTION).
+<code>
+ <pre>
+  default-storage-engine=INNODB
+  </pre>
+ </code>
+
+Тоесть после установки переменной по умолчанию будут создаватся таблицы типа InnoDB, которые поддерживают внешние ключи.
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC драйвер</h3>
+ 
+
+ <p>
+ Необходимо проверить наличие драйвера:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/jdbc/mysql/mysql-connector-java-5.0.5-bin.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ Необходимо проверить правильность установки CLASSPATH для данного драйвера в файле:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # MySQL 
+ lib/jdbc/mysql/mysql-connector-java-5.0.5-bin.jar 
+
+ </pre>
+ </code>
+
+
+ <br><br>
+
+
+   <h3 align="center">Подключение к базе данных </h3>
+
+ <p>Для настройки подключения необходимо изменить соответствующие свойства
+ в файле &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>Например:
+
+ <p>
+ <code>
+ <pre>
+ # Установка свойств подключения к базе данных
+ jdbc.driverClassName=com.mysql.jdbc.Driver 
+ jdbc.url=jdbc:mysql://localhost:3306/plazma
+ jdbc.username=sa
+ jdbc.password=
+ </pre>
+ </code>
+ 
+<p><b>ВАЖНО!</b> Для корректной работы также необходимо установить кодировку при подключении к базе данных 
+в значении  jdbc.url.
+<p>Например для кодировки cp1251:
+<code>
+ <pre>
+  jdbc.url=jdbc:mysql://localhost:3306/plazma?characterEncoding=cp1251&connectionCollation=cp1251_general_ci
+  </pre>
+ </code>
+
+
+</body>
+</html>
+
+

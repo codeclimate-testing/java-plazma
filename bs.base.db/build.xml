@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-base-db" default="script-result-all-dbs">
+
+    <property file="build.properties"/>
+
+	
+	<target name="script-create-views" description="Generate SQL script for create views">
+	    <concat destfile="${db.createdb.dir}/${db.vendor}/create_views.sql" encoding="${codepage}">	    	
+	    	
+		    <filelist dir="${db.dir}" files="header.${db.vendor}.txt"/>
+		    	
+		    <filelist dir="${db.views.dir}" files="v_organization.sql"/>
+            <filelist dir="${db.views.dir}" files="v_sys_user.sql"/>
+	    	
+            <filelist dir="${base.views.dir}" files="v_sys_permission.sql"/>	    	
+
+            <filelist dir="${employee.views.dir}" files="v_employee.sql"/>
+            	
+            <filelist dir="${organization.views.dir}" files="v_warehouse.sql"/>
+            <filelist dir="${organization.views.dir}" files="v_warehouse_union.sql"/>	    	
+            <filelist dir="${organization.views.dir}" files="v_mtrl_responsible.sql"/>
+            <filelist dir="${organization.views.dir}" files="v_warehouse_move.sql"/>
+
+            <filelist dir="${product.views.dir}" files="v_product.sql" />
+		    <filelist dir="${product.views.dir}" files="v_product_move.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_goods.sql" />
+		    <filelist dir="${asset.views.dir}" files="v_asset.sql" />
+		    <filelist dir="${intangible.views.dir}" files="v_intangible.sql" />
+
+            <filelist dir="${document.views.dir}" files="v_document.${db.vendor}.sql" />
+            <filelist dir="${finance.views.dir}" files="v_finance_document.sql" />
+            <filelist dir="${finance.views.dir}" files="v_entry_item.sql" />
+	    	
+            <filelist dir="${finance.views.dir}" files="v_contractor.sql" />	    	
+            <filelist dir="${finance.views.dir}" files="v_contractor_union.${db.vendor}.sql" />	    		    	
+
+	    	
+            <!-- Contact management -->
+		    <filelist dir="${contact.views.dir}" files="v_city.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_address_city.sql" />
+	    	
+		    <filelist dir="${contact.views.dir}" files="v_address.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_contactable_address.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_def_contactable_address.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_def_partner_address.sql" />
+	    	
+		    <filelist dir="${contact.views.dir}" files="v_phone.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_contactable_phone.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_def_contactable_phone.sql" />
+		    <filelist dir="${contact.views.dir}" files="v_def_partner_phone.sql" />
+
+	    	
+            <!-- Bank -->
+		    <filelist dir="${bank.views.dir}" files="v_bank.sql" />
+		    <filelist dir="${bank.views.dir}" files="v_partner_bank_account.sql" />
+
+		    <filelist dir="${bank.views.dir}" files="v_payment_income.sql" />	    	
+		    <filelist dir="${bank.views.dir}" files="v_payment_outcome.sql" />
+		    <filelist dir="${bank.views.dir}" files="v_payment.sql" />
+		    <filelist dir="${bank.views.dir}" files="v_payment_rotate.sql" />	    	
+
+	    	
+            <!-- Common -->
+		    <filelist dir="${organization.views.dir}" files="v_businessable.${db.vendor}.sql" />
+            <!-- disable
+		    <filelist dir="${register.views.dir}" files="v_businessable_register.sql" />
+            -->
+		    <filelist dir="${register.views.dir}" files="v_partner_register.sql" />
+            <filelist dir="${partner.views.dir}" files="v_partner_move.sql" />
+	    	
+
+            <!-- Goods -->
+		    <filelist dir="${register.views.dir}" files="v_goods_register.sql" />
+		    <filelist dir="${register.views.dir}" files="v_goods_detail_register.sql" />
+
+
+            <!-- Goods Reports -->
+		    <filelist dir="${goods.views.dir}" files="v_goods_sale.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_goods_purchase.sql" />
+	    	
+		    <filelist dir="${goods.views.dir}" files="v_rpt_goods_income.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_rpt_goods_outcome.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_rpt_goods_rest.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_rpt_invoice.sql" />
+	    	<filelist dir="${goods.views.dir}" files="v_rpt_goods_register.sql" />
+
+            <filelist dir="${goods.views.dir}" files="v_rpt_goods_sale.sql" />
+
+            <filelist dir="${goods.views.dir}" files="v_rpt_goods_sale_year_product.${db.vendor}.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_rpt_goods_sale_year.${db.vendor}.sql" />
+		    <filelist dir="${goods.views.dir}" files="v_rpt_wrh_goods_register.sql" />
+
+
+            <!-- Goods Rotate -->
+		    <filelist dir="${goods.views.dir}/rotate" files="v_goods_credit_full.sql" />
+		    <filelist dir="${goods.views.dir}/rotate" files="v_goods_debit_full.sql" />
+	    	
+		    <filelist dir="${goods.views.dir}/rotate" files="v_rpt_goods_rest_start.sql" />
+		    <filelist dir="${goods.views.dir}/rotate" files="v_rpt_wrh_goods_rest_start.sql" />
+		    <filelist dir="${goods.views.dir}/rotate" files="v_rpt_goods_credit_full.sql" />
+		    <filelist dir="${goods.views.dir}/rotate" files="v_rpt_goods_debit_full.sql" />
+		    <filelist dir="${goods.views.dir}/rotate" files="v_rpt_goods_rotate.${db.vendor}.sql" />
+	    	
+
+            <!-- Partner -->
+		    <filelist dir="${partner.views.dir}" files="v_partner_rest.sql" />
+		    <filelist dir="${partner.views.dir}" files="v_rpt_partner_register.sql" />
+		    <filelist dir="${partner.views.dir}" files="v_rpt_partner_rest.sql" />
+		    <filelist dir="${partner.views.dir}" files="v_rpt_partner_rest_start.sql" />
+		    <filelist dir="${partner.views.dir}" files="v_rpt_partner_credit_full.sql" />
+		    <filelist dir="${partner.views.dir}" files="v_rpt_partner_debit_full.sql" />
+		    <filelist dir="${partner.views.dir}" files="v_rpt_partner_rotate.${db.vendor}.sql" />
+
+
+	    	<!-- Payroll -->
+		    <filelist dir="${payroll.views.dir}" files="v_employee_result.sql" />
+	    	
+
+	    	<!-- Finance -->
+		    <filelist dir="${finance.views.dir}" files="v_ledger_account_rest.sql" />
+            <filelist dir="${register.views.dir}" files="v_ledger_account_register.sql" />
+	    	
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_rest.sql" />
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_register.sql" />
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_rest_start.sql" />
+	    	
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_credit_full.sql" />
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_debit_full.sql" />
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_rotate.${db.vendor}.sql" />
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_all.sql" />
+            <filelist dir="${finance.views.dir}" files="v_rpt_ldg_account_corr.sql" />
+
+	    	
+	    	<!-- Project -->
+            <filelist dir="${project.views.dir}" files="v_project_date.${db.vendor}.sql" />
+            <filelist dir="${project.views.dir}" files="v_project_date_ext.sql" />
+            <filelist dir="${project.views.dir}" files="v_project_year_unique.sql" />
+            <filelist dir="${project.views.dir}" files="v_project_year_unique_inf.sql" />
+            <filelist dir="${project.views.dir}" files="v_project_period_day.sql" />
+	
+	    </concat>
+	</target>
+
+
+	
+	
+	<!-- RESULT: CREATE DB -->
+    <target name="script-create-db" depends="script-create-views" description="Generate SQL script for create database">
+    	<concat destfile="${db.createdb.dir}/${db.vendor}/create_db.sql" encoding="${codepage}">
+		    <filelist dir="${db.dir}" files="header.${db.vendor}.txt"/>
+    		
+		    <filelist dir="${db.dir}" 
+		         files="create_tables.${db.vendor}.sql, create_sequences.${db.vendor}.sql, create_constraints.sql, create_constraints_user.sql"/>
+		    <filelist dir="${db.createdb.dir}/${db.vendor}" files="create_views.sql"/>    		
+    		
+	    </concat>
+	</target>
+
+	<!-- RESULT: INIT DB -->
+	<target name="script-init-db" depends="script-create-db" description="Generate SQL script for insert into database init (important for starting) information">
+	    <concat destfile="${db.createdb.dir}/${db.vendor}/${lang}/init_db.sql" encoding="${codepage}">	    	
+	    	
+		    <filelist dir="${db.dir}" files="header.${db.vendor}.txt"/>
+		    	
+	    	<!-- BASE INIT    -->
+		    <filelist dir="${db.data.init.dir}/base/${lang}" 
+		         files="sys_quarter.sql, sys_month.sql, sys_day.sql, sys_data_type.sql, sys_entity_type.sql, sys_entity.sql, sys_variable.sql, language.sql, country.sql, currency.sql"/>
+
+		    <filelist dir="${db.data.init.dir}/base/${lang}" 
+		         files="sys_transfer_source.sql, sys_transfer_source_attr.sql"/>
+	    	
+
+	    	<!-- CONTACT INIT -->
+		    <filelist dir="${db.data.init.dir}/contact/${lang}" 
+		         files="address_type.sql, apartment_type.sql, contact_type.sql, locality_type.sql, phone_type.sql, street_type.sql"/>
+
+	    	<!-- CONTEXT INIT -->
+		    <filelist dir="${db.dir}" 
+		         files="init_${lang}.sql"/>
+		    <!--
+		    <filelist dir="${db.dir}" 
+		         files="init_context_${lang}.${db.vendor}.sql"/>
+                    -->
+	    	
+
+		    <filelist dir="${db.data.init.dir}/employee/${lang}" 
+		         files="job_position.sql, discharge_type.sql, employee_category.sql, employee_rank.sql"/>
+
+		    <filelist dir="${db.data.init.dir}/human/${lang}" 
+		         files="education_form.sql, education_type.sql, familiarity.sql, family_status.sql, military_rank.sql, military_status.sql, speciality.sql"/>
+
+		    <filelist dir="${db.data.init.dir}/payroll/${lang}" 
+		         files="vacation_averange_type.sql, vacation_calculate.sql, vacation_type.sql, payroll_algoritm_type.sql, payroll_form.sql, payroll_mode.sql, payroll_type.sql,	payroll.sql,	sick_type.sql,    	sicklist_averange_type.sql"/>
+
+            <!-- project -->
+		    <filelist dir="${db.data.init.dir}/project/${lang}" 
+		         files="project_type.sql, project_status.sql, project_role.sql, project_stage_group.sql, project_stage.sql"/>
+
+            <!-- task -->
+		    <filelist dir="${db.data.init.dir}/project/${lang}" 
+		         files="task_type.sql, task_status.sql, task_role.sql, task_result.sql, task_priority.sql"/>
+
+            <!-- pim -->
+		    <filelist dir="${db.data.init.dir}/pim/${lang}" 
+		         files="pim_appointment_type.sql, pim_appointment_priority.sql"/>
+
+            <!-- partner -->
+		    <filelist dir="${db.data.init.dir}/partner/${lang}" 
+		         files="industry.sql, partner_group.sql"/>
+
+            <!-- finance -->
+		    <filelist dir="${db.data.init.dir}/finance/${lang}" 
+		         files="ledger_account.sql, template_entry.sql, template_entry_item.sql"/>
+
+	    </concat>
+	</target>
+
+	<!-- RESULT: POPULATE DB -->
+	<target name="script-populate-db" depends="script-init-db" description="Generate SQL script for insert into database begin (don't important for starting) information">
+	    <concat destfile="${db.createdb.dir}/${db.vendor}/${lang}/populate_db.sql" encoding="${codepage}">	    	
+		    <filelist dir="${db.dir}" files="header.${db.vendor}.txt"/>
+		    <filelist dir="${db.data.populate.dir}/contact/${lang}" files="region.sql, locality.sql"/>	    	
+		    <filelist dir="${db.dir}" files="populate_${lang}.sql"/>
+	    </concat>
+	</target>
+
+	<!-- TOTAL RESULT: DB -->	
+	<target name="script-result-db" depends="script-populate-db" description="Generate result SQL for create database">
+	    <concat destfile="${db.createdb.dir}/${db.vendor}/${lang}/create_plazma_db.sql" encoding="${codepage}">
+		    <filelist dir="${db.createdb.dir}/${db.vendor}" files="create_db.sql"/>
+		    <filelist dir="${db.createdb.dir}/${db.vendor}/${lang}" files="init_db.sql"/>
+		    <filelist dir="${db.createdb.dir}/${db.vendor}/${lang}" files="populate_db.sql"/>	    	
+	    </concat>
+		
+	</target>
+	
+	<!-- TOTAL RESULT: DB DEMO -->
+	<target name="script-result-db-demo" depends="script-populate-db" description="Generate result SQL script for create demo database">
+	    <concat destfile="${db.createdb.dir}/${db.vendor}/${lang}/create_plazma_db_demo.sql" encoding="${codepage}">
+		    <filelist dir="${db.createdb.dir}/${db.vendor}" files="create_db.sql"/>
+		    <filelist dir="${db.createdb.dir}/${db.vendor}/${lang}" files="init_db.sql"/>
+		    <filelist dir="${db.createdb.dir}/${db.vendor}/${lang}" files="populate_db.sql"/>	    	
+
+		    <filelist dir="${db.data.demo.dir}/product/${lang}" files="product_group.sql"/>
+
+
+		    <filelist dir="${db.dir}" files="demo_${lang}.sql"/>
+
+		    <filelist dir="${db.data.demo.dir}/project/${lang}" files="project.sql, task.sql"/>
+
+		    <filelist dir="${db.data.demo.dir}/document/${lang}" files="document.sql"/>
+		    <filelist dir="${db.data.demo.dir}/document/${lang}" files="finance_document.sql"/>	    	
+
+		    <filelist dir="${db.data.demo.dir}/finance/${lang}" files="partner_move.sql"/>
+		    <filelist dir="${db.data.demo.dir}/finance/${lang}" files="product_move.sql"/>
+		    <filelist dir="${db.data.demo.dir}/finance/${lang}" files="warehouse_move.sql"/>
+
+	    	<filelist dir="${db.data.demo.dir}/inventory/${lang}" files="inventory_rest.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/inventory/${lang}" files="inventory_rest_item.sql"/>
+
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="goods_income.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="goods_income_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="goods_outcome.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="goods_outcome_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="invoice.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="invoice_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="sale_order.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="sale_order_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="sale_plan.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="sale_plan_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="tax_waybill.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="tax_waybill_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="purchase_order.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="purchase_order_item.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="purchase_plan.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/goods/${lang}" files="purchase_plan_item.sql"/>
+	    	
+	    	<filelist dir="${db.data.demo.dir}/bank/${lang}" files="payment_income.sql"/>
+	    	<filelist dir="${db.data.demo.dir}/bank/${lang}" files="payment_outcome.sql"/>
+	    	
+	    	<filelist dir="${db.data.demo.dir}/payroll/${lang}" files="employee_total.sql"/>	    	
+	    	<filelist dir="${db.data.demo.dir}/payroll/${lang}" files="employee_payroll.sql"/>	    	
+	    	
+	    </concat>
+		
+	</target>
+
+	
+    <target name="clean-script-result" description="Clean all databases result scripts ">
+        <delete dir="${db.createdb.dir}"/>
+    </target>
+
+
+	<target name="script-result-all-dbs" depends="script-result-db, script-result-db-demo" description="Generate result SQL scripts for create all databases (live, demo)">
+	</target>
+
+
+	<target name="script-create-tables" description="Generate SQL script for create tables">
+		
+		<copy file="${db.dir}/create_tables.sql" tofile="${db.dir}/create_tables.oracle.sql" overwrite="true"/>
+		<copy file="${db.dir}/create_tables.sql" tofile="${db.dir}/create_tables.postgresql.sql" overwrite="true"/>
+		<copy file="${db.dir}/create_tables.sql" tofile="${db.dir}/create_tables.mysql.sql" overwrite="true"/>
+		<copy file="${db.dir}/create_tables.sql" tofile="${db.dir}/create_tables.firebird.sql" overwrite="true"/>
+    	<copy file="${db.dir}/create_tables.sql" tofile="${db.dir}/create_tables.hsql.sql" overwrite="true"/>
+
+		<!-- DATETIME -->
+		<replaceregexp match="_TIMESTAMP\s+DATE" replace="_TIMESTAMP     DATETIME"  byline="true">
+			<fileset dir="${db.dir}" includes="create_tables.mysql.sql"/>
+			<fileset dir="${db.dir}" includes="create_tables.hsql.sql"/>
+		</replaceregexp>
+		
+		<replaceregexp match="_DATE_TIME\s+DATE" replace="_DATE_TIME     DATETIME"  byline="true">
+			<fileset dir="${db.dir}" includes="create_tables.mysql.sql"/>
+		    <fileset dir="${db.dir}" includes="create_tables.hsql.sql"/>
+		</replaceregexp>
+				
+		<!-- TIMESTAMP -->
+		<replaceregexp match="_TIMESTAMP\s+DATE" replace="_TIMESTAMP     TIMESTAMP"  byline="true">
+			<fileset dir="${db.dir}" includes="create_tables.oracle.sql"/>			
+			<fileset dir="${db.dir}" includes="create_tables.postgresql.sql"/>
+			<fileset dir="${db.dir}" includes="create_tables.firebird.sql"/>
+		</replaceregexp>
+		
+		<replaceregexp match="_DATE_TIME\s+DATE" replace="_DATE_TIME     TIMESTAMP"  byline="true">
+		    <fileset dir="${db.dir}" includes="create_tables.oracle.sql"/>			
+			<fileset dir="${db.dir}" includes="create_tables.postgresql.sql"/>
+			<fileset dir="${db.dir}" includes="create_tables.firebird.sql"/>
+		</replaceregexp>
+
+		
+	</target>	    	
+
+</project>

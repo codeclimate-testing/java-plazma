@@ -1,0 +1,12 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarAssurerPaintType" table="CAR_ASSURER_PAINT_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="assurer" column="ASSURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader"/>
+        	<reference name="carPaintType" column="CAR_PAINT_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintType"/>
+        	<reference name="carClass" column="CAR_CLASS_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarClass"/>        
+        	<attribute name="volume" column="VOLUME" type="Float" />
+        	<attribute name="price" column="PRICE" type="Float" />
+        </attributes>        
+    </entity>
+</entity-mapping>

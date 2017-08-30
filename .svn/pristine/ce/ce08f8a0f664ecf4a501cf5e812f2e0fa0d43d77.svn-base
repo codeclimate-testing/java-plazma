@@ -1,0 +1,10 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="PartnerTypeEditForm" type="EditForm" title="@{PartnerTypeEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{PartnerTypeEditForm.nameLabel.text}"/><text-field property="name"/>
+				<label text="@{PartnerTypeEditForm.fullNameLabel.text}"/><text-field property="fullName" width="100"/>
+			</children>
+		</content>
+	</form>
+</ui>

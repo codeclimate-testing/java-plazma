@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Speciality" class="org.plazmaforge.bsolution.personality.common.beans.Speciality" table="SPECIALITY">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="parentId" column="PARENT_ID" type="Integer" />
+        </attributes>
+    </entity>
+

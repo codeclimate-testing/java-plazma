@@ -1,0 +1,24 @@
+# Plazma properties file
+
+# Set demo mode (Use demo database)
+plazma.platform.demo = true
+
+# Set auto login
+plazma.platform.autologin = true
+
+
+#######################################################################
+#
+# DEBUG properties
+#
+#######################################################################
+
+plazma.platform.configuration.dir = ../bs.base.configuration
+
+plazma.platform.ui.conf = ui/swing
+
+plazma.platform.system.conf = standalone
+
+plazma.platform.application.config.file = application-swing.xml
+
+#plazma.platform.system.config.file = system-config-gui.xml

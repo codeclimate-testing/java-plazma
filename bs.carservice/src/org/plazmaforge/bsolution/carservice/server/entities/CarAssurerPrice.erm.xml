@@ -1,0 +1,10 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarAssurerPrice" table="CAR_ASSURER_PRICE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="assurer" column="ASSURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader"/>
+        	<reference name="carAge" column="CAR_AGE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarAge"/>
+        	<attribute name="price" column="PRICE" type="Float" />
+        </attributes>        
+    </entity>
+</entity-mapping>

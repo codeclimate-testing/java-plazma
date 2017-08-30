@@ -1,0 +1,15 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariant" table="CAR_DETAIL_VARIANT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="carDetail" column="CAR_DETAIL_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarDetail"  required="true" />
+        	<reference name="carDamageLevel" column="CAR_DAMAGE_LEVEL_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarDamageLevel"/>
+        	<attribute name="pnt" column="IS_PNT" type="Boolean"/>
+        	<attribute name="mat" column="IS_MAT" type="Boolean"/>
+        	<attribute name="pol" column="IS_POL" type="Boolean"/>
+        	<collection name="partList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariantPart" join-attribute="carDetailVariant"  cascade="all"/>
+        	<collection name="servList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariantServ" join-attribute="carDetailVariant" cascade="all"/>
+        	<collection name="paintList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariantPaint"  join-attribute="carDetailVariant" cascade="all"/>
+        </attributes>
+    </entity>
+</entity-mapping>

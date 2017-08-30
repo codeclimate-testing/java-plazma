@@ -1,0 +1,17 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefAddress" class="org.plazmaforge.bsolution.contact.common.beans.DefAddress" table="V_DEF_CONTACTABLE_ADDRESS" readonly="true">
+		<attributes>
+	        <key name="contactableId" column="CONTACTABLE_ID" type="Integer"/>
+        	<discriminator column="ENTITY_ID" type="String"/>
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+        	<attribute name="cityName" column="CITY_NAME" type="String" />
+        	<attribute name="localityTypeName" column="LOCALITY_TYPE_NAME" type="String" />
+        	<attribute name="localityName" column="LOCALITY_NAME" type="String" />
+        	<attribute name="addressString" column="ADDRESS_STRING" type="String" />
+        	<attribute name="localityAddressString" column="LOCALITY_ADDRESS_STRING" type="String" />
+        	<attribute name="fullAddressString" column="FULL_ADDRESS_STRING" type="String" />
+		</attributes>
+    </entity>
+
+

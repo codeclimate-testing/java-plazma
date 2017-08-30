@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductInstance" class="org.plazmaforge.bsolution.product.common.beans.ProductInstance" table="PRODUCT_INSTANCE">
+    	<attributes>
+	        <key name="id" column="ID" type="Integer" generator-type="increment"/>
+    	    <attribute name="serialNumber" column="SERIAL_NUMBER" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+	        <reference name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.Product"  required="true" />
+    	</attributes>
+    </entity>
+

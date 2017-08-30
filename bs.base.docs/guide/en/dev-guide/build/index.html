@@ -1,0 +1,607 @@
+
+<html>
+<title>Build</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Build</h2>
+   <hr>
+   <br><br>
+
+   <p><b>Plazma System</b> has two parts:
+   <ul>
+     <li><b>Plazma Framework</b>
+     <li><b>Plazma Business Solution</b>
+   </ul>
+
+   <p>Each part has own projects.
+
+   <p>Each project has own build process. 
+
+   <p>To project build you can use <b>Apache Ant</b>. 
+   You can download it from the site <a targen="_blank" href="http://ant.apache.org">http://ant.apache.org</a> 
+
+   <p>The root folder of each project has two files:
+<pre><code>
+  build.properties - Ant properties file
+  build.xml - Ant task file
+</pre></code>
+
+  <p>More information about Ant tasks you can see on the provider site.
+
+  <p>To run Ant task you have to execute following command:
+<pre><code>
+  ant &lt;task-name&gt;
+</pre></code>
+  &lt;task-name&gt; is name of Ant task, for example:
+<pre><code>
+  ant build
+</pre></code>
+
+  <br>
+  <p>Task list of the project <b>framework</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (by default)</td>
+       <td>Compile project</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Clear output folders (classes and etc.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Clear dist folder</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>convert</b></td>
+       <td>Convert files (.properties) from current codepage (for example, cp1251) to unicode</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Create all jar files</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-common</b></td>
+       <td>Create common jar file</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-launcher</b></td>
+       <td>Cretae launcher jar file</td>  
+     </tr>
+
+   </table>
+
+
+
+
+
+
+<br><br><br>
+  <p>Task list of the project <b>framework.client</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (by default)</td>
+       <td>Compile project</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Clear output folders (classes and etc.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Clear dist folder</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Create all jar file</td>  
+     </tr>
+
+     
+   </table>
+
+
+<br><br><br>
+  <p>Task list of the project <b>framework.client.swt</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (by default)</td>
+       <td>Compile project</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Clear output folders (classes and etc.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Clear dist folder</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Create all jar file</td>  
+     </tr>
+
+     
+   </table>
+
+
+
+<br><br><br>
+  <p>Task list of the project <b>framework.client.swing</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (by default)</td>
+       <td>Compile project</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Clear output folders (classes and etc.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Clear dist folder</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Create all jar file</td>  
+     </tr>
+
+     
+   </table>
+
+
+   <br><br><br>
+  <p>Task list of the project <b>bs.base</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (by default)</td>
+       <td>Compile project</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Clear output folders (classes and etc.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Clear dist folder (without plazma-framework-*.jar)</td>  
+     </tr>
+
+     <tr>
+       <td>clean-pack-server</td>
+       <td>Clear server package</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Create all jar files</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-common</b></td>
+       <td>Create common jar file</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-server</b></td>
+       <td>Create server jar file</td>  
+     </tr>
+
+
+
+     <tr>
+       <td><b>create-pack-install-server-lite</b></td>
+       <td>Create installation Lite server package</td>  
+     </tr>
+
+
+
+
+     <tr>
+       <td>create-pack-server-common</td>
+       <td>Create common server package</td>  
+     </tr>
+
+
+
+
+     <tr>
+       <td><b>create-pack-server-lite</b></td>
+       <td>Create Lite server package</td>  
+     </tr>
+
+   </table>
+
+
+
+
+
+
+
+  <br><br><br>
+  <p>Task list of the project <b>bs.base.client.swt</b> 
+  <br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+
+
+     <tr>
+      <td><b><font color="blue">build</font></b> (by default)</td>
+      <td>Compile project (without creating jar files)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean</b></td>
+      <td>Clear output folders (classes and etc.)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean-dist</b></td>
+      <td>Clear dist folder</td>
+     </tr>
+
+
+     <tr>
+      <td>clean-pack-client</td>
+      <td>Clear client package</td> 
+     </tr>
+
+     <tr>
+      <td>clean-pack-standalone</td>
+      <td>Clear standalone package</td>
+     </tr>
+
+
+     <tr>
+      <td>clean-pack-standalone-demo</td>
+      <td>Clear standalone demo package</td> 
+     </tr>
+
+
+     <tr>
+      <td><b>create-jar-all</b></td>
+      <td>Create all jar files</td> 
+     </tr>
+
+     <tr>
+      <td><b>create-jar-client</b></td>
+      <td>Create client jar file</td> 
+     </tr>
+
+     <tr>
+      <td>create-pack-client-common</td>
+      <td>Create common client package</td>
+     </tr>
+
+
+     <tr>
+      <td>create-pack-client-lite</td>
+      <td>Create Lite client package</td>
+     </tr>
+
+
+
+
+
+
+     <tr>
+      <td>create-pack-install-client-lite</td>
+      <td>Create installation Lite client package</td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-client-lite-linux-gtk</b></td>
+      <td>Create installation Lite client package for Linux GTK</b></td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-client-lite-win32</b></td>
+      <td>Create installation Lite client package for Win32</b></td>
+     </tr>
+
+
+
+
+
+     <tr>
+      <td>create-pack-install-standalone</td>
+      <td>Create installation standalone package</td>
+     </tr>
+
+     <tr>
+      <td>create-pack-install-standalone-demo</td>
+      <td>Create installation standalone demo package</td>
+     </tr>
+
+
+
+     <tr>
+      <td><b>create-pack-install-standalone-linux-gtk</b></td>
+      <td>Create installation standalone package for Linux GTK</b></td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-standalone-linux-gtk-demo</b></td>
+      <td>Create installation standalone demo package for Linux GTK</b></td>
+     </tr>
+
+
+
+
+     <tr>
+      <td><b>create-pack-install-standalone-win32</b></td>
+      <td>Create installation standalone package for Win32</b></td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-standalone-win32-demo</b></td>
+      <td>Create installation standalone demo package for Win32</b></td>
+     </tr>
+
+
+   </table>
+
+
+
+
+
+
+  <br><br><br>
+  <p>Task list of the project <b>bs.base.client.swing</b> 
+  <br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+
+
+     <tr>
+      <td><b><font color="blue">build</font></b> (by default)</td>
+      <td>Compile project (without creating jar files)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean</b></td>
+      <td>Clear output folders (classes and etc.)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean-dist</b></td>
+      <td>Clear dist folder</td>
+     </tr>
+
+
+     <tr>
+      <td>clean-pack-client</td>
+      <td>Clear client package</td> 
+     </tr>
+
+     <tr>
+      <td><b>clean-pack-install-standalone</b></td>
+      <td>Clear installation standalone package</td>
+     </tr>
+
+
+     <tr>
+      <td><b>clean-pack-install-standalone-demo</b></td>
+      <td>Clear installation standalone demo package</td> 
+     </tr>
+
+
+     <tr>
+      <td><b>convert</b></td>
+      <td>Convert files (.properties) from current codepage (for example, cp1251) to unicode</td> 
+     </tr>
+
+     <tr>
+      <td><b>create-jar-all</b></td>
+      <td>Create all jar files</td> 
+     </tr>
+
+     <tr>
+      <td><b>create-jar-client</b></td>
+      <td>Create client jar file</td> 
+     </tr>
+
+     <tr>
+      <td>create-pack-client-common</td>
+      <td>Create common client package</td>
+     </tr>
+
+     <tr>
+      <td>create-pack-client-lite</td>
+      <td>Create Lite client package</td>
+     </tr>
+
+
+     <tr>
+      <td><b>create-pack-install-client-lite</b></td>
+      <td>Create installation Lite client package</td>
+     </tr>
+
+
+
+     <tr>
+      <td><b>create-pack-install-standalone</b></td>
+      <td>Create installation standalone package</td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-standalone-demo</b></td>
+      <td>Create installation standalone demo package</td>
+     </tr>
+
+
+   </table>
+     
+
+<br><br><br>
+  <p>Task list of the project <b>bs.base.configuration</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">convert</font></b> (by default)</td>
+       <td>Convert files (.properties) from current codepage (for example, cp1251) to unicode</td>  
+     </tr>
+
+   
+   </table>
+
+
+<br><br><br>
+  <p>Task list of the project <b>bs.base.db</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Name</b></td>
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td>clean-script-result</td>
+       <td>Clear output folders with SQL scripts</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>script-create-db</b></td>
+       <td>Generation SQL script to create database structure (tables, sequences, constraints, views)</td>  
+     </tr>
+
+     <tr>
+       <td>script-create-view</td>
+       <td>Generation SQL script to create views</td>  
+     </tr>
+
+     <tr>
+       <td>script-init-db</td>
+       <td>Generation SQL script to insert into database init data</td>  
+     </tr>
+
+
+
+
+     <tr>
+       <td>script-populate-db</td>
+       <td>Generation SQL script to insert into database start data (optional)</td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">script-result-all-dbs</font></b> (by default)</td>
+       <td>Generation result SQL scripts to create all databases (live and demo)</td>  
+     </tr>
+
+     <tr>
+       <td><b>script-result-db</td>  
+       <td>Generation result SQL script to create database</td>
+     </tr>
+
+     <tr>
+       <td><b>script-result-db-demo</b></td>  
+       <td>Generation result SQL script to create demo database</td>
+     </tr>
+
+   
+   </table>
+
+
+           
+
+             
+
+
+
+</body>
+</html>
+
+

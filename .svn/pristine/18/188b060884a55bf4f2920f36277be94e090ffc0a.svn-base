@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<project name="plazma-framework-client-swing" default="build">
+
+    <property file="build.properties"/>
+
+    <path id="plazma-classpath">
+	<fileset dir="${lib.dir}">
+		<include name="**/*.jar"/>
+	</fileset>
+    <fileset dir="${dist.dir}">
+	    <include name="${framework.jar}"/>
+    </fileset>    	
+    </path>
+
+
+    <target name="clean" description="Clean all output dirs (classes, etc.)">
+        <delete dir="${classes.dir}"/>
+        <delete dir="${javadocs.dir}"/>
+    </target>
+
+    <target name="clean-dist" description="Clean dist dir">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="${module.jar}"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+
+  
+    <target name="build" description="Compile main source tree java files into class files (no-jarring)">
+
+	    <mkdir dir="${classes.dir}"/>
+
+	    <javac destdir="${classes.dir}"
+		    deprecation="false" optimize="false" failonerror="true">
+		    <src path="${src.dir}"/>
+		    <classpath refid="plazma-classpath"/>
+	     </javac>
+
+	    <copy todir="${classes.dir}" preservelastmodified="true">
+		    <fileset dir="${src.dir}">
+			    <include name="**/*.xml"/>
+			    <include name="**/*.properties"/>
+			    <include name="**/*.jpg"/>
+			    <include name="**/*.gif"/>
+			    <include name="**/*.png"/>
+		   </fileset>
+	    </copy>
+
+    </target>
+
+    <target name="create-jar-all" description="Create all jar files"
+    	depends ="create-jar-common"/>
+    	
+    <target name="create-jar-common" description="Create common jar file">
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/${module.jar}"
+           basedir="${classes.dir}"
+           includes="**">
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+            <attribute name="Plazma-Version" value="${version}"/>          	          	
+          </manifest>
+        </jar>
+    </target>
+
+
+</project>

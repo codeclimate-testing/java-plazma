@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="CityEditForm" type="EditForm" title="@{CityEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{CityEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{CityEditForm.regionLabel.text}"/><combo-box property="region" data-type="contact/Region" width="200"/>
+				<label text="@{CityEditForm.countryLabel.text}"/><combo-box property="country" data-type="base/Country" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

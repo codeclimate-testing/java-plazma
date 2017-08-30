@@ -1,0 +1,12 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="CurrencyEditForm"  type="EditForm" title="@{CurrencyEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{CurrencyEditForm.codeLabel.text}"/><text-field property="code"/>
+				<label text="@{CurrencyEditForm.numericCodeLabel.text}"/><text-field property="numericCode"/>
+				<label text="@{CurrencyEditForm.nameLabel.text}"/><text-field property="name"/>
+				<label text="@{CurrencyEditForm.fullNameLabel.text}"/><text-field property="fullName" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

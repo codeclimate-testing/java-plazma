@@ -1,0 +1,311 @@
+############################################################################
+# BASE Action Definition
+############################################################################
+tax.yes=Tax
+tax.no=Without tax
+
+# Exit Action
+org.plazmaforge.bsolution.base.client.swing.actions.ExitAction@name=Exit
+org.plazmaforge.bsolution.base.client.swing.actions.ExitAction@tooltip=Exit
+
+# About Action
+org.plazmaforge.bsolution.base.client.swing.actions.AboutAction@name=About...
+org.plazmaforge.bsolution.base.client.swing.actions.AboutAction@tooltip=About...
+
+# Preferences Action
+org.plazmaforge.bsolution.base.client.swing.actions.PreferencesAction@name=Preferences
+org.plazmaforge.bsolution.base.client.swing.actions.PreferencesAction@tooltip=Preferences
+org.plazmaforge.bsolution.base.client.swing.actions.PreferencesAction@image=olmari/Setup.gif
+
+
+# Cascade Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.CascadeWindowsAction@name=Cascade
+org.plazmaforge.bsolution.base.client.swing.actions.CascadeWindowsAction@tooltip=Cascade
+org.plazmaforge.bsolution.base.client.swing.actions.CascadeWindowsAction@image=olmari/Wnd_restore.gif
+
+# Close Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.CloseWindowsAction@name=Close all
+org.plazmaforge.bsolution.base.client.swing.actions.CloseWindowsAction@tooltip=Close all
+org.plazmaforge.bsolution.base.client.swing.actions.CloseWindowsAction@image=olmari/Wnd_close_all.gif
+
+# Choose Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.ChooseWindowsAction@name=Choose window...
+org.plazmaforge.bsolution.base.client.swing.actions.ChooseWindowsAction@tooltip=Choose window...
+
+
+# Maximize Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.MaximizeWindowsAction@name=Maxmize windows
+org.plazmaforge.bsolution.base.client.swing.actions.MaximizeWindowsAction@tooltip=Maxmize windows
+org.plazmaforge.bsolution.base.client.swing.actions.MaximizeWindowsAction@image=olmari/Wnd_maximize.gif
+
+# Title Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.TitleWindowsAction@name=Title windows
+org.plazmaforge.bsolution.base.client.swing.actions.TitleWindowsAction@tooltip=Title windows
+org.plazmaforge.bsolution.base.client.swing.actions.TitleWindowsAction@image=olmari/Wnd_title.gif
+
+# Title Vertical Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.TitleVerticalWindowsAction@name=Title vertical windows
+org.plazmaforge.bsolution.base.client.swing.actions.TitleVerticalWindowsAction@tooltip=Title vertical windows
+org.plazmaforge.bsolution.base.client.swing.actions.TitleVerticalWindowsAction@image=olmari/Wnd_title_vertical.gif
+
+# Title Horizontal Windows Action
+org.plazmaforge.bsolution.base.client.swing.actions.TitleHorizontalWindowsAction@name=Title horizontal windows
+org.plazmaforge.bsolution.base.client.swing.actions.TitleHorizontalWindowsAction@tooltip=Title horizontal windows
+org.plazmaforge.bsolution.base.client.swing.actions.TitleHorizontalWindowsAction@image=olmari/Wnd_title_horizontal.gif
+
+# New Dictionary Action
+org.plazmaforge.bsolution.base.client.swing.actions.NewDictionaryAction@name=New...
+org.plazmaforge.bsolution.base.client.swing.actions.NewDictionaryAction@tooltip=New dictionary
+
+# Choose Dictionary Action
+org.plazmaforge.bsolution.base.client.swing.actions.ChooseDictionaryAction@name=Choose...
+org.plazmaforge.bsolution.base.client.swing.actions.ChooseDictionaryAction@tooltip=Choose dictionary
+
+
+# Currency List Action
+org.plazmaforge.bsolution.base.client.swing.actions.CurrencyListAction@name=Currencies
+org.plazmaforge.bsolution.base.client.swing.actions.CurrencyListAction@tooltip=Currencies
+
+# Period List Action
+org.plazmaforge.bsolution.base.client.swing.actions.PeriodListAction@name=Periods
+org.plazmaforge.bsolution.base.client.swing.actions.PeriodListAction@tooltip=Periods
+org.plazmaforge.bsolution.base.client.swing.actions.PeriodListAction@image=olmari/Calendar.jpg
+
+# Unit List Action
+org.plazmaforge.bsolution.base.client.swing.actions.UnitListAction@name=Units
+org.plazmaforge.bsolution.base.client.swing.actions.UnitListAction@tooltip=Units
+
+# Country List Action
+org.plazmaforge.bsolution.base.client.swing.actions.CountryListAction@name=Countries
+org.plazmaforge.bsolution.base.client.swing.actions.CountryListAction@tooltip=Countries
+
+# Language List Action
+org.plazmaforge.bsolution.base.client.swing.actions.LanguageListAction@name=Languages
+org.plazmaforge.bsolution.base.client.swing.actions.LanguageListAction@tooltip=Languages
+
+# Register Period Action
+org.plazmaforge.bsolution.base.client.swing.actions.RegisterPeriodAction@name=Create period
+org.plazmaforge.bsolution.base.client.swing.actions.RegisterPeriodAction@tooltip=Create period
+
+# Choose Period Action
+org.plazmaforge.bsolution.base.client.swing.actions.ChoosePeriodAction@name=Choose period
+org.plazmaforge.bsolution.base.client.swing.actions.ChoosePeriodAction@tooltip=Choose period
+
+# Tax List Action
+org.plazmaforge.bsolution.base.client.swing.actions.TaxListAction@name=Taxes
+org.plazmaforge.bsolution.base.client.swing.actions.TaxListAction@tooltip=Taxes
+
+# SystemInfo Edit Action
+org.plazmaforge.bsolution.base.client.swing.actions.SystemInfoEditAction@name=System information
+org.plazmaforge.bsolution.base.client.swing.actions.SystemInfoEditAction@tooltip=System information
+
+# SystemVariable List Action
+org.plazmaforge.bsolution.base.client.swing.actions.SystemVariableListAction@name=System variables
+org.plazmaforge.bsolution.base.client.swing.actions.SystemVariableListAction@tooltip=System variables
+
+# SystemEntity List Action
+org.plazmaforge.bsolution.base.client.swing.actions.SystemEntityListAction@name=Entities
+org.plazmaforge.bsolution.base.client.swing.actions.SystemEntityListAction@tooltip=Entities
+
+# User List Action
+org.plazmaforge.bsolution.base.client.swing.actions.UserListAction@name=Users
+org.plazmaforge.bsolution.base.client.swing.actions.UserListAction@tooltip=Users
+
+# Role List Action
+org.plazmaforge.bsolution.base.client.swing.actions.RoleListAction@name=Roles
+org.plazmaforge.bsolution.base.client.swing.actions.RoleListAction@tooltip=Roles
+
+# Permission List Action
+org.plazmaforge.bsolution.base.client.swing.actions.PermissionListAction@name=Permissions
+org.plazmaforge.bsolution.base.client.swing.actions.PermissionListAction@tooltip=Permissions
+
+# Report List Action
+org.plazmaforge.bsolution.base.client.swing.actions.ReportListAction@name=Report list
+org.plazmaforge.bsolution.base.client.swing.actions.ReportListAction@tooltip=Report list
+org.plazmaforge.bsolution.base.client.swing.actions.ReportListAction@image=olmari/ext/reports.gif
+
+############################################################################
+# List Form Definition
+############################################################################
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyList@title=Currency
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyList@table.column-char-code.name=Char code
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyList@table.column-full-name.name=Full name
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodList@title=Period
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodList@table.column-start-date.name=Start date
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodList@table.column-end-date.name=End date
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodList@table.column-period-type.name=Type
+
+org.plazmaforge.bsolution.base.client.swing.forms.UnitList@title=Units
+org.plazmaforge.bsolution.base.client.swing.forms.UnitList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.UnitList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.UnitList@table.column-full-name.name=Full name
+
+org.plazmaforge.bsolution.base.client.swing.forms.CountryList@title=Countries
+org.plazmaforge.bsolution.base.client.swing.forms.CountryList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.CountryList@table.column-name.name=Country
+
+org.plazmaforge.bsolution.base.client.swing.forms.LanguageList@title=Languages
+org.plazmaforge.bsolution.base.client.swing.forms.LanguageList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.LanguageList@table.column-name.name=Name
+
+org.plazmaforge.bsolution.base.client.swing.forms.TaxList@title=Taxes
+org.plazmaforge.bsolution.base.client.swing.forms.TaxList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.TaxList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.TaxList@table.column-percent.name=%
+org.plazmaforge.bsolution.base.client.swing.forms.TaxList@table.column-amount.name=Amount
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableList@title=System variable
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableList@table.column-value.name=Value
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityList@title=Entities
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityList@table.column-entity-package.name=Package
+
+org.plazmaforge.bsolution.base.client.swing.forms.UserList@title=Users
+org.plazmaforge.bsolution.base.client.swing.forms.UserList@table.column-login.name=Login
+org.plazmaforge.bsolution.base.client.swing.forms.UserList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.UserList@table.column-registration-date.name=Registration date
+
+org.plazmaforge.bsolution.base.client.swing.forms.RoleList@title=Roles
+org.plazmaforge.bsolution.base.client.swing.forms.RoleList@table.column-name.name=Name
+
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionList@title=Permissions
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionList@table.column-object-type.name=Type
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionList@table.column-read.name=Is Read
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionList@table.column-write.name=Is Write
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionList@table.column-exec.name=Is Execute
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@title=System information
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.title.common.text=Base
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.title.adding.text=Additional
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.title.bank.text=Bank
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.title.project.text=Projects
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.title.task.text=Tasks
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-period.text=Period
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-payroll-period.text=Payroll period
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-tax.text=VAT
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-supplier.text=Supplier
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-customer.text=Customer
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-material-responsible.text=Material responsible
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-income-storable.text=Income storage
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-outcome-storable.text=Outcome storage
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-bank-partner.text=Partner
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-bank-income-partner.text=Income Partner
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-bank-outcome-partner.text=Outcome Partner
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-payment-type.text=Payment type
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-tax-print-type.text=TAX print type 
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project-partner.text=Partner
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project-responsible.text=Responsible
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project-stage.text=Project stage
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project-state.text=Project state
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project-type.text=Project type
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project-currency.text=Project currency
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-task-partner.text=Partner
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-task-responsible.text=Responsible
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-project.text=Project
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-task-priority.text=Task priority
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-task-state.text=Task state
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-task-type.text=Task type
+org.plazmaforge.bsolution.base.client.swing.forms.SystemInfoEdit@panel.label-task-result.text=Task result
+
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyEdit@title=Currency
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyEdit@panel.label-char-code.text=Char code
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.CurrencyEdit@panel.label-full-name.text=Full name
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodEdit@title=Period
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodEdit@panel.label-start-date.text=Start date
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodEdit@panel.label-end-date.text=E nd date
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.PeriodEdit@panel.label-period-type.text=Type
+
+org.plazmaforge.bsolution.base.client.swing.forms.UnitEdit@title=Unit
+org.plazmaforge.bsolution.base.client.swing.forms.UnitEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.UnitEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.UnitEdit@panel.label-full-name.text=Full name
+
+org.plazmaforge.bsolution.base.client.swing.forms.CountryEdit@title=Country
+org.plazmaforge.bsolution.base.client.swing.forms.CountryEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.CountryEdit@panel.label-name.text=Name
+
+org.plazmaforge.bsolution.base.client.swing.forms.LanguageEdit@title=Language
+org.plazmaforge.bsolution.base.client.swing.forms.LanguageEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.LanguageEdit@panel.label-name.text=Name
+
+org.plazmaforge.bsolution.base.client.swing.forms.TaxEdit@title=Taxes
+org.plazmaforge.bsolution.base.client.swing.forms.TaxEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.TaxEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.TaxEdit@panel.label-percent.text=%
+org.plazmaforge.bsolution.base.client.swing.forms.TaxEdit@panel.label-amount.text=Amount
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableEdit@title=System variable
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableEdit@panel.label-data-type.text=Type
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableEdit@panel.label-dictionary.text=Dictionary
+org.plazmaforge.bsolution.base.client.swing.forms.SystemVariableEdit@panel.label-expression.text=Value
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityEdit@title=Entity
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.base.client.swing.forms.SystemEntityEdit@panel.label-name.text=Name
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@title=User
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@panel.label-login.text=Login
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@panel.label-password.text=Password
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@panel.label-reenter-password.text=Re-enter password
+
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@table-user-role.name=Roles
+org.plazmaforge.bsolution.base.client.swing.forms.UserEdit@table-user-role.role.name=Name
+
+org.plazmaforge.bsolution.base.client.swing.forms.UserRoleEdit@title=Role
+org.plazmaforge.bsolution.base.client.swing.forms.UserRoleEdit@panel.label-role.text=Role
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.RoleEdit@title=Role
+org.plazmaforge.bsolution.base.client.swing.forms.RoleEdit@panel.label-name.text=Name
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionEdit@title=Entity
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionEdit@panel.label-read.text=Read
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionEdit@panel.label-write.text=Write
+org.plazmaforge.bsolution.base.client.swing.forms.PermissionEdit@panel.label-exec.text=Execute
+
+
+
+org.plazmaforge.bsolution.base.client.swing.forms.ReportList@title=Reports
+org.plazmaforge.bsolution.base.client.swing.forms.ReportList@table.column-code.name=Code
+org.plazmaforge.bsolution.base.client.swing.forms.ReportList@table.column-name.name=Name
+org.plazmaforge.bsolution.base.client.swing.forms.ReportList@table.column-entity-folder.name=Folder

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Language" class="org.plazmaforge.bs.base.shared.entities.Language" table="LANGUAGE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="code3" column="CODE3" type="String" />
+        	<attribute name="numericCode" column="NUMERIC_CODE" type="String" />        
+        	<attribute name="name" column="NAME" type="String" />
+        </attributes>
+    </entity>
+

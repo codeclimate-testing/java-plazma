@@ -1,0 +1,27 @@
+ Volume in drive C is OSDisk
+ Volume Serial Number is 8862-69D3
+
+ Directory of C:\Dir\Plazma\bs.base\src\org\plazmaforge\bsolution\base\common\beans
+
+19.02.2014  17:30    <DIR>          .
+19.02.2014  17:30    <DIR>          ..
+19.02.2014  17:30                 0 1
+12.02.2014  15:07             2ÿ358 BusinessableElement.java
+12.02.2014  15:07             1ÿ638 BusinessableHeader.java
+12.02.2014  15:07             1ÿ851 Country.java
+12.02.2014  15:07             1ÿ485 Currency.java
+12.02.2014  15:07             2ÿ145 CurrencyRate.java
+12.02.2014  15:07             1ÿ183 IBusinessable.java
+12.02.2014  15:07             1ÿ340 IBusinessableOwner.java
+12.02.2014  15:07             1ÿ282 IOwnerable.java
+12.02.2014  15:07             1ÿ898 Language.java
+12.02.2014  15:07             2ÿ131 Ownerable.java
+12.02.2014  15:07             2ÿ151 Period.java
+12.02.2014  15:07             1ÿ584 PeriodType.java
+12.02.2014  15:07             1ÿ804 Status.java
+12.02.2014  15:07             2ÿ470 SystemInfo.java
+12.02.2014  15:07             5ÿ166 SystemPreference.java
+12.02.2014  15:07             1ÿ421 Tax.java
+12.02.2014  15:07             1ÿ181 Unit.java
+              18 File(s)         33ÿ088 bytes
+               2 Dir(s)  428ÿ125ÿ188ÿ096 bytes free

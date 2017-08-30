@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="97d6fae7" name="CONTACTABLE">
+      <drawing is-expanded="true" location="560,0" dimensions="184,181" />
+      <columns>
+        <column id="9ebaaea2" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="f43652cb" name="ENTITY_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="aa0d006" name="EMAIL_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="35137cb1" name="WEB_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b6fdb61c" name="ADDRESS_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3a373df2" name="PHONE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="de615865" name="OWNER_ID" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+    <table id="61784a6" name="WEB">
+      <drawing is-expanded="true" location="960,500" dimensions="225,108" />
+      <columns>
+        <column id="31552afe" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="e1c166bd" name="CONTACTABLE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="82432ba4" name="URL" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="9029b50c" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+      </columns>
+    </table>
+    <table id="98622ead" name="SYS_ENTITY">
+      <drawing is-expanded="true" location="20,60" dimensions="310,181" />
+      <columns>
+        <column id="27c274a0" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="2f0c4cb8" name="ENTITY_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="1412ab8f" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="392d0547" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="50acdbea" name="ENTITY_CLASS" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="ee0cc520" name="ENTITY_PACKAGE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="584a768d" name="IS_ENABLE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="be9ac4f4" name="EMAIL">
+      <drawing is-expanded="true" location="700,500" dimensions="225,108" />
+      <columns>
+        <column id="9c50d81d" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="44b86c3d" name="CONTACTABLE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3d87bc88" name="EMAIL_ADDRESS" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="77cf431e" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+      </columns>
+    </table>
+    <table id="fb749749" name="PHONE">
+      <drawing is-expanded="true" location="360,500" dimensions="225,187" />
+      <columns>
+        <column id="2fad984b" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="f5972809" name="PHONE_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="5c41f82d" name="CONTACTABLE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="26c3d542" name="PHONE_CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="6" />
+        </column>
+        <column id="cc6634c9" name="PHONE_NUMBER" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="12" />
+        </column>
+        <column id="a730dd0a" name="PHONE_EXT" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="6" />
+        </column>
+        <column id="4e1d9824" name="PHONE_STRING" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="20" />
+        </column>
+        <column id="a0ff4825" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+      </columns>
+    </table>
+    <table id="946a59e0" name="ADDRESS">
+      <drawing is-expanded="true" location="20,500" dimensions="270,343" />
+      <columns>
+        <column id="6ee89caf" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="7c611331" name="ADDRESS_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3fc98482" name="CONTACTABLE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="5ff52f73" name="APARTMENT_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="c8c2967a" name="CITY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f9e97be8" name="LOCALITY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="c044e4a3" name="STREET_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="3760b63" name="ADDRESS_STRING" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="64bb177a" name="LOCALITY_ADDRESS_STRING" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="98f2c050" name="FULL_ADDRESS_STRING" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="8d7e452e" name="ZIP_CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="cb991000" name="STREET" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="9f72450" name="HOUSE_NUM" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="12" />
+        </column>
+        <column id="35fa3a93" name="CASE_NUM" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="6" />
+        </column>
+        <column id="73625998" name="APART_NUM" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="6" />
+        </column>
+        <column id="6674fa7" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="d9d106c5" name="FK_CONTACTA_CONT_WEB_WEB">
+      <details pk-table-id="61784a6" fk-table-id="97d6fae7">
+        <pk-columns>
+          <key-column id="31552afe" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="35137cb1" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="3d2943bf" name="FK_CONTACTA_CONT_PHO_PHONE">
+      <details pk-table-id="fb749749" fk-table-id="97d6fae7">
+        <pk-columns>
+          <key-column id="2fad984b" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="3a373df2" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="ad027d53" name="FK_CONTACTA_CONT_ADD_ADDRESS">
+      <details pk-table-id="946a59e0" fk-table-id="97d6fae7">
+        <pk-columns>
+          <key-column id="6ee89caf" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="b6fdb61c" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="a77a6ee8" name="FK_CONTACTA_CONT_EML_EMAIL">
+      <details pk-table-id="be9ac4f4" fk-table-id="97d6fae7">
+        <pk-columns>
+          <key-column id="9c50d81d" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="aa0d006" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="a984853" name="FK_CONTACTA_CONTACTAB_SYS_ENTI">
+      <details pk-table-id="98622ead" fk-table-id="97d6fae7">
+        <pk-columns>
+          <key-column id="27c274a0" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="f43652cb" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints />
+      </drawing>
+    </relationship>
+    <relationship id="8b216066" name="FK_WEB_WEB_CONTA_CONTACTA">
+      <details pk-table-id="97d6fae7" fk-table-id="61784a6">
+        <pk-columns>
+          <key-column id="9ebaaea2" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="e1c166bd" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="e6639cdf" name="FK_EMAIL_EMAIL_CON_CONTACTA">
+      <details pk-table-id="97d6fae7" fk-table-id="be9ac4f4">
+        <pk-columns>
+          <key-column id="9ebaaea2" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="44b86c3d" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="1952d324" name="FK_PHONE_PHONE_CON_CONTACTA">
+      <details pk-table-id="97d6fae7" fk-table-id="fb749749">
+        <pk-columns>
+          <key-column id="9ebaaea2" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="5c41f82d" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="460,120" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="ac8ef67d" name="FK_ADDRESS_ADDRESS_C_CONTACTA">
+      <details pk-table-id="97d6fae7" fk-table-id="946a59e0">
+        <pk-columns>
+          <key-column id="9ebaaea2" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="3fc98482" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

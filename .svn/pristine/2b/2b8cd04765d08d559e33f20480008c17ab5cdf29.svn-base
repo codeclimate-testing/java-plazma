@@ -1,0 +1,36 @@
+##########################################################################################
+# Car Service
+##########################################################################################
+ 
+CarClassListForm.name = Классы автомобилей                    
+CarMarkListForm.name = Марки автомобилей
+CarModelListForm.name = Модели автомобилей
+CarManufacturerListForm.name = Производители автомобилей
+CarListForm.name = Автомобили
+   
+CarAgeListForm.name = Диапазоны возрастов автомобилей
+
+
+CarPaintDetailTypeListForm.name = Варианты покраски автомобилей
+CarDamageLevelListForm.name = Степень повреждения
+CarPrepareTypeListForm.name = Вид подготовки автомобилей
+CarPaintTypeListForm.name = Виды краски для автомобилей
+CarPaintMarkListForm.name = Марки краски для автомобилей
+
+CarInsurerContractVariantListForm.name = Контракты по страховщикам (детализация)
+CarServOrderListForm.name = Заказы по автосервису (работная карта)
+
+CarMtrlFindRequestListForm.name = Заявки на поиск материалов
+CarMtrlFindReportListForm.name = Отчёты по поиску материалов
+
+CarMtrlPurchaseRequestListForm.name = Заявка на закупку материалов
+CarMtrlPurchaseReportListForm.name = Отчёт по закупке материалов
+
+CarServComplexityListForm.name = Степени сложности
+
+CarPartListForm.name = Запчасти (автосервис)
+CarServListForm.name = Услуги (автосервис)
+CarPaintListForm.name = Краска (автосервис)
+CarDetailListForm.name = Детали (автосервис)
+
+CarServTypeListForm.name = Виды услуг

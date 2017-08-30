@@ -1,0 +1,12 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="TaxEditForm" type="EditForm" title="@{TaxEditForm.title}">
+		<content layout="GridLayout(columnCount=4)">
+			<children>
+				<label text="@{TaxEditForm.codeLabel.text}"/><text-field property="code" layout-data="GridData(columnSpan=3)" width="100"/>
+				<label text="@{TaxEditForm.nameLabel.text}"/><text-field property="name" layout-data="GridData(columnSpan=3;align=fill)"/>
+				<label text="@{TaxEditForm.taxPercentLabel.text}"/><number-field property="taxPercent"/>
+				<label text="@{TaxEditForm.amountLabel.text}"/><number-field property="amount"/>
+			</children>
+		</content>
+	</form>
+</ui>

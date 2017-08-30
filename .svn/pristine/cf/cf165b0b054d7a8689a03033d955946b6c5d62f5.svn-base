@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PartnerActivityTypeLink" class="org.plazmaforge.bsolution.partner.common.beans.PartnerActivityTypeLink" table="PARTNER_ACTIVITY_TYPE_LINK">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.Partner"  required="true" />
+        	<reference name="activityType" column="ACTIVITY_TYPE_ID" class="org.plazmaforge.bsolution.partner.common.beans.ActivityType"  required="true" />
+        </attributes>
+    </entity>
+

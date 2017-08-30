@@ -1,0 +1,6 @@
+bs.base/plazma.classpath
+
+bs.base.richclient.swing/plazma.classpath
+
+bs.base.richclient.swt/config.classpath
+bs.base.richclient.swt/plazma.classpath

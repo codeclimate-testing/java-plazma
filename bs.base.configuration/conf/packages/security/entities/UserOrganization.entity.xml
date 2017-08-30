@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="UserOrganization" class="org.plazmaforge.bsolution.security.common.beans.UserOrganization" table="SYS_USER_ORG">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="user" column="USER_ID" class="org.plazmaforge.bsolution.security.common.beans.User"  required="true" />
+        	<attribute name="organizationId" column="ORGANIZATION_ID" type="Integer"  required="true"/>
+        </attributes>
+	</entity>
+

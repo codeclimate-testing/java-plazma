@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarMtrlPurchaseReportItem" table="CAR_MTRL_PURCHASE_REPORT_ITEM">
+        <id name="id" column="ID" type="java.lang.Integer" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+
+        <property name="price" column="PRICE" type="java.lang.Double" />
+        <property name="quantity" column="QUANTITY" type="java.lang.Double" />
+        <property name="amount" column="AMOUNT" type="java.lang.Double" />
+        
+        <property name="currencyPrice" column="CURRENCY_PRICE" type="java.lang.Double" />
+        <property name="currencyAmount" column="CURRENCY_AMOUNT" type="java.lang.Double" />
+        
+        <property name="unitRate" column="UNIT_RATE" type="java.lang.Double" />
+        
+        <many-to-one name="carMtrlPurchaseReport" column="CAR_MTRL_PURCHASE_REPORT_ID" class="CarMtrlPurchaseReport"  not-null="true" />
+        
+        <many-to-one name="product" column="PRODUCT_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductHeader"  not-null="true" />
+        <many-to-one name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  not-null="true" />
+        
+        <many-to-one name="supplier" column="SUPPLIER_ID" class="org.plazmaforge.bsolution.partner.common.beans.Partner"  not-null="true" />
+        <property name="deliveryDate" column="DELIVERY_DATE" type="java.util.Date" />
+        
+        <!--
+        <property name="accountQuantity" column="ACCOUNT_QUANTITY" type="java.lang.Double" />
+        <property name="accountPrice" column="ACCOUNT_PRICE" type="java.lang.Double" />
+        <property name="accountTaxPrice" column="ACCOUNT_TAX_PRICE" type="java.lang.Double" />
+        <property name="accountPriceWithTax" column="ACCOUNT_PRICE_WITH_TAX" type="java.lang.Double" />
+        -->
+         
+    </class>
+
+</hibernate-mapping>

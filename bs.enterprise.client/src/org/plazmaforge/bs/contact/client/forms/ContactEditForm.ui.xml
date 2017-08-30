@@ -1,0 +1,25 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ContactEditForm" type="EditForm" title="@{ContactEditForm.title}">
+		<content layout="GridLayout">
+			<children>
+				 <tab-panel layout-data="GridData(align=fill)">
+					<tab-items>
+						<tab-item title="@{ContactEditForm.generalTabItem.text}" layout="GridLayout(columnCount=4)">
+							<children>
+								<label text="@{ContactEditForm.codeLabel.text}" /><text-field property="code" width="100" />
+								<label text="@{ContactEditForm.titleNameLabel.text}" /><text-field property="titleName" width="200" />
+								<label text="@{ContactEditForm.firstNameLabel.text}" /><text-field property="firstName" layout-data="GridData(columnSpan=3; align=fill)" />
+								<label text="@{ContactEditForm.lastNameLabel.text}" /><text-field property="lastName" layout-data="GridData(columnSpan=3; align=fill)" />
+								<label text="@{ContactEditForm.fullNameLabel.text}" /><text-field property="fullName" layout-data="GridData(columnSpan=3; align=fill)" />
+								<label text="@{ContactEditForm.partnerLabel.text}" /><lookup-field layout-data="GridData(columnSpan=3; align=fill)" />
+								<label text="@{ContactEditForm.departmentLabel.text}" /><lookup-field property="department" data-type="organization/Department" layout-data="GridData(columnSpan=3; align=fill)" />
+								<label text="@{ContactEditForm.positionLabel.text}" /> <lookup-field property="jobPosition" data-type="contact/JobPosition" layout-data="GridData(columnSpan=3; align=fill)"/>
+							</children>
+						</tab-item>
+					</tab-items>
+				</tab-panel>
+				 
+			</children>
+		</content>
+	</form>
+</ui>

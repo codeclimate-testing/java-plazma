@@ -1,0 +1,10 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariantPaint" table="CAR_DETAIL_VARIANT_PAINT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="carDetailVariant" column="CAR_DETAIL_VARIANT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariant"  required="true" />
+        	<reference name="carPaint" column="CAR_PAINT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaint"  required="true" />
+        	<reference name="carPaintDetailType" column="CAR_PAINT_DETAIL_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintDetailType"  required="true" />
+        </attributes>
+    </entity>
+</entity-mapping>

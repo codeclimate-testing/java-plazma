@@ -1,0 +1,4 @@
+ErrorTranslator.impossibleCommand=Невозможно выполнить команду
+ErrorTranslator.database.error=Ошибка базы данных
+ErrorTranslator.violation.foreign.key.system=Нарушение внешнего ключа {0} в таблице {1}
+ErrorTranslator.violation.foreign.key.user=Таблица {1} ссылается на текущую запись

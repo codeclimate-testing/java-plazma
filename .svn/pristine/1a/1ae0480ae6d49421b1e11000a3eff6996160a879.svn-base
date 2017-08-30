@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menubar-config>
+	<interface id="HelloPlazma">
+		<menubar id="HelloPlazma.SystemMenu">
+    		<menu id="Dictionaries" type="Dictionaries">
+				<menuitem action="HelloListForm"/>            
+			</menu>
+		</menubar>    
+	</interface>
+</menubar-config>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT acceptor-config (acceptor*)>
+
+<!ELEMENT acceptor EMPTY>
+
+<!ATTLIST acceptor
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        name CDATA #IMPLIED
+        class NMTOKEN #IMPLIED
+>
+

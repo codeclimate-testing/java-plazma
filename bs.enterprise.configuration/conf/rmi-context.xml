@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location"><value>../bs.base.configuration/conf/rmi.properties</value></property>
+    </bean>
+
+    <bean id="rmiServiceInvoker" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl"><value>rmi://${rmi.host}:${rmi.port}/ServiceInvoker</value></property>
+        <property name="serviceInterface"><value>org.plazmaforge.framework.platform.service.ServiceInvoker</value></property>
+    </bean>
+
+</beans>

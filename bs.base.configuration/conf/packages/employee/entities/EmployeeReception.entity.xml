@@ -1,0 +1,24 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeReception" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeReception" table="EMPLOYEE_RECEPTION" extends-class="org.plazmaforge.bsolution.document.common.beans.Document">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+        <aliases>
+            <alias name="personName" attribute="person.name"/>
+        </aliases>
+    	<attributes>
+       		<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="receptionDate" column="RECEPTION_DATE" type="Date"  required="true" />
+        	<attribute name="salary" column="SALARY" type="Double" />
+        	<attribute name="tariff" column="TARIFF" type="Double" />
+        	<attribute name="premiumPercent" column="PREMIUM_PERCENT" type="Float" />
+        	<attribute name="sickPercent" column="SICK_PERCENT" type="Float" />
+        	<attribute name="employeeCode" column="EMPLOYEE_CODE" type="String" />
+        	<reference name="department" column="DEPARTMENT_ID" class="org.plazmaforge.bsolution.organization.common.beans.Department" />
+        	<reference name="employeeCategory" column="EMPLOYEE_CATEGORY_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeCategory" />
+        	<reference name="employeeRank" column="EMPLOYEE_RANK_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeRank" />
+        	<reference name="payrollForm" column="PAYROLL_FORM_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollForm" />
+        	<reference name="person" column="PERSON_ID" class="org.plazmaforge.bsolution.personality.common.beans.PersonHeader"  required="true" />
+        </attributes>
+    </joined-entity>
+

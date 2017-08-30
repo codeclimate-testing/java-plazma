@@ -1,0 +1,9 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarServLink" table="CAR_SERV_LINK">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/> 
+        	<reference name="carServ" column="CAR_SERV_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServ"  required="true" />
+        	<reference name="carServLink" column="CAR_SERV_LINK_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarServ"  required="true" />
+        </attributes>        
+    </entity>
+</entity-mapping>

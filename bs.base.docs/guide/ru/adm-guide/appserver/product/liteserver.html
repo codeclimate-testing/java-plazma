@@ -1,0 +1,92 @@
+
+<html>
+<title>Lite Server</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Lite Server</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Общая информация</h3>
+   <b>Plazma Lite Server</b> представляет собой легковесное сервер приложение
+   работающее по протоколу <b>RMI</b> и использующее фреймворк <b>Spring</b>.
+
+   <h3 align="center">Сервер</h3>
+
+
+
+<br>
+Для вызова сервисов по умолчанию используется порт <b>2005</b>, для вызова команд - <b>2007</b>
+<br>Если в Вашей системе уже используются данные порты, то необходимо изменить настройку сервера.
+<br>Порт для вызова сервисов устанавливается в файле &lt;PlazmaServer&gt;/conf/application-context-rmi.xml:
+<pre>
+&lt;bean class="org.springframework.remoting.rmi.RmiServiceExporter"&gt;
+    &lt;property name="serviceName">&lt;value>ServiceInvoker&lt;/value>&lt;/property&gt;
+    &lt;property name="service"> <ref bean="rmiServiceInvoker"/&gt;&lt;/property&gt;
+    &lt;property name="serviceInterface"><value>org.plazmaforge.framework.platform.service.ServiceInvoker&lt;/value&gt;&lt;/property&gt;
+    &lt;property name="<b>registryPort</b>"&gt;&lt;value><b>2005</b>&lt;/value&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+</pre>
+<b>ВАЖНО!</b> <b>При изменении порта для вызова сервисов на сервере, измените порт и на клиенте.
+<br>Значения портов на сервисе и на клиенте должны совпадать</b>.
+
+<p>На клиенте порт для вызова сервисов устанавливается в файле &lt;PlazmaClient&gt;/conf/rmi.properties
+<br>См. настройку клиента.
+
+<p>Для старта Lite сервера необходимо выполнить командный файл:
+<pre>
+
+   Windows
+   -------
+
+   start_server.bat
+
+
+   Linux
+   -----
+
+   start_server.sh
+</pre>
+
+<p>Порт для вызова команд передаётся как параметер при запуске сервера:
+<pre>
+   start_server <b>-commandport 2007</b>
+</pre>
+
+Подключение к базе данных настраивается в файле &lt;PlazmaServer&gt;/conf/jdbc.properties
+<br>См. <a href="../../database/index.html">База данных</a>
+
+   <h3 align="center">Клиент</h3>
+
+
+
+
+  <p>Необходимо произвести настройку RMI в файле &lt;PlazmaClient&gt;/conf/rmi.properties
+
+<pre>
+
+rmi.host = localhost
+rmi.port = 2005
+
+</pre>
+где <b>rmi.host</b> - реальное имя сервера (по умолчанию - localhost), <b>rmi.port</b> - порт для вызова сервисов (по умолчанию - 2005)
+<p><b>ВАЖНО! Порт для вызова сервисов на клиенте должен совпадать с портом для вызова сервисов на сервере. </b>
+
+
+
+</body>
+</html>
+
+

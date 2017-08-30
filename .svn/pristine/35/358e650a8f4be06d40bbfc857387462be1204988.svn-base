@@ -1,0 +1,11 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarAge" table="CAR_AGE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String"/>                
+        	<attribute name="section" column="SECTION" type="Integer"/>                
+        	<attribute name="ageFrom" column="AGE_FROM" type="Integer"/>                        
+        	<attribute name="ageTo" column="AGE_TO" type="Integer"/>
+        </attributes>                                
+    </entity>
+</entity-mapping>

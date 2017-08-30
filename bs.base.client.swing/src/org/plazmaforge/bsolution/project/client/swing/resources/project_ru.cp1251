@@ -1,0 +1,278 @@
+############################################################################
+# PROJECT Action Definition
+############################################################################
+
+# ProjectType List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectTypeListAction@name=Типы проектов
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectTypeListAction@tooltip=Типы проектов
+
+# ProjectState List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectStateListAction@name=Состояния проектов
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectStateListAction@tooltip=Состояния проектов
+
+# ProjectStageGroup List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectStageGroupListAction@name=Группы стадий проектов
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectStageGroupListAction@tooltip=Группы стадий проектов
+
+# ProjectStage List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectStageListAction@name=Стадии проектов
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectStageListAction@tooltip=Стадии проектов
+
+# Project List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectListAction@name=Список проектов
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectListAction@tooltip=Список проектов
+org.plazmaforge.bsolution.project.richclient.swing.actions.ProjectListAction@image=olmari/ext/planing.gif
+
+
+############################################################################
+# TASK Action Definition
+############################################################################
+
+# TaskType List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskTypeListAction@name=Типы задач
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskTypeListAction@tooltip=Типы задач
+
+# TaskState List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskStateListAction@name=Состояния задач
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskStateListAction@tooltip=Состояния задач
+
+# TaskRole List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskRoleListAction@name=Роли в задачах
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskRoleListAction@tooltip=Роли в задачах
+
+# TaskResult List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskResultListAction@name=Результаты задач
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskResultListAction@tooltip=Результаты задач
+
+# TaskPriority List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskPriorityListAction@name=Приоритеты задач
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskPriorityListAction@tooltip=Приоритеты задач
+
+# Task List Action
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskListAction@name=Список задач
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskListAction@tooltip=Список задач
+org.plazmaforge.bsolution.project.richclient.swing.actions.TaskListAction@image=olmari/ext/tasks.gif
+
+############################################################################
+# PROJECT List Form Definition
+############################################################################
+
+# ProjectType List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeList@title=Типы проектов
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeList@table.column-note.name=Описание
+
+
+
+# ProjectState List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateList@title=Состояния проектов
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateList@table.column-note.name=Описание
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateList@table.column-start.name=Начальное состояние
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateList@table.column-finish.name=Конечное состояние
+
+
+# ProjectStageGroup List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupList@title=Группы стадий проектов
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupList@table.column-note.name=Описание
+
+# ProjectStage List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@title=Стадии проектов
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@table.column-note.name=Описание
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@table.column-order-number.name=Порядковый номер
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@table.column-averange-duration.name=Спедняя продолж.
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageList@table.column-from-begin.name=Дней от нач.
+
+
+# Project List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectList@title=Проекты
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectList@table.column-partner.name=Партнёр
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectList@table.column-project-state.name=Состояние
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectList@table.column-start-date.name=Дата начала
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectList@table.column-close-date.name=Дата окончания
+
+
+############################################################################
+# TASK List Form Definition
+############################################################################
+
+# TaskType List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeList@title=Типы задач
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeList@table.column-note.name=Описание
+
+# TaskState List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateList@title=Состояния задач
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateList@table.column-note.name=Описание
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateList@table.column-start.name=Начальное состояние
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateList@table.column-finish.name=Конечное состояние
+
+
+# TaskRole List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleList@title=Роли в задачах
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleList@table.column-note.name=Описание
+
+# TaskResult List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultList@title=Результаты задач
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultList@table.column-name.name=Название
+
+# TaskPriority List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityList@title=Приоритеты задач
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityList@table.column-order.name=Порядковый номер
+
+# Task List Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@title=Задачи
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-code.name=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-name.name=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-task-priority.name=Приоритет
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-partner.name=Партнёр
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-start-date.name=Дата начала
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-close-date.name=Дата окончания
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskList@table.column-done-percent.name=% выполнеия
+
+
+############################################################################
+# PROJECT Edit Form Definition
+############################################################################
+
+# ProjectType Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeEdit@title=Тип проекта
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectTypeEdit@panel.label-note.text=Описание
+
+# ProjectState Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateEdit@title=Состояние проекта
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateEdit@panel.label-note.text=Описание
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateEdit@panel.label-start.text=Начальное состояние
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStateEdit@panel.label-finish.text=Конечное состояние
+
+
+# ProjectStageGroup Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupEdit@title=Группа стадий проектов
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageGroupEdit@panel.label-note.text=Описание
+
+
+# ProjectStage Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@title=Стадия проекта
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-project-stage-group.text=Группа
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-project-type.text=Тип
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-order-number.text=Порядок
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-from-begin.text=К-во дней от начала
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-averange-duration.text=Средняя продолж. (дни)
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectStageEdit@panel.label-note.text=Описание
+
+
+# Project Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@title=Проект
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.title.finance.text=Финансы
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-contract.text=Договор №
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-start-date.text=Дата начала
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-close-date.text=Дата завершения
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-actual-close-date.text=Фактическая дата завершения
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-propability.text=Вероятность
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-partner.text=Партнёр
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-project-stage.text=Стадия проекта
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-project-state.text=Состояние проекта
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-project-type.text=Тип
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-currency-rate.text=Курс
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-currency-amount.text=Сумма в валюте
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-discount-percent.text=% скидка
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-discount-amount.text=Скидка
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-amount.text=Сумма
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-tax-percent.text=% НДС
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-tax-amount.text=Сумма налога
+org.plazmaforge.bsolution.project.richclient.swing.forms.ProjectEdit@panel.label-amount-with-tax.text=Сумма с налогом
+
+
+
+############################################################################
+# TASK Edit Form Definition
+############################################################################
+
+# TaskType Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeEdit@title=Тип задачи
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskTypeEdit@panel.label-note.text=Описание
+
+# TaskState Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateEdit@title=Состояние задачи
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateEdit@panel.label-note.text=Описание
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateEdit@panel.label-start.text=Начальное состояние
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskStateEdit@panel.label-finish.text=Конечное состояние
+
+# TaskRole Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleEdit@title=Роль в задаче
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskRoleEdit@panel.label-note.text=Описание
+
+# TaskResult Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultEdit@title=Результат задачи
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskResultEdit@panel.label-task-type.text=Тип
+
+# TaskPriority Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityEdit@title=Приоритет задачи
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskPriorityEdit@panel.label-order.text=Порядок
+
+# Task Edit Form
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@title=Задача
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.title.note.text=Примечание
+
+
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-task-type.text=Тип
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-start-date-time.text=Дата начала
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-end-date-time.text=Дата завершения
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-task-priority.text=Приоритет
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-alarm-date-time.text=Напомнить
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-project.text=Проект
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-partner.text=Партнер
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-document.text=Документ
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-task-state.text=Состояние
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-done-percent.text=% Выполнения
+org.plazmaforge.bsolution.project.richclient.swing.forms.TaskEdit@panel.label-completed-date-time.text=Фактическая дата завершения
+
+
+
+
+
+

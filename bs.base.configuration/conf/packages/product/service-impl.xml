@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	
+	<!--  PRODUCT -->
+	<bean id="ERMProductService" class="org.plazmaforge.bsolution.product.server.services.ERMProductService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="ProductManagerServiceImpl" class="org.plazmaforge.bsolution.product.server.services.ProductManagerServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	
+</beans>

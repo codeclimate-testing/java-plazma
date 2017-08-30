@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!--  GENERIC -->
+	<bean id="GenericPersonItemServiceImpl" class="org.plazmaforge.bsolution.personality.server.services.GenericPersonItemServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="PersonServiceImpl" class="org.plazmaforge.bsolution.personality.server.services.PersonServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>        	
+	</bean>
+
+</beans>

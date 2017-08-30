@@ -1,0 +1,16 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ProjectStageEditForm" type="EditForm" title="@{ProjectStageEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{ProjectStageEditForm.codeLabel.text}"/><text-field property="code" width="100"/>
+				<label text="@{ProjectStageEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{ProjectStageEditForm.projectStageGroupLabel.text}"/><lookup-field property="projectStageGroup" data-type="project/ProjectStageGroup" width="200"/>
+				<label text="@{ProjectStageEditForm.projectTypeLabel.text}"/><lookup-field property="projectType" data-type="project/ProjectType" width="200"/>
+				<label text="@{ProjectStageEditForm.orderNumberLabel.text}"/><spinner-field property="orderNumber"/>
+				<label text="@{ProjectStageEditForm.fromBeginLabel.text}"/><spinner-field property="fromBegin"/>
+				<label text="@{ProjectStageEditForm.averangeDurationLabel.text}"/><spinner-field property="averangeDuration"/>
+				<label text="@{ProjectStageEditForm.descriptionLabel.text}"/><text-area property="description" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

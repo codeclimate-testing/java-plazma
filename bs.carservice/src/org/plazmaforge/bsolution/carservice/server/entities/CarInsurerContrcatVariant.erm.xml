@@ -1,0 +1,20 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerContractVariant" table="CAR_INSURER_CONTRACT_VARIANT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle"/>
+        	<attribute name="contractCode" column="CONTRACT_CODE" type="String" />
+        	<attribute name="contractDate" column="CONTRACT_DATE" type="Date" />
+        	<attribute name="variantCode" column="VARIANT_CODE" type="String" />
+        	<attribute name="variantDate" column="VARIANT_DATE" type="Date" />
+        	<reference name="insurer" column="INSURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerHeader"/>
+        	<collection name="servPriceList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerServPrice" join-attribute="contractVariant" cascade="all"/>
+        	<collection name="paintTypePriceList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPaintTypePrice" join-attribute="contractVariant" cascade="all"/>
+        	<collection name="paintTypeVolumeList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPaintTypeVolume" cascade="all"/>
+        	<collection name="consumablesPriceList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerConsumablesPrice" join-attribute="contractVariant" cascade="all"/>
+        	<collection name="paintBoxPriceList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPaintBoxPrice" join-attribute="contractVariant" cascade="all"/>
+        	<collection name="partPriceList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPartPrice" join-attribute="contractVariant" cascade="all"/>
+        	<collection name="prepareHourList" join-class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerPrepareHour" join-attribute="contractVariant" cascade="all"/>
+        </attributes>
+    </entity>
+</entity-mapping>

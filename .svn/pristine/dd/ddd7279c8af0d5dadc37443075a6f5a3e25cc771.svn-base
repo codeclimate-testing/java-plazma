@@ -1,0 +1,16 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PartnerTitle" class="org.plazmaforge.bs.partner.shared.entities.PartnerTitle" table="PARTNER" readonly="true">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="fullName" column="FULL_NAME" type="String" />
+        	<attribute name="nec" column="NEC" type="String" />
+        	<attribute name="idn" column="IDN" type="String" />
+        	<attribute name="taxDocNo" column="TAX_DOC_NO" type="String" />
+        	<attribute name="descriminator" column="DESCRIMINATOR" type="String" />
+    	</attributes>
+    </entity>
+    
+

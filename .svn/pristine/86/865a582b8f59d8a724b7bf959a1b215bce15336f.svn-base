@@ -1,0 +1,112 @@
+
+version = 1.0.3
+
+build = 2013mmdd
+build.month = MMM
+build.year = 2013
+
+
+framework.version = 1.0.3
+
+#
+# Language setting
+#
+# lang = en
+# lang = ru
+# lang = uk                
+
+lang = en
+
+	
+#
+# Codepage setting
+#
+# codepage = cp1251
+# codepage = koi-8r
+
+codepage = cp1251
+
+workspace.lib.dir = ../lib
+workspace.dist.dir = ../dist
+workspace.configuration.dir = ../bs.base.configuration
+workspace.db.dir = ../bs.base.db
+workspace.reportstorage.dir = ../bs.base.reportstorage
+workspace.target.dir = ../plazma.target
+workspace.docs.dir = ../bs.base.docs
+
+
+#
+# Database vendor setting
+#
+# db.vendor = oracle
+# db.vendor = postgresql
+# db.vendor = mysql
+# db.vendor = firebird
+# db.vendor = hsql
+
+db.vendor = hsql
+
+
+
+
+classes.dir = ${basedir}/classes
+src.dir = ${basedir}/src
+docs.dir=${basedir}/docs
+javadocs.dir=${docs.dir}/api
+build.dir = ${basedir}/build
+fonts.dir = ${basedir}/fonts
+
+   
+    
+lib.dir = ${workspace.lib.dir}
+dist.dir = ${workspace.dist.dir}
+conf.dir = ${workspace.configuration.dir}/conf
+
+# We use ui/swt as base client configuration
+ui.conf.dir = ${workspace.configuration.dir}/conf/ui/swt
+
+db.dir =  ${workspace.db.dir}
+reports.dir = ${workspace.reportstorage.dir}/reports
+target.dir = ${workspace.target.dir}
+    
+plazma.path = org/plazmaforge
+bsolution.path = ${plazma.path}/bsolution
+	
+framework.module = plazma-framework
+framework.jar = ${framework.module}-${framework.version}.jar
+framework.erm.jar = plazma-framework-erm-${framework.version}.jar
+thirdparty.jar = plazma-thirdparty.jar
+
+   	
+module = plazma-bs-base
+
+bsolution.common.jar = ${module}-common-${version}.jar
+bsolution.server.jar = ${module}-server-${version}.jar
+
+
+server.dir = ${target.dir}/plazma-server-${version}
+
+install.server.lite.dir = ${target.dir}/plazma-install-server-lite-${version}
+
+
+jdbc.location.root = <value>conf/jdbc
+jdbc.location.server = <value>${server.dir}/conf/jdbc
+jdbc.location.install = <value>$INSTALL_PATH/conf/jdbc
+
+
+#######################################################################################
+##
+## File Set
+##
+########################################################################################
+
+classpath.fileset = **/*.jar
+
+jdbc.fileset = jdbc/firebird/**, jdbc/mysql/**, jdbc/postgresql/**, jdbc/oracle/**
+xmltool.fileset = jdom*.jar, dom4j*.jar, gnujaxp.jar, xercesImpl.jar, xalan*.jar 
+logtool.fileset = log4j*.jar, commons-logging.jar
+
+report.fileset = jasperreports/jasperreports*.jar, jfree/jfreechart*.jar, jfree/jfreereport*.jar, jfree/jcommon*.jar
+server.fileset = *.jar, ${report.fileset}, ${jdbc.fileset}, spring/*.jar, springsecurity/*.jar
+
+

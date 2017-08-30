@@ -1,0 +1,144 @@
+###############################################################################
+#
+# Classpath file.
+#
+# Use only for launcher variant:
+#
+#  plazma.bat
+#  launcher.bat plazma
+#
+#  plazma.sh
+#  launcher.sh plazma
+#
+#  java -jar launcher.jar plazma
+###############################################################################
+
+# Plazma Framework
+../dist/plazma-framework-{version}.jar
+../dist/plazma-framework-erm-{version}.jar
+
+# Plazma Thirdparty
+../dist/plazma-thirdparty.jar
+
+# Plazma Rich Client
+../dist/plazma-framework-client-{version}.jar
+../dist/plazma-framework-client-swt-{version}.jar
+
+
+
+# Plazma BSsolution Common
+../dist/plazma-bs-base-common-{version}.jar
+
+# Plazma BSsolution Server (Only for Standalone)
+../dist/plazma-bs-base-server-{version}.jar
+
+# Plazma BSolution SWT Client
+../dist/plazma-bs-base-client-swt-{version}.jar
+
+
+
+# Configuration folder
+conf
+
+
+
+../lib/antlr-2.7.6.jar
+../lib/aopalliance.jar
+../lib/asm-1.5.3.jar
+../lib/asm-attrs-1.5.3.jar
+../lib/bsh-1.2b6.jar
+../lib/cglib-2.1_3.jar
+../lib/commons-beanutils-1.7.jar
+../lib/commons-collections-3.1.jar
+../lib/commons-dbcp-1.3.jar
+../lib/commons-logging.jar
+../lib/commons-pool-1.5.5.jar
+../lib/commons-digester-1.7.jar
+../lib/dom4j-1.4.jar
+../lib/backport-util-concurrent-3.0.0.jar
+../lib/ehcache-1.5.0.jar
+
+../lib/slf4j-api-1.6.1.jar
+../lib/javassist-3.12.0.GA.jar
+
+../lib/hsqldb.jar
+../lib/iText-2.1.7.jar
+../lib/jdbc2_0-stdext.jar
+../lib/jdom_1_0.jar
+../lib/jta.jar
+../lib/log4j-1.2.8.jar
+../lib/odmg-3.0.jar
+../lib/oscache-2.0.jar
+
+../lib/poi-3.6-20091214.jar
+
+../lib/spring/org.springframework.aop-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.asm-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.aspects-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.beans-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.context-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.context.support-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.core-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.expression-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.jdbc-3.0.5.RELEASE.jar
+../lib/spring/org.springframework.orm-3.0.5.RELEASE-fix.jar
+../lib/spring/org.springframework.transaction-3.0.5.RELEASE.jar
+
+../lib/springsecurity/spring-security-core-3.1.0.M2.jar
+
+../lib/xalan-2.4.0.jar
+../lib/xercesImpl.jar
+
+# JBoss Client (Only for EJB Client)
+../lib/jboss/jbossall-client.jar
+
+# JasperReports
+../lib/jasperreports/jasperreports-3.7.6-fix.jar
+../lib/jasperreports/jasperreports-fonts-3.7.6.jar
+
+# JFreeChart
+../lib/jfree/jcommon-1.0.15.jar
+../lib/jfree/jfreechart-1.0.12.jar
+
+# Nebula
+../lib/nebula/nebula_cdatetime_0.9.0.jar
+../lib/nebula/nebula_grid_ALPHA.jar
+../lib/nebula/nebula_pgroup_ALPHA.jar
+../lib/nebula/nebula_pshelf_ALPHA.jar
+
+# Eclipse
+../lib/eclipse/org.eclipse.core.commands_3.4.0.I20080509-2000.jar
+../lib/eclipse/org.eclipse.core.runtime_3.4.0.v20080512.jar
+../lib/eclipse/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar
+../lib/eclipse/org.eclipse.jface_3.4.1.M20080827-2000.jar
+../lib/eclipse/org.eclipse.osgi_3.4.2.R34x_v20080826-1230.jar
+
+../lib/eclipse/org.eclipse.swt.nl_ru_3.4.0.v20091121043401.jar
+../lib/eclipse/org.eclipse.swt.nl_uk_3.4.0.v20091121043401.jar
+../lib/eclipse/org.eclipse.jface.nl_ru_3.4.0.v20091121043401.jar
+../lib/eclipse/org.eclipse.jface.nl_uk_3.4.0.v20091121043401.jar
+
+# SWT Report Viewer
+../lib/plazma/plazma-reportviewer-1.0.6.jar
+
+# SWT lib
+../lib/swt/win32/swt.jar
+
+
+##############################################################################
+#
+# JDBC Drivers (Only for Standalone)
+#
+##############################################################################
+
+# Firebird
+../lib/jdbc/firebird/jaybird-full-2.1.6.jar
+
+# Oracle
+../lib/jdbc/oracle/ojdbc14.jar
+
+# PostgreSQL
+../lib/jdbc/postgresql/postgresql-8.0.309.jdbc3.jar
+
+# MySQL
+../lib/jdbc/mysql/mysql-connector-java-5.0.5-bin.jar

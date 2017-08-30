@@ -1,0 +1,10 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="DepartmentEditForm" type="EditForm" title="@{DepartmentListForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{DepartmentEditForm.codeLabel.text}"/><text-field property="code" width="100"/>
+				<label text="@{DepartmentEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

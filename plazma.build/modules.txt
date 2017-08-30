@@ -1,0 +1,32 @@
+
+		Plazma Platform
+============================================================================
+		
+framework - Plazma Framework
+framework.erm - Plazma Framework ERM
+framework.client - Plazma Framework Client
+framework.client.swing - Plazma Framework Client for Swing
+framework.client.swt - Plazma Framework Client for SWT
+
+
+
+
+		Plazma BSolution
+============================================================================		
+		
+bs.base.configuration - BSolution Configuration (configuration XML files)
+bs.base.db - BSolution DB (Data, SQL scripts)
+bs.base.reportstorage - BSolution Report Storage (JasperReports)
+
+bs.base - BSolution Base (common, server)
+bs.base.client.swing - BSolution Client for Swing
+bs.base.client.swt - BSolution Client for SWT
+
+
+
+
+		Common
+============================================================================
+lib - Common jar files
+dist - Distribution files (jar)
+plazma.build - Common build.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!--  PAYROLL -->
+	<bean id="ERMEmployeeResultService" class="org.plazmaforge.bsolution.payroll.server.services.ERMEmployeeResultService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="ERMEmployeePayrollService" class="org.plazmaforge.bsolution.payroll.server.services.ERMEmployeePayrollService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="ERMPayrollCalculateService" class="org.plazmaforge.bsolution.payroll.server.services.ERMPayrollCalculateService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+</beans>

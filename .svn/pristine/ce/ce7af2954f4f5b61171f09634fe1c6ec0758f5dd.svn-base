@@ -1,0 +1,14 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="DepartmentListForm" type="ListForm" title="@{DepartmentListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{DepartmentListForm.codeColumn.text}" property="code" data-type="String" width="100"/>
+						<column text="@{DepartmentListForm.nameColumn.text}" property="name" data-type="String" width="300"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

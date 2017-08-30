@@ -1,0 +1,9 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariantPart" table="CAR_DETAIL_VARIANT_PART">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="carDetailVariant" column="CAR_DETAIL_VARIANT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarDetailVariant"  required="true" />
+			<reference name="carPart" column="CAR_PART_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPart"  required="true" />
+		</attributes>
+    </entity>
+</entity-mapping>

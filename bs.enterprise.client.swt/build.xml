@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-enterprise-client-swt" default="create-jar">
+
+	<property file="build.properties"/>
+
+	<target name="create-jar" description="Create BSEnterprise Client jar file">
+		<mkdir dir="${dist.dir}"/>
+		<jar destfile="${dist.dir}/${module.jar}" basedir="${classes.dir}" includes="**">
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0" />
+				<attribute name="Plazma-Version" value="${version}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="create-jar-all" description="Create BSEnterprise Client jar files" depends="create-jar" />
+
+	<target name="generate-ui" description="Generate UI">
+		<taskdef name="uigenerator" classname="org.plazmaforge.framework.uwt.ant.UIGeneratorTask" classpath="${dist.dir}/plazma-framework-uwt-1.0.3.jar;${dist.dir}/plazma-framework-core-1.0.3.jar;${lib.dir}/jdom_1_0.jar"/>
+		<uigenerator srcdir="${src.dir}" gendir="${gen.dir}" usefilepackage="true" filesuffix="_Gen"/>
+	</target>
+
+
+
+
+	<target name="clean-pack-standalone-demo" description="Clean installation demo pack">
+		<delete dir="${standalone.demo.dir}"/>
+	</target>
+
+	<target name="create-pack-install-standalone-demo" description="Create installation demo pack" depends = "clean-pack-standalone-demo">
+
+		<!-- Create new directories -->
+		<mkdir dir="${standalone.demo.dir}"/>
+		<mkdir dir="${standalone.demo.dir}/conf"/>
+		<mkdir dir="${standalone.demo.dir}/db"/>
+		<mkdir dir="${standalone.demo.dir}/db/hsql"/>
+		<mkdir dir="${standalone.demo.dir}/db/datastorage"/>
+		<mkdir dir="${standalone.demo.dir}/dist"/>
+		<mkdir dir="${standalone.demo.dir}/docs"/>
+		<mkdir dir="${standalone.demo.dir}/fonts"/>
+		<mkdir dir="${standalone.demo.dir}/lib"/>
+		<mkdir dir="${standalone.demo.dir}/logs"/>
+		<mkdir dir="${standalone.demo.dir}/reports"/>
+
+
+		<!-- Copy root files -->
+		<copy todir="${standalone.demo.dir}">
+			<fileset dir="${basedir}">
+				<include name="install.txt"/>
+				<include name="install_ru.txt" />
+				<include name="launcher.bat"/>
+				<include name="launcher.jar"/>
+				<include name="launcher.sh"/>
+				<include name="license.txt"/>
+				<include name="license_ru.txt"/>
+				<include name="plazma.bat"/>
+				<include name="plazma.classpath"/>
+				<include name="plazma.conf"/>
+				<include name="readme.txt"/>
+				<include name="readme_ru.txt"/>
+			</fileset>
+		</copy>
+
+		<!-- Copy configuration: root -->
+		<copy todir="${standalone.demo.dir}/conf">
+			<fileset dir="${conf.dir}">
+				<include name="*.*" />
+			</fileset>
+		</copy>
+
+		<!-- Copy configuration: standalone -->
+		<copy todir="${standalone.demo.dir}/conf" overwrite="true">
+			<fileset dir="${conf.dir}/standalone">
+				<include name="*.*" />
+			</fileset>
+		</copy>
+
+		<!-- Copy configuration: packages -->
+		<copy todir="${standalone.demo.dir}/conf/packages">
+			<fileset dir="${conf.dir}/packages">
+				<include name="**" />
+			</fileset>
+		</copy>
+
+
+
+		<!-- Copy db -->
+		<copy todir="${standalone.demo.dir}/db/hsql">
+			<fileset dir="${db.dir}/hsql">
+				<include name="plazma_demo*"/>
+			</fileset>
+		</copy>
+
+		<!-- Copy Data Storage -->
+		<!--
+		<copy todir="${standalone.demo.dir}/db/datastorage">
+			<fileset dir="${db.dir}/datastorage">
+				<include name="**"/>
+			</fileset>
+		</copy>
+		-->
+
+
+		<!-- Copy dist -->
+		<copy todir="${standalone.demo.dir}/dist">
+			<fileset dir="${dist.dir}">
+				<include name="${framework.core.jar}"/>
+				<include name="${framework.sql.jar}"/>
+				<include name="${framework.erm.jar}"/>
+				<include name="${framework.ext.jar}"/>
+				<include name="${framework.config.jar}"/>
+				<include name="${framework.uwt.jar}"/>
+				<include name="${framework.uwt.swt.jar}"/>
+
+				<include name="${bs.shared.jar}"/>
+				<include name="${bs.client.jar}"/>
+				<include name="${bs.server.jar}"/>
+
+			</fileset>
+		</copy>
+
+
+		<!-- Copy lib -->
+		<copy todir="${standalone.demo.dir}/lib">
+			<fileset dir="${lib.dir}" includes="${standalone.demo.fileset}"/>
+		</copy>
+
+
+		<!-- Copy Win32 files -->
+		<copy todir="${standalone.demo.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<!-- <include name="swt/win32/**" /> -->
+				<include name="swt/win32-x86_64/**"/>
+			</fileset>
+		</copy>
+
+		<!-- Copy reports -->
+		<!--
+		<copy todir="${standalone.demo.dir}/reports">
+			<fileset dir="${reports.dir}">
+				<include name="**"/>
+			</fileset>
+		</copy>
+		-->
+
+
+
+		<concat destfile="${standalone.demo.dir}/plazma.properties" fixlastline="yes">
+	plazma.platform.demo = true
+	plazma.platform.autologin = true
+	    	    <header filtering="no" trimleading="yes">
+	    	       		#
+	    	       		# Plazma properties (Demo Standalone)
+	    	       		#
+	    	    </header>
+		</concat>
+
+		<!-- Replace plazma.classpath jar -->
+		<replace file="${standalone.demo.dir}/plazma.classpath" token="../" value = ""/>
+
+		<!-- Replace launcher -->
+		<replace file="${standalone.demo.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+		<replace file="${standalone.demo.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+
+		<!-- Replace system-config.xml -->
+		<replace file="${standalone.demo.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.reportstorage/" value = "${root.dir}/"/>
+		<replace file="${standalone.demo.dir}/conf/system-config.xml" token="../bs.base.reportstorage/" value = "${root.dir}/"/>
+
+
+		<replace file="${standalone.demo.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.db/" value = "${root.dir}/db/"/>
+		<replace file="${standalone.demo.dir}/conf/system-config.xml" token="../bs.base.db/" value = "${root.dir}/db/"/>
+
+
+
+
+		<!-- Replace application-context-ds.xml -->
+		<replace file="${standalone.demo.dir}/conf/application-context-ds.xml" token="../bs.base.configuration/" value = ""/>
+
+		<!-- Replace rmi-context.xml -->
+		<!--
+		<replace file="${standalone.demo.dir}/conf/rmi-context.xml" token="../bs.base.configuration/" value = ""/>
+		-->
+
+		<!-- Set version and build -->
+		<replace file="${standalone.demo.dir}/readme.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+		<replace file="${standalone.demo.dir}/readme_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+		<replace file="${standalone.demo.dir}/readme.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+		<replace file="${standalone.demo.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+		<replace file="${standalone.demo.dir}/readme.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+		<replace file="${standalone.demo.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+
+		<replace file="${standalone.demo.dir}/install.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+		<replace file="${standalone.demo.dir}/install_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+
+		<replace file="${standalone.demo.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+
+
+
+	</target>
+</project>
+
+

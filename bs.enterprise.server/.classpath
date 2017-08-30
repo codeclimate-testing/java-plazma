@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.erm"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.ext"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.sql"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.context.support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.transaction-3.0.5.RELEASE.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bs.enterprise.shared"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

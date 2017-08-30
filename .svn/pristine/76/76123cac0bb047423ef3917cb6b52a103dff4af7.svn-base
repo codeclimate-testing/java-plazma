@@ -1,0 +1,156 @@
+
+<html>
+<title>Eclipse IDE</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Create a project</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Create new project</h3>
+
+To create new project you have to select menu:
+<br>File -> New -> Project...
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/new-project-select-wizard.png"/></td>
+ </tr>
+</table>
+
+<p>Then select <b>Java Project</b> and press <b>Next</b>.
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/new-project-wizard.png"/></td>
+ </tr>
+</table>
+
+<p>Next you have to input name of the project and press <b>Finish</b>
+
+
+<br><br><br>
+   <h3 align="center">Create a project by import</h3>
+
+If you download source code as zip archive, 
+you have to unzip archive and import each project to the Eclipse IDE.
+
+<p>To import you have to select menu File -> Import...
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/import-wizard.png"/></td>
+ </tr>
+</table>
+
+<p>Then you have to select type of import <b>Existing Projects into Workspace</b>
+ and press <b>Next</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/import-project.png"/></td>
+ </tr>
+</table>
+<p>Now you have to input an import folder and press <b>Finish</b>.
+If you check <b>Copy projects into workspace</b> project will be copy to <b>Workspace</b>
+
+
+<br><br><br>
+   <h3 align="center">Create new project from SVN</h3>
+
+First you have to create the connection to SVN.
+
+Select menu <b>Windows -> Open Perspective</b> and open perspective <b>SVN Repository Explorirng</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/open-perspective.png"/></td>
+ </tr>
+</table>
+
+<p>Tnen you have to select view <b>SVN Repositories</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/svn-repositories.png"/></td>
+ </tr>
+</table>
+
+
+<p>Now you can create new repository: <b>Add SVN Reporsitory</b>
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/add-svn-repository.png"/></td>
+ </tr>
+</table>
+
+
+<p>Input SVN repository setting and press <b>Finish</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-svn-repository.png"/></td>
+ </tr>
+</table>
+
+
+The repository is ready. You can see the project list in folder <b>trunk</b>.
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-check-out.png"/></td>
+ </tr>
+</table>
+
+<p>Then you have to execute command <b>Check Out</b>
+ 
+for each project. 
+
+<p>Command <b>Check Out</b> loads a project to workspace.
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-bsolution-check-out-as.png"/></td>
+ </tr>
+</table>
+
+<p>To work with projects you can select perspective <b>Java</b>
+<p>To projects navigation you can use views <b>Navigator</b> or <b>Package Explorer</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/plazma-navigator.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

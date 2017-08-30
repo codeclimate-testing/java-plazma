@@ -1,0 +1,101 @@
+
+version = 1.0.3
+
+build = 2013mmdd
+build.month = MMM
+build.year = 2013
+
+framework.version = 1.0.3
+
+richclient.version = 1.0.3
+
+bsolution.version = 1.0.3
+
+
+#
+# Codepage setting
+#
+# codepage = cp1251
+# codepage = koi-8r
+
+codepage = cp1251
+
+workspace.lib.dir = ../lib
+workspace.dist.dir = ../dist
+workspace.configuration.dir = ../bs.base.configuration
+workspace.db.dir = ../bs.base.db
+workspace.reportstorage.dir = ../bs.base.reportstorage
+workspace.target.dir = ../plazma.target
+workspace.docs.dir = ../bs.base.docs
+
+
+classes.dir = ${basedir}/classes
+src.dir = ${basedir}/src
+docs.dir=${basedir}/docs
+javadocs.dir=${docs.dir}/api
+build.dir = ${basedir}/build
+fonts.dir = ${basedir}/fonts
+    
+    
+lib.dir = ${workspace.lib.dir}
+dist.dir = ${workspace.dist.dir}
+conf.dir = ${workspace.configuration.dir}/conf
+db.dir =  ${workspace.db.dir}
+reports.dir = ${workspace.reportstorage.dir}/reports
+target.dir = ${workspace.target.dir}
+    
+plazma.path = org/plazmaforge
+bsolution.path = ${plazma.path}/bsolution
+resources.path = richclient/swing/resources
+	
+
+framework.module = plazma-framework
+richclient.module = plazma-richclient
+richclient.swing.module = plazma-richclient-swing
+
+bsolution.common.module = plazma-bsolution-common
+bsolution.server.module = plazma-bsolution-server
+
+framework.jar = ${framework.module}-${framework.version}.jar
+richclient.jar = ${richclient.module}-${richclient.version}.jar
+richclient.swing.jar = ${richclient.swing.module}-${richclient.version}.jar
+
+bsolution.common.jar = ${bsolution.common.module}-${bsolution.version}.jar
+bsolution.server.jar = ${bsolution.server.module}-${bsolution.version}.jar
+    	
+module = plazma-bs-base-richclient-swing
+
+
+bsolution.common.jar = ${module}-common-${version}.jar
+bsolution.server.jar = ${module}-server-${version}.jar
+bsolution.client.gui.jar = ${module}-${version}.jar
+
+client.dir = ${target.dir}/plazma-client-gui-${version}
+
+standalone.dir = ${target.dir}/plazma-install-standalone-gui-${version}
+standalone.demo.dir = ${target.dir}/plazma-install-standalone-gui-demo-${version}
+
+client.lite.dir = ${target.dir}/plazma-install-client-gui-lite-${version}
+
+
+
+#######################################################################################
+##
+## File Set
+##
+########################################################################################
+
+classpath.fileset = **/*.jar
+
+jdbc.fileset = jdbc/firebird/**, jdbc/mysql/**, jdbc/postgresql/**, jdbc/oracle/**
+xmltool.fileset = jdom*.jar, dom4j*.jar, gnujaxp.jar, xercesImpl.jar, xalan*.jar 
+logtool.fileset = log4j*.jar, commons-logging.jar
+
+report.fileset = jasperreports/jasperreports*.jar, jfree/jfreechart*.jar, jfree/pixie*.jar, jfree/jcommon*.jar
+lookandfeel.fileset = lookandfeel/**
+
+client.fileset = ${xmltool.fileset}, ${logtool.fileset}, ${lookandfeel.fileset}, ${report.fileset}, odmg*.jar, hibernate3-fix.jar
+server.fileset = *.jar, ${report.fileset}
+standalone.fileset = *.jar, ${report.fileset}, ${lookandfeel.fileset}, ${jdbc.fileset}
+standalone.demo.fileset = *.jar, ${report.fileset}, ${lookandfeel.fileset}
+

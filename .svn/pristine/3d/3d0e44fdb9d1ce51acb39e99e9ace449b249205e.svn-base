@@ -1,0 +1,10 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="AddressTypeEditForm" type="EditForm" title="@{AddressTypeEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{AddressTypeEditForm.codeLabel.text}"/><text-field property="code"/>
+				<label text="@{AddressTypeEditForm.nameLabel.text}"/><text-field property="name"/>
+			</children>
+		</content>
+	</form>
+</ui>

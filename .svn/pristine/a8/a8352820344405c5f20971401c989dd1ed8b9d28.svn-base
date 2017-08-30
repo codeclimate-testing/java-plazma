@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd">
+<enterprise-beans>
+<session>
+<display-name>StatefulService</display-name>
+<ejb-name>StatefulService</ejb-name>
+<home>org.plazmaforge.framework.platform.service.impl.ejb.bean.StatefulServiceHome</home>
+<remote>org.plazmaforge.framework.platform.service.impl.ejb.bean.StatefulService</remote>
+<ejb-class>org.plazmaforge.framework.platform.service.impl.ejb.bean.StatefulServiceBean</ejb-class>
+<session-type>Stateful</session-type>
+<transaction-type>Bean</transaction-type>
+<security-identity>
+<use-caller-identity/>
+</security-identity>
+</session>
+<session>
+<display-name>StatelessService</display-name>
+<ejb-name>StatelessService</ejb-name>
+<home>org.plazmaforge.framework.platform.service.impl.ejb.bean.StatelessServiceHome</home>
+<remote>org.plazmaforge.framework.platform.service.impl.ejb.bean.StatelessService</remote>
+<ejb-class>org.plazmaforge.framework.platform.service.impl.ejb.bean.StatelessServiceBean</ejb-class>
+<session-type>Stateless</session-type>
+<transaction-type>Bean</transaction-type>
+<security-identity>
+<use-caller-identity/>
+</security-identity>
+</session>
+</enterprise-beans>
+</ejb-jar>

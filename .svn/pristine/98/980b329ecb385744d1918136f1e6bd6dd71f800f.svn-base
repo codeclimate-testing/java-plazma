@@ -1,0 +1,14 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PersonMilitary" class="org.plazmaforge.bsolution.personality.common.beans.PersonMilitary" table="PERSON_MILITARY" lazy="true">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="militaryRegistration" column="MILITARY_REGISTRATION" type="String" />
+        	<attribute name="specialRecord" column="SPECIAL_RECORD" type="String" />
+        	<attribute name="validStatusId" column="VALID_STATUS" type="Integer" />
+        	<reference name="militaryRank" column="MILITARY_RANK_ID" class="org.plazmaforge.bsolution.personality.common.beans.MilitaryRank" />
+        	<reference name="militarySpeciality" column="MILITARY_SPECIALITY_ID" class="org.plazmaforge.bsolution.personality.common.beans.MilitarySpeciality" />
+        	<reference name="militaryStatus" column="MILITARY_STATUS_ID" class="org.plazmaforge.bsolution.personality.common.beans.MilitaryStatus" />
+   			<reference name="person" class="org.plazmaforge.bsolution.personality.common.beans.Person" column="PERSON_ID" unique="true" required="true"/>
+   		</attributes>
+    </entity>
+

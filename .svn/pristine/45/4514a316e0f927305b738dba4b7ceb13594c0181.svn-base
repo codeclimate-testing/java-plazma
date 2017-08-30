@@ -1,0 +1,37 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Department" class="org.plazmaforge.bs.organization.shared.entities.Department" table="DEPARTMENT">
+	<!--
+       	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.organization.common.services.GenericStructurableService</property>
+    	</config>
+	-->
+    	<attributes>
+        	<key name="id" column="ID" type="Integer">
+        		<generator type="sequence">
+        			<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+        		</generator>
+        	</key>
+	        <attribute name="code" column="CODE" type="String"/>
+    	    <attribute name="name" column="NAME" type="String"  required="true"/>
+    	    <attribute name="parentId" column="PARENT_ID" type="Integer"/>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bs.organization.shared.entities.OrganizationTitle" required="true"/>
+    	</attributes>
+    	<triggers>
+    		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    	</triggers>	
+    </entity>
+

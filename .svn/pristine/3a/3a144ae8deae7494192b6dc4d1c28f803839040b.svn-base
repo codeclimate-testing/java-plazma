@@ -1,0 +1,12 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Goods" class="org.plazmaforge.bsolution.goods.common.beans.Goods" table="GOODS" extends-class="org.plazmaforge.bsolution.product.common.beans.Product">
+    	<aliases>
+    		<alias name="goodsTypeName" attribute="goodsType.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer"/>
+        	<reference name="goodsType" column="GOODS_TYPE_ID" class="org.plazmaforge.bsolution.goods.common.beans.GoodsType" required="true" />
+        	<reference name="country" column="COUNTRY_ID" class="org.plazmaforge.bsolution.base.common.beans.Country" />
+    	</attributes>
+    </joined-entity>
+

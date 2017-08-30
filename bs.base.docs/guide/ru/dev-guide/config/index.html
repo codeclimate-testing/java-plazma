@@ -1,0 +1,608 @@
+
+<html>
+<title>Конфигурация системы</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Конфигурация системы</h2>
+   <hr>
+   <br><br>
+
+   <p>Полная конфигурация системы состоит из различных частей:
+
+<br><br>
+
+   <table cellpadding="5">
+
+     <tr>
+       <td><b>Название</b></td>
+       <td><b>XML файл</b></td>  
+       <td><b>Таблица</b></td>  
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td><a href="#application">Application</a></td>
+       <td>application.xml</td>  
+       <td align="center">-</td>  
+       <td>Свойства приложения</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#system">System</a></td>
+       <td>system-config.xml</td> 
+       <td align="center">-</td>   
+       <td>Конфигурация системы</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#datasource">Data Source</a></td>
+       <td>application-context-ds.xml</td> 
+       <td align="center">-</td>   
+       <td>Конфигурация <b>Data Source</b></td>  
+     </tr>
+
+     <tr>
+       <td><a href="#jdbc">JDBC</a></td>
+       <td>jdbc.properties</td> 
+       <td align="center">-</td>   
+       <td>Свойства <b>JDBC</b> подключения</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#rmi">RMI</a></td>
+       <td>application-context-rmi.xml (Сервер)<br>rmi.properties (Клиент)</td> 
+       <td align="center">-</td>   
+       <td>Свойства <b>RMI</b> подключения</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#entitites">Entitites</a></td>
+       <td align="center">-</td>  
+       <td>system_entity</td>  
+       <td>Конфигурация сущностей</td>  
+     </tr>
+
+
+     <tr>
+       <td><a href="#erm">Plazma ERM</a></td>
+       <td>erm.properties</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация <b>Plazma ERM</b></td>  
+     </tr>
+
+     <tr>
+       <td><a href="#services">Services</a></td>
+       <td>application-context.xml<br>packages/&lt;имя пакета&gt;/service.xml<br>packages/&lt;имя пакета&gt;/service-impl.xml<br></td>  
+       <td align="center">-</td>    
+       <td>Конфигурация <b>Spring</b> сервисов</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#forms">Forms</a></td>
+       <td>form-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация форм</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#reports">Reports</a></td>
+       <td>report-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация отчётов</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#acceptors">Acceptors</a></td>
+       <td>acceptor-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация аксепторов для отчётов</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#actions">Actions</a></td>
+       <td>action-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация действий</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#menubar">MenuBar</a></td>
+       <td>menubar-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация меню</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#toolbar">ToolBar</a></td>
+       <td>toolbar-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация панели инструметов</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#interface">Interface</a></td>
+       <td>interface-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация интерфейса пользователя</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#associations">Associations</a></td>
+       <td>association-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация ассоциаций</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#packages">Packages</a></td>
+       <td>package-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Конфигурация пакетов</td>  
+     </tr>
+
+   </table>
+
+   <br><br>
+
+   Конфигурация каждой части может быть представлена как в виде файла так и таблицы
+   в базе данных. Это зависит от конкретной реализации.<br>
+   
+   Рассмотрим элементы конфигурации детальней.<br><br><br><br>
+
+
+   <a name="application"/>
+   <p><b>Application</b>
+   <p>Свойста приложения представлены в файле <b>application.xml</b><br>
+   Например:
+   
+   <pre><code>
+&lt;properties>
+  &lt;locale&gt;ru_RU&lt;/locale&gt; &lt;!-- локаль --&gt;
+  &lt;application-name&gt;Plazma ERP+CRM&lt;/application-name&gt; &lt;!-- имя приложнеия --&gt;
+  &lt;application-manager&gt;org.plazmaforge.bsolution.base.client.SWTClientApplicationManager&lt;/application-manager&gt; &lt;!-- менеджер приложения --&gt;
+  &lt;is-external-config&gt;true&lt;/is-external-config&gt; &lt;!-- true - если используются внешние файлы конфигурации --&gt;
+&lt;/properties&gt;
+   </code></pre>
+   В данном случае сконфигурировано клиент приложение (SWT), так как используется <b>org.plazmaforge.bsolution.base.client.SWTClientApplicationManager</b>.
+   Менеджер отвечает за инициализацию приложения во время загрузки.
+   Для сервера будет использован другой менеджер - <b>org.plazmaforge.bsolution.base.server.ServerApplicationManager</b><br><br><br><br>
+   
+   <a name="system"/>
+   <p><b>System</b>
+   <p>Конфигурация системы представлена в файле <b>system-config.xml</b> <a href="../dtds/system-config.dtd.txt">(DTD)</a><br>
+   Например:<br>  
+   
+   <pre><code>   
+&lt;system-config&gt;
+
+    &lt;!-- 
+        Конфигурирование модульных и графических компонент
+    --&gt;       
+    
+    &lt;configurer name="PackageConfigurer" type="XMLPackageConfigurer"&gt;&lt;/configurer&gt;  &lt;!-- конфигуратор пакетов --&gt;            
+    &lt;configurer name="ActionConfigurer" type="XMLActionConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор действий в системе --&gt;    
+    &lt;configurer name="InterfaceConfigurer" type="XMLInterfaceConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор интерфейсов пользователя --&gt;
+    &lt;configurer name="MenuBarConfigurer" type="XMLMenuBarConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор меню --&gt;   
+    &lt;configurer name="ToolBarConfigurer" type="XMLToolBarConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор панели инструментов --&gt;
+    &lt;configurer name="FormConfigurer" type="XMLFormConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор форм --&gt;       
+
+    &lt;configurer name="AssociationConfigurer" type="XMLAssociationConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор ассоциаций --&gt;           
+    
+
+    &lt;!-- 
+        Конфигурирование отчётов
+    --&gt;
+    &lt;configurer name="ReportConfigurer" type="XMLReportConfigurer"&gt;&lt;/configurer&gt;  &lt;!-- конфигуратор отчётов --&gt;  
+    &lt;configurer name="AcceptorConfigurer" type="XMLAcceptorConfigurer"&gt;&lt;/configurer&gt; &lt;!-- конфигуратор акцепторов для отчётов --&gt; 
+               
+    
+    &lt;!-- 
+        Свойства системы
+    --&gt;
+    &lt;system-properties&gt;
+        &lt;property name="javax.xml.transform.TransformerFactory"&gt;org.apache.xalan.processor.TransformerFactoryImpl&lt;/property&gt;
+        &lt;property name="report.engine.class"&gt;org.plazmaforge.framework.report.engine.jasperreports.JasperReportsEngine&lt;/property&gt; &lt;!-- подключение репортинговой системы --&gt;
+    &lt;/system-properties&gt;
+
+
+    &lt;!-- 
+        Свойства платформы
+    --&gt;
+    &lt;platform-properties&gt;
+    
+        &lt;property name="config.loader.class"&gt;org.plazmaforge.bsolution.base.EnterpriseConfigLoader&lt;/property&gt;
+        &lt;property name="period.creator.class"&gt;org.plazmaforge.bsolution.base.EnterprisePeriodCreator&lt;/property&gt;
+
+        &lt;!-- 
+            Конфигурирование хранилища отчётов
+        --&gt;
+        &lt;property name="report.storage.path"&gt;${root.dir}/reports&lt;/property&gt;
+         
+        &lt;!-- 
+            Конфигурирование Service Locator'а
+        --&gt; 
+        
+        &lt;!-- RMIServiceLocator (Lite Server) --&gt;
+        &lt;!--
+        &lt;property name="service.locator.class"&gt;org.plazmaforge.framework.platform.service.impl.rmi.RMIServiceLocator&lt;/property&gt;
+        --&gt; 
+        
+    &lt;/platform-properties&gt;
+
+
+    &lt;property-stores&gt;
+
+        &lt;!-- Stores example --&gt;
+        &lt;!--
+        &lt;store name="storename"&gt;
+            &lt;property name="prop1"&gt;value1&lt;/property&gt;                
+            &lt;property name="prop2"&gt;value2&lt;/property&gt;                
+        &lt;/store&gt;
+        --&gt;
+        
+
+    &lt;/property-stores&gt;
+
+ &lt;/system-config&gt;
+   </code></pre>
+   Остановимся на некоторых моментах.<br><br>
+   <b>Что такое конфигуратор?</b><br>
+   Это компонент, который конфигурирует определённую часть системы. На данный момент в основном используются XML конфигураторы.
+   Они считывают данные из XML файлов, но возможна реализация для других форматов файлов, баз данных, хранилищь данных и т.д. <br><br>
+
+   <b>Что такое Service Locator?</b><br>
+   Это компонент, который отвечает за поиск сервисов в системе по определённому имени. 
+   По умолчанию установлен org.plazmaforge.framework.platform.service.impl.spring.SpringServiceLocator<br><br>
+
+   <b>Что такое хранилище отчётов?</b><br> Это папка в файловой системе, где хранятся отчёты. <br><br><br><br>
+
+
+
+   <a name="datasource"/>   
+   <p><b>Data Source</b>
+   <p>Настройка источника данных (Data Source) производится в файле <b>application-context-ds.xml</b> <a href="../dtds/spring-beans.dtd.txt">(DTD)</a>.<br>
+
+   <br><br><br><br>
+
+
+   
+   <a name="jdbc"/>   
+   <p><b>JDBC</b>
+   <p>Настройка JDBC подключения к базе данных<br>
+   Например:
+   <p>
+ <code>
+ # Установка свойств подключения к базе данных Firebird <br>
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver<br>
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.gdb<br>
+ jdbc.username=sysdba<br>
+ jdbc.password=masterkey<br>
+
+ 
+ </code><br><br><br><br>
+   
+   <a name="rmi"/>
+   <p><b>RMI</b>
+   <p>Настройка подключения к серверу приложения по RMI протоколу.<br>
+ <p>Например:
+
+<code><pre>
+rmi.host = localhost
+rmi.port = 2005
+</pre></code><br><br><br>
+
+   <a name="entitites"/>
+   <b>Entitites</b><br>
+   <p>Метаинформация о сущностях (персистенс объектах) в системе хранится в таблеце <b>SYSTEM_ENTITY</b> базы данных.<br>
+   Основными полями таблицы являются:
+   <ul>
+ <li>ID - ключ
+ <li>CODE - код сущности
+ <li>ENTITY_TYPE_ID - тип сущности (справочник, документ и т.д.)
+ <li>NAME - имя сущности
+ <li>ENTITY_PACKAGE - пакет (Java package, где находится соответствующий Java класс) 
+   </ul>
+ <b>Зачем нужна таблица SYSTEM_ENTITY ?</b><br>
+ Она выполняет две важные функции:
+   <ul>
+ <li>Предоставление информации о системе
+ <li>Построение ассоциаций в системе
+   </ul>
+ 
+ Подкючившись к базе данных системы и выполнив простой запрос<br>
+ <pre><code>SELECT * FROM system_entity</code></pre>      
+ мы получаем много полезной информации о сущностях системы. Это позволяет нам быстро строить SQL запросы.<br>
+ В любом месте программы, зная лишь код сущности, мы можем быстро построить ассоциацию элементов данной сущности.<br>
+ Например:
+
+ <p>Класс Country.<br>
+ Для данного класса существует несколько элементов (классов) другого типа, которые корреспондируют с этой сущностью.<br><br>
+
+<ul>
+ <li>CountryService - Сервис для Country
+ <li>CountryServiceImpl - Реализация (имплементация) сервиса для Country
+ <li>CoutryListForm - Форма список для Country
+ <li>CountryEditForm - Форма для редактирования Country
+</ul>
+ 
+Ассоциации упрощают процесс программирования, когда необходимо манипулировать классами корреспондирующими с одной и той же сущностью.<br>
+Детальнее см. <a href="#associations">ассоциации</a>.<br><br><br><br>
+    
+   <a name="erm"/>  
+   <p><b>Plazma ERM (ORM)</b><br>
+   <p>В системе используется технология <b>Plazma ERM</b>, 
+   позволяющая абстрагироваться от конкретной базы данных и упростить процесс разработки
+   <b>DAO (Data Access Object)</b> слоя, путём использования маппинга между объектами базы данных и <b>Java</b> объектами.<br>
+   Настройка <b>Plazma ERM</b> производится в файле <b>erm.properties</b> <!--<a href="../dtds/spring-beans.dtd.txt">(DTD)</a>-->. <!--Рассмотрим фрагмент файла:-->
+<pre></pre>
+Маппинг объектов конфигурируется в <b>*.erm.xml</b> <!--<a href="../dtds/entity-mapping.dtd.txt">(DTD)</a>--> файлах. 
+В основном, в одном файле представлен один объект. Например:
+<pre>
+&lt;!-- org/plazmaforge/bsolution/base/server/entities/Country.erm.xml --&gt;
+
+&lt;entity-mapping&gt;
+    &lt;entity class="org.plazmaforge.bsolution.base.common.beans.Country" table="COUNTRY"&gt;
+        &lt;key name="id" column="ID" type="Integer" generator-type="increment"/&gt;
+        &lt;attribute name="code" column="COUNTRY_CODE" type="String" /&gt;
+        &lt;attribute name="name" column="NAME" type="String"  reqired="true" /&gt;
+    &lt;/entity&gt;
+&lt;/entity-mapping&gt;
+</pre>
+
+Здесь устанавливается взаимоотношение между классом <b>Country</b> и таблицей <b>COUNTRY</b>. Атрибуты класса <b>id</b>, <b>code</b>, <b>name</b> сопоставляются 
+c полям таблицы <b>ID</b>, <b>CODE</b>, <b>NAME</b> соответственно. Это освобождает разработчика от написания кучи запросов <b>(INSERT, UPDATE, DELETE, SELECT)</b>.
+Тем не менее, данная технология позволяет выполнять любые SQL запросы, если в этом есть необходимость.<br><br><br><br>
+
+   <a name="services"/> 
+   <p><b>Services</b><br>
+   <p>Сервисы являются важной частью системы. Они манипулируют сущностями (персистенс объектами). Сервисы отвечают за <b>загрузку</b>, <b>добавление</b>, <b>изменение</b>, <b>удаление</b>
+   данных. Также сервисы позволяют выполнять другие действия в системе. Практичски каждой сущности соответсвует свой сервис. 
+   Каждому сервису - своя реализация.<br><br>
+   Например:<br><br>
+   <b>Country -> CountyService -> CountryServiceImpl</b><br><br>
+   
+
+   Общие для всех пакетов сервисы конфигурируются в файле <b>application-context.xml</b> <a href="../dtds/spring-beans.dtd.txt">(DTD)</a><br><br>
+   Для каждого пакета сервисы конфигурируются отдельно в в файлах <b>packages/&lt;имя пакета&gt;/service-impl.xml</b>, <b>packages/&lt;имя пакета&gt;/service.xml</b> <a href="../dtds/spring-beans.dtd.txt">(DTD)</a><br><br>
+   Например:
+
+<pre>   
+&lt;!-- 
+   конфигурирование реализации (имплементации) Country сервиса
+   packages/base/service-impl.xml 
+--&gt;
+&lt;bean id="CountryServiceImpl" class="org.plazmaforge.bsolution.base.server.services.CountryServiceImpl" lazy-init="true"&gt;
+	&lt;property name="sessionFactory"&gt;&lt;ref local="sessionFactory"/&gt;&lt;/property&gt; &lt;!-- установка фабрики сессии (взаимодействует с dataSource)--&gt;
+&lt;/bean&gt;
+	
+....	
+	
+&lt;!-- 
+    конфигурирование Country сервиса
+    packages/base/service.xml 
+--&gt;	
+&lt;bean id="CountryService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"&gt;
+	&lt;property name="transactionManager"&gt;&lt;ref local="transactionManager"/&gt;&lt;/property&gt; &lt;!-- установка менеджера транзакций --&gt;
+	&lt;property name="target"&gt;&lt;ref bean="CountryServiceImpl"/&gt;&lt;/property&gt; &lt;!-- установка реализации сервиса --&gt;
+	&lt;property name="transactionAttributes"&gt; &lt;!-- установка атрибутов транзакции --&gt;
+		&lt;props&gt;
+			&lt;prop key="*"&gt;PROPAGATION_REQUIRED&lt;/prop&gt;
+		&lt;/props&gt;
+	&lt;/property&gt;
+       &lt;property name="preInterceptors"&gt; &lt;!-- установка интерцептора системы безопасности--&gt;
+           &lt;list&gt;
+               &lt;ref local="securityInterceptor"/&gt;
+           &lt;/list&gt;
+       &lt;/property&gt;			
+&lt;/bean&gt;
+</pre>	
+   
+   Более детальная информации о конфигурировании сервисов, транзакций и т.д представлена на сайте <a href="http://www.springframework.org" target="_blank">Spring Framework</a><br><br><br><br>
+
+   <a name="forms"/>
+   <p><b>Forms</b><br>
+   <p>Для представления и редактирования сущностей испоьзуются формы. Для Desktop клиента формы выполнены в виде Java классов.
+   Практически каждой сущности соответствет две базовых формы:
+   форма список и форма для редактирования.<br><br>
+   Например для сущности Country:
+   <ul>
+   <li>CountryListForm</li>
+   <li>CountryEditForm</li>   
+   </ul>
+   
+   Для простых форм нет необходимости конфигурирования. Если при работе формы нужно вызвать какие нибудь нестандартные 
+   <a href="#actions">действия</a> или выполнять <a href="#reports">отчёты</a>, то в этом случае нужно описать все эти действия и отчёты в конфигурационном файле <b>form-config.xml</b> <a href="../dtds/form-config.dtd.txt">(DTD)</a> <br><br>
+ Например:  
+<pre>
+&lt;form-config&gt;
+
+    &lt;form code="PersonEditForm"&gt;
+        &lt;actions&gt;
+            &lt;action id="PersonEducationListForm"/&gt;
+            &lt;action id="PersonFamilyListForm"/&gt;
+            &lt;action id="PersonJobListForm"/&gt;
+            &lt;action id="PersonLanguageListForm"/&gt;
+         &lt;/actions&gt;
+    &lt;/form&gt;
+    
+    &lt;form id="EmployeeListForm"&gt;
+         &lt;reports&gt;
+            &lt;report id="PersonCardReport"/&gt;
+         &lt;/reports&gt;
+    &lt;/form&gt;
+    
+&lt;form-config&gt;
+</pre>   
+Здесь к форме <b>PersonEditForm</b> подключаються действия, определённые в файле <b>action-config.xml</b> <a href="../dtds/action-config.dtd.txt">(DTD)</a>.
+Тоесть при работе с формой <b>PersonEditForm</b>, мы можем переключиться на другие формы
+ и просмотреть информацию по текущей выбраной позиции. К форме <b>EmployeeListForm</b> подключаеться отчёт <b>PersonCardReport</b>,
+ , определённый в файле <b>report-config.xml</b> <a href="../dtds/report-config.dtd.txt">(DTD)</a>.
+ <br>См. также <a href="#actions">действия</a> и <a href="#reports">отчёты</a>.<br><br><br><br>
+ 
+   <a name="reports"/>
+   <b>Reports</b><br>
+   <p>Базовой репортинговой системой является <a target="_blank" href="http://jasperforge.org/sf/projects/jasperreports">JasperReports</a>. 
+   Шаблоны (темплейты) отчётов размещаются в определённом хранилище (Report Storage). 
+   Хранилище отчётов можно сконфигурировать в файле <b>system-config.xml</b> <a href="../dtds/system-config.dtd.txt">(DTD)</a><br><br>
+   Например:<br>
+<pre><code>   
+&lt;system-config&gt;   
+   &lt;property name="report.storage.path"&gt;${root.dir}/reports&lt;/property&gt;
+&lt;/system-config&gt;
+</pre></code>
+Здесь указан путь относительно корневой папки системы. Можно также указать абсолютный путь - <b>C:\MyReports</b><br>
+Для редактировани (дизайна) отчётов можно воспользоватся свободно распространяемой программой 
+<a target="_blank" href="http://jasperforge.org/sf/projects/ireport">iReport</a>.
+Для подключения отчётов к системе их необходимо сконфигурировать в файле <b>report-config.xml</b> <a href="../dtds/report-config.dtd.txt">(DTD)</a><br><br>
+Например:
+<pre>
+&lt;report id="SaleOrder" single="true" folder="goods" file="SaleOrder"/&gt;
+</pre>
+
+Здесь подключается отчёт, полный путь которого будет: <b>&lt;ReportStorage&gt;/goods/SaleOrder.jasper</b>
+Расширение <b>.jasper</b> подключаеться автоматически, так как по умолчанию установлена репортинговая система <b>JasperReports</b>.
+Что бы получить параметры для отчёта можно воспользоватся акцепторами.<br><br>
+Например:
+<pre>
+&lt;report id="GoodsSale" folder="goods" file="GoodsSale"&gt;
+    &lt;acceptor id="OrganizationPeriodDialogAcceptor"/&gt;
+&lt;/report&gt;
+</pre>
+В данном случае акцептором являеться диалоговое окно, запрашиваемое начальную и конечную дату периода. Возможны реализации других типов акцепторов, 
+которые не взаимодействуют с пользователем а самостоятельно опрашивают систему на наличие необходимых параметров.<br>
+После того как отчёт сконфигурирован, его можно вызывать по коду или имени с любой части системы.<br><br><br><br>
+
+   <a name="acceptors"/>
+   <p><b>Acceptors</b><br>
+   <p>Акцепторы - это компоненты, которые отвечают за получение параметров для отчётов.<br>
+   Акцепторы конфигурируются в файле <b>acceptor-config.xml</b> <a href="../dtds/acceptor-config.dtd.txt">(DTD)</a><br><br>
+   Например:<br>
+<pre>
+&lt;acceptor id="OrganizationAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationAcceptor"/&gt;
+    
+&lt;acceptor id="OrganizationPeriodAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationPeriodAcceptor"/&gt;
+    
+&lt;acceptor id="OrganizationPeriodDialogAcceptor" class="org.plazmaforge.bsolution.base.client.swt.acceptors.OrganizationPeriodDialogAcceptor"/&gt;
+    
+&lt;acceptor id="OrganizationYearDialogAcceptor" class="org.plazmaforge.bsolution.base.client.swt.acceptors.OrganizationYearDialogAcceptor"/&gt;    
+</pre>   
+
+Первые два акцептора запрашивают в системе параметры без предоставления диалога для пользователя, последующие акцепторы - предоставляют диалог для ввода параметров.<br><br><br><br>
+   <a name="actions"/> 
+   <p><b>Actions</b><br>
+   <p>Действия, выполняемые на стороне клиента конфигурируются в файле <b>action-config.xml</b> <a href="../dtds/action-config.dtd.txt">(DTD)</a>.
+   Здесь можно указать как Java класс, так и команду действия.<br><br>
+   Например:
+<pre>
+&lt;action id="AboutAction" class="org.plazmaforge.bsolution.base.client.swt.actions.AboutAction"/&gt;
+   
+&lt;action id="CountryListForm" command="OPEN_LIST_FORM" parameters="base/CountryListForm"/&gt;
+
+&lt;action id="PriceListReport" command="PREVIEW_REPORT" parameters="PriceListReport"/&gt;
+</pre>
+   Здесь для действия <b>AboutAction</b> используется Java класс. Для действия <b>CountryListForm</b> - команда <b>OPEN_LIST_FORM</b> с параметром имя формы. 
+   Для действия <b>PriceListReport</b> - команда <b>PREVIEW_REPORT</b> с параметром имя отчёта. Во втором действии происходит вызов формы-списка, в третьем - запускается отчёт.<br>
+   <br><br><br><br>
+   
+   <a name="menubar"/> 
+   <p><b>MenuBar</b><br>
+   <p>Системное меню клиента конфигурируются в файле <b>menubar-config.xml</b> <a href="../dtds/menubar-config.dtd.txt">(DTD)</a>
+
+<pre>   
+&lt;menubar-config&gt;
+    &lt;menubar&gt;
+	....
+      &lt;!--  Documents menu --&gt;
+        &lt;menu code="Documents" text=""&gt;
+            &lt;menuitem action="NewDocument"/&gt;            
+            &lt;menuitem action="ChooseDocument"/&gt;            
+            &lt;menuitem text="-"/&gt;                
+        
+            &lt;menuitem action="DocumentListForm"/&gt;
+            &lt;menuitem text="-"/&gt;
+            &lt;menuitem action="ContractListForm"/&gt;
+            &lt;menuitem text="-"/&gt;
+            &lt;menu code="Documents.Sale" text=""&gt;
+                &lt;menuitem action="SalePlanListForm"/&gt;
+                &lt;menuitem text="-"/&gt;
+                &lt;menuitem action="SaleOrderListForm"/&gt;
+                ....
+            &lt;/menu&gt;
+       &lt;/menu&gt;     
+   &lt;/menubar&gt;         
+&lt;/menubar-config&gt;            
+</pre>                
+ Атрибут <b>action</b> тега <b>menuitem</b> указывает на названия действия, определённого в файле <b>action-config.xml</b>.<br><br><br><br>
+       
+   <a name="toolbar"/> 
+   <p><b>ToolBar</b><br>
+   <p>Панель инструментов клиента конфигурируются в файле <b>toolbar-config.xml</b> <a href="../dtds/toolbar-config.dtd.txt">(DTD)</a><br><br>
+   Например:
+<pre>
+&lt;toolbar-config&gt;
+    &lt;toolbar&gt;
+        &lt;toolitem action="PartnerListForm"/&gt;
+        &lt;toolitem action="EmployeeListForm"/&gt;
+        &lt;toolitem action="BankListForm"/&gt;
+        &lt;toolitem action="-"/&gt;
+        &lt;toolitem action="GoodsListForm"/&gt;        
+        &lt;toolitem action="-"/&gt;
+        &lt;toolitem action="DocumentListForm"/&gt;
+        &lt;toolitem action="ContractListForm"/&gt;                
+        &lt;toolitem action="-"/&gt;    
+        &lt;toolitem action="ProjectListForm"/&gt;
+        &lt;toolitem action="TaskListForm"/&gt;
+        &lt;toolitem action="-"/&gt;    
+        &lt;toolitem action="ReportListForm"/&gt;
+    &lt;toolbar&gt; 
+&lt;toolbar-config&gt;           
+</pre> 
+Атрибут <b>action</b> тега <b>toolitem</b> указывает на названия действия, определённого в файле <b>action-config.xml</b>.<br><br><br><br>  
+
+
+
+
+<a name="interface"/> 
+<p><b>Interface</b><br>
+<p>Панель инструментов клиента конфигурируются в файле <b>interface-config.xml</b> <a href="../dtds/interface-config.dtd.txt">(DTD)</a><br><br>
+   Например:
+<pre>
+&lt;interface-config&gt;
+    &lt;interface id="Sale"/&gt;
+    &lt;interface id="Purchase"/&gt;
+    &lt;interface id="Inventory"/&gt;    
+    &lt;interface id="Accounting"/&gt;
+    &lt;interface id="HR"/&gt;    
+    &lt;interface id="Payroll"/&gt;    
+    &lt;interface id="Project"  is-enable="false"/&gt;            
+    &lt;interface id="Admin"/&gt;    
+&lt;interface-config&gt;           
+</pre> 
+
+
+
+   <a name="associations"/> 
+   <p><b>Associations</b><br>
+   <p>Ассоцация - это объединение классов разных типов по одному общему признаку. В основном таковым признаком является сущность 
+   (персистенс объект), которая находится в центре ассоциации. Каждый представитель ассоциации имеет свой тип. Например: сервис, форма-список, форма-редактирование и т.д.
+   Некоторые ассоциации создаются автоматически, если соблюдены определённые правила при названии классов и пакетов в проекте.
+   Можно также сконфигурировать ассоциации в файле <b>association-config.xml</b> <a href="../dtds/association-config.dtd.txt">(DTD)</a>
+   
+   <a name="packages"/> 
+   <p><b>Packages</b><br>
+   <p>Пакеты (Java package) можно сконфигурировать в файле <b>package-config.xml</b> <a href="../dtds/package-config.dtd.txt">(DTD)</a>
+    
+</body>
+</html>
+
+

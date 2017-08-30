@@ -1,0 +1,625 @@
+
+<html>
+<title>System Configuration</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">System Configuration</h2>
+   <hr>
+   <br><br>
+
+   <p>The System Configuration has various parts:
+
+<br><br>
+
+   <table cellpadding="5">
+
+     <tr>
+       <td><b>Name</b></td>
+       <td><b>XML file</b></td>  
+       <td><b>Table</b></td>  
+       <td><b>Description</b></td>  
+     </tr>
+
+     <tr>
+       <td><a href="#application">Application</a></td>
+       <td>application.xml</td>  
+       <td align="center">-</td>  
+       <td>Application properties (Locale, Application Name, Application Manager)</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#system">System</a></td>
+       <td>system-config.xml</td> 
+       <td align="center">-</td>   
+       <td>System configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#datasource">Data Source</a></td>
+       <td>application-context-ds.xml</td> 
+       <td align="center">-</td>   
+       <td><b>Data Source</b> configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#jdbc">JDBC</a></td>
+       <td>jdbc.properties</td> 
+       <td align="center">-</td>   
+       <td><b>JDBC</b> properties</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#rmi">RMI</a></td>
+       <td>application-context-rmi.xml (Server)<br>rmi.properties (Client)</td> 
+       <td align="center">-</td>   
+       <td><b>RMI</b> properties</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#entitites">Entitites</a></td>
+       <td align="center">-</td>  
+       <td>system_entity</td>  
+       <td>Entitites configuration</td>  
+     </tr>
+
+
+     <tr>
+       <td><a href="#erm">Plazma ERM</a></td>
+       <td>erm.properties</td>  
+       <td align="center">-</td>    
+       <td><b>Plazma ERM</b> configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#services">Services</a></td>
+       <td>application-context.xml<br>packages/&lt;package name&gt;/service.xml<br>packages/&lt;package name&gt;/service-impl.xml<br></td></td>  
+       <td align="center">-</td>    
+       <td><b>Spring</b> configuration (services)</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#forms">Forms</a></td>
+       <td>form-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Forms configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#reports">Reports</a></td>
+       <td>report-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Reports configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#acceptors">Acceptors</a></td>
+       <td>acceptor-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Report acceptors configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#actions">Actions</a></td>
+       <td>action-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Actions configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#menubar">MenuBar</a></td>
+       <td>menubar-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Menu configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#toolbar">ToolBar</a></td>
+       <td>toolbar-config.xml</td>  
+       <td align="center">-</td>    
+       <td>ToolBar configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#interface">Interface</a></td>
+       <td>interface-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Interface configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#associations">Associations</a></td>
+       <td>association-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Associations configuration</td>  
+     </tr>
+
+     <tr>
+       <td><a href="#packages">Packages</a></td>
+       <td>package-config.xml</td>  
+       <td align="center">-</td>    
+       <td>Packages configuration</td>  
+     </tr>
+
+   </table>
+
+   <br><br>
+
+   The configuration of each part can be presented in a file or a table.<br>
+
+   Consider the detail configuration.<br><br><br><br>
+
+
+   <a name="application"/>
+   <p><b>Application</b>
+   <p>Application pproperties is presented in file <b>application.xml</b><br>
+   For example:
+   
+   <pre><code>
+&lt;properties>
+  &lt;locale&gt;en_US&lt;/locale&gt;
+  &lt;application-name&gt;Plazma ERP+CRM&lt;/application-name&gt;
+  &lt;application-manager&gt;org.plazmaforge.bsolution.base.client.SWTClientApplicationManager&lt;/application-manager&gt;
+  &lt;is-external-config&gt;true&lt;/is-external-config&gt; 
+&lt;/properties&gt;
+   </code></pre>
+   You can use following application managers:
+   <ul>
+    <li><b>org.plazmaforge.bsolution.base.client.SWTClientApplicationManager</b> - client part (SWT)
+    <li><b>org.plazmaforge.bsolution.base.server.ServerApplicationManager</b> - server part
+   </ul>
+   
+   <a name="system"/>
+   <p><b>System</b>
+   <p>System configuration is presented in file <b>system-config.xml</b> <a href="../dtds/system-config.dtd.txt">(DTD)</a><br>
+   For example:<br>  
+   
+   <pre><code>   
+&lt;system-config&gt;
+
+    &lt;!-- 
+        Configure components
+    --&gt;       
+    
+    &lt;configurer name="PackageConfigurer" type="XMLPackageConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure packages --&gt;    
+    &lt;configurer name="ActionConfigurer" type="XMLActionConfigurer"&gt;&lt;/configurer&gt; &lt;!--Configure actions --&gt;
+    &lt;configurer name="InterfaceConfigurer" type="XMLInterfaceConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure UIs --&gt;    
+    &lt;configurer name="MenuBarConfigurer" type="XMLMenuBarConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure menu --&gt;   
+    &lt;configurer name="ToolBarConfigurer" type="XMLToolBarConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure toolbar --&gt;
+    &lt;configurer name="FormConfigurer" type="XMLFormConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure forms --&gt;       
+
+    &lt;configurer name="AssociationConfigurer" type="XMLAssociationConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure associations --&gt;           
+    
+
+    &lt;!-- 
+        Configure reporting system entities
+    --&gt;
+    &lt;configurer name="ReportConfigurer" type="XMLReportConfigurer"&gt;&lt;/configurer&gt;  &lt;!-- Configure reports --&gt;  
+    &lt;configurer name="AcceptorConfigurer" type="XMLAcceptorConfigurer"&gt;&lt;/configurer&gt; &lt;!-- Configure report acceptors --&gt; 
+               
+    
+    &lt;!-- 
+        System properties
+    --&gt;
+    &lt;system-properties&gt;
+        &lt;property name="javax.xml.transform.TransformerFactory"&gt;org.apache.xalan.processor.TransformerFactoryImpl&lt;/property&gt;
+        &lt;property name="report.engine.class"&gt;org.plazmaforge.framework.report.engine.jasperreports.JasperReportsEngine&lt;/property&gt; &lt;!-- Set reporting system --&gt;
+    &lt;/system-properties&gt;
+
+
+    &lt;!-- 
+        Platform properties
+    --&gt;
+    &lt;platform-properties&gt;
+    
+        &lt;property name="config.loader.class"&gt;org.plazmaforge.bsolution.base.EnterpriseConfigLoader&lt;/property&gt;
+        &lt;property name="period.creator.class"&gt;org.plazmaforge.bsolution.base.EnterprisePeriodCreator&lt;/property&gt;
+
+        &lt;!-- 
+            Configure report storage
+        --&gt;
+        &lt;property name="report.storage.path"&gt;${root.dir}/reports&lt;/property&gt;
+         
+        &lt;!-- 
+            Configure Service Locator
+        --&gt; 
+        
+        &lt;!-- RMIServiceLocator (Lite Server) --&gt;
+        &lt;!--
+        &lt;property name="service.locator.class"&gt;org.plazmaforge.framework.platform.service.impl.rmi.RMIServiceLocator&lt;/property&gt;
+        --&gt; 
+        
+    &lt;/platform-properties&gt;
+
+
+    &lt;property-stores&gt;
+
+        &lt;!-- Stores example --&gt;
+        &lt;!--
+        &lt;store name="storename"&gt;
+            &lt;property name="prop1"&gt;value1&lt;/property&gt;                
+            &lt;property name="prop2"&gt;value2&lt;/property&gt;                
+        &lt;/store&gt;
+        --&gt;
+        
+
+    &lt;/property-stores&gt;
+
+ &lt;/system-config&gt;
+   </code></pre>
+
+   Consider following points<br><br>
+   <b> What is configurer?</b><br>
+   This component, which configures a part of the system.
+   At the moment in general  used XML configurers.<br>
+   They read data from XML files, 
+   but you can use other implementation (other file formats, tables in database, storages, etc.) <br><br>
+
+   <b> What is the Service Locator?</b><br>
+   This component, which is responsible for services in the search for a particular name. 
+   The default is org.plazmaforge.framework.platform.service.impl.spring.SpringServiceLocator<br><br>
+
+   <b> What is the report storage?</b>
+   <br> This folder in the file system where reports are stored.<br><br><br><br>
+   
+   
+   
+   <a name="datasource"/>   
+   <p><b>Data Source</b>
+   <p>You can configure Data Source in file <b>application-context-ds.xml</b> <a href="../dtds/spring-beans.dtd.txt">(DTD)</a>.<br>
+
+   <br><br><br><br>
+
+   
+   <a name="jdbc"/>   
+   <p><b>JDBC</b>
+   <p>Setting JDBC connection to the database<br>
+   For example:
+   <p>
+ <code>
+ # Set connection properties to the database Firebird <br>
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver<br>
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.gdb<br>
+ jdbc.username=sysdba<br>
+ jdbc.password=masterkey<br>
+
+  </code><br><br><br><br>
+   
+   <a name="rmi"/>
+   <p><b>RMI</b>
+   <p>Setting RMI properties to connect to Server Application.<br>
+
+ <p>For example:
+
+<code><pre>
+rmi.host = localhost
+rmi.port = 2005
+</pre></code><br><br><br>
+
+   <a name="entitites"/>
+   <b>Entitites</b><br>
+   <p>Meta info of the entities (persistence objects) is stored in the table <b>SYSTEM_ENTITY</b>.<br>
+   General fileds::
+   <ul>
+ <li>ID - primary key
+ <li>CODE - code of entity
+ <li>ENTITY_TYPE_ID - type of entoty (dictionary, document, etc.)
+ <li>NAME - name of entity
+ <li>ENTITY_PACKAGE - package of entity (Java package) 
+   </ul>
+ <b>Why need the SYSTEM_ENTITY ?</b><br>
+ It serves two important functions:
+   <ul>
+ <li> Providing information about the system 
+ <li>Building association in the system
+   </ul>
+ 
+ You can execute simple query<br>
+ <pre><code>SELECT * FROM system_entity</code></pre>      
+ and get more useful information about system entities.
+
+ Anywhere program, knowing only the code of entity, 
+ you can quickly build association of the entity.<br>
+ For example:
+
+ <p>Class Country.<br>
+ The class corresponds to other elements (classes) different type.<br><br>
+
+<ul>
+ <li>CountryService - Country Service
+ <li>CountryServiceImpl - Country Service Implementation
+ <li>CoutryListForm - Country List (Table) Form
+ <li>CountryEditForm - Country Edit Form
+</ul>
+ 
+Association simplifies development process when you need to manipulate classes.<br>
+More <a href="#associations">Associations</a>.<br><br><br><br>
+    
+   <a name="erm"/>  
+   <p><b>Plazma ERM</b><br>
+   <p>The system uses technology <b>Plazma ERM</b>, 
+   <b>DAO (Data Access Object)</b> layer uses  the mapping between database objects and <b>Java</b> objects.<br>
+   Setting <b>Plazma ERM</b> made in the file <b>erm.properties</b><!--<a href="../dtds/spring-beans.dtd.txt">(DTD)</a>-->. 
+   <!--Consider part of the file:-->
+<pre></pre>
+
+ERM mapping is configured in <b>*.erm.xml</b><!--<a href="../dtds/entity-mapping.dtd.txt">(DTD)</a>--> files. 
+In general, a single object is presented in a single file. For example:
+<pre>
+&lt;!-- org/plazmaforge/bsolution/base/server/entities/Country.erm.xml --&gt;
+
+&lt;entity-mapping&gt;
+    &lt;entity class="org.plazmaforge.bsolution.base.common.beans.Country" table="COUNTRY"&gt;
+        &lt;key name="id" column="ID" type="Integer" generator-type="increment"/&gt;
+        &lt;attribute name="code" column="COUNTRY_CODE" type="String" /&gt;
+        &lt;attribute name="name" column="NAME" type="String"  reqired="true" /&gt;
+    &lt;/entity&gt;
+&lt;/entity-mapping&gt;
+</pre>
+
+
+   <a name="services"/> 
+   <p><b>Services</b><br>
+   <p>Services are an important part of the system. 
+   They manage entities (persistence objects).
+   Services are responsible for <b>loading</b>, <b>adding</b>, <b>changing</b>, <b>deleting</b> data.
+   Also, the services execute other actions in the system.
+   In general, each entity corresponds to own service.
+   Each service has own implementation.<br><br>
+   For example:<br><br>
+   <b>Country -> CountyService -> CountryServiceImpl</b><br><br>
+   
+
+   Common services are configured in file <b>application-context.xml</b> <a href="../dtds/spring-beans.dtd.txt">(DTD)</a><br><br>
+   For each package we can configure service in files <b>packages/&lt;package name&gt;/service-impl.xml</b>, <b>packages/&lt;package name&gt;/service.xml</b> <a href="../dtds/spring-beans.dtd.txt">(DTD)</a><br><br>      
+   For example:
+
+<pre>   
+&lt;!-- 
+   Configure Country Service Implementation
+   packages/base/service-impl.xml  
+--&gt;
+&lt;bean id="CountryServiceImpl" class="org.plazmaforge.bsolution.base.server.services.CountryServiceImpl" lazy-init="true"&gt;
+	&lt;property name="sessionFactory"&gt;&lt;ref local="sessionFactory"/&gt;&lt;/property&gt; &lt;!-- set session factory --&gt;
+&lt;/bean&gt;
+	
+....	
+	
+&lt;!-- 
+   Configure Country Service
+   packages/base/service.xml  
+--&gt;	
+&lt;bean id="CountryService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"&gt;
+	&lt;property name="transactionManager"&gt;&lt;ref local="transactionManager"/&gt;&lt;/property&gt; &lt;!-- set transaction manager --&gt;
+	&lt;property name="target"&gt;&lt;ref bean="CountryServiceImpl"/&gt;&lt;/property&gt; &lt;!-- set CountryService implementation --&gt;
+	&lt;property name="transactionAttributes"&gt; &lt;!-- set transaction attributes --&gt;
+		&lt;props&gt;
+			&lt;prop key="*"&gt;PROPAGATION_REQUIRED&lt;/prop&gt;
+		&lt;/props&gt;
+	&lt;/property&gt;
+       &lt;property name="preInterceptors"&gt; &lt;!-- set security interceptor --&gt;
+           &lt;list&gt;
+               &lt;ref local="securityInterceptor"/&gt;
+           &lt;/list&gt;
+       &lt;/property&gt;			
+&lt;/bean&gt;
+</pre>	
+   
+   More information about configure services see on the site <a href="http://www.springframework.org" target="_blank">Spring Framework</a><br><br><br><br>
+
+   <a name="forms"/>
+   <p><b>Forms</b><br>
+   <p>GUI client uses forms (Java classes).
+   In general, each entity corresponds to two base forms:
+   List (Table) form and Edit form.<br><br>
+   For example, for Country:
+   <ul>
+   <li>CountryListForm</li>
+   <li>CountryEditForm</li>   
+   </ul>
+   
+   You can don't configure simple forms, 
+   but if the form uses <a href="#actions">actions</a> or <a href="#reports">reports</a>,
+   you have to configure it in the file <b>form-config.xml</b> <a href="../dtds/form-config.dtd.txt">(DTD)</a> <br><br>
+
+ For example:  
+<pre>
+&lt;form-config&gt;
+
+    &lt;form id="PersonEditForm"&gt;
+        &lt;actions&gt;
+            &lt;action id="PersonEducationListForm"/&gt;
+            &lt;action id="PersonFamilyListForm"/&gt;
+            &lt;action id="PersonJobListForm"/&gt;
+            &lt;action id="PersonLanguageListForm"/&gt;
+         &lt;/actions&gt;
+    &lt;/form&gt;
+    
+    &lt;form id="EmployeeListForm"&gt;
+         &lt;reports&gt;
+            &lt;report id="PersonCardReport"/&gt;
+         &lt;/reports&gt;
+    &lt;/form&gt;
+    
+&lt;form-config&gt;
+</pre>   
+The <b>PersonEditForm</b> form can execute the actions,
+which configure in the file <b>action-config.xml</b> <a href="../dtds/action-config.dtd.txt">(DTD)</a>.
+
+
+<br>The <b>EmployeeListForm</b> form can execute the report <b>PersonCardReport</b>,
+which configure in the file <b>report-config.xml</b> <a href="../dtds/report-config.dtd.txt">(DTD)</a>.
+ <br>See also <a href="#actions">actions</a> and <a href="#reports">reports</a>.<br><br><br><br>
+ 
+   <a name="reports"/>
+   <b>Reports</b><br>
+   <p>The basic reporting system is <a target="_blank" href="http://jasperforge.org/sf/projects/jasperreports">JasperReports</a>. 
+   Report templates are located in the Report Storage. 
+   The Report Storage is configured in the file <b>system-config.xml</b> <a href="../dtds/system-config.dtd.txt">(DTD)</a><br><br>
+   For example:<br>
+<pre><code>   
+&lt;system-config&gt;   
+   &lt;property name="report.storage.path"&gt;${root.dir}/reports&lt;/property&gt;
+&lt;/system-config&gt;
+</pre></code>
+It is relative path. You can also set the absolute path: <b>C:\MyReports</b><br>
+To design report templates you can use <a target="_blank" href="http://jasperforge.org/sf/projects/ireport">iReport</a>.
+To connection report templates to the system you have to configure reports 
+in the file <b>report-config.xml</b> <a href="../dtds/report-config.dtd.txt">(DTD)</a><br><br>
+
+For example:
+<pre>
+&lt;report id="SaleOrder" single="true" folder="goods" file="SaleOrder"/&gt;
+</pre>
+
+Here full path is <b>&lt;ReportStorage&gt;/goods/SaleOrder.jasper</b>
+Extention <b>.jasper</b> is added automatically, because we use <b>JasperReports</b> by default.
+To set report parameters you can use repport acceptors.<br><br>
+For example:
+<pre>
+&lt;report id="GoodsSale" folder="goods" file="GoodsSale"&gt;
+    &lt;acceptor id="OrganizationPeriodDialogAcceptor"/&gt;
+&lt;/report&gt;
+</pre>
+In this example acceptor is dialog which read start and end date.
+You can use other type of acceptors too.<br>
+After configuring the report you can execute the report by code or name in anywhere<br><br><br><br>
+
+   <a name="acceptors"/>
+   <p><b>Acceptors</b><br>
+   <p>Acceptors are components that read parameters of reports.<br>
+   Acceptors is configured in the file <b>acceptor-config.xml</b> <a href="../dtds/acceptor-config.dtd.txt">(DTD)</a><br><br>
+   For example:<br>
+<pre>
+&lt;acceptor id="OrganizationAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationAcceptor"/&gt;
+    
+&lt;acceptor id="OrganizationPeriodAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationPeriodAcceptor"/&gt;
+    
+&lt;acceptor id="OrganizationPeriodDialogAcceptor" class="org.plazmaforge.bsolution.base.client.swt.acceptors.OrganizationPeriodDialogAcceptor"/&gt;
+    
+&lt;acceptor id="OrganizationYearDialogAcceptor" class="org.plazmaforge.bsolution.base.client.swt.acceptors.OrganizationYearDialogAcceptor"/&gt;    
+</pre>   
+
+1 and 2 acceptors read parameters without a dialog, 
+3 and 4 acceptors show a dialog for input parameters.<br><br><br><br>
+   <a name="actions"/> 
+   <p><b>Actions</b><br>
+   <p>Actions that execute on the client part are configured in the file <b>action-config.xml</b> <a href="../dtds/action-config.dtd.txt">(DTD)</a>.
+   Here you can set Java class or specify command<br><br>
+   For example:<br>
+<pre>   
+&lt;action id="AboutAction" class="org.plazmaforge.bsolution.base.client.swt.actions.AboutAction"/&gt;
+
+&lt;action id="CountryListForm" command="OPEN_LIST_FORM" parameters="base/CountryListForm"/&gt;
+
+&lt;action id="PriceListReport" command="PREVIEW_REPORT" parameters="PriceListReport"/&gt;
+</pre>
+   Here the action <b>AboutAction</b> uses Java class.
+   The action <b>CountryListForm</b> uses command <b>OPEN_LIST_FORM</b> with form name (perform form). 
+   The action <b>PriceListReport</b> uses command <b>PREVIEW_REPORT</b> 
+   with report name (perform report).
+   <br><br><br><br>
+   
+   <a name="menubar"/> 
+   <p><b>MenuBar</b><br>
+   <p>The System menu is configured in the file <b>menubar-config.xml</b> <a href="../dtds/menubar-config.dtd.txt">(DTD)</a>
+
+<pre>   
+&lt;menubar-config&gt;
+    &lt;menubar&gt;
+	....
+      &lt;!--  Documents menu --&gt;
+        &lt;menu code="Documents" text=""&gt;
+            &lt;menuitem action="NewDocument"/&gt;            
+            &lt;menuitem action="ChooseDocument"/&gt;            
+            &lt;menuitem text="-"/&gt;                
+        
+            &lt;menuitem action="DocumentListForm"/&gt;
+            &lt;menuitem text="-"/&gt;
+            &lt;menuitem action="ContractListForm"/&gt;
+            &lt;menuitem text="-"/&gt;
+            &lt;menu code="Documents.Sale" text=""&gt;
+                &lt;menuitem action="SalePlanListForm"/&gt;
+                &lt;menuitem text="-"/&gt;
+                &lt;menuitem action="SaleOrderListForm"/&gt;
+                ....
+            &lt;/menu&gt;
+       &lt;/menu&gt;     
+   &lt;/menubar&gt;         
+&lt;/menubar-config&gt;            
+</pre>                
+ The attribute <b>action</b> of tag <b>menuitem</b> is name of action,
+which configure in the file <b>action-config.xml</b>.<br><br><br><br>
+       
+   <a name="toolbar"/> 
+   <p><b>ToolBar</b><br>
+   <p>The ToolBar is configured in the file <b>toolbar-config.xml</b> <a href="../dtds/toolbar-config.dtd.txt">(DTD)</a><br><br>
+   For example:
+<pre>
+&lt;toolbar-config&gt;
+    &lt;toolbar&gt;
+        &lt;toolitem action="PartnerListForm"/&gt;
+        &lt;toolitem action="EmployeeListForm"/&gt;
+        &lt;toolitem action="BankListForm"/&gt;
+        &lt;toolitem action="-"/&gt;
+        &lt;toolitem action="GoodsListForm"/&gt;        
+        &lt;toolitem action="-"/&gt;
+        &lt;toolitem action="DocumentListForm"/&gt;
+        &lt;toolitem action="ContractListForm"/&gt;                
+        &lt;toolitem action="-"/&gt;    
+        &lt;toolitem action="ProjectListForm"/&gt;
+        &lt;toolitem action="TaskListForm"/&gt;
+        &lt;toolitem action="-"/&gt;    
+        &lt;toolitem action="ReportListForm"/&gt;
+    &lt;toolbar&gt; 
+&lt;toolbar-config&gt;           
+</pre> 
+The attribute <b>action</b> of tag <b>toolitem</b> is name of action 
+which configure in the file <b>action-config.xml</b>.<br><br><br><br>  
+
+
+<a name="interface"/> 
+<p><b>Interface</b><br>
+<p>The Interface is configured in the file <b>interface-config.xml</b> <a href="../dtds/interface-config.dtd.txt">(DTD)</a><br><br>
+   For example:
+<pre>
+&lt;interface-config&gt;
+    &lt;interface id="Sale"/&gt;
+    &lt;interface id="Purchase"/&gt;
+    &lt;interface id="Inventory"/&gt;    
+    &lt;interface id="Accounting"/&gt;
+    &lt;interface id="HR"/&gt;    
+    &lt;interface id="Payroll"/&gt;    
+    &lt;interface id="Project"  is-enable="false"/&gt;            
+    &lt;interface id="Admin"/&gt;    
+&lt;interface-config&gt;           
+</pre> 
+
+
+
+
+   <a name="associations"/> 
+   <p><b>Associations</b><br>
+   <p>The Association is union of class, which have different type, but they have common characteristic.
+   In general, the characteristic is entity (persistence object), which is center of the association.   
+   Each member of the association has own type. For example: service, list-form, edit-form, etc. 
+   In general, association is created automatically (using standard rules for creating name of java classes and packages).
+   You can configure associations in the file <b>association-config.xml</b> <a href="../dtds/association-config.dtd.txt">(DTD)</a>
+   
+   <a name="packages"/> 
+   <p><b>Packages</b><br>
+   <p>The Packages (Java package) are configured in the file <b>package-config.xml</b> <a href="../dtds/package-config.dtd.txt">(DTD)</a>
+    
+</body>
+</html>
+
+

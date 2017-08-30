@@ -1,0 +1,13 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PaymentOutcome" class="org.plazmaforge.bsolution.bank.common.beans.PaymentOutcome" table="PAYMENT_OUTCOME"  extends-class="org.plazmaforge.bsolution.bank.common.beans.PaymentDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>
+        	<attribute name="paymentDate" column="PAYMENT_DATE" type="Date" />
+        	<attribute name="paymentMissing" column="PAYMENT_MISSING" type="String" />
+        	<reference name="organizationBankAccount" column="ORGANIZATION_BANK_ACCOUNT_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount"  required="true" />        
+        	<reference name="partnerBankAccount" column="PARTNER_BANK_ACCOUNT_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount"  required="true" />
+        	<reference name="paymentType" column="PAYMENT_TYPE_ID" class="org.plazmaforge.bsolution.bank.common.beans.PaymentType"  required="true" />
+        	<reference name="taxPrintType" column="TAXPRINT_TYPE_ID" class="org.plazmaforge.bsolution.bank.common.beans.TaxPrintType"  required="true" />
+        </attributes>
+    </joined-entity>
+

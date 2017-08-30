@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="d99b3871" name="SYS_PERMISSION">
+      <drawing is-expanded="true" location="150,0" dimensions="206,187" />
+      <columns>
+        <column id="efa306e1" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="6a65ee70" name="SECURE_OBJECT_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b04dac31" name="ROLE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="fc5c9afb" name="IS_READ" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="915c2401" name="IS_WRITE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="30f63e6b" name="IS_EXEC" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="3c45a40d" name="IS_TYPE_READ" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="799a2306" name="IS_TYPE_WRITE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="62bae467" name="SYS_ROLE">
+      <drawing is-expanded="true" location="296,297" dimensions="225,109" />
+      <columns>
+        <column id="c35b440b" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="13d063f7" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="9a23a7a9" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="932976ba" name="DEF_INTERFACE_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+      </columns>
+    </table>
+    <table id="5614cbd0" name="SYS_SECURE_OBJECT">
+      <drawing is-expanded="true" location="0,287" dimensions="196,129" />
+      <columns>
+        <column id="4f386947" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="e690b195" name="OBJECT_ID" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="84162bf5" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="24cfc4cd" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="b27641a2" name="OBJECT_TYPE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="fc3f64ad" name="FK_SYS_PERM_PERMISSIO_SYS_SECU">
+      <details pk-table-id="5614cbd0" fk-table-id="d99b3871">
+        <pk-columns>
+          <key-column id="4f386947" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="6a65ee70" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="b8750924" name="FK_SYS_PERM_PERMISSIO_SYS_ROLE">
+      <details pk-table-id="62bae467" fk-table-id="d99b3871">
+        <pk-columns>
+          <key-column id="c35b440b" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="b04dac31" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

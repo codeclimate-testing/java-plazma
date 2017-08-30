@@ -1,0 +1,154 @@
+
+
+ v_organization.sql
+ v_sys_info.sql
+ v_users.sql
+
+ organization/v_warehouse.sql
+ organization/v_mtrl_responsible.sql
+
+ product/v_product_card.sql
+
+ goods/v_goods.sql
+ asset/v_asset.sql
+
+
+ document/v_document.sql
+
+
+
+
+###############################################################################
+# Contact Managment
+###############################################################################
+ contact/v_address.sql
+ contact/v_contactable_address.sql
+ contact/v_def_contactable_address.sql
+ contact/v_def_partner_address.sql
+ contact/v_city.sql
+
++?contact/v_address_city.sql 
+
+ contact/v_phone.sql
+ contact/v_contactable_phone.sql
+ contact/v_def_contactable_phone.sql
+ contact/v_def_partner_phone.sql
+
+
+#cm/v_partner_address.sql
+#cm/v_partner_phone.sql
+#cm/v_default_address_city.sql
+#cm/v_default_partner_address.sql
+#cm/v_default_partner_phone.sql
+#cm/v_join_default_partner_address.sql
+#cm/v_join_default_partner_phone.sql
+
+
+###############################################################################
+# Bank
+###############################################################################
+ bank/v_bank.sql
+ bank/v_partner_bank_account.sql
+ bank/v_default_partner_bank_account.sql
+
+ bank/v_payment.sql
+
+# bank/v_payment_requirement.sql
+
+
+###############################################################################
+# Common
+###############################################################################
+
+ v_businessable.sql
+
+
+? v_businessable_register.sql
+  register/v_partner_register.sql
+# v_warehouse_register.sql
+
+
+# product/v_product_card_register.sql
+
+###############################################################################
+# Goods
+###############################################################################
+ register/v_goods_register.sql
+ register/v_goods_detail_register
+
+#goods/v_warehouse_goods_register.sql
+
+
+
+
+
+
+ goods/credit/v_goods_credit.sql
+ goods/credit/v_goods_credit_item.sql
+ goods/credit/v_goods_credit_content.sql
+
+ goods/debit/v_goods_debit.sql
+ goods/debit/v_goods_debit_item.sql
+ goods/debit/v_goods_debit_content.sql
+
+ goods/move/v_goods_move.sql
+ goods/move/v_goods_move_item.sql
+ goods/move/v_goods_content.sql
+
+ goods/writeoff/v_goods_writeoff.sql
+ goods/writeoff/v_goods_writeoff_item.sql
+ goods/writeoff/v_goods_writeoff_content.sql
+
+ goods/rest/v_goods_rest.sql
+ goods/rest/v_goods_rest_item.sql
+ goods/rest/v_goods_rest_content.sql
+
+
+ goods/v_invoice.sql
+ goods/v_invoice_item.sql
+ goods/v_invoice_content.sql
+
+
+
+
+
+ goods/v_rpt_goods_credit.sql
+ goods/v_rpt_goods_debit.sql
+ goods/v_rpt_goods_rest.sql
+ goods/v_rpt_invoice.sql
+
+ goods/v_rpt_goods_register.sql
+
+
+ goods/v_rpt_goods_sale.sql
+ goods/v_rpt_goods_sale_month_product.sql
+ goods/v_rpt_goods_sale_month.sql
+ goods/v_rpt_wrh_goods_register.sql
+
+
+ goods/rotate/v_rpt_goods_rest_start.sql
+ goods/rotate/v_rpt_wrh_goods_rest_start.sql
+ goods/rotate/v_rpt_goods_credit_full.sql
+ goods/rotate/v_rpt_goods_debit_full.sql
+ goods/rotate/v_rpt_goods_debit_full.sql
+ goods/rotate/v_rpt_goods_rotate.sql
+
+
+
+
+###############################################################################
+# Partner
+###############################################################################
+ partner/v_partner_rest.sql
+ partner/v_rpt_partner_register.sql
+ partner/v_rpt_partner_rest.sql
+ partner/v_rpt_partner_rest_start.sql
+ partner/v_rpt_partner_credit_full.sql
+ partner/v_rpt_partner_debit_full.sql
+ partner/v_rpt_partner_rotate.sql
+
+
+###############################################################################
+# Payroll
+###############################################################################
+ payroll/v_employee_result.sql

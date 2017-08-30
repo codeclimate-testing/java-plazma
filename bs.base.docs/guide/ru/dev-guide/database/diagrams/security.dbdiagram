@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="cff61314" name="SYS_USER_ROLE">
+      <drawing is-expanded="true" location="201,0" dimensions="145,87" />
+      <columns>
+        <column id="d79f9773" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="4b7a2b0e" name="USER_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="2b7520cf" name="ROLE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+    <table id="ab3fbba2" name="SYS_USER">
+      <drawing is-expanded="true" location="280,180" dimensions="221,227" />
+      <columns>
+        <column id="335a31e3" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="24f3ae4" name="ENTITY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="54cdba08" name="CONTACT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="8438bd98" name="USER_NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="64" />
+        </column>
+        <column id="729aa3d3" name="USER_PASSWORD" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="64" />
+        </column>
+        <column id="87b66004" name="OWNER_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="6e10374" name="REG_DATE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="5131e3aa" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="692afd66" name="DEF_INTERFACE_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="a6ec0925" name="IS_ENABLE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="bf55c3c0" name="SYS_ROLE">
+      <drawing is-expanded="true" location="40,180" dimensions="225,109" />
+      <columns>
+        <column id="c655da58" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="f45a75cb" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="81ead98b" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+        <column id="4caa5531" name="DEF_INTERFACE_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="5b264eaf" name="FK_SYS_USER_UR_ROLE_SYS_ROLE">
+      <details pk-table-id="bf55c3c0" fk-table-id="cff61314">
+        <pk-columns>
+          <key-column id="c655da58" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="2b7520cf" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="240,140" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="d9f9288c" name="FK_SYS_USER_UR_USER_SYS_USER">
+      <details pk-table-id="ab3fbba2" fk-table-id="cff61314">
+        <pk-columns>
+          <key-column id="335a31e3" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="4b7a2b0e" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="320,140" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

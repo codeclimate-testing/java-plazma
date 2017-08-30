@@ -1,0 +1,24 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LedgerAccountRest" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccountRest" table="LEDGER_ACCOUNT_REST">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+    	<aliases>
+    		<alias name="organization.id" attribute="organizationId"/>
+    		<alias name="accountName" attribute="ledgerAccount.name"/>
+    		<alias name="documentDate" attribute="registerDate"/>
+    	</aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="registerDate" column="REST_DATE" type="Date" />
+        	<attribute name="debitAmount" column="DEBIT_AMOUNT" type="Double" />
+        	<attribute name="creditAmount" column="CREDIT_AMOUNT" type="Double" />
+        	<attribute name="currencyDebitAmount" column="CURRENCY_DEBIT" type="Double" />
+        	<attribute name="currencyCreditAmount" column="CURRENCY_CREDIT" type="Double" />
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer"  required="true" />
+        	<attribute name="organizationId" column="ORGANIZATION_ID" type="Integer"  required="true" />
+        	<reference name="ledgerAccount" column="LEDGER_ACCOUNT_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"  required="true" />
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency" />
+        </attributes>
+    </entity>
+

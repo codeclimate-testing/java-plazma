@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContractorHeader" class="org.plazmaforge.bsolution.finance.common.beans.ContractorHeader" table="V_CONTRACTOR_UNION" readonly="true">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+        	<attribute name="entityId" column="ENTITY_ID" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        </attributes>
+    </entity>
+

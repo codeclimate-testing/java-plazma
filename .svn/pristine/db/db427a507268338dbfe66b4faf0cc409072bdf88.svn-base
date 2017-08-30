@@ -1,0 +1,12 @@
+
+
+<!ELEMENT association-config (association*)>
+
+<!ELEMENT association EMPTY>
+
+<!ATTLIST association
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        name CDATA #IMPLIED
+        class NMTOKEN #IMPLIED
+>

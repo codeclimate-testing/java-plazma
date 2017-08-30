@@ -1,0 +1,48 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PIMAppointment" class="org.plazmaforge.bsolution.pim.common.beans.PIMAppointment" table="PIM_APPOINTMENT">
+		<aliases>
+			<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="appointmentPriorityName" attribute="appointmentPriority.name"/>
+    		<alias name="appointmentTypeName" attribute="appointmentType.name"/>
+    	</aliases>      	    
+    	<attributes>
+       		<key name="id" column="ID" type="Integer">
+   	    		<generator type="sequence">
+    					<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+    			</generator>
+   	 		</key>
+        	<attribute name="subject" column="SUBJECT" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="project" column="PROJECT_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectHeader" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />
+        	<reference name="appointmentType" column="APPOINTMENT_TYPE_ID" class="org.plazmaforge.bsolution.pim.common.beans.PIMAppointmentType" />
+        	<reference name="appointmentPriority" column="APPOINTMENT_PRIORITY_ID" class="org.plazmaforge.bsolution.pim.common.beans.PIMAppointmentPriority" />                
+        	<attribute name="startDateTime" column="START_DATE_TIME" type="DateTime" />
+        	<attribute name="endDateTime" column="END_DATE_TIME" type="DateTime" />
+        	<attribute name="reminderDateTime" column="REMINDER_DATE_TIME" type="DateTime" /> 
+        	<collection name="appointmentContacts" join-class="org.plazmaforge.bsolution.pim.common.beans.PIMAppointmentContact" join-attribute="appointment" cascade="all"/>
+        </attributes>
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    	</triggers>        
+     </entity>
+

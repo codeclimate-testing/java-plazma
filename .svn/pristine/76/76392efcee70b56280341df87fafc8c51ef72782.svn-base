@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<project name="plazma-bs-enterprise-web" default="create-war">
+
+	<property file="build.properties" />
+
+	<!--
+	<target name="default" depends="create-war, deploy"/>
+	-->
+
+	<target name="create-war">
+		<mkdir dir="${dist.dir}"/>
+		<war basedir="webapp" destfile="${dist.dir}/${install.bs.enterprise.web}-${version}.war" webxml="webapp/WEB-INF/web.xml">
+			<exclude name="WEB-INF/**" />
+			<webinf dir="webapp/WEB-INF/">
+				<!--<include name="**/*.jar" />-->
+				<include name="**/*.*" />
+			</webinf>
+			<lib dir= "${dist.dir}">
+				<include name="plazma-framework-core-1.0.3.jar"/>
+				<include name="plazma-framework-sql-1.0.3.jar"/>
+				<include name="plazma-framework-config-1.0.3.jar"/>
+				<include name="plazma-framework-ext-1.0.3.jar"/>
+				<include name="plazma-framework-erm-1.0.3.jar"/>
+				<include name="plazma-framework-uwt-1.0.3.jar"/>
+				<include name="plazma-framework-uwt-gxt-1.0.3.jar"/>
+
+				<include name="plazma-bs-enterprise-shared-1.0.3.jar"/>
+				<include name="plazma-bs-enterprise-client-1.0.3.jar"/>
+				<include name="plazma-bs-enterprise-server-1.0.3.jar"/>
+			</lib>
+			<lib dir="${lib.dir}">
+				<include name="jdom_1_0.jar" />
+				<include name="validation-api-1.0.0.GA.jar" />
+				<include name="commons-logging.jar"/>
+				<include name="log4j-1.2.8.jar"/>
+				<include name="commons-dbcp-1.3.jar"/>
+				<include name="commons-pool-1.5.5.jar"/>
+				<include name="aopalliance.jar"/>
+				<include name="ehcache-1.5.0.jar"/>
+				<include name="backport-util-concurrent-3.0.0.jar"/>
+
+				<include name="hsqldb.jar"/>
+			</lib>
+			<lib dir="${lib.dir}/spring">
+				<include name="org.springframework.aop-3.0.5.RELEASE.jar"/>
+				<include name="org.springframework.core-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.context-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.context.support-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.beans-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.jdbc-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.transaction-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.asm-3.0.5.RELEASE.jar" />
+				<include name="org.springframework.expression-3.0.5.RELEASE.jar" />
+			</lib>
+			<lib dir="${lib.dir}/springsecurity">
+				<include name="spring-security-core-3.1.0.M2.jar"/>
+			</lib>
+
+		</war>
+	</target>
+
+	<!--
+	<target name="deploy">
+		<copy file="uwt.war" todir="." />
+	</target>
+	-->
+
+	<target name="create-install" description="Create WEB installation" depends="create-war">
+
+		<mkdir dir="${install.bs.enterprise.web.dir}" />
+
+		<!-- Copy distribution WAR file to installation directory -->
+		<copy todir="${install.bs.enterprise.web.dir}" preservelastmodified="true" flatten="true">
+			<fileset dir="${dist.dir}" includes="${install.bs.enterprise.web}-${version}.war" />
+		</copy>
+		
+		<!-- Raname distribution WAR file to 'bs.war' -->
+		<rename src="${install.bs.enterprise.web.dir}/${install.bs.enterprise.web}-${version}.war" dest="${install.bs.enterprise.web.dir}/bs.war" />
+
+		<!-- Create installation ZIP file --> 
+		<zip destfile="${target.dir}/${install.bs.enterprise.web}-${version}.zip" basedir="${install.bs.enterprise.web.dir}" />
+		
+		<!-- Clear installation directory -->
+		<delete dir="${install.bs.enterprise.web.dir}" />
+		
+	</target>
+</project>

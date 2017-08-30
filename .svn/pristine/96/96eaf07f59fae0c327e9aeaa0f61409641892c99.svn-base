@@ -1,0 +1,28 @@
+
+ANT tasks
+==================================================================================================
+
+
+clean-script-result			     Clean result database folder
+
+
+script-create-db                 Generate SQL script for create database (tables, sequences, constraints, views) 
+
+script-create-views              Generate SQL script for create views
+
+script-init-db                   Generate SQL script for insert into database init information (important for starting)
+
+script-populate-db               Generate SQL script for insert into database begin information (doesn't important for starting)
+
+
+
+script-result-all-dbs            Generate result SQL scripts for create all databases (live and demo) 
+
+script-result-db                 Generate result SQL script for create database
+
+script-result-db-demo            Generate result SQL script for create demo database 
+
+
+
+
+

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SystemInfo" class="org.plazmaforge.bsolution.base.common.beans.SystemInfo" table="SYS_INFO">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationHeader"  required="true" />
+        	<attribute name="systemInit" column="IS_INIT" type="Boolean"/>
+        	<attribute name="appVersion" column="APP_VERSION" type="String" />
+        	<attribute name="dbVersion" column="DB_VERSION" type="String" />
+        </attributes>
+    </entity>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface-config provider="Plazma Forge" version="1.0">
+  <interface name="All" />
+  <interface name="BankAndCash" />
+  <interface name="Sale" />
+  <interface name="Purchase" />
+  <interface name="Inventory" />
+  <interface name="Accounting" />
+  <interface name="HR" />
+  <interface name="Payroll" />
+  <interface name="Project" />
+  <interface name="Admin" />
+</interface-config>
+

@@ -1,0 +1,29 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeeVacation" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeVacation" table="EMPLOYEE_VACATION" extends-class="org.plazmaforge.bsolution.document.common.beans.Document">
+       	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+    	<aliases>
+    		<alias name="employeeName" attribute="employee.person.name"/>
+    	</aliases>
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>    
+        	<attribute name="startDate" column="START_DATE" type="Date" />
+        	<attribute name="endDate" column="END_DATE" type="Date" />
+        	<attribute name="day" column="VACATION_DAY" type="Integer" />
+        	<attribute name="addDay" column="ADD_DAY" type="Integer" />
+        	<attribute name="workStartDate" column="WORK_START_DATE" type="Date" />
+        	<attribute name="workEndDate" column="WORK_END_DATE" type="Date" />
+        	<attribute name="averangeAmount" column="AVERANGE_AMOUNT" type="Double" />
+        	<attribute name="quarterPremium" column="QUARTER_PREMIUM" type="Double" />
+        	<attribute name="yearPremium" column="YEAR_PREMIUM" type="Double" />
+        	<attribute name="singlePremium" column="SINGLE_PREMIUM" type="Double" />
+        	<reference name="employee" column="EMPLOYEE_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader"  required="true" />
+        	<reference name="vacationAverangeType" column="VACATION_AVERANGE_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.VacationAverangeType" />
+        	<reference name="vacationCalculate" column="VACATION_CALCULATE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.VacationCalculate"  required="true" />
+        	<reference name="addVacationCalculate" column="ADD_VACATION_CALCULATE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.VacationCalculate" />
+        	<reference name="vacationType" column="VACATION_TYPE_ID" class="org.plazmaforge.bsolution.payroll.common.beans.VacationType"  required="true" />
+        	<collection name="averangeItems" join-class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeVacationAverange" join-attribute="employeeVacation" cascade="all"/>
+        </attributes>
+     </joined-entity>
+

@@ -1,0 +1,15 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProjectStage" class="org.plazmaforge.bs.project.shared.entities.ProjectStage" table="PROJECT_STAGE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<attribute name="orderNumber" column="ORDER_NUMBER" type="Integer" />
+        	<attribute name="averangeDuration" column="AVERANGE_DURATION" type="Integer" />
+        	<attribute name="fromBegin" column="FROM_BEGIN" type="Integer" />        
+        	<reference name="projectType" column="PROJECT_TYPE_ID" class="org.plazmaforge.bs.project.shared.entities.ProjectType" />
+        	<reference name="projectStageGroup" column="PROJECT_STAGE_GROUP_ID" class="org.plazmaforge.bs.project.shared.entities.ProjectStageGroup" />
+        </attributes>        
+     </entity>
+

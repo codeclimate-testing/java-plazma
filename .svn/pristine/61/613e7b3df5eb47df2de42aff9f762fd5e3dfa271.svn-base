@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<association-config xmlns="http://plazmaforge.org/config/association-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" provider="Plazma Forge" version="1.0">
+  <association name="InventoryRest" class="org.plazmaforge.bsolution.inventory.common.beans.InventoryRest" />
+  <association name="InventoryMove" class="org.plazmaforge.bsolution.inventory.common.beans.InventoryMove" />
+  <association name="InventoryWriteoff" class="org.plazmaforge.bsolution.inventory.common.beans.InventoryWriteoff" />
+  <association name="GoodsOutcome" class="org.plazmaforge.bsolution.goods.common.beans.GoodsOutcome" />
+  <association name="GoodsIncome" class="org.plazmaforge.bsolution.goods.common.beans.GoodsIncome" />
+  <association name="PaymentIncome" class="org.plazmaforge.bsolution.bank.common.beans.PaymentIncome" />
+  <association name="PaymentOutcome" class="org.plazmaforge.bsolution.bank.common.beans.PaymentOutcome" />
+  <association name="EmployeeReception" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeReception" />
+  <association name="EmployeeDischarge" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeDischarge" />
+  <association name="EmployeeVacation" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeVacation" />
+  <association name="EmployeeSicklist" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeeSicklist" />
+  <association name="SaleInvoice" class="org.plazmaforge.bsolution.sale.common.beans.SaleInvoice" />
+  <association name="Contract" class="org.plazmaforge.bsolution.finance.common.beans.Contract" />
+  <association name="Store" class="org.plazmaforge.bsolution.organization.common.beans.Store" />
+  <association name="Department" class="org.plazmaforge.bsolution.organization.common.beans.Department" />
+  <association name="Locality" class="org.plazmaforge.bsolution.contact.common.beans.Locality" />
+  <association name="City" class="org.plazmaforge.bsolution.contact.common.beans.City" />
+</association-config>
+

@@ -1,0 +1,48 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Drugstore" class="org.plazmaforge.bsolution.organization.common.beans.Drugstore" table="DRUGSTORE">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.organization.common.services.GenericWarehouseService</property>
+    	</config>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer">
+        		<generator type="sequence">
+        			<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+        		</generator>
+        	</key>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>        
+        	<attribute name="parentId" column="PARENT_ID" type="Integer" />
+        </attributes>
+        <triggers>
+    		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    		
+    		<trigger type="AfterInsert">
+    			<script>
+    				CALL warehouseManager->postInsert(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL warehouseManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    		
+    	</triggers>	
+        
+     </entity>
+

@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="TransportContractInt"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="ID" isForPrompting="false" class="java.lang.Integer">
+		<defaultValueExpression ><![CDATA[new Integer(0)]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT
+ D.ID,
+ D.DOCUMENT_NO,
+ D.DOCUMENT_DATE,
+ D.ORGANIZATION_ID,
+ D.PARTNER_ID,
+
+ O.NAME AS ORGANIZATION_NAME,
+ O.NAME_EN AS ORGANIZATION_NAME_EN,
+ O.NEC AS ORGANIZATION_NEC,
+ C.ORGANIZATION_PERSON,
+ C.ORGANIZATION_PERSON_EN,
+ C.ORGANIZATION_PERSON_DETAIL,
+ C.ORGANIZATION_PERSON_DETAIL_EN,
+ C.ORGANIZATION_PERSON_ON_BAS,
+ C.ORGANIZATION_PERSON_ON_BAS_EN,
+ C.ORGANIZATION_ADDRESS,
+ C.ORGANIZATION_ADDRESS_EN,
+ C.ORGANIZATION_PHONE,
+ C.ORGANIZATION_FAX,
+ OA.ACCOUNT_NO AS ORGANIZATION_ACCOUNT_NO,
+ OB.BIC AS ORGANIZATION_BANK_BIC,
+ C.ORGANIZATION_BANK_NAME,
+ C.ORGANIZATION_BANK_NAME_EN,
+
+ P.NAME AS PARTNER_NAME,
+ P.NAME_EN AS PARTNER_NAME_EN,
+ P.NEC AS PARTNER_NEC,
+ C.PARTNER_PERSON,
+ C.PARTNER_PERSON_EN,
+ C.PARTNER_PERSON_DETAIL,
+ C.PARTNER_PERSON_DETAIL_EN,
+ C.PARTNER_PERSON_ON_BAS,
+ C.PARTNER_PERSON_ON_BAS_EN,
+ C.PARTNER_ADDRESS,
+ C.PARTNER_ADDRESS_EN,
+ C.PARTNER_PHONE,
+ C.PARTNER_FAX,
+ PA.ACCOUNT_NO AS PARTNER_ACCOUNT_NO,
+ PB.BIC AS PARTNER_BANK_BIC,
+ C.PARTNER_BANK_NAME,
+ C.PARTNER_BANK_NAME_EN
+
+
+FROM 
+ DOCUMENT D
+ INNER JOIN FINANCE_DOCUMENT F ON D.ID = F.ID
+ INNER JOIN CONTRACT C ON D.ID = C.ID
+ INNER JOIN PARTNER O ON O.ID = D.ORGANIZATION_ID
+ INNER JOIN PARTNER P ON P.ID = D.PARTNER_ID
+ LEFT JOIN BANK_ACCOUNT OA ON OA.ID = C.ORGANIZATION_BANK_ACCOUNT_ID
+ LEFT JOIN BANK_ACCOUNT PA ON PA.ID = C.PARTNER_BANK_ACCOUNT_ID
+ LEFT JOIN V_BANK OB ON OB.ID = OA.BANK_ID
+ LEFT JOIN V_BANK PB ON PB.ID = PA.BANK_ID
+WHERE D.ID = $P{ID}]]></queryString>
+
+	<field name="ID" class="java.lang.Integer"/>
+	<field name="DOCUMENT_NO" class="java.lang.String"/>
+	<field name="DOCUMENT_DATE" class="java.sql.Date"/>
+	<field name="ORGANIZATION_ID" class="java.lang.Integer"/>
+	<field name="PARTNER_ID" class="java.lang.Integer"/>
+	<field name="ORGANIZATION_NAME" class="java.lang.String"/>
+	<field name="ORGANIZATION_NAME_EN" class="java.lang.String"/>
+	<field name="ORGANIZATION_NEC" class="java.lang.String"/>
+	<field name="ORGANIZATION_PERSON" class="java.lang.String"/>
+	<field name="ORGANIZATION_PERSON_EN" class="java.lang.String"/>
+	<field name="ORGANIZATION_PERSON_DETAIL" class="java.lang.String"/>
+	<field name="ORGANIZATION_PERSON_DETAIL_EN" class="java.lang.String"/>
+	<field name="ORGANIZATION_PERSON_ON_BAS" class="java.lang.String"/>
+	<field name="ORGANIZATION_PERSON_ON_BAS_EN" class="java.lang.String"/>
+	<field name="ORGANIZATION_ADDRESS" class="java.lang.String"/>
+	<field name="ORGANIZATION_ADDRESS_EN" class="java.lang.String"/>
+	<field name="ORGANIZATION_PHONE" class="java.lang.String"/>
+	<field name="ORGANIZATION_FAX" class="java.lang.String"/>
+	<field name="ORGANIZATION_ACCOUNT_NO" class="java.lang.String"/>
+	<field name="ORGANIZATION_BANK_BIC" class="java.lang.String"/>
+	<field name="ORGANIZATION_BANK_NAME" class="java.lang.String"/>
+	<field name="ORGANIZATION_BANK_NAME_EN" class="java.lang.String"/>
+	<field name="PARTNER_NAME" class="java.lang.String"/>
+	<field name="PARTNER_NAME_EN" class="java.lang.String"/>
+	<field name="PARTNER_NEC" class="java.lang.String"/>
+	<field name="PARTNER_PERSON" class="java.lang.String"/>
+	<field name="PARTNER_PERSON_EN" class="java.lang.String"/>
+	<field name="PARTNER_PERSON_DETAIL" class="java.lang.String"/>
+	<field name="PARTNER_PERSON_DETAIL_EN" class="java.lang.String"/>
+	<field name="PARTNER_PERSON_ON_BAS" class="java.lang.String"/>
+	<field name="PARTNER_PERSON_ON_BAS_EN" class="java.lang.String"/>
+	<field name="PARTNER_ADDRESS" class="java.lang.String"/>
+	<field name="PARTNER_ADDRESS_EN" class="java.lang.String"/>
+	<field name="PARTNER_PHONE" class="java.lang.String"/>
+	<field name="PARTNER_FAX" class="java.lang.String"/>
+	<field name="PARTNER_ACCOUNT_NO" class="java.lang.String"/>
+	<field name="PARTNER_BANK_BIC" class="java.lang.String"/>
+	<field name="PARTNER_BANK_NAME" class="java.lang.String"/>
+	<field name="PARTNER_BANK_NAME_EN" class="java.lang.String"/>
+
+
+		<group  name="page1" isStartNewPage="true" >
+			<groupExpression><![CDATA[null]]></groupExpression>
+			<groupHeader>
+			<band height="777"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="79"
+						width="255"
+						height="97"
+						key="textField-1"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{ORGANIZATION_NAME_EN} == null ? "________" : $F{ORGANIZATION_NAME_EN} ) 
++ ", represented by the " 
++ ($F{ORGANIZATION_PERSON_EN} == null ? "________" : $F{ORGANIZATION_PERSON_EN} ) 
++ ", acting in according with the "
++ ($F{ORGANIZATION_PERSON_ON_BAS_EN} == null ? "________" : $F{ORGANIZATION_PERSON_ON_BAS_EN} ) 
++ ", hereinafter referred to as \"Contractor\", on the one part, and " 
+
++ ($F{PARTNER_NAME_EN} == null ? "________" : $F{PARTNER_NAME_EN} ) 
++ " represented by the " 
++ ($F{PARTNER_PERSON_EN} == null ? "________" : $F{PARTNER_PERSON_EN} ) 
++ " acting in according with the "
++ ($F{PARTNER_PERSON_ON_BAS_EN} == null ? "________" : $F{PARTNER_PERSON_ON_BAS_EN} ) 
++ ", hereinafter referred to as \"Client\", on the other part, hereinafter referred to as the Parties, have made this Agreement on the following:"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="5"
+						y="179"
+						width="255"
+						height="595"
+						key="staticText-9"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[1.SUBJECT OF AGREEMENT
+
+1.1. Subject of this Agreement shall be an arrangement of international transportation.
+
+1.2. The specification of goods, the amount, terms of delivery, the rates (including the Contractors fee) shall be specified in the Addenda hereto.
+
+
+2. GENERAL TERMS.
+
+2.1. Client shall act in its name. 
+
+2.2. Contractor shall act in its name.
+
+2.3. The Client shall entrust, and the Contractor shall undertake to accept, arrange transshipment, deliveries and forwarding of imported and exported goods of the Client, which transshipment shall be performed in time and on the terms specified hereunder and addenda hereto. 
+
+
+3. POWERS AND OBLIFATIONS OF CLIENT.
+
+3.1.1. Client shall preliminary advise Contractor on required quantity of vehicles, necessary for transportation of goods, and type of goods, as well as date and time of loading, destinations. This advice shall be deemed duly made if committed in writing or sent by fax or E-mail.
+
+
+
+
+3.1.2. For any concrete transportation the Parties sign the appropriate Transport order with indication of basic and additional terms of transportation which is a part of this Agreement. The Transport order signs not later than 24 hours before vehicle providing for loading.
+
+
+
+3.2. Client shall: 
+
+3.2.1. Loading/unloading and customs clearance of vehicles within five business days (three business days for loading, two business days for unloading) since arrival of vehicle excluding Sundays and holidays.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="267"
+						y="178"
+						width="255"
+						height="596"
+						key="staticText-10"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[1.ПРЕДМЕТ ДОГОВОРА.
+
+1.1. Предметом настоящего Договора является организация международной перевозки.
+
+1.2. Номенклатура груза, объем, транспортные условия поставки, ставки (включая вознаграждение Исполнителя) определяются в соответствующих приложениях к настоящему Договору.
+
+2.ОБЩИЕ ПОЛОЖЕНИЯ.
+
+2.1. Заказчик выступает от своего имени. 
+
+2.2. Исполнитель выступает от своего имени.
+
+2.3. Заказчик поручает, а Исполнитель принимает на себя обязательства по приему, организации перевалок, перевозок и осуществлению транспортной экспедиции импортных и экспортных грузов Заказчика, перевозка которых производится в сроки и на условиях оговоренных в настоящем Договоре, приложениях и дополнениях к нему. 
+
+3. ПРАВА И ОБЯЗАННОСТИ ЗАКАЗЧИКА.
+
+3.1.1. Заказчик предварительно информирует Исполнителя о требуемом  количестве автомобилей, которые требуются для перевозки грузов, о характере груза, а также сообщает даты и время загрузки, пункты погрузки и выгрузки. Сообщение признается сделанным надлежащим образом, если оно совершено в письменном виде или посредством факсимильной или электронной связи.
+
+3.1.2. Для организации каждой конкретной перевозки стороны заключают соответствующую Заявку на перевозку с указанием  основных и дополнительных условий перевозки, которая является неотъемлемой частью данного Договора. Заявка заключается сторонами не позднее 24 часов до требуемого времени подачи автомобиля под загрузку.
+
+3.2. Заказчик обеспечивает:
+
+3.2.1. Загрузку/выгрузку и таможенное оформление автомобилей в течение пяти рабочих дней (три рабочих дня при погрузке, два рабочих дня при выгрузке) исключая воскресные дни и праздники. 
+]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="267"
+						y="79"
+						width="255"
+						height="96"
+						key="textField-2"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{ORGANIZATION_NAME} == null ? "________" : $F{ORGANIZATION_NAME} ) 
++ ", в лице " + ($F{ORGANIZATION_PERSON} == null ? "________" : $F{ORGANIZATION_PERSON} ) 
++ ", действующего на основании " + ($F{ORGANIZATION_PERSON_ON_BAS} == null ? "________" : $F{ORGANIZATION_PERSON_ON_BAS} ) 
++ ", именуемый в дальнейшем \"Исполнитель\", с одной стороны и " 
+
++ ($F{PARTNER_NAME} == null ? "________" : $F{PARTNER_NAME} ) 
++ " в лице " + ($F{PARTNER_PERSON} == null ? "________" : $F{PARTNER_PERSON} ) 
++ " действующего на основании " + ($F{PARTNER_PERSON_ON_BAS} == null ? "________" : $F{PARTNER_PERSON_ON_BAS}) 
++ ", именуемая в дальнейшем \"Заказчик\" с другой стороны, именуемые в дальнейшем \"Стороны\", заключили настоящий Договор о нижеследующем:"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="5"
+						y="1"
+						width="255"
+						height="14"
+						key="staticText-11"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[FORWARDING AGREEMENT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="260"
+						y="1"
+						width="255"
+						height="14"
+						key="staticText-12"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="ARIALBD.TTF" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[ДОГОВОР]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="15"
+						width="255"
+						height="14"
+						key="textField-3"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["No " + ($F{DOCUMENT_NO} == null ? "" : $F{DOCUMENT_NO})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="260"
+						y="29"
+						width="255"
+						height="14"
+						key="textField-4"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="ARIALBD.TTF" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["No " + ($F{DOCUMENT_NO} == null ? "" : $F{DOCUMENT_NO})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="260"
+						y="15"
+						width="255"
+						height="14"
+						key="staticText-13"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="ARIALBD.TTF" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[НА ЭКСПЕДИРОВАНИЕ  ГРУЗОВ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="130"
+						y="43"
+						width="130"
+						height="14"
+						key="textField-5"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" pdfFontName="Helvetica" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{DOCUMENT_DATE} == null ? "\"__\" ____" : (new SimpleDateFormat("\"dd\" MMM yyyy", new Locale("en"))).format($F{DOCUMENT_DATE}))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="385"
+						y="43"
+						width="130"
+						height="14"
+						key="textField-6"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isBold="false" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{DOCUMENT_DATE} == null ? "\"__\" ____" : (new SimpleDateFormat("\"dd\" MMM yyyy")).format($F{DOCUMENT_DATE}))]]></textFieldExpression>
+				</textField>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="page2" isStartNewPage="true" >
+			<groupExpression><![CDATA[null]]></groupExpression>
+			<groupHeader>
+			<band height="777"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="5"
+						y="1"
+						width="255"
+						height="752"
+						key="staticText-7"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[3.2.2. In case of any demurrage of vehicles to be loaded/unloaded over the time specified Client shall pay to Contractor 100 _ for each day in delay of each vehicle with written confirmation of Client's fault (receipts, protocols etc.).
+
+
+4. POWERS AND OBLIGATIONS OF CONTRACTOR.
+
+4.1. Contractor shall confirm positioning empty vehicles in writing before provision of vehicles to be loaded. Contractor shall provide as per Client's request necessary vehicles to be loaded in due time and due amount. Vehicles shall be in perfect working order and serve as long-distance international vehicles. Provision of any vehicle to be loaded with parameters not meeting provisions of Client's request and not suitable for such goods transportation shall be deemed as non-provision of vehicle.
+
+
+
+4.2. Contractor shall ensure safety of goods for transportation, as well as check the amount and conditions of goods while loading and unloading, reliability of fastening. Safe goods shall be deemed as goods delivered with unsealed customs stamp or that of consignor without any visible signs of illegal opening of cargo containers (such opening for appropriate customs examination of goods with further resealing of containers and appropriate notice in cargo and customs documents). 
+
+
+4.3. In case of goods being unsafe, in any third parties' fault, Contractor shall take all steps to minimize damage, and issue documents with respect to evidence to seal disclosure, and immediately advise Client thereof. Contractor shall duly inform Client on all cases of any inforced stops of vehicle, wrecks and other unforeseen circumstances, which prevent duly delivery of goods.
+
+
+
+4.4. In case of any delay in goods delivery with all appropriate papers, provided by Client, due to any demurrages at customs check-points, or ferry transportation, or any other places Contractor shall provide documents required and proving the occurred delay.
+
+
+5. PAYMENTS
+
+5.1. Payments between Client and Contractor for forwarding services shall be effected in US dollars or EURO and pursuant to the quote agreed in writing and specified in Transport order.
+
+
+5.2. Client shall effect payment by banking transfer to Contractor's account against issued invoices. Provision of invoice is allowed by facsimile with further sending of original. The date of payment of invoice shall be the date of writing of the money off the Client's invoice. 
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="266"
+						y="2"
+						width="255"
+						height="751"
+						key="staticText-8"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[3.2.2. В случае простоя автомобилей под погрузкой/выгрузкой свыше указанных сроков Заказчик уплачивает Исполнителю  100 _ за каждые сутки простоя одного автомобиля при наличии письменных доказательств вины Заказчика (квитанций, протоколов).
+
+4. ПРАВА И ОБЯЗАННОСТИ ИСПОЛНИТЕЛЯ
+
+4.1. Исполнитель подтверждает подачу а/м в письменном виде до момента подачи автомобилей под загрузку. Исполнитель обеспечивает в соответствии с заявкой Заказчика подачу под загрузку требуемых автомобилей в срок и в согласованном количестве. Автомобили должны быть технически исправны и предназначены для перевозки грузов в международном сообщении. Подача под загрузку автомобиля с параметрами, не соответствующими заявке Заказчика и не пригодного для перевозки данного груза, приравнивается к неподаче  автомобиля.
+
+4.2. Исполнитель обеспечивает сохранность принятых к перевозке грузов. Сохранным считается груз, доставленный под ненарушенной таможенной пломбой или пломбой  грузоотправителя при отсутствии видимых следов несанкционированного вскрытия грузового пространства (таковым не считается промежуточный таможенный досмотр груза при наложении новой таможенной пломбы и выполнении соответствующих отметок в товаротранспортных и таможенных документах).
+
+
+4.3. В случае не сохранности груза, возникшей по вине третьих лиц, Исполнитель предпринимает все меры к уменьшению размера ущерба, документально оформляет факт повреждения пломб, немедленно извещает Заказчика. Исполнитель  незамедлительно информирует Заказчика о всех случаях вынужденной задержки автомобилей в пути, авариях и других  непредвиденных обстоятельствах, препятствующих своевременной доставке груза.
+
+4.4. В случае задержки в доставке груза при наличии всех необходимых документов, предоставляемых Заказчиком, по причине простоев на погранпереходах, либо паромной переправе, либо в иных пунктах Исполнитель обязан предоставить необходимые документы, подтверждающие обоснование произшедшей задержки.
+
+5. РАСЧЕТЫ
+
+5.1. Расчеты между Заказчиком и Исполнителем за транспортно-экспедиторское обслуживание, производятся в долларах США или ЕВРО и на основании письменно согласованной ставки, указанной в Заявке на перевозку.
+
+5.2. Заказчик производит оплату путем банковского перевода на счет Исполнителя согласно выставленных счетов. Передача счета допускается по факсу с дальнейшей передачей оригинала. Датой оплаты счета является дата списания денежных средств со счета Заказчика.
+]]></text>
+				</staticText>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="page3" isStartNewPage="true" >
+			<groupExpression><![CDATA[null]]></groupExpression>
+			<groupHeader>
+			<band height="777"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="5"
+						y="1"
+						width="255"
+						height="766"
+						key="staticText-16"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[5.3. Under the term "rate" is understood the cost of delivery collected by Contractor.
+
+
+5.4. Bank commission of Client bank and Client corresponding born by Client, Bank commission of Contractor bank and Contractor corresponding born by Contractor. 
+
+
+6. LIABILITY OF PARTIES.
+
+6.1. In case of default or unduly performance of obligations hereunder, parties shall be materially liable in accordance with legislation of Ukraine.
+
+
+6.2. Parties shall take all steps to ensure all disputes and controversies, which may arise out of, or in connection with, this Agreement, by means of negotiations. 
+In case of disagreement over disputes and controversies, they shall be resolved with legislation of Ukraine.
+
+
+6.3. In case of Contractor's unreasonable violation of terms of performance of this Agreement, specified in cl. 2.3 hereunder and / or in Transport order, he shall pay Client penalty of 100 USD  per each day in delay until obligations performed in full, but not over the carriage cost specified in Transport order.
+
+
+6.4. Party that has to perform its obligations involved third party shall be liable for default of unduly performance of obligations by such third party, as if for its own actions and obligations.
+
+
+6.5. In case of full or partial loss of goods   confirmed fault of Contractor, Client shall be entitled for compensation of any losses in full, which losses relate to such goods loss. Contractor shall compensate for such losses.. 
+
+6.6. Sanctions payments specified in cl. 6.3. hereunder shall not release Contractor from compensation of losses in terms uncovered by sanction payments.
+
+6.7. In case of Party renounce any present Transport order execution or being not able to fulfill it's obligations by this Agreement less than 24 hours before vehicle providing for loading - Party at fault should pay penalty 10% of Transport order rate to other Party. 
+
+
+
+
+7. FORCE-MAJEURE.
+
+7.1. Parties shall not be liable for partial or complete default, or unduly performance of their obligations hereunder, if such default (unduly performance) has been resulted by circumstances, which Parties have not been able to foresee and prevent by reasonable measures:
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="266"
+						y="1"
+						width="255"
+						height="766"
+						key="staticText-17"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[5.3. Под термином "ставка" для условий настоящего Договора понимается стоимость перевозки, взысканная Исполнителем.
+
+5.4. Банковская комиссия банка Заказчика и банка - корреспондента банка Заказчика оплачивается Заказчиком, банковская комиссия банка Исполнителя и банка - корреспондента банка Исполнителя оплачивается Исполнителем.
+
+6. ОТВЕТСТВЕННОСТЬ СТОРОН.
+
+6.1. В случае неисполнения или ненадлежащего исполнения обязательств по настоящему Договору, стороны несут материальную ответственность согласно  законодательству Украины.
+
+6.2. Стороны обязаны принять все меры к решению всех споров и разногласий, которые могут возникнуть из настоящего Договора или в связи с ним, путем переговоров. В случае, когда споры и разногласия не удается решить указанным путем, они решаются  согласно законодательству Украины.
+
+6.3. В случае нарушения Исполнителем сроков исполнения настоящего Договора, оговоренных в п. 2.3 и / или Заявке на перевозку, он уплачивает Заказчику пеню в размере 100 долларов США за каждый день просрочки до полного исполнения обязанностей, но не более общей стоимости перевозки.
+
+6.4. Сторона, привлекая к исполнению своих обязательств третье лицо, несет перед другой стороной ответственность за неисполнение или ненадлежащее исполнение обязательств этим третьим лицом, как за собственные действия.
+
+6.5. В случае полной, либо частичной утраты груза по вине Исполнителя, Заказчик имеет право на возмещение в полном объеме убытков, связанных с такой утратой. Убытки возмещаются Исполнителем. 
+
+
+6.6. Уплата неустойки, указанной в п.6.3. настоящего Договора, не освобождает Исполнителя от возмещения убытков в части не покрытой неустойкой.
+
+6.7. В случае если менее чем за 24 часа до времени подачи автомобиля на загрузку одна из сторон отказывается от выполнения соответствующей Заявки на перевозку, либо не имеет возможности исполнить условия настоящего Договора - виновная сторона выплачивает другой стороне штраф в размере 10% от стоимости данной перевозки согласованной в Заказе на перевозку.
+
+7. ФОРС-МАЖОР.
+
+7.1. Стороны не несут ответственности за частичное или полное неисполнение, либо   ненадлежащее исполнение своих  обязательств по настоящему Договору, если такое неисполнение (ненадлежащее исполнение) явилось прямым следствием
+]]></text>
+				</staticText>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="page4" isStartNewPage="true" >
+			<groupExpression><![CDATA[null]]></groupExpression>
+			<groupHeader>
+			<band height="777"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="5"
+						y="1"
+						width="255"
+						height="766"
+						key="staticText-18"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[fire, disaster, war, military operations of any nature, blockade, as well as resolutions of the R? Government and other transit route countries ("force-majeure"). On occurrence of force-majeure term for obligations to be performed shall be ratably extended for the time of presence of such force-majeure.
+
+
+
+
+
+
+If force-majeure under cl. 7.1 hereunder last over six months, each of Parties shall be entitled to refuse from further performance of obligations hereunder, and neither Party shall be entitled to compensate the other for losses due to force-majeure specified in cl.7.1 hereunder.
+
+
+
+
+
+7.2. Party which is unable to perform obligations hereunder shall notify the other Party within 24 hours since occurrence of force-majeure.
+
+
+7.3. Party which is unable to perform obligations hereunder shall confirm occurrence of force-majeure with a certificate from the regional Chamber of Commerce or any other international competent agency within 14 business days since date of occurrence of force-majeure.
+
+
+
+
+7.4. Absence of notice on force-majeure shall deprive the suffered party the right to refer to such force-majeure.
+
+
+8. TERM OF AGREEMENT.
+
+8.1. This Agreement is valid when signed by both parties and till 31.12.2008. Agreement may be terminated by either Party on 30 days prior duly notification of the other Party. Several termination of the Agreement shall not release either party from performance of obligations hereunder existing by the time of such notification of the other party.
+
+
+
+9. OTHER TERMS.
+
+9.1. Any changes and amendments hereto shall not be valid until made in writing and executed by the parties' representatives authorized thereof.
+
+
+9.2. Supplementary Agreements (protocols, addenda, amendments etc.) hereto shall be its integral part.
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="266"
+						y="1"
+						width="255"
+						height="766"
+						key="staticText-19"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[наступления обстоятельств, которые Стороны не могли предвидеть и предотвратить разумными средствами, а именно: пожара, стихийных бедствий, войны, военных операций любого характера, блокады, а также решений государственных органов и иных стран транзита (далее по тексту - форс-мажорные обстоятельства). В случае наступления указанных обстоятельств, срок исполнения обязательств отодвигается соразмерно времени, в течение которого будут действовать такие обстоятельства.
+
+Если обстоятельства, указанные в п. 7.1. настоящего Договора, будут продолжаться больше шести месяцев, то каждая из Сторон будет иметь право отказаться от дальнейшего исполнения обязательств по Договору и в этом случае ни одна из Сторон не будет иметь право на возмещение другой Стороной убытков, причиненных в результате возникновения обстоятельств, указанных в п.7.1 настоящего Договора.
+
+7.2. Сторона, для которой создалась невозможность исполнения обязательств по Договору, должна известить об этом другую Сторону в течение 24 часов с момента наступления обстоятельств форс-мажора.
+
+7.3. Сторона, для которой создалась невозможность исполнения обязательств по Договору, должна подтвердить наступление форс-мажорных обстоятельств Актом Региональной Торгово-Промышленной палаты или иной международной компетентной организации, в течение 14 рабочих дней с момента наступления обстоятельств форс-мажора.
+
+7.4. Отсутствие уведомления о наступлении форс-мажорных обстоятельств лишает потерпевшую сторону права ссылаться на эти обстоятельства.
+
+8. ДЕЙСТВИЕ ДОГОВОРА.
+
+8.1. Настоящий Договор вступает в силу с даты его подписания и действителен до 31.12.2008 г. Договор может быть расторгнут любой из Сторон после предварительного надлежащего уведомления другой Стороны за 30 дней. Одностороннее расторжение Договора не освобождает каждую из сторон от исполнения тех обязательств по Договору, которые уже возникли к моменту уведомления другой Стороны.
+
+9. ПРОЧИЕ УСЛОВИЯ.
+
+9.1. Любые изменения и дополнения к настоящему Договору действительны  при условии, если они совершены в письменной форме и подписаны уполномоченными на то представителями сторон.
+
+9.2. Дополнительные соглашения (протоколы, приложения, дополнения, изменения и т.п.) к настоящему Договору являются его неотъемлемой частью.
+]]></text>
+				</staticText>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="page5" isStartNewPage="true" >
+			<groupExpression><![CDATA[null]]></groupExpression>
+			<groupHeader>
+			<band height="777"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="5"
+						y="2"
+						width="255"
+						height="341"
+						key="staticText-20"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[9.3. All notices and communications shall be provided in writing. The shall be deemed duly made if sent by registered mail, cable, teletype, telex, tele-fax, e-mail or hand delivered at domiciles of parties and signed by appropriate officers on receipt.
+
+
+
+
+9.4. Issues uncovered by this Agreement shall be resolved pursuant to the Ukraine existing law.
+
+
+9.5. On execution of this Agreement all previous talks related thereof shall be invalidated.
+
+
+9.6. The present Agreement is to be signed by fax with further obligatory delivery of original documents.
+
+
+9.7. This Agreement has been made in Russian and English in two fold original copies, having equal legal power, one for each party.
+
+
+10. LEGAL ADDRESSES OF PARTIES.
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="266"
+						y="2"
+						width="255"
+						height="341"
+						key="staticText-21"
+						isPrintWhenDetailOverflows="true"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[9.3. Все уведомления и сообщения должны направляться в письменной форме. Сообщения будут считаться направленными надлежащим образом, если они посланы заказным письмом, по телеграфу, телетайпу, телексу, телефаксу, электронной почтой или доставлены лично по юридическим адресам сторон с получением под расписку соответствующими должностными лицами.
+
+9.4. Вопросы, не урегулированные настоящим Договором, подлежат разрешению на основе действующего законодательства Украины.
+
+9.5. После подписания настоящего Договора все предыдущие переговоры, связанные с ним, считаются недействительными.
+
+9.6. Настоящий Договор подписывается посредством факсимильной связи с последующей обязательной передачей оригинала. 
+
+9.7. Настоящий Договор составлен на русском и английском языках в двух подлинных экземплярах, имеющих одинаковую юридическую силу, по одному экземпляру для каждой из сторон.
+
+10. ЮРИДИЧЕСКИЕ АДРЕСА И БАНКОВСКИЕ РЕКВИЗИТЫ СТОРОН.
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="5"
+						y="348"
+						width="255"
+						height="14"
+						key="staticText-22"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[Client / Заказчик:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="266"
+						y="348"
+						width="255"
+						height="14"
+						key="staticText-23"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[Contractor / Исполнитель:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="6"
+						y="646"
+						width="255"
+						height="14"
+						key="staticText-24"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" pdfFontName="Helvetica" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Director _______________]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="266"
+						y="646"
+						width="255"
+						height="14"
+						key="staticText-25"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isBold="false" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[Директор _______________]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="364"
+						width="254"
+						height="19"
+						key="textField-7"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{PARTNER_NAME_EN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="267"
+						y="364"
+						width="254"
+						height="19"
+						key="textField-8"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORGANIZATION_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="5"
+						y="409"
+						width="26"
+						height="20"
+						key="staticText-26"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[Tel:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="6"
+						y="430"
+						width="25"
+						height="20"
+						key="staticText-27"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[Fax:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="32"
+						y="409"
+						width="228"
+						height="19"
+						key="textField-9"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{PARTNER_PHONE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="32"
+						y="430"
+						width="228"
+						height="19"
+						key="textField-10"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{PARTNER_FAX}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="386"
+						width="254"
+						height="19"
+						key="textField-11"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{PARTNER_ADDRESS_EN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="6"
+						y="451"
+						width="254"
+						height="37"
+						key="textField-12"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["c/a " + ($F{PARTNER_ACCOUNT_NO} == null ? "__________" : $F{PARTNER_ACCOUNT_NO}.trim()) 
++ " in the "
++ ($F{PARTNER_BANK_NAME_EN} == null ? "__________" : $F{PARTNER_BANK_NAME_EN})
++ ", Bank Code " 
++ ($F{PARTNER_BANK_BIC} == null ? "__________" : $F{PARTNER_BANK_BIC})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="5"
+						y="493"
+						width="25"
+						height="20"
+						key="staticText-28"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<text><![CDATA[UID:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="31"
+						y="493"
+						width="228"
+						height="19"
+						key="textField-13"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{PARTNER_NEC}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="267"
+						y="386"
+						width="254"
+						height="19"
+						key="textField-14"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORGANIZATION_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="267"
+						y="409"
+						width="26"
+						height="20"
+						key="staticText-29"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[Тел:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="294"
+						y="409"
+						width="228"
+						height="19"
+						key="textField-15"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORGANIZATION_PHONE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="294"
+						y="430"
+						width="228"
+						height="19"
+						key="textField-16"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORGANIZATION_FAX}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="268"
+						y="430"
+						width="25"
+						height="20"
+						key="staticText-30"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[Факс:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="268"
+						y="451"
+						width="254"
+						height="37"
+						key="textField-17"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["р/с " + ($F{ORGANIZATION_ACCOUNT_NO} == null ? "__________" : $F{ORGANIZATION_ACCOUNT_NO}.trim()) 
++ " в "
++ ($F{ORGANIZATION_BANK_NAME} == null ? "__________" : $F{ORGANIZATION_BANK_NAME})
++ ", МФО " 
++ ($F{ORGANIZATION_BANK_BIC} == null ? "__________" : $F{ORGANIZATION_BANK_BIC})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="267"
+						y="493"
+						width="48"
+						height="20"
+						key="staticText-31"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[ЕДРПОУ:UID:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="315"
+						y="493"
+						width="207"
+						height="19"
+						key="textField-18"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORGANIZATION_NEC}]]></textFieldExpression>
+				</textField>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="1"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="23"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="10"
+						y="0"
+						width="511"
+						height="20"
+						key="staticText-15"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font pdfFontName="ARIAL.TTF" isPdfEmbedded ="true" pdfEncoding ="Cp1251"/>
+					</textElement>
+				<text><![CDATA[Client: (Заказчик): __________________	                         Contractor (Исполнитель): ________________]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="522"
+						y="2"
+						width="12"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="1"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

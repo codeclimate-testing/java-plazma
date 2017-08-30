@@ -1,0 +1,25 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EmployeePayroll" class="org.plazmaforge.bsolution.payroll.common.beans.EmployeePayroll" table="EMPLOYEE_PAYROLL">
+    	<aliases>
+    		<alias name="employeeId" attribute="employee.id"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="organizationId" column="ORGANIZATION_ID" type="Integer"  required="true" />
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer"  required="true" />
+        	<reference name="employee" column="EMPLOYEE_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeHeader"  required="true" />
+        	<reference name="payroll" column="PAYROLL_ID" class="org.plazmaforge.bsolution.payroll.common.beans.Payroll"  required="true" />
+        	<attribute name="payrollDate" column="PAYROLL_DATE" type="Date" />
+        	<attribute name="payrollDay" column="PAYROLL_DAY" type="Integer" />
+        	<attribute name="payrollHour" column="PAYROLL_HOUR" type="Float" />
+        	<attribute name="payrollPercent" column="PAYROLL_PERCENT" type="Float" />
+        	<attribute name="amount" column="AMOUNT" type="Double" />
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+        	<attribute name="amountInc" column="AMOUNT_INC" type="Double" />
+        	<attribute name="amountDec" column="AMOUNT_DEC" type="Double" />
+        	<attribute name="overrideMode" column="OVERRIDE_MODE" type="Integer" />
+        	<attribute name="blockCalculate" column="IS_BLOCK_CALCULATE" type="Boolean"/>
+        	<attribute name="blockWork" column="IS_BLOCK_WORK" type="Boolean"/>
+        </attributes>
+    </entity>
+

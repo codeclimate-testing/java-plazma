@@ -1,0 +1,53 @@
+
+<html>
+<title>Documnets</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Documnets</h2>
+   <hr>
+   <br><br><br><br>
+
+   <h3  align="center">Menu <i>Documents</i></h3>
+   <br><br> 
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/documents-menu.png"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3  align="center">Create new document</h3>
+   Menu <b><i>Documents->New</i></b><br><br> 
+
+
+   <br><br><br><br>
+   <h3  align="center">Choose a document</h3>
+   Menu <b><i>Document->Choose</i></b><br><br>
+
+   
+</TD>
+</TR>
+
+</TABLE>
+
+
+
+</body>
+</html>
+
+

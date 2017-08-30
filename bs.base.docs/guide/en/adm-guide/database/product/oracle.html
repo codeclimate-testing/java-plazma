@@ -1,0 +1,95 @@
+
+<html>
+<title>Oracle</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Oracle</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Common</h3>
+
+Web site: <a target="_blank" href="http://www.oracle.com">http://www.oracle.com</a>
+
+   <h3 align="center">Create a database</h3>
+
+
+ <p>
+ Creating a structure of database and populate init data: 
+ <code>
+ <pre>
+ &lt;Oracle&gt;/BIN/sqlplus plazma/tiger @с:\Plazma\db\script\createdb\oracle\en\create_plazma_db.sql  1&gt;&gt;message.txt 2&gt;&gt;error.txt
+ </pre>
+ </code>
+
+
+ 
+ 
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC driver</h3>
+ 
+ <p>
+ You have to check the JDBC driver: 
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/jdbc/oracle/ojdbc14.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ You have to verify CLASSPATH for the JDBC driver in the file:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # Oracle 
+ lib/jdbc/oracle/ojdbc14.jar
+
+ </pre>
+ </code>
+
+
+ <br><br>
+
+
+   <h3 align="center">Connect to a database</h3>
+
+ <p>To connect you have to change properties in file &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>For example:
+
+ <p>
+ <code>
+ <pre>
+ # Set connection properties
+ jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+ jdbc.url=jdbc:oracle:thin:@localhost:1521:XE
+ jdbc.username=plazma
+ jdbc.password=tiger
+ </pre>
+ </code>
+ 
+
+
+
+</body>
+</html>
+
+

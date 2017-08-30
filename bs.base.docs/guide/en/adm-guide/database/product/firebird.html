@@ -1,0 +1,101 @@
+
+<html>
+<title>Firebird</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Firebird</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Common</h3>
+
+Web site: <a target="_blank" href="http://www.firebirdsql.org">http://www.firebirdsql.org</a>
+
+   <h3 align="center">Create a database</h3>
+
+ <p>
+ Creating the physical database file:
+ <code>
+ <pre>
+ &lt;Firebird&gt;/bin/isql
+
+ SQL> CREATE DATABASE 'c:\DATA\plazma.fdb' USER 'SYSDBA' PASSWORD 'masterkey';
+ SQL> EXIT;
+ </pre>
+ </code>
+
+ <p>
+ Creating a structure of database and populate init data:
+ <code>
+ <pre>
+ &lt;Firebird&gt;/bin/isql c:\DATA\plazma.fdb -i с:\Plazma\db\script\createdb\firebird\en\create_plazma_db.sql -u SYSDBA -p masterkey
+ </pre>
+ </code>
+ 
+ 
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC driver</h3>
+
+ <p>
+ You have to check the JDBC driver: 
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/jdbc/firebird/jaybird-full-2.1.6.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ You have to verify CLASSPATH for the JDBC driver in the file:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # Firebird 
+ lib/jdbc/firebird/jaybird-full-2.1.6.jar 
+ 
+ </pre>
+ </code>
+
+
+ <br><br>
+
+   <h3 align="center">Connect to a database</h3>
+
+ <p>To connect you have to change properties in file &lt;Plazma&gt;/conf/jdbc.properties.
+
+ <p>For example:
+
+ <p>
+ <code>
+ <pre>
+ # Set connection properties
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.fdb
+ jdbc.username=sysdba
+ jdbc.password=masterkey
+ </pre>
+ </code>
+ 
+
+
+
+</body>
+</html>
+
+

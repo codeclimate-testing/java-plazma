@@ -1,0 +1,10 @@
+
+	<entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Country" class="org.plazmaforge.bsolution.base.common.beans.Country" table="COUNTRY">
+		<attributes>
+			<key name="id" column="ID" type="Integer" generator-type="increment"/>
+			<attribute name="code" column="CODE" check="NotEmptyTrim | Size(2)"/>
+			<attribute name="code3" column="CODE3" check="NotEmptyTrim | Size(3)"/>
+			<attribute name="name" column="NAME" check="NotEmpty"/>
+			<attribute name="numericCode" column="NUMERIC_CODE"/>
+		</attributes>
+	</entity>

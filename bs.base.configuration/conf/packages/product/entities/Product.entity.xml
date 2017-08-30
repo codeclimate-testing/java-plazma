@@ -1,0 +1,67 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Product" class="org.plazmaforge.bsolution.product.common.beans.Product" table="PRODUCT">
+    	<aliases>
+    	   	<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="responsibleId" attribute="responsible.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="unitName" attribute="unit.name"/>
+    		<alias name="currencyName" attribute="currency.name"/>
+    		<alias name="productGroupId" attribute="productGroup.id"/>
+    		<alias name="productGroupName" attribute="productGroup.name"/>
+    	</aliases>
+    	<attributes>
+	        <key name="id" column="ID" type="Integer">
+    	        <generator type="sequence">
+     				<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+	       		</generator>
+    	  	</key>
+ 
+	        <attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="nameEn" column="NAME_EN" type="String"/>
+        	<attribute name="fullName" column="FULL_NAME" type="String" />
+        	<attribute name="barCode" column="BAR_CODE" type="String" />
+         
+        	<attribute name="costPrice" column="PRICE" type="Double" /> <!--  COST_PRICE = PRICE -->
+        	<attribute name="listPrice" column="LIST_PRICE" type="Double" />
+        
+	        <attribute name="currencyCostPrice" column="CURRENCY_PRICE" type="Double" />
+    	    <attribute name="currencyListPrice" column="CURRENCY_LIST_PRICE" type="Double" />
+        
+	        <attribute name="startDate" column="START_DATE" type="Date" />
+    	    <attribute name="endDate" column="END_DATE" type="Date" />
+	        <attribute name="note" column="NOTE" type="String" />
+    	    <attribute name="taxPercent" column="TAX_PERCENT" type="Float" />
+	        <attribute name="addPricePercent" column="ADDPRICE_PERCENT" type="Float" />
+
+    	    <attribute name="currencyRate" column="CURRENCY_RATE" type="Double" />
+	        <reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+    	    <reference name="productGroup" column="PRODUCT_GROUP_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductGroup" />
+        	<reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency" />
+        	<reference name="manufacturer" column="MANUFACTURER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" />
+        	<reference name="supplier" column="SUPPLIER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" />
+
+        	<attribute name="minQuantity" column="MIN_QUANTITY" type="Double" />
+        	<attribute name="availableQuantity" column="AVAILABLE_QUANTITY" type="Double" />
+        	<attribute name="reservedQuantity" column="RESERVED_QUANTITY" type="Double" />
+        	<attribute name="expectedQuantity" column="EXPECTED_QUANTITY" type="Double" />
+        
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactHeader" />
+        	<reference name="ledgerAccount" column="LEDGER_ACCOUNT_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount" />
+
+			<attribute name="length" column="DIM_LENGTH" type="Float" />
+			<attribute name="width" column="DIM_WIDTH" type="Float" />
+			<attribute name="height" column="DIM_HEIGHT" type="Float" />
+		
+			<attribute name="weight" column="WEIGHT" type="Float" />		
+			<attribute name="warrantyPeriod" column="WARRANTY_PERIOD" type="Integer" />		
+			<attribute name="imageFileName" column="IMAGE_FILE_NAME" type="String" />
+
+        	<collection name="unitList" join-class="org.plazmaforge.bsolution.product.common.beans.ProductUnit" join-attribute="product" cascade="all"/>
+        	<collection name="priceList" join-class="org.plazmaforge.bsolution.product.common.beans.ProductPrice" join-attribute="product" cascade="all"/>
+        	<collection name="instanceList" join-class="org.plazmaforge.bsolution.product.common.beans.ProductInstance" join-attribute="product" cascade="all"/>
+    	
+    	</attributes>
+    </entity>
+

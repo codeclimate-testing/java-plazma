@@ -1,0 +1,45 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Bank" class="org.plazmaforge.bsolution.bank.common.beans.Bank" table="BANK" extends-class="org.plazmaforge.bsolution.partner.common.beans.Partner">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>    
+        	<attribute name="bic" column="BIC" type="String" />
+        	<attribute name="correspondentAccount" column="CORRESPONDENT_ACCOUNT" type="String" />
+        	<attribute name="stoppedPercent" column="STOPPED_PERCENT" type="Float" />
+        </attributes>
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    	</triggers>        
+    </joined-entity>
+

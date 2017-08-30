@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="WarehouseMove" class="org.plazmaforge.bsolution.finance.common.beans.WarehouseMove" table="WAREHOUSE_MOVE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="owner" column="OWNER_ID" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument" required="true"/>        
+        	<attribute name="warehouseId" column="WAREHOUSE_ID" type="Integer" required="true" />
+        	<attribute name="mtrlResponsibleId" column="MTRL_RESPONSIBLE_ID" type="Integer"/>
+        	<attribute name="moveType" column="MOVE_TYPE" type="String"/>
+        </attributes>
+    </entity>
+

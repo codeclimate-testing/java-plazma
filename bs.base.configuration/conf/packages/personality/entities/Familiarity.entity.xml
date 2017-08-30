@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Familiarity" class="org.plazmaforge.bsolution.personality.common.beans.Familiarity" table="FAMILIARITY">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="child" column="IS_CHILD" type="Boolean"/>
+        </attributes>
+    </entity>
+

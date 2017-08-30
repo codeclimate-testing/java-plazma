@@ -1,0 +1,200 @@
+
+<html>
+<title>Database</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">База данных</h2>
+   <hr>
+   <br><br>
+
+
+ 
+
+   <p><b>Plazma</b> поддерживает следующие базы данных:
+   <b>
+   <ul>
+    <li><a href="product/oracle.html">Oracle</a>
+    <li><a href="product/postgresql.html">PostgreSQL</a>
+    <li><a href="product/mysql.html">MySQL</a>
+    <li><a href="product/firebird.html">Firebird</a>
+    <li><a href="product/hsql.html">HSQL</a>
+   </ul>
+   </b>
+
+
+
+   <h3 align="center">Создание базы данных</h3>
+
+
+ <p>Инсталляция <b>Plazma</b> включает физические файлы базы данных только для <b>HSQL</b>.<br>
+
+ Файлы размещены в каталоге &lt;Plazma&gt;/db/hsql.<br><br>
+
+ Если Вы хотите использовать базу данных других производителей, то Вам необходимо создать базу данных вручную (CREATE DATABASE...)
+ и выполнить соответствующие SQL скрипты на создание структуры базы и заполнения 
+ инициализирующими данными.<br>
+
+ Для создания базы данных можно использовать различные инструментальные средства.
+
+ <p>Например:
+ <b> 
+ <ul>
+   <li>Oracle - SQL* Plus
+   <li>PostgreSQL - pgAdmin
+   <li>MySQL Query Browser
+   <li>Firebird - ISQL
+   <li>HSQL - Database Manager (&lt;HSQL&gt;/demo/runManager.bat)
+  </ul>
+ </b>
+
+
+
+ 
+
+ <p>SQL скрипты размещены в папке &lt;Plazma&gt;/db/script.<br>
+
+ Вы можете запустить следующие скрипты для создания и заполнения новой базы данных:
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db.sql - рабочая база данных<br>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db_demo.sql - демонстрационная база данных<br>
+ </code>
+
+ <p>где<br> 
+
+ <code>&lt;database-vendor&gt;</code> - производитель базы данных (oracle, postgresql, mysql, firebird, hsql), <br>
+
+ <code>&lt;language&gt;</code> - язык (en, de, ru, uk)<br>
+
+ <p>Например для базы данных <b>Firebird</b> и русского языка:
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/firebird/ru/create_plazma_db.sql - рабочая база данных<br>
+  &lt;Plazma&gt;/db/script/createdb/firebird/ru/create_plazma_db_demo.sql - демонстрационная база данных<br>
+ </code>
+
+ <br><br>
+ Детальнее: 
+ <a href="product/oracle.html">Oracle</a>
+ <a href="product/postgresql.html">PostgreSQL</a>
+ <a href="product/mysql.html">MySQL</a>
+ <a href="product/firebird.html">Firebird</a>
+ <a href="product/hsql.html">HSQL</a>
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC драйверы</h3>
+ 
+
+ <p>Инсталляция <b>Plazma</b> включает все <b>JDBC</b> драйвера для поддерживаемых баз данных.<br>
+
+ <b>JAR</b> файлы размещены в папке &lt;Plazma&gt;/lib/&lt;database-vendor&gt;.<br>
+
+ Если Вы используете другие базы данных, то Вам необходимо загрузить драйверы из сайта производителя 
+ и добавить соответствующие файлы в <b>CLASSPATH</b>.
+
+ <br><br>
+ Детальнее: 
+ <a href="product/oracle.html">Oracle</a>
+ <a href="product/postgresql.html">PostgreSQL</a>
+ <a href="product/mysql.html">MySQL</a>
+ <a href="product/firebird.html">Firebird</a>
+ <a href="product/hsql.html">HSQL</a>
+
+ <br><br> <br><br>
+
+   <h3 align="center">Подключение к базе данных </h3>
+
+ <p>Для настройки подключения необходимо изменить соответствующие свойства
+ в файле &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>Например:
+
+ <p>
+ <code>
+ # Установка свойств подключения к базе данных Firebird <br>
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver<br>
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.fdb<br>
+ jdbc.username=sysdba<br>
+ jdbc.password=masterkey<br>
+ </code>
+ 
+
+ <br><br>
+ Детальнее: 
+ <a href="product/oracle.html">Oracle</a>
+ <a href="product/postgresql.html">PostgreSQL</a>
+ <a href="product/mysql.html">MySQL</a>
+ <a href="product/firebird.html">Firebird</a>
+ <a href="product/hsql.html">HSQL</a>
+
+
+
+
+ <br><br> <br><br>
+
+   <h3 align="center">Сводная информация</h3>
+    
+   
+
+ <table border="1">
+  <tr height="40">
+
+    <td>&nbsp; </td> <td align="center"><b>Oracle</b></td><td align="center" ><b>PostgreSQL</b></td><td align="center" ><b>MySQL</b></td><td align="center" ><b>Firebird</b></td><td  align="center" ><b>HSQL</b></td>
+
+  </tr>
+
+  <tr>
+    <td>Официальный сайт</td>  
+    <td align="center"><a target="_blank" href="http://www.oracle.com">http://www.oracle.com</a></td> 
+    <td align="center"><a target="_blank" href="http://www.postgresql.org">http://www.postgresql.org</a></td>
+    <td align="center"><a target="_blank" href="http://www.mysql.org">http://www.mysql.org</a></td>
+    <td align="center"><a target="_blank" href="http://www.firebirdsql.org">http://www.firebirdsql.org</a></td> 
+    <td align="center"><a target="_blank" href="http://hsqldb.org">http://hsqldb.org</a></td>  
+  </tr>
+
+  <tr>
+    <td>Файл/дамп базы данных</td>  <td align="center">-</td> <td align="center">-</td><td align="center">-</td><td align="center">-</td> <td align="center">В комплекте</td>  
+  </tr>
+
+  <tr>
+    <td>SQL скрипты (гернерация базы)</td> <td align="center">В комплекте</td><td align="center">В комплекте</td><td align="center">В комплекте</td><td align="center">В комплекте</td><td align="center">В комплекте</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Driver</td> <td align="center">В комплекте</td><td align="center">В комплекте</td><td align="center">В комплекте</td><td align="center">В комплекте</td><td align="center">В комплекте</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Driver Class</td> <td align="center">oracle.jdbc.driver.OracleDriver</td><td align="center">org.postgresql.Driver</td><td align="center">com.mysql.jdbc.Driver</td><td align="center">org.firebirdsql.jdbc.FBDriver</td><td align="center">org.hsqldb.jdbcDriver</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Url</td> <td align="center">jdbc:oracle:thin:@&lt;host&gt;[:&lt;port&gt;]:&lt;database&gt;</td><td align="center">jdbc:postgresql:[&lt;//host&gt;[:&lt;port&gt;/]]&lt;database&gt;</td><td align="center">jdbc:mysql://&lt;host&gt;[&lt:port&gt;]/&lt;database&gt;</td><td align="center">jdbc:firebirdsql:[//host[:port]/]&lt;database&gt;</td><td align="center">jdbc:hsqldb:hsql://&lt;host&gt;[:&lt;port&gt;]</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Url пример</td> <td align="center">jdbc:oracle:thin:@localhost:1521:XE</td><td align="center">jdbc:postgresql://localhost:5432/plazma</td><td align="center">jdbc:mysql://localhost:3306/plazma</td><td align="center">jdbc:firebirdsql:localhost/3050:C:\\plazma.fdb</td><td align="center">jdbc:hsqldb:hsql://localhost</td>  
+  </tr>
+
+
+  <tr>
+    <td>Порт по умолчанию</td> <td align="center">1521</td><td align="center">5432</td><td align="center">3306</td><td align="center">3050</td><td align="center">1476</td>  
+  </tr>
+
+ <table>
+</body>
+</html>
+
+

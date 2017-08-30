@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acceptor-config provider="Plazma Forge" version="1.0">
+  <acceptor name="OrganizationAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationAcceptor" />
+  <acceptor name="OrganizationPeriodAcceptor" class="org.plazmaforge.bsolution.base.common.acceptors.OrganizationPeriodAcceptor" />
+  <acceptor name="OrganizationPeriodDialogAcceptor" class="org.plazmaforge.bsolution.base.client.swt.acceptors.OrganizationPeriodDialogAcceptor" />
+  <acceptor name="OrganizationYearDialogAcceptor" class="org.plazmaforge.bsolution.base.client.swt.acceptors.OrganizationYearDialogAcceptor" />
+  <acceptor name="OrganizationBankAccountDialogAcceptor" class="org.plazmaforge.bsolution.bank.client.swt.acceptors.OrganizationBankAccountDialogAcceptor" />
+  <acceptor name="TaxReportByQuarterDialogAcceptor" class="org.plazmaforge.bsolution.finance.client.swt.acceptors.TaxReportByQuarterDialogAcceptor" />
+  <acceptor name="PensionReportByYearDialogAcceptor" class="org.plazmaforge.bsolution.finance.client.swt.acceptors.PensionReportByYearDialogAcceptor" />  
+  <acceptor name="PensionReport26ByYearDialogAcceptor" class="org.plazmaforge.bsolution.finance.client.swt.acceptors.PensionReport26ByYearDialogAcceptor" />
+  <acceptor name="PensionLabelByYearDialogAcceptor" class="org.plazmaforge.bsolution.finance.client.swt.acceptors.PensionLabelByYearDialogAcceptor" />  
+</acceptor-config>
+

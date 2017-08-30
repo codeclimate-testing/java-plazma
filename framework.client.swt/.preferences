@@ -1,0 +1,7 @@
+#Plazma Preferences
+#Wed Jun 08 14:38:42 EEST 2011
+desktop.AutoMaxWindows=true
+menu.bar.visible=true
+tree.menu.visible=true
+tool.bar.visible=true
+desktop.ShowTitle=false

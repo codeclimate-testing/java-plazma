@@ -1,0 +1,22 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductMove" class="org.plazmaforge.bsolution.finance.common.beans.ProductMove" table="PRODUCT_MOVE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="owner" column="OWNER_ID" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument" required="true"/>        
+        	<attribute name="productId" column="PRODUCT_ID" type="Integer" required="true"/>
+        	<attribute name="unitId" column="UNIT_ID" type="Integer" required="true"/>        
+        	<attribute name="unitRate" column="UNIT_RATE" type="Double"/>
+        	<attribute name="price" column="PRICE" type="Double"/>
+        	<attribute name="priceWithTax" column="PRICE_WITH_TAX" type="Double"/>
+        	<attribute name="taxPrice" column="TAX_PRICE" type="Double"/>        
+        	<attribute name="quantity" column="QUANTITY" type="Double"/>
+        	<attribute name="amount" column="AMOUNT" type="Double"/>
+        	<attribute name="amountWithTax" column="AMOUNT_WITH_TAX" type="Double"/>
+        	<attribute name="taxAmount" column="TAX_AMOUNT" type="Double"/>        
+        	<attribute name="accountQuantity" column="ACCOUNT_QUANTITY" type="Double"/>
+        	<attribute name="accountPrice" column="ACCOUNT_PRICE" type="Double"/>
+        	<attribute name="accountTaxPrice" column="ACCOUNT_TAX_PRICE" type="Double"/>
+        	<attribute name="accountPriceWithTax" column="ACCOUNT_PRICE_WITH_TAX" type="Double"/>
+        </attributes>
+    </entity>
+

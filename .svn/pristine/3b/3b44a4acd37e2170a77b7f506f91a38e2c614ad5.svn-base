@@ -1,0 +1,15 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.Car" table="CAR">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        	<attribute name="regNumber" column="REG_NUMBER" type="String"/>
+        	<attribute name="chassisNumber" column="CHASSIS_NUMBER" type="String" />
+        	<attribute name="engineVolume" column="ENGINE_VOLUME" type="Float"/>        
+        	<attribute name="manufactureYear" column="MANUFACTURE_YEAR" type="Integer"/>                
+        	<reference name="carMark" column="CAR_MARK_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarMark"/>        
+        	<reference name="carModel" column="CAR_MODEL_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarModel"/>        
+        	<reference name="carClass" column="CAR_CLASS_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarClass"/>
+        </attributes>                        
+    </entity>
+</entity-mapping>

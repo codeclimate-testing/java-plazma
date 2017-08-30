@@ -1,0 +1,28 @@
+<package-config>
+
+    <package id="Base" class="org.plazmaforge.bsolution.base.BasePackage"/>
+    <package id="Security"/>
+	<package id="Contact" class="org.plazmaforge.bsolution.contact.ContactPackage"/>    
+	<package id="Personality" class="org.plazmaforge.bsolution.personality.PersonalityPackage"/>
+	<package id="Organization" class="org.plazmaforge.bsolution.organization.OrganizationPackage"/>
+		
+	<package id="Document" class="org.plazmaforge.bsolution.document.DocumentPackage"/>
+	<package id="Employee" class="org.plazmaforge.bsolution.employee.EmployeePackage"/>	
+	<package id="Partner" class="org.plazmaforge.bsolution.partner.PartnerPackage"/>
+
+	<package id="Bank" class="org.plazmaforge.bsolution.bank.BankPackage"/>
+	<package id="Cash" class="org.plazmaforge.bsolution.cash.CashPackage"/>
+
+	<package id="Product" class="org.plazmaforge.bsolution.product.ProductPackage"/>
+	<package id="Payroll" class="org.plazmaforge.bsolution.payroll.PayrollPackage"/>
+		
+	<package id="Goods" class="org.plazmaforge.bsolution.goods.GoodsPackage"/>
+	<package id="Inventory"/>
+	<package id="Sale"/>
+	<package id="Purchase"/>
+	
+	<package id="Project"/>
+	<package id="Finance" class="org.plazmaforge.bsolution.finance.FinancePackage"/>
+
+	<package id="CarService" is-enable="true" class="org.plazmaforge.bsolution.carservice.CarServicePackage"/>	
+</package-config>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/application_1_4.xsd">
+<description>Application description</description>
+<display-name>Plazma ERP+CRM</display-name>
+<module>
+<ejb>plazma-framework-ejb-0.1.3b.jar</ejb>
+</module>
+</application>

@@ -1,0 +1,27 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Address" class="org.plazmaforge.bsolution.contact.common.beans.Address" table="ADDRESS">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="addressString" column="ADDRESS_STRING" type="String" />
+        	<attribute name="localityAddressString" column="LOCALITY_ADDRESS_STRING" type="String" />        
+        	<attribute name="fullAddressString" column="FULL_ADDRESS_STRING" type="String" />
+        
+        	<attribute name="zipCode" column="ZIP_CODE" type="String" />
+        	<attribute name="street" column="STREET" type="String" />
+        	<attribute name="houseNum" column="HOUSE_NUM" type="String" />
+        	<attribute name="caseNum" column="CASE_NUM" type="String" />
+        	<attribute name="apartNum" column="APART_NUM" type="String" />
+        	<attribute name="note" column="NOTE" type="String" />
+ 
+        	<reference name="addressType" column="ADDRESS_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.AddressType"  required="true" />
+        	<reference name="city" column="CITY_ID" class="org.plazmaforge.bsolution.contact.common.beans.City"/>
+        	<reference name="locality" column="LOCALITY_ID" class="org.plazmaforge.bsolution.contact.common.beans.Locality"/>
+        	<reference name="streetType" column="STREET_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.StreetType"/>
+        	<reference name="apartmentType" column="APARTMENT_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ApartmentType"/>        
+        	<reference name="contactableElement" column="CONTACTABLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactableElement" required="true"/>
+        	
+    	</attributes>
+    </entity>
+    
+

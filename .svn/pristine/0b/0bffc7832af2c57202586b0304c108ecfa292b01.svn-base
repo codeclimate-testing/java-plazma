@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-training" default="build">
+
+    <property file="build.properties"/>
+	
+	<path id="plazma-classpath">
+		<fileset dir="${lib.dir}">
+		   <include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${dist.dir}">
+		    <include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	
+	<target name="clean" description="Clean all output dirs (classes, etc.)">
+	    <delete dir="${classes.dir}"/>
+	</target>
+
+	 
+
+	<target name="build" description="Compile main source tree java files into class files (no-jarring)">
+		
+	    <mkdir dir="${classes.dir}"/>
+
+	    <javac destdir="${classes.dir}" deprecation="false" optimize="false" failonerror="true">
+	    	<src path="${src.dir}"/>
+	    	<classpath refid="plazma-classpath"/>
+	 	</javac>
+	    	
+	    <copy todir="${classes.dir}" preservelastmodified="true">
+	    	<fileset dir="${src.dir}">
+	    		<include name="**/*.xml"/>
+	    		<include name="**/*.properties"/>
+	    		<include name="**/*.jpg"/>
+	    		<include name="**/*.gif"/>
+	    		<include name="**/*.png"/>
+			</fileset>
+		</copy>
+
+	</target>
+	
+	
+	
+    <target name="create-jar-all" description="Create all jar files" depends ="create-jar-common, create-jar-server, create-jar-client"/>
+
+
+	<target name="create-jar-common" description="Create common jar">
+	   	<mkdir dir="${dist.dir}"/>
+	    <jar destfile="${dist.dir}/${bsolution.common.jar}" basedir="${classes.dir}">
+	         <manifest>
+	           <attribute name="Manifest-Version" value="1.0"/>
+			   <attribute name="Plazma-Version" value="${version}"/>          	
+	          </manifest>
+	          
+	          <include name="*.*"/>        	        	
+	          <include name="org/plazmaforge/bsolution/*/*.*"/>        	
+	          <include name="org/plazmaforge/bsolution/*/common/**"/>     
+	          
+        </jar>
+	</target>
+
+
+	<target name="create-jar-server" description="Create server jar">
+	   	<mkdir dir="${dist.dir}"/>
+	    <jar destfile="${dist.dir}/${bsolution.server.jar}" basedir="${classes.dir}">
+	        	
+	          <manifest>
+	            <attribute name="Manifest-Version" value="1.0"/>
+	            <attribute name="Plazma-Version" value="${version}"/>          	          	
+	          </manifest>
+	        	
+	          <include name="org/plazmaforge/bsolution/*/server/**"/>
+
+	     </jar>
+	 </target>	
+	
+	<target name="create-jar-client" description="Create client jar">
+	    	<mkdir dir="${dist.dir}"/>
+	        <jar destfile="${dist.dir}/${bsolution.client.jar}" basedir="${classes.dir}">
+	          <manifest>
+	            <attribute name="Manifest-Version" value="1.0"/>
+				<attribute name="Plazma-Version" value="${version}"/>          	
+	          </manifest>
+	        	
+	          <include name="org/plazmaforge/bsolution/*/client/swt/**"/>
+	        	
+	        </jar>
+    </target>
+	
+	
+</project>	

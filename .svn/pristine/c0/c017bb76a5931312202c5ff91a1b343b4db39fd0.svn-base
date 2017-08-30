@@ -1,0 +1,10 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PurchaseServ" class="org.plazmaforge.bsolution.purchase.common.beans.PurchaseServ" table="PURCHASE_SERV" extends-class="org.plazmaforge.bsolution.product.common.beans.ProductDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>
+        	<reference name="mtrlResponsible" column="MTRL_RESPONSIBLE_ID" class="org.plazmaforge.bsolution.organization.common.beans.MtrlResponsible" />
+        	<reference name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>
+        	<collection name="productItems" join-class="org.plazmaforge.bsolution.purchase.common.beans.PurchaseServItem" join-attribute="purchaseServ" cascade="all"/>
+        </attributes>
+    </joined-entity>
+

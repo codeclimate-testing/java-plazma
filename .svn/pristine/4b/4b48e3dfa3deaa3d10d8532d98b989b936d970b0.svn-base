@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='application'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.extjs.gxt.ui.GXT"/>  
+
+  <inherits name='com.google.gwt.user.theme.clean.Clean'/>
+  <!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <inherits name='org.plazmaforge.framework.Core'/>
+  <inherits name='org.plazmaforge.framework.Ext'/>
+  <inherits name='org.plazmaforge.framework.UWT'/>
+  <inherits name='org.plazmaforge.framework.UWTModule'/>
+  <inherits name='org.plazmaforge.framework.Config'/>
+  
+  <inherits name='org.plazmaforge.BSShared'/>
+  <inherits name='org.plazmaforge.BSClient'/>
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='org.plazmaforge.bs.web.client.WebApplication'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+  
+
+  <!-- GXT: BeanModelGenerator for ModelMarker                    -->
+  <!-- GXT: Use own BeanModelGenerator for other marker           -->
+  <generate-with class="org.plazmaforge.framework.uwt.gxt.core.XBeanModelGenerator">
+        <when-type-assignable class="org.plazmaforge.framework.uwt.gxt.core.XBeanModelLookup"/>
+  </generate-with>  
+
+  <generate-with class="org.plazmaforge.framework.uwt.gxt.core.XFormCreatorGenerator">
+        <when-type-assignable class="org.plazmaforge.framework.uwt.gxt.core.XFormCreator"/>
+  </generate-with>  
+
+  <generate-with class="org.plazmaforge.framework.uwt.gxt.core.XEntityCreatorGenerator">
+        <when-type-assignable class="org.plazmaforge.framework.uwt.gxt.core.XEntityCreator"/>
+  </generate-with>  
+
+</module>

@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ProjectRoleEditForm" type="EditForm" title="@{ProjectRoleEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{ProjectRoleEditForm.codeLabel.text}"/><text-field property="code" width="100"/>
+				<label text="@{ProjectRoleEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{ProjectRoleEditForm.descriptionLabel.text}"/><text-area property="description" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

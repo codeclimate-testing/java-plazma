@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="40b33d5f" name="EMPLOYEE">
+      <drawing is-expanded="true" location="380,0" dimensions="301,561" />
+      <columns>
+        <column id="57c11cd9" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="41c9c6f5" name="ORGANIZATION_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="7ae4355f" name="LEDGER_ACCOUNT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="350206e3" name="EMPLOYEE_RANK_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="a6a1df3b" name="POSITION_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="ae1cf795" name="PERSON_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="cd7a1495" name="EMPLOYEE_CATEGORY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="2a18f120" name="DEPARTMENT_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="4a0edfa" name="PAYROLL_FORM_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="40ef07d4" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="a19c7d2e" name="IS_TAX" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="3aad738e" name="START_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="2c2b93bd" name="END_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="36c0f19b" name="EMPLOYEE_ACCOUNT" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="faab1907" name="TAX_PRIVILEGE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="da2cbfaf" name="SALARY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="ec5e9fa0" name="TARIFF" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="767a85d5" name="ADVANCE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="15,2" />
+        </column>
+        <column id="9bc7702d" name="PREMIUM_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="6,2" />
+        </column>
+        <column id="7d502e35" name="SICK_PERCENT" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="NUMERIC" size="6,2" />
+        </column>
+        <column id="23e0d037" name="TOTAL_SENIORITY_YEAR" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="bc3f9520" name="TOTAL_SENIORITY_MONTH" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="6518f57d" name="TOTAL_SENIORITY_DAY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="52a1f8d4" name="UNBROKEN_SENIORITY_YEAR" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="b7ca6ad2" name="UNBROKEN_SENIORITY_MONTH" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="36a26fc1" name="UNBROKEN_SENIORITY_DAY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="2e32b98b" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+      </columns>
+    </table>
+    <table id="61d088d6" name="JOB_POSITION">
+      <drawing is-expanded="true" location="20,280" dimensions="152,89" />
+      <columns>
+        <column id="bf66e7c5" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="a6469e12" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="280eb65c" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+      </columns>
+    </table>
+    <table id="649418f2" name="PERSON">
+      <drawing is-expanded="true" location="840,0" dimensions="258,403" />
+      <columns>
+        <column id="58d2607c" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="2084fb2b" name="COUNTRY_RESIDENCE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="68ad8d50" name="DIPLOMA_SPECIALITY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="2cffc1c1" name="LANGUAGE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="7db68b4c" name="FAMILY_STATUS_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="750cc343" name="NATIONALITY_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="ce93e784" name="DOCUMENT_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="f0e6ebcd" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="74e01f86" name="IDN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="1db354b2" name="DOCUMENT_SERIES" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="9041b3b4" name="DOCUMENT_NO" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="94c34d8c" name="DOCUMENT_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="195e1976" name="DOCUMENT_GIVEN" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="100" />
+        </column>
+        <column id="b230aaad" name="DIPLOMA_TYPE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="e7b0f76c" name="DIPLOMA_SERIES" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="18167c08" name="DIPLOMA_NO" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="f649c604" name="DIPLOMA_DATE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="DATE" />
+        </column>
+        <column id="96e4dabc" name="DIPLOMA_QUALIFICATION" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="f054b92c" name="NOTE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="255" />
+        </column>
+      </columns>
+    </table>
+    <table id="411aefb5" name="ORGANIZATION">
+      <drawing is-expanded="true" location="20,0" dimensions="117,49" />
+      <columns>
+        <column id="2b65f54a" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+    <table id="21823843" name="DEPARTMENT">
+      <drawing is-expanded="true" location="20,100" dimensions="227,128" />
+      <columns>
+        <column id="eb107d16" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="INTEGER" />
+        </column>
+        <column id="317a4fc8" name="ORGANIZATION_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="7b0c6d99" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="72efdd50" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="2d6c243e" name="PARENT_ID" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="3f60cb4e" name="FK_EMPLOYEE_EMP_ORG_ORGANIZA">
+      <details pk-table-id="411aefb5" fk-table-id="40b33d5f">
+        <pk-columns>
+          <key-column id="2b65f54a" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="41c9c6f5" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+    <relationship id="58a2ecdf" name="FK_EMPLOYEE_EMP_POS_JOB_POSI">
+      <details pk-table-id="61d088d6" fk-table-id="40b33d5f">
+        <pk-columns>
+          <key-column id="bf66e7c5" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="a6a1df3b" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="260,320" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="b69887f1" name="FK_EMPLOYEE_EMP_DEP_DEPARTME">
+      <details pk-table-id="21823843" fk-table-id="40b33d5f">
+        <pk-columns>
+          <key-column id="eb107d16" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="2a18f120" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="300,160" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+    <relationship id="f21a86b7" name="FK_EMPLOYEE_EMP_PRS_PERSON">
+      <details pk-table-id="649418f2" fk-table-id="40b33d5f">
+        <pk-columns>
+          <key-column id="58d2607c" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="ae1cf795" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="1">
+        <bendpoints>
+          <point location="760,160" />
+        </bendpoints>
+      </drawing>
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

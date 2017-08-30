@@ -1,0 +1,8 @@
+
+       <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="City" class="org.plazmaforge.bsolution.contact.common.beans.City" extends-class="org.plazmaforge.bsolution.contact.common.beans.Locality" table="CITY">
+        	<attributes>
+        	    <key name="id" column="ID" type="Integer"/>
+ 		        <attribute name="phoneCode" column="PHONE_CODE" type="String"/> 
+        	</attributes>
+       </joined-entity>
+

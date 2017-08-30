@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DataType" class="org.plazmaforge.framework.core.data.DataType" table="SYS_DATA_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="String" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String" required="true"/>
+        	<attribute name="name" column="NAME" type="String" required="true"/>
+        	<attribute name="enable" column="IS_ENABLE" type="Boolean"/>
+    	</attributes>
+    </entity>
+

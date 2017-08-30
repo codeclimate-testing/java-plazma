@@ -1,0 +1,8 @@
+<entity-mapping>
+    <entity mname="Hello" class="org.plazmaforge.bsolution.helloplazma.common.beans.Hello" table="HELLO">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="message" column="HELLO_MESSAGE" type="String"  required="true" />
+        </attributes>
+    </entity>
+</entity-mapping>

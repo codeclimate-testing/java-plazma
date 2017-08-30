@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+
+   <!-- CARSERVICE -->    
+   
+   <action id="CarClassListForm" command="OPEN_LIST_FORM" parameters="carservice/CarClassListForm"/>                    
+   <action id="CarMarkListForm" command="OPEN_LIST_FORM" parameters="carservice/CarMarkListForm"/>                    
+   <action id="CarModelListForm" command="OPEN_LIST_FORM" parameters="carservice/CarModelListForm"/>                    
+   <action id="CarManufacturerListForm" command="OPEN_LIST_FORM" parameters="carservice/CarManufacturerListForm"/>                    
+   <action id="CarListForm" command="OPEN_LIST_FORM" parameters="carservice/CarListForm"/>                    
+   
+   <action id="CarAgeListForm" command="OPEN_LIST_FORM" parameters="carservice/CarAgeListForm"/>                    
+   
+  
+   <action id="CarPaintDetailTypeListForm" command="OPEN_LIST_FORM" parameters="carservice/CarPaintDetailTypeListForm"/>
+   <action id="CarDamageLevelListForm" command="OPEN_LIST_FORM" parameters="carservice/CarDamageLevelListForm"/>
+   <action id="CarPrepareTypeListForm" command="OPEN_LIST_FORM" parameters="carservice/CarPrepareTypeListForm"/>
+   <action id="CarPaintTypeListForm" command="OPEN_LIST_FORM" parameters="carservice/CarPaintTypeListForm"/>
+   <action id="CarPaintMarkListForm" command="OPEN_LIST_FORM" parameters="carservice/CarPaintMarkListForm"/>
+   
+   
+   <action id="CarInsurerContractVariantListForm" command="OPEN_LIST_FORM" parameters="carservice/CarInsurerContractVariantListForm"/>
+   <action id="CarServOrderListForm" command="OPEN_LIST_FORM" parameters="carservice/CarServOrderListForm"/>                             
+   
+   <action id="CarMtrlFindRequestListForm" command="OPEN_LIST_FORM" parameters="carservice/CarMtrlFindRequestListForm"/>                             
+   <action id="CarMtrlFindReportListForm" command="OPEN_LIST_FORM" parameters="carservice/CarMtrlFindReportListForm"/>                             
+
+   <action id="CarMtrlPurchaseRequestListForm" command="OPEN_LIST_FORM" parameters="carservice/CarMtrlPurchaseRequestListForm"/>                             
+   <action id="CarMtrlPurchaseReportListForm" command="OPEN_LIST_FORM" parameters="carservice/CarMtrlPurchaseReportListForm"/>                             
+   <action id="CarServComplexityListForm" command="OPEN_LIST_FORM" parameters="carservice/CarServComplexityListForm"/>                             
+
+   <action id="CarPartListForm" command="OPEN_LIST_FORM" parameters="carservice/CarPartListForm"/>                    
+   <action id="CarServListForm" command="OPEN_LIST_FORM" parameters="carservice/CarServListForm"/>    
+   <action id="CarPaintListForm" command="OPEN_LIST_FORM" parameters="carservice/CarPaintListForm"/>
+   <action id="CarDetailListForm" command="OPEN_LIST_FORM" parameters="carservice/CarDetailListForm"/>   
+   
+   <action id="CarServTypeListForm" command="OPEN_LIST_FORM" parameters="carservice/CarServTypeListForm"/>
+   
+</actions>

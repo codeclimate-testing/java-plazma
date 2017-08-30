@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbar-config>
+	<interface id="HelloPlazma">
+    	 <toolbar id="HelloPlazma.Base">
+        	<toolitem action="PartnerListForm"/>
+        	<toolitem action="EmployeeListForm"/>
+        	<toolitem action="BankListForm"/>
+        	<toolitem action="GoodsListForm"/>        
+    	</toolbar>
+    	<toolbar id="HelloPlazma.Ext">
+        	<toolitem action="DocumentListForm"/>
+        	<toolitem action="ContractListForm"/>                
+        	<toolitem action="PaymentOutcomeListForm"/>      
+        	<toolitem action="ProjectListForm"/>
+        	<toolitem action="TaskListForm"/>
+    	</toolbar>
+   		<toolbar id="HelloPlazma.Reports">    
+        	<toolitem action="ReportListForm"/>     
+    	</toolbar>    
+    	<toolbar id="HelloPlazma.Window">
+        	<toolitem action="CloseWindowsAction"/>
+    	</toolbar>
+	</interface> 
+</toolbar-config>

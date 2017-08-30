@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+     
+    <!--  GENERIC -->
+	<bean id="GenericOrganizableServiceImpl" class="org.plazmaforge.bsolution.organization.server.services.GenericOrganizableServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="GenericStructurableServiceImpl" class="org.plazmaforge.bsolution.organization.server.services.GenericStructurableServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="GenericWarehouseServiceImpl" class="org.plazmaforge.bsolution.organization.server.services.GenericWarehouseServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+     
+    <!--  ORGANIZATION -->
+    <bean id="OrganizationServiceImpl" class="org.plazmaforge.bsolution.organization.server.services.OrganizationServiceImpl" lazy-init="true">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+	
+</beans>

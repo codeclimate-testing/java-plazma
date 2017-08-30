@@ -1,0 +1,29 @@
+<configuration xmlns="http://plazmaforge.org/erm/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<properties>
+		<property name="mapping.file.extension">.entity.xml</property>
+		<property name="sql.log">false</property>
+		<property name="join.depth">2</property>
+	</properties>
+	<procedures>
+		<procedure name="loadImageFS" class="org.plazmaforge.bsolution.base.server.services.ERMImageManager" entry-point="loadImageFS"/>
+		<procedure name="insertImageFS" class="org.plazmaforge.bsolution.base.server.services.ERMImageManager" entry-point="insertImageFS"/>
+		<procedure name="updateImageFS" class="org.plazmaforge.bsolution.base.server.services.ERMImageManager" entry-point="updateImageFS"/>
+		<procedure name="deleteImageFS" class="org.plazmaforge.bsolution.base.server.services.ERMImageManager" entry-point="deleteImageFS"/>
+		
+		<procedure name="loadAttributeValues" class="org.plazmaforge.bsolution.base.server.services.ERMAttributeManager" entry-point="loadAttributeValues"/>
+		<procedure name="saveAttributeValues" class="org.plazmaforge.bsolution.base.server.services.ERMAttributeManager" entry-point="saveAttributeValues"/>
+		<procedure name="deleteAttributeValues" class="org.plazmaforge.bsolution.base.server.services.ERMAttributeManager" entry-point="deleteAttributeValues"/>
+
+		<procedure name="loadFiles" class="org.plazmaforge.bsolution.base.server.services.ERMFileManager" entry-point="loadFiles"/>
+		<procedure name="saveFiles" class="org.plazmaforge.bsolution.base.server.services.ERMFileManager" entry-point="saveFiles"/>
+		<procedure name="deleteFiles" class="org.plazmaforge.bsolution.base.server.services.ERMFileManager" entry-point="deleteFiles"/>
+		
+		<procedure name="financeManager" class="org.plazmaforge.bsolution.finance.server.services.ERMFinanceManager"/>
+		<procedure name="productManager" class="org.plazmaforge.bsolution.product.server.services.ERMProductManager"/>
+		
+		<procedure name="businessableManager" class="org.plazmaforge.bsolution.base.server.services.ERMBusinessableManager"/>
+		<procedure name="paymentLinkManager" class="org.plazmaforge.bsolution.bank.server.services.ERMPaymentLinkManager"/>
+		<procedure name="warehouseManager" class="org.plazmaforge.bsolution.organization.server.services.ERMWarehouseManager"/>
+		
+	</procedures>
+</configuration>

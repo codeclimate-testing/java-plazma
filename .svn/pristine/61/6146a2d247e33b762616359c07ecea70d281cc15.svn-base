@@ -1,0 +1,96 @@
+
+<html>
+<title>Oracle</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Oracle</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Общая информация</h3>
+
+Web сайт: <a target="_blank" href="http://www.oracle.com">http://www.oracle.com</a>
+
+   <h3 align="center">Создание базы данных</h3>
+
+
+ <p>
+ Создание структуры базы и заполненние инициализирующими данными:
+ <code>
+ <pre>
+ &lt;Oracle&gt;/BIN/sqlplus plazma/tiger @с:\Plazma\db\script\createdb\oracle\ru\create_plazma_db.sql  1&gt;&gt;message.txt 2&gt;&gt;error.txt
+ </pre>
+ </code>
+
+
+ 
+ 
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC драйвер</h3>
+ 
+ <p>
+ Необходимо проверить наличие драйвера: 
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/jdbc/oracle/ojdbc14.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ Необходимо проверить правильность установки CLASSPATH для данного драйвера в файле:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # Oracle 
+ lib/jdbc/oracle/ojdbc14.jar
+
+ </pre>
+ </code>
+
+
+ <br><br>
+
+
+   <h3 align="center">Подключение к базе данных </h3>
+
+ <p>Для настройки подключения необходимо изменить соответствующие свойства
+ в файле &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>Например:
+
+ <p>
+ <code>
+ <pre>
+ # Установка свойств подключения к базе данных
+ jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+ jdbc.url=jdbc:oracle:thin:@localhost:1521:XE
+ jdbc.username=plazma
+ jdbc.password=tiger
+ </pre>
+ </code>
+ 
+
+
+
+</body>
+</html>
+
+

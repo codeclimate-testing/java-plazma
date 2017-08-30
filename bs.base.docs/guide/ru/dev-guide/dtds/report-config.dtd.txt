@@ -1,0 +1,24 @@
+
+
+<!ELEMENT report-config (report*)>
+
+<!ELEMENT report (acceptor?)>
+
+<!ATTLIST report
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        name CDATA #IMPLIED
+        class NMTOKEN #IMPLIED
+        folder NMTOKEN #IMPLIED
+        file NMTOKEN #IMPLIED
+        region NMTOKEN #IMPLIED
+        country NMTOKEN #IMPLIED
+        language NMTOKEN #IMPLIED
+>
+
+<!ELEMENT acceptor EMPTY>
+
+<!ATTLIST acceptor
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+>

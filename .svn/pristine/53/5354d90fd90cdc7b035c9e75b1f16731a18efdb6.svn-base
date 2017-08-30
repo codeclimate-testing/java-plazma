@@ -1,0 +1,15 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="ProjectTypeListForm" type="ListForm" title="@{ProjectTypeListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{ProjectTypeListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+						<column text="@{ProjectTypeListForm.descriptionColumn.text}" property="description" data-type="String" width="200"/>
+						<column text="@{ProjectTypeListForm.codeColumn.text}" property="code" data-type="String" width="100"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

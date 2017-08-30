@@ -1,0 +1,9 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SalePlan" class="org.plazmaforge.bsolution.sale.common.beans.SalePlan" table="SALE_PLAN" extends-class="org.plazmaforge.bsolution.product.common.beans.ProductDocument">
+        <attributes>
+       		<key name="id" column="ID" type="Integer"/>
+        	<reference name="priceType" column="PRICE_TYPE_ID" class="org.plazmaforge.bsolution.product.common.beans.PriceType"  />
+        	<collection name="productItems" join-class="org.plazmaforge.bsolution.sale.common.beans.SalePlanItem" join-attribute="salePlan" cascade="all"/>
+        </attributes>
+    </joined-entity>
+

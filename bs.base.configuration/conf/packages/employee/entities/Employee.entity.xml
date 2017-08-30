@@ -1,0 +1,92 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Employee" class="org.plazmaforge.bsolution.employee.common.beans.Employee" table="EMPLOYEE">
+        <aliases>
+        	<alias name="organizationId" attribute="organization.id"/>
+            <alias name="firstName" attribute="person.firstName"/>
+            <alias name="middleName" attribute="person.middleName"/>
+            <alias name="lastName" attribute="person.lastName"/>
+            <alias name="departmentName" attribute="department.name"/>
+        </aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer">
+    	    	<generator type="sequence">
+     				<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+	    		</generator>
+   	 		</key>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="tax" column="IS_TAX" type="Boolean"/>
+        	<attribute name="startDate" column="START_DATE" type="Date" />
+        	<attribute name="endDate" column="END_DATE" type="Date" />
+        	<attribute name="employeeAccount" column="EMPLOYEE_ACCOUNT" type="String" />
+        	<attribute name="taxPrivilege" column="TAX_PRIVILEGE" type="Integer" />
+        	<attribute name="salary" column="SALARY" type="Double" />
+        	<attribute name="tariff" column="TARIFF" type="Double" />
+        	<attribute name="premiumPercent" column="PREMIUM_PERCENT" type="Float" />
+        	<attribute name="sickPercent" column="SICK_PERCENT" type="Float" />
+        	<attribute name="totalSeniorityYear" column="TOTAL_SENIORITY_YEAR" type="Integer" />
+        	<attribute name="totalSeniorityMonth" column="TOTAL_SENIORITY_MONTH" type="Integer" />
+        	<attribute name="totalSeniorityDay" column="TOTAL_SENIORITY_DAY" type="Integer" />
+        	<attribute name="unbrokenSeniorityYear" column="UNBROKEN_SENIORITY_YEAR" type="Integer" />
+        	<attribute name="unbrokenSeniorityMonth" column="UNBROKEN_SENIORITY_MONTH" type="Integer" />
+        	<attribute name="unbrokenSeniorityDay" column="UNBROKEN_SENIORITY_DAY" type="Integer" />
+        	<attribute name="advance" column="ADVANCE" type="Double" />
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<attribute name="note" column="NOTE" type="String" />        
+        	<reference name="person" column="PERSON_ID" class="org.plazmaforge.bsolution.personality.common.beans.PersonHeader"  required="true" />
+        	<reference name="department" column="DEPARTMENT_ID" class="org.plazmaforge.bsolution.organization.common.beans.Department" />
+        	<reference name="employeeCategory" column="EMPLOYEE_CATEGORY_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeCategory" />
+        	<reference name="employeeRank" column="EMPLOYEE_RANK_ID" class="org.plazmaforge.bsolution.employee.common.beans.EmployeeRank" />
+        	<reference name="payrollForm" column="PAYROLL_FORM_ID" class="org.plazmaforge.bsolution.payroll.common.beans.PayrollForm" />
+        	<reference name="position" column="POSITION_ID" class="org.plazmaforge.bsolution.employee.common.beans.JobPosition" />
+        	<entry name="contactableElement" class="org.plazmaforge.bsolution.contact.common.beans.ContactableElement" join-column="OWNER_ID" cascade="all"/>
+       	</attributes>
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    		
+    		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+     		
+    		<trigger type="AfterInsert">
+    			<script language="SQL">
+    				INSERT INTO CONTRACTOR (ID) VALUES (:id);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script language="SQL">
+    				DELETE FROM CONTRACTOR WHERE ID = :id;
+    			</script>
+    		</trigger>
+    		
+        </triggers>	
+    </entity>
+

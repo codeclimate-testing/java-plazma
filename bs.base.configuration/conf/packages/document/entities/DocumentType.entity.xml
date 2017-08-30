@@ -1,0 +1,22 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DocumentType" class="org.plazmaforge.bsolution.document.common.beans.DocumentType" table="DOCUMENT_TYPE">
+    	<aliases>
+			<alias name="code" attribute="entity.code"/>
+			<alias name="name" attribute="entity.name"/>
+    	</aliases>      	    
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="documentSection" column="DOCUMENT_SECTION" type="String"/>        
+        	<attribute name="documentCategory" column="DOCUMENT_CATEGORY" type="String"/>                
+        	<reference name="entity" column="ENTITY_ID" class="org.plazmaforge.framework.config.object.EntityConfig" required="true"/>
+        	<attribute name="useNumerator" column="IS_USE_NUMERATOR" type="Boolean"/>
+        	<attribute name="documentNoPrefix" column="DOCUMENT_NO_PREFIX" type="String"/>                
+        	<attribute name="documentNoSuffix" column="DOCUMENT_NO_SUFFIX" type="String"/>                
+        	<attribute name="lastDocumentNumber" column="LAST_DOCUMENT_NUMBER" type="Integer"/>                
+        	<attribute name="documentNoReadOnly" column="IS_DOCUMENT_NO_READ_ONLY" type="Boolean"/>
+        	<attribute name="documentDateReadOnly" column="IS_DOCUMENT_DATE_READ_ONLY" type="Boolean"/>
+        	<collection name="relations" join-class="org.plazmaforge.bsolution.document.common.beans.DocumentRelation" join-attribute="parentType" cascade="all"/>
+        	<collection name="statuses" join-class="org.plazmaforge.bsolution.document.common.beans.DocumentStatus" join-attribute="documentType" cascade="all"/>
+		</attributes>                
+    </entity>
+

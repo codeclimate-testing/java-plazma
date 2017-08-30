@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <!-- PROJECT -->
+    <bean id="ERMProjectContextService" class="org.plazmaforge.bsolution.project.server.services.ERMProjectContextService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="ERMTaskContextService" class="org.plazmaforge.bsolution.project.server.services.ERMTaskContextService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+    
+ 	<bean id="ERMProjectService" class="org.plazmaforge.bsolution.project.server.services.ERMProjectService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="ERMTaskService" class="org.plazmaforge.bsolution.project.server.services.ERMTaskService" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+  
+</beans> 

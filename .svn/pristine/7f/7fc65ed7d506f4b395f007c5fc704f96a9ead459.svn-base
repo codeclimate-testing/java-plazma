@@ -1,0 +1,10 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="InventoryWriteoff" class="org.plazmaforge.bsolution.inventory.common.beans.InventoryWriteoff" table="INVENTORY_WRITEOFF" extends-class="org.plazmaforge.bsolution.product.common.beans.ProductDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>
+        	<reference name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse" />
+        	<reference name="mtrlResponsible" column="MTRL_RESPONSIBLE_ID" class="org.plazmaforge.bsolution.organization.common.beans.MtrlResponsible" />
+        	<collection name="productItems" join-class="org.plazmaforge.bsolution.inventory.common.beans.InventoryWriteoffItem" join-attribute="inventoryWriteoff" cascade="all"/>
+        </attributes>
+    </joined-entity>
+

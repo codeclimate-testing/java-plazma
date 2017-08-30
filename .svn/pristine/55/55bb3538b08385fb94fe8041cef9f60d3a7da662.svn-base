@@ -1,0 +1,37 @@
+############################################################################
+# PRODUCT Action Definition
+############################################################################
+
+
+############################################################################
+# Report Actions
+############################################################################
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.product.client.swing.forms.ProductUnitEdit@title=Unit
+org.plazmaforge.bsolution.product.client.swing.forms.ProductUnitEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.product.client.swing.forms.ProductUnitEdit@panel.label-rate.text=Rate
+org.plazmaforge.bsolution.product.client.swing.forms.ProductUnitEdit@panel.label-bar-code.text=Bar code
+
+
+org.plazmaforge.bsolution.product.client.swing.forms.ProductPriceEdit@title=Prices
+org.plazmaforge.bsolution.product.client.swing.forms.ProductPriceEdit@panel.label-price-type.text=Price type
+org.plazmaforge.bsolution.product.client.swing.forms.ProductPriceEdit@panel.label-percent.text=Price percent
+org.plazmaforge.bsolution.product.client.swing.forms.ProductPriceEdit@panel.label-price.text=Price
+org.plazmaforge.bsolution.product.client.swing.forms.ProductPriceEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.product.client.swing.forms.ProductPriceEdit@panel.label-unit.text=Unit
+
+
+
+
+
+

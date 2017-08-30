@@ -1,0 +1,130 @@
+
+<html>
+<title>Report Configuration</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+</head>
+
+<body>
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Report Configuration</h2>
+   <hr>
+   <br><br><br><br>
+
+   <h3  align="center">Report list</h3>
+   To configration/adding reports to the system you have to choose menu item: Reports -&gt; Report list.
+   Then you will see a tabular form. The form presents all reports of the system.
+
+   
+   <br><br><br><br> 
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/report-list.png"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br> 
+   <h3  align="center">Configuration</h3>
+   To add new report to the system you have to press button <b>Add</b> in toolbar.
+   To modify configuration of report you have to press button <b>Edit</b>.
+   Then you will can see a form for the report configuration.
+   
+   <br><br><br><br>
+   
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/report-edit.png"/></td>
+    </tr>
+   </table>
+<br><br><br><br>
+  Required input attributes are: <b>Code</b>, <b>Name</b>, <b>File name</b>.
+  At this point, the system supports reports in a format <b>JasperReports</b>.
+  When adding to a new report must specify the template file.
+  If the report needs parameters, it is necessary to choose an appropriate acceptor. 
+  The acceptor responsible for receiving parameters from the external environment.
+  One of the instances acceptor is a dialog box to set the parameters.
+  In the system presented several standard acceptors:
+  <br><br><br><br>
+  <table border='1' align='center'>
+   <tr>
+     <td><b>Acceptor</b></td><td><b>Parameters</b></td><td><b>Dialog Box</b></td>
+   </tr>
+   <tr>
+     <td>OrganizationAcceptor</td>
+     <td>ORGANIZATION_ID (integer)<br>
+         ORGANIZATION_NAME (string)</td>
+     <td align = 'center'>No</td>
+   </tr>
+   <tr>
+     <td>OrganizationPeriodAcceptor</td>
+     <td>ORGANIZATION_ID (integer)<br>
+         ORGANIZATION_NAME (string)<br>
+         PERIOD_ID (integer)<br>
+         PERIOD_START_DATE (date)<br>
+	     PERIOD_END_DATE (date)<br>
+	     START_DAY_POS (date in format 'yyyymmdd', integer)<br>
+	     END_DAY_POS (date in format 'yyyymmdd', integer)<br>
+     </td>
+     <td align = 'center'>No</td>
+   </tr>
+   <tr>
+     <td>OrganizationPeriodDialogAcceptor</td>
+     <td>ORGANIZATION_ID (integer)<br>
+         ORGANIZATION_NAME (string)<br>
+         PERIOD_START_DATE (date)<br>
+	     PERIOD_END_DATE (date)<br>
+	     START_DAY_POS (date in format 'yyyymmdd', integer)<br>
+	     END_DAY_POS (date in format 'yyyymmdd', integer)<br>
+     </td>
+     <td align = 'center'>Yes<br>Choose date diapason</td>
+   </tr>
+   <tr>
+     <td>OrganizationYearDialogAcceptor</td>
+     <td>ORGANIZATION_ID (integer)<br>
+         ORGANIZATION_NAME (string)<br>
+	     YEAR (integer)<br>
+     </td>
+     <td align = 'center'>Yes<br>Choose year</td>
+   </tr>
+   <tr>
+     <td>OrganizationBankAccountDialogAcceptor</td>
+     <td>PARTNER_ID (integer)<br>
+         PARTNER_NAME (string)<br>
+         BANK_ACCOUNT_ID (integer)<br>
+    	 BANK_ACCOUNT_NO (string)<br>
+     </td>
+     <td align = 'center'>Yes<br>Choose partner <br>and bank account</td>
+   </tr>
+   
+  </table>
+     
+   <br><br><br><br>
+   If you want to run a report from a tabular form, you will need to specify the appropriate form in the attribute <b>Run in form</b>.
+   <br>In such a case, the report will be automatically transmitted identifier of table record as a parameter <b>ID</b>.
+   
+   All the parameters described above can be used in the <b>JasperReports</b> template in format <b>$P{<i>&ltPARAMETER&gt</i>}</b>.
+   
+   <br><br>
+   <b>For example:</b> 
+   <code>
+   SELECT * FROM document WHERE id = <b>$P{ID}</b>
+   </code>
+   
+ 
+</TD>
+</TR>
+
+</TABLE>
+
+</body>
+</html>
+
+

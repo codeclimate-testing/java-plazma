@@ -1,0 +1,10 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarModel" table="CAR_MODEL">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>         
+        	<attribute name="name" column="NAME" type="String" />
+        	<reference name="carMark" column="CAR_MARK_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarMark"/>        
+        	<reference name="carManufacturer" column="CAR_MANUFACTURER_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarManufacturer"/>
+        </attributes>        
+    </entity>
+</entity-mapping>

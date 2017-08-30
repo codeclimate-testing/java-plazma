@@ -1,0 +1,13 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PIMNote" class="org.plazmaforge.bsolution.pim.common.beans.PIMNote" table="PIM_NOTE">
+		<aliases>
+    		<alias name="label" attribute="text"/>
+    	</aliases>      	    
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="user" column="USER_ID" class="org.plazmaforge.bsolution.security.common.beans.UserHeader" />
+        	<attribute name="noteDateTime" column="NOTE_DATE_TIME" type="DateTime" /> 
+        	<attribute name="text" column="NOTE_TEXT" type="String" />
+        </attributes>
+     </entity>
+

@@ -1,0 +1,9 @@
+<module>
+
+    <source path="bs">
+    	<exclude name="base/shared/services/**" />
+    	<exclude name="organization/shared/services/**" />
+    	<exclude name="security/shared/services/**" />
+    </source>
+    
+</module>

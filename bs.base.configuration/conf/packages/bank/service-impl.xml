@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <!-- BANK -->
+	<bean id="BankContextServiceImpl" class="org.plazmaforge.bsolution.bank.server.services.BankContextServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>    
+	<bean id="BankAccountServiceImpl" class="org.plazmaforge.bsolution.bank.server.services.BankAccountServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="BankServiceImpl" class="org.plazmaforge.bsolution.bank.server.services.BankServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+</beans>

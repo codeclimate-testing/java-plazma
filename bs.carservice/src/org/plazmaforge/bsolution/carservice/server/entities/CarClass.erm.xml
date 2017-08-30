@@ -1,0 +1,9 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarClass" table="CAR_CLASS">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String"/>                        
+        	<attribute name="name" column="NAME" type="String"/>
+        </attributes>                
+    </entity>
+</entity-mapping>

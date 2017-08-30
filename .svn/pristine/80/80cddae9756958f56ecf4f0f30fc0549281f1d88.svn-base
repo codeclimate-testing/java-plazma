@@ -1,0 +1,12 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="CurrencyRateEditForm" type="EditForm" title="@{CurrencyRateEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{CurrencyRateEditForm.baseCurrencyLabel.text}"/><combo-box property="baseCurrency" data-type="base/Currency"/>
+				<label text="@{CurrencyRateEditForm.currencyLabel.text}"/><combo-box property="currency" data-type="base/Currency"/>
+				<label text="@{CurrencyRateEditForm.dateLabel.text}"/><date-field property="date"/>
+				<label text="@{CurrencyRateEditForm.rateLabel.text}"/><number-field property="rate"/>
+			</children>
+		</content>
+	</form>
+</ui>

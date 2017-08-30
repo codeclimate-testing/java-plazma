@@ -1,0 +1,70 @@
+<html>
+<title>bs.base.docs</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">bs.base.docs</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Content</h3>
+
+
+   <table border="0" cellpadding="5">
+
+     <tr>
+       <td>+</td><td>dtds</td><td></td><td></td><td></td><td></td><td>DTD файлы</td>  
+     </tr>
+
+     <tr>
+       <td>+</td><td>guide</td><td></td><td></td><td></td><td></td><td>Руководство</td>  
+     </tr>
+
+
+     <tr>
+       <td></td><td></td><td>+</td><td>en</td><td></td><td></td><td>Руководство на английском языке</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>adm-guide</td><td>Руководство для администратора (английский)</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>dev-guide</td><td>Руководство для разработчика (английский)</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>usr-guide</td><td>Руководство для пользователя (английский)</td>  
+     </tr>
+
+
+     
+     <tr>
+       <td></td><td></td><td>+</td><td>ru</td><td></td><td></td><td>Руководство на русском языке</td>  
+     </tr>
+     
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>adm-guide</td><td>Руководство для администратора (русский)</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>dev-guide</td><td>Руководство для разработчика (русский)</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>usr-guide</td><td>Руководство для пользователя (русский)</td>  
+     </tr>
+  
+    </table>
+</body>
+</html>

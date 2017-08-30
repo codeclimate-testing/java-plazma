@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+	<!--  GENERIC -->
+	<bean id="GenericOrganizableService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" scope="prototype">
+		<property name="transactionManager"><ref bean="transactionManager"/></property>
+		<property name="target"><ref bean="GenericOrganizableServiceImpl"/></property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+        <property name="preInterceptors">
+            <list>
+                <ref bean="securityInterceptor"/>
+            </list>
+       </property>		
+	</bean>
+	<bean id="GenericStructurableService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" scope="prototype">
+		<property name="transactionManager"><ref bean="transactionManager"/></property>
+		<property name="target"><ref bean="GenericStructurableServiceImpl"/></property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+        <property name="preInterceptors">
+            <list>
+                <ref bean="securityInterceptor"/>
+            </list>
+       </property>		
+	</bean>
+	<bean id="GenericWarehouseService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" scope="prototype">
+		<property name="transactionManager"><ref bean="transactionManager"/></property>
+		<property name="target"><ref bean="GenericWarehouseServiceImpl"/></property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+        <property name="preInterceptors">
+            <list>
+                <ref bean="securityInterceptor"/>
+            </list>
+       </property>		
+	</bean>
+
+
+	<!--  ORGANIZATION -->
+	
+	<!-- DON'T SECURE sys* METHODS !!! -->
+    <bean id="OrganizationService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="target"><ref bean="OrganizationServiceImpl"/></property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+        <property name="preInterceptors">
+            <list>
+                <ref bean="securityInterceptor"/>
+            </list>
+        </property>	        
+    </bean>
+
+</beans>

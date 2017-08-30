@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BusinessableElement" class="org.plazmaforge.bsolution.base.common.beans.BusinessableElement" table="BUSINESSABLE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="entityId" column="ENTITY_ID" type="String" update="false"/>
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" update="false"/>
+        	<attribute name="fullName" column="NAME" type="String"/>
+        </attributes>      
+    </entity>
+

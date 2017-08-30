@@ -1,0 +1,8 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PartnerGroup" class="org.plazmaforge.bsolution.partner.common.beans.PartnerGroup" table="PARTNER_GROUP">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String" />
+        </attributes>
+    </entity>
+

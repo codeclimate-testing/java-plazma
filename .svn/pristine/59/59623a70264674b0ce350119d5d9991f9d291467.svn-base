@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <joined-subclass name="CarPaint" table="CAR_PAINT" extends="org.plazmaforge.bsolution.goods.common.beans.Goods" dynamic-insert="true" dynamic-update="true">
+        <key column="ID"/>
+        
+        <many-to-one name="carPaintType" column="CAR_PAINT_TYPE_ID" class="CarPaintType"/>        
+        <many-to-one name="carPaintMark" column="CAR_PAINT_MARK_ID" class="CarPaintMark"/>
+        <property name="consumable" type="org.hibernate.usertype.CustomBooleanType">
+             <column name="IS_CONSUMABLES"  sql-type="CHAR(1)"/>
+        </property>
+                
+    </joined-subclass>
+    
+</hibernate-mapping>

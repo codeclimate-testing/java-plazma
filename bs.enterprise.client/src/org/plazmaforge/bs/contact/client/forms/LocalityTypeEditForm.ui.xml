@@ -1,0 +1,10 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="LocalityTypeEditForm" type="EditForm" title="@{LocalityTypeEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{LocalityTypeEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{LocalityTypeEditForm.fullNameLabel.text}"/><text-field property="fullName" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TransferSourceAttribute" class="org.plazmaforge.framework.core.data.TransferSourceAttribute" table="SYS_TRANSFER_SOURCE_ATTR">
+    	<attributes>
+        	<key name="id" column="ID" type="String" generator-type="assigned"/>
+        	<attribute name="code" column="CODE" type="String"  required="true"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="sqlType" column="SQL_TYPE" type="String"/>
+			<reference name="source" column="SOURCE_ID" class="org.plazmaforge.framework.core.data.TransferSource" required="true"/>
+		</attributes>
+    </entity>
+

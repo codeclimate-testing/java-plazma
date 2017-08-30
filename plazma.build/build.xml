@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+
+<project name="plazma-build" default="create-projects-package">
+
+    <property file="build.properties"/>
+
+	<target name="clean-plazma-build" description="Clean plazma build">
+		<delete dir="${plazma.buid.target.dir}"/>
+	</target>
+
+		
+	<!-- CLEAN lib, dist -->
+	<target name="clean-lib" description="Clean lib">
+		<delete dir="${lib.target.dir}"/>
+    </target>
+	
+	<target name="clean-dist" description="Clean dist">
+		<delete dir="${dist.target.dir}"/>
+    </target>
+
+
+	
+	<!-- CLEAN framework -->
+	<target name="clean-framework" description="Clean framework">
+		<delete dir="${framework.target.dir}"/>
+    </target>
+
+	<target name="clean-framework-erm" description="Clean framework erm">
+		<delete dir="${framework.erm.target.dir}"/>
+    </target>
+
+	<target name="clean-framework-client" description="Clean framework client">
+		<delete dir="${framework.client.target.dir}"/>
+    </target>
+	
+	<target name="clean-framework-client-swing" description="Clean framework client swing">
+		<delete dir="${framework.client.swing.target.dir}"/>
+    </target>
+
+	<target name="clean-framework-client-swt" description="Clean framework client SWT">
+		<delete dir="${framework.client.swt.target.dir}"/>
+    </target>
+	
+	
+	
+
+	
+	<!-- CLEAN bsolution -->
+	<target name="clean-bsolution-configuration" description="Clean bsolution configuration">
+		<delete dir="${bsolution.configuration.target.dir}"/>
+    </target>
+
+	<target name="clean-bsolution-db" description="Clean bsolution db">
+		<delete dir="${bsolution.db.target.dir}"/>
+    </target>
+
+	<target name="clean-bsolution-update" description="Clean bsolution update">
+		<delete dir="${bsolution.update.target.dir}"/>
+    </target>
+
+	<target name="clean-bsolution-docs" description="Clean bsolution docs">
+			<delete dir="${bsolution.docs.target.dir}"/>
+	</target>
+	
+	<target name="clean-bsolution-reportstorage" description="Clean bsolution reportstorage">
+		<delete dir="${bsolution.reportstorage.target.dir}"/>
+    </target>
+	
+	
+	
+	<target name="clean-bsolution" description="Clean bsolution">
+		<delete dir="${bsolution.target.dir}"/>
+    </target>
+	
+	<target name="clean-bsolution-client-swing" description="Clean bsolution client (Swing client)">
+		<delete dir="${bsolution.client.swing.target.dir}"/>
+    </target>
+	
+	<target name="clean-bsolution-client-swt" description="Clean bsolution client (SWT client)">
+		<delete dir="${bsolution.client.swt.target.dir}"/>
+    </target>
+	
+	<target name="clean-bsolution-training" description="Clean bsolution training">
+			<delete dir="${bsolution.training.target.dir}"/>
+	</target>
+	
+	
+	
+	
+
+	<!-- CREATE plazma build -->
+    <target name="create-plazma-build" description="Create plazma build" depends="clean-plazma-build">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${plazma.build.target.dir}"/>
+        <copy todir="${plazma.build.target.dir}">
+        	<fileset dir="${plazma.build.dir}">
+        		<include name="**"/>
+            </fileset>
+        </copy>
+    </target>
+
+	
+	<!-- CREATE lib, dist -->
+    <target name="create-lib" description="Create lib" depends="clean-lib">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${lib.target.dir}"/>
+        <copy todir="${lib.target.dir}">
+        	<fileset dir="${lib.dir}">
+        		<include name="**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-dist" description="Create dist" depends="clean-dist">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${dist.target.dir}"/>
+        <copy todir="${dist.target.dir}">
+        	<fileset dir="${dist.dir}">
+        		<include name="**"/>
+        		<exclude name="*.ear"/>
+            </fileset>
+        </copy>
+    </target>
+
+	
+	<!-- CREATE -framework -->
+    <target name="create-framework" description="Create framework" depends="clean-framework">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${framework.target.dir}"/>
+        <copy todir="${framework.target.dir}">
+        	<fileset dir="${framework.dir}">
+        		<include name="**"/>
+           		<exclude name=".settings/**"/>        		
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-framework-erm" description="Create erm" depends="clean-framework-erm">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${framework.erm.target.dir}"/>
+        <copy todir="${framework.erm.target.dir}">
+        	<fileset dir="${framework.erm.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-framework-client" description="Create client" depends="clean-framework-client">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${framework.client.target.dir}"/>
+        <copy todir="${framework.client.target.dir}">
+        	<fileset dir="${framework.client.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+
+    <target name="create-framework-client-swing" description="Create client Swing" depends="clean-framework-client-swing">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${framework.client.swing.target.dir}"/>
+        <copy todir="${framework.client.swing.target.dir}">
+        	<fileset dir="${framework.client.swing.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-framework-client-swt" description="Create client SWT" depends="clean-framework-client-swt">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${framework.client.swt.target.dir}"/>
+        <copy todir="${framework.client.swt.target.dir}">
+        	<fileset dir="${framework.client.swt.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    
+    
+	
+	
+	
+    <target name="create-bsolution-configuration" description="Create bsolution-configuration" depends="clean-bsolution-configuration">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.configuration.target.dir}"/>
+        <copy todir="${bsolution.configuration.target.dir}">
+        	<fileset dir="${bsolution.configuration.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+	
+    <target name="create-bsolution-db" description="Create bsolution-db" depends="clean-bsolution-db">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.db.target.dir}"/>
+        <copy todir="${bsolution.db.target.dir}">
+        	<fileset dir="${bsolution.db.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-bsolution-update" description="Create bsolution-update" depends="clean-bsolution-update">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.update.target.dir}"/>
+        <copy todir="${bsolution.update.target.dir}">
+        	<fileset dir="${bsolution.update.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+	<target name="create-bsolution-docs" description="Create bsolution-docs" depends="clean-bsolution-docs">
+	    	<mkdir dir="${plazma.source.dir}"/>
+	    	<mkdir dir="${bsolution.docs.target.dir}"/>
+	        <copy todir="${bsolution.docs.target.dir}">
+	        	<fileset dir="${bsolution.docs.dir}">
+	        		<include name="**"/>
+	        		<exclude name=".settings/**"/>
+	            </fileset>
+	        </copy>
+	</target>
+	
+	
+    <target name="create-bsolution-reportstorage" description="Create bsolution-reportstorage" depends="clean-bsolution-reportstorage">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.reportstorage.target.dir}"/>
+        <copy todir="${bsolution.reportstorage.target.dir}">
+        	<fileset dir="${bsolution.reportstorage.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-bsolution" description="Create bsolution" depends="clean-bsolution">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.target.dir}"/>
+        <copy todir="${bsolution.target.dir}">
+        	<fileset dir="${bsolution.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+	
+    <target name="create-bsolution-client-swing" description="Create bsolution-client-swing" depends="clean-bsolution-client-swing">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.client.swing.target.dir}"/>
+        <copy todir="${bsolution.client.swing.target.dir}">
+        	<fileset dir="${bsolution.client.swing.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="create-bsolution-client-swt" description="Create bsolution-client-swt" depends="clean-bsolution-client-swt">
+    	<mkdir dir="${plazma.source.dir}"/>
+    	<mkdir dir="${bsolution.client.swt.target.dir}"/>
+        <copy todir="${bsolution.client.swt.target.dir}">
+        	<fileset dir="${bsolution.client.swt.dir}">
+        		<include name="**"/>
+        		<exclude name=".settings/**"/>
+            </fileset>
+        </copy>
+    </target>
+	
+	
+	
+	<target name="create-bsolution-training" description="Create bsolution training" depends="clean-bsolution-training">
+	    	<mkdir dir="${plazma.source.dir}"/>
+	    	<mkdir dir="${bsolution.training.target.dir}"/>
+	        <copy todir="${bsolution.training.target.dir}">
+	        	<fileset dir="${bsolution.training.dir}">
+	        		<include name="**"/>
+	        		<exclude name=".settings/**"/>
+	            </fileset>
+	        </copy>
+	</target>
+	
+	
+	
+    <target name="create-bsolution-all" description="Create bsolution modules" 
+    	depends="create-bsolution-configuration, create-bsolution-docs, create-bsolution-db, create-bsolution-update, create-bsolution-reportstorage, create-bsolution, create-bsolution-client-swing, create-bsolution-client-swt, create-bsolution-training"/>
+	
+    <target name="create-projects-package" description="Create Source Package" depends="create-plazma-build, create-lib, create-dist, create-framework, create-framework-erm, create-framework-client, create-framework-client-swing, create-framework-client-swt, create-bsolution-all">
+    	<copy file="${plazma.build.dir}/modules.txt" tofile="${plazma.source.dir}/readme.txt" overwrite="true"/>
+    </target>
+
+	
+	
+	
+    <target name="create-zip-projects" description="Create projects ZIP file" depends = "create-projects-package">
+    	<zip destfile="${plazma.target.dir}/plazma-projects-${version}.zip"  basedir="${plazma.source.dir}"/>
+    </target>
+
+
+	<target name="create-zip-configuration" description="Create configuration ZIP file" depends = "create-bsolution-configuration">
+    	<zip destfile="${plazma.target.dir}/plazma-configuration-${version}.zip"  basedir="${bsolution.configuration.target.dir}"/>
+	</target>
+	
+    <target name="create-zip-db" description="Create db ZIP file" depends = "create-bsolution-db">
+       	<zip destfile="${plazma.target.dir}/plazma-db-${version}.zip"  basedir="${bsolution.db.target.dir}"/>
+    </target>
+
+    <target name="create-zip-docs" description="Create docs ZIP file" depends = "create-bsolution-docs">
+       	<zip destfile="${plazma.target.dir}/plazma-docs-${version}.zip"  basedir="${bsolution.docs.target.dir}"/>
+    </target>
+
+    <target name="create-zip-reportstorage" description="Create report storage ZIP file" depends = "create-bsolution-reportstorage">
+       	<zip destfile="${plazma.target.dir}/plazma-reportstorage-${version}.zip"  basedir="${bsolution.reportstorage.target.dir}"/>
+    </target>
+	
+	
+	
+</project>

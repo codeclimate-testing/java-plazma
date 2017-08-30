@@ -1,0 +1,216 @@
+
+<html>
+<title>Overview</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+
+   <h2 align="center">Overview</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Platform</h3>
+
+
+   <p><b>Plazma Framework</b> is foundation for creating business solution.
+
+
+   <p><b>Plazma Business Solution</b> is set of solutions.
+
+   <br><br><br><br>
+
+   <table align="center">
+   <tr><td align="center">
+   <img border=0 src="../images/plazma-system.png"/>
+   </td></tr>
+   </table>
+
+
+   <p><b>Plazma Framework</b> has two parties: <b>Core</b> , <b>Client</b>
+<br><br><br><br>
+   <p><b>What is Framework Core?</b>
+
+   <p><b>Configuration</b>
+   <ul>
+     <li>Entities
+     <li>Actions
+     <li>Menu Bar
+     <li>Tool Bar
+     <li>Forms
+     <li>Reports
+     <li>Other objects
+   </ul>
+
+   <p><b>Integration</b>
+   <ul>
+     <li>Services (Spring)
+     <li>Security (Spring Security)
+     <li>Plazma ERM (ORM)
+     <li>Reporting System (JasperReports)
+   </ul>
+
+   <p><b>Management</b>
+   <ul>
+     <li>Configuration Management
+     <li>Service Management
+     <li>Association Management
+     <li>Report Management. Report Storage
+   </ul>
+
+   <br><br>
+   <p><b>What is Framework Client?</b>
+
+   <p><b>Integration</b>
+   <ul>
+     <li>Execute Actions
+     <li>Execute Services
+     <li>Execute Reports
+   </ul>
+
+   <p><b>Implementation</b>
+   <ul>
+     <li>UI (User Interface)
+      <ul>
+        <li>Menu Bar
+        <li>Tool Bar
+        <li>Forms
+        <li>Dialogs
+        <li>UI Controls
+        <li>Other UI components
+      </ul>
+   </ul>
+
+   
+
+   <br><br><br><br>
+   <h3 align="center">Architecture</h3>
+
+   <p>The System is presented in three variants.
+      
+   <p>1. <b>Desktop Client -> Database Server</b>
+   <p>2. <b>Desktop Client -> Application Server -> Database Server</b>
+   <p>3. <b>Web Client -> Web Server -> Database Server</b>
+   
+   <br><br><br><br>
+   <h3 align="center">Client</h3>
+
+   <p>Client side has two variants: <b>Desktop Client</b> и <b>Web Client</b>.
+
+   <p><b>Desktop Client</b> - Desktop Application.
+
+   <p><b>Web Client</b> - Internet browser.
+
+
+
+   <br><br><br><br>
+   <h3 align="center">Server</h3>
+
+   <p>Server side consists of several components:
+
+  <ul>
+    <li>Database Server
+    <li>Application Server
+    <li>Web Server <b><sup><font color="red">*</font></sup></b>
+  </ul>
+
+
+
+   <br><br>
+   <h3 align="center">Modules</h3>
+
+   <p>The System consists of several modules. Each module can be replaced or disabled. 
+    You can reconfigure the module or modify source code of the module.
+
+  
+
+   <br><br><br><br>
+   <h3 align="center">Technical characteristics of the system</h3>
+
+
+<b>Operation System</b>
+
+<ul>
+    <li>Windows
+    <li>Linux
+    <li>MacOS
+</ul>
+
+
+<b>Database</b>
+<ul>
+    <li>Oracle
+    <li>PostgreSQL
+    <li>MySQL
+    <li>Firebird
+    <li>HSQL
+</ul>
+
+<b>Application Server </b>
+<ul>
+    <li>Plazma Lite Server
+</ul>
+
+
+<b>Programming Language </b>
+<ul>
+    <li>Java
+</ul>
+
+
+<b>Service and Transaction Management</b>
+<ul>
+    <li>Spring
+</ul>
+
+
+<b>Security System</b>
+<ul>
+    <li>Spring Security
+</ul>
+
+
+<b>ORM</b>
+<ul>
+    <li>Plazma ERM
+</ul>
+
+
+<b>Desktop client</b>
+<ul>
+    <li>SWT, Swing 
+</ul>
+	
+
+<b>Web <sup><font color="red">*</font></sup></b>
+<ul>
+    <li>Spring MVC, JSP, JSTL
+</ul>
+
+
+<b>Reporting System</b>
+<ul>
+    <li>Jasper Reports
+</ul>
+
+
+<br><br>
+<b><sup><font color="red">*</font></sup></b> In process
+
+
+
+
+
+</body>
+</html>
+
+

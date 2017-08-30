@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="DocumentStatusEditForm" type="EditForm"	title="@{DocumentStatusEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{DocumentStatusEditForm.documentLabel.text}" /><lookup-field property="documentType" data-type="document/DocumentType" width="200"/>
+				<label text="@{DocumentStatusEditForm.codeLabel.text}" /><text-field property="code" width="200"/>
+				<label text="@{DocumentStatusEditForm.nameLabel.text}" /><text-field property="name" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

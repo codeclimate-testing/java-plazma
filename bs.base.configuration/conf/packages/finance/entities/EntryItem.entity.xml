@@ -1,0 +1,14 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EntryItem" class="org.plazmaforge.bsolution.finance.common.beans.EntryItem" table="ENTRY_ITEM">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="owner" column="OWNER_ID" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument" required="true" />        
+        	<reference name="debitLedgerAccount" column="DEBIT_LEDGER_ACCOUNT_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"/>
+        	<reference name="creditLedgerAccount" column="CREDIT_LEDGER_ACCOUNT_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"/>        
+        	<reference name="debitObject" column="DEBIT_OBJECT_ID" class="org.plazmaforge.bsolution.base.common.beans.BusinessableHeader"/>
+        	<reference name="creditObject" column="CREDIT_OBJECT_ID" class="org.plazmaforge.bsolution.base.common.beans.BusinessableHeader"/>        
+        	<attribute name="amount" column="AMOUNT" type="Double"/>
+        	<attribute name="content" column="CONTENT" type="String"/>
+        </attributes>
+    </entity>
+

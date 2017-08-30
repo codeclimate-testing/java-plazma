@@ -1,0 +1,12 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="CountryEditForm" type="EditForm" title="@{CountryEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{CountryEditForm.codeLabel.text}"/><text-field property="code" width="100"/>
+				<label text="@{CountryEditForm.code3Label.text}"/><text-field property="code3" width="100"/>
+				<label text="@{CountryEditForm.numericCodeLabel.text}"/><text-field property="numericCode" width="100"/>
+				<label text="@{CountryEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

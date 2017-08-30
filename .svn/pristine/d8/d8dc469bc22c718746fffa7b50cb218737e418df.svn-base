@@ -1,0 +1,32 @@
+
+<html>
+<title>Трмины</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Термины</h2>
+   <hr>
+   <br><br>
+
+   <p><b>Plazma Framework</b> - это платформа на основе которой строятся различные прикладные решения.
+   <p><b>Plazma BSolution</b> - это набор прикладных решений (в различных вариантах, конфигурациях и т.д.)
+   <p><b>Plazma System</b> - это любой вариант объединения <b>Plazma Framework</b> и  <b>Plazma BSolution</b>
+
+   <p><b>Plazma ERP+CRM</b> - это <b>ERP+CRM</b> на базе <b>Plazma System</b> (часный случай <b>Plazma System</b>).
+   <br>На базе <b>Plazma System</b> можно построить не только <b>ERP</b> или <b>CRM</b>, но и любое другое бизнес решение
+
+   <p><b>Plazma Workspace</b> - это рабочее пространство, директория где размещаются все проекты 
+   <b>Plazma System</b>
+</body>
+</html>
+
+

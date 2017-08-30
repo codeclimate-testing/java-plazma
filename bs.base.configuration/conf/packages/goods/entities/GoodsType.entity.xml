@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="GoodsType" class="org.plazmaforge.bsolution.goods.common.beans.GoodsType" table="GOODS_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String"  required="true" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+    	</attributes>
+    </entity>
+

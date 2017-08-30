@@ -1,0 +1,16 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="GoodsIncome" class="org.plazmaforge.bsolution.goods.common.beans.GoodsIncome" table="GOODS_INCOME" extends-class="org.plazmaforge.bsolution.product.common.beans.ProductDocument">
+    	<attributes>
+       		<key name="id" column="ID" type="Integer"/>
+        	<attribute name="delivery" column="DELIVERY" type="Double" />
+        	<attribute name="taxDelivery" column="TAX_DELIVERY" type="Double" />
+        	<attribute name="deliveryWithTax" column="DELIVERY_WITH_TAX" type="Double" />
+        	<attribute name="currencyDelivery" column="CURRENCY_DELIVERY" type="Double" />
+        	<attribute name="currencyTaxDelivery" column="CURRENCY_TAX_DELIVERY" type="Double" />
+        	<attribute name="currencyDeliveryWithTax" column="CURRENCY_DELIVERY_WITH_TAX" type="Double" />
+        	<reference name="mtrlResponsible" column="MTRL_RESPONSIBLE_ID" class="org.plazmaforge.bsolution.organization.common.beans.MtrlResponsible" />
+        	<reference name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"  required="true" />
+        	<collection name="productItems" join-class="org.plazmaforge.bsolution.goods.common.beans.GoodsIncomeItem" join-attribute="goodsIncome" cascade="all"/>
+        </attributes>
+    </joined-entity>
+

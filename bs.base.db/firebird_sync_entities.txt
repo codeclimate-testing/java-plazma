@@ -1,0 +1,36 @@
+Windows:
+
+1. Copy file <Firebird>\UDF\ib_udf.dll to DLL folder.
+
+
+2. Add UDF functions: run SQL scripts <Firebird>\UDF\ib_udf.sql
+
+
+3. Create view:
+
+CREATE VIEW SYS_RELATIONS (
+    RELATION_NAME)
+AS
+SELECT
+ R.RDB$RELATION_NAME
+FROM RDB$RELATIONS R
+WHERE RDB$SYSTEM_FLAG = 0 AND  SUBSTR(r.RDB$RELATION_NAME, 1, 2) <> 'V_';
+
+
+3. Run query (OLD entities):
+
+SELECT
+ e.id,
+ r.relation_name
+ FROM system_entity e
+ LEFT JOIN sys_relations r ON (r.relation_name = e.id)
+ WHERE  r.relation_name IS NULL
+
+4. Run query (NEW entities):
+
+SELECT
+ r.relation_name,
+ e.id
+ FROM sys_relations r 
+ LEFT JOIN  system_entity e ON (r.relation_name = e.id)
+ WHERE  e.id IS NULL

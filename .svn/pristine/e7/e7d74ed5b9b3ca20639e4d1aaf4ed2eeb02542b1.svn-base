@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+
+
+    <action id="RegisterPeriodAction" class="org.plazmaforge.bsolution.base.client.swing.actions.RegisterPeriodAction"/>
+    <action id="ChoosePeriodAction" class="org.plazmaforge.bsolution.base.client.swing.actions.ChoosePeriodAction"/>
+
+    <action id="ExitAction" class="org.plazmaforge.bsolution.base.client.swing.actions.ExitAction"/>
+    <action id="AboutAction" class="org.plazmaforge.bsolution.base.client.swing.actions.AboutAction"/>
+    <action id="PreferencesAction" class="org.plazmaforge.bsolution.base.client.swing.actions.PreferencesAction"/>
+    <action id="CascadeWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.CascadeWindowsAction"/>
+    <action id="MaximizeWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.MaximizeWindowsAction"/>
+    <action id="TitleWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.TitleWindowsAction"/>
+    <action id="TitleVerticalWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.TitleVerticalWindowsAction"/>
+    <action id="TitleHorizontalWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.TitleHorizontalWindowsAction"/>
+    <action id="CloseWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.CloseWindowsAction"/>
+    <action id="ChooseWindowsAction" class="org.plazmaforge.bsolution.base.client.swing.actions.ChooseWindowsAction"/>
+
+    <!-- SECURE -->
+    <action id="UserList" class="org.plazmaforge.bsolution.base.client.swing.actions.UserListAction"/>
+    <action id="RoleList" class="org.plazmaforge.bsolution.base.client.swing.actions.RoleListAction"/>    
+    <action id="PermissionList" class="org.plazmaforge.bsolution.base.client.swing.actions.PermissionListAction"/>        
+    
+    <action id="ReportList" class="org.plazmaforge.bsolution.base.client.swing.actions.ReportListAction"/>  
+    
+    <!--  DICTIONARY CHOOSE -->
+    <action id="NewDictionary" class="org.plazmaforge.bsolution.base.client.swing.actions.NewDictionaryAction"/>    
+    <action id="ChooseDictionary" class="org.plazmaforge.bsolution.base.client.swing.actions.ChooseDictionaryAction"/>
+    
+    
+    <action id="LanguageList" class="org.plazmaforge.bsolution.base.client.swing.actions.LanguageListAction"/>
+
+    <action id="AddressTypeList" class="org.plazmaforge.bsolution.contact.client.swing.actions.AddressTypeListAction"/>
+    <action id="LocalityTypeList" class="org.plazmaforge.bsolution.contact.client.swing.actions.LocalityTypeListAction"/>
+    <action id="PersonList" class="org.plazmaforge.bsolution.personality.client.swing.actions.PersonListAction"/>
+    <action id="PhoneTypeList" class="org.plazmaforge.bsolution.contact.client.swing.actions.PhoneTypeListAction"/>
+    <action id="StreetTypeList" class="org.plazmaforge.bsolution.contact.client.swing.actions.StreetTypeListAction"/>
+    <action id="RegionList" class="org.plazmaforge.bsolution.contact.client.swing.actions.RegionListAction"/>
+    <action id="CityList" class="org.plazmaforge.bsolution.contact.client.swing.actions.CityListAction"/>
+    <action id="LocalityList" class="org.plazmaforge.bsolution.contact.client.swing.actions.LocalityListAction"/>
+    <action id="CountryList" class="org.plazmaforge.bsolution.base.client.swing.actions.CountryListAction"/>
+    <action id="PartnerList" class="org.plazmaforge.bsolution.partner.client.swing.actions.PartnerListAction"/>
+    <action id="BankList" class="org.plazmaforge.bsolution.bank.client.swing.actions.BankListAction"/>
+
+    <action id="EmployeeList" class="org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeListAction"/>
+    <action id="PositionList" class="org.plazmaforge.bsolution.employee.client.swing.actions.PositionListAction"/>
+    <action id="PartnerGroupList" class="org.plazmaforge.bsolution.partner.client.swing.actions.PartnerGroupListAction"/>
+    <action id="PartnerCategoryList" class="org.plazmaforge.bsolution.partner.client.swing.actions.PartnerCategoryListAction"/>
+
+    <action id="PartnerBankAccountList" class="org.plazmaforge.bsolution.partner.client.swing.actions.PartnerBankAccountListAction"/>
+    <action id="IndustryList" class="org.plazmaforge.bsolution.partner.client.swing.actions.IndustryListAction"/>
+    <action id="ActivityTypeList" class="org.plazmaforge.bsolution.partner.client.swing.actions.ActivityTypeListAction"/>    
+    
+
+    <!--  ORGANIZATION -->
+    <action id="OrganizationEdit" class="org.plazmaforge.bsolution.organization.client.swing.actions.OrganizationEditAction"/>
+    <action id="OrganizationList" class="org.plazmaforge.bsolution.organization.client.swing.actions.OrganizationListAction"/>
+    <action id="DepartmentList" class="org.plazmaforge.bsolution.organization.client.swing.actions.DepartmentListAction"/>
+    <action id="ResponsibleList" class="org.plazmaforge.bsolution.organization.client.swing.actions.ResponsibleListAction"/>
+    <action id="WarehouseList" class="org.plazmaforge.bsolution.organization.client.swing.actions.StorableListAction"/>
+    <action id="StoreList" class="org.plazmaforge.bsolution.organization.client.swing.actions.StoreListAction"/>
+    <action id="ContactList" class="org.plazmaforge.bsolution.organization.client.swing.actions.ContactListAction"/>    
+    <action id="ContactTypeList" class="org.plazmaforge.bsolution.organization.client.swing.actions.ContactTypeListAction"/>    
+            
+    <!--  HUMAN -->
+    <action id="FamilyStatusList" class="org.plazmaforge.bsolution.personality.client.swing.actions.FamilyStatusListAction"/>
+    <action id="SpecialityList" class="org.plazmaforge.bsolution.personality.client.swing.actions.SpecialityListAction"/>
+    <action id="MilitaryRankList" class="org.plazmaforge.bsolution.personality.client.swing.actions.MilitaryRankListAction"/>
+    <action id="MilitaryStatusList" class="org.plazmaforge.bsolution.personality.client.swing.actions.MilitaryStatusListAction"/>
+    <action id="MilitarySpecialityList" class="org.plazmaforge.bsolution.personality.client.swing.actions.MilitarySpecialityListAction"/>
+    <action id="PersonDocumentTypeList" class="org.plazmaforge.bsolution.personality.client.swing.actions.PersonDocumentTypeListAction"/>
+
+    <action id="AcademicDegreeList" class="org.plazmaforge.bsolution.personality.client.swing.actions.AcademicDegreeListAction"/>
+    <action id="EducationInstituteList" class="org.plazmaforge.bsolution.personality.client.swing.actions.EducationInstituteListAction"/>
+    <action id="EducationTypeList" class="org.plazmaforge.bsolution.personality.client.swing.actions.EducationTypeListAction"/>
+    <action id="EducationFormList" class="org.plazmaforge.bsolution.personality.client.swing.actions.EducationFormListAction"/>
+    <action id="FamiliarityList" class="org.plazmaforge.bsolution.personality.client.swing.actions.FamiliarityListAction"/>
+
+    <action id="EmployeeCategoryList" class="org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeCategoryListAction"/>
+    <action id="EmployeeRankList" class="org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeRankListAction"/>
+    <action id="PayrollFormList" class="org.plazmaforge.bsolution.payroll.client.swing.actions.PayrollFormListAction"/>
+
+
+    <action id="EmployeeDischargeList" class="org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeDischargeListAction"/>
+    <action id="EmployeeReceptionList" class="org.plazmaforge.bsolution.employee.client.swing.actions.EmployeeReceptionListAction"/>
+
+    <!--  NEW -->
+    <action id="PersonEducationList" class="org.plazmaforge.bsolution.personality.client.swing.actions.PersonEducationListAction"/>
+    <action id="PersonFamilyList" class="org.plazmaforge.bsolution.personality.client.swing.actions.PersonFamilyListAction"/>
+    <action id="PersonJobList" class="org.plazmaforge.bsolution.personality.client.swing.actions.PersonJobListAction"/>
+    <action id="PersonLanguageList" class="org.plazmaforge.bsolution.personality.client.swing.actions.PersonLanguageListAction"/>
+            
+
+    <!--  -->
+    <action id="UnitList" class="org.plazmaforge.bsolution.base.client.swing.actions.UnitListAction"/>
+    <action id="CurrencyList" class="org.plazmaforge.bsolution.base.client.swing.actions.CurrencyListAction"/>
+
+    <action id="GoodsList" class="org.plazmaforge.bsolution.goods.client.swing.actions.GoodsListAction"/>
+
+
+    <action id="PeriodList" class="org.plazmaforge.bsolution.base.client.swing.actions.PeriodListAction"/>
+
+    <action id="PartnerRestList" class="org.plazmaforge.bsolution.finance.client.swing.actions.PartnerRestListAction"/>
+    <action id="GoodsRestList" class="org.plazmaforge.bsolution.goods.client.swing.actions.GoodsRestListAction"/>
+
+    <action id="PartnerRestStartReport" command="PREVIEW_REPORT" parameters="PartnerRestStart"/>
+
+    <action id="GoodsRestStartReport" command="PREVIEW_REPORT" parameters="GoodsRestStart"/>
+    <action id="StorableGoodsRestStartReport" command="PREVIEW_REPORT" parameters="StorableGoodsRestStart"/>
+    <action id="GoodsOutcomeByDocumentReport" command="PREVIEW_REPORT" parameters="GoodsOutcomeByDocument"/>
+    <action id="GoodsIncomeByDocumentReport" command="PREVIEW_REPORT" parameters="GoodsIncomeByDocument"/>
+    
+    <action id="SalePlanReport" command="PREVIEW_REPORT" parameters="SalePlanReport"/>    
+    <action id="GoodsSaleReport" command="PREVIEW_REPORT" parameters="GoodsSale"/>
+    <action id="GoodsSaleMonthProductReport" command="PREVIEW_REPORT" parameters="GoodsSaleMonthProduct"/>
+    <action id="GoodsSaleMonthDiagramReport" command="PREVIEW_REPORT" parameters="GoodsSaleMonthDiagram"/>
+    <action id="CrosstabGoodsSale" command="PREVIEW_REPORT" parameters="CrosstabGoodsSale"/>    
+    
+    <action id="GoodsRotateReport" command="PREVIEW_REPORT" parameters="GoodsRotate"/>
+    
+    <action id="TaxList" class="org.plazmaforge.bsolution.base.client.swing.actions.TaxListAction"/>
+    
+    <action id="PurchasePlanReport" command="PREVIEW_REPORT" parameters="PurchasePlanReport"/> 
+    <action id="CrosstabGoodsPurchase" command="PREVIEW_REPORT" parameters="CrosstabGoodsPurchase"/>     
+    
+    <action id="PriceListReport" command="PREVIEW_REPORT" parameters="PriceListReport"/>
+           
+    <action id="ExecWorkByPartner" command="PREVIEW_REPORT" parameters="ExecWorkByPartner"/>    
+    <action id="ExecWorkListReport" command="PREVIEW_REPORT" parameters="ExecWorkList"/>        
+
+    <!-- DOCUMENT -->
+    
+    <!-- CHOOSE -->
+    <action id="NewDocument" class="org.plazmaforge.bsolution.document.client.swing.actions.NewDocumentAction"/>    
+    <action id="ChooseDocument" class="org.plazmaforge.bsolution.document.client.swing.actions.ChooseDocumentAction"/>
+    
+    
+    <action id="DocumentTypeList" class="org.plazmaforge.bsolution.document.client.swing.actions.DocumentTypeListAction"/>    
+    <action id="DocumentList" class="org.plazmaforge.bsolution.document.client.swing.actions.DocumentListAction"/>
+    <action id="ContractorList" class="org.plazmaforge.bsolution.finance.client.swing.actions.ContractorListAction"/>
+    <action id="ContractList" class="org.plazmaforge.bsolution.finance.client.swing.actions.ContractListAction"/>
+
+    <action id="GoodsOutcomeList" class="org.plazmaforge.bsolution.goods.client.swing.actions.GoodsOutcomeListAction"/>
+    <action id="GoodsIncomeList" class="org.plazmaforge.bsolution.goods.client.swing.actions.GoodsIncomeListAction"/>
+    <action id="GoodsMoveList" class="org.plazmaforge.bsolution.goods.client.swing.actions.GoodsMoveListAction"/>
+    <action id="GoodsWriteoffList" class="org.plazmaforge.bsolution.goods.client.swing.actions.GoodsWriteoffListAction"/>
+    <action id="InvoiceList" class="org.plazmaforge.bsolution.goods.client.swing.actions.InvoiceListAction"/>
+
+    <action id="SaleOrderList" class="org.plazmaforge.bsolution.goods.client.swing.actions.SaleOrderListAction"/>
+    <action id="PurchaseOrderList" class="org.plazmaforge.bsolution.goods.client.swing.actions.PurchaseOrderListAction"/>
+    <action id="TaxWaybillList" class="org.plazmaforge.bsolution.goods.client.swing.actions.TaxWaybillListAction"/>    
+
+    <action id="SalePlanList" class="org.plazmaforge.bsolution.goods.client.swing.actions.SalePlanListAction"/>
+    <action id="PurchasePlanList" class="org.plazmaforge.bsolution.goods.client.swing.actions.PurchasePlanListAction"/>
+
+    <action id="ExecWorkList" class="org.plazmaforge.bsolution.goods.client.swing.actions.ExecWorkListAction"/>
+
+    <action id="PaymentIncomeList" class="org.plazmaforge.bsolution.bank.client.swing.actions.PaymentIncomeListAction"/>
+    <action id="PaymentOutcomeList" class="org.plazmaforge.bsolution.bank.client.swing.actions.PaymentOutcomeListAction"/>
+    <action id="PaymentList" class="org.plazmaforge.bsolution.bank.client.swing.actions.PaymentListAction"/>    
+
+    <action id="CashIncomeList" class="org.plazmaforge.bsolution.cash.client.swing.actions.CashIncomeListAction"/>
+    <action id="CashOutcomeList" class="org.plazmaforge.bsolution.cash.client.swing.actions.CashOutcomeListAction"/>   
+
+    <!-- PAYROLL -->
+    <action id="PayrollList" class="org.plazmaforge.bsolution.payroll.client.swing.actions.PayrollListAction"/>
+    <action id="InputWorktimeList" class="org.plazmaforge.bsolution.payroll.client.swing.actions.InputWorktimeListAction"/>
+    <action id="InputPayrollList" class="org.plazmaforge.bsolution.payroll.client.swing.actions.InputPayrollListAction"/>
+    <action id="EmployeeLeaveList" class="org.plazmaforge.bsolution.payroll.client.swing.actions.EmployeeLeaveListAction"/>
+    <action id="EmployeeSicklistList" class="org.plazmaforge.bsolution.payroll.client.swing.actions.EmployeeSicklistListAction"/>
+    
+    
+    <!--  PROJECT -->
+    <action id="ProjectTypeList" class="org.plazmaforge.bsolution.project.client.swing.actions.ProjectTypeListAction"/>    
+    <action id="ProjectStateList" class="org.plazmaforge.bsolution.project.client.swing.actions.ProjectStateListAction"/>        
+    <action id="ProjectStageGroupList" class="org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageGroupListAction"/>        
+    <action id="ProjectStageList" class="org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageListAction"/>                
+    <action id="ProjectList" class="org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction"/>    
+
+    <!--  TASK -->
+    <action id="TaskTypeList" class="org.plazmaforge.bsolution.project.client.swing.actions.TaskTypeListAction"/>
+    <action id="TaskStateList" class="org.plazmaforge.bsolution.project.client.swing.actions.TaskStateListAction"/>
+    <action id="TaskRoleList" class="org.plazmaforge.bsolution.project.client.swing.actions.TaskRoleListAction"/>
+    <action id="TaskResultList" class="org.plazmaforge.bsolution.project.client.swing.actions.TaskResultListAction"/>    
+    <action id="TaskPriorityList" class="org.plazmaforge.bsolution.project.client.swing.actions.TaskPriorityListAction"/>    
+    <action id="TaskList" class="org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction"/>
+    
+    <!--  FINANCE -->
+    <action id="LedgerAccountTypeList" class="org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountTypeListAction"/>
+    <action id="LedgerAccountList" class="org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountListAction"/>    
+    <action id="FinanceDocumentTypeList" class="org.plazmaforge.bsolution.finance.client.swing.actions.FinanceDocumentTypeListAction"/>    
+    <action id="TemplateEntryList" class="org.plazmaforge.bsolution.finance.client.swing.actions.TemplateEntryListAction"/>    
+    <action id="EntryCalculateAction" class="org.plazmaforge.bsolution.finance.client.swing.actions.EntryCalculateAction"/>
+    <action id="LedgerAccountRestList" class="org.plazmaforge.bsolution.finance.client.swing.actions.LedgerAccountRestListAction"/>    
+    
+    <action id="CrosstabLedgerAccountRotate" command="PREVIEW_REPORT" parameters="CrosstabLedgerAccountRotate"/>
+    
+
+    <action id="SystemInfoEdit" class="org.plazmaforge.bsolution.base.client.swing.actions.SystemInfoEditAction"/>
+    <action id="SystemVariableList" class="org.plazmaforge.bsolution.base.client.swing.actions.SystemVariableListAction"/>
+    <action id="SystemEntityList" class="org.plazmaforge.bsolution.base.client.swing.actions.SystemEntityListAction"/>
+
+    <!-- EMPLOYEE REPORTS -->
+    <action id="EmployeeListReport" command="PREVIEW_REPORT" parameters="EmployeeListReport"/>
+    <action id="PersonCardReport" command="PREVIEW_REPORT" parameters="PersonCardReport"/>    
+    
+    <!-- PAYROLL REPORTS -->
+    <action id="PersonPayReport" command="PREVIEW_REPORT" parameters="PersonPayReport"/>
+    <action id="PayrollListReport" command="PREVIEW_REPORT" parameters="PayrollListReport"/>    
+    <action id="CrosstabPayrollTotal" command="PREVIEW_REPORT" parameters="CrosstabPayrollTotal"/>        
+
+    <action id="PayrollCalculateAction" class="org.plazmaforge.bsolution.payroll.client.swing.actions.PayrollCalculateAction"/>    
+
+    <!-- PARTNER REPORTS -->
+    <action id="PartnerContactBookReport" command="PREVIEW_REPORT" parameters="PartnerContactBook"/>    
+    <action id="JournalPaymentByBankAccount" command="PREVIEW_REPORT" parameters="JournalPaymentByBankAccount"/>        
+    <action id="JournalPaymentByPartner" command="PREVIEW_REPORT" parameters="JournalPaymentByPartner"/>            
+    <action id="PaymentIncomeByPartner" command="PREVIEW_REPORT" parameters="PaymentIncomeByPartner"/>                
+    <action id="PaymentOutcomeByPartner" command="PREVIEW_REPORT" parameters="PaymentOutcomeByPartner"/>                    
+    
+    <!-- PROJECT REPORTS -->
+    <action id="ProjectStateReport" command="PREVIEW_REPORT" parameters="ProjectState"/>
+    <action id="ProjectStateByPartnerReport" command="PREVIEW_REPORT" parameters="ProjectStateByPartner"/>
+    <action id="ProjectStateByManagerReport" command="PREVIEW_REPORT" parameters="ProjectStateByManager"/>
+    <action id="CrosstabProject" command="PREVIEW_REPORT" parameters="CrosstabProject"/>
+    
+    <test></test>
+</actions>

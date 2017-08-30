@@ -1,0 +1,679 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-base-richclient-swing" default="build">
+
+    <property file="build.properties"/>
+
+    <path id="plazma-classpath">
+	    <fileset dir="${lib.dir}">
+		    <include name="**/*.jar"/>
+	    </fileset>
+	    <fileset dir="${dist.dir}">
+		    <include name="${framework.jar}"/>
+	    	<include name="${richclient.jar}"/>
+	    	<include name="${richclient.swing.jar}"/>
+	    	<include name="${bsolution.common.jar}"/>
+	    </fileset>
+    </path>
+
+
+    <target name="clean" description="Clean all output dirs (classes, etc.)">
+        <delete dir="${classes.dir}"/>
+        <delete dir="${javadocs.dir}"/>
+    </target>
+
+    <target name="clean-dist" description="Clean dist dir without framework files">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="${bsolution.client.gui.jar}"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+	
+	<!--
+    <target name="clean-dist-all" description="Clean dist dir">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="**"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+	-->
+	
+
+    <target name="convert" description="Convert codepage of property files">
+    	<native2ascii src="${src.dir}/org/plazmaforge/bsolution" dest="${src.dir}/org/plazmaforge/bsolution" includes="*/richclient/swing/resources/*.${codepage}" ext=".properties"/>
+    </target>
+
+
+    <target name="build" description="Compile main source tree java files into class files (no-jarring)">
+    	<mkdir dir="${classes.dir}"/>
+
+    	<javac destdir="${classes.dir}" deprecation="false" optimize="false" failonerror="true">
+    		<src path="${src.dir}"/>
+    		<classpath refid="plazma-classpath"/>
+ 		</javac>
+    	
+    	<copy todir="${classes.dir}" preservelastmodified="true">
+    		<fileset dir="${src.dir}">
+    			<include name="**/*.xml"/>
+    			<include name="**/*.properties"/>
+    			<include name="**/*.jpg"/>
+    			<include name="**/*.gif"/>
+    			<include name="**/*.png"/>
+			</fileset>
+		</copy>
+
+    </target>
+
+    <target name="create-jar-all" description="Create all jar files"
+    	depends ="create-jar-client"/>
+
+
+    <target name="create-jar-client" description="Create client jar">
+    	
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/${bsolution.client.gui.jar}" basedir="${classes.dir}">
+        	
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+   			<attribute name="Plazma-Version" value="${version}"/>          	          	
+          </manifest>
+        	
+          <include name="org/plazmaforge/bsolution/*/richclient/**"/>
+          
+        </jar>
+    </target>
+
+
+
+  	
+		
+
+	
+		
+
+
+    <target name="clean-pack-client" description="Clean client pack">
+        <delete dir="${client.dir}"/>
+    </target>
+
+	
+	
+	
+    <target name="create-pack-client-lite" description="Create client pack" depends = "create-pack-client-common">
+    	
+        <!-- Copy configuration -->
+    	<copy file="${conf.dir}/client/system-config-rmi.xml" tofile="${client.dir}/conf/system-config.xml" overwrite="true"/>
+    	
+       	<!-- Copy Spring AOP libs (Only for RMI Locator) -->
+        <copy todir="${client.dir}/lib">
+             <fileset dir="${lib.dir}">
+               	<include name="aopalliance.jar"/> 
+               	<include name="spring-fix.jar"/> 
+             </fileset>
+        </copy>
+    	
+    	
+    	<concat destfile="${client.dir}/plazma.properties" fixlastline="yes">plazma.platform.autologin = true
+    		<header filtering="no" trimleading="yes">
+    			#
+        		# Plazma properties (Lite Client)
+    			#
+    		</header>
+    	</concat> 
+    	
+    	<concat destfile="${client.dir}/client.conf">plazma.client.type=lite</concat>    	
+    	
+    </target>    	
+	
+	
+    	
+    <target name="create-pack-client-common" description="Create client pack" depends = "clean-pack-client, create-jar-client">
+
+    	<mkdir dir="${client.dir}"/>
+        <mkdir dir="${client.dir}/conf"/>
+    	<mkdir dir="${client.dir}/dist"/>
+    	<mkdir dir="${client.dir}/docs"/>    	
+	   	<mkdir dir="${client.dir}/lib"/>
+	   	<mkdir dir="${client.dir}/logs"/>    	
+
+		<copy file="${conf.dir}/install/application-rich.swing.xml" tofile="${client.dir}/conf/application.xml" overwrite="true"/>
+    	
+        <copy todir="${client.dir}/conf">
+            <fileset dir="${conf.dir}">
+                <include name="jndi.properties"/>
+                <include name="rmi-context.xml"/>
+                <!-- <include name="application.xml"/> -->
+            </fileset>
+        </copy>
+
+    	<!-- Copy dist files -->
+        <copy todir="${client.dir}/dist">
+            <fileset dir="${dist.dir}">
+            	<include name="${framework.jar}"/>
+    	    	<include name="${richclient.jar}"/>
+    	    	<include name="${richclient.swing.jar}"/>
+            	
+            	<include name="${bsolution.common.jar}"/>
+               	<include name="${bsolution.client.gui.jar}"/>            	
+            </fileset>
+        </copy>
+
+      	<!-- Copy docs -->
+        <copy todir="${client.dir}/docs">
+            <fileset dir="${workspace.docs.dir}">
+                <include name="dtds/**"/>
+              	<exclude name="dtds/application-config.dtd"/>
+            </fileset>
+        </copy>        	
+
+      	<!-- Copy libs -->
+        <copy todir="${client.dir}/lib">
+            <fileset dir="${lib.dir}" includes="${client.fileset}"/>
+        </copy>
+    	
+        <!-- Copy root files -->
+        <copy todir="${client.dir}">
+            <fileset dir="${basedir}">
+
+                <include name="*.*"/>
+
+                <exclude name=".*"/>
+                <exclude name="build*"/>
+                <exclude name="bsolution**"/>
+                <exclude name="**_shortcut_specification.xml"/>
+                <exclude name="install**"/>
+                <exclude name="uninstall**"/>
+                <exclude name="start.*"/>
+                <exclude name="ShellLink.dll"/>
+
+            </fileset>
+        </copy>
+
+    	<!-- Replace plazma.classpath jar -->
+    	
+       	<replace file="${client.dir}/plazma.classpath" token="../" value = ""/>
+       		
+       	<replace file="${client.dir}/plazma.classpath" token="${jar.file}" value = "${client.jar.file}"/>
+
+      	<!-- Replace lancher -->
+        <replace file="${client.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+        <replace file="${client.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+    	
+    	
+       	<!-- Set version and build -->
+       	<replace file="${client.dir}/readme.txt" token="{version}" value = "${version}"/>
+       	<replace file="${client.dir}/readme_ru.txt" token="{version}" value = "${version}"/>
+       	<replace file="${client.dir}/readme.txt" token="{build.month}" value = "${build.month}"/>
+       	<replace file="${client.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}"/>
+       	<replace file="${client.dir}/readme.txt" token="{build.year}" value = "${build.year}"/>
+       	<replace file="${client.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}"/>
+
+       	<replace file="${client.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+
+
+    </target>
+
+
+    <target name="clean-pack-install-standalone" description="Clean installation pack">
+        <delete dir="${standalone.dir}"/>
+    </target>
+
+    <target name="create-pack-install-standalone" description="Create installation standalone pack" depends = "clean-pack-install-standalone">
+
+        <mkdir dir="${standalone.dir}"/>
+        <mkdir dir="${standalone.dir}/conf"/>
+        <mkdir dir="${standalone.dir}/db"/>
+        <mkdir dir="${standalone.dir}/db/hsql"/>
+        <mkdir dir="${standalone.dir}/db/result"/>
+        <mkdir dir="${standalone.dir}/db/datastorage"/>    	
+        <mkdir dir="${standalone.dir}/dist"/>
+        <mkdir dir="${standalone.dir}/docs"/>
+        <mkdir dir="${standalone.dir}/fonts"/>
+        <mkdir dir="${standalone.dir}/lib"/>
+        <mkdir dir="${standalone.dir}/logs"/>
+        <mkdir dir="${standalone.dir}/reports"/>
+
+
+        <!-- Copy configuration -->
+        <copy todir="${standalone.dir}/conf">
+
+            <fileset dir="${conf.dir}/install">
+                <!-- <include name="application.xml"/> --> 
+                <include name="jdbc**.properties"/>
+            </fileset>
+
+            <fileset dir="${conf.dir}">
+            	<include name="*.*"/>
+            	<exclude name="application.xml"/>
+            	<exclude name="jdbc**.properties"/>
+            </fileset>
+
+        </copy>
+    	
+    	<copy file="${conf.dir}/install/application-rich.swing.xml" tofile="${standalone.dir}/conf/application.xml" overwrite="true"/>
+    	<copy file="${conf.dir}/standalone/system-config.xml" tofile="${standalone.dir}/conf/system-config.xml" overwrite="true"/>
+    	
+    	<copy todir="${standalone.dir}/conf/packages">
+    		<fileset dir="${conf.dir}/packages">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+    	
+    	<copy todir="${standalone.dir}/conf">
+    		<fileset dir="${conf.dir}/ui/gui">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+
+    	
+    	
+    	<!--
+        <copy todir="${standalone.dir}/conf/client">
+            <fileset dir="${conf.dir}/client">
+            	<include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${standalone.dir}/conf/server">
+            <fileset dir="${conf.dir}/server">
+            	<include name="*.*"/>
+            </fileset>
+        </copy>
+        -->
+
+
+
+        <!-- Copy db -->
+        <copy todir="${standalone.dir}/db">
+            <fileset dir="${db.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    	
+  
+        <!-- Copy dist -->
+        <copy todir="${standalone.dir}/dist">
+            <fileset dir="${dist.dir}">
+                <include name="**"/>
+            	<exclude name="*.ear"/>
+            </fileset>
+        </copy>
+    	
+        <!-- Copy docs -->
+        <copy todir="${standalone.dir}/docs">
+            <fileset dir="${workspace.docs.dir}">
+                <include name="dtds/**"/>
+            </fileset>
+        </copy>
+    	
+
+        <!-- Copy fonts -->
+        <copy todir="${standalone.dir}/fonts">
+            <fileset dir="${fonts.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy lib -->
+        <copy todir="${standalone.dir}/lib">
+            <fileset dir="${lib.dir}" includes="${standalone.fileset}, ${jdbc.fileset}"/>
+        </copy>
+
+        <!-- Copy reports -->
+        <copy todir="${standalone.dir}/reports">
+            <fileset dir="${reports.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    	
+   	   <!-- Copy src -->
+    	<!--
+       <copy todir="${standalone.dir}/src">
+            <fileset dir="${src.dir}">
+                <include name="**"/>
+            </fileset>
+       </copy>
+       -->
+
+        <!-- Copy root files -->
+        <copy todir="${standalone.dir}">
+            <fileset dir="${basedir}">
+                <include name="*.*"/>
+                <exclude name=".*"/>            	
+                <exclude name="*.ipr"/>
+                <exclude name="*.iws"/> 
+            	
+            	<exclude name="install_demo**"/>
+              	<exclude name="install_client**"/>            	
+            	
+                <exclude name="start_client**"/>
+            	
+            </fileset>
+        </copy>
+    	
+ 	
+   	    <concat destfile="${standalone.dir}/plazma.properties" fixlastline="yes">plazma.platform.autologin = true
+    	       	<header filtering="no" trimleading="yes">
+    	           		#
+    	           		# Plazma properties (Standalone)
+    	           		#
+    	       	</header>
+        </concat>        	
+    	
+   		<concat destfile="${standalone.dir}/client.conf">plazma.client.type=standalone (Swing)</concat>		
+    	
+    	
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.dir}/plazma.classpath" token="../" value = ""/>
+    	
+    	<!-- Replace launcher -->
+      	<replace file="${standalone.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+      	<replace file="${standalone.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+
+    	<!-- Replace system-config.xml -->
+    	<replace file="${standalone.dir}/conf/system-config.xml" token="${parent.root.dir}/bsolution.reportstorage/" value = "${root.dir}/"/>
+    	<replace file="${standalone.dir}/conf/system-config.xml" token="../bsolution.reportstorage/" value = "${root.dir}/"/>
+
+    	<!-- Replace application-context-ds.xml -->
+    	<replace file="${standalone.dir}/conf/application-context-ds.xml" token="../bsolution.configuration/" value = ""/>
+    	<replace file="${standalone.dir}/conf/application-context-ds-demo.xml" token="../bsolution.configuration/" value = ""/>
+    	
+    	
+    	<!-- Set version and build -->
+    	<replace file="${standalone.dir}/readme.txt" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/readme_ru.txt" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/readme.txt" token="{build.month}" value = "${build.month}"/>
+    	<replace file="${standalone.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}"/>
+    	<replace file="${standalone.dir}/readme.txt" token="{build.year}" value = "${build.year}"/>
+    	<replace file="${standalone.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}"/>
+    	
+    	<replace file="${standalone.dir}/install.txt" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/install_ru.txt" token="{version}" value = "${version}"/>
+
+    	<replace file="${standalone.dir}/install.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/install.xml" token="{build}" value = "${build}"/>
+
+    	<replace file="${standalone.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.dir}/default_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/unix_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.dir}/default_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	<replace file="${standalone.dir}/unix_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	
+    </target>
+	
+	
+	
+	
+	
+	
+	
+	
+	<target name="clean-pack-install-standalone-demo" description="Clean installation standalone demo pack">
+	        <delete dir="${standalone.demo.dir}"/>
+	</target>
+
+    <target name="create-pack-install-standalone-demo" description="Create installation demo pack" depends = "clean-pack-install-standalone-demo">
+
+        <mkdir dir="${standalone.demo.dir}"/>
+        <mkdir dir="${standalone.demo.dir}/conf"/>
+        <mkdir dir="${standalone.demo.dir}/db"/>
+        <mkdir dir="${standalone.demo.dir}/db/hsql"/>
+    	<mkdir dir="${standalone.demo.dir}/db/datastorage"/>
+        <mkdir dir="${standalone.demo.dir}/dist"/>
+        <mkdir dir="${standalone.demo.dir}/docs"/>
+        <mkdir dir="${standalone.demo.dir}/fonts"/>
+        <mkdir dir="${standalone.demo.dir}/lib"/>
+        <mkdir dir="${standalone.demo.dir}/logs"/>
+        <mkdir dir="${standalone.demo.dir}/reports"/>
+
+        <!-- Copy configuration -->
+        <copy todir="${standalone.demo.dir}/conf">
+
+            <fileset dir="${conf.dir}/install">
+                <!-- <include name="application.xml"/> -->
+                <include name="jdbc**.properties"/>
+            </fileset>
+
+            <fileset dir="${conf.dir}">
+            	<include name="*.*"/>
+            	<exclude name="application.xml"/>
+            	<exclude name="jdbc**.properties"/>
+            </fileset>
+
+        </copy>
+    	
+    	<copy file="${conf.dir}/install/application-rich.swing.xml" tofile="${standalone.demo.dir}/conf/application.xml" overwrite="true"/>
+    	<copy file="${conf.dir}/standalone/system-config.xml" tofile="${standalone.demo.dir}/conf/system-config.xml" overwrite="true"/>
+    	
+    	<copy todir="${standalone.demo.dir}/conf/packages">
+    		<fileset dir="${conf.dir}/packages">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+
+    	<copy todir="${standalone.demo.dir}/conf">
+    		<fileset dir="${conf.dir}/ui/rich.swing">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+
+
+        <!-- Copy db -->
+        <copy todir="${standalone.demo.dir}/db/hsql">
+            <fileset dir="${db.dir}/hsql">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+  
+        <!-- Copy Data Storage -->
+        <copy todir="${standalone.demo.dir}/db/datastorage">
+            <fileset dir="${db.dir}/datastorage">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+
+        	
+        	
+        <!-- Copy dist -->
+        <copy todir="${standalone.demo.dir}/dist">
+            <fileset dir="${dist.dir}">
+            	<include name="${framework.jar}"/>
+       	    	<include name="${richclient.jar}"/>
+       	    	<include name="${richclient.swing.jar}"/>
+            	
+            	<include name="${bsolution.common.jar}"/>
+            	<include name="${bsolution.server.jar}"/>
+            	
+               	<include name="${bsolution.client.gui.jar}"/>
+            </fileset>
+        </copy>
+    	
+        <!-- Copy docs -->
+        <copy todir="${standalone.demo.dir}/docs">
+            <fileset dir="${workspace.docs.dir}">
+                <include name="dtds/**"/>
+            </fileset>
+        </copy>
+    	
+
+        <!-- Copy fonts -->
+        <copy todir="${standalone.demo.dir}/fonts">
+            <fileset dir="${fonts.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy lib -->
+        <copy todir="${standalone.demo.dir}/lib">
+            <fileset dir="${lib.dir}" includes="${standalone.fileset}"/>
+        </copy>
+
+        <!-- Copy reports -->
+        <copy todir="${standalone.demo.dir}/reports">
+            <fileset dir="${reports.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    	
+   	  
+        <!-- Copy root files -->
+        <copy todir="${standalone.demo.dir}">
+            <fileset dir="${basedir}">
+                <include name="*.*"/>
+                <exclude name=".*"/>            	
+                <exclude name="*.ipr"/>
+                <exclude name="*.iws"/>            	
+            	
+                <exclude name="build*"/>
+            	
+              	<exclude name="install_demo**"/>
+               	<exclude name="install_client**"/>            	
+            	
+                <exclude name="start_client*"/>
+            </fileset>
+        </copy>
+
+
+    	<copy file="${basedir}/install_demo.xml" tofile="${standalone.demo.dir}/install.xml" overwrite="true"/>
+    	
+   	
+   	    <concat destfile="${standalone.demo.dir}/plazma.properties" fixlastline="yes">
+plazma.platform.demo = true
+plazma.platform.autologin = true
+    	    <header filtering="no" trimleading="yes">
+    	       		#
+    	       		# Plazma properties (Demo Standalone)
+    	       		#
+    	    </header>
+        </concat>        	
+    	
+   		<concat destfile="${standalone.demo.dir}/client.conf">plazma.client.type=standalone (Swing)</concat>		
+	
+    	
+    	
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.demo.dir}/plazma.classpath" token="../" value = ""/>
+    	
+    	<!-- Replace launcher -->
+      	<replace file="${standalone.demo.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+      	<replace file="${standalone.demo.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+
+    	<!-- Replace system-config.xml -->
+    	<replace file="${standalone.demo.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.reportstorage/" value = "${root.dir}/"/>
+    	<replace file="${standalone.demo.dir}/conf/system-config.xml" token="../bs.base.reportstorage/" value = "${root.dir}/"/>
+
+    	<!-- Replace application-context-ds.xml -->
+    	<replace file="${standalone.demo.dir}/conf/application-context-ds.xml" token="../bs.base.configuration/" value = ""/>
+
+    	
+    	<!-- Set version and build -->
+    	<replace file="${standalone.demo.dir}/readme.txt" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/readme_ru.txt" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/readme.txt" token="{build.month}" value = "${build.month}"/>
+    	<replace file="${standalone.demo.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}"/>
+    	<replace file="${standalone.demo.dir}/readme.txt" token="{build.year}" value = "${build.year}"/>
+    	<replace file="${standalone.demo.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}"/>
+    	
+    	<replace file="${standalone.demo.dir}/install.txt" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/install_ru.txt" token="{version}" value = "${version}"/>
+
+    	<replace file="${standalone.demo.dir}/install.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/install.xml" token="{build}" value = "${build}"/>
+
+    	<replace file="${standalone.demo.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.demo.dir}/default_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/unix_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.demo.dir}/default_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	<replace file="${standalone.demo.dir}/unix_shortcut_specification.xml" token="{build}" value = "${build}"/>
+
+    </target>
+
+	
+	<!--
+    <target name="clean-pack-install-client" description="Clean client installation pack">
+        <delete dir="${client.dir}"/>
+    </target>
+    -->
+	
+
+	
+	<target name="create-pack-install-client-lite" description="Create client installation pack" depends="create-pack-client-lite">
+
+        <!-- Copy configuration -->
+        <copy todir="${client.dir}/conf" overwrite="true">
+            <fileset dir="${conf.dir}/install">
+                <include name="application.xml"/>
+            </fileset>
+        </copy>
+    	
+        <!-- Copy root files -->
+        <copy todir="${client.dir}">
+            <fileset dir="${basedir}">
+            	<include name="install.txt"/>
+               	<include name="install_ru.txt"/>            	
+                <include name="install.inf"/>            	            	
+                <include name="install_creator*"/>            	
+                <include name="uninstall**"/>
+                <include name="**_shortcut_specification.xml"/>            	
+                <include name="ShellLink.dll"/>
+            </fileset>
+        </copy>
+		
+       	<!-- <copy file="${basedir}/install.txt" tofile="${client.dir}/install.txt" overwrite="true"/> -->
+       	<copy file="${basedir}/install_client.xml" tofile="${client.dir}/install.xml" overwrite="true"/>
+		
+	
+		
+		<!-- Move to install dir -->
+		<delete dir="${client.lite.dir}"/>
+		
+		<move todir="${client.lite.dir}">
+			<fileset dir="${client.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+		
+    </target>
+	
+	
+	
+
+	
+    <!--
+      Generate Java Docs
+    -->
+    <!--
+    <target name="javadoc" description="Generate Javadocs.">
+
+	   <mkdir dir="${javadocs.dir}"/>
+
+       <javadoc
+           sourcepath="src"
+           destdir="${javadocs.dir}"
+           windowtitle="Plazma Bsolution"
+           defaultexcludes="yes"
+           author="true"
+           version="true"
+           use="true"
+        >
+
+		  <doctitle><![CDATA[<h1>Plazma Bsolution</h1>]]></doctitle>
+		  <bottom><![CDATA[<i>Copyright (C) 2005-2008 The Plazma Bsolution Project.</i>]]></bottom>
+		  <classpath refid="plazma-classpath"/>
+
+		  <packageset dir="${src.dir}">
+   	  	    <include name="org/plazmaforge/bsolution/**"/>
+		  </packageset>
+
+	    </javadoc>
+
+    </target>
+    -->
+
+
+</project>

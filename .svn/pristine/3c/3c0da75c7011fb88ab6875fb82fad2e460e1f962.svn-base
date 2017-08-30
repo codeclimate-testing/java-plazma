@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="UserRole" class="org.plazmaforge.bsolution.security.common.beans.UserRole" table="SYS_USER_ROLE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="user" column="USER_ID" class="org.plazmaforge.bsolution.security.common.beans.User"  required="true" />
+        	<reference name="role" column="ROLE_ID" class="org.plazmaforge.bsolution.security.common.beans.Role"  required="true" />
+        </attributes>
+    </entity>
+

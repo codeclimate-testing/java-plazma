@@ -1,0 +1,24 @@
+
+
+<!ELEMENT menubar-config (menubar*)>
+
+<!ELEMENT menubar (menu*)>
+
+<!ELEMENT menu (menu*, menuitem*)>
+
+<!ELEMENT menuitem EMPTY>
+
+<!ATTLIST menu
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        text CDATA #IMPLIED
+        action NMTOKEN #IMPLIED
+>
+
+<!ATTLIST menuitem
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        text CDATA #IMPLIED
+        action NMTOKEN #IMPLIED
+>
+

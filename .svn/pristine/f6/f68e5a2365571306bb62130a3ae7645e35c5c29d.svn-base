@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="GenericDocumentServiceImpl" class="org.plazmaforge.bsolution.document.server.services.GenericDocumentServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<!--  DOCUMENT -->
+	<bean id="DocumentTypeServiceImpl" class="org.plazmaforge.bsolution.document.server.services.DocumentTypeServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="DocumentRelationServiceImpl" class="org.plazmaforge.bsolution.document.server.services.DocumentRelationServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>	
+	<bean id="DocumentStatusServiceImpl" class="org.plazmaforge.bsolution.document.server.services.DocumentStatusServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+</beans>	

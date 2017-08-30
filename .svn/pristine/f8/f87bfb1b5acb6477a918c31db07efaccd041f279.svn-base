@@ -1,0 +1,54 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Document" class="org.plazmaforge.bsolution.document.common.beans.Document" table="DOCUMENT">
+		<aliases>
+    		<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="organizationName" attribute="organization.name"/>
+    		<alias name="partnerId" attribute="partner.id"/>
+    		<alias name="partnerName" attribute="partner.name"/>
+			<alias name="mtrlResponsibleName" attribute="mtrlResponsible.contact.lastName"/>
+    	   	<alias name="documentTypeName" attribute="documentType.entity.name"/>
+    	   	<alias name="documentStatusName" attribute="documentStatus.name"/>
+    		<alias name="departmentName" attribute="department.name"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="projectName" attribute="project.name"/>
+    	</aliases>      	    
+    	<attributes>
+    		<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="documentNo" column="DOCUMENT_NO" type="String"/>
+        	<attribute name="documentDate" column="DOCUMENT_DATE" type="Date"/>
+        	<attribute name="reason" column="REASON" type="String"/>
+        	<attribute name="note" column="NOTE" type="String"/>
+        	<reference name="reasonDocument" column="REASON_DOCUMENT_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentTitle"/> 
+        	<reference name="contractDocument" column="CONTRACT_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentTitle"/>
+        	<reference name="documentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType"  required="true"/>
+        	<reference name="documentStatus" column="DOCUMENT_STATUS_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentStatus"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<attribute name="periodId" column="PERIOD_ID" type="Integer" required="true"/>        
+        	<reference name="user" column="USER_ID" class="org.plazmaforge.bsolution.security.common.beans.UserHeader"/>
+        	<reference name="department" column="DEPARTMENT_ID" class="org.plazmaforge.bsolution.organization.common.beans.Department"/>
+        	<reference name="project" column="PROJECT_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectTitle"/>        
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+    	</attributes>
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    	</triggers>        
+    </entity>
+

@@ -1,0 +1,9 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="UserHeader" class="org.plazmaforge.bsolution.security.common.beans.UserHeader" table="SYS_USER" readonly="true">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="assigned"/>
+        	<attribute name="login" column="USER_NAME" type="String"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        </attributes>
+    </entity>
+

@@ -1,0 +1,115 @@
+
+<html>
+<title>MySQL</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">MySQL</h2>
+   <hr>
+   <br><br>
+
+
+   <h3 align="center">Common</h3>
+
+Web site: <a target="_blank" href="http://www.mysql.org">http://www.mysql.org</a>
+
+   <h3 align="center">Create a database</h3>
+
+
+
+ <p>
+ Creating a database:
+ <code>
+ <pre>
+ &lt;MySQL&gt;/bin/mysql -u root -p
+
+ mysql> create database plazma;
+ mysql> use plazma;
+ 
+ </pre>
+ </code>
+
+ <p>
+Creating a structure of database and populate init data:
+ <code>
+<!-- &lt;MySQL&gt;/bin/mysql --database plazma -u root -p &lt; с:\Plazma\db\result\mysql\en\result_work_db.sql &gt; out.txt -->
+ <pre>
+  mysql> source с:\Plazma\db\script\createdb\mysql\en\create_plazma_db.sql
+ </pre>
+ </code>
+ 
+ or
+
+ <code>
+ <pre>
+ &lt;MySQL&gt;/bin/mysql --database plazma -u root -p &lt; с:\Plazma\db\script\createdb\mysql\en\create_plazma_db.sql &gt; out.txt
+ </pre>
+ </code>
+
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC driver</h3>
+ 
+
+ <p>
+ You have to check the JDBC driver: 
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/lib/jdbc/mysql/mysql-connector-java-5.0.5-bin.jar
+ </pre>
+ </code>
+
+ <br>
+ <p>
+ You have to verify CLASSPATH for the JDBC driver in the file:
+ <code>
+ <pre>
+
+ &lt;Plazma&gt;/plazma.classpath
+ ------------------------------------------------------
+ # MySQL 
+ lib/jdbc/mysql/mysql-connector-java-5.0.5-bin.jar 
+
+ </pre>
+ </code>
+
+
+ <br><br>
+
+
+   <h3 align="center">Connect to a database</h3>
+
+ <p>To connect you have to change properties in file &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>For example:
+
+ <p>
+ <code>
+ <pre>
+ # Set connection properties
+ jdbc.driverClassName=com.mysql.jdbc.Driver 
+ jdbc.url=jdbc:mysql://localhost:3306/plazma
+ jdbc.username=sa
+ jdbc.password=
+ </pre>
+ </code>
+ 
+
+
+
+</body>
+</html>
+
+

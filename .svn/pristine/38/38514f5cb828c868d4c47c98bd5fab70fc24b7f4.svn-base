@@ -1,0 +1,92 @@
+
+<html>
+<title>General view</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">General View</h2>
+   <hr><br><br>
+
+   <!--
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/logo-start.jpg"/></td>
+    </tr>
+   </table>
+   <br><br><br><br>
+   -->
+
+
+   <h3  align="center">Main Application Window</h3>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/app-window.png"/></td>
+    </tr>
+   </table>
+
+   <br><br><br><br>
+   <h3  align="center">System menu and tool bar</h3>
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/system-menu-and-toolbar.png"/></td>
+    </tr>
+
+    <tr>
+      <td height="30">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td align="center"><img border=0 src="images/system-menu-item.png"/></td>
+    </tr>
+
+   </table>
+
+
+
+   <br><br><br><br>
+   <h3  align="center">Tree menu</h3>
+
+   <table align="center">
+    <tr>
+      <td align="center"><img border=0 src="images/tree-menu.png"/></td>
+    </tr>
+
+    <tr>
+      <td height="30">&nbsp;</td>
+    </tr>
+
+
+   </table>
+
+   <br><br><br><br>
+   <h3  align="center">Status bar</h3>
+   <table align="center">
+    <tr>
+      <td align="center"><img border=0 src="images/statusbar.png"/></td>
+    </tr>
+
+   </table>
+   
+</TD>
+</TR>
+
+</TABLE>
+
+
+</body>
+</html>
+
+

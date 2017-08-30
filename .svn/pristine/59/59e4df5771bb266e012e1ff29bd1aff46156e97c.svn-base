@@ -1,0 +1,17 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PersonEducation" class="org.plazmaforge.bsolution.personality.common.beans.PersonEducation" table="PERSON_EDUCATION">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.personality.common.services.GenericPersonItemService</property>
+    	</config>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="personId" column="PERSON_ID" type="Integer" required="true"/>
+        	<attribute name="endDate" column="DATE_END" type="Date" />
+        	<attribute name="faculty" column="FACULTY" type="String" />
+        	<reference name="academicDegree" column="ACADEMIC_DEGREE_ID" class="org.plazmaforge.bsolution.personality.common.beans.AcademicDegree" />
+        	<reference name="educationForm" column="EDUCATION_FORM_ID" class="org.plazmaforge.bsolution.personality.common.beans.EducationForm"  required="true" />
+        	<reference name="educationInstitute" column="EDUCATION_INSTITUTE_ID" class="org.plazmaforge.bsolution.personality.common.beans.EducationInstitute"  required="true" />
+        	<reference name="educationType" column="EDUCATION_TYPE_ID" class="org.plazmaforge.bsolution.personality.common.beans.EducationType"  required="true" />
+        </attributes>
+    </entity>
+

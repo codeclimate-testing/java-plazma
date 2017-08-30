@@ -1,0 +1,14 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PersonFamily" class="org.plazmaforge.bsolution.personality.common.beans.PersonFamily" table="PERSON_FAMILY">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.personality.common.services.GenericPersonItemService</property>
+    	</config>
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="personId" column="PERSON_ID" type="Integer" required="true"/> 
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="birthDate" column="BIRTH_DATE" type="Date" />
+        	<reference name="familiarity" column="FAMILIARITY_ID" class="org.plazmaforge.bsolution.personality.common.beans.Familiarity"  required="true" />
+        </attributes>
+    </entity>
+

@@ -1,0 +1,191 @@
+
+<html>
+<title>Database</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Database</h2>
+   <hr>
+   <br><br>
+
+
+ 
+
+   <p>The <b>Plazma</b> supports the following databases:
+   <b>
+   <ul>
+    <li><a href="product/oracle.html">Oracle</a>
+    <li><a href="product/postgresql.html">PostgreSQL</a>
+    <li><a href="product/mysql.html">MySQL</a>
+    <li><a href="product/firebird.html">Firebird</a>
+    <li><a href="product/hsql.html">HSQL</a>
+   </ul>
+   </b>
+
+
+
+   <h3 align="center">Create a database</h3>
+
+
+
+ <p>A installation of the <b>Plazma</b> includes physical database files only to <b>HSQL</b>.<br> 
+ The files available in a folder &lt;Plazma&gt;/db/hsql.<br><br> 
+ If you want to use a database of other vendors, you have to create database 
+ and run SQL scripts. <br>
+ To create a database, you can use various tools. 
+ <p>For example: 
+
+ <b>
+ <ul>
+   <li>Oracle - SQL* Plus
+   <li>PostgreSQL - pgAdmin
+   <li>MySQL Query Browser
+   <li>Firebird - ISQL
+   <li>HSQL - Database Manager (&lt;HSQL&gt;/demo/runManager.bat)
+  </ul>
+ </b>
+
+
+ <p>SQL scripts available in &lt;Plazma&gt;/db/script.<br>
+ You can run the following script to create structure and fill a new database: 
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db.sql - live database<br>
+  &lt;Plazma&gt;/db/script/createdb/&lt;database-vendor&gt;/&lt;language&gt;/create_plazma_db_demo.sql - demo database<br>
+ </code>
+
+ <p>
+ <code>&lt;database-vendor&gt;</code> - vendor of the database (oracle, postgresql, mysql, firebird, hsql)<br>
+
+ <code>&lt;language&gt;</code> - language (en, de, ru, uk)<br>
+
+ <p>For the <b>Firebird</b> database and the English language: 
+
+
+ <p><code>
+  &lt;Plazma&gt;/db/script/createdb/firebird/en/create_plazma_db.sql - live database<br>
+  &lt;Plazma&gt;/db/script/createdb/firebird/en/create_plazma_db_demo.sql - demo database<br>
+ </code>
+
+ <br><br>
+ More: 
+ <a href="product/oracle.html">Oracle</a>
+ <a href="product/postgresql.html">PostgreSQL</a>
+ <a href="product/mysql.html">MySQL</a>
+ <a href="product/firebird.html">Firebird</a>
+ <a href="product/hsql.html">HSQL</a>
+
+ <br><br> <br><br>
+
+   <h3 align="center">JDBC drivers</h3>
+ 
+ <p>A installation of the <b>Plazma</b> includes all <b>JDBC</b> drivers for the  supported databases.<br> 
+
+ <b>JAR</b> files available in a folder &lt;Plazma&gt;/lib/&lt;database-vendor&gt;.<br> 
+
+ If you use other databases you have to download <b>JDBC</b> drivers from the vendor web site and
+ add driver files to <b>CLASSPATH</b>.
+
+ <br><br>
+ More: 
+ <a href="product/oracle.html">Oracle</a>
+ <a href="product/postgresql.html">PostgreSQL</a>
+ <a href="product/mysql.html">MySQL</a>
+ <a href="product/firebird.html">Firebird</a>
+ <a href="product/hsql.html">HSQL</a>
+
+ <br><br> <br><br>
+
+   <h3 align="center">Connect to a database</h3>
+
+ <p>For connected need to change the relevant properties in the file &lt;Plazma&gt;/conf/jdbc.properties.
+
+
+ <p>For example:
+
+ <p>
+ <code>
+ # Set properties to connect to the Firebird database<br>
+ jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver<br>
+ jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.fdb<br>
+ jdbc.username=sysdba<br>
+ jdbc.password=masterkey<br>
+ </code>
+ 
+
+ <br><br>
+ More: 
+ <a href="product/oracle.html">Oracle</a>
+ <a href="product/postgresql.html">PostgreSQL</a>
+ <a href="product/mysql.html">MySQL</a>
+ <a href="product/firebird.html">Firebird</a>
+ <a href="product/hsql.html">HSQL</a>
+
+
+
+
+ <br><br> <br><br>
+
+   <h3 align="center">Summary</h3>
+    
+   
+
+ <table border="1">
+  <tr height="40">
+
+    <td>&nbsp; </td> <td align="center"><b>Oracle</b></td><td align="center" ><b>PostgreSQL</b></td><td align="center" ><b>MySQL</b></td><td align="center" ><b>Firebird</b></td><td  align="center" ><b>HSQL</b></td>
+
+  </tr>
+
+  <tr>
+    <td>Web site</td>  
+    <td align="center"><a target="_blank" href="http://www.oracle.com">http://www.oracle.com</a></td> 
+    <td align="center"><a target="_blank" href="http://www.postgresql.org">http://www.postgresql.org</a></td>
+    <td align="center"><a target="_blank" href="http://www.mysql.org">http://www.mysql.org</a></td>
+    <td align="center"><a target="_blank" href="http://www.firebirdsql.org">http://www.firebirdsql.org</a></td> 
+    <td align="center"><a target="_blank" href="http://hsqldb.org">http://hsqldb.org</a></td>  
+  </tr>
+
+  <tr>
+    <td>File/dump of database</td>  <td align="center">-</td> <td align="center">-</td><td align="center">-</td><td align="center">-</td> <td align="center">Include</td>  
+  </tr>
+
+  <tr>
+    <td>SQL scripts (generate DB)</td> <td align="center">Include</td><td align="center">Include</td><td align="center">Include</td><td align="center">Include</td><td align="center">Include</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Driver</td> <td align="center">Include</td><td align="center">Include</td><td align="center">Include</td><td align="center">Include</td><td align="center">Include</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Driver Class</td> <td align="center">oracle.jdbc.driver.OracleDriver</td><td align="center">org.postgresql.Driver</td><td align="center">com.mysql.jdbc.Driver</td><td align="center">org.firebirdsql.jdbc.FBDriver</td><td align="center">org.hsqldb.jdbcDriver</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Url</td> <td align="center">jdbc:oracle:thin:@&lt;host&gt;[:&lt;port&gt;]:&lt;database&gt;</td><td align="center">jdbc:postgresql:[&lt;//host&gt;[:&lt;port&gt;/]]&lt;database&gt;</td><td align="center">jdbc:mysql://&lt;host&gt;[&lt:port&gt;]/&lt;database&gt;</td><td align="center">jdbc:firebirdsql:[//host[:port]/]&lt;database&gt;</td><td align="center">jdbc:hsqldb:hsql://&lt;host&gt;[:&lt;port&gt;]</td>  
+  </tr>
+
+  <tr>
+    <td>JDBC Url example</td> <td align="center">jdbc:oracle:thin:@localhost:1521:XE</td><td align="center">jdbc:postgresql://localhost:5432/plazma</td><td align="center">jdbc:mysql://localhost:3306/plazma</td><td align="center">jdbc:firebirdsql:localhost/3050:C:\\plazma.fdb</td><td align="center">jdbc:hsqldb:hsql://localhost</td>  
+  </tr>
+
+
+  <tr>
+    <td>Port by default</td> <td align="center">1521</td><td align="center">5432</td><td align="center">3306</td><td align="center">3050</td><td align="center">1476</td>  
+  </tr>
+
+ <table>
+</body>
+</html>
+
+

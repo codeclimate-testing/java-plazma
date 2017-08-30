@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~ BUSUNESS IMPLEMETS DEFINITIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	
+	<bean id="ReportServiceImpl" class="org.plazmaforge.framework.report.service.spring.ReportServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>	
+	
+	<!-- ERM -->
+ 	<bean id="GenericEntityServiceImpl" class="org.plazmaforge.framework.ext.service.impl.GenericEntityServiceImpl" lazy-init="true" scope="prototype">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+
+
+    <!-- BASE -->
+    
+    <bean id="SystemInfoServiceImpl" class="org.plazmaforge.bsolution.base.server.services.SystemInfoServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+    
+    <bean id="EnterpriseContextServiceImpl" class="org.plazmaforge.bsolution.base.server.services.EnterpriseContextServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+    
+    
+	<bean id="SystemEntityServiceImpl" class="org.plazmaforge.bsolution.base.server.services.SystemEntityServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="attributeService"><ref bean="AttributeService"/></property>
+	</bean>
+	
+	<bean id="EnumerationServiceImpl" class="org.plazmaforge.bsolution.base.server.services.EnumerationServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="LookupServiceImpl" class="org.plazmaforge.bsolution.base.server.services.LookupServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+    <bean id="DataTypeServiceImpl" class="org.plazmaforge.bsolution.base.server.services.DataTypeServiceImpl" lazy-init="true">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+    <bean id="SystemVariableServiceImpl" class="org.plazmaforge.bsolution.base.server.services.SystemVariableServiceImpl" lazy-init="true">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+
+	<!-- SYSTEM ATRIBUTE -->
+    <bean id="AttributeServiceImpl" class="org.plazmaforge.bsolution.base.server.services.AttributeServiceImpl" lazy-init="true">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+    <bean id="AttributeValueServiceImpl" class="org.plazmaforge.bsolution.base.server.services.AttributeValueServiceImpl" lazy-init="true">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+
+	<!-- SYSTEM FILE -->
+	<bean id="FileServiceImpl" class="org.plazmaforge.bsolution.base.server.services.FileServiceImpl" lazy-init="true">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+    
+	<!-- SYSTEM PREFERENCE -->
+	<bean id="SystemPreferenceServiceImpl" class="org.plazmaforge.bsolution.base.server.services.SystemPreferenceServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	
+	<bean id="TransferServiceImpl" class="org.plazmaforge.bsolution.base.server.services.TransferServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+
+	<bean id="TransferSourceServiceImpl" class="org.plazmaforge.bsolution.base.server.services.TransferSourceServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+
+	<bean id="CustomTransferServiceImpl" class="org.plazmaforge.bsolution.base.server.services.CustomTransferServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+
+	<bean id="PeriodTypeServiceImpl" class="org.plazmaforge.bsolution.base.server.services.PeriodTypeServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<bean id="PeriodServiceImpl" class="org.plazmaforge.bsolution.base.server.services.PeriodServiceImpl" lazy-init="true">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+
+</beans>

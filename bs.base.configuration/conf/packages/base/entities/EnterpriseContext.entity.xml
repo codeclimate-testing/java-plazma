@@ -1,0 +1,25 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EnterpriseContext" class="org.plazmaforge.bsolution.base.EnterpriseContext" table="ENTERPRISE_CONTEXT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="period" column="PERIOD_ID" class="org.plazmaforge.bsolution.base.common.beans.Period"  required="true" />
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency"  required="true" />
+        	<reference name="unit" column="UNIT_ID" class="org.plazmaforge.bsolution.base.common.beans.Unit"  required="true" />
+        	<reference name="tax" column="TAX_ID" class="org.plazmaforge.bsolution.base.common.beans.Tax"/>
+ 			<attribute name="calculateAccounting" column="IS_CALCULATE_ACCOUNTING" type="Boolean"/>
+        	<attribute name="internationalAttributes" column="IS_INTERNATIONAL_ATTRIBUTES" type="Boolean"/>
+        	<attribute name="multiCurrencies" column="IS_MULTI_CURRENCIES" type="Boolean"/>
+        	<attribute name="autoSetCurrencyRate" column="IS_AUTO_SET_CURRENCY_RATE" type="Boolean"/>
+        	<attribute name="projectInDocument" column="IS_PROJECT_IN_DOCUMENT" type="Boolean"/>
+        	<attribute name="autoCalculateProdRest" column="IS_AUTO_CALCULATE_PROD_REST" type="Boolean"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        	<reference name="supplier" column="SUPPLIER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>        
+        	<reference name="customer" column="CUSTOMER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>                
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+        	<reference name="mtrlResponsible" column="MTRL_RESPONSIBLE_ID" class="org.plazmaforge.bsolution.organization.common.beans.MtrlResponsible" />
+        	<reference name="warehouse" column="WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>        
+        	<reference name="incomeWarehouse" column="INCOME_WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>                
+        	<reference name="outcomeWarehouse" column="OUTCOME_WAREHOUSE_ID" class="org.plazmaforge.bsolution.organization.common.beans.Warehouse"/>
+        </attributes>                        
+    </entity>
+

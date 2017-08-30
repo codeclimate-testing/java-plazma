@@ -1,0 +1,17 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BankAccount" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount" table="BANK_ACCOUNT">
+    	<aliases>
+    	    <alias name="partnerId" attribute="partner.id"/>
+    	    <alias name="partnerName" attribute="partner.name"/>
+    	    <alias name="bankId" attribute="bank.id"/>
+    	    <alias name="bankName" attribute="bank.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="accountNo" column="ACCOUNT_NO" type="String" />
+        	<reference name="bank" column="BANK_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankTitle"  required="true" />
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"  required="true" />
+        </attributes>
+    </entity>
+

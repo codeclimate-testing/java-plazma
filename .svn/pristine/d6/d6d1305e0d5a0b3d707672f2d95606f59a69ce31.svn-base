@@ -1,0 +1,119 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Partner" class="org.plazmaforge.bsolution.partner.common.beans.Partner" table="PARTNER">
+    	<aliases>
+    		<alias name="partnerTypeName" attribute="partnerType.name"/>
+    		<alias name="partnerGroupId" attribute="partnerGroup.id"/>
+    		<alias name="partnerGroupName" attribute="partnerGroup.name"/>
+    		<alias name="responsibleId" attribute="responsible.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="phoneString" attribute="defPhone.phoneString" filter-attribute="defPhone.phoneCompile"/>
+    		<alias name="cityName" attribute="defAddress.cityName"/>
+    		<alias name="localityAddressString" attribute="defAddress.localityAddressString"/>
+    	</aliases>
+        <attributes>
+        	<key name="id" column="ID" type="Integer">
+    	    	<generator type="sequence">
+     				<parameter name="sequence">BUSINESSABLE_SEQUENCE</parameter>
+	    		</generator>
+   	 		</key>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="nameEn" column="NAME_EN" type="String"/>
+        	<attribute name="fullName" column="FULL_NAME" type="String" />
+        	<attribute name="yearCreate" column="YEAR_CREATE" type="Integer" />
+        	<attribute name="workTime" column="WORK_TIME" type="String" />
+        	<attribute name="note" column="NOTE" type="String" />
+        	<attribute name="tax" column="IS_TAX" type="Boolean" />
+        	<attribute name="nec" column="NEC" type="String" />
+        	<attribute name="idn" column="IDN" type="String" />        
+        	<attribute name="taxDocNo" column="TAX_DOC_NO" type="String" />
+        	<attribute name="descriminator" column="DESCRIMINATOR" type="String" />
+        	<reference name="partnerType" column="PARTNER_TYPE_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerType"/>
+        	<reference name="formProperty" column="FORM_PROPERTY_ID" class="org.plazmaforge.bsolution.partner.common.beans.FormProperty"/>
+        	<reference name="partnerGroup" column="PARTNER_GROUP_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerGroup"/>
+        	<reference name="industry" column="INDUSTRY_ID" class="org.plazmaforge.bsolution.partner.common.beans.Industry"/>
+        	<reference name="ledgerAccount" column="LEDGER_ACCOUNT_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount"/>                
+        	<attribute name="bankAccountId" column="BANK_ACCOUNT_ID" type="Integer" />
+			<attribute name="imageFileName" column="IMAGE_FILE_NAME" type="String" />
+			<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+			<attribute name="person" column="IS_PERSON" type="Boolean"/>
+			<entry name="contactableElement" class="org.plazmaforge.bsolution.contact.common.beans.ContactableElement" join-column="OWNER_ID" cascade="all"/>
+         	<collection name="partnerCategoryLinkList" join-class="org.plazmaforge.bsolution.partner.common.beans.PartnerCategoryLink" join-attribute="partner" cascade="all"/>
+        	<collection name="partnerActivityTypeLinkList" join-class="org.plazmaforge.bsolution.partner.common.beans.PartnerActivityTypeLink" join-attribute="partner" cascade="all"/>
+       </attributes>
+        <triggers>
+        	<trigger type="AfterLoad">
+    			<script>
+    				CALL loadImageFS(:data, 'partner');
+    				CALL loadAttributeValues(:data);
+    				CALL loadFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterInsert">
+    			<script>CALL insertImageFS(:data, 'partner', 'image')</script>
+    		</trigger>
+     		<trigger type="AfterUpdate">
+    			<script>CALL updateImageFS(:data, 'partner', 'image')</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script language="SQL">
+    				UPDATE PARTNER SET IMAGE_FILE_NAME = :imageFileName WHERE ID = :id
+   				</script>
+    		</trigger>
+     		<trigger type="AfterSave">
+    			<script>
+    				CALL saveAttributeValues(:data);
+    				CALL saveFiles(:data);
+    			</script>
+    		</trigger>
+     		<trigger type="AfterDelete">
+    			<script>
+    				CALL deleteImageFS(:data, 'partner');
+    				CALL deleteAttributeValues(:data);
+    				CALL deleteFiles(:data);
+    			</script>
+    		</trigger>
+    		
+     		<trigger type="BeforeDelete" description="Delete Bank Account">
+    			<script language="SQL">
+    				UPDATE PARTNER SET BANK_ACCOUNT_ID = NULL WHERE ID = :id;
+    				DELETE FROM BANK_ACCOUNT WHERE PARTNER_ID = :id;
+    			</script>
+    		</trigger>
+     		<trigger type="BeforeDelete" description="Reset Bank Account">
+    			<script>
+    				SET bankAccountId = null;
+    			</script>
+    		</trigger>
+    		
+    		<trigger type="AfterLoad">
+    			<script>
+    				CALL businessableManager->postLoad(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterSave">
+    			<script>
+    				CALL businessableManager->postSave(:data);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script>
+    				CALL businessableManager->postDelete(:data);
+    			</script>
+    		</trigger>
+
+    		<trigger type="AfterInsert">
+    			<script language="SQL">
+    				INSERT INTO CONTRACTOR (ID) VALUES (:id);
+    			</script>
+    		</trigger>
+    		<trigger type="AfterDelete">
+    			<script language="SQL">
+    				DELETE FROM CONTRACTOR WHERE ID = :id;
+    			</script>
+    		</trigger>
+    		
+    		
+    	</triggers>        
+    </entity>
+

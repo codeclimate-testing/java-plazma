@@ -1,0 +1,14 @@
+<system-config description="Client system configuration">
+    <properties>
+        <property name="javax.xml.transform.TransformerFactory" system="true">org.apache.xalan.processor.TransformerFactoryImpl</property>
+        <property name="plazma.platform.report.engine.class" system="true">org.plazmaforge.framework.report.engine.jasperreports.JasperReportsEngine</property>
+        <property name="plazma.platform.config.loader.class">org.plazmaforge.bsolution.base.EnterpriseConfigLoader</property>
+        <property name="plazma.platform.period.creator.class">org.plazmaforge.bsolution.base.EnterprisePeriodCreator</property>
+        <property name="plazma.platform.permission.service.class">org.plazmaforge.bsolution.security.common.services.PermissionService</property>
+        <property name="plazma.platform.transfer.service.class">org.plazmaforge.bsolution.base.common.services.TransferService</property>        
+        <property name="plazma.platform.custom.transfer.service.class">org.plazmaforge.bsolution.base.common.services.CustomTransferService</property>
+        <property name="plazma.platform.association.creator.class">org.plazmaforge.bsolution.base.BSolutionAssociationCreator</property>
+        <property name="plazma.platform.system.entity.service.class">org.plazmaforge.bsolution.base.common.services.SystemEntityService</property>                
+        <property name="plazma.platform.service.locator.class">org.plazmaforge.framework.platform.service.impl.rmi.RMIServiceLocator</property>
+    </properties>
+ </system-config>

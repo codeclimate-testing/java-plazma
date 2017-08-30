@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/springsecurity/spring-security-core-3.1.0.M2.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/aopalliance.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/asm-1.5.3.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/asm-attrs-1.5.3.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/bsh-1.2b6.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/cglib-2.1_3.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/commons-collections-3.1.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/commons-logging.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/dom4j-1.4.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/ehcache-1.5.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/hsqldb.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/itext/iText-2.1.7.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jfree/jcommon-1.0.15.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jdbc2_0-stdext.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jfree/jfreechart-1.0.12.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jta.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/log4j-1.2.8.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/odmg-3.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/oscache-2.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/xalan-2.4.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/xercesImpl.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_cdatetime_0.9.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_grid_ALPHA.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_pgroup_ALPHA.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/nebula_pshelf_ALPHA.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.core.commands_3.4.0.I20080509-2000.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.core.runtime_3.4.0.v20080512.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.jface_3.4.1.M20080827-2000.jar" sourcepath="/JFACE_SRC"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/eclipse/org.eclipse.osgi_3.4.2.R34x_v20080826-1230.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/plazma/plazma-reportviewer-1.0.6.jar"/>
+	<classpathentry kind="var" path="PLAZMA_SWT/swt.jar" sourcepath="/SWT_SRC"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jfree/pixie-0.8.0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/hibernate/hibernate3-fix.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/poi-3.6-20091214.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jasperreports/jasperreports-3.7.6-fix.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jdom_1_0.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/nebula/org.eclipse.nebula.widgets.ganttchart_1.0.0.jar"/>
+	<classpathentry kind="lib" path="/lib/jdbc/mysql/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/jdbc/firebird/jaybird-full-2.1.6.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bs.base"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.aop-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.asm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.aspects-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.context.support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.orm-3.0.5.RELEASE-fix.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.transaction-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/spring/org.springframework.expression-3.0.5.RELEASE.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bs.base.client.swt"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.client"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.client.swt"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/commons-pool-1.5.5.jar"/>
+	<classpathentry kind="var" path="PLAZMA_LIB/commons-dbcp-1.3.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.erm"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/framework.ext"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

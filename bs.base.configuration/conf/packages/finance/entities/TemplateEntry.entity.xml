@@ -1,0 +1,17 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TemplateEntry" class="org.plazmaforge.bsolution.finance.common.beans.TemplateEntry" table="TEMPLATE_ENTRY">
+        <aliases>
+            <alias name="financeDocumentTypeName" attribute="financeDocumentType.documentType.entity.name"/>
+        </aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" required="true"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="note" column="NOTE" type="String"/>
+        	<attribute name="entryClass" column="ENTRY_CLASS" type="String"/>
+        	<reference name="financeDocumentType" column="FINANCE_DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocumentType"  required="true" join-depth="4"/>
+        	<collection name="items" join-class="org.plazmaforge.bsolution.finance.common.beans.TemplateEntryItem" join-attribute="templateEntry" cascade="all"/>
+        </attributes>
+    </entity>
+
+

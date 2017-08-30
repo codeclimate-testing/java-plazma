@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db-diagram version="1.0" provider="Plazma Forge">
+  <connection session="" database="" schema="" />
+  <drawing is-grid-visible="true" is-snap-on="true" is-fast-routing="false" is-labels-visible="true" />
+  <tables>
+    <table id="4cd295e9" name="SYS_ENTITY_TYPE">
+      <drawing is-expanded="true" location="26,608" dimensions="257,129" />
+      <columns>
+        <column id="fced588c" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="32ff5027" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="d77383ba" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="4c268d5a" name="IS_CUSTOM" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="70bb05cb" name="IS_CUSTOM_ATTRIBUTE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+    <table id="af1c447f" name="SYS_ENTITY">
+      <drawing is-expanded="true" location="0,0" dimensions="310,508" />
+      <columns>
+        <column id="4d3c99dd" name="ID" is-primary-key="true" is-foreign-key="false" is-required="true" is-unique="true">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="f5374f74" name="ENTITY_TYPE_ID" is-primary-key="false" is-foreign-key="true" is-required="true" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="6e2ca501" name="CODE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="30" />
+        </column>
+        <column id="b0c7446b" name="NAME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="VARCHAR" size="50" />
+        </column>
+        <column id="de99b847" name="ENTITY_CLASS" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="25339930" name="ENTITY_PACKAGE" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="CHAR" size="30" />
+        </column>
+        <column id="2e3530f3" name="IS_ENABLE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="cbca22f4" name="IS_MASTER" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="563c2459" name="IS_BEAN" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="ac64b48f" name="IS_FORM" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="db86557f" name="IS_SECURE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="5ae62a00" name="IS_SYSTEM" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="5a6d2aa0" name="IS_CUSTOM" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="92b3266e" name="IS_CUSTOM_ATTRIBUTE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="e629899b" name="IS_CACHE" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="17c01316" name="CACHE_EXPIRE_TIME" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="5dbad9e" name="ENTITY_NUMBER_PREFIX" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="21bfd7c1" name="ENTITY_NUMBER_SUFFIX" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="10" />
+        </column>
+        <column id="b7e64583" name="LAST_ENTITY_NUMBER" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="INTEGER" />
+        </column>
+        <column id="405e59bd" name="IS_USE_NUMERATOR" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="7929c9bc" name="IS_UNIQUE_ENTITY_NUMBER" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="dc701c70" name="NUMERATOR_CLASS" is-primary-key="false" is-foreign-key="false" is-required="false" is-unique="false">
+          <data type="VARCHAR" size="128" />
+        </column>
+        <column id="fb41c9c9" name="IS_ENTITY_NUMBER_READ_ONLY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+        <column id="7d5cf6f8" name="IS_ENTITY_DATE_READ_ONLY" is-primary-key="false" is-foreign-key="false" is-required="true" is-unique="false">
+          <data type="CHAR" size="1" />
+        </column>
+      </columns>
+    </table>
+  </tables>
+  <views />
+  <relationships>
+    <relationship id="d3ca9526" name="FK_SYS_ENTI_ENTITY_EN_SYS_ENTI">
+      <details pk-table-id="4cd295e9" fk-table-id="af1c447f">
+        <pk-columns>
+          <key-column id="fced588c" />
+        </pk-columns>
+        <fk-columns>
+          <key-column id="f5374f74" />
+        </fk-columns>
+      </details>
+      <drawing routing-type="0" />
+    </relationship>
+  </relationships>
+  <notes />
+  <links />
+</db-diagram>
+

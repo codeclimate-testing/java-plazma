@@ -1,0 +1,26 @@
+
+	<joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Person" class="org.plazmaforge.bsolution.personality.common.beans.Person" table="PERSON" extends-class="org.plazmaforge.bsolution.contact.common.beans.Contact">
+	    <attributes>
+        	<key name="id" column="ID" type="Integer"/>
+        	<attribute name="personCode" column="CODE" type="String" />
+        	<attribute name="idn" column="IDN" type="String" />
+        	<attribute name="documentSeries" column="DOCUMENT_SERIES" type="String" />
+        	<attribute name="documentNo" column="DOCUMENT_NO" type="String" />
+        	<attribute name="documentDate" column="DOCUMENT_DATE" type="Date" />
+        	<attribute name="documentGiven" column="DOCUMENT_GIVEN" type="String" />
+        	<attribute name="diplomaSeries" column="DIPLOMA_SERIES" type="String" />
+        	<attribute name="diplomaNo" column="DIPLOMA_NO" type="String" />
+        	<attribute name="diplomaDate" column="DIPLOMA_DATE" type="Date" />
+        	<attribute name="diplomaQualification" column="DIPLOMA_QUALIFICATION" type="String" />
+        	<attribute name="diplomaTypeId" column="DIPLOMA_TYPE" type="Integer" />
+        	<!-- <attribute name="note" column="NOTE" type="String" /> -->
+        	<reference name="nationality" column="NATIONALITY_ID" class="org.plazmaforge.bsolution.base.common.beans.Country" />
+        	<reference name="countryResidence" column="COUNTRY_RESIDENCE_ID" class="org.plazmaforge.bsolution.base.common.beans.Country" />
+        	<reference name="familyStatus" column="FAMILY_STATUS_ID" class="org.plazmaforge.bsolution.personality.common.beans.FamilyStatus" />
+        	<reference name="language" column="LANGUAGE_ID" class="org.plazmaforge.bsolution.base.common.beans.Language" />
+        	<reference name="personDocumentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.personality.common.beans.PersonDocumentType" />
+        	<reference name="diplomaSpeciality" column="DIPLOMA_SPECIALITY_ID" class="org.plazmaforge.bsolution.personality.common.beans.Speciality" />
+        	<entry name="personMilitary" class="org.plazmaforge.bsolution.personality.common.beans.PersonMilitary"  join-attribute="person" cascade="all"/>
+        </attributes>        
+    </joined-entity>
+

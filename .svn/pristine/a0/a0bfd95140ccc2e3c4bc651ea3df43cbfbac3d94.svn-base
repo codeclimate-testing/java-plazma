@@ -1,0 +1,10 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="RegionEditForm" type="EditForm" title="@{RegionEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{RegionEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{RegionEditForm.countryLabel.text}"/><combo-box property="country" data-type="base/Country" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

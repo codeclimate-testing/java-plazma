@@ -1,0 +1,62 @@
+<html>
+<title>bs.base.configuration</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">bs.base.configuration</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Content</h3>
+
+
+   <table border="0" cellpadding="5">
+
+     <tr>
+       <td>-</td><td>conf</td><td></td><td></td><td></td><td></td><td>Configuration files</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>client</td><td></td><td></td><td>Client configuration</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>install</td><td></td><td></td><td>Installation configuration</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>packages</td><td></td><td></td><td>Configuration by package</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>server</td><td></td><td></td><td>Server configuration</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>standalone</td><td></td><td></td><td>Standalone configuration</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td>+</td><td>ui</td><td></td><td></td><td>User Interface configuration</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>swing</td><td>Swing client configuration</td>  
+     </tr>
+
+     <tr>
+       <td></td><td></td><td></td><td></td><td>+</td><td>swt</td><td>SWT client configuration</td>  
+     </tr>
+  
+    </table>
+</body>
+</html>

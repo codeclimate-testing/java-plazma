@@ -1,0 +1,37 @@
+############################################################################
+# PRODUCT Action Definition
+############################################################################
+
+
+############################################################################
+# Report Actions
+############################################################################
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductUnitEdit@title=Единицы измерения
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductUnitEdit@panel.label-unit.text=Ед. измерения
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductUnitEdit@panel.label-rate.text=Коэфициент
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductUnitEdit@panel.label-bar-code.text=Штрих код
+
+
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductPriceEdit@title=Цены
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductPriceEdit@panel.label-price-type.text=Тип цены
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductPriceEdit@panel.label-percent.text=Наценка
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductPriceEdit@panel.label-price.text=Цена
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductPriceEdit@panel.label-currency.text=Валюта
+org.plazmaforge.bsolution.product.richclient.swing.forms.ProductPriceEdit@panel.label-unit.text=Ед. измерения
+
+
+
+
+
+

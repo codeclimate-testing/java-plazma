@@ -1,0 +1,15 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContactTitle" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" table="CONTACT" readonly="true">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer"/>
+ 			<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="titleName" column="TITLE_NAME" type="String"/>
+        	<attribute name="firstName" column="FIRST_NAME" type="String" />
+        	<attribute name="middleName" column="MIDDLE_NAME" type="String" />
+        	<attribute name="lastName" column="LAST_NAME" type="String" />
+        </attributes>
+    </entity>
+    
+

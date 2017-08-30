@@ -1,0 +1,10 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Role" class="org.plazmaforge.bsolution.security.common.beans.Role" table="SYS_ROLE">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="NAME" type="String"  required="true"/>
+        	<attribute name="note" column="NOTE" type="String"/>
+        	<collection name="roleInterfaces" join-class="org.plazmaforge.bsolution.security.common.beans.RoleInterface" join-attribute="role" cascade="all"/>
+        </attributes>
+    </entity>
+

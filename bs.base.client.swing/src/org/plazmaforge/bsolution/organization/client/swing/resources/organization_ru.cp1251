@@ -1,0 +1,141 @@
+############################################################################
+# ORGANIZATION Action Definition
+############################################################################
+
+# Organizaton Edit Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.OrganizationEditAction@name=Организация
+org.plazmaforge.bsolution.organization.richclient.swing.actions.OrganizationEditAction@tooltip=Организация
+
+# Organizaton List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.OrganizationListAction@name=Организации
+org.plazmaforge.bsolution.organization.richclient.swing.actions.OrganizationListAction@tooltip=Организации
+
+# Storable List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.StorableListAction@name=Места хранения
+org.plazmaforge.bsolution.organization.richclient.swing.actions.StorableListAction@tooltip=Места хранения
+
+# Department List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.DepartmentListAction@name = Подразделения
+org.plazmaforge.bsolution.organization.richclient.swing.actions.DepartmentListAction@tooltip = Подразделения
+
+# Store List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.StoreListAction@name=Склады
+org.plazmaforge.bsolution.organization.richclient.swing.actions.StoreListAction@tooltip=Склады
+
+# Responsible List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.ResponsibleListAction@name=Материально ответственные лица
+org.plazmaforge.bsolution.organization.richclient.swing.actions.ResponsibleListAction@tooltip=Материально ответственные лица
+
+
+# Contact List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.ContactListAction@name=Контакты
+org.plazmaforge.bsolution.organization.richclient.swing.actions.ContactListAction@tooltip=Контакты
+
+# ContactType List Action
+org.plazmaforge.bsolution.organization.richclient.swing.actions.ContactTypeListAction@name=Типы контактов
+org.plazmaforge.bsolution.organization.richclient.swing.actions.ContactTypeListAction@tooltip=Типы контактов
+
+
+############################################################################
+# List Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.OrganizationList@title=Организация
+org.plazmaforge.bsolution.organization.richclient.swing.forms.OrganizationList@table.column-code.name=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.OrganizationList@table.column-name.name=Название
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.DepartmentList@title=Список подразделений
+org.plazmaforge.bsolution.organization.richclient.swing.forms.DepartmentList@table.column-code.name=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.DepartmentList@table.column-name.name=Подразделение
+
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StorableList@title=Места хранения
+#org.plazmaforge.bsolution.organization.richclient.swing.forms.StorableList@table.column-code.name=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StorableList@table.column-name.name=Название
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StorableList@table.column-entity-name.name=Тип
+
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StoreList@title=Склады
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StoreList@table.column-code.name=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StoreList@table.column-name.name=Название
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ResponsibleList@title=Материально ответственные лица
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ResponsibleList@table.column-employee-name.name=МОЛ
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ResponsibleList@table.column-storable-name.name=Структура подчинения
+
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactList@title=Контакты
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactList@table.column-code.name=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactList@table.column-name.name=Имя
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactList@table.column-contact-type-name.name=Тип
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactTypeList@title=Типы контактов
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactTypeList@table.column-code.name=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactTypeList@table.column-name.name=Название
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.DepartmentEdit@title=Подразделение
+org.plazmaforge.bsolution.organization.richclient.swing.forms.DepartmentEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.DepartmentEdit@panel.label-name.text=Подразделение
+
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StoreEdit@title=Склад
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StoreEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.StoreEdit@panel.label-name.text=Название
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ResponsibleEdit@title=МОЛ
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ResponsibleEdit@panel.label-employee-name.text=МОЛ
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ResponsibleEdit@panel.label-storable-name.text=Структура подчинения
+
+
+#############################################################################
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@title=Контакт
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.title.general.text=Общие
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.title.note.text=Примечание
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-name.text=Имя
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-dear.text=Обращение
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-gender.text=Пол
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-partner.text=Партнёр
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-department.text=Подразделение
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-position.text=Должность
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-position-full-name.text=Полное название должности	
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-responsible.text=Ответственный
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@panel.label-contact-type.text=Тип
+
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-address.name=Адреса
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-address.column-address-type.name=Тип
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-address.column-address-string.name=Адрес
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-phone.name=Телефоны
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-phone.column-phone-type.name=Тип
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-phone.column-phone-string.name=Телефон
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-email.name=Email
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-email.column-email-address.name=Email
+
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-web.name=Web
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactEdit@table-web.column-url.name=URL
+
+
+#############################################################################
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactTypeEdit@title=Типы контактов
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactTypeEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.organization.richclient.swing.forms.ContactTypeEdit@panel.label-name.text=Название
+

@@ -1,0 +1,14 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="PartnerTypeListForm" type="ListForm" title="@{PartnerTypeListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{PartnerTypeListForm.nameColumn.text}" property="name" data-type="String" width="200"/>
+						<column text="@{PartnerTypeListForm.fullNameColumn.text}" property="fullName" data-type="String" width="300"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

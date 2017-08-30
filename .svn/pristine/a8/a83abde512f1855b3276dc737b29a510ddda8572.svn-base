@@ -1,0 +1,4 @@
+
+INSERT INTO VACATION_CALCULATE (ID, NAME) VALUES (1,'По шестидневке');
+INSERT INTO VACATION_CALCULATE (ID, NAME) VALUES (2,'По календарным дням');
+

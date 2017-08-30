@@ -1,0 +1,215 @@
+############################################################################
+# PAYROLL Action Definition
+############################################################################
+
+# Payroll Type List Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.PayrollFormListAction@name = Форма оплаты труда
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.PayrollFormListAction@tooltip = Форма оплаты труда
+
+# Payroll List Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.PayrollListAction@name = Начисления/удержания
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.PayrollListAction@tooltip = Начисления/удержания
+
+
+# WorkTime List Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.InputWorktimeListAction@name = Ввод отработаного времени
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.InputWorktimeListAction@tooltip = Ввод отработаного времени
+
+# Payroll List Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.InputPayrollListAction@name = Ввод начислений/удержаний
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.InputPayrollListAction@tooltip = Ввод начислений/удержаний
+
+# EmployeeLeave List Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.EmployeeLeaveListAction@name = Ввод отпусков
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.EmployeeLeaveListAction@tooltip = Ввод отпусков
+
+# EmployeeSicklist List Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.EmployeeSicklistListAction@name = Ввод больничных листов
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.EmployeeSicklistListAction@tooltip = Ввод больничных листов
+
+# Payroll Calculate Action
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.PayrollCalculateAction@name = Расчёт зарплаты
+org.plazmaforge.bsolution.payroll.richclient.swing.actions.PayrollCalculateAction@tooltip = Расчёт зарплаты
+
+############################################################################
+# PAYMENT List Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollFormList@title=Формы оплаты труда
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollFormList@table.column-name.name=Название
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollList@title=Начисления/удержания
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollList@table.column-code.name=Код
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollList@table.column-name.name=Название
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollList@table.column-payroll-type.name=Тип
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollList@table.column-priority.name=Приоритет
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeList@title=Ввод отработаного времени
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeList@table.column-employee-code.name=Таб.ном.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeList@table.column-employee-name.name=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeList@table.column-department-name.name=Подразделение
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeList@table.column-work-day.name=Дни
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeList@table.column-work-hour.name=Часы
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@title=Ввод начислений/удержаний
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-employee-code.name=Таб.ном.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-employee-name.name=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-department-name.name=Подразделение
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-work-day.name=Дни
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-work-hour.name=Часы
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-increment-amount.name=Начислено
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-decrement-amount.name=Удержано
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputPayrollList@table.column-payroll-amount.name=К выдаче
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@title=Начисления/удержания по сотруднику
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@table.column-payroll-code.name=Код
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@table.column-payroll-name.name=Название
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@table.column-payroll-type.name=Тип
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@table.column-day.name=Дни
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@table.column-hour.name=Часы
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollList@table.column-amount.name=Сумма
+
+
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveList@title=Вввод отпусков
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveList@table.column-code.name=Код
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveList@table.column-date.name=Дата
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveList@table.column-employee-name.name=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveList@table.column-start-date.name=Начало
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveList@table.column-end-date.name=Окончание
+
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@title=Вввод больничных листов
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@table.column-series.name=Серия
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@table.column-code.name=№
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@table.column-date.name=Дата
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@table.column-employee-name.name=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@table.column-start-date.name=Начало
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistList@table.column-end-date.name=Окончание
+
+############################################################################
+# PAYROLL Edit Form Definition
+############################################################################
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollFormEdit@title=Форма оплаты труда
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollFormEdit@panel.label-name.text=Наименование
+
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@title=Начисление/удержание
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.title.common.text=Общие
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.title.acumulate.text=Накопление
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-code.text=Код
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-name.text=Название
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-payroll-type.text=Тип
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-payroll-algoritm-type.text=Тип алгоритма
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-payroll-algoritm.text=Алгоритм
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-payroll-group.text=Группа
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-priority.text=Приоритет
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-percent.text=%
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-payroll-mode.text=Режим постоянства
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-time.text=Дни/часы
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-pension.text=Пенсионный
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-tax.text=Подоходный налог
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-leave.text=Отпускные
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-sick.text=Больничные
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-fund-salary.text=Фонд зарплаты
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-fund-help.text=Фонд материальной помощи
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-fund-insurance.text=Фонд соцстраха
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-fund-work.text=Фонд оплаты труда
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-salary13.text=13 зарплата
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-salary12.text=1/12
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.PayrollEdit@panel.label-add-pay.text=Доплаты
+
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeEdit@title=Ввод рабочего времени
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeEdit@panel.label-employee-name.text=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeEdit@panel.label-work-day.text=Отработаные дни
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.InputWorktimeEdit@panel.label-work-hour.text=Отработаные часы
+
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollEdit@title=Начисление/удержания
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollEdit@panel.label-employee-name.text=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollEdit@panel.label-payroll-name.text=Начисление/удержания
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollEdit@panel.label-day.text=Дни
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollEdit@panel.label-hour.text=Часы
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeePayrollEdit@panel.label-amount.text=Сумма
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@title=Ввод отпусков
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-code.text=№
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-employee.text=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-start-date.text=Дата начала отп.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-end-date.text=дата окончания отп.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-day.text=Дней отпуска всего
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-add-day.text=из них доп. отпуска
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-work-start-date.text=Дата начала раб. периода
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-work-end-date.text=дата окончания раб. периода
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-leave-type.text=Вид отпуска
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-leave-averange-type.text=Тип расчёта среднего заработка
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-leave-calculate.text=Тип расчёта отпуска
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-add-leave-calculate.text=Тип расчёта доп. отпуска
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-quarter-premium.text=Премия квартальная
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-year-premium.text=Примия годовая
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-single-premium.text=Премия разовая
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@panel.label-averange-amount.text=Средний заработок
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@table-averange-item.name=Средние
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@table-averange-item.column-month.name=Месяц
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@table-averange-item.column-work-day.name=Дни отр.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@table-averange-item.column-leave-day.name=Дни отп.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@table-averange-item.column-add-leave-day.name=Дни доп. отп.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveEdit@table-averange-item.column-amount.name=Сумма
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveAverangeEdit@title=Средний заработок
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveAverangeEdit@panel.label-month.text=Месяц
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveAverangeEdit@panel.label-work-day.text=Дни отработанные
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveAverangeEdit@panel.label-leave-day.text=Дни отпуска
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveAverangeEdit@panel.label-add-leave-day.text=Дни доп. отпуска
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeLeaveAverangeEdit@panel.label-amount.text=Сумма
+
+
+#############################################
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@title=Ввод больничных листов
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-series.text=Серия
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-code.text=№
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-date.text=Дата
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-employee.text=Сотрудник
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-start-date.text=Дата начала болезни.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-end-date.text=дата окончания болезни.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-sick-type.text=Причина нетрудоспособности
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-sicklist-averange-type.text=Тип расчёта среднего заработка
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-quarter-premium.text=Премия квартальная
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-year-premium.text=Примия годовая
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-single-premium.text=Премия разовая
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-averange-amount.text=Средний заработок
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@panel.label-percent.text=%
+
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@table-averange-item.name=Средние
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@table-averange-item.column-month.name=Месяц
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@table-averange-item.column-work-day.name=Дни отр.
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistEdit@table-averange-item.column-amount.name=Сумма
+
+#
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistAverangeEdit@title=Средний заработок
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistAverangeEdit@panel.label-month.text=Месяц
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistAverangeEdit@panel.label-work-day.text=Дни отработанные
+org.plazmaforge.bsolution.payroll.richclient.swing.forms.EmployeeSicklistAverangeEdit@panel.label-amount.text=Сумма

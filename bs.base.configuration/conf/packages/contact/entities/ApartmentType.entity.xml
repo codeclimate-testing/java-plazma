@@ -1,0 +1,12 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ApartmentType" class="org.plazmaforge.bsolution.contact.common.beans.ApartmentType" table="APARTMENT_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String"/>
+        	<attribute name="name" column="NAME" type="String"/>
+        	<attribute name="fullName" column="FULL_NAME" type="String"/>
+    	</attributes>
+    </entity>
+    
+

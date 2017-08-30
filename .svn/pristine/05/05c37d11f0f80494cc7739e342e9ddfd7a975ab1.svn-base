@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-base" default="build">
+
+	<property file="build.properties"/>
+
+	<path id="plazma-classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${dist.dir}">
+			<include name="${framework.jar}"/>
+			<include name="${thirdparty.jar}"/>
+		</fileset>
+	</path>
+
+
+	<target name="clean" description="Clean all output dirs (classes, etc.)">
+		<delete dir="${classes.dir}"/>
+		<delete dir="${javadocs.dir}"/>
+	</target>
+
+	<target name="clean-dist" description="Clean dist dir without framework files">
+		<delete>
+			<fileset dir="${dist.dir}">
+				<include name="${bsolution.common.jar}"/>
+				<include name="${bsolution.server.jar}"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<!--
+    <target name="clean-dist-all" description="Clean dist dir">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="**"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+    -->
+
+
+
+
+	<target name="build" description="Compile main source tree java files into class files (no-jarring)">
+		<mkdir dir="${classes.dir}"/>
+
+		<javac destdir="${classes.dir}" deprecation="false" optimize="false" failonerror="true">
+			<src path="${src.dir}"/>
+			<classpath refid="plazma-classpath"/>
+		</javac>
+
+		<copy todir="${classes.dir}" preservelastmodified="true">
+			<fileset dir="${src.dir}">
+				<include name="**/*.xml"/>
+				<include name="**/*.properties"/>
+				<include name="**/*.jpg"/>
+				<include name="**/*.gif"/>
+				<include name="**/*.png"/>
+			</fileset>
+		</copy>
+
+	</target>
+
+
+	<target name="create-jar-all" description="Create all jar files"
+    	depends ="create-jar-common, create-jar-server"/>
+
+
+	<target name="create-jar-common" description="Create common jar">
+		<mkdir dir="${dist.dir}"/>
+		<jar destfile="${dist.dir}/${bsolution.common.jar}" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0"/>
+				<attribute name="Plazma-Version" value="${version}"/>
+			</manifest>
+
+			<include name="*.*"/>
+
+			<include name="org/plazmaforge/bsolution/*/*.*"/>
+			<include name="org/plazmaforge/bsolution/*/common/**"/>
+
+		</jar>
+	</target>
+
+
+
+
+
+	<target name="create-jar-server" description="Create server jar">
+		<mkdir dir="${dist.dir}"/>
+		<jar destfile="${dist.dir}/${bsolution.server.jar}" basedir="${classes.dir}">
+
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0"/>
+				<attribute name="Plazma-Version" value="${version}"/>
+			</manifest>
+
+			<include name="org/plazmaforge/bsolution/*/server/**"/>
+
+		</jar>
+	</target>
+
+
+
+
+
+	<target name="clean-pack-server" description="Clean server pack">
+		<delete dir="${server.dir}"/>
+	</target>
+
+
+	<target name="create-pack-server-lite" description="Create Lite server pack" depends = "create-jar-server, create-pack-server-common">
+
+		<!-- Copy dist files -->
+		<copy todir="${server.dir}/dist">
+			<fileset dir="${dist.dir}">
+				<include name="${framework.jar}"/>
+				<include name="${framework.erm.jar}"/>
+				<include name="${thirdparty.jar}"/>
+				<include name="${bsolution.common.jar}"/>
+				<include name="${bsolution.server.jar}"/>
+			</fileset>
+		</copy>
+
+
+
+		<!-- Copy libs -->
+		<copy todir="${server.dir}/lib">
+			<fileset dir="${lib.dir}" includes="${server.fileset}"/>
+		</copy>
+
+
+		<!-- Copy root files -->
+		<copy todir="${server.dir}">
+			<fileset dir="${basedir}">
+				<include name="plazma.classpath"/>
+				<include name="plazma.conf"/>
+
+				<include name="plazma.bat"/>
+				<include name="plazma.sh"/>
+
+				<include name="launcher**"/>
+				<include name="start_server**"/>
+
+				<include name="readme.txt"/>
+				<include name="readme_ru.txt"/>
+				<include name="install.txt"/>
+				<include name="install_ru.txt"/>
+
+			</fileset>
+		</copy>
+
+		<!-- Set version and build -->
+		<replace file="${server.dir}/readme.txt" token="{version}" value = "${version}"/>
+		<replace file="${server.dir}/readme_ru.txt" token="{version}" value = "${version}"/>
+		<replace file="${server.dir}/readme.txt" token="{build.month}" value = "${build.month}"/>
+		<replace file="${server.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}"/>
+		<replace file="${server.dir}/readme.txt" token="{build.year}" value = "${build.year}"/>
+		<replace file="${server.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}"/>
+
+		<replace file="${server.dir}/install.txt" token="{version}" value = "${version}"/>
+		<replace file="${server.dir}/install_ru.txt" token="{version}" value = "${version}"/>
+
+		<replace file="${server.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+
+		<concat destfile="${server.dir}/server.conf">plazma.server.type=lite</concat>
+
+		<concat destfile="${server.dir}/plazma.properties" fixlastline="yes">#
+          	<header filtering="no" trimleading="yes">
+           		#
+           		# Plazma properties (Lite Sever)
+           		#
+           	</header>
+		</concat>
+
+
+		<!-- Replace plazma.classpath jar -->
+		<replace file="${server.dir}/plazma.classpath" token="../" value = ""/>
+
+		<!-- Replace launcher -->
+		<replace file="${server.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+		<replace file="${server.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+
+		<!-- Replace system-config.xml -->
+		<replace file="${server.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.reportstorage/" value = "${root.dir}/"/>
+		<replace file="${server.dir}/conf/system-config.xml" token="../bs.base.reportstorage/" value = "${root.dir}/"/>
+
+		<!-- Replace application-context-ds.xml -->
+		<replace file="${server.dir}/conf/application-context-ds.xml" token="../bs.base.configuration/" value = ""/>
+
+
+
+	</target>
+
+
+
+
+	<target name="create-pack-server-common" description="Create server (common) pack" depends = "clean-pack-server">
+
+		<mkdir dir="${server.dir}"/>
+		<mkdir dir="${server.dir}/conf"/>
+		<mkdir dir="${server.dir}/db"/>
+		<mkdir dir="${server.dir}/db/hsql"/>
+		<mkdir dir="${server.dir}/db/script"/>
+		<mkdir dir="${server.dir}/db/datastorage"/>
+		<mkdir dir="${server.dir}/dist"/>
+		<mkdir dir="${server.dir}/docs"/>
+		<mkdir dir="${server.dir}/reports"/>
+		<mkdir dir="${server.dir}/logs"/>
+
+		<mkdir dir="${server.dir}/fonts"/>
+		<mkdir dir="${server.dir}/lib"/>
+
+		<!-- Copy configuration -->
+		<copy todir="${server.dir}/conf">
+			<fileset dir="${conf.dir}/server">
+				<include name="application.xml"/>
+				<include name="system-config.xml"/>
+			</fileset>
+		</copy>
+		<copy todir="${server.dir}/conf">
+			<fileset dir="${conf.dir}">
+				<include name="application-context**.xml"/>
+				<include name="association-config.xml"/>
+				<include name="package-config.xml"/>
+				<include name="report-config**"/>
+				<include name="jdbc**.properties"/>
+				<include name="erm.xml"/>
+			</fileset>
+
+			<!-- ui conf -->
+			<fileset dir="${ui.conf.dir}">
+				<include name="interface-config**"/>
+				<include name="action-config**"/>
+				<include name="menubar-config**"/>
+				<include name="toolbar-config**"/>
+				<include name="form-config**"/>
+				<include name="acceptor-config.xml"/>
+			</fileset>
+
+		</copy>
+
+		<copy todir="${server.dir}/conf/packages">
+			<fileset dir="${conf.dir}/packages">
+				<include name="**"/>
+			</fileset>
+		</copy>
+
+
+		<!-- Copy data -->
+		<copy todir="${server.dir}/db/hsql">
+			<fileset dir="${db.dir}/hsql">
+				<include name="**"/>
+			</fileset>
+		</copy>
+		<copy todir="${server.dir}/db/script">
+			<fileset dir="${db.dir}/script">
+				<include name="**"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${server.dir}/db/datastorage">
+			<fileset dir="${db.dir}/datastorage">
+				<include name="**"/>
+			</fileset>
+		</copy>
+
+
+		<!-- Copy docs -->
+		<copy todir="${server.dir}/docs">
+			<fileset dir="${workspace.docs.dir}">
+				<include name="dtds/**"/>
+				<exclude name="dtds/application-config.dtd"/>
+			</fileset>
+		</copy>
+
+
+		<!-- Copy reports -->
+		<copy todir="${server.dir}/reports">
+			<fileset dir="${reports.dir}">
+				<include name="**"/>
+			</fileset>
+		</copy>
+
+		<!-- Copy fonts -->
+		<copy todir="${server.dir}/fonts">
+			<fileset dir="${fonts.dir}">
+				<include name="**"/>
+			</fileset>
+		</copy>
+
+
+
+		<!-- Copy JDBC drivers -->
+		<copy todir="${server.dir}/lib">
+			<fileset dir="${lib.dir}" includes="jdbc.fileset"/>
+		</copy>
+
+
+
+		<!-- Copy root files -->
+		<copy todir="${server.dir}">
+			<fileset dir="${basedir}">
+				<include name="license*"/>
+			</fileset>
+		</copy>
+
+	</target>
+
+
+
+
+	<target name="create-pack-install-server-lite" description="Create Lite server installation pack" depends="create-pack-server-lite">
+
+		<!-- Copy configuration -->
+		<copy todir="${server.dir}/conf" overwrite="true">
+			<fileset dir="${conf.dir}/install">
+				<include name="jdbc.properties"/>
+			</fileset>
+		</copy>
+		
+		<copy file="${conf.dir}/install/application-server.xml" tofile="${server.dir}/conf/application.xml" overwrite="true"/>
+
+		
+		<!-- Copy root files -->
+		<copy todir="${server.dir}">
+			<fileset dir="${basedir}">
+				<include name="install.inf"/>
+				<include name="install.xml"/>				
+				<include name="install_creator*"/>
+				<include name="uninstall**"/>
+			</fileset>
+		</copy>
+
+		
+		<!-- Set version and build -->
+		<replace file="${server.dir}/install.xml" token="{version}" value = "${version}"/>
+		<replace file="${server.dir}/install.xml" token="{build}" value = "${build}"/>
+
+		
+
+		<!-- Move to install dir -->
+		<delete dir="${install.server.lite.dir}"/>
+
+		<move todir="${install.server.lite.dir}">
+			<fileset dir="${server.dir}">
+				<include name="**"/>
+			</fileset>
+		</move>
+
+
+	</target>
+
+	<target name="create-pack-install-server-lite-zip" description="Create Lite server installation ZIP" depends="create-pack-server-lite">
+		
+		<!-- Copy configuration -->
+		<copy file="${conf.dir}/install/jdbc-eng.properties" tofile="${server.dir}/conf/jdbc.properties" overwrite="true"/>
+		<copy file="${conf.dir}/install/application-server-eng.xml" tofile="${server.dir}/conf/application.xml" overwrite="true"/>
+
+		<!-- Move to install dir -->
+		<delete dir="${install.server.lite.dir}"/>
+
+		<move todir="${install.server.lite.dir}">
+			<fileset dir="${server.dir}">
+				<include name="**"/>
+			</fileset>
+		</move>
+
+		<zip destfile="${workspace.target.dir}/plazma-server-lite-${version}.zip"  basedir="${install.server.lite.dir}"/>
+		
+	</target>
+
+	<!--
+      Generate Java Docs
+    -->
+	<!--
+    <target name="javadoc" description="Generate Javadocs.">
+
+	   <mkdir dir="${javadocs.dir}"/>
+
+       <javadoc
+           sourcepath="src"
+           destdir="${javadocs.dir}"
+           windowtitle="Plazma Bsolution"
+           defaultexcludes="yes"
+           author="true"
+           version="true"
+           use="true"
+        >
+
+		  <doctitle><![CDATA[<h1>Plazma Bsolution</h1>]]></doctitle>
+		  <bottom><![CDATA[<i>Copyright (C) 2005-2008 The Plazma Bsolution Project.</i>]]></bottom>
+		  <classpath refid="plazma-classpath"/>
+
+		  <packageset dir="${src.dir}">
+   	  	    <include name="org/plazmaforge/bsolution/**"/>
+		  </packageset>
+
+	    </javadoc>
+
+    </target>
+    -->
+
+
+	<target name="erm-converter">
+		<replace dir="${src.dir}/org/plazmaforge/bsolution/personality/server/entities">
+			<include name="**/*.hbm.xml"/>
+			<replacefilter>
+				<replacetoken>hibernate-mapping</replacetoken>
+				<replacevalue>entity-mapping</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken> default-lazy="false"</replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			 
+			<replacefilter>
+				<replacetoken>joined-subclass</replacetoken>
+				<replacevalue>joined-entity</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>extends=</replacetoken>
+				<replacevalue>extends-class=</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<many-to-one]]></replacetoken>
+				<replacevalue><![CDATA[<reference]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>java.lang.</replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>java.util.</replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<property]]></replacetoken>
+				<replacevalue><![CDATA[<attribute]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<id]]></replacetoken>
+				<replacevalue><![CDATA[<key]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<bag]]></replacetoken>
+				<replacevalue><![CDATA[<collection]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<class]]></replacetoken>
+				<replacevalue><![CDATA[<entity]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[</class]]></replacetoken>
+				<replacevalue><![CDATA[</entity]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>inverse="true"  cascade="all-delete-orphan" lazy="true"</replacetoken>
+				<replacevalue>cascade="all"</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>cascade="all-delete-orphan"</replacetoken>
+				<replacevalue>cascade="all"</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>not-null</replacetoken>
+				<replacevalue>required</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>org.hibernate.usertype.CustomBooleanType</replacetoken>
+				<replacevalue>Boolean</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>mutable="false"</replacetoken>
+				<replacevalue>readonly="true"</replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>unsaved-value="0"</replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			
+			<replacefilter>
+				<replacetoken><![CDATA[<key column="ID"/>]]></replacetoken>
+				<replacevalue><![CDATA[<key name="id" column="ID" type="Integer"/>]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken>generator class="increment"</replacetoken>
+				<replacevalue>generator-type="increment"</replacevalue>
+			</replacefilter>
+			
+		</replace>
+	</target>
+	
+	
+</project>

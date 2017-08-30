@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="TaskPriorityEditForm" type="EditForm" title="@{TaskPriorityEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{TaskPriorityEditForm.codeLabel.text}"/><text-field property="code" width="100"/>
+				<label text="@{TaskPriorityEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{TaskPriorityEditForm.orderNumberLabel.text}"/><spinner-field property="orderNumber"/>
+			</children>
+		</content>
+	</form>
+</ui>

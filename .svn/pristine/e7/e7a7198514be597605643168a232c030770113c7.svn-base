@@ -1,0 +1,58 @@
+AboutDialog.null.title = About Plazma ERP+CRM
+AboutDialog.propertyName = Property
+AboutDialog.propertyValue = Value
+AboutDialog.tabItem1.text = About
+AboutDialog.tabItem1.toolTipText = About
+AboutDialog.tabItem4.text = System
+AboutDialog.tabItem4.toolTipText = System
+
+InputDialog.interfacesLabel.text = Select User Interfaces\:
+InputDialog.organizationsLabel.text = Select Organizations\:
+InputDialog.title = Input dialog
+
+LoginDialog.access.denied = Access Denied
+LoginDialog.application.error = Error
+LoginDialog.cancel = Cancel
+LoginDialog.login = Login
+LoginDialog.password = Password
+LoginDialog.system.error = Error
+LoginDialog.title = Login
+LoginDialog.remember = Remember
+
+PreferencesDialog.title = Preferences
+PreferencesDialog.gui = GUI
+PreferencesDialog.forms = Forms
+PreferencesDialog.visibleMenuBar = Visible Menu Bar
+PreferencesDialog.visibleToolBar = Visible Tool Bar
+PreferencesDialog.visibleTreeMenu = Visible Tree Menu
+PreferencesDialog.showWindowTitle = Show Window TitleMessages.getString("ConfigPanel.jdbc.url")
+PreferencesDialog.autoMaxWindows = Auto Max Windows
+PreferencesDialog.pagination = Pagination in table forms
+
+ConfigPanel.general = General
+ConfigPanel.properties = System properties
+ConfigPanel.classpath = Classpath
+ConfigPanel.jdbc = JDBC
+ConfigPanel.jndi = JNDI
+ConfigPanel.rmi = RMI
+
+ConfigPanel.general.country = Country
+ConfigPanel.general.language = Language
+
+ConfigPanel.properties.property = Property
+ConfigPanel.properties.value = Value
+
+ConfigPanel.jdbc.driver = Driver
+ConfigPanel.jdbc.url = URL
+ConfigPanel.jdbc.username = User Name
+ConfigPanel.jdbc.password = Password
+ConfigPanel.jdbc.hibernate.dialect = Hibernate Dialect
+
+TableItemPanel.add = Add
+TableItemPanel.edit = Edit
+TableItemPanel.remove = Remove
+TableItemPanel.confirm.remove = Do you want to remove
+
+TransferTypeDialog.title = Import type
+TransferTypeDialog.custom = Custom
+TransferTypeDialog.standard = Standard

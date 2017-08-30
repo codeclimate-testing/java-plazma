@@ -1,0 +1,11 @@
+<entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Attribute" class="org.plazmaforge.framework.ext.model.Attribute"	table="SYS_ENTITY_ATTR">
+	<attributes>
+		<key name="id" column="ID" type="Integer" generator-type="increment" />
+		<attribute name="code" column="CODE" type="String"/>
+		<attribute name="name" column="NAME" type="String" />
+		<reference name="entity" column="ENTITY_ID"	class="org.plazmaforge.framework.config.object.EntityConfig" required="true" />
+		<reference name="dataType" column="DATA_TYPE_ID" class="org.plazmaforge.framework.core.data.DataType" required="true" />
+		<reference name="valueEntity" column="VALUE_ENTITY_ID"	class="org.plazmaforge.framework.config.object.EntityConfig" />
+	</attributes>
+</entity>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT toolbar-config (toolbar*)>
+
+<!ELEMENT toolbar (button*)>
+
+<!ELEMENT button EMPTY>
+
+<!ATTLIST button
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        text CDATA #IMPLIED
+        action NMTOKEN #IMPLIED
+>
+

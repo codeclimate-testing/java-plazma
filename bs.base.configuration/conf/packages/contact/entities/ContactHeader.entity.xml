@@ -1,0 +1,31 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContactHeader" class="org.plazmaforge.bsolution.contact.common.beans.ContactHeader" table="CONTACT" readonly="true">
+    	<aliases>
+    	   	<alias name="organizationId" attribute="organization.id"/>
+    		<alias name="partnerId" attribute="partner.id"/>
+    		<alias name="contactTypeName" attribute="contactType.name"/>
+    		<alias name="partnerName" attribute="partner.name"/>
+    		<alias name="responsibleId" attribute="responsible.id"/>
+    		<alias name="responsibleName" attribute="responsible.name"/>
+    		<alias name="phoneString" attribute="defPhone.phoneString" filter-attribute="defPhone.phoneCompile"/>
+    		<alias name="cityName" attribute="defAddress.cityName"/>
+    		<alias name="localityAddressString" attribute="defAddress.localityAddressString"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer"/>
+ 			<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="titleName" column="TITLE_NAME" type="String"/>
+        	<attribute name="firstName" column="FIRST_NAME" type="String" />
+        	<attribute name="middleName" column="MIDDLE_NAME" type="String" />
+        	<attribute name="lastName" column="LAST_NAME" type="String" />
+        	<attribute name="gender" column="GENDER" type="Byte"/>
+        	<reference name="organization" column="ORGANIZATION_ID" class="org.plazmaforge.bsolution.organization.common.beans.OrganizationTitle" required="true"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+        	<reference name="contactType" column="CONTACT_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactType" />
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle"/>
+        	<entry name="defPhone" class="org.plazmaforge.bsolution.contact.common.beans.DefContactPhone" join-attribute="contact"/>
+        	<entry name="defAddress" class="org.plazmaforge.bsolution.contact.common.beans.DefContactAddress" join-attribute="contact"/>
+        </attributes>
+    </entity>
+

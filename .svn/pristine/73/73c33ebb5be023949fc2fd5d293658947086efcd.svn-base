@@ -1,0 +1,6 @@
+HelloListForm.title = Hello List Form Title
+HelloListForm.messageColumn.text = Message
+
+HelloEditForm.title = Hello Edit Form Title
+HelloEditForm.messageLabel.text = Message
+

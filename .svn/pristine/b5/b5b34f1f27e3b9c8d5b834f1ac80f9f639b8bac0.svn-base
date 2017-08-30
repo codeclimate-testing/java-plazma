@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT report-config (report*)>
+
+<!ELEMENT report (acceptor?)>
+
+<!ATTLIST report
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        name CDATA #IMPLIED
+        class NMTOKEN #IMPLIED
+        path NMTOKEN #IMPLIED
+        file NMTOKEN #IMPLIED
+        region NMTOKEN #IMPLIED
+        country NMTOKEN #IMPLIED
+        language NMTOKEN #IMPLIED
+	is-single (true|false) "false"
+	is-custom (true|false) "false"
+	is-absolute-path (true|false) "false"
+>
+
+<!ELEMENT acceptor EMPTY>
+
+<!ATTLIST acceptor
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+>

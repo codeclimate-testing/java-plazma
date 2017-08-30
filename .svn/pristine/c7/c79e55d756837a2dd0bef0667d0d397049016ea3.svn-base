@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping default-lazy="false" package="org.plazmaforge.bsolution.carservice.common.beans">
+
+    <class name="CarServHour" table="CAR_SERV_HOUR">
+        <id name="id" column="ID" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        
+        <many-to-one name="carServ" column="CAR_MARK_ID" class="CarServ"/>        
+        <many-to-one name="carClass" column="CAR_CLASS_ID" class="CarClass"/>        
+        <many-to-one name="carServComplexity" column="CAR_SERV_COMPLEXITY_ID" class="CarServComplexity"/>                
+        
+        <property name="hour" column="HOUR" type="java.lang.Float"/>                
+        <property name="price" column="PRICE" type="java.lang.Float"/>                        
+        
+    </class>
+    
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProjectContext" class="org.plazmaforge.bsolution.project.ProjectContext" table="PROJECT_CONTEXT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" />
+        	<reference name="projectStage" column="PROJECT_STAGE_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectStage" />
+        	<reference name="currency" column="CURRENCY_ID" class="org.plazmaforge.bsolution.base.common.beans.Currency" />
+        	<reference name="projectStatus" column="PROJECT_STATUS_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectStatus" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />
+        	<reference name="projectType" column="PROJECT_TYPE_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectType" />
+        </attributes>                                                
+     </entity>
+

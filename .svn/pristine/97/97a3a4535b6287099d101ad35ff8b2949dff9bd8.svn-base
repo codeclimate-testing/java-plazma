@@ -1,0 +1,16 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="CurrencyRateListForm" type="ListForm" title="@{CurrencyRateListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{CurrencyRateListForm.baseCurrencyCodeColumn.text}" property="baseCurrencyCode" data-type="String" width="100"/>
+						<column text="@{CurrencyRateListForm.currencyCodeColumn.text}" property="currencyCode" data-type="String" width="100"/>
+						<column text="@{CurrencyRateListForm.dateColumn.text}" property="date" data-type="String" width="200"/>
+						<column text="@{CurrencyRateListForm.rateColumn.text}" property="rate" data-type="String" width="200"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

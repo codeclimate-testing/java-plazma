@@ -1,0 +1,144 @@
+
+<html>
+<title>Структура проектов</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Структура проектов</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">Общая информация</h3>
+
+
+<p><b>Plazma System</b> состоит из двух частей: 
+
+<ul>
+ <li><b>Plazma Framework</b>
+ <li><b>Plazma Business Solution</b>
+</ul>
+
+Каждая часть подразделяется на проекты.
+
+<p><b>Plazma Framework</b>: 
+<ul>
+ <li><b>framework</b>
+ <li><b>framework.erm</b>
+ <li><b>framework.client</b>
+ <li><b>framework.client.swt</b>
+ <li><b>framework.client.swing</b> (низкий приоритет)
+</ul>
+
+<p><b>Plazma Business Solution</b>: 
+<ul>
+ <li><b>bs.base</b>
+ <li><b>bs.base.configuration</b>
+ <li><b>bs.base.docs</b> 
+ <li><b>bs.base.db</b>
+ <li><b>bs.base.reportstorage</b>
+ <li><b>bs.base.client.swt</b>
+ <li><b>bs.base.client.swing</b> (низкий приоритет) 
+</ul>
+
+
+<p>Каждый проект представлен соответствующим модулем в SVN. Модуль <b>lib</b> является общим для всех проектов
+
+<p>Полный список проектов/директорий <b>Plazma Workspace</b> (рабочее пространство) 
+ следующий:
+
+<p>
+<table border="1" width="100%">
+ <tr height="30">
+  <td align="center"><b>Название</b></td><td align="center"><b>Описание</b></td><td align="center"><b>SVN</b></td><td align="center"><b>Java код</b></td>
+ </tr>
+
+ <tr>
+  <td><a href="bs.base.html"><b>bs.base</b></a><td>Общая и серверная часть (бины/персистенс объекты, сервисы)</td></td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+
+ <tr>
+  <td><a href="bs.base.configuration.html"><b>bs.base.configuration</b></a></td><td>Конфигурация системы (.xml, .properties и т.д. файлы)</td><td align="center">Да</td><td align="center">-</td>
+ </tr>
+  <tr>
+  <td><a href="bs.base.docs.html"><b>bs.base.docs</b></a></td><td>Документация</td><td align="center">Да</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.db.html"><b>bs.base.db</b></a></td><td>База данных, SQL скрипты, инициализирующие и тестовые данные</td><td align="center">Да</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.reportstorage.html"><b>bs.base.reportstorage</b></a></td><td>Хранилище отчётов</td><td align="center">Да</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.client.swt.html"><b>bs.base.client.swt</b></a></td><td>SWT клиентская часть</td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+ <tr>
+  <td><a href="bs.base.client.swing.html"><b>bs.base.client.swing</b></a></td><td>Swing клиентская часть</td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+
+ <tr>
+  <td><!-- <a href="dist.html"> --> <b>dist</b> <!-- </a> --> </td><td>Директория для дистрибутивных файлов</td><td align="center">-</td><td align="center">-</td>
+ </tr>
+
+
+ <tr>
+  <td><a href="framework.html"><b>framework</b></a></td><td>Framework общий</td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+ <tr>
+  <td><a href="framework.erm.html"><b>framework.erm</b></a></td><td>Framework ERM</td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+ <tr>
+  <td><a href="lib.html"><b>lib</b></a></td><td>Общие .jar файлы</td><td align="center">Да</td><td align="center">-</td>
+ </tr>
+ <tr>
+  <td><a href="framework.client.html"><b>framework.client</b></a></td><td>Framework для создания Client </td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+ <tr>
+  <td><a href="framework.client.swt.html"><b>framework.client.swt</b></a></td><td>Framework для создания SWT Client</td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+ <tr>
+  <td><a href="framework.client.swing.html"><b>framework.client.swing</b></a></td><td>Framework для создания Swing Client </td><td align="center">Да</td><td align="center">Да</td>
+ </tr>
+
+</table>
+
+<p>Проекты: <b>framework</b>, <b>framework.erm</b>, <b>framework.client</b>, <b>framework.client.swt</b>, <b>framework.client.swing</b>, <b>bs.base</b>, <b>bs.base.client.swt</b>, <b>bs.base.client.swing</b>
+
+содержат Java код. Эти проекты имеют соответствующие папки:
+
+<ul>
+ <li>classes - откомпилированные классы (не входит в SVN)
+ <li>src - исходный код
+</ul>
+
+Исходный код <b>(src)</b> проектов  <b>bs.base</b>, <b>bs.base.client.swt</b>, <b>bs.base.client.swing</b> содержит бизнес пакеты верхнего уровня (входят в состав <b>org/plazmaforge</b>) одинаковые для данных проектов:
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/business-package.png"/></td>
+ </tr>
+</table>
+
+
+<p>Каждый бизнес пакет верхнего уровня имеет одинаковую структуру для своего проекта.
+<p> Например для проекта <b>bs.base</b> и пакета <b>contact</b>:
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/bsolution-structure.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

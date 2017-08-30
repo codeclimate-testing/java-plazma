@@ -1,0 +1,277 @@
+############################################################################
+# PROJECT Action Definition
+############################################################################
+
+# ProjectType List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectTypeListAction@name=Project types
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectTypeListAction@tooltip=Project types
+
+# ProjectState List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStateListAction@name=Project statuses
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStateListAction@tooltip=Project statuses
+
+# ProjectStageGroup List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageGroupListAction@name=Project stage groups
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageGroupListAction@tooltip=Project stage groups
+
+# ProjectStage List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageListAction@name=Project stages
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectStageListAction@tooltip=Project stages
+
+# Project List Action
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction@name=Project list
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction@tooltip=Project list
+org.plazmaforge.bsolution.project.client.swing.actions.ProjectListAction@image=olmari/ext/planing.gif
+
+
+############################################################################
+# TASK Action Definition
+############################################################################
+
+# TaskType List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskTypeListAction@name=Task types
+org.plazmaforge.bsolution.project.client.swing.actions.TaskTypeListAction@tooltip=Task types
+
+# TaskState List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskStateListAction@name=Task statuses
+org.plazmaforge.bsolution.project.client.swing.actions.TaskStateListAction@tooltip=Task statuses
+
+# TaskRole List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskRoleListAction@name=Task roles
+org.plazmaforge.bsolution.project.client.swing.actions.TaskRoleListAction@tooltip=Task roles
+
+# TaskResult List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskResultListAction@name=Task results
+org.plazmaforge.bsolution.project.client.swing.actions.TaskResultListAction@tooltip=Task results
+
+# TaskPriority List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskPriorityListAction@name=Task priorities
+org.plazmaforge.bsolution.project.client.swing.actions.TaskPriorityListAction@tooltip=Task priorities
+
+# Task List Action
+org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction@name=Task list
+org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction@tooltip=Task list
+org.plazmaforge.bsolution.project.client.swing.actions.TaskListAction@image=olmari/ext/tasks.gif
+
+############################################################################
+# PROJECT List Form Definition
+############################################################################
+
+# ProjectType List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@title=Project type
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeList@table.column-note.name=Note
+
+
+
+# ProjectState List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@title=Project status
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-note.name=Note
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-start.name=Start status
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateList@table.column-finish.name=Finish status
+
+
+# ProjectStageGroup List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@title=Project stage group
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupList@table.column-note.name=Note
+
+# ProjectStage List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@title=Project stages
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-note.name=Note
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-order-number.name=Order
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-averange-duration.name=Day from start
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageList@table.column-from-begin.name=Averange duration
+
+
+# Project List Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@title=Projects
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-project-state.name=Project status
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-start-date.name=Start date
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectList@table.column-close-date.name=End date
+
+
+############################################################################
+# TASK List Form Definition
+############################################################################
+
+# TaskType List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@title=Task types
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeList@table.column-note.name=Note
+
+# TaskState List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@title=Task satuses
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-note.name=Note
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-start.name=Start status
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateList@table.column-finish.name=Finish status
+
+
+# TaskRole List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@title=Task roles
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleList@table.column-note.name=Note
+
+# TaskResult List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultList@title=Task results
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultList@table.column-name.name=Name
+
+# TaskPriority List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@title=Task priorities
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityList@table.column-order.name=Order
+
+# Task List Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@title=Tasks
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-code.name=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-name.name=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-task-priority.name=Priority
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-start-date.name=Start date
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-close-date.name=End date
+org.plazmaforge.bsolution.project.client.swing.forms.TaskList@table.column-done-percent.name=Result %
+
+
+############################################################################
+# PROJECT Edit Form Definition
+############################################################################
+
+# ProjectType Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@title=Project type
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectTypeEdit@panel.label-note.text=Note
+
+# ProjectState Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@title=Project status
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-note.text=Note
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-start.text=Start status
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStateEdit@panel.label-finish.text=Finish status
+
+
+# ProjectStageGroup Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@title=Project stage group
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageGroupEdit@panel.label-note.text=Note
+
+
+# ProjectStage Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@title=Project Stage
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-name.text=Project stage
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-project-stage-group.text=Stage group
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-project-type.text=Type        
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-order-number.text=Order
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-from-begin.text=Day from start
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-averange-duration.text=Averange duration (days)
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectStageEdit@panel.label-note.text=Note
+
+
+# Project Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@title=Project
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.title.finance.text=Finance
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-contract.text=Contract #
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-start-date.text=Start date
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-close-date.text=End date
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-actual-close-date.text=Actual end date
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-propability.text=Propability
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-project-stage.text=Paroject stage
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-project-state.text=	Project state
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-project-type.text=Project type	
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-currency-rate.text=Rate
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-currency-amount.text=Amount in currency
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-discount-percent.text=% Discount
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-discount-amount.text=Discount
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-amount.text=Amount
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-tax-percent.text=% Tax
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-tax-amount.text=Tax amount
+org.plazmaforge.bsolution.project.client.swing.forms.ProjectEdit@panel.label-amount-with-tax.text=Amount including taxes
+
+
+
+############################################################################
+# TASK Edit Form Definition
+############################################################################
+
+# TaskType Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@title=Task type
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskTypeEdit@panel.label-note.text=Note
+
+# TaskState Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@title=Task state
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-note.text=Note
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-start.text=Start status
+org.plazmaforge.bsolution.project.client.swing.forms.TaskStateEdit@panel.label-finish.text=Finish status
+
+# TaskRole Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@title=Task role
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskRoleEdit@panel.label-note.text=Note
+
+# TaskResult Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@title=Task result
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskResultEdit@panel.label-task-type.text=Task type
+
+# TaskPriority Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@title=Task priority
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskPriorityEdit@panel.label-order.text=Order
+
+# Task Edit Form
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@title=Task
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.title.common.text=Common
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-task-type.text=Task type
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-start-date-time.text=Start date
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-end-date-time.text=Close date
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-task-priority.text=Priority		
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-alarm-date-time.text=Alarm date		
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-project.text=Project		
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-document.text=Document
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-task-state.text=Task state
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-done-percent.text=% Complete
+org.plazmaforge.bsolution.project.client.swing.forms.TaskEdit@panel.label-completed-date-time.text=Completed date
+
+
+
+
+
+

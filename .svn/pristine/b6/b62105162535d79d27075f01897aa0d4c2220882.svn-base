@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu-bar-config provider="Plazma Forge" version="1.0">
+  <interface name="All">
+    <menu-bar name="All.SystemMenu">
+      <menu name="Dictionaries" global="true" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" global="true" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+          <menu-item action="StoreListForm" />
+          <menu-item action="MtrlResponsibleListForm" />
+          <menu-separator/>
+          <menu-item action="WarehouseListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="BankListForm" />
+        <menu-item action="BankAccountListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-separator/>
+        <menu-item action="CurrencyListForm" />
+        <menu-item action="CurrencyRateListForm" />
+        <menu-separator/>
+        <menu-item action="GoodsListForm" />
+        <menu-separator/>
+        <menu-item action="PersonListForm" />
+        <menu-separator/>        
+        <menu name="Dictionaries.Finance">
+          <menu-item action="FinanceDocumentTypeListForm" />
+        </menu>
+        <menu name="Dictionaries.Payment">
+          <menu-item action="PaymentOutcomeTemplateListForm" />
+          <menu-item action="PaymentMissingListForm" />
+        </menu>
+        <menu name="Dictionaries.HumanResources">
+          <menu-item action="JobPositionListForm" />
+          <menu-separator/>
+          <menu-item action="EducationInstituteListForm" />
+          <menu-item action="AcademicDegreeListForm" />
+        </menu>
+        <menu name="Dictionaries.Payroll">
+          <menu-item action="PayrollListForm" />
+        </menu>
+        <menu name="Dictionaries.Accounting">
+          <menu-item action="LedgerAccountListForm" />
+          <menu-separator/>
+          <menu-item action="TemplateEntryListForm" />
+        </menu>
+        <menu name="Classification">
+          <menu name="Classification.Types">
+            <menu-item action="LocalityTypeListForm" />
+            <menu-item action="AddressTypeListForm" />
+            <menu-item action="PhoneTypeListForm" />
+            <menu-item action="StreetTypeListForm" />
+            <menu-separator/>
+            <menu-item action="ContactTypeListForm" />
+          </menu>
+          <menu name="Classification.Groups">
+            <menu-item action="ProductGroupListForm" />
+            <menu-separator/>
+            <menu-item action="PartnerGroupListForm" />
+          </menu>
+          <menu name="Classification.Categories">
+            <menu-item action="PartnerCategoryListForm" />
+          </menu>
+          <menu name="Classification.HumanResources">
+            <menu-item action="FamilyStatusListForm" />
+            <menu-item action="SpecialityListForm" />
+            <menu-item action="PersonDocumentTypeListForm" />
+            <menu-separator/>
+            <menu-item action="EducationTypeListForm" />
+            <menu-item action="EducationFormListForm" />
+            <menu-item action="FamiliarityListForm" />
+            <menu-separator/>
+            <menu-item action="EmployeeCategoryListForm" />
+            <menu-item action="EmployeeRankListForm" />
+            <menu-item action="PayrollFormListForm" />
+          </menu>
+          <menu name="Classification.Military">
+            <menu-item action="MilitaryRankListForm" />
+            <menu-item action="MilitaryStatusListForm" />
+            <menu-item action="MilitarySpecialityListForm" />
+          </menu>
+          <menu-separator/>
+          <menu-item action="CountryListForm" />
+          <menu-item action="LanguageListForm" />
+          <menu-separator/>
+          <menu-item action="IndustryListForm" />
+          <menu-item action="ActivityTypeListForm" />
+          <menu-separator/>
+          <menu-item action="FormPropertyListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="DocumentTypeListForm" />
+        <menu-item action="DocumentStatusListForm" />
+        <menu-item action="DocumentRelationListForm" />        
+        <menu-separator/>
+        <menu-item action="TaxListForm" />
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" global="true" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Documents" global="true" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.Sale">
+          <menu-item action="SalePlanListForm" />
+          <menu-separator/>
+          <menu-item action="SaleOrderListForm" />
+          <menu-separator/>
+          <menu-item action="SaleInvoiceListForm" />
+          <menu-separator/>
+          <menu-item action="GoodsOutcomeListForm" />
+          <menu-item action="SaleTaxWaybillListForm" />
+          <menu-separator/>
+          <menu-item action="SaleServListForm" />
+        </menu>
+        <menu name="Documents.Purchase">
+          <menu-item action="PurchasePlanListForm" />
+          <menu-separator/>
+          <menu-item action="PurchaseOrderListForm" />
+          <menu-separator/>
+          <menu-item action="PurchaseInvoiceListForm" />
+          <menu-separator/>
+          <menu-item action="GoodsIncomeListForm" />
+          <menu-item action="PurchaseTaxWaybillListForm" />
+          <menu-separator/>
+          <menu-item action="PurchaseServListForm" />
+        </menu>
+        <menu name="Documents.Inventory">
+          <menu-item action="InventoryIncomeListForm" />
+          <menu-item action="InventoryOutcomeListForm" />
+          <menu-separator/>
+          <menu-item action="InventoryMoveListForm" />
+          <menu-item action="InventoryWriteoffListForm" />
+        </menu>
+        <menu name="Documents.Bank">
+          <menu-item action="PaymentIncomeListForm" />
+          <menu-item action="PaymentOutcomeListForm" />
+          <menu-separator/>
+          <menu-item action="PaymentListForm" />
+        </menu>
+        <menu name="Documents.Cash">
+          <menu-item action="CashIncomeListForm" />
+          <menu-item action="CashOutcomeListForm" />
+        </menu>
+        <menu name="Documents.HumanResources">
+          <menu-item action="EmployeeReceptionListForm" />
+          <menu-item action="EmployeeDischargeListForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeVacationListForm" />
+          <menu-item action="EmployeeSicklistListForm" />
+        </menu>
+        <menu name="Documents.Payroll">
+          <menu-item action="InputWorktimeListForm" />
+          <menu-item action="InputPayrollListForm" />
+        </menu>
+      </menu>
+      <menu name="Projects" global="true" type="Projects">
+        <menu-item action="ProjectListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectTypeListForm" />
+        <menu-item action="ProjectStatusListForm" />
+        <menu-item action="ProjectRoleListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectStageListForm" />
+        <menu-item action="ProjectStageGroupListForm" />
+      </menu>
+      <menu name="Tasks" global="true" type="Tasks">
+        <menu-item action="TaskListForm" />
+        <menu-separator/>
+        <menu-item action="TaskTypeListForm" />
+        <menu-item action="TaskStatusListForm" />
+        <menu-item action="TaskRoleListForm" />
+        <menu-separator/>
+        <menu-item action="TaskPriorityListForm" />
+        <menu-item action="TaskResultListForm" />
+      </menu>
+      <menu name="Organizer" global="true" type="Organizer">
+        <menu-item action="MyContactListForm" />
+        <menu-item action="MyProjectListForm" />        
+        <menu-item action="MyTaskListForm" />
+        <menu-separator/>
+        <menu-item action="MyPIMAppointmentListForm" />
+        <menu-item action="MyPIMEventListForm" />
+        <menu-item action="MyPIMReminderListForm" />
+        <menu-item action="MyPIMNoteListForm" />        
+        <menu-item action="MyPIMCalendarForm" />
+        <menu-item action="DashboardForm" />
+      </menu>      
+      <menu name="Reports" global="true" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Sale">
+          <menu-item action="SalePlanReport" />
+          <menu-separator/>
+          <menu-item action="GoodsSaleReport" />
+          <menu-item action="CrosstabGoodsSale" />
+          <menu-item action="GoodsSaleMonthProductReport" />
+          <menu-item action="GoodsSaleMonthDiagramReport" />
+          <menu-separator/>
+          <menu-item action="PriceListReport" />
+          <menu-separator/>
+          <menu-item action="ExecWorkByPartner" />
+          <menu-item action="ExecWorkListReport" />
+        </menu>
+        <menu name="Reports.Purchase">
+          <menu-item action="PurchasePlanReport" />
+          <menu-separator/>
+          <menu-item action="CrosstabGoodsPurchase" />
+        </menu>
+        <menu name="Reports.Storage">
+          <menu-item action="GoodsIncomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsOutcomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsRotateReport" />
+        </menu>
+        <menu name="Reports.Balance">
+          <menu-item action="GoodsRestStartReport" />
+          <menu-item action="WarehouseGoodsRestStartReport" />
+          <menu-separator/>
+          <menu-item action="PartnerRestStartReport" />
+        </menu>
+        <menu name="Reports.Bank">
+          <menu-item action="JournalPaymentByBankAccount" />
+          <menu-item action="JournalPaymentByPartner" />
+          <menu-separator/>
+          <menu-item action="PaymentIncomeByPartner" />
+          <menu-item action="PaymentOutcomeByPartner" />
+        </menu>
+        <menu name="Reports.HumanResources">
+          <menu-item action="EmployeeListReport" />
+        </menu>
+        <menu name="Reports.Payroll">
+          <menu-item action="PersonPayReport" />
+          <menu-item action="PayrollListReport" />
+          <menu-item action="CrosstabPayrollTotal" />
+        </menu>
+        <menu name="Reports.Accounting">
+          <menu-item action="CrosstabLedgerAccountRotate" />
+        </menu>
+        <menu name="Reports.Project">
+          <menu-item action="CrosstabProject" />
+          <menu-separator/>
+          <menu-item action="ProjectStatusReport" />
+          <menu-item action="ProjectStatusByPartnerReport" />
+          <menu-item action="ProjectStatusByManagerReport" />
+        </menu>
+        <menu-item action="PartnerContactBookReport" />
+      </menu>
+      <menu name="Period" global="true" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu name="Period.Rests">
+          <menu-item action="PartnerRestListForm" />
+          <menu-item action="InventoryRestListForm" />
+          <menu-item action="LedgerAccountRestListForm" />
+          <menu-separator/>
+          <menu-item action="CalculateProductRestAction" />
+        </menu>
+        <menu-item action="RegisterPeriodAction" />
+        <menu-separator/>
+        <menu-item action="EntryCalculateAction" />
+        <menu-item action="EntryRemoveAction" />
+        <menu-separator/>
+        <menu-item action="PayrollCalculateAction" />
+      </menu>
+      <menu name="Service" global="true" type="Service">
+        <menu-item action="PreferencesAction" />
+        <menu-separator/>
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu-item action="UserListForm" />
+        <menu-item action="RoleListForm" />
+        <menu-separator/>
+        <menu-item action="PermissionListForm" />
+        <menu-separator/>
+        <menu-item action="DatabaseImportAction" />
+        <menu-item action="DatabaseExportAction" />
+        <menu-separator/>
+        <menu name="Service.Utilities">
+          <menu-item action="ReinitSytemAction" />
+          <menu-item action="SyncSecureAction" />
+        </menu>
+      </menu>
+      <menu name="Window" global="true" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" global="true" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="BankAndCash">
+    <menu-bar name="BankAndCash.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="BankListForm" />
+        <menu-separator/>
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu name="Dictionaries.Finance">
+          <menu-item action="FinanceDocumentTypeListForm" />
+        </menu>
+        <menu name="Dictionaries.Payment">
+          <menu-item action="PaymentOutcomeTemplateListForm" />
+          <menu-item action="PaymentMissingListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="DocumentTypeListForm" />
+        <menu-separator/>
+        <menu-item action="TaxListForm" />
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.Bank">
+          <menu-item action="PaymentIncomeListForm" />
+          <menu-item action="PaymentOutcomeListForm" />
+          <menu-separator/>
+          <menu-item action="PaymentListForm" />
+        </menu>
+        <menu name="Documents.Cash">
+          <menu-item action="CashIncomeListForm" />
+          <menu-item action="CashOutcomeListForm" />
+        </menu>
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Balance">
+          <menu-item action="PartnerRestStartReport" />
+        </menu>
+        <menu name="Reports.Bank">
+          <menu-item action="JournalPaymentByBankAccount" />
+          <menu-item action="JournalPaymentByPartner" />
+          <menu-separator/>
+          <menu-item action="PaymentIncomeByPartner" />
+          <menu-item action="PaymentOutcomeByPartner" />
+        </menu>
+        <menu-item action="PartnerContactBookReport" />
+      </menu>
+      <menu name="Period" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu name="Period.Rests">
+          <menu-item action="PartnerRestListForm" />
+        </menu>
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Sale">
+    <menu-bar name="Sale.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+          <menu-item action="StoreListForm" />
+          <menu-item action="MtrlResponsibleListForm" />
+          <menu-separator/>
+          <menu-item action="WarehouseListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="BankListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu-item action="GoodsListForm" />
+        <menu-separator/>
+        <menu name="Dictionaries.Finance">
+          <menu-item action="FinanceDocumentTypeListForm" />
+        </menu>
+        <menu name="Dictionaries.Payment">
+          <menu-item action="PaymentOutcomeTemplateListForm" />
+          <menu-item action="PaymentMissingListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="DocumentTypeListForm" />
+        <menu-separator/>
+        <menu-item action="TaxListForm" />
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.Sale">
+          <menu-item action="SalePlanListForm" />
+          <menu-separator/>
+          <menu-item action="SaleOrderListForm" />
+          <menu-separator/>
+          <menu-item action="SaleInvoiceListForm" />
+          <menu-separator/>
+          <menu-item action="GoodsOutcomeListForm" />
+          <menu-item action="SaleTaxWaybillListForm" />
+          <menu-separator/>
+          <menu-item action="SaleServListForm" />
+        </menu>
+        <menu name="Documents.Bank">
+          <menu-item action="PaymentIncomeListForm" />
+          <menu-item action="PaymentOutcomeListForm" />
+          <menu-separator/>
+          <menu-item action="PaymentListForm" />
+        </menu>
+        <menu name="Documents.Cash">
+          <menu-item action="CashIncomeListForm" />
+          <menu-item action="CashOutcomeListForm" />
+        </menu>
+      </menu>
+      <menu name="Projects" type="Projects">
+        <menu-item action="ProjectListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectTypeListForm" />
+        <menu-item action="ProjectStatusListForm" />
+        <menu-item action="ProjectRoleListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectStageListForm" />
+        <menu-item action="ProjectStageGroupListForm" />
+      </menu>
+      <menu name="Tasks" type="Tasks">
+        <menu-item action="TaskListForm" />
+        <menu-separator/>
+        <menu-item action="TaskTypeListForm" />
+        <menu-item action="TaskStatusListForm" />
+        <menu-item action="TaskRoleListForm" />
+        <menu-separator/>
+        <menu-item action="TaskPriorityListForm" />
+        <menu-item action="TaskResultListForm" />
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Sale">
+          <menu-item action="SalePlanReport" />
+          <menu-separator/>
+          <menu-item action="GoodsSaleReport" />
+          <menu-item action="CrosstabGoodsSale" />
+          <menu-item action="GoodsSaleMonthProductReport" />
+          <menu-item action="GoodsSaleMonthDiagramReport" />
+          <menu-separator/>
+          <menu-item action="PriceListReport" />
+          <menu-separator/>
+          <menu-item action="ExecWorkByPartner" />
+          <menu-item action="ExecWorkListReport" />
+        </menu>
+        <menu name="Reports.Storage">
+          <menu-item action="GoodsIncomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsOutcomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsRotateReport" />
+        </menu>
+        <menu name="Reports.Balance">
+          <menu-item action="GoodsRestStartReport" />
+          <menu-item action="WarehouseGoodsRestStartReport" />
+          <menu-separator/>
+          <menu-item action="PartnerRestStartReport" />
+        </menu>
+        <menu name="Reports.Bank">
+          <menu-item action="JournalPaymentByBankAccount" />
+          <menu-item action="JournalPaymentByPartner" />
+          <menu-separator/>
+          <menu-item action="PaymentIncomeByPartner" />
+          <menu-item action="PaymentOutcomeByPartner" />
+        </menu>
+        <menu name="Reports.Project">
+          <menu-item action="CrosstabProject" />
+          <menu-separator/>
+          <menu-item action="ProjectStatusReport" />
+          <menu-item action="ProjectStatusByPartnerReport" />
+          <menu-item action="ProjectStatusByManagerReport" />
+        </menu>
+        <menu-item action="PartnerContactBookReport" />
+      </menu>
+      <menu name="Period" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu name="Period.Rests">
+          <menu-item action="PartnerRestListForm" />
+          <menu-item action="InventoryRestListForm" />
+          <menu-item action="LedgerAccountRestListForm" />
+        </menu>
+        <menu-item action="RegisterPeriodAction" />
+        <menu-separator/>
+        <menu-item action="EntryCalculateAction" />
+        <menu-item action="EntryRemoveAction" />
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Purchase">
+    <menu-bar name="Purchase.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+          <menu-item action="StoreListForm" />
+          <menu-item action="MtrlResponsibleListForm" />
+          <menu-separator/>
+          <menu-item action="WarehouseListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="BankListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu-item action="GoodsListForm" />
+        <menu-separator/>
+        <menu name="Dictionaries.Finance">
+          <menu-item action="FinanceDocumentTypeListForm" />
+        </menu>
+        <menu name="Dictionaries.Payment">
+          <menu-item action="PaymentOutcomeTemplateListForm" />
+          <menu-item action="PaymentMissingListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="DocumentTypeListForm" />
+        <menu-separator/>
+        <menu-item action="TaxListForm" />
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.Purchase">
+          <menu-item action="PurchasePlanListForm" />
+          <menu-separator/>
+          <menu-item action="PurchaseOrderListForm" />
+          <menu-separator/>
+          <menu-item action="PurchaseInvoiceListForm" />
+          <menu-separator/>
+          <menu-item action="GoodsIncomeListForm" />
+          <menu-item action="PurchaseTaxWaybillListForm" />
+          <menu-separator/>
+          <menu-item action="PurchaseServListForm" />
+        </menu>
+        <menu name="Documents.Bank">
+          <menu-item action="PaymentIncomeListForm" />
+          <menu-item action="PaymentOutcomeListForm" />
+          <menu-separator/>
+          <menu-item action="PaymentListForm" />
+        </menu>
+        <menu name="Documents.Cash">
+          <menu-item action="CashIncomeListForm" />
+          <menu-item action="CashOutcomeListForm" />
+        </menu>
+      </menu>
+      <menu name="Projects" type="Projects">
+        <menu-item action="ProjectListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectTypeListForm" />
+        <menu-item action="ProjectStatusListForm" />
+        <menu-item action="ProjectRoleListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectStageListForm" />
+        <menu-item action="ProjectStageGroupListForm" />
+      </menu>
+      <menu name="Tasks" type="Tasks">
+        <menu-item action="TaskListForm" />
+        <menu-separator/>
+        <menu-item action="TaskTypeListForm" />
+        <menu-item action="TaskStatusListForm" />
+        <menu-item action="TaskRoleListForm" />
+        <menu-separator/>
+        <menu-item action="TaskPriorityListForm" />
+        <menu-item action="TaskResultListForm" />
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Purchase">
+          <menu-item action="PurchasePlanReport" />
+          <menu-separator/>
+          <menu-item action="CrosstabGoodsPurchase" />
+        </menu>
+        <menu name="Reports.Storage">
+          <menu-item action="GoodsIncomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsOutcomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsRotateReport" />
+        </menu>
+        <menu name="Reports.Balance">
+          <menu-item action="GoodsRestStartReport" />
+          <menu-item action="WarehouseGoodsRestStartReport" />
+          <menu-separator/>
+          <menu-item action="PartnerRestStartReport" />
+        </menu>
+        <menu name="Reports.Bank">
+          <menu-item action="JournalPaymentByBankAccount" />
+          <menu-item action="JournalPaymentByPartner" />
+          <menu-separator/>
+          <menu-item action="PaymentIncomeByPartner" />
+          <menu-item action="PaymentOutcomeByPartner" />
+        </menu>
+        <menu name="Reports.Project">
+          <menu-item action="CrosstabProject" />
+          <menu-separator/>
+          <menu-item action="ProjectStatusReport" />
+          <menu-item action="ProjectStatusByPartnerReport" />
+          <menu-item action="ProjectStatusByManagerReport" />
+        </menu>
+        <menu-item action="PartnerContactBookReport" />
+      </menu>
+      <menu name="Period" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu name="Period.Rests">
+          <menu-item action="PartnerRestListForm" />
+          <menu-item action="InventoryRestListForm" />
+          <menu-item action="LedgerAccountRestListForm" />
+        </menu>
+        <menu-item action="RegisterPeriodAction" />
+        <menu-separator/>
+        <menu-item action="EntryCalculateAction" />
+        <menu-item action="EntryRemoveAction" />
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="HR">
+    <menu-bar name="HR.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PersonListForm" />
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu name="Dictionaries.HumanResources">
+          <menu-item action="JobPositionListForm" />
+          <menu-separator/>
+          <menu-item action="EducationInstituteListForm" />
+          <menu-item action="AcademicDegreeListForm" />
+        </menu>
+        <menu name="Classification">
+          <menu name="Classification.Types">
+            <menu-item action="LocalityTypeListForm" />
+            <menu-item action="AddressTypeListForm" />
+            <menu-item action="PhoneTypeListForm" />
+            <menu-item action="StreetTypeListForm" />
+            <menu-separator/>
+            <menu-item action="ContactTypeListForm" />
+          </menu>
+          <menu name="Classification.Groups">
+            <menu-item action="ProductGroupListForm" />
+            <menu-separator/>
+            <menu-item action="PartnerGroupListForm" />
+          </menu>
+          <menu name="Classification.Categories">
+            <menu-item action="PartnerCategoryListForm" />
+          </menu>
+          <menu name="Classification.HumanResources">
+            <menu-item action="FamilyStatusListForm" />
+            <menu-item action="SpecialityListForm" />
+            <menu-item action="PersonDocumentTypeListForm" />
+            <menu-separator/>
+            <menu-item action="EducationTypeListForm" />
+            <menu-item action="EducationFormListForm" />
+            <menu-item action="FamiliarityListForm" />
+            <menu-separator/>
+            <menu-item action="EmployeeCategoryListForm" />
+            <menu-item action="EmployeeRankListForm" />
+            <menu-item action="PayrollFormListForm" />
+          </menu>
+          <menu name="Classification.Military">
+            <menu-item action="MilitaryRankListForm" />
+            <menu-item action="MilitaryStatusListForm" />
+            <menu-item action="MilitarySpecialityListForm" />
+          </menu>
+          <menu-separator/>
+          <menu-item action="CountryListForm" />
+          <menu-item action="LanguageListForm" />
+          <menu-separator/>
+          <menu-item action="IndustryListForm" />
+          <menu-item action="ActivityTypeListForm" />
+        </menu>
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.HumanResources">
+          <menu-item action="EmployeeReceptionListForm" />
+          <menu-item action="EmployeeDischargeListForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeVacationListForm" />
+          <menu-item action="EmployeeSicklistListForm" />
+        </menu>
+      </menu>
+      <menu name="Projects" type="Projects">
+        <menu-item action="ProjectListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectTypeListForm" />
+        <menu-item action="ProjectStatusListForm" />
+        <menu-item action="ProjectRoleListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectStageListForm" />
+        <menu-item action="ProjectStageGroupListForm" />
+      </menu>
+      <menu name="Tasks" type="Tasks">
+        <menu-item action="TaskListForm" />
+        <menu-separator/>
+        <menu-item action="TaskTypeListForm" />
+        <menu-item action="TaskStatusListForm" />
+        <menu-item action="TaskRoleListForm" />
+        <menu-separator/>
+        <menu-item action="TaskPriorityListForm" />
+        <menu-item action="TaskResultListForm" />
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.HumanResources">
+          <menu-item action="EmployeeListReport" />
+        </menu>
+        <menu name="Reports.Project">
+          <menu-item action="CrosstabProject" />
+          <menu-separator/>
+          <menu-item action="ProjectStatusReport" />
+          <menu-item action="ProjectStatusByPartnerReport" />
+          <menu-item action="ProjectStatusByManagerReport" />
+        </menu>
+        <menu-item action="PartnerContactBookReport" />
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Project">
+    <menu-bar name="Project.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+        </menu>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Projects" type="Projects">
+        <menu-item action="ProjectListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectTypeListForm" />
+        <menu-item action="ProjectStatusListForm" />
+        <menu-item action="ProjectRoleListForm" />
+        <menu-separator/>
+        <menu-item action="ProjectStageListForm" />
+        <menu-item action="ProjectStageGroupListForm" />
+      </menu>
+      <menu name="Tasks" type="Tasks">
+        <menu-item action="TaskListForm" />
+        <menu-separator/>
+        <menu-item action="TaskTypeListForm" />
+        <menu-item action="TaskStatusListForm" />
+        <menu-item action="TaskRoleListForm" />
+        <menu-separator/>
+        <menu-item action="TaskPriorityListForm" />
+        <menu-item action="TaskResultListForm" />
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Project">
+          <menu-item action="CrosstabProject" />
+          <menu-separator/>
+          <menu-item action="ProjectStatusReport" />
+          <menu-item action="ProjectStatusByPartnerReport" />
+          <menu-item action="ProjectStatusByManagerReport" />
+        </menu>
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Inventory">
+    <menu-bar name="Inventory.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+          <menu-item action="StoreListForm" />
+          <menu-item action="MtrlResponsibleListForm" />
+          <menu-separator/>
+          <menu-item action="WarehouseListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu-item action="GoodsListForm" />
+        <menu-separator/>
+        <menu name="Dictionaries.Accounting">
+          <menu-item action="LedgerAccountListForm" />
+          <menu-separator/>
+          <menu-item action="TemplateEntryListForm" />
+        </menu>
+        <menu name="Classification">
+          <menu name="Classification.Groups">
+            <menu-item action="ProductGroupListForm" />
+          </menu>
+        </menu>
+        <menu-item action="TaxListForm" />
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Contacts" type="Contacts">
+        <menu-item action="ContactListForm" />
+        <menu-separator/>
+        <menu-item action="RegionListForm" />
+        <menu-item action="CityListForm" />
+        <menu-separator/>
+        <menu-item action="LocalityListForm" />
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.Inventory">
+          <menu-item action="InventoryIncomeListForm" />
+          <menu-item action="InventoryOutcomeListForm" />
+          <menu-separator/>
+          <menu-item action="InventoryMoveListForm" />
+          <menu-item action="InventoryWriteoffListForm" />
+        </menu>
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Storage">
+          <menu-item action="GoodsIncomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsOutcomeByDocumentReport" />
+          <menu-separator/>
+          <menu-item action="GoodsRotateReport" />
+        </menu>
+        <menu name="Reports.Balance">
+          <menu-item action="GoodsRestStartReport" />
+          <menu-item action="WarehouseGoodsRestStartReport" />
+          <menu-separator/>
+          <menu-item action="PartnerRestStartReport" />
+        </menu>
+        <menu name="Reports.Accounting">
+          <menu-item action="CrosstabLedgerAccountRotate" />
+        </menu>
+        <menu-item action="PartnerContactBookReport" />
+      </menu>
+      <menu name="Period" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu name="Period.Rests">
+          <menu-item action="PartnerRestListForm" />
+          <menu-item action="InventoryRestListForm" />
+          <menu-item action="LedgerAccountRestListForm" />
+        </menu>
+        <menu-item action="RegisterPeriodAction" />
+        <menu-separator/>
+        <menu-item action="EntryCalculateAction" />
+        <menu-item action="EntryRemoveAction" />
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Accounting">
+    <menu-bar name="Accounting.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PartnerListForm" />
+        <menu-separator/>
+        <menu-item action="BankListForm" />
+        <menu-separator/>
+        <menu-item action="UnitListForm" />
+        <menu-item action="CurrencyListForm" />
+        <menu-separator/>
+        <menu name="Dictionaries.Finance">
+          <menu-item action="FinanceDocumentTypeListForm" />
+        </menu>
+        <menu name="Dictionaries.Accounting">
+          <menu-item action="LedgerAccountListForm" />
+          <menu-separator/>
+          <menu-item action="TemplateEntryListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="DocumentTypeListForm" />
+        <menu-separator/>
+        <menu-item action="TaxListForm" />
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.Balance">
+          <menu-item action="GoodsRestStartReport" />
+          <menu-item action="WarehouseGoodsRestStartReport" />
+          <menu-separator/>
+          <menu-item action="PartnerRestStartReport" />
+        </menu>
+        <menu name="Reports.Accounting">
+          <menu-item action="CrosstabLedgerAccountRotate" />
+        </menu>
+      </menu>
+      <menu name="Period" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu name="Period.Rests">
+          <menu-item action="PartnerRestListForm" />
+          <menu-item action="InventoryRestListForm" />
+          <menu-item action="LedgerAccountRestListForm" />
+        </menu>
+        <menu-item action="RegisterPeriodAction" />
+        <menu-separator/>
+        <menu-item action="EntryCalculateAction" />
+        <menu-item action="EntryRemoveAction" />
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Payroll">
+    <menu-bar name="Payroll.SystemMenu">
+      <menu name="Dictionaries" type="Dictionaries">
+        <menu-item action="NewDictionary" />
+        <menu-item action="ChooseDictionary" />
+        <menu name="Dictionaries.MyOrganization" type="Dictionaries.MyOrganization">
+          <menu-item action="OrganizationEditForm" />
+          <menu-separator/>
+          <menu-item action="EmployeeListForm" />
+          <menu-separator/>
+          <menu-item action="DepartmentListForm" />
+        </menu>
+        <menu-separator/>
+        <menu-item action="PersonListForm" />
+        <menu name="Dictionaries.HumanResources">
+          <menu-item action="JobPositionListForm" />
+        </menu>
+        <menu name="Dictionaries.Payroll">
+          <menu-item action="PayrollListForm" />
+        </menu>
+        <menu name="Custom.Dictionaries">
+          <menu-item action="ChooseEnumeration" />
+          <menu-item action="ChooseLookup" />
+        </menu>
+      </menu>
+      <menu name="Documents" type="Documents">
+        <menu-item action="NewDocument" />
+        <menu-item action="ChooseDocument" />
+        <menu-separator/>
+        <menu-item action="DocumentListForm" />
+        <menu-separator/>
+        <menu-item action="ContractListForm" />
+        <menu-separator/>
+        <menu name="Documents.Payroll">
+          <menu-item action="InputWorktimeListForm" />
+          <menu-item action="InputPayrollListForm" />
+        </menu>
+      </menu>
+      <menu name="Reports" type="Reports">
+        <menu-item action="ReportListForm" />
+        <menu-separator/>
+        <menu name="Reports.HumanResources">
+          <menu-item action="EmployeeListReport" />
+        </menu>
+        <menu name="Reports.Payroll">
+          <menu-item action="PersonPayReport" />
+          <menu-item action="PayrollListReport" />
+          <menu-item action="CrosstabPayrollTotal" />
+        </menu>
+      </menu>
+      <menu name="Period" type="Period">
+        <menu-item action="PeriodListForm" />
+        <menu-separator/>
+        <menu-item action="PayrollCalculateAction" />
+      </menu>
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu name="Service.Export">
+          <menu-item action="DatabaseXMLExportAction" />
+          <menu-item action="DatabaseCSVExportAction" />
+          <menu-item action="DatabaseHTMLExportAction" />
+          <menu-item action="DatabaseXLSExportAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+  </interface>
+  <interface name="Admin">
+    <menu-bar name="Admin.SystemMenu">
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu-item action="UserListForm" />
+        <menu-item action="RoleListForm" />
+        <menu-separator/>
+        <menu-item action="PermissionListForm" />
+        <menu-separator/>
+        <menu-item action="DatabaseXMLExportAction" />
+        <menu name="Service.Utilities">
+          <menu-item action="ReinitSytemAction" />
+          <menu-item action="SyncSecureAction" />
+        </menu>
+      </menu>
+      <menu name="Window" type="Window">
+        <menu-item action="CloseWindowsAction" />
+      </menu>
+      <menu name="Help" type="Help">
+        <menu-item action="HelpAction" />
+        <menu-item action="AboutAction" />
+      </menu>
+    </menu-bar>
+    <menu-bar name="Admin.TreeMenu">
+      <menu name="Service" type="Service">
+        <menu-item action="SystemInfoEditForm" />
+        <menu-separator/>
+        <menu-item action="SystemVariableListForm" />
+        <menu-item action="SystemEntityListForm" />
+        <menu-separator/>
+        <menu-item action="CustomEntityListForm" />
+        <menu-separator/>
+        <menu-item action="OrganizationListForm" />
+        <menu-separator/>
+        <menu-item action="UserListForm" />
+        <menu-item action="RoleListForm" />
+        <menu-separator/>
+        <menu-item action="PermissionListForm" />
+        <menu-separator/>
+        <menu-item action="DatabaseXMLExportAction" />
+        <menu name="Service.Utilities">
+          <menu-item action="ReinitSytemAction" />
+          <menu-item action="SyncSecureAction" />
+        </menu>
+      </menu>
+    </menu-bar>
+  </interface>
+</menu-bar-config>
+

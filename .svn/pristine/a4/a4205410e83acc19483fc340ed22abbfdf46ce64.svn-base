@@ -1,0 +1,60 @@
+
+<html>
+<title>Eclipse IDE</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Run application</h2>
+   <hr>
+   <br><br>
+
+   <h3 align="center">SWT client</h3>
+
+The project <b>bs.base.client.swt</b> 
+
+<p> Select menu <b>Run -> Open Run Dialog...</b>
+                                     
+<p> Select item <b>Java Application</b> and create new configuration 
+by press <b>New launch configuration</b>
+
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/run-swt-client.png"/></td>
+ </tr>
+</table>
+
+<!--
+<p> Set VM arguments -Djava.library.path="..\lib\swt\win32" (Windows) or -Djava.library.path="../lib/swt/linux-gtk" (Linux)
+
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/run-swt-client-arguments.png"/></td>
+ </tr>
+</table>
+
+-->
+<p>To run the application you have to press <b>Run</b>.
+
+
+
+</body>
+</html>
+
+

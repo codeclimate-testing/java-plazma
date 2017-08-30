@@ -1,0 +1,30 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="CountryListForm" type="ListForm" title="@{CountryListForm.title}">
+		<imports>
+			<import path="org.plazmaforge.framework.uwt.widget.MessageBox"/>
+		</imports>
+		<tool-bar>
+			<tool-item icon="widget/refresh.gif" tooltip="Refresh">
+				<events>
+					<event type="Selection">
+							<script language="Java">
+								MessageBox.information("Select button");
+							</script>
+						</event>
+				</events>
+			</tool-item>
+		</tool-bar>
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{CountryListForm.codeColumn.text}" property="code" data-type="String" width="100"/>
+						<column text="@{CountryListForm.code3Column.text}" property="code3" data-type="String" width="100"/>
+						<column text="@{CountryListForm.numericColumn.text}" property="numericCode" data-type="String" width="100"/>						
+						<column text="@{CountryListForm.nameColumn.text}" property="name" data-type="String" width="300"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

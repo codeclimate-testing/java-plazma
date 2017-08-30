@@ -1,0 +1,13 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DefPhone" class="org.plazmaforge.bsolution.contact.common.beans.DefPhone" table="V_DEF_CONTACTABLE_PHONE" readonly="true">
+    	<attributes>
+        	<key name="contactableId" column="CONTACTABLE_ID" type="Integer" generator-type="assigned"/>
+        	<discriminator column="ENTITY_ID" type="String"/>
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer"/>
+        	<attribute name="phoneString" column="PHONE_STRING" type="String"/>
+        	<attribute name="phoneCompile" column="PHONE_COMPILE" type="String"/>
+    	</attributes>
+    </entity>
+
+

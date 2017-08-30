@@ -1,0 +1,785 @@
+############################################################################
+# PRODUCT Action Definition
+############################################################################
+
+
+
+# Goods List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsListAction@name=Goods
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsListAction@tooltip=Goods
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsListAction@image=olmari/ext/offerings.gif
+
+
+# GoodsRest List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsRestListAction@name=Goods remainders
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsRestListAction@tooltip=Goods remainders
+
+# GoodsIncome List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsIncomeListAction@name=Goods income
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsIncomeListAction@tooltip=Goods income
+
+# GoodsOutcome List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsOutcomeListAction@name=Goods outcome 
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsOutcomeListAction@tooltip=Goods outcome
+
+# GoodsMove List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsMoveListAction@name=Goods move
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsMoveListAction@tooltip=Goods move
+
+# GoodsWriteOffWaybill List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsWriteoffListAction@name=Goods writeoff
+org.plazmaforge.bsolution.goods.client.swing.actions.GoodsWriteoffListAction@tooltip=Goods writeoff
+
+
+
+# Invoice List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.InvoiceListAction@name=Invoices
+org.plazmaforge.bsolution.goods.client.swing.actions.InvoiceListAction@tooltip=Invoices
+
+
+# SaleOrder List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.SaleOrderListAction@name=Sale Orders
+org.plazmaforge.bsolution.goods.client.swing.actions.SaleOrderListAction@tooltip=Sale Orders
+
+# PurchaseOrder List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.PurchaseOrderListAction@name=Purchase Orders
+org.plazmaforge.bsolution.goods.client.swing.actions.PurchaseOrderListAction@tooltip=Purchase Orders
+
+# TaxWaybill List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.TaxWaybillListAction@name=Tax waybill
+org.plazmaforge.bsolution.goods.client.swing.actions.TaxWaybillListAction@tooltip=Tax waybill
+
+
+
+# SalePlan List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.SalePlanListAction@name=Sale Plans
+org.plazmaforge.bsolution.goods.client.swing.actions.SalePlanListAction@tooltip=Sale Plans
+
+# PurchasePlan List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.PurchasePlanListAction@name=Purchase Plans
+org.plazmaforge.bsolution.goods.client.swing.actions.PurchasePlanListAction@tooltip=Purchase Plans
+
+# ExecWork List Action
+org.plazmaforge.bsolution.goods.client.swing.actions.ExecWorkListAction@name=Execute work
+org.plazmaforge.bsolution.goods.client.swing.actions.ExecWorkListAction@tooltip=Execute work
+
+############################################################################
+# List Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsList@title=Goods
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsList@table.column-code.name=Code
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsList@table.column-name.name=Name
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsList@table.column-goods-type-name.name=Type
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsList@table.column-unit-name.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsList@table.column-price.name=Price
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestList@title=Goods remainders
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestList@table.column-storable.name=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestList@table.column-currency-amount.name=Amount
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@title=Goods income
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-storable.name=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeList@table.column-amount.name=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@title=Goods outcome
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-storable.name=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeList@table.column-amount.name=Amount
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@title=Goods move
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-outcome-storable.name=Outcome storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-outcome-responsible.name=Outcome responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-income-storable.name=Income storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-income-responsible.name=Income responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveList@table.column-currency-amount.name=Amount in currency
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffList@title=Goods writeoff
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffList@table.column-storable.name=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffList@table.column-currency-amount.name=Amount in currency
+
+
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceList@title=Invoices
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceList@table.column-amount.name=Amount
+
+
+
+#####
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@title=Sale Orders
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-storable.name=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderList@table.column-amount.name=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@title=Purchase Orders
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-storable.name=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderList@table.column-amount.name=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillList@title=Tax Waybills
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillList@table.column-amount.name=Amount
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@title=Sale Plans
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-department.name=Department
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-price-type.name=Price type
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanList@table.column-amount.name=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@title=Purchase Plans
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-code.name=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-department.name=Department
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-price-type.name=Price type
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-responsible.name=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanList@table.column-amount.name=Amount
+
+#####
+
+############################################################################
+# Edit Form Definition
+############################################################################
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@title=Goods
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.title.common.text=Common
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.title.additional.text=Additional
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-code.text=Code
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-name.text=Name
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-product-card-group.text=Group
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-goods-type.text=Type
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-unit.text=Base unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-price.text=Base price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-taxpercent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-add-pricepercent.text=Add price %
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-manufacturer.text=Manufacturer
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-supplier.text=Supplier
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-min-quantity.text=Min available
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-availability-quantity.text=Available
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-reserve-quantity.text=Reserve
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-await-quantity.text=Await
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@panel.label-ledger-account.text=Account
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-unit.name=Units
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-unit.column-unit-name.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-unit.column-rate.name=Rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-unit.column-bar-code.name=Bar code
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-price.name=Prices
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-price.column-price-type-name.name=Name
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-price.column-currency-name.name=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-price.column-unit-name.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsEdit@table-product-price.column-price.name=Price
+
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@title=Goods remainder
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.label-date.text=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@panel.label-currency-amount.text=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.name=Goods
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.column-product-name.name=Goods
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestEdit@table-product-item.column-currency-amount.name=Amount
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@title=Goods
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-goods.text=Goods
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsRestItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+####
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@title=Goods income
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-rate.text=Currency rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-amount.text=Amount of products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+
+
+##
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@title=Goods outcome
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-rate.text=Rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-tax-delivery.text=tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-currency-tax-amount.name=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeEdit@table-product-item.column-currency-amount.name=Amount
+
+
+##
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsOutcomeItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+
+
+
+
+
+
+
+
+####
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@title=Invoice
+
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-rate.text=Rate
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsIncomeItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.InvoiceItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+####
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@title=Goods move
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-outcome-storable.text=Storage outcome
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-outcome-responsible.text=responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-income-storable.text=Storage income
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-income-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@panel.label-currency-amount.text=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveEdit@table-product-item.column-currency-amount.name=Amount
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsMoveItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+####
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@title=Goods writeoff
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@panel.label-currency-amount.text=Amount
+
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffEdit@table-product-item.column-currency-amount.name=Amount
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-unit-rate.text=Unnit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.GoodsWriteoffItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+####
+
+
+####
+
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@title=Sale Order
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-rate.text=Currency rate
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-amount.text=Amount of products
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.SaleOrderItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+
+####
+
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@title=Purchase Order
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-storable.text=Storage
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-rate.text=Currency rate
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-amount.text=Amount of products
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchaseOrderItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+####
+
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@title=Tax waybill
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-rate.text=Currency rate
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-amount.text=Amount of products
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.TaxWaybillItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+####
+
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@title=Sale Plan
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-department.text=Department
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-price-type.text=Price type
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-rate.text=Currency rate
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-amount.text=Amount of products
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.SalePlanItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+
+####
+
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@title=Purchase Plan
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-code.text=Number
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-department.text=Department
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-price-type.text=Price type
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-responsible.text=Responsible
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-rate.text=Currency rate
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-rate-date.text=Rate date
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-amount.text=Amount of products
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-delivery.text=Delivery amount
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-tax-delivery.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.name=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-product-name.name=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-unit-rate.name=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+#
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@title=Products
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-goods.text=Product
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-unit-rate.text=Unit rate
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-tax-percent.text=Tax %
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.PurchasePlanItemEdit@panel.label-currency-tax-amount.text=Tax
+
+
+
+####
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkList@title=Execute work list
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkList@table.column-code.name=#
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkList@table.column-date.name=Date
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkList@table.column-partner.name=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkList@table.column-currency-amount.name=Amount in currency
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkList@table.column-amount.name=Amount
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@title=Execute work
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.title.common.text=General
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.title.note.text=Note
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-code.text=#
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-date.text=date
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-partner.text=Partner
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency.text=Currency
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-rate.text=Rate
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-rate-date.text=Date rate
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-contract.text=Contract
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-reason-documnet.text=Reason document
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-reason.text=Reason
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-tax-amount.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-total.text=Total
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-tax-total.text=Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@panel.label-currency-total-with-tax.text=Total with tax
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.name=Work/Service
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-product-name.name=Name
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-unit.name=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-unit-rate.name=K
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-quantity.name=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-currency-price.name=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-currency-amount.name=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkEdit@table-product-item.column-currency-tax-amount.name=Tax
+
+
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@title=Work/Service
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-goods.text=Name
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-unit.text=Unit
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-unit-rate.text=K
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-quantity.text=Quantity
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-currency-price.text=Price
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-tax-percent.text=% Tax
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-currency-amount.text=Amount
+org.plazmaforge.bsolution.goods.client.swing.forms.ExecWorkItemEdit@panel.label-currency-tax-amount.text=Tax

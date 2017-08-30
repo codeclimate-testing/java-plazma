@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ContactContext" class="org.plazmaforge.bsolution.contact.ContactContext" table="CONTACT_CONTEXT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactHeader" />
+        	<reference name="contactType" column="CONTACT_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactType" />                                                
+        	<reference name="addressType" column="ADDRESS_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.AddressType" />
+        	<reference name="phoneType" column="PHONE_TYPE_ID" class="org.plazmaforge.bsolution.contact.common.beans.PhoneType" />
+        </attributes>
+     </entity>
+

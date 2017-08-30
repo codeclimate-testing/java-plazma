@@ -1,0 +1,21 @@
+ANT build tasks
+==================================================================================================
+
+build                Compile main source tree java files into class files (no-jarring)
+
+clean                Clean all output dirs (classes, etc.)
+
+clean-dist           Clean dist files
+
+convert              Convert codepage of property files
+
+create-jar-all       Create all jar files
+
+create-jar-common    Create common jar file
+
+create-jar-ejb       Create EJB jar file
+
+create-jar-launcher  Create launcher jar file
+
+
+

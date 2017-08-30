@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="cache-control" content="no-cache">
+
+<meta>
+  <link href="../style.css" type=text/css rel=styleSheet>
+</meta>
+</head>
+
+<body>
+
+  <table align="center">
+
+   <tr><td><a target="_top" href="http://plazma.sourceforge.net"><img border=0 src="images/plazma_logo.jpg"/></a></td></tr>
+   <tr><td><a target="_top" href="../index.html">Home</a><br></td></tr>
+
+   <tr height="10"><td></td></tr>
+
+   <tr><td><h3>Руководство для разработчика</h3></td></tr>
+
+   <tr><td><a target="main" href="overview/index.html">Обзор</a><br></td></tr>
+
+   <tr><td><a target="main" href="terms/index.html">Терминология</a><br></td></tr>
+
+   <tr><td><a target="main" href="projects/index.html">Структура проектов</a><br></td></tr>
+
+   <tr><td><a target="main" href="develop/index.html">Разработка</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;<a target="main" href="develop/index.html">Общая информация</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;<a target="main" href="develop/java.html">Java SDK</a><br></td></tr>
+
+   <tr><td>&nbsp;&nbsp;<a target="main" href="develop/eclipse.html">Eclipse IDE</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a target="main" href="develop/eclipse.html">Установка</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a target="main" href="develop/create_project.html">Создание проекта</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a target="main" href="develop/setup_environment.html">Настройка окружения</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a target="main" href="develop/run_application.html">Запуск приложения</a><br></td></tr>
+
+   <tr><td><a target="main" href="config/index.html">Конфигурация</a><br></td></tr>
+   <tr><td><a target="main" href="config/security.html">Система безопасности</a><br></td></tr>
+   <tr><td><a target="main" href="../adm-guide/database/index.html">База данных</a><br></td></tr>
+
+   <tr><td>&nbsp;&nbsp;<a target="main" href="database/system_entity.html">Список таблиц</a><br></td></tr>
+   <tr><td>&nbsp;&nbsp;<a target="main" href="database/db_structure.html">Структура базы данных</a><br></td></tr>
+
+   <tr><td><a target="main" href="../adm-guide/appserver/index.html">Сервер приложений</a><br></td></tr>
+
+   <tr><td><a target="main" href="build/index.html">Сборка проектов</a><br></td></tr>
+
+   <tr height="10"><td></td></tr>
+
+
+  </table>
+
+
+</body>
+
+</html>

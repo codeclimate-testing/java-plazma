@@ -1,0 +1,11 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="PeriodEditForm" type="EditForm" title="@{PeriodEditForm.title}">
+		<content layout="GridLayout(columnCount=4)">
+			<children>
+				<label text="@{PeriodEditForm.startDateLabel.text}"/><date-field property="startDate"/>
+				<label text="@{PeriodEditForm.endDateLabel.text}"/><date-field property="endDate"/>
+				<label text="@{PeriodEditForm.nameLabel.text}"/><text-field property="name" width="200" layout-data="GridData(columnSpan=3; horizontalAlign=fill)"/>
+			</children>
+		</content>
+	</form>
+</ui>

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DocumentStatus" class="org.plazmaforge.bs.document.shared.entities.DocumentStatus" table="DOCUMENT_STATUS">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />
+        	<reference name="documentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bs.document.shared.entities.DocumentType"/>         
+        </attributes>        
+    </entity>
+

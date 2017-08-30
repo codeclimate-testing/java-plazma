@@ -1,0 +1,150 @@
+
+<html>
+<title>Draft</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Сервер приложений</h2>
+   <hr>
+   <br><br>
+
+   Для работы системы может быть использован сервер приложений. 
+   Более детальную информацию по настройке сервера смотрите в документации на сайте разработчика. 
+   Для создания серверной части приложения используется <b>Apache Ant</b>.
+   Инсталляцию и необходимую документацию Вы можете загрузить из сайта <a targen="_blank" href="http://ant.apache.org">http://ant.apache.org</a>  
+
+
+
+
+
+   <br><br><br><br>
+   <h3><font color="blue">Сервер:</font></h3>
+
+
+   <h3 align="center">Создание Plazma сервера</h3>
+
+   <ul>
+    <li> В файле <code>build.properties</code> измените следующие значения (если в этом есть необходимость):
+<code><pre>
+    pack.path = C:/
+    server.dir = ${pack.path}plazma-server-${version}
+</pre></code>
+
+    <code>pack.path</code> - корневая папака для пакетов<br>
+    <code>server.dir</code> - это папка куда будет установлена серверная часть
+    <br><br>
+    <li>Запустите <code>ant task create-pack-server-ear</code>.
+    <br>Исходя из вышеуказанных значений <b>Plazma</b> сервер будет установлен в папку <code>C:/plazma-server-0.1.3</code>, где <code>0.1.3</code> - текущая версия продукта
+   </ul>
+
+
+
+   <br><br>
+   <h3 align="center">Настройка Plazma сервера</h3>
+   <ul>
+    <li>Измените файл <code>&lt;PlazmaServer&gt;/conf/jdbc.properties</code>. В данном файле необходимо установить настройки для реальной базы данных.
+
+
+    <p> <b>Например для Firebird</b>
+<code><pre>
+# Установка свойств подключения к базе данных Firebird
+jdbc.driverClassName=org.firebirdsql.jdbc.FBDriver
+jdbc.url=jdbc:firebirdsql:localhost/3050:C:\\DATA\\plazma.gdb
+jdbc.username=sysdba
+jdbc.password=masterkey
+</pre></code>
+   </ul>
+
+
+
+
+   <br><br>
+   <h3 align="center">Развёртывание (Deploy)</h3>
+   <ul>
+    <li>Полный путь к <b>Plazma EAR</b> файлу: <code>&lt;PlazmaServer&gt;/dist/plazma-bsolution-&lt;version&gt;.ear</code>
+    <li>Пользуясь инструментами сервера приложение произведите деплой вышеуказаного файла.
+    <br>Детальную информацию по развёртыванию смотрите в документации сервера приложений.
+    <br><br><b>Например для JBoss</b> (конфигурация default):
+    <br>Необходимо скопировать вышеуказанный файл в папку <code>&lt;JBoss&gt;/server/default/deploy</code>.
+   </ul>
+
+
+
+   <br><br>
+   <h3 align="center">Установка системного свойства plazma.platform.dir</h3>
+
+   Значение <code>plazma.platform.dir</code> указывает на путь к <b>Plazma</b> серверу.
+   <p>Данное свойство Вы можете установить как параметер при запуске сервера приложения.
+   <br>
+   <p><b>Например</b>
+<code><pre>
+ &gt; java ... -Dplazma.platform.dir=c:\plazma-server
+</pre></code>
+   <br>
+   или в папке откуда запускается сервер приложения создать файл системных свойств <code>plazma.properties</code>, который содержит значение <code>plazma.platform.dir</code>
+   <p><b>Например</b>
+<code><pre>
+plazma.platform.dir=c:\plazma-server
+</pre></code>
+
+   <p><b>Для JBoss</b> полный путь к файлу свойств:
+   <code>&lt;JBoss&gt;/bin/plazma.properties</code>.
+
+
+
+   <br><br><br><br>
+   <h3><font color="blue">Клиент:</font><br></h3>
+
+
+
+   <h3 align="center">Установка CLASSPATH на клиенте</h3>
+    Необходимо произвести следующие изменения <b>CLASSPATH</b>:
+    <ul>
+     <li>Удалить строку <code>plazma-bsolution-&lt;version&gt;.jar</code>
+     <li>Добавить строку <code>plazma-bsolution-client-&lt;version&gt;.jar</code>
+     <li>Добавить список jar файлов сервера приложений необходимых для клиента. Для получения детальной информации используйте документацию по серверу прирложений 
+
+     <br><br><b>Для JBoss</b>
+     <br> Файлы для клиента размещены в папке <code>&lt;JBoss&gt;/client</code>.
+    </ul>
+ 
+    Если Вы используете <code>launcher.jar</code> файл для запуска клиента, то необходимо изменить значение свойства Class-Path в файле манифеста 
+    <code>&lt;Plazma&gt;/build/client-manifest.mf</code> и пересоздать <code>launcher.jar</code> файл (запуск <code>client_launcher.bat или client_launcher.sh</code>). 
+    Далее необходимо скопировать <code>launcher.jar</code> файл из папки <code>&lt;Plazma&gt;/build</code> в корневую папку <code>&lt;Plazma&gt;</code>.
+ 
+   <br><br><br><br>
+
+   <h3 align="center">Настройка системной конфигурации клиента</h3>
+
+
+    <ul>
+     <li>Скопируйте из папки <code>&lt;Plazma&gt;/conf/client</code> в папку <code>&lt;Plazma&gt;/conf</code> следующие файлы:<br>
+         <br>
+         <code>&lt;Plazma&gt;/conf/client/system-config.xml</code>
+         <br><br>
+   <li>Отредактируйте файл jndi.properties в зависимости от сервера приложения
+
+   <p><b>Например для JBoss</b>
+
+<code><pre>
+java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
+java.naming.provider.url=localhost
+java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
+</pre></code>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+
+
+<!ELEMENT form-config (form*)>
+
+<!ELEMENT form (actions?, reports?)>
+
+<!ATTLIST form
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+        name CDATA #IMPLIED
+>
+
+<!ELEMENT actions (action+)>
+
+<!ELEMENT action EMPTY>
+
+<!ATTLIST action
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+>
+
+<!ELEMENT reports (report+)>
+
+<!ELEMENT report EMPTY>
+
+<!ATTLIST report
+        id  ID #IMPLIED
+        code NMTOKEN #IMPLIED
+>
+

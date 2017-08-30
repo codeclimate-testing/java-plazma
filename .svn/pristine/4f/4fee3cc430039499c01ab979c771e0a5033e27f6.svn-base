@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+
+   <!-- HelloPlazma -->    
+   <action id="HelloListForm" command="OPEN_LIST_FORM" parameters="helloplazma/HelloListForm"/>                    
+   
+</actions>

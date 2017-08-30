@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Tax" class="org.plazmaforge.bsolution.base.common.beans.Tax" table="TAX">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" required="true"/>
+        	<attribute name="name" column="NAME" type="String" required="true" />
+        	<attribute name="taxPercent" column="TAX_PERCENT" type="Float" />
+        	<attribute name="amount" column="AMOUNT" type="Float" />        
+        </attributes>
+    </entity>
+

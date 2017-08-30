@@ -1,0 +1,8 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PaymentMissing" class="org.plazmaforge.bsolution.bank.common.beans.PaymentMissing" table="PAYMENT_MISSING">
+        <attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="name" column="MISSING" type="String"/>
+        </attributes>
+    </entity>
+

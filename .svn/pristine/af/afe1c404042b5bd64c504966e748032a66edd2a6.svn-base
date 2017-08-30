@@ -1,0 +1,14 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="TaskContext" class="org.plazmaforge.bsolution.project.TaskContext" table="TASK_CONTEXT">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="project" column="PROJECT_ID" class="org.plazmaforge.bsolution.project.common.beans.ProjectHeader" />
+        	<reference name="partner" column="PARTNER_ID" class="org.plazmaforge.bsolution.partner.common.beans.PartnerTitle" />
+        	<reference name="responsible" column="RESPONSIBLE_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />
+        	<reference name="taskPriority" column="TASK_PRIORITY_ID" class="org.plazmaforge.bsolution.project.common.beans.TaskPriority" />                
+        	<reference name="taskStatus" column="TASK_STATUS_ID" class="org.plazmaforge.bsolution.project.common.beans.TaskStatus" />
+        	<reference name="taskType" column="TASK_TYPE_ID" class="org.plazmaforge.bsolution.project.common.beans.TaskType" />                         
+        	<reference name="taskResult" column="TASK_RESULT_ID" class="org.plazmaforge.bsolution.project.common.beans.TaskResult" />
+        </attributes>
+     </entity>
+

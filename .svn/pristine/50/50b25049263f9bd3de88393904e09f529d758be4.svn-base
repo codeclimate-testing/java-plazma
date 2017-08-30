@@ -1,0 +1,603 @@
+
+<html>
+<title>Сборка проектов</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Сборка проектов</h2>
+   <hr>
+   <br><br>
+
+   <p><b>Plazma System</b> состоит из двух частей:
+   <ul>
+     <li><b>Plazma Framework</b>
+     <li><b>Plazma Business Solution</b>
+   </ul>
+
+   <p>Каждая часть представлена своими проектами.
+
+   <p>Для каждого проекта происходит отдельный процесс сборки. 
+
+   <p>Для сборки проекта используется <b>Apache Ant</b>. Инсталляцию и необходимую документацию Вы 
+   можете загрузить из сайта <a targen="_blank" href="http://ant.apache.org">http://ant.apache.org</a> 
+
+   <p>В корневой папке каждого проекта находятся два файла:
+<pre><code>
+  build.properties - файл свойств
+  build.xml - файл выполняемых задач (task)
+</pre></code>
+
+  <p>Детальнее получить информацию о task'ах фреймворка Ant можно из документации на сайте разработчика.
+
+  <p>Для запуска задач необходимо в корневой папке проекта выполнить следующую команду:
+<pre><code>
+  ant &lt;task-name&gt;
+</pre></code>
+  где &lt;task-name&gt; название задачи, например:
+<pre><code>
+  ant build
+</pre></code>
+
+  <br>
+  <p>Список задач для проекта <b>framework</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+       <td>Компиляция проекта</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Очистка результирующих папок (classes и т.д.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Очистка папки dist</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>convert</b></td>
+       <td>Конвертация файлов свойств (.properties) из текущей кодовой страницы (например cp1251) в юникод</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Создание всех jar файлов</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-common</b></td>
+       <td>Создание jar файла для общей части</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-launcher</b></td>
+       <td>Создание launcher jar файла</td>  
+     </tr>
+
+   </table>
+
+
+
+
+
+
+<br><br><br>
+  <p>Список задач для проекта <b>framework.client</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+       <td>Компиляция проекта</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Очистка результирующих папок (classes и т.д.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Очистка папки dist</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Создание всех jar файлов</td>  
+     </tr>
+
+     
+   </table>
+
+
+<br><br><br>
+  <p>Список задач для проекта <b>framework.client.swt</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+       <td>Компиляция проекта</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Очистка результирующих папок (classes и т.д.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Очистка папки dist</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Создание всех jar файлов</td>  
+     </tr>
+
+     
+   </table>
+
+
+<br><br><br>
+  <p>Список задач для проекта <b>framework.client.swing</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+       <td>Компиляция проекта</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Очистка результирующих папок (classes и т.д.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Очистка папки dist</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Создание всех jar файлов</td>  
+     </tr>
+
+     
+   </table>
+
+
+   <br><br><br>
+  <p>Список задач для проекта <b>bs.base</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+
+     <tr>
+       <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+       <td>Компиляция проекта</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean</b></td>
+       <td>Очистка результирующих папок (classes и т.д.)</td>  
+     </tr>
+
+     <tr>
+       <td><b>clean-dist</b></td>
+       <td>Очистка папки dist (без plazma-framework-*.jar)</td>  
+     </tr>
+
+     <tr>
+       <td>clean-pack-server</td>
+       <td>Очистка пакета сервер</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-jar-all</b></td>
+       <td>Создание всех jar файлов</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-common</b></td>
+       <td>Создание jar файла для общей части</td>  
+     </tr>
+
+     <tr>
+       <td><b>create-jar-server</b></td>
+       <td>Создание jar файла для сервера</td>  
+     </tr>
+
+
+
+
+     <tr>
+       <td><b>create-pack-install-server-lite</b></td>
+       <td>Создание пакета инсталляция Lite сервера</td>  
+     </tr>
+
+
+
+
+     <tr>
+       <td>create-pack-server-common</td>
+       <td>Создание общего пакета сервер</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>create-pack-server-lite</b></td>
+       <td>Создание пакета Lite сервер</td>  
+     </tr>
+
+   </table>
+
+
+
+
+
+
+
+  <br><br><br>
+  <p>Список задач для проекта <b>bs.base.client.swt</b> 
+  <br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+
+
+     <tr>
+      <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+      <td>Компиляция проекта (без создания jar файлов)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean</b></td>
+      <td>Очистка результирующих папок (classes и т.д.)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean-dist</b></td>
+      <td>Очистка папки dist</td>
+     </tr>
+
+
+     <tr>
+      <td>clean-pack-client</td>
+      <td>Очистка пакета клиент</td> 
+     </tr>
+
+     <tr>
+      <td>clean-pack-standalone</td>
+      <td>Очистка пакета standalone</td>
+     </tr>
+
+
+     <tr>
+      <td>clean-pack-standalone-demo</td>
+      <td>Очистка пакета standalone demo</td> 
+     </tr>
+
+
+     <tr>
+      <td><b>create-jar-all</b></td>
+      <td>Создание всех jar файлов</td> 
+     </tr>
+
+     <tr>
+      <td><b>create-jar-client</b></td>
+      <td>Создание jar файла для клиента</td> 
+     </tr>
+
+     <tr>
+      <td>create-pack-client-common</td>
+      <td>Создание общего пакета клиент</td>
+     </tr>
+
+
+     <tr>
+      <td>create-pack-client-lite</td>
+      <td>Создание пакета Lite клиент</td>
+     </tr>
+
+
+
+
+     <tr>
+      <td>create-pack-install-client-lite</td>
+      <td>Создание пакета инсталляция Lite клиента</td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-client-lite-linux-gtk</b></td>
+      <td>Создание пакета инсталляция Lite клиента для Linux GTK</b></td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-client-lite-win32</b></td>
+      <td>Создание пакета инсталляция Lite клиента для Win32</b></td>
+     </tr>
+
+
+
+
+
+     <tr>
+      <td>create-pack-install-standalone</td>
+      <td>Создание пакета standalone инсталляция </td>
+     </tr>
+
+     <tr>
+      <td>create-pack-install-standalone-demo</td>
+      <td>Создание пакета standalone demo инсталляция</td>
+     </tr>
+
+
+
+     <tr>
+      <td><b>create-pack-install-standalone-linux-gtk</b></td>
+      <td>Создание пакета standalone инсталляция  для Linux GTK</b></td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-standalone-linux-gtk-demo</b></td>
+      <td>Создание пакета standalone demo инсталляция для Linux GTK</b></td>
+     </tr>
+
+
+
+
+     <tr>
+      <td><b>create-pack-install-standalone-win32</b></td>
+      <td>Создание пакета standalone инсталляция  для Win32</b></td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-standalone-win32-demo</b></td>
+      <td>Создание пакета standalone demo инсталляция для Win32</b></td>
+     </tr>
+
+
+   </table>
+
+
+
+
+
+
+  <br><br><br>
+  <p>Список задач для проекта <b>bs.base.client.swing</b> 
+  <br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+
+
+     <tr>
+      <td><b><font color="blue">build</font></b> (по умолчанию)</td>
+      <td>Компиляция проекта (без создания jar файлов)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean</b></td>
+      <td>Очистка результирующих папок (classes и т.д.)</td>
+     </tr>
+
+     <tr>
+      <td><b>clean-dist</b></td>
+      <td>Очистка папки dist</td>
+     </tr>
+
+
+     <tr>
+      <td>clean-pack-client</td>
+      <td>Очистка пакета клиент</td> 
+     </tr>
+
+     <tr>
+      <td><b>clean-pack-install-standalone</b></td>
+      <td>Очистка пакета инсталляция standalone</td>
+     </tr>
+
+
+     <tr>
+      <td><b>clean-pack-install-standalone-demo</b></td>
+      <td>Очистка пакета standalone demo инсталляция</td> 
+     </tr>
+
+
+     <tr>
+      <td><b>convert</b></td>
+      <td>Конвертация файлов свойств (.properties) из текущей кодовой страницы (например cp1251) в юникод</td> 
+     </tr>
+
+     <tr>
+      <td><b>create-jar-all</b></td>
+      <td>Создание всех jar файлов</td> 
+     </tr>
+
+     <tr>
+      <td><b>create-jar-client</b></td>
+      <td>Создание jar файла для клиента</td> 
+     </tr>
+
+     <tr>
+      <td>create-pack-client-common</td>
+      <td>Создание общего пакета клиент</td>
+     </tr>
+
+     <tr>
+      <td>create-pack-client-lite</td>
+      <td>Создание пакета Lite клиент</td>
+     </tr>
+
+
+     <tr>
+      <td><b>create-pack-install-client-lite</b></td>
+      <td>Создание пакета инсталляция Lite клиента</td>
+     </tr>
+
+
+
+     <tr>
+      <td><b>create-pack-install-standalone</b></td>
+      <td>Создание пакета standalone инсталляция </td>
+     </tr>
+
+     <tr>
+      <td><b>create-pack-install-standalone-demo</b></td>
+      <td>Создание пакета standalone demo инсталляция</td>
+     </tr>
+
+
+   </table>
+     
+
+<br><br><br>
+  <p>Список задач для проекта <b>bs.base.configuration</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">convert</font></b> (по умолчанию)</td>
+       <td>Конвертация файлов свойств (.properties) из текущей кодовой страницы (например cp1251) в юникод</td>  
+     </tr>
+
+   
+   </table>
+
+
+<br><br><br>
+  <p>Список задач для проекта <b>bs.base.db</b>
+<br><br>
+
+   <table border="1" cellpadding="5" width="100%">
+
+     <tr>
+       <td width="300"><b>Название</b></td>
+       <td><b>Описание</b></td>  
+     </tr>
+
+     <tr>
+       <td>clean-script-result</td>
+       <td>Очистка папки с результирующими SQL скриптами</td>  
+     </tr>
+
+
+     <tr>
+       <td><b>script-create-db</b></td>
+       <td>Генерация SQL скрипта для создания структуры базы данных (tables, sequences, constraints, views)</td>  
+     </tr>
+
+     <tr>
+       <td>script-create-view</td>
+       <td>Генерация SQL скрипта для создания вьюверов (views) в базе данных</td>  
+     </tr>
+
+     <tr>
+       <td>script-init-db</td>
+       <td>Генерация SQL скрипта для заполнения базы данных инициализирующей информацией</td>  
+     </tr>
+
+
+
+
+     <tr>
+       <td>script-populate-db</td>
+       <td>Генерация SQL скрипта для заполнения базы данных стартовой информацией (не обязательно)</td>  
+     </tr>
+
+     <tr>
+       <td><b><font color="blue">script-result-all-dbs</font></b> (по умолчанию)</td>
+       <td>Генерация результирующих SQL скриптов для создания баз данных (рабочая база и демо база)</td>  
+     </tr>
+
+     <tr>
+       <td><b>script-result-db</td>  
+       <td>Генерация результирующего SQL скрипта для создания базы данных</td>
+     </tr>
+
+     <tr>
+       <td><b>script-result-db-demo</b></td>  
+       <td>Генерация результирующего SQL скрипта для создания демо базы данных</td>
+     </tr>
+
+   
+   </table>
+
+
+           
+
+             
+
+
+
+</body>
+</html>
+
+

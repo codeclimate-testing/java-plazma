@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-base-configuration">
+
+    <property file="build.properties"/>
+	
+	<!--
+    <target name="convert" description="Convert codepage of property files">
+    	<native2ascii src="${conf.dir}" dest="${conf.dir}" includes="**/*.${codepage}" ext=".properties"/>
+    </target>
+    -->
+	
+</project>	

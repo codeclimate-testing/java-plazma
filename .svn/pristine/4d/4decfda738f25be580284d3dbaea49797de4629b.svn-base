@@ -1,0 +1,10 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="StreetTypeEditForm" type="EditForm" title="@{StreetTypeEditForm.title}">
+		<content layout="GridLayout(columnCount=2)">
+			<children>
+				<label text="@{StreetTypeEditForm.nameLabel.text}"/><text-field property="name" width="200"/>
+				<label text="@{StreetTypeEditForm.fullNameLabel.text}"/><text-field property="fullName" width="200"/>
+			</children>
+		</content>
+	</form>
+</ui>

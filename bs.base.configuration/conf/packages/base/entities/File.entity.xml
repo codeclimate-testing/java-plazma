@@ -1,0 +1,14 @@
+
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="File" class="org.plazmaforge.framework.ext.model.File" table="SYS_FILE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="entity" column="ENTITY_ID" class="org.plazmaforge.framework.config.object.EntityConfig" required="true"/>
+        	<attribute name="ownerId" column="OWNER_ID" type="Integer" />
+        	<attribute name="fileName" column="FILE_NAME" type="String" />
+        	<attribute name="name" column="NAME" type="String" />
+        	<attribute name="description" column="DESCRIPTION" type="String" />        
+    	</attributes>
+    </entity>
+
+

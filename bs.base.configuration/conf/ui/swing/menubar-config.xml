@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menubar-config>
+
+<interface id="All">
+
+    <menubar>
+    
+        <!--  File menu -->
+        <menu id="File" text="">
+            <menuitem action="ExitAction" />
+        </menu>
+
+        <!--  Dictionaries menu -->
+        <menu id="Dictionaries" text="">
+           <menuitem action="NewDictionary"/>            
+           <menuitem action="ChooseDictionary"/>            
+           <menuitem text="-"/>                
+        
+            <!--  MyOrganization submenu -->
+            <menu id="Dictionaries.MyOrganization" text="">
+                <menuitem action="OrganizationEdit"/>
+                <menuitem text="-"/>
+                <menuitem action="EmployeeList"/>
+                <menuitem text="-"/>
+                <menuitem action="DepartmentList"/>
+                <menuitem action="StoreList"/>
+                <menuitem action="ResponsibleList"/>
+                <menuitem text="-"/>
+                <menuitem action="WarehouseList"/>
+            </menu>
+            
+            <menuitem text="-"/>
+            <menuitem action="PersonList"/>
+            <menuitem text="-"/>
+            <menuitem action="PartnerList"/>
+            <menuitem text="-"/>
+            <menuitem action="BankList"/>
+            <menuitem text="-"/>
+            <menuitem action="UnitList"/>
+            <menuitem action="CurrencyList"/>
+            <menuitem text="-"/>
+            <menuitem action="GoodsList"/>
+            <menuitem text="-"/>
+
+            <!--  Finance submenu -->
+            <menu id="Dictionaries.Finance" text="">
+                <menuitem action="ContractorList"/>
+                <menuitem text="-"/>
+                <menuitem action="FinanceDocumentTypeList"/>
+            </menu>
+            
+            <!--  Human Resources submenu -->
+            <menu id="Dictionaries.HumanResources" text="">
+                <menuitem action="PositionList"/>
+                <menuitem text="-"/>
+                <menuitem action="EducationInstituteList"/>
+                <menuitem action="AcademicDegreeList"/>
+            </menu>
+            
+            <!--  Payroll submenu -->
+            <menu id="Dictionaries.Payroll" text="">
+                <menuitem action="PayrollList"/>
+            </menu>
+
+            <!--  Accounting submenu -->
+            <menu id="Dictionaries.Accounting" text="">
+                <menuitem action="LedgerAccountTypeList"/>
+                <menuitem action="LedgerAccountList"/>
+                <menuitem text="-"/>
+                <menuitem action="TemplateEntryList"/>
+            </menu>
+
+
+            <!--  Classification submenu -->
+            <menu id="Classification" text="">
+                <menu id="Classification.Types" text="">
+                    <menuitem action="LocalityTypeList" />
+                    <menuitem action="AddressTypeList" />
+                    <menuitem action="PhoneTypeList" />
+                    <menuitem action="StreetTypeList" />
+                    <menuitem text="-"/>
+                    <menuitem action="ContactTypeList" />            
+                </menu>
+                <menu id="Classification.Groups" text="">
+                   <menuitem action="PartnerGroupList"/>
+                </menu>
+                <menu id="Classification.Categories" text="">
+                   <menuitem action="PartnerCategoryList"/>
+                </menu>
+                <menu id="Classification.HumanResources" text="">
+                   <menuitem action="FamilyStatusList"/>
+                   <menuitem action="SpecialityList"/>
+                   <menuitem action="PersonDocumentTypeList"/>
+                   <menuitem text="-"/>
+                   <menuitem action="EducationTypeList"/>
+                   <menuitem action="EducationFormList"/>
+                   <menuitem action="FamiliarityList"/>
+                   <menuitem text="-"/>
+                   <menuitem action="EmployeeCategoryList"/>
+                   <menuitem action="EmployeeRankList"/>
+                   <menuitem action="PayrollFormList"/>
+                </menu>
+                <menu id="Classification.Military" text="">
+                   <menuitem action="MilitaryRankList"/>
+                   <menuitem action="MilitaryStatusList"/>
+                   <menuitem action="MilitarySpecialityList"/>
+                </menu>
+                <menuitem text="-"/>
+                <menuitem action="LanguageList"/>
+                <menuitem text="-"/>
+                <menuitem action="IndustryList" />
+                <menuitem action="ActivityTypeList" />                
+        
+            </menu>
+            <menuitem text="-"/>            
+            <menuitem action="DocumentTypeList"/>                                                
+            <menuitem text="-"/>                        
+            <menuitem action="TaxList"/>
+
+
+
+        </menu>
+
+        <!-- Contacts menu -->
+        <menu id="Contacts" text="">
+            <menuitem action="CountryList"/>
+            <menuitem action="RegionList"/>
+            <menuitem action="CityList"/>
+            <menuitem text="-"/>
+            <menuitem action="LocalityList"/>
+            <menuitem text="-"/>            
+            <menuitem action="ContactList"/>            
+        </menu>
+
+        <!--  Documents menu -->
+        <menu id="Documents" text="">
+            <menuitem action="NewDocument"/>            
+            <menuitem action="ChooseDocument"/>            
+            <menuitem text="-"/>                
+        
+            <menuitem action="DocumentList"/>
+            <menuitem text="-"/>
+            <menuitem action="ContractList"/>
+            <menuitem text="-"/>
+            <menu id="Documents.Sale" text="">
+                <menuitem action="SalePlanList"/>
+                <menuitem text="-"/>
+                <menuitem action="SaleOrderList"/>
+                <menuitem text="-"/>
+                <menuitem action="GoodsOutcomeList"/>
+                <menuitem action="TaxWaybillList"/>                
+                <menuitem text="-"/>
+                <menuitem action="InvoiceList"/>
+                <menuitem text="-"/>                
+                <menuitem action="ExecWorkList"/>                
+            </menu>
+            <menu id="Documents.Purchase" text="">
+                <menuitem action="PurchasePlanList"/>
+                <menuitem text="-"/>
+                <menuitem action="PurchaseOrderList"/>
+                <menuitem text="-"/>
+                <menuitem action="GoodsIncomeList"/>
+            </menu>
+            <menu id="Documents.Storage" text="">
+                <menuitem action="GoodsMoveList"/>
+                <menuitem action="GoodsWriteoffList"/>
+            </menu>
+            <menu id="Documents.Bank" text="">
+                <menuitem action="PaymentIncomeList"/>
+                <menuitem action="PaymentOutcomeList"/>
+                <menuitem text="-"/>                
+                <menuitem action="PaymentList"/>                
+            </menu>
+            <menu id="Documents.Cash" text="">
+                <menuitem action="CashIncomeList"/>
+                <menuitem action="CashOutcomeList"/>
+            </menu>            
+            <menu id="Documents.HumanResources" text="">
+                <menuitem action="EmployeeReceptionList"/>
+                <menuitem action="EmployeeDischargeList"/>
+            </menu>
+            <menu id="Documents.Payroll" text="">
+                <menuitem action="InputWorktimeList"/>
+                <menuitem action="InputPayrollList"/>
+                <menuitem text="-"/>
+                <menuitem action="EmployeeLeaveList"/>
+                <menuitem action="EmployeeSicklistList"/>
+                <menuitem text="-"/>
+                <menuitem action="PayrollCalculateAction"/>
+            </menu>
+
+        </menu>
+
+        <!--  Project management menu -->
+        <menu id="Projects" text="">
+            <menuitem action="ProjectList"/>                     
+            <menuitem text="-"/>             
+            <menuitem action="ProjectTypeList"/>
+            <menuitem action="ProjectStageList"/>         
+            <menuitem action="ProjectStageGroupList"/>
+            <menuitem action="ProjectStateList"/>         
+        </menu>
+        
+        <!--  Task management menu -->
+        <menu id="Tasks" text="">
+            <menuitem action="TaskList"/>                     
+            <menuitem text="-"/>         
+            <menuitem action="TaskStateList"/>         
+            <menuitem action="TaskTypeList"/>
+            <menuitem action="TaskPriorityList"/>            
+            <menuitem action="TaskResultList"/>                     
+            <menuitem action="TaskRoleList"/>            
+        </menu>
+        
+
+        <!--  Reports menu -->
+        <menu id="Reports" text="">
+            <menuitem action="ReportList"/>
+      	    <menuitem text="-"/>                                 
+            <menu id="Reports.Sale" text="">
+	            <menuitem action="SalePlanReport"/>
+    	        <menuitem text="-"/>	            
+    	        <menuitem action="GoodsSaleReport"/>
+    	        <menuitem action="CrosstabGoodsSale"/>    	        
+        	    <menuitem action="GoodsSaleMonthProductReport"/>
+            	<menuitem action="GoodsSaleMonthDiagramReport"/>
+    	        <menuitem text="-"/>
+            	<menuitem action="PriceListReport"/>    	        
+    	        <menuitem text="-"/>
+            	<menuitem action="ExecWorkByPartner"/>    	        
+            	<menuitem action="ExecWorkListReport"/>    	                    	
+            </menu>
+            <menu id="Reports.Purchase" text="">
+                <menuitem action="PurchasePlanReport"/>
+    	        <menuitem text="-"/>                
+    	        <menuitem action="CrosstabGoodsPurchase"/>
+            </menu>
+            <menu id="Reports.Storage" text="">
+	            <menuitem action="GoodsIncomeByDocumentReport"/>            
+    	        <menuitem text="-"/>
+        	    <menuitem action="GoodsOutcomeByDocumentReport"/>
+	            <menuitem text="-"/>
+    	        <menuitem action="GoodsRotateReport"/>
+            </menu>
+            <menu id="Reports.Balance" text="">
+	            <menuitem action="GoodsRestStartReport"/>
+    	        <!-- <menuitem action="WarehouseGoodsRestStartReport"/> -->
+        	    <menuitem text="-"/>
+            	<menuitem action="PartnerRestStartReport"/>
+            </menu>
+            <menu id="Reports.Bank" text="">
+            	<menuitem action="JournalPaymentByBankAccount"/>            	
+            	<menuitem action="JournalPaymentByPartner"/>            	            	
+        	    <menuitem text="-"/>            	
+            	<menuitem action="PaymentIncomeByPartner"/>            	            	            	
+            	<menuitem action="PaymentOutcomeByPartner"/>            	            	            	            	
+            </menu>
+            <menu id="Reports.HumanResources" text="">            
+	            <menuitem action="EmployeeListReport"/>            
+            </menu>            
+            <menu id="Reports.Payroll" text="">
+                <menuitem action="PersonPayReport"/>
+                <menuitem action="PayrollListReport"/>                
+                <menuitem action="CrosstabPayrollTotal"/>                                
+            </menu>
+            <menu id="Reports.Accounting" text="">
+                <menuitem action="CrosstabLedgerAccountRotate"/>
+            </menu>
+            <menu id="Reports.Project" text="">
+                <menuitem action="CrosstabProject"/>                        
+           	    <menuitem text="-"/>
+                <menuitem action="ProjectStateReport"/>            
+                <menuitem action="ProjectStateByPartnerReport"/>            
+                <menuitem action="ProjectStateByManagerReport"/>                            
+            </menu>
+            <menuitem action="PartnerContactBookReport"/>   
+        </menu>
+
+
+        <!--  Period management menu -->
+        <menu id="Period" text="">
+            <menuitem action="PeriodList"/>
+            <menuitem text="-"/>
+            <menu id="Period.Rests" text="">
+                <menuitem action="PartnerRestList"/>
+                <menuitem action="GoodsRestList"/>
+                <menuitem action="LedgerAccountRestList"/>                
+            </menu>
+            <!-- <menuitem action="ChoosePeriodAction"/> -->
+            <!-- <menuitem action="RegisterPeriodAction"/> -->
+            <menuitem action="EntryCalculateAction"/>            
+        </menu>
+
+
+        <!-- Service menu -->
+        <menu id="Service" text="">
+            <menuitem action="PreferencesAction"/>
+            <menuitem text="-"/>
+            <menuitem action="SystemInfoEdit"/>
+            <menuitem action="SystemVariableList"/>
+            <menuitem action="SystemEntityList"/>
+            <menuitem text="-"/>
+            <menuitem action="OrganizationList"/>
+            <menuitem text="-"/>
+            <menuitem action="UserList"/>
+            <menuitem action="RoleList"/>
+            <menuitem text="-"/>            
+            <menuitem action="PermissionList"/>            
+        </menu>
+
+        <!--  Windows menu -->
+        <menu id="Window" text="">
+            <menuitem action="TitleWindowsAction"/>
+            <menuitem action="TitleVerticalWindowsAction"/>
+            <menuitem action="TitleHorizontalWindowsAction"/>
+            <menuitem action="CascadeWindowsAction"/>
+            <menuitem action="MaximizeWindowsAction"/>
+            <menuitem text="-"/>
+            <menuitem action="ChooseWindowsAction"/>
+            <menuitem text="-"/>
+            <menuitem action="CloseWindowsAction"/>
+        </menu>
+
+        <!-- Help menu -->
+        <menu id="Help" text="">
+           <menuitem action="AboutAction"/>
+        </menu>
+</menubar>
+
+</interface>
+</menubar-config>

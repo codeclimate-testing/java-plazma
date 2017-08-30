@@ -1,0 +1,33 @@
+
+    <subclass-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductDocument" class="org.plazmaforge.bsolution.product.common.beans.ProductDocument" extends-class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+ 		<aliases>
+    		<alias name="warehouseName" attribute="warehouse.name"/>
+    		<alias name="priceTypeName" attribute="priceType.name"/>
+    	</aliases>  
+		<triggers>
+     		<trigger name="preSave" type="BeforeSave">
+    			<script>
+    				CALL productManager->preSave(:data);
+    			</script>
+    		</trigger>
+      		<trigger name="preDelete" type="BeforeDelete">
+    			<script>
+    				CALL productManager->preDelete(:data);
+    			</script>
+    		</trigger>
+     		<trigger name="postSave" type="AfterSave">
+    			<script>
+    				CALL productManager->postSave(:data);
+    			</script>
+    		</trigger>
+     		<trigger name="postDelete" type="AfterDelete">
+    			<script>
+    				CALL productManager->postDelete(:data);
+    			</script>
+    		</trigger>
+    	</triggers>            	
+    </subclass-entity>
+

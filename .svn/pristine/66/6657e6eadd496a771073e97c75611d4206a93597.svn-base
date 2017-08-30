@@ -1,0 +1,14 @@
+<entity-mapping>
+    <entity class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerConsumablesPrice" table="CAR_INSURER_CONSUMABLES_PRICE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="carClass" column="CAR_CLASS_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarClass"/>
+        	<reference name="carPaintDetailType" column="CAR_PAINT_DETAIL_TYPE_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarPaintDetailType"/>
+        	<reference name="carDamageLevel" column="CAR_DAMAGE_LEVEL_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarDamageLevel"/>
+        	<attribute name="price" column="PRICE" type="Float" />        
+        	<attribute name="percent" column="PERCENT" type="Float" />    
+        	<attribute name="valueType" column="VALUE_TYPE" type="Integer" />
+        	<reference name="contractVariant" column="CONTRACT_VARIANT_ID" class="org.plazmaforge.bsolution.carservice.common.beans.CarInsurerContractVariant"  required="true" />
+        </attributes>
+    </entity>
+</entity-mapping>

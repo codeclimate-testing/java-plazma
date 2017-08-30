@@ -1,0 +1,260 @@
+<html>
+<title>Список таблиц</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+
+   <h2 align="center">Список таблиц</h2>
+   <hr>
+   <br><br>
+
+
+<table  cellpadding="5">
+
+<tr><td><b>#</b></td><td><b>Код</b></td><td><b>Название</b></td><td width="150"><b>Тип</b></td><td width="150"><b>Пакет</b></td> </tr>
+
+
+
+<tr><td>1</td><td>ACADEMIC_DEGREE</td><td>Учёная степень</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>2</td><td>ACTIVITY_TYPE</td><td>Тип активности компаний</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>3</td><td>ADDRESS</td><td>Адрес</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>4</td><td>ADDRESS_TYPE</td><td>Тип адреса</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>5</td><td>APARTMENT_TYPE</td><td>Тип апартаментов</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>6</td><td>ASSET</td><td>Основное средство</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>7</td><td>BANK</td><td>Банк</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>8</td><td>BANK_ACCOUNT</td><td>Банковский счет</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>9</td><td>BANK_CONTEXT</td><td>Контекст модуля <Банк></td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>10</td><td>BUSINESSABLE</td><td>Бизнес-объект</td><td>ENTITY</td><td>BASE</td></tr>
+<tr><td>11</td><td>BUSINESSABLE_ENTITY</td><td>Бизнес-сущность</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>12</td><td>BUSINESSABLE_REGISTER</td><td>Регистр бизнес объектов</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>13</td><td>CASH_INCOME</td><td>Приходный кассовый ордер</td><td>DOCUMENT</td><td>CASH</td></tr>
+<tr><td>14</td><td>CASH_OUTCOME</td><td>Расходный кассовый ордер</td><td>DOCUMENT</td><td>CASH</td></tr>
+<tr><td>15</td><td>CITY</td><td>Город</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>16</td><td>CONTACT</td><td>Контакт</td><td>ENTITY</td><td>ORGANIZATION</td></tr>
+<tr><td>17</td><td>CONTACTABLE</td><td>Контакт-объект</td><td>ENTITY</td><td>CONTACT</td></tr>
+<tr><td>18</td><td>CONTACTABLE_ENTITY</td><td>Контакт-сущность</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>19</td><td>CONTACT_CONTEXT</td><td>Контекст модуля <Контакты></td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>20</td><td>CONTACT_TYPE</td><td>Тип контактов</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>21</td><td>CONTRACT</td><td>Договор</td><td>DOCUMENT</td><td>DOCUMENT</td></tr>
+<tr><td>22</td><td>CONTRACTOR</td><td>Контрактник</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>23</td><td>CONTRACTOR_MOVE</td><td>Движение по контрактнику</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>24</td><td>COUNTRY</td><td>Страна</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>25</td><td>CURRENCY</td><td>Валюта</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>26</td><td>DEPARTMENT</td><td>Подразделение</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>27</td><td>DISCHARGE_TYPE</td><td>Тип увольнения</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>28</td><td>DISTRICT</td><td>Район</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>29</td><td>DOCUMENT</td><td>Документ</td><td>DOCUMENT</td><td>DOCUMENT</td></tr>
+<tr><td>30</td><td>DOCUMENT_STATUS</td><td>Статус документа</td><td>DICTIONARY</td><td>DOCUMENT</td></tr>
+<tr><td>31</td><td>DOCUMENT_TYPE</td><td>Тип документа</td><td>DICTIONARY</td><td>DOCUMENT</td></tr>
+<tr><td>32</td><td>EDUCATION_FORM</td><td>Форма образования</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>33</td><td>EDUCATION_INSTITUTE</td><td>Учебное заведение</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>34</td><td>EDUCATION_TYPE</td><td>Тип образования</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>35</td><td>EMAIL</td><td>E-mail</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>36</td><td>EMPLOYEE</td><td>Служащий</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>37</td><td>EMPLOYEE_CATEGORY</td><td>Категория служащих</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>38</td><td>EMPLOYEE_DISCHARGE</td><td>Приказ об увольнении</td><td>DOCUMENT</td><td>EMPLOYEE</td></tr>
+<tr><td>39</td><td>EMPLOYEE_MOVE</td><td>Движения по служащим</td><td>ENTITY</td><td>EMPLOYEE</td></tr>
+<tr><td>40</td><td>EMPLOYEE_PAYROLL</td><td>Зарплата служащего</td><td>ENTITY</td><td>PAYROLL</td></tr>
+<tr><td>41</td><td>EMPLOYEE_RANK</td><td>Ранг служащего</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>42</td><td>EMPLOYEE_RECEPTION</td><td>Приказ о приёме на работу</td><td>DOCUMENT</td><td>EMPLOYEE</td></tr>
+<tr><td>43</td><td>EMPLOYEE_SICKLIST</td><td>Больничные</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>44</td><td>EMPLOYEE_SICKLIST_AVERANGE</td><td>Средние по больничным</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>45</td><td>EMPLOYEE_TOTAL</td><td>Итог по служащему</td><td>ENTITY</td><td>PAYROLL</td></tr>
+<tr><td>46</td><td>EMPLOYEE_VACATION</td><td>Отпускные</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>47</td><td>EMPLOYEE_VACATION_AVERANGE</td><td>Средние по отпускным</td><td>DOCUMENT</td><td>PAYROLL</td></tr>
+<tr><td>48</td><td>ENTRY_ITEM</td><td>Проводки по документу</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>49</td><td>FAMILIARITY</td><td>Родственные связи</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>50</td><td>FAMILY_STATUS</td><td>Семейное положение</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>51</td><td>FINANCE_DOCUMENT</td><td>Финансовый документ</td><td>DOCUMENT</td><td>FINANCE</td></tr>
+<tr><td>52</td><td>FINANCE_DOCUMENT_TYPE</td><td>Тип финансового документа</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>53</td><td>FORM_PROPERTY</td><td>Форма собственности</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>54</td><td>GOODS</td><td>Номенклатура</td><td>DICTIONARY</td><td>GOODS</td></tr>
+<tr><td>55</td><td>GOODS_INCOME</td><td>Накладная на закупку</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>56</td><td>GOODS_INCOME_ITEM</td><td>Строчки накладной на закупку</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>57</td><td>GOODS_OUTCOME</td><td>Накладная на реализацию</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>58</td><td>GOODS_OUTCOME_ITEM</td><td>Строчки накладной на реализацию</td><td>DOCUMENT</td><td>GOODS</td></tr>
+<tr><td>59</td><td>GOODS_TYPE</td><td>Тип товара</td><td>DICTIONARY</td><td>GOODS</td></tr>
+<tr><td>60</td><td>INDUSTRY</td><td>Индустрия</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>61</td><td>INTANGIBLE</td><td>Нематериальные активы</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>62</td><td>INVENTORY_INCOME</td><td>Приходная накладная</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>63</td><td>INVENTORY_INCOME_ITEM</td><td>Строчки приходной накладной</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>64</td><td>INVENTORY_MOVE</td><td>Накладная на внутренне перемещение</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>65</td><td>INVENTORY_MOVE_ITEM</td><td>Строчки накладной на внутренне перемещение</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>66</td><td>INVENTORY_OUTCOME</td><td>Расходная накладная</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>67</td><td>INVENTORY_OUTCOME_ITEM</td><td>Строчки расходной накладной</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>68</td><td>INVENTORY_REST</td><td>Остатки по товару</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>69</td><td>INVENTORY_REST_ITEM</td><td>Строчки остатков по товару</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>70</td><td>INVENTORY_WRITEOFF</td><td>Акт на списание</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>71</td><td>INVENTORY_WRITEOFF_ITEM</td><td>Строчки акта на списание</td><td>DOCUMENT</td><td>INVENTORY</td></tr>
+<tr><td>72</td><td>JOB_POSITION</td><td>Должность</td><td>DICTIONARY</td><td>EMPLOYEE</td></tr>
+<tr><td>73</td><td>LANGUAGE</td><td>Язык</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>74</td><td>LEDGER_ACCOUNT</td><td>Бухгалтерский счёт</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>75</td><td>LEDGER_ACCOUNT_REGISTER</td><td>Регистр по бухгалтерскому счёту</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>76</td><td>LEDGER_ACCOUNT_REST</td><td>Остатки по бухгалтерскому счёту</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>77</td><td>LEDGER_ACCOUNT_TYPE</td><td>Тип бухгалтерского счёта</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>78</td><td>LOCALITY</td><td>Населённый пункт</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>79</td><td>LOCALITY_TYPE</td><td>Тип населённого пункта</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>80</td><td>MILITARY_RANK</td><td>Воинское звание</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>81</td><td>MILITARY_SPECIALITY</td><td>Воинская специальность</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>82</td><td>MILITARY_STATUS</td><td>Воинский статус</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>83</td><td>MTRL_RESPONSIBLE</td><td>Материально-ответственный</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>84</td><td>M_LEDGER_ACCOUNT_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>85</td><td>M_LEDGER_ACCOUNT_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>86</td><td>M_LEDGER_ACCOUNT_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>87</td><td>M_PARTNER_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>88</td><td>M_PARTNER_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>89</td><td>M_PARTNER_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>90</td><td>M_PRODUCT_DETAIL_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>91</td><td>M_PRODUCT_DETAIL_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>92</td><td>M_PRODUCT_DETAIL_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>93</td><td>M_PRODUCT_REGISTER</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>94</td><td>M_PRODUCT_REGISTER_ID</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>95</td><td>M_PRODUCT_REGISTER_SUM</td><td>-</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>96</td><td>ORGANIZATION</td><td>Организация</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>97</td><td>PARTNER</td><td>Контрагент</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>98</td><td>PARTNER_ACTIVITY_TYPE_LINK</td><td>Деятельность по контрагенту</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>99</td><td>PARTNER_CATEGORY</td><td>Категория контрагентов</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>100</td><td>PARTNER_CATEGORY_LINK</td><td>Категории по контрагенту</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>101</td><td>PARTNER_GROUP</td><td>Группа контрагентов</td><td>DICTIONARY</td><td>PARTNER</td></tr>
+<tr><td>102</td><td>PARTNER_MOVE</td><td>Движение по контрагенту</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>103</td><td>PARTNER_REGISTER</td><td>Регистр по контрагенту</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>104</td><td>PARTNER_REST</td><td>Остатки по контрагенту</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>105</td><td>PAYMENT_DOCUMENT_LINK</td><td>Документы для оплаты</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>106</td><td>PAYMENT_INCOME</td><td>Платёжное требование</td><td>DOCUMENT</td><td>BANK</td></tr>
+<tr><td>107</td><td>PAYMENT_MISSING</td><td>Назначение платежа</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>108</td><td>PAYMENT_OUTCOME</td><td>Платежное поручение</td><td>DOCUMENT</td><td>BANK</td></tr>
+<tr><td>109</td><td>PAYMENT_OUTCOME_TEMPLATE</td><td>Шаблон платежного поручения</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>110</td><td>PAYMENT_TYPE</td><td>Тип оплаты</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>111</td><td>PAYROLL</td><td>Начисления/Удержания</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>112</td><td>PAYROLL_ALGORITM</td><td>Алгоритм начислений/удержаний</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>113</td><td>PAYROLL_ALGORITM_TYPE</td><td>Тип алгоритма начислений/удержаний</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>114</td><td>PAYROLL_FORM</td><td>Форма оплаты труда</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>115</td><td>PAYROLL_GROUP</td><td>Группа начислений/удержаний</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>116</td><td>PAYROLL_ITEM</td><td>Подчинённые начисления/удержания</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>117</td><td>PAYROLL_MODE</td><td>Режим начислений/удержаний</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>118</td><td>PAYROLL_TYPE</td><td>Тип начислений/удержаний</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>119</td><td>PERIOD</td><td>Период</td><td>ENTITY</td><td>BASE</td></tr>
+<tr><td>120</td><td>PERIOD_TYPE</td><td>Тип периода</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>121</td><td>PERSON</td><td>Физическое лицо</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>122</td><td>PERSON_DOCUMENT</td><td>Документ физического лица</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>123</td><td>PERSON_DOCUMENT_TYPE</td><td>Тип документа физического лица</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>124</td><td>PERSON_EDUCATION</td><td>Образование физического лица</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>125</td><td>PERSON_FAMILY</td><td>Семья физического лица</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>126</td><td>PERSON_JOB</td><td>Работа физического лица</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>127</td><td>PERSON_LANGUAGE</td><td>Язык общения физического лица</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>128</td><td>PERSON_MILITARY</td><td>Воинская информация по физическому лицу</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>129</td><td>PHONE</td><td>Телефон</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>130</td><td>PHONE_TYPE</td><td>Тип телефона</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>131</td><td>PIM_APPOINTMENT</td><td>Мероприятие</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>132</td><td>PIM_APPOINTMENT_CONTACT</td><td>Контакты по мероприятию</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>133</td><td>PIM_APPOINTMENT_PRIORITY</td><td>Приоритет мероприятия</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>134</td><td>PIM_APPOINTMENT_TYPE</td><td>Тип мероприятия</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>135</td><td>PIM_EVENT</td><td>Событие</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>136</td><td>PIM_NOTE</td><td>Заметка</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>137</td><td>PIM_REMINDER</td><td>Напоминание</td><td>DICTIONARY</td><td>PIM</td></tr>
+<tr><td>138</td><td>PRICE_TYPE</td><td>Тип цены</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>139</td><td>PRODUCT</td><td>Карточка продукта</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>140</td><td>PRODUCT_DETAIL_REGISTER</td><td>Детализация регистра по товару</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>141</td><td>PRODUCT_GROUP</td><td>Группа карточки продукта</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>142</td><td>PRODUCT_INSTANCE</td><td>Экземпляр продукта</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>143</td><td>PRODUCT_MOVE</td><td>Движение по карточке продукта</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>144</td><td>PRODUCT_PRICE</td><td>Цена по карточке продукта</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>145</td><td>PRODUCT_REGISTER</td><td>Регистр товара</td><td>ENTITY</td><td>PRODUCT</td></tr>
+<tr><td>146</td><td>PRODUCT_SECTION</td><td>Секция карточки продукта</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>147</td><td>PRODUCT_UNIT</td><td>Единица измерения по карточке продукта</td><td>DICTIONARY</td><td>PRODUCT</td></tr>
+<tr><td>148</td><td>PROJECT</td><td>Проект</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>149</td><td>PROJECT_CONTACT_LINK</td><td>Контакты по проекту</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>150</td><td>PROJECT_CONTEXT</td><td>Контекст модуля <Проекты></td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>151</td><td>PROJECT_EMPLOYEE_LINK</td><td>Сотрудники по проекту</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>152</td><td>PROJECT_ROLE</td><td>Роли по проекту</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>153</td><td>PROJECT_STAGE</td><td>Стадия проекта</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>154</td><td>PROJECT_STAGE_GROUP</td><td>Группа стадий проекта</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>155</td><td>PROJECT_STAGE_LINK</td><td>Стадии по проекту</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>156</td><td>PROJECT_STATUS</td><td>Состояние проекта</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>157</td><td>PROJECT_TYPE</td><td>Тип  проекта</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>158</td><td>PURCHASE_INVOICE</td><td>Счёт-фактура на покупку</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>159</td><td>PURCHASE_INVOICE_ITEM</td><td>Строчки счёта-фактуры на покупку</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>160</td><td>PURCHASE_ORDER</td><td>Заказ на покупку</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>161</td><td>PURCHASE_ORDER_ITEM</td><td>Строчки заказа на покупку</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>162</td><td>PURCHASE_PLAN</td><td>План на покупку</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>163</td><td>PURCHASE_PLAN_ITEM</td><td>Строчки плана на покупку</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>164</td><td>PURCHASE_SERV</td><td>Акт выполненных работ (вход.)</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>165</td><td>PURCHASE_SERV_ITEM</td><td>Строчки по акту выполненных работ (вход.)</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>166</td><td>PURCHASE_TAX_WAYBILL</td><td>Налоговая накладная (вход.)</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>167</td><td>PURCHASE_TAX_WAYBILL_ITEM</td><td>Строчки налоговой накладной (вход.)</td><td>DOCUMENT</td><td>PURCHASE</td></tr>
+<tr><td>168</td><td>REGION</td><td>Регион</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>169</td><td>SALE_INVOICE</td><td>Счёт-фактура на продажу</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>170</td><td>SALE_INVOICE_ITEM</td><td>Строчки счёта-фактуры на продажу</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>171</td><td>SALE_ORDER</td><td>Заказ на продажу</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>172</td><td>SALE_ORDER_ITEM</td><td>Строчки заказа на продажу</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>173</td><td>SALE_PLAN</td><td>План на продажу</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>174</td><td>SALE_PLAN_ITEM</td><td>Строчки плана на продажу</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>175</td><td>SALE_SERV</td><td>Акт выполненных работ</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>176</td><td>SALE_SERV_ITEM</td><td>Строчки по акту выполненных работ</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>177</td><td>SALE_TAX_WAYBILL</td><td>Налоговая накладная</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>178</td><td>SALE_TAX_WAYBILL_ITEM</td><td>Строчки налоговой накладной</td><td>DOCUMENT</td><td>SALE</td></tr>
+<tr><td>179</td><td>SECURE_OBJECT</td><td>Объекты на которые устанавливается права доступа</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>180</td><td>SICKLIST_AVERANGE_TYPE</td><td>Тип средних для больничных</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>181</td><td>SICKLIST_TYPE</td><td>Тип больничного листа</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>182</td><td>SICK_TYPE</td><td>Тип болезни</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>183</td><td>SPECIALITY</td><td>Специальность</td><td>DICTIONARY</td><td>PERSONALITY</td></tr>
+<tr><td>184</td><td>STORE</td><td>Склад</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>185</td><td>STREET_TYPE</td><td>Тип улицы</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+<tr><td>186</td><td>SYS_DATA_TYPE</td><td>Тип данных</td><td>ENTITY</td><td>BASE</td></tr>
+<tr><td>187</td><td>SYS_DAY</td><td>Системный день</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>188</td><td>SYS_ENTITY</td><td>Системная сущность</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>189</td><td>SYS_ENTITY_ATTR</td><td>Атрибут (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>190</td><td>SYS_ENTITY_ATTR_GROUP</td><td>Группа атрибута (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>191</td><td>SYS_ENTITY_ATTR_VALUE</td><td>Значения атрибута (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>192</td><td>SYS_ENTITY_TYPE</td><td>Тип системных сущностей</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>193</td><td>SYS_ENUMERATION</td><td>Перечисление (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>194</td><td>SYS_INFO</td><td>Системная информация</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>195</td><td>SYS_LOOKUP</td><td>Справочник (custom)</td><td>ENTITY</td><td>-</td></tr>
+<tr><td>196</td><td>SYS_MONTH</td><td>Системный месяц</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>197</td><td>SYS_PERMISSION</td><td>Права доступа</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>198</td><td>SYS_PREFERENCE</td><td>Системные настройки</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>199</td><td>SYS_QUARTER</td><td>Системный квартал</td><td>DICTIONARY</td><td>-</td></tr>
+<tr><td>200</td><td>SYS_ROLE</td><td>Роль</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>201</td><td>SYS_USER</td><td>Пользователь</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>202</td><td>SYS_USER_ROLE</td><td>Роль пользователя</td><td>DICTIONARY</td><td>SECURITY</td></tr>
+<tr><td>203</td><td>SYS_VARIABLE</td><td>Системные переменные</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>204</td><td>TASK</td><td>Задача</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>205</td><td>TASK_CONTACT_LINK</td><td>Контакты по задаче</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>206</td><td>TASK_CONTEXT</td><td>Контекст модуля <Задачи></td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>207</td><td>TASK_EMPLOYEE_LINK</td><td>Сотрудники по задаче</td><td>ENTITY</td><td>PROJECT</td></tr>
+<tr><td>208</td><td>TASK_PRIORITY</td><td>Приоритет задачи</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>209</td><td>TASK_RESULT</td><td>Результат задачи</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>210</td><td>TASK_ROLE</td><td>Роль в задаче</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>211</td><td>TASK_STATUS</td><td>Состояние задачи</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>212</td><td>TASK_TYPE</td><td>Тип задачи</td><td>DICTIONARY</td><td>PROJECT</td></tr>
+<tr><td>213</td><td>TAX</td><td>Налог</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>214</td><td>TAXPRINT_TYPE</td><td>Форма печати налога</td><td>DICTIONARY</td><td>BANK</td></tr>
+<tr><td>215</td><td>TEMPLATE_ENTRY</td><td>Шаблон проводки</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>216</td><td>TEMPLATE_ENTRY_ITEM</td><td>Строчки шаблона проводки</td><td>DICTIONARY</td><td>FINANCE</td></tr>
+<tr><td>217</td><td>UNIT</td><td>Единица измерения</td><td>DICTIONARY</td><td>BASE</td></tr>
+<tr><td>218</td><td>VACATION_AVERANGE_TYPE</td><td>Тип средних по отпуску</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>219</td><td>VACATION_CALCULATE</td><td>Тип расчёта по отпуску</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>220</td><td>VACATION_TYPE</td><td>Тип отпуска</td><td>DICTIONARY</td><td>PAYROLL</td></tr>
+<tr><td>221</td><td>WAREHOUSE</td><td>Места хранения</td><td>DICTIONARY</td><td>ORGANIZATION</td></tr>
+<tr><td>222</td><td>WAREHOUSE_ENTITY</td><td>Сущности относящиеся к местам хранения</td><td>ENTITY</td><td>ORGANIZATION</td></tr>
+<tr><td>223</td><td>WAREHOUSE_MOVE</td><td>Движение по местам хранения</td><td>ENTITY</td><td>FINANCE</td></tr>
+<tr><td>224</td><td>WEB</td><td>WEB ресурс</td><td>DICTIONARY</td><td>CONTACT</td></tr>
+
+
+
+
+
+</table>
+
+
+</body>
+</html>

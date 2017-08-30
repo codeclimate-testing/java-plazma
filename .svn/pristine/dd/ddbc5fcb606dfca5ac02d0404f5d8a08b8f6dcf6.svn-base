@@ -1,0 +1,56 @@
+
+<html>
+<title>Документы</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+   <h2 align="center">Документы</h2>
+   <hr>
+   <br><br><br><br>
+
+   <h3  align="center">Пункт меню <i>Документы</i></h3>
+   В данном меню представлены подпункты для выбора соответсвующего типа документа.
+   После выбора открывается форма список для работы с документами.
+   <br><br> 
+
+   <table align="center">
+    <tr>
+      <td><img border=0 src="images/documents-menu.png"/></td>
+    </tr>
+   </table>
+
+
+   <br><br><br><br>
+   <h3  align="center">Создание нового документа</h3>
+   Даный процес можно производить как в соответсвующей форме список, так и отдельной командой<br>
+   <b><i>Документы->Новый</i></b><br><br> 
+
+
+   <br><br><br><br>
+   <h3  align="center">Альтернативный способ выбора документа</h3>
+   Пункт меню <b><i>Документы->Перейти</i></b><br><br>
+
+   
+</TD>
+</TR>
+
+</TABLE>
+
+
+
+</body>
+</html>
+
+

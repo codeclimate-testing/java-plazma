@@ -1,0 +1,74 @@
+#File
+File.text=Файл
+
+
+#Classification
+Classification.text=Классификаторы
+
+Classification.Types.text=Типы
+Classification.Groups.text=Группы
+Classification.Categories.text=Категории
+Classification.HumanResources.text=Кадровый учёт
+Classification.Military.text=Воинский учёт
+
+
+#Dictionaries
+Dictionaries.text=Справочники
+
+Dictionaries.MyOrganization.text=Наша организация
+Dictionaries.Finance.text=Финансы
+Dictionaries.HumanResources.text=Кадровый учёт
+Dictionaries.Payroll.text=Зарплата
+Dictionaries.Accounting.text=Бухгалтерия
+
+
+#Contacts
+Contacts.text=Контакты
+
+
+#Documents
+Documents.text=Документы
+Documents.Purchase.text=Покупки
+Documents.Sale.text=Продажи
+Documents.Storage.text=Склад
+Documents.Bank.text=Банк
+Documents.Cash.text=Касса
+Documents.HumanResources.text=Учёт кадров
+Documents.Payroll.text=Учёт зарплаты
+
+
+
+#Projects
+Projects.text=Проекты
+
+#Tasks
+Tasks.text=Задачи
+
+#Reports
+Reports.text=Отчёты
+Reports.Purchase.text=Покупки
+Reports.Sale.text=Продажи
+Reports.Storage.text=Склад
+Reports.Balance.text=Остатки
+Reports.Bank.text=Банк
+Reports.HumanResources.text=Учёт кадров
+Reports.Payroll.text=Учёт зарплаты
+Reports.Project.text=Проекты
+Reports.Accounting.text=Бухгалтерия
+
+
+#Period Managment
+Period.text=Регламент
+Period.Rests.text=Остатки
+
+
+#Service
+Service.text=Сервис
+
+
+#Window
+Window.text=Окна
+
+
+#Help
+Help.text=Помощь

@@ -1,0 +1,1170 @@
+<?xml version="1.0"?>
+
+<project name="plazma-bs-base-client-swt" default="build">
+
+    <property file="build.properties"/>
+
+    <path id="plazma-classpath">
+	    <fileset dir="${lib.dir}">
+		    <include name="**/*.jar"/>
+	    </fileset>
+	    <fileset dir="${dist.dir}">
+		    <include name="${framework.jar}"/>
+		    <include name="${framework.erm.jar}"/>
+	    	<include name="${thirdparty.jar}"/>
+	    	<include name="${framework.client.jar}"/>
+	    	<include name="${framework.client.swt.jar}"/>
+	    	<include name="${bsolution.common.jar}"/>
+	    </fileset>
+    </path>
+
+
+    <target name="clean" description="Clean all output dirs (classes, etc.)">
+        <delete dir="${classes.dir}"/>
+        <delete dir="${javadocs.dir}"/>
+    </target>
+
+    <target name="clean-dist" description="Clean dist dir without framework files">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="${bsolution.client.swt.jar}"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+	
+	<!--
+    <target name="clean-dist-all" description="Clean dist dir">
+        <delete>
+            <fileset dir="${dist.dir}">
+            	<include name="**"/>
+            </fileset>        	
+        </delete>        	
+    </target>
+    -->
+	
+
+    <target name="build" description="Compile main source tree java files into class files (no-jarring)">
+    	<mkdir dir="${classes.dir}"/>
+
+    	<javac destdir="${classes.dir}" deprecation="false" optimize="false" failonerror="true">
+    		<src path="${src.dir}"/>
+    		<classpath refid="plazma-classpath"/>
+ 		</javac>
+    	
+    	<copy todir="${classes.dir}" preservelastmodified="true">
+    		<fileset dir="${src.dir}">
+    			<include name="**/*.xml"/>
+    			<include name="**/*.properties"/>
+    			<include name="**/*.jpg"/>
+    			<include name="**/*.gif"/>
+    			<include name="**/*.png"/>
+			</fileset>
+		</copy>
+
+    </target>
+
+    <target name="create-jar-all" description="Create all jar files"
+    	depends ="create-jar-client"/>
+	
+    <target name="create-jar-client" description="Create client jar">
+    	<mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.dir}/${bsolution.client.swt.jar}" basedir="${classes.dir}" includes="**">
+          <manifest>
+            <attribute name="Manifest-Version" value="1.0"/>
+			<attribute name="Plazma-Version" value="${version}"/>          	
+          </manifest>
+        </jar>
+    </target>
+
+
+
+	<!--
+	 ###########################################################################################################################
+	 #
+	 # Standalone DEMO
+	 #
+	 ###########################################################################################################################
+	-->
+
+	
+	<target name="clean-pack-standalone-demo" description="Clean installation demo pack">
+	        <delete dir="${standalone.demo.dir}"/>
+	</target>
+
+    <target name="create-pack-install-standalone-demo" description="Create installation demo pack" depends = "clean-pack-standalone-demo">
+
+        <mkdir dir="${standalone.demo.dir}"/>
+        <mkdir dir="${standalone.demo.dir}/conf"/>
+        <mkdir dir="${standalone.demo.dir}/db"/>
+        <mkdir dir="${standalone.demo.dir}/db/hsql"/>
+    	<mkdir dir="${standalone.demo.dir}/db/datastorage"/>    	
+        <mkdir dir="${standalone.demo.dir}/dist"/>
+        <mkdir dir="${standalone.demo.dir}/docs"/>
+        <mkdir dir="${standalone.demo.dir}/fonts"/>
+        <mkdir dir="${standalone.demo.dir}/lib"/>
+        <mkdir dir="${standalone.demo.dir}/logs"/>
+        <mkdir dir="${standalone.demo.dir}/reports"/>
+
+        <!-- Copy configuration -->
+        <copy todir="${standalone.demo.dir}/conf">
+
+        	<!--
+            <fileset dir="${conf.dir}/install">
+                <include name="jdbc**.properties"/>
+            </fileset>
+        	-->
+
+            <fileset dir="${conf.dir}">
+            	<include name="*.*"/>
+            	<exclude name="application.xml"/>
+            	<exclude name="jdbc**.properties"/>
+            </fileset>
+
+        </copy>
+    	
+    	<copy file="${conf.dir}/install/application-swt.xml" tofile="${standalone.demo.dir}/conf/application.xml" overwrite="true"/>
+    	<copy file="${conf.dir}/install/jdbc-demo.properties" tofile="${standalone.demo.dir}/conf/jdbc.properties" overwrite="true"/>
+    	
+    	<copy file="${conf.dir}/standalone/system-config.xml" tofile="${standalone.demo.dir}/conf/system-config.xml" overwrite="true"/>
+    	
+    	<copy todir="${standalone.demo.dir}/conf/packages">
+    		<fileset dir="${conf.dir}/packages">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+
+    	<copy todir="${standalone.demo.dir}/conf">
+    		<fileset dir="${conf.dir}/ui/swt">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+
+    	
+    	
+    	
+        <!-- Copy db -->
+        <copy todir="${standalone.demo.dir}/db/hsql">
+            <fileset dir="${db.dir}/hsql">
+                <include name="plazma_demo*"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy Data Storage -->
+        <copy todir="${standalone.demo.dir}/db/datastorage">
+            <fileset dir="${db.dir}/datastorage">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+            	
+        <!-- Copy dist -->
+        <copy todir="${standalone.demo.dir}/dist">
+            <fileset dir="${dist.dir}">
+            	<include name="${framework.jar}"/>
+            	<include name="${framework.erm.jar}"/>
+            	<include name="${thirdparty.jar}"/>
+    	    	<include name="${framework.client.jar}"/>
+    	    	<include name="${framework.client.swt.jar}"/>
+            	
+            	<include name="${bsolution.common.jar}"/>
+            	<include name="${bsolution.server.jar}"/>
+            	
+            	<include name="${bsolution.client.swt.jar}"/>
+            </fileset>
+        </copy>
+    	
+        <!-- Copy docs -->
+        <copy todir="${standalone.demo.dir}/docs">
+            <fileset dir="${workspace.docs.dir}">
+                <include name="dtds/**"/>
+            </fileset>
+        	
+        </copy>
+
+        <!-- Copy docs GUIDE eng -->
+        <copy todir="${standalone.demo.dir}/docs/guide/eng">
+            <fileset dir="${workspace.docs.dir}/guide/en">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy docs GUIDE rus -->
+        <copy todir="${standalone.demo.dir}/docs/guide/rus">
+            <fileset dir="${workspace.docs.dir}/guide/ru">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+
+        <!-- Copy fonts -->
+        <copy todir="${standalone.demo.dir}/fonts">
+            <fileset dir="${fonts.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy lib -->
+        <copy todir="${standalone.demo.dir}/lib">
+            <fileset dir="${lib.dir}" includes="${standalone.demo.fileset}"/>
+        </copy>
+
+        <!-- Copy reports -->
+        <copy todir="${standalone.demo.dir}/reports">
+            <fileset dir="${reports.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    	
+   	  
+        <!-- Copy root files -->
+        <copy todir="${standalone.demo.dir}">
+            <fileset dir="${basedir}">
+                <include name="*.*"/>
+                <exclude name=".*"/>            	
+
+                <exclude name="*.ipr"/>
+                <exclude name="*.iws"/>            	
+            	
+                <exclude name="build*"/>
+            	
+              	<exclude name="install_demo**"/>
+               	<exclude name="install_client**"/>            	
+                 	
+                <exclude name="start_client*"/>
+                      	
+                <exclude name="test-*"/>
+          	
+            </fileset>
+        </copy>
+
+
+    	<copy file="${basedir}/install_demo.xml" tofile="${standalone.demo.dir}/install.xml" overwrite="true"/>
+    	
+   	
+   	    <concat destfile="${standalone.demo.dir}/plazma.properties" fixlastline="yes">
+plazma.platform.demo = true
+plazma.platform.autologin = true
+    	    <header filtering="no" trimleading="yes">
+    	       		#
+    	       		# Plazma properties (Demo Standalone)
+    	       		#
+    	    </header>
+        </concat>        	
+    	
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.demo.dir}/plazma.classpath" token="../" value = ""/>
+    	
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.demo.dir}/config.classpath" token="../" value = ""/>
+    	
+    	<!-- Replace launcher -->
+      	<replace file="${standalone.demo.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+      	<replace file="${standalone.demo.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+
+    	<!-- Replace system-config.xml -->
+    	<replace file="${standalone.demo.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.reportstorage/" value = "${root.dir}/"/>
+    	<replace file="${standalone.demo.dir}/conf/system-config.xml" token="../bs.base.reportstorage/" value = "${root.dir}/"/>
+
+
+    	<replace file="${standalone.demo.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.db/" value = "${root.dir}/db/"/>
+    	<replace file="${standalone.demo.dir}/conf/system-config.xml" token="../bs.base.db/" value = "${root.dir}/db/"/>
+
+    	
+    		
+    		
+    	<!-- Replace application-context-ds.xml -->
+    	<replace file="${standalone.demo.dir}/conf/application-context-ds.xml" token="../bs.base.configuration/" value = ""/>
+    	
+    	<!-- Replace rmi-context.xml -->
+    	<replace file="${standalone.demo.dir}/conf/rmi-context.xml" token="../bs.base.configuration/" value = ""/>
+    	
+    	<!-- Set version and build -->
+    	<replace file="${standalone.demo.dir}/readme.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+    	<replace file="${standalone.demo.dir}/readme_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+    	<replace file="${standalone.demo.dir}/readme.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+    	<replace file="${standalone.demo.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+    	<replace file="${standalone.demo.dir}/readme.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+    	<replace file="${standalone.demo.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+    	
+    	<replace file="${standalone.demo.dir}/install.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+    	<replace file="${standalone.demo.dir}/install_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+
+    	<replace file="${standalone.demo.dir}/install.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/install.xml" token="{build}" value = "${build}"/>
+
+    	<replace file="${standalone.demo.dir}/config.classpath" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.demo.dir}/default_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.demo.dir}/unix_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.demo.dir}/default_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	<replace file="${standalone.demo.dir}/unix_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	
+	
+    </target>
+	
+	
+	
+	<!--
+	 ###########################################################################################################################
+	 #
+	 # Standalone
+	 #
+	 ###########################################################################################################################
+	-->
+	
+    <target name="clean-pack-standalone" description="Clean installation pack">
+        <delete dir="${standalone.dir}"/>
+    </target>
+
+    <target name="create-pack-install-standalone" description="Create installation standalone pack" depends = "clean-pack-standalone">
+
+        <mkdir dir="${standalone.dir}"/>
+        <mkdir dir="${standalone.dir}/conf"/>
+        <mkdir dir="${standalone.dir}/db"/>
+        <mkdir dir="${standalone.dir}/db/hsql"/>
+        <mkdir dir="${standalone.dir}/db/script"/>
+    	<mkdir dir="${standalone.dir}/db/datastorage"/>
+        <mkdir dir="${standalone.dir}/dist"/>
+        <mkdir dir="${standalone.dir}/docs"/>
+        <mkdir dir="${standalone.dir}/fonts"/>
+        <mkdir dir="${standalone.dir}/lib"/>
+        <mkdir dir="${standalone.dir}/logs"/>
+        <mkdir dir="${standalone.dir}/reports"/>
+        <!-- <mkdir dir="${standalone.dir}/src"/> -->
+
+
+        <!-- Copy configuration -->
+        <copy todir="${standalone.dir}/conf">
+
+            <fileset dir="${conf.dir}/install">
+                <!-- <include name="application.xml"/> -->
+                <include name="jdbc**.properties"/>
+                <include name="erm.xml"/>
+            </fileset>
+
+            <fileset dir="${conf.dir}">
+            	<include name="*.*"/>
+            	<exclude name="application.xml"/>
+            	<exclude name="jdbc**.properties"/>
+            </fileset>
+
+        </copy>
+    	
+    	<copy file="${conf.dir}/install/application-swt.xml" tofile="${standalone.dir}/conf/application.xml" overwrite="true"/>
+    	<copy file="${conf.dir}/standalone/system-config.xml" tofile="${standalone.dir}/conf/system-config.xml" overwrite="true"/>
+
+    	<copy todir="${standalone.dir}/conf/packages">
+    		<fileset dir="${conf.dir}/packages">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+    	
+    	<copy todir="${standalone.dir}/conf">
+    		<fileset dir="${conf.dir}/ui/swt">
+    			<include name="**"/>
+    	    </fileset>
+        </copy>
+
+    	
+    	<!--
+        <copy todir="${standalone.dir}/conf/client">
+            <fileset dir="${conf.dir}/client">
+            	<include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${standalone.dir}/conf/server">
+            <fileset dir="${conf.dir}/server">
+            	<include name="*.*"/>
+            </fileset>
+        </copy>
+        -->
+
+
+
+        <!-- Copy db -->
+        <copy todir="${standalone.dir}/db">
+            <fileset dir="${db.dir}">
+                <include name="**"/>
+            	<exclude name=".*"/>
+            </fileset>
+        </copy>
+
+       
+
+  
+        <!-- Copy dist -->
+        <copy todir="${standalone.dir}/dist">
+            <fileset dir="${dist.dir}">
+            	<include name="${framework.jar}"/>
+            	<include name="${framework.erm.jar}"/>
+            	<include name="${thirdparty.jar}"/>
+    	    	<include name="${framework.client.jar}"/>
+    	    	<include name="${framework.client.swt.jar}"/>
+            	
+            	<include name="${bsolution.common.jar}"/>
+            	<include name="${bsolution.server.jar}"/>
+            	
+            	<include name="${bsolution.client.swt.jar}"/>
+            </fileset>
+        	
+        </copy>
+    	
+        <!-- Copy docs -->
+        <copy todir="${standalone.dir}/docs">
+            <fileset dir="${workspace.docs.dir}">
+                <include name="dtds/**"/>
+            </fileset>
+        </copy>
+    	
+        <!-- Copy docs GUIDE eng -->
+        <copy todir="${standalone.dir}/docs/guide/eng">
+            <fileset dir="${workspace.docs.dir}/guide/en">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy docs GUIDE rus -->
+        <copy todir="${standalone.dir}/docs/guide/rus">
+            <fileset dir="${workspace.docs.dir}/guide/ru">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    	
+
+        <!-- Copy fonts -->
+        <copy todir="${standalone.dir}/fonts">
+            <fileset dir="${fonts.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy lib -->
+        <copy todir="${standalone.dir}/lib">
+            <fileset dir="${lib.dir}" includes="${standalone.fileset}, ${jdbc.fileset}"/>
+        </copy>
+
+        <!-- Copy reports -->
+        <copy todir="${standalone.dir}/reports">
+            <fileset dir="${reports.dir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    	
+   	   <!-- Copy src -->
+       <!--
+       <copy todir="${standalone.dir}/src">
+            <fileset dir="${src.dir}">
+                <include name="**"/>
+            </fileset>
+       </copy>
+       -->
+
+        <!-- Copy root files -->
+        <copy todir="${standalone.dir}">
+            <fileset dir="${basedir}">
+                <include name="*.*"/>
+                <exclude name=".*"/>            	
+                <exclude name="*.ipr"/>
+                <exclude name="*.iws"/> 
+            	
+                <exclude name="build*"/>
+            	
+            	<exclude name="install_demo**"/>
+              	<exclude name="install_client**"/>            	
+                <exclude name="start_client**"/>
+            	
+            	<exclude name="test-*"/>
+            	
+            </fileset>
+        </copy>
+    	
+ 	
+   	    <concat destfile="${standalone.dir}/plazma.properties" fixlastline="yes">plazma.platform.autologin = true
+    	       	<header filtering="no" trimleading="yes">
+    	           		#
+    	           		# Plazma properties (Standalone)
+    	           		#
+    	       	</header>
+        </concat>        	
+    	
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.dir}/plazma.classpath" token="../" value = ""/>
+    	
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.dir}/config.classpath" token="../" value = ""/>
+    	
+    	
+    	<!-- Replace launcher -->
+      	<replace file="${standalone.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+      	<replace file="${standalone.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+
+    	<!-- Replace system-config.xml -->
+    	<replace file="${standalone.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.reportstorage/" value = "${root.dir}/"/>
+    	<replace file="${standalone.dir}/conf/system-config.xml" token="../bs.base.reportstorage/" value = "${root.dir}/"/>
+
+    	<replace file="${standalone.dir}/conf/system-config.xml" token="${parent.root.dir}/bs.base.db/" value = "${root.dir}/db/"/>
+    	<replace file="${standalone.dir}/conf/system-config.xml" token="../bs.base.db/" value = "${root.dir}/db/"/>
+
+    	<!-- Replace application-context-ds.xml -->
+    	<replace file="${standalone.dir}/conf/application-context-ds.xml" token="../bs.base.configuration/" value = ""/>
+    	<!--<replace file="${standalone.dir}/conf/application-context-ds-demo.xml" token="../bs.base.configuration/" value = ""/>-->
+
+    	<!-- Replace rmi-context.xml -->
+    	<replace file="${standalone.dir}/conf/rmi-context.xml" token="../bs.base.configuration/" value = ""/>
+
+    	
+    	<!-- Set version and build -->
+    	<replace file="${standalone.dir}/readme.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+    	<replace file="${standalone.dir}/readme_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+    	<replace file="${standalone.dir}/readme.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+    	<replace file="${standalone.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+    	<replace file="${standalone.dir}/readme.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+    	<replace file="${standalone.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+    	
+    	<replace file="${standalone.dir}/install.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+    	<replace file="${standalone.dir}/install_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+
+    	<replace file="${standalone.dir}/install.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/install.xml" token="{build}" value = "${build}"/>
+
+    	<replace file="${standalone.dir}/config.classpath" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.dir}/default_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	<replace file="${standalone.dir}/unix_shortcut_specification.xml" token="{version}" value = "${version}"/>
+    	
+    	<replace file="${standalone.dir}/default_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	<replace file="${standalone.dir}/unix_shortcut_specification.xml" token="{build}" value = "${build}"/>
+    	
+    </target>
+
+	
+	
+	
+	
+	<!--
+	#############################################
+	-->
+	
+	
+    <target name="clean-pack-client" description="Clean client pack">
+        <delete dir="${client.dir}"/>
+    </target>
+
+	
+	
+	
+	<!-- Client Common -->
+    	
+    <target name="create-pack-client-common" description="Create client pack" depends = "clean-pack-client, create-jar-client">
+
+    	<mkdir dir="${client.dir}"/>
+        <mkdir dir="${client.dir}/conf"/>
+    	<mkdir dir="${client.dir}/dist"/>
+    	<mkdir dir="${client.dir}/docs"/>    	
+	   	<mkdir dir="${client.dir}/lib"/>
+	   	<mkdir dir="${client.dir}/logs"/>    	
+
+      
+        <copy todir="${client.dir}/conf">
+            <fileset dir="${conf.dir}">
+                <include name="jndi.properties"/>
+	           	<include name="rmi.properties"/>
+                <include name="rmi-context.xml"/>
+                <!-- <include name="application.xml"/> -->
+            </fileset>
+        </copy>
+
+    	<!-- Copy dist files -->
+        <copy todir="${client.dir}/dist">
+            <fileset dir="${dist.dir}">
+            	<include name="${framework.jar}"/>
+            	<include name="${framework.erm.jar}"/>
+            	<include name="${thirdparty.jar}"/>
+    	    	<include name="${framework.client.jar}"/>
+    	    	<include name="${framework.client.swt.jar}"/>
+           
+               	<include name="${bsolution.common.jar}"/>
+               	<include name="${bsolution.client.swt.jar}"/>            	
+            </fileset>
+        </copy>
+
+      	<!-- Copy docs -->
+        <copy todir="${client.dir}/docs">
+            <fileset dir="${workspace.docs.dir}">
+                <include name="dtds/**"/>
+              	<exclude name="dtds/application-config.dtd"/>
+            </fileset>
+        </copy>        	
+
+    	
+        <!-- Copy docs GUIDE eng -->
+        <copy todir="${client.dir}/docs/guide/eng">
+            <fileset dir="${workspace.docs.dir}/guide/en">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy docs GUIDE rus -->
+        <copy todir="${client.dir}/docs/guide/rus">
+            <fileset dir="${workspace.docs.dir}/guide/ru">
+                <include name="**"/>
+            </fileset>
+        </copy>
+
+        	
+      	<!-- Copy libs -->
+        <copy todir="${client.dir}/lib">
+            <fileset dir="${lib.dir}" includes="${client.fileset}"/>
+        </copy>
+    	
+        <!-- Copy root files -->
+        <copy todir="${client.dir}">
+            <fileset dir="${basedir}">
+
+                <include name="*.*"/>
+
+                <exclude name=".*"/>
+                <exclude name="build*"/>
+                <exclude name="bsolution**"/>
+                <exclude name="**_shortcut_specification.xml"/>
+                <exclude name="install**"/>
+                <exclude name="uninstall**"/>
+                <exclude name="**server**"/>
+                <exclude name="ShellLink.dll"/>
+            	<exclude name="test-*"/>            	
+
+            </fileset>
+        </copy>
+
+    	<!-- Replace plazma.classpath jar -->
+       	<replace file="${client.dir}/plazma.classpath" token="../" value = ""/>
+
+    	<!-- Replace config.classpath jar -->
+       	<replace file="${client.dir}/config.classpath" token="../" value = ""/>
+
+    	
+       	<!-- <replace file="${client.dir}/plazma.classpath" token="${jar.file}" value = "${client.jar.file}"/> -->
+
+    	<!-- Replace launcher -->
+      	<replace file="${client.dir}/launcher.bat" token="..\lib\" value = "lib\"/>
+      	<replace file="${client.dir}/launcher.sh" token="../lib/" value = "lib/"/>
+    	
+    	<!-- Replace rmi-context.xml -->
+    	<replace file="${client.dir}/conf/rmi-context.xml" token="../bs.base.configuration/" value = ""/>
+
+    	
+       	<!-- Set version and build -->
+       	<replace file="${client.dir}/readme.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+       	<replace file="${client.dir}/readme_ru.txt" token="{version}" value = "${version}" encoding="${codepage}"/>
+       	<replace file="${client.dir}/readme.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+       	<replace file="${client.dir}/readme_ru.txt" token="{build.month}" value = "${build.month}" encoding="${codepage}"/>
+       	<replace file="${client.dir}/readme.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+       	<replace file="${client.dir}/readme_ru.txt" token="{build.year}" value = "${build.year}" encoding="${codepage}"/>
+
+       	<replace file="${client.dir}/config.classpath" token="{version}" value = "${version}"/>
+       	<replace file="${client.dir}/plazma.classpath" token="{version}" value = "${version}"/>
+
+    	
+    </target>
+	
+	
+	
+	<!-- Client Lite -->
+    <target name="create-pack-client-lite" description="Create client pack" depends = "create-pack-client-common">
+    	
+        <!-- Copy configuration -->
+    	<copy file="${conf.dir}/client/system-config-rmi.xml" tofile="${client.dir}/conf/system-config.xml" overwrite="true"/>
+    	
+       	<!-- Copy Spring AOP libs (Only for RMI Locator) -->
+        <copy todir="${client.dir}/lib">
+             <fileset dir="${lib.dir}">
+               	<include name="aopalliance.jar"/> 
+               	<include name="spring-fix.jar"/> 
+             </fileset>
+        </copy>
+    	
+    	
+    	<concat destfile="${client.dir}/plazma.properties" fixlastline="yes">plazma.platform.autologin = true
+    		<header filtering="no" trimleading="yes">
+    			#
+        		# Plazma properties (Lite Client)
+    			#
+    		</header>
+    	</concat> 
+    	
+    	<concat destfile="${client.dir}/client.conf">plazma.client.type=lite</concat>    	
+    	
+    </target>    	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	<!-- Install Client Lite -->
+	<target name="create-pack-install-client-lite" description="Create client installation pack" depends="create-pack-client-lite">
+
+        <!-- Copy configuration -->
+		<copy file="${conf.dir}/install/application-swt.xml" tofile="${client.dir}/conf/application.xml" overwrite="true"/>
+    	
+        <!-- Copy root files -->
+        <copy todir="${client.dir}">
+            <fileset dir="${basedir}">
+            	<include name="install.txt"/>
+               	<include name="install_ru.txt"/>            	
+                <include name="install.inf"/>            	            	
+                <include name="install_creator*"/>            	
+                <include name="uninstall**"/>
+                <include name="**_shortcut_specification.xml"/>            	
+                <include name="ShellLink.dll"/>
+            </fileset>
+        </copy>
+		
+       	<!-- <copy file="${basedir}/install.txt" tofile="${client.dir}/install.txt" overwrite="true"/> -->
+       	<copy file="${basedir}/install_client.xml" tofile="${client.dir}/install.xml" overwrite="true"/>
+		
+	
+		<!-- Set version and build -->
+       	<replace file="${client.dir}/install.txt" token="{version}" value = "${version}"/>
+       	<replace file="${client.dir}/install_ru.txt" token="{version}" value = "${version}"/>
+
+       	<replace file="${client.dir}/install.xml" token="{version}" value = "${version}"/>
+       	<replace file="${client.dir}/install.xml" token="{build}" value = "${build}"/>
+
+       	<replace file="${client.dir}/default_shortcut_specification.xml" token="{version}" value = "${version}"/>
+       	<replace file="${client.dir}/unix_shortcut_specification.xml" token="{version}" value = "${version}"/>
+
+       	<replace file="${client.dir}/default_shortcut_specification.xml" token="{build}" value = "${build}"/>
+       	<replace file="${client.dir}/unix_shortcut_specification.xml" token="{build}" value = "${build}"/>
+
+       		
+       		
+       		
+       		
+		
+		<!-- Move to install dir -->
+		<delete dir="${client.lite.dir}"/>
+		
+		<move todir="${client.lite.dir}">
+			<fileset dir="${client.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+		
+    </target>
+	
+	
+
+	
+	<!--
+	 ###########################################################################################################################
+	 #
+	 # OS Standalone DEMO
+	 #
+	 ###########################################################################################################################
+	-->
+	
+	<!-- Win32 Standalone DEMO -->
+	<target name="create-pack-install-standalone-win32-demo" description="Create installation demo pack (Win32)" depends = "create-pack-install-standalone-demo">
+		
+		<!-- Copy Win32 files -->
+		<copy todir="${standalone.demo.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/win32/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.demo.dir}/client.conf">plazma.client.type=standalone (SWT Win32)</concat>	
+		
+		<!-- Move to install win32 dir -->
+		<delete dir="${standalone.win32.demo.dir}"/>
+			
+		<move todir="${standalone.win32.demo.dir}">
+			<fileset dir="${standalone.demo.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+  	
+	<!-- Win32 x86_64 Standalone DEMO -->
+	<target name="create-pack-install-standalone-win32-x86_64-demo" description="Create installation demo pack (Win32 x86_64)" depends = "create-pack-install-standalone-demo">
+		
+		<!-- Copy Win32 x86_64 files -->
+		<copy todir="${standalone.demo.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/win32-x86_64/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.demo.dir}/client.conf">plazma.client.type=standalone (SWT Win32 x86_64)</concat>	
+		
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.demo.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/win32-x86_64/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.demo.dir}/config.classpath" token="/swt/win32/" value = "/swt/win32-x86_64/"/>
+		
+		<!-- Move to install win32 x86_64 dir -->
+		<delete dir="${standalone.win32-x86_64.demo.dir}"/>
+			
+		<move todir="${standalone.win32-x86_64.demo.dir}">
+			<fileset dir="${standalone.demo.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+	
+	<!-- Linux GTK Standalone DEMO -->
+	<target name="create-pack-install-standalone-linux-gtk-demo" description="Create installation demo pack (Linux GTK)" depends = "create-pack-install-standalone-demo">
+		
+		<!-- Copy Linux GTK files -->
+		<copy todir="${standalone.demo.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/linux-gtk/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.demo.dir}/client.conf">plazma.client.type=standalone (SWT Linux GTK)</concat>	
+		
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.demo.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/linux-gtk/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.demo.dir}/config.classpath" token="/swt/win32/" value = "/swt/linux-gtk/"/>
+
+      		
+		<!-- Move to install linux-gtk dir -->
+		<delete dir="${standalone.linux-gtk.demo.dir}"/>
+			
+		<move todir="${standalone.linux-gtk.demo.dir}">
+			<fileset dir="${standalone.demo.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	
+	<!-- Linux GTK Standalone DEMO x86_64 -->
+	<target name="create-pack-install-standalone-linux-gtk-x86_64-demo" description="Create installation demo pack (Linux GTK)" depends = "create-pack-install-standalone-demo">
+		
+		<!-- Copy Linux GTK files -->
+		<copy todir="${standalone.demo.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/linux-gtk-x86_64/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.demo.dir}/client.conf">plazma.client.type=standalone (SWT Linux GTK x86_64)</concat>	
+		
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.demo.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/linux-gtk-x86_64/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.demo.dir}/config.classpath" token="/swt/win32/" value = "/swt/linux-gtk-x86_64/"/>
+
+      		
+		<!-- Move to install linux-gtk dir -->
+		<delete dir="${standalone.linux-gtk-x86_64.demo.dir}"/>
+			
+		<move todir="${standalone.linux-gtk-x86_64.demo.dir}">
+			<fileset dir="${standalone.demo.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	
+	<!--
+	 ###########################################################################################################################
+	 #
+	 # OS Standalone
+	 #
+	 ##########################################################################################################################
+	-->
+	
+	<!-- Win32 Standalone -->
+	<target name="create-pack-install-standalone-win32" description="Create installation pack (Win32)" depends = "create-pack-install-standalone">
+		
+		<!-- Copy Win32 files -->
+		<copy todir="${standalone.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/win32/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.dir}/client.conf">plazma.client.type=standalone (SWT Win32)</concat>	
+		
+		<!-- Move to install win32 dir -->
+		<delete dir="${standalone.win32.dir}"/>
+			
+		<move todir="${standalone.win32.dir}">
+			<fileset dir="${standalone.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	<!-- Win32 Standalone x86_64 -->
+	<target name="create-pack-install-standalone-win32-x86_64" description="Create installation pack (Win32 x86_64)" depends = "create-pack-install-standalone">
+		
+		<!-- Copy Win32 files -->
+		<copy todir="${standalone.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/win32-x86_64/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.dir}/client.conf">plazma.client.type=standalone (SWT Win32 x86_64)</concat>	
+		
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/win32-x86_64/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.dir}/config.classpath" token="/swt/win32/" value = "/swt/win32-x86_64/"/>
+
+		<!-- Move to install win32 dir -->
+		<delete dir="${standalone.win32-x86_64.dir}"/>
+			
+		<move todir="${standalone.win32-x86_64.dir}">
+			<fileset dir="${standalone.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	
+	<!-- Linux GTK Standalone -->
+	<target name="create-pack-install-standalone-linux-gtk" description="Create installation pack (Linux GTK)" depends = "create-pack-install-standalone">
+		
+		<!-- Copy Linux GTK files -->
+		<copy todir="${standalone.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/linux-gtk/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.dir}/client.conf">plazma.client.type=standalone (SWT Linux GTK)</concat>	
+		
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/linux-gtk/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.dir}/config.classpath" token="/swt/win32/" value = "/swt/linux-gtk/"/>
+
+		<!-- Move to install linux-gtk dir -->
+		<delete dir="${standalone.linux-gtk.dir}"/>
+			
+		<move todir="${standalone.linux-gtk.dir}">
+			<fileset dir="${standalone.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+	
+
+	
+	<!-- Linux GTK Standalone -->
+	<target name="create-pack-install-standalone-linux-gtk-x86_64" description="Create installation pack (Linux GTK x86_64)" depends = "create-pack-install-standalone">
+		
+		<!-- Copy Linux GTK files -->
+		<copy todir="${standalone.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/linux-gtk-x86_64/**"/>
+		    </fileset>
+		</copy>
+		
+		<concat destfile="${standalone.dir}/client.conf">plazma.client.type=standalone (SWT Linux GTK)</concat>	
+		
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${standalone.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/linux-gtk-x86_64/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${standalone.dir}/config.classpath" token="/swt/win32/" value = "/swt/linux-gtk-x86_64/"/>
+
+		<!-- Move to install linux-gtk dir -->
+		<delete dir="${standalone.linux-gtk-x86_64.dir}"/>
+			
+		<move todir="${standalone.linux-gtk-x86_64.dir}">
+			<fileset dir="${standalone.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	
+	<!--
+	 ###########################################################################################################################
+	 #
+	 # OS Client
+	 #
+	 ###########################################################################################################################
+	-->
+	
+		
+	<!-- Win32 Client Lite -->
+	<target name="create-pack-install-client-lite-win32" description="Create installation pack (Win32)" depends = "create-pack-install-client-lite">
+			
+		<!-- Copy Win32 files -->
+		<copy todir="${client.lite.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/win32/**"/>
+		    </fileset>
+		</copy>
+			
+		<concat destfile="${client.lite.dir}/client.conf">plazma.client.type=lite (SWT Win32)</concat>	
+			
+		<!-- Move to install win32 dir -->
+		<delete dir="${client.lite.win32.dir}"/>
+				
+		<move todir="${client.lite.win32.dir}">
+			<fileset dir="${client.lite.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	<!-- Win32 Client Lite -->
+	<target name="create-pack-install-client-lite-win32-x86_64" description="Create installation pack (Win32 x86_64)" depends = "create-pack-install-client-lite">
+			
+		<!-- Copy Win32 files -->
+		<copy todir="${client.lite.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/win32-x86_64/**"/>
+		    </fileset>
+		</copy>
+			
+		<concat destfile="${client.lite.dir}/client.conf">plazma.client.type=lite (SWT Win32 x86_64)</concat>	
+
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${client.lite.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/win32-x86_64/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${client.lite.dir}/config.classpath" token="/swt/win32/" value = "/swt/win32-x86_64/"/>
+		
+		<!-- Move to install win32 dir -->
+		<delete dir="${client.lite.win32-x86_64.dir}"/>
+				
+		<move todir="${client.lite.win32-x86_64.dir}">
+			<fileset dir="${client.lite.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+		
+	<!-- Linux GTK Client Lite -->
+	<target name="create-pack-install-client-lite-linux-gtk" description="Create installation pack (Linux GTK)" depends = "create-pack-install-client-lite">
+			
+		<!-- Copy Linux GTK files -->
+		<copy todir="${client.lite.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/linux-gtk/**"/>
+		    </fileset>
+		</copy>
+			
+		<concat destfile="${client.lite.dir}/client.conf">plazma.client.type=lite (SWT Linux GTK)</concat>	
+			
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${client.lite.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/linux-gtk/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${client.lite.dir}/config.classpath" token="/swt/win32/" value = "/swt/linux-gtk/"/>
+
+		<!-- Move to install linux-gtk dir -->
+		<delete dir="${client.lite.linux-gtk.dir}"/>
+				
+		<move todir="${client.lite.linux-gtk.dir}">
+			<fileset dir="${client.lite.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+	
+	<!-- Linux GTK Client Lite -->
+	<target name="create-pack-install-client-lite-linux-gtk-x86_64" description="Create installation pack (Linux GTK x86_64)" depends = "create-pack-install-client-lite">
+			
+		<!-- Copy Linux GTK files -->
+		<copy todir="${client.lite.dir}/lib">
+			<fileset dir="${lib.dir}">
+				<include name="swt/linux-gtk-x86_64/**"/>
+		    </fileset>
+		</copy>
+			
+		<concat destfile="${client.lite.dir}/client.conf">plazma.client.type=lite (SWT Linux GTK x86_64)</concat>	
+			
+    	<!-- Replace plazma.classpath jar -->
+      	<replace file="${client.lite.dir}/plazma.classpath" token="/swt/win32/" value = "/swt/linux-gtk-x86_64/"/>
+
+    	<!-- Replace config.classpath jar -->
+      	<replace file="${client.lite.dir}/config.classpath" token="/swt/win32/" value = "/swt/linux-gtk-x86_64/"/>
+
+		<!-- Move to install linux-gtk dir -->
+		<delete dir="${client.lite.linux-gtk-x86_64.dir}"/>
+				
+		<move todir="${client.lite.linux-gtk-x86_64.dir}">
+			<fileset dir="${client.lite.dir}">
+				<include name="**"/>
+		    </fileset>
+		</move>
+
+	</target>
+
+
+	
+	
+	
+	
+	
+	
+	
+    <!--
+      Generate Java Docs
+    -->
+    <!--
+    <target name="javadoc" description="Generate Javadocs.">
+
+	   <mkdir dir="${javadocs.dir}"/>
+
+       <javadoc
+           sourcepath="src"
+           destdir="${javadocs.dir}"
+           windowtitle="Plazma Bsolution"
+           defaultexcludes="yes"
+           author="true"
+           version="true"
+           use="true"
+        >
+
+		  <doctitle><![CDATA[<h1>Plazma Bsolution</h1>]]></doctitle>
+		  <bottom><![CDATA[<i>Copyright (C) 2005-2008 The Plazma Bsolution Project.</i>]]></bottom>
+		  <classpath refid="plazma-classpath"/>
+
+		  <packageset dir="${src.dir}">
+   	  	    <include name="org/plazmaforge/bsolution/**"/>
+		  </packageset>
+
+	    </javadoc>
+
+    </target>
+    -->
+
+
+</project>

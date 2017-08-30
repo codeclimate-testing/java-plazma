@@ -1,0 +1,12 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FinanceDocumentType" class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocumentType" table="FINANCE_DOCUMENT_TYPE">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="documentType" column="DOCUMENT_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType" required="true"/>
+        	<attribute name="moveType" column="MOVE_TYPE" type="java.lang.String"/>        
+        	<attribute name="bothTaxAmount" column="IS_BOTH_TAX_AMOUNT" type="Boolean"/>
+        	<attribute name="includeTaxInAmount" column="IS_INCLUDE_TAX_IN_AMOUNT" type="Boolean"/>
+        </attributes>        
+    </entity>
+
+

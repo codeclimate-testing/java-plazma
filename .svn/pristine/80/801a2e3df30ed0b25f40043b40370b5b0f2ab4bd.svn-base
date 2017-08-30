@@ -1,0 +1,16 @@
+<ui xmlns="http://plazmaforge.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form name="LanguageListForm" type="ListForm" title="@{LanguageListForm.title}">
+		<content layout="FitLayout">
+			<children>
+				<table>
+					<columns>
+						<column text="@{LanguageListForm.codeColumn.text}" property="code" data-type="String" width="100"/>
+						<column text="@{LanguageListForm.code3Column.text}" property="code3" data-type="String" width="100"/>
+						<column text="@{LanguageListForm.numericCodeColumn.text}" property="numericCode" data-type="String" width="100"/>
+						<column text="@{LanguageListForm.nameColumn.text}" property="name" data-type="String" width="300"/>
+					</columns>
+				</table>
+			</children>
+		</content>
+	</form>
+</ui>

@@ -1,0 +1,11 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProductGroup" class="org.plazmaforge.bsolution.product.common.beans.ProductGroup" table="PRODUCT_GROUP">
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String"  required="true" />
+        	<attribute name="name" column="NAME" type="String"  required="true" />
+        	<attribute name="parentId" column="PARENT_ID" type="Integer" />
+        	<reference name="productType" column="PRODUCT_SECTION_ID" class="org.plazmaforge.bsolution.product.common.beans.ProductType"  required="true" />
+    	</attributes>
+    </entity>
+

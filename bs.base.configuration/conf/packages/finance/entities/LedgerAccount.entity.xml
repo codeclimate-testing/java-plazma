@@ -1,0 +1,24 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LedgerAccount" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccount" table="LEDGER_ACCOUNT">
+    	<aliases>
+    		<alias name="account" attribute="code"/>
+    		<alias name="accountTypeName" attribute="ledgerAccountType.name"/>
+    	</aliases>
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<attribute name="code" column="CODE" type="String" required="true"/>
+        	<attribute name="name" column="NAME" type="String" required="true" />
+        	<reference name="ledgerAccountType" column="LEDGER_ACCOUNT_TYPE_ID" class="org.plazmaforge.bsolution.finance.common.beans.LedgerAccountType"/>        
+        	<attribute name="parentId" column="PARENT_ID" type="Integer"/>
+        </attributes>
+		<triggers>
+			<trigger type="AfterUpdate">
+				<script language="SQL">
+					UPDATE TEMPLATE_ENTRY_ITEM SET DEBIT_LEDACC_EXP = :code WHERE DEBIT_LEDACC_ID = :id;
+					UPDATE TEMPLATE_ENTRY_ITEM SET CREDIT_LEDACC_EXP = :code WHERE CREDIT_LEDACC_ID = :id;
+				</script>
+			</trigger>
+		</triggers>
+    </entity>
+
+

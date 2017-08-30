@@ -1,0 +1,48 @@
+
+    <joined-entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Contract" class="org.plazmaforge.bsolution.finance.common.beans.Contract" table="CONTRACT" extends-class="org.plazmaforge.bsolution.finance.common.beans.FinanceDocument">
+    	<config>
+    		<property name="generic.service.class">org.plazmaforge.bsolution.document.common.services.GenericDocumentService</property>
+    	</config>
+ 		<attributes>
+ 			<key name="id" column="ID" type="Integer"/>
+	        <attribute name="name" column="NAME" type="String"/>
+        	<attribute name="endDate" column="END_DATE" type="Date"/>
+        	<attribute name="fileName" column="FILE_NAME" type="String"/>
+        	<attribute name="currencyPrepayAmount" column="CURRENCY_PREPAY_AMOUNT" type="Double"/>
+        	<attribute name="prepayAmount" column="PREPAY_AMOUNT" type="Double"/>
+ 
+ 			<attribute name="organizationPerson" column="ORGANIZATION_PERSON" type="String"/>
+ 			<attribute name="organizationPersonEn" column="ORGANIZATION_PERSON_EN" type="String"/>
+ 			<attribute name="organizationPersonDetail" column="ORGANIZATION_PERSON_DETAIL" type="String"/>
+ 			<attribute name="organizationPersonDetailEn" column="ORGANIZATION_PERSON_DETAIL_EN" type="String"/>
+ 			<attribute name="organizationPersonOnBasis" column="ORGANIZATION_PERSON_ON_BAS" type="String"/>
+ 			<attribute name="organizationPersonOnBasisEn" column="ORGANIZATION_PERSON_ON_BAS_EN" type="String"/>
+ 			<attribute name="organizationAddress" column="ORGANIZATION_ADDRESS" type="String"/>
+ 			<attribute name="organizationAddressEn" column="ORGANIZATION_ADDRESS_EN" type="String"/>
+ 			<attribute name="organizationPhone" column="ORGANIZATION_PHONE" type="String"/>
+ 			<attribute name="organizationFax" column="ORGANIZATION_FAX" type="String"/>
+ 			<attribute name="organizationBankName" column="ORGANIZATION_BANK_NAME" type="String"/>
+ 			<attribute name="organizationBankNameEn" column="ORGANIZATION_BANK_NAME_EN" type="String"/>
+ 		
+			<attribute name="partnerPerson" column="PARTNER_PERSON" type="String"/>
+			<attribute name="partnerPersonEn" column="PARTNER_PERSON_EN" type="String"/>
+ 			<attribute name="partnerPersonDetail" column="PARTNER_PERSON_DETAIL" type="String"/>
+ 			<attribute name="partnerPersonDetailEn" column="PARTNER_PERSON_DETAIL_EN" type="String"/>
+ 			<attribute name="partnerPersonOnBasis" column="PARTNER_PERSON_ON_BAS" type="String"/>
+ 			<attribute name="partnerPersonOnBasisEn" column="PARTNER_PERSON_ON_BAS_EN" type="String"/>
+ 			<attribute name="partnerAddress" column="PARTNER_ADDRESS" type="String"/>
+ 			<attribute name="partnerAddressEn" column="PARTNER_ADDRESS_EN" type="String"/>
+ 			<attribute name="partnerPhone" column="PARTNER_PHONE" type="String"/>
+ 			<attribute name="partnerFax" column="PARTNER_FAX" type="String"/>
+ 			<attribute name="partnerBankName" column="PARTNER_BANK_NAME" type="String"/>
+ 			<attribute name="partnerBankNameEn" column="PARTNER_BANK_NAME_EN" type="String"/>	
+ 			
+   			<reference name="organizationBankAccount" column="ORGANIZATION_BANK_ACCOUNT_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount"/>        
+        	<reference name="partnerBankAccount" column="PARTNER_BANK_ACCOUNT_ID" class="org.plazmaforge.bsolution.bank.common.beans.BankAccount"/>
+
+ 			<reference name="organizationContact" column="ORGANIZATION_CONTACT_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle" />        
+        	<reference name="partnerContact" column="PARTNER_CONTACT_ID" class="org.plazmaforge.bsolution.contact.common.beans.ContactTitle"/>
+ 
+		</attributes> 
+    </joined-entity>
+

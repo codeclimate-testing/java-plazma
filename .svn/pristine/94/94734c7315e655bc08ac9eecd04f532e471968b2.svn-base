@@ -1,0 +1,114 @@
+
+<html>
+<title>Система безопасности</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Система безопасности</h2>
+   <hr>
+   <br><br>
+
+   <a name="create-role"/>
+   <h3 align="center">Создание роли</h3>
+
+   <p>Выберите пункт меню: Сервис -> Роли. 
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/role-list.png"/></td>
+ </tr>
+</table>
+
+   <br>Нажмите кнопку <b>Добавить</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/create-role.png"/></td>
+ </tr>
+</table>
+
+   <br>Введите имя роли и нажмите <b>OK</b>. Роль создана.
+
+
+
+
+
+   <a name="create-user"/>
+   <h3 align="center">Создание пользователя</h3>
+
+   <p>Выберите пункт меню: Сервис -> Пользователи. 
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/user-list.png"/></td>
+ </tr>
+</table>
+
+   <br>Нажмите кнопку <b>Добавить</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/create-user.png"/></td>
+ </tr>
+</table>
+
+   <br>Введите информацию о пользователе и нажмите <b>OK</b>. Пользователь добавлен.
+
+
+<br><br><br><br>
+<p>
+
+
+
+
+<br><br><br><br>
+<p>
+
+   <a name="set-permissions"/>
+   <h3 align="center">Установка прав доступа</h3>
+
+   <p>Выберите пункт меню: Сервис -> Права доступа. 
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/select-role.png"/></td>
+ </tr>
+</table>
+
+   <br>Выберите роль и нажмите <b>OK</b>
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/permissions.png"/></td>
+ </tr>
+</table>
+
+   <br>Выберите и установите права доступа.
+
+
+<p>
+<table align="center">
+ <tr>
+   <td><img border=0 src="images/set-permission.png"/></td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+

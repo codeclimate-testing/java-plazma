@@ -1,0 +1,71 @@
+
+<html>
+<title>User Interface</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+<TABLE  width="100%">
+<TR>
+<TD>
+
+
+   <h2 align="center">User Interface</h2>
+   <hr>
+   <br><br><br><br>
+   <table align="center">
+
+     <tr><td><a href="images/ui.png"><img border=0 src="images/ui-mini.png"/></a></td></tr>
+
+     <tr height="30"><td></td></tr>
+
+     <tr><td><a href="view.html">General View</a></td></tr>
+
+     <tr><td><a href="list-form.html">Table form</a></td></tr>
+
+     <tr><td><a href="edit-form.html">Edit form</a></td></tr>
+
+     
+     <tr><td><a href="dictionaries.html">References</a></td></tr>
+
+     <tr><td><a href="documents.html">Documents</a></td></tr>
+
+     <tr><td><a href="reports.html">Reports</a></td></tr>
+     
+
+     <!-- <tr><td><a href="setting.html">Setting</a></td></tr> -->
+
+
+   </table>
+
+
+
+
+
+</TD>
+</TR>
+
+</TABLE>
+
+
+
+
+
+
+
+   
+   
+   
+   
+
+</body>
+</html>
+
+

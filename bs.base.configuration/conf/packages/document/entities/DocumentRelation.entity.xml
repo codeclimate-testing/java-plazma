@@ -1,0 +1,16 @@
+
+    <entity xmlns="http://plazmaforge.org/erm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DocumentRelation" class="org.plazmaforge.bsolution.document.common.beans.DocumentRelation" table="DOCUMENT_RELATION">
+		<aliases>
+			<alias name="parentTypeCode" attribute="parentType.entity.code"/>
+			<alias name="parentTypeName" attribute="parentType.entity.name"/>
+			<alias name="childTypeCode" attribute="childType.entity.code"/>
+			<alias name="childTypeName" attribute="childType.entity.name"/>
+    	</aliases>      	    
+    	<attributes>
+        	<key name="id" column="ID" type="Integer" generator-type="increment"/>
+        	<reference name="parentType" column="PARENT_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType"  required="true"/>
+        	<reference name="childType" column="CHILD_TYPE_ID" class="org.plazmaforge.bsolution.document.common.beans.DocumentType"  required="true"/>         
+        	<attribute name="creatorClassName" column="CREATOR_CLASS" type="String" />
+        </attributes>                 
+    </entity>
+

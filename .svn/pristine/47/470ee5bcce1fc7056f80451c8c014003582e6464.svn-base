@@ -1,0 +1,30 @@
+
+<html>
+<title>Сервер приложений</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta>
+  <link href="../../style.css" type=text/css rel=styleSheet>
+</meta>
+
+</head>
+
+<body>
+
+
+
+   <h2 align="center">Сервер приложений</h2>
+   <hr>
+   <br><br>
+
+   Для работы системы может быть использован сервер приложений Plazma Lite Server. 
+
+<p>
+Более детальную информацию смотрите в документации по настройке соответствующего сервера: <a href="product/liteserver.html">Lite Server</a>
+
+
+
+</body>
+</html>
+
+
