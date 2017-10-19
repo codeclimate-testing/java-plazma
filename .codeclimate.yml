@@ -1,0 +1,16 @@
+engines:
+  structure:
+    enabled: false
+  duplication:
+    enabled: false
+  sonar-java:
+    enabled: true
+    channel: beta
+ratings:
+  paths:
+    - "**.java"
+exclude_paths:
+  - "**.js"
+  - "**.jsx"
+  - "**.rb"
+  - "**.py"
